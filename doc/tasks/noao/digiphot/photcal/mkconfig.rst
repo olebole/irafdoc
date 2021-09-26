@@ -7,21 +7,21 @@ mkconfig: Prepare a configuration file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkconfig config 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_config">
   <dt><b>config</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='config' Line='config' -->
   <dd>The name of the new configuration file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catalog">
   <dt><b>catalog</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog' -->
   <dd>The source of the standard star catalog format description.
@@ -34,7 +34,7 @@ mkconfig: Prepare a configuration file
   <i>Catalog</i> is not prompted for if <i>template</i> is <span style="font-family: monospace;">""</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observations">
   <dt><b>observations</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observations' Line='observations' -->
   <dd>The source of the observations file format description.
@@ -44,7 +44,7 @@ mkconfig: Prepare a configuration file
   description. <i>Observations</i> is not prompted for if <i>template</i> is <span style="font-family: monospace;">""</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_transform">
   <dt><b>transform </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transform' Line='transform ' -->
   <dd>The source of the transformation equations definition.
@@ -55,7 +55,7 @@ mkconfig: Prepare a configuration file
   <i>Transform</i> is not prompted for if <i>template</i> is <span style="font-family: monospace;">""</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_template">
   <dt><b>template = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='template' Line='template = ""' -->
   <dd>The name of an existing configuration file that can be used as a template
@@ -70,7 +70,7 @@ mkconfig: Prepare a configuration file
   if <i>edit</i> is <span style="font-family: monospace;">"yes"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catdir">
   <dt><b>catdir = <span style="font-family: monospace;">")_.catdir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"' -->
   <dd>The directory containing the supported standard star catalogs.
@@ -81,34 +81,34 @@ mkconfig: Prepare a configuration file
   and standard star catalog directory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no' -->
   <dd>Verify each new entry in the configuration file as it is entered?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Enter the editor and review the new configuration file?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_check">
   <dt><b>check = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='check' Line='check = yes' -->
   <dd>Check the new configuration file for semantic and syntax errors?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print detailed information about the results of the check step instead
   of only a short summary?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   MKCONFIG is a script task which creates and/or edits the configuration
   file <i>config</i>. If the configuration file already
@@ -177,21 +177,21 @@ mkconfig: Prepare a configuration file
   Next the configuration file is checked for semantic and syntax errors
   if <i>check</i> is <span style="font-family: monospace;">"yes"</span> and the results are written on the terminal. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_standard_catalog_format_and_transform_files">
   <h3>Standard catalog format and transform files</h3>
-  <!-- BeginSection: 'STANDARD CATALOG FORMAT AND TRANSFORM FILES' -->
   <p>
   The list of standard star catalog files, catalog format description files
   and transformation equation definitions files is presented below.
   </p>
-  <pre>
-  	# catalogs	# formats		# transformations
+  <div class="highlight-default-notranslate"><pre>
+  # catalogs      # formats               # transformations
   
-  	landolt.dat	flandolt.dat		tlandolt.dat
-  </pre>
-  <!-- EndSection:   'STANDARD CATALOG FORMAT AND TRANSFORM FILES' -->
+  landolt.dat     flandolt.dat            tlandolt.dat
+  </pre></div>
+  </section>
+  <section id="s_the_configuration_file">
   <h3>The configuration file</h3>
-  <!-- BeginSection: 'THE CONFIGURATION FILE' -->
   <p>
   The <i>configuration file</i> is a text file which describes how the input data
   is organized in the input files, and defines the form of the transformation
@@ -266,39 +266,39 @@ mkconfig: Prepare a configuration file
   in the observation section, and the use of the const statement to fix the
   values of some parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # Configuration file for reducing UBV photoelectric photometry.
   
   catalog
   
-  V	2		# V magnitude
-  BV	3		# B - V color
-  UB	4		# U - B color
+  V       2               # V magnitude
+  BV      3               # B - V color
+  UB      4               # U - B color
   
   observation
   
-  v		2		# v instrumental magnitude
-  b 		3		# b instrumental magnitude
-  u 		4		# u instrumental magnitude
-  error(v)	5		# error in v instrumental magnitude
-  error(b) 	6		# error in b instrumental magnitude
-  error(u) 	7		# error in u instrumental magnitude
-  X		8		# airmass		
+  v               2               # v instrumental magnitude
+  b               3               # b instrumental magnitude
+  u               4               # u instrumental magnitude
+  error(v)        5               # error in v instrumental magnitude
+  error(b)        6               # error in b instrumental magnitude
+  error(u)        7               # error in u instrumental magnitude
+  X               8               # airmass
   
   transformation
   
-  fit	v1 = 0.0, v2=0.16, v3=-0.043
-  const	v4 = 0.0
+  fit     v1 = 0.0, v2=0.16, v3=-0.043
+  const   v4 = 0.0
   VFIT:   V = v1 + v - v2 * X + v3 * (b - v) + v4 * X * (b - v)
   
-  fit	b1 = 0.0, b2=0.09, b3=1.266
-  const	b4 = 0.0
+  fit     b1 = 0.0, b2=0.09, b3=1.266
+  const   b4 = 0.0
   BVFIT:  BV = b1 - b2 * X + b3 * (b - v) + b4 * X * (b - v)
   
-  fit	u1 = 0.0, u2=0.300, u3=0.861
-  const	u4 = 0.0
+  fit     u1 = 0.0, u2=0.300, u3=0.861
+  const   u4 = 0.0
   UBFIT:  UB = u1 - u2 * X + u3 * (u - b) + u4 * X * (u - b)
-  </pre>
+  </pre></div>
   <p>
   <i>Example 2</i>. A sample configuration file for reducing UBV CCD photometry.
   Note that the instrumental magnitudes are all on the left-hand side of the
@@ -317,31 +317,30 @@ mkconfig: Prepare a configuration file
   Note also the use of the error declaration statements in both the catalog
   and the observations section.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   catalog
   
-  V		2	# V magnitude
-  BV		3	# B - V color
-  UB		4	# U - B color
-  error(V)	5	# error in V magnitude
-  error(BV)	6	# error in B-V color
-  error(UB)	7	# error in U-B color
+  V               2       # V magnitude
+  BV              3       # B - V color
+  UB              4       # U - B color
+  error(V)        5       # error in V magnitude
+  error(BV)       6       # error in B-V color
+  error(UB)       7       # error in U-B color
   
   observation
   
-  ut1		3	# ut time of filter 1 observation
-  X1		4	# airmass of filter 1 observation
-  m1		7	# filter 1 instrumental magnitude
-  error(m1)	8	# error in filter 1 instrumental magnitude
-  ut2		10	# ut time of filter 2 observation
-  X2		11	# airmass of filter 2 observation
-  m2	 	14	# filter 2 instrumental magnitude
-  error(m2) 	15	# error in filter 2 instrumental magnitude
-  ut3		17	# ut time of filter 3 observation
-  X3	        18	# airmass of filter 3 observation		
-  m3	 	19	# filter 3 instrumental magnitude
-  error(m3) 	20	# error in filter 3 instrumental magnitude
-  
+  ut1             3       # ut time of filter 1 observation
+  X1              4       # airmass of filter 1 observation
+  m1              7       # filter 1 instrumental magnitude
+  error(m1)       8       # error in filter 1 instrumental magnitude
+  ut2             10      # ut time of filter 2 observation
+  X2              11      # airmass of filter 2 observation
+  m2              14      # filter 2 instrumental magnitude
+  error(m2)       15      # error in filter 2 instrumental magnitude
+  ut3             17      # ut time of filter 3 observation
+  X3              18      # airmass of filter 3 observation
+  m3              19      # filter 3 instrumental magnitude
+  error(m3)       20      # error in filter 3 instrumental magnitude
   
   transformation
   
@@ -353,94 +352,93 @@ mkconfig: Prepare a configuration file
   
   fit   v1 = 0.0, v2=0.15, v3=0.000
   VFIT: m3 = v1 + V + v2 * X3 + v3 * BV
-  </pre>
-  <!-- EndSection:   'THE CONFIGURATION FILE' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Type in from scratch a new configuration file to reduce some UBV
   photoelectric photometry. The catalog and observations file are simple
   text files written with the user's own data acquisition software, whose
   format is known by the user.
   </p>
-  <pre>
-      ph&gt; mkconfig ubv.cfg
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkconfig ubv.cfg
   
-          ... answer "STDIN" in response to the query for the catalog
-  	    parameter, and enter the standard star catalog format
-  	    description as prompted
+      ... answer "STDIN" in response to the query for the catalog
+          parameter, and enter the standard star catalog format
+          description as prompted
   
-  	... a sample input session is shown below, note that in this
-  	    examine &lt;EOF&gt; is implemented as ^Z
+      ... a sample input session is shown below, note that in this
+          examine &lt;EOF&gt; is implemented as ^Z
   
-      ENTER THE STANDARD STAR CATALOG FORMAT DESCRIPTION
-   
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): V 2
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): BV 3
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): UB 4
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): ^Z
-    
-  	... answer "STDIN" in response to the query for the
-  	    observations parameter, and enter the observations file
-  	    format description as prompted
+  ENTER THE STANDARD STAR CATALOG FORMAT DESCRIPTION
   
-  	... a sample input session is shown below, note that in this
-  	    example &lt;EOF&gt; is implemented as ^Z
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): V 2
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): BV 3
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): UB 4
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): ^Z
   
-      ENTER THE OBSERVATIONS FILE FORMAT DESCRIPTION
+      ... answer "STDIN" in response to the query for the
+          observations parameter, and enter the observations file
+          format description as prompted
   
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): v 2
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): b 3
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): u 4
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): X 5
-      Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): ^Z
+      ... a sample input session is shown below, note that in this
+          example &lt;EOF&gt; is implemented as ^Z
   
-  	... answer "STDIN" in response to the query for the
-  	    transform parameter, and enter the transformation
-  	    equations as prompted
+  ENTER THE OBSERVATIONS FILE FORMAT DESCRIPTION
   
-  	... a sample input session is shown below for a single equation is
-  	    shown below, note that in this example &lt;EOF&gt; is implemented as
-  	    ^Z
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): v 2
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): b 3
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): u 4
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): X 5
+  Enter column definition (name number, ?=help, &lt;EOF&gt;=quit entry): ^Z
   
-      ENTER THE TRANSFORMATION EQUATIONS
+      ... answer "STDIN" in response to the query for the
+          transform parameter, and enter the transformation
+          equations as prompted
   
-      Enter the label and functional form for EQUATION 1
+      ... a sample input session is shown below for a single equation is
+          shown below, note that in this example &lt;EOF&gt; is implemented as
+          ^Z
   
-      Enter label (e.g. VFIT) (label, ?=help, &lt;EOF&gt;=quit entry): VFIT
-      Enter equation (equation, equation\=continue, ?=help, &lt;EOF&gt;=quit entry):
-      V = v + v1 + v2 * X + v3 * (b - v)
+  ENTER THE TRANSFORMATION EQUATIONS
   
-      Enter initial values for the parameters to be fit in EQUATION 1
+  Enter the label and functional form for EQUATION 1
   
-      Enter parameter 1 (name value, ?=help, &lt;EOF&gt;=quit entry):v1 25.
-      Enter parameter 2 (name value, ?=help, &lt;EOF&gt;=quit entry):v2 -.15
-      Enter parameter 3 (name value, ?=help, &lt;EOF&gt;=quit entry):v3 1.06
-      Enter parameter 4 (name value, ?=help, &lt;EOF&gt;=quit entry):^Z
-      
-      Enter initial values for the parameters to be held constant in
-      EQUATION 1
+  Enter label (e.g. VFIT) (label, ?=help, &lt;EOF&gt;=quit entry): VFIT
+  Enter equation (equation, equation\=continue, ?=help, &lt;EOF&gt;=quit entry):
+  V = v + v1 + v2 * X + v3 * (b - v)
   
-      Enter parameter1 and value (name value, ?=help, &lt;EOF&gt;=quit entry):^Z
-       
-      Enter the label and functional form for EQUATION 2
+  Enter initial values for the parameters to be fit in EQUATION 1
   
-      Enter label (e.g. VFIT) (label, ?=help, &lt;EOF&gt;=quit entry): BFIT 
+  Enter parameter 1 (name value, ?=help, &lt;EOF&gt;=quit entry):v1 25.
+  Enter parameter 2 (name value, ?=help, &lt;EOF&gt;=quit entry):v2 -.15
+  Enter parameter 3 (name value, ?=help, &lt;EOF&gt;=quit entry):v3 1.06
+  Enter parameter 4 (name value, ?=help, &lt;EOF&gt;=quit entry):^Z
   
-  	... after the program enters the editor make any small changes
-  	    required
+  Enter initial values for the parameters to be held constant in
+  EQUATION 1
   
-  	... examine the final output for errors
+  Enter parameter1 and value (name value, ?=help, &lt;EOF&gt;=quit entry):^Z
   
-      ph&gt; edit ubv.cfg
+  Enter the label and functional form for EQUATION 2
   
-  	... correct any errors with the editor
+  Enter label (e.g. VFIT) (label, ?=help, &lt;EOF&gt;=quit entry): BFIT
   
-      ph&gt; chkconfig ubv.cfg
+      ... after the program enters the editor make any small changes
+          required
   
-  	... check the newly edited file for errors
+      ... examine the final output for errors
   
-  </pre>
+  ph&gt; edit ubv.cfg
+  
+      ... correct any errors with the editor
+  
+  ph&gt; chkconfig ubv.cfg
+  
+      ... check the newly edited file for errors
+  </pre></div>
   <p>
   2. Create a configuration file to reduce some JHK photometry. In this
   example the user has created a JHK standard star catalog called jhkcat
@@ -448,64 +446,63 @@ mkconfig: Prepare a configuration file
   using the task MKNOBSFILE, and has decided to type in the transformation
   equations by hand using the default editor.
   </p>
-  <pre>
-  	ph&gt; mkconfig jhk.cfg jhkcat jhkobs
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkconfig jhk.cfg jhkcat jhkobs
   
-  	    ... answer "STDIN" in response to the query for the
-  	        transform parameter, followed by &lt;EOF&gt;, usually ^Z
-  		to terminate prompting for the transformation equations
+      ... answer "STDIN" in response to the query for the
+          transform parameter, followed by &lt;EOF&gt;, usually ^Z
+          to terminate prompting for the transformation equations
   
-  	    ... use the editor to enter the transformation equations
+      ... use the editor to enter the transformation equations
   
-  	    ... check the result for errors
+      ... check the result for errors
   
-  	ph&gt; edit jhk.cfg
+  ph&gt; edit jhk.cfg
   
-  	    ... correct errors found in previous run using the editor
+      ... correct errors found in previous run using the editor
   
-  	ph&gt; chkconfig jhk.cfg
+  ph&gt; chkconfig jhk.cfg
   
-  	    ... check the edited file for errors
-  </pre>
+      ... check the edited file for errors
+  </pre></div>
   <p>
   3. Create a new configuration file for reducing some UBVR photometry, using 
   the UBVR standards in the landolt UBVRI standard star catalog. The standard
   star observations file <span style="font-family: monospace;">"stdobs"</span> was created with the task MKNOBSFILE.
   </p>
-  <pre>
-  	ph&gt; mkconfig ubvr.cfg landolt stdobs landolt
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkconfig ubvr.cfg landolt stdobs landolt
   
-  	    ... read in the catalog format description for the
-  	        landolt UBVRI standards catalog
+      ... read in the catalog format description for the
+          landolt UBVRI standards catalog
   
-  	    ... read in the observations file format description
-  	        created by a previous run of mknobsfile
+      ... read in the observations file format description
+          created by a previous run of mknobsfile
   
-  	    ... read in the sample transformation description file for the
-  		landolt UBVRI system
+      ... read in the sample transformation description file for the
+          landolt UBVRI system
   
-  	    ... use the editor to delete any references to catalog
-  	        variables that are not going to be used in the
-  		transformation equations, and to edit the transformation
-  		equations as desired
+      ... use the editor to delete any references to catalog
+          variables that are not going to be used in the
+          transformation equations, and to edit the transformation
+          equations as desired
   
-  	    ... check the result for errors
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... check the result for errors
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   edit,chkconfig,mknobsfile,mkobsfile
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'STANDARD CATALOG FORMAT AND TRANSFORM FILES' 'THE CONFIGURATION FILE' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

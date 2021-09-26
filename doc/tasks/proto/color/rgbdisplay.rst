@@ -7,29 +7,29 @@ rgbdisplay: Display an RGB image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rgbdisplay rgb
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_rgb">
   <dt><b>rgb</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rgb' Line='rgb' -->
   <dd>Image name of the 8-bit RGB dithered composite image to be displayed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_frame">
   <dt><b>frame = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='frame' Line='frame = 1' -->
   <dd>Image display frame.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Rgbdisplay</b> displays an 8-bit RGB color mapped or dithered image produced
   by the tasks <b>rgbto8</b> or <b>rgbdither</b>.  This task is a simple script
@@ -37,9 +37,9 @@ rgbdisplay: Display an RGB image
   the <b>display</b> task with parameters fixed appropriately for the
   images.  The actual display command is:
   </p>
-  <pre>
-  	display rgb frame fill- ztrans=none
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  display rgb frame fill- ztrans=none
+  </pre></div>
   <p>
   where rgb and frame are the parameters of this task.
   </p>
@@ -69,27 +69,27 @@ rgbdisplay: Display an RGB image
   you can determine the host pathname for the special color map
   from within IRAF using the command
   </p>
-  <pre>
-  	cl&gt; path colorlib$saorgb.lut
-  	puppis!/ursa/iraf/extern/color/lib/saorgb.lut
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; path colorlib$saorgb.lut
+  puppis!/ursa/iraf/extern/color/lib/saorgb.lut
   
-  			or
+                  or
   
-  	cl&gt; path colorlib$imtoolrgb.lut
-  	puppis!/ursa/iraf/extern/color/lib/imtoolrgb.lut
-  </pre>
+  cl&gt; path colorlib$imtoolrgb.lut
+  puppis!/ursa/iraf/extern/color/lib/imtoolrgb.lut
+  </pre></div>
   <p>
   You can either remember these names (without the node prefix) or
   more simply copy the one you need to your IRAF home directory
   (or any place else you like) with the command
   </p>
-  <pre>
-  	cl&gt; copy colorlib$saorgb.lut home$
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; copy colorlib$saorgb.lut home$
   
-  			or
+                  or
   
-  	cl&gt; copy colorlib$imtoolrgb.lut home$
-  </pre>
+  cl&gt; copy colorlib$imtoolrgb.lut home$
+  </pre></div>
   <p>
   With SAOimage load the appropriate color map look up table by entering the
   (COLOR) menu, then the (CMAP) menu, and then pushing the (READ) button.
@@ -120,27 +120,27 @@ rgbdisplay: Display an RGB image
   but you can recover by bring the point slowly back.  If the map gets too
   messed up you can always reload the color map.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Display a dithered composite image.
   </p>
-  <pre>
-  	cl&gt; rgbdisplay tucana!/d1/testdata/rgb/trifid8
-  	&lt;Load the color map tucana!/d1/testdata/rgb/trifid8.sao or
-  	&lt;tucana!/d1/testdata/rgb/trifid8.imt. Because the display
-  	&lt;server is a host program you may need to copy the map
-  	&lt;first.
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rgbdisplay tucana!/d1/testdata/rgb/trifid8
+  &lt;Load the color map tucana!/d1/testdata/rgb/trifid8.sao or
+  &lt;tucana!/d1/testdata/rgb/trifid8.imt. Because the display
+  &lt;server is a host program you may need to copy the map
+  &lt;first.
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rgbto8, rgbdither, color.package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

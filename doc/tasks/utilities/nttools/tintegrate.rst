@@ -7,14 +7,14 @@ tintegrate: Numerically integrate one column with respect to another.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tintegrate table integrand independent
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The program evaluates the integral of the column name passed to
   'integrand' with respect to
@@ -37,22 +37,22 @@ tintegrate: Numerically integrate one column with respect to another.
   with unit weight;
   the first and last are included with a weight of one half.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]' -->
   <dd>The input table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_integrand">
   <dt><b>integrand [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='integrand' Line='integrand [string]' -->
   <dd>Column name whose contents will be the integrand.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_independent">
   <dt><b>independent [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='independent' Line='independent [string]' -->
   <dd>Column name whose contents will be the independent variable;
@@ -75,22 +75,22 @@ tintegrate: Numerically integrate one column with respect to another.
   This is also an output parameter and is not specified by the user.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Calculate the integral of flux over wavelength,
   printing the result to STDOUT
   (and also storing it in the 'integral' parameter).
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tintegrate intab flux lambda
          integral= 0.8752311663155779 using 401 points
-  </pre>
+  </pre></div>
   <p>
   2.  Sum the values of flux, rather than integrating over wavelength.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tintegrate intab flux ""
          integral= 30.32557976245881 using 401 points
   
@@ -102,35 +102,34 @@ tintegrate: Numerically integrate one column with respect to another.
     401     0.07562488719   0.171107  -0.0381  -0.72729  0.22527
   tt&gt; =0.07562488719 * 401
   30.32557976319
-  
-  </pre>
+  </pre></div>
   <p>
   3.  Integrate the flux over row number.
   This is the same as summing the flux except for the first and last rows.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tcalc intab row rownum datatype="real" colfmt="%8.1f"
   tt&gt; tintegrate intab flux row
         integral= 30.34466478228569 using 401 points
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by David Giaretta.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tcalc
   tstat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

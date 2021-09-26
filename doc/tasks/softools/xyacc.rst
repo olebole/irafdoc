@@ -7,14 +7,14 @@ xyacc: Build an SPP language parser
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   xyacc [ options ] <span style="font-family: monospace;">" file"</span>
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_options">
   <h3>Options</h3>
-  <!-- BeginSection: 'OPTIONS' -->
   <dl>
   <dt><b>-b <i>file_prefix</i></b></dt>
   <!-- Sec='OPTIONS' Level=0 Label='' Line='-b \fIfile_prefix\fR' -->
@@ -80,9 +80,9 @@ xyacc: Build an SPP language parser
   <dd>Specify location of <b>yaccpar.x</b> (default <b>boot$xyacc</b>).
   </dd>
   </dl>
-  <!-- EndSection:   'OPTIONS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This is a version of yacc that has been modified to produce SPP
   language parsers.  For the most part, it should follow the operation
@@ -96,9 +96,9 @@ xyacc: Build an SPP language parser
   <br>
   Input files should follow the yacc convention of ending in <b>.y</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_differences">
   <h3>Differences</h3>
-  <!-- BeginSection: 'DIFFERENCES' -->
   <p>
   <b>(1)</b>
   The Yacc input syntax is unmodified, except that the comment
@@ -149,14 +149,14 @@ xyacc: Build an SPP language parser
   to by a Mem pointer.
   </dd>
   </dl>
-  <!-- EndSection:   'DIFFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   xpp, rpp, generic, mkpkg
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'OPTIONS' 'DESCRIPTION' 'DIFFERENCES' 'SEE ALSO'  -->
   

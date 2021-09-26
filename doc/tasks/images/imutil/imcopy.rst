@@ -7,35 +7,35 @@ imcopy: Copy an image
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   imcopy input output
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Images to be copied.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output images or directory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print each operation as it takes place?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Each of the input images, which may be given as a general image template
   including sections, is copied to the corresponding output image list,
@@ -56,57 +56,64 @@ imcopy: Copy an image
   <p>
   The verbose options prints for each copy lines of the form:
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   input image -&gt; output image
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. For a simple copy of an image:
   </p>
-  <p>
-  	cl&gt; imcopy image imagecopy
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy image imagecopy
+  </pre></div>
   <p>
   2. To copy a portion of an image:
   </p>
-  <p>
-  	cl&gt; imcopy image[10:20,*] subimage
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy image[10:20,*] subimage
+  </pre></div>
   <p>
   3. To copy several images:
   </p>
-  <p>
-  	cl&gt; imcopy image1,image2,frame10 a,b,c
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy image1,image2,frame10 a,b,c
+  </pre></div>
   <p>
   4. To trim an image:
   </p>
-  <p>
-  	cl&gt; imcopy image[10:20,*] image
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy image[10:20,*] image
+  </pre></div>
   <p>
   In the above example the specified section of the input image replaces the
   original input image.  To trim several images using an image template:
   </p>
-  <p>
-  	cl&gt; imcopy frame*[1:512,1:512] frame*
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy frame*[1:512,1:512] frame*
+  </pre></div>
   <p>
   In this example all images beginning with <span style="font-family: monospace;">"frame"</span> are trimmed to 512 x 512.
   </p>
   <p>
   5. To copy a set of images to a new directory:
   </p>
-  <pre>
-  	cl&gt; imcopy image* directory
-  			or
-  	cl&gt; imcopy image* directory$
-  			or
-  	cl&gt; imcopy image* osdirectory
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy image* directory
+  </pre></div>
+  <p>
+  or
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy image* directory$
+  </pre></div>
+  <p>
+  or
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy image* osdirectory
+  </pre></div>
   <p>
   where <span style="font-family: monospace;">"osdirectory"</span> is an operating system directory name (i.e. /user/me
   in UNIX).
@@ -115,18 +122,18 @@ imcopy: Copy an image
   6. To copy a section of an image in an already existing image of
      sufficient size to contain the input section.
   </p>
-  <pre>
-  	cl&gt; imcopy image[1:512,1:512] outimage[257:768,257:768]
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy image[1:512,1:512] outimage[257:768,257:768]
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The distinction between copying to a section of an existing image
   and overwriting a input image is rather inobvious.
   </p>
   
-  <!-- EndSection:    'BUGS' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

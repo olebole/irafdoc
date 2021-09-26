@@ -7,15 +7,15 @@ ccfind: Find catalog sources in an image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccfind input output image
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input celestial coordinate files. Coordinates may be entered
@@ -23,7 +23,7 @@ ccfind: Find catalog sources in an image
   by typing &lt;EOF&gt; (usually &lt;ctrl/d&gt; or &lt;ctrl/z&gt;).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The list of output matched coordinate files. The computed pixel values
@@ -32,21 +32,21 @@ ccfind: Find catalog sources in an image
   printed on the terminal by setting output to <span style="font-family: monospace;">"STDOUT"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of input images associated with the input coordinate files. The number
   of input images must equal the number of input coordinate files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngcolumn">
   <dt><b>lngcolumn = 1, latcolumn = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 1, latcolumn = 2' -->
   <dd>The input coordinate file columns containing the celestial ra / longitude and
   dec / latitude coordinates respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngunits">
   <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the input ra / longitude and dec / latitude coordinates. The
@@ -58,7 +58,7 @@ ccfind: Find catalog sources in an image
   supergalactic systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_insystem">
   <dt><b>insystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem = "j2000"' -->
   <dd>The input celestial coordinate system. The <i>insystem</i> parameter
@@ -201,7 +201,7 @@ ccfind: Find catalog sources in an image
   not required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_usewcs">
   <dt><b>usewcs = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='usewcs' Line='usewcs = no' -->
   <dd>Use image header information to compute the input image celestial coordinate
@@ -213,21 +213,21 @@ ccfind: Find catalog sources in an image
   parameters respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xref">
   <dt><b>xref = INDEF, yref = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF' -->
   <dd>The x and y pixel coordinates of the reference point.
   xref and yref default to the center of the image in pixel coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = INDEF, ymag = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF' -->
   <dd>The x and y scale factors in arcseconds per pixel.  xmag and ymag default
   to 1.0 and 1.0 arcseconds per pixel.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xrotation">
   <dt><b>xrotation = INDEF, yrotation = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF' -->
   <dd>The x and y rotation angles in degrees. xrotation and yrotation are
@@ -240,7 +240,7 @@ ccfind: Find catalog sources in an image
   xrotation and yrotation values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngref">
   <dt><b>lngref = <span style="font-family: monospace;">"INDEF"</span>, latref = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = "INDEF", latref = "INDEF"' -->
   <dd>The ra / longitude and dec / latitude of the reference point. Lngref and latref
@@ -250,7 +250,7 @@ ccfind: Find catalog sources in an image
   respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngrefunits">
   <dt><b>lngrefunits = <span style="font-family: monospace;">""</span>, latrefunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngrefunits' Line='lngrefunits = "", latrefunits = ""' -->
   <dd>The units of the reference point celestial  coordinates. The options
@@ -260,7 +260,7 @@ ccfind: Find catalog sources in an image
   units of the reference system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refsystem">
   <dt><b>refsystem = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refsystem' Line='refsystem = "INDEF"' -->
   <dd>The celestial coordinate system of the reference point. Refsystem may
@@ -271,7 +271,7 @@ ccfind: Find catalog sources in an image
   celestial coordinate system of the input coordinates <i>insystem</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_projection">
   <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in
@@ -280,14 +280,14 @@ ccfind: Find catalog sources in an image
   <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_center">
   <dt><b>center = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = yes' -->
   <dd>Center the object pixel coordinates using an x and y marginal centroiding
   algorithm ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sbox">
   <dt><b>sbox = 21</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sbox' Line='sbox = 21' -->
   <dd>The search box width in pixels. Sbox defines the region of the input image
@@ -296,21 +296,21 @@ ccfind: Find catalog sources in an image
   centering iteration will be the same as the others.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cbox">
   <dt><b>cbox = 9</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cbox' Line='cbox = 9' -->
   <dd>The centering box width in pixels. Cbox defines the region of the input
   image used to compute the final x and y marginal centroids.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datamin">
   <dt><b>datamin = INDEF, datamax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datamin' Line='datamin = INDEF, datamax = INDEF' -->
   <dd>The minimum and maximum good data values. Values outside this range
   are exclude from the x and y marginal centroid computation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = INDEF' -->
   <dd>The background value used by the centroiding algorithm. If background is
@@ -318,7 +318,7 @@ ccfind: Find catalog sources in an image
   each object is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxiter">
   <dt><b>maxiter = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 5' -->
   <dd>The maximum number of centroiding iterations to perform. The centroiding
@@ -326,7 +326,7 @@ ccfind: Find catalog sources in an image
   is reached.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tolerance">
   <dt><b>tolerance = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 0' -->
   <dd>The convergence tolerance of the centroiding algorithm. Tolerance is
@@ -334,15 +334,15 @@ ccfind: Find catalog sources in an image
   pixels from one iteration to the next.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose' -->
   <dd>Print messages about actions taken by the task?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   CCFIND locates the objects in the input celestial coordinate lists <i>input</i>
   in the input images <i>image</i> using the image world coordinate system,
@@ -382,18 +382,18 @@ ccfind: Find catalog sources in an image
   RADECSYS, EQUINOX or EPOCH, and MJD-OBS or DATE-OBS, where the mathematical
   part of this transformation is shown below.
   </p>
-  <pre>
-          xi = a + b * x + c * y
-         eta = d + e * x + f * y
-           b = CD1_1
-           c = CD1_2
-           e = CD2_1
-           f = CD2_2
-           a = - b * CRPIX1 - c * CRPIX2
-           d = - e * CRPIX1 - f * CRPIX2 
-         lng = CRVAL1 + PROJ (xi, eta)
-         lat = CRVAL2 + PROJ (xi, eta)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+    b = CD1_1
+    c = CD1_2
+    e = CD2_1
+    f = CD2_2
+    a = - b * CRPIX1 - c * CRPIX2
+    d = - e * CRPIX1 - f * CRPIX2
+  lng = CRVAL1 + PROJ (xi, eta)
+  lat = CRVAL2 + PROJ (xi, eta)
+  </pre></div>
   <p>
   If usewcs is <span style="font-family: monospace;">"no"</span>, then the image celestial coordinate system is computed
   using the values of the <i>xref</i>, <i>yref</i>, <i>xmag</i>, <i>ymag</i>,
@@ -402,18 +402,18 @@ ccfind: Find catalog sources in an image
   supplied by the user, where the mathematical part of this transformation is
   shown below.
   </p>
-  <pre>
-          xi = a + b * x + c * y
-         eta = d + e * x + f * y
-           b = xmag * cos (xrotation)
-           c = -ymag * sin (yrotation)
-           e = xmag * sin (xrotation)
-           f = ymag * cos (yrotation)
-           a = - b * xref - c * yref 
-           d = - e * xref - f * yref
-         lng = lngref + PROJ (xi, eta)
-         lat = latref + PROJ (xi, eta)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+    b = xmag * cos (xrotation)
+    c = -ymag * sin (yrotation)
+    e = xmag * sin (xrotation)
+    f = ymag * cos (yrotation)
+    a = - b * xref - c * yref
+    d = - e * xref - f * yref
+  lng = lngref + PROJ (xi, eta)
+  lat = latref + PROJ (xi, eta)
+  </pre></div>
   <p>
   In both the above examples, x and y are the pixel coordinates, xi and eta
   are the usual projected (standard) coordinates, lng and lat are the celestial
@@ -455,9 +455,9 @@ ccfind: Find catalog sources in an image
   the format parameters <i>xformat</i> and <i>yformat</i> parameters,
   whose default values are <span style="font-family: monospace;">"%10.3f"</span> and <span style="font-family: monospace;">"%10.3f"</span> respectively
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -466,7 +466,7 @@ ccfind: Find catalog sources in an image
   codes C are as follows:
      
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -483,17 +483,16 @@ ccfind: Find catalog sources in an image
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-     
-     
+  
   Conventions for w (field width) specification:
-     
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
   
   Escape sequences (e.g. "\n" for newline):
-     
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -503,15 +502,15 @@ ccfind: Find catalog sources in an image
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-     
+  
   Examples
-     
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-     
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -525,7 +524,7 @@ ccfind: Find catalog sources in an image
   cctran.hlp-(67%)-line 268-file 1 of 1
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-     
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
@@ -533,17 +532,17 @@ ccfind: Find catalog sources in an image
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Locate the object in the list wpix.coords in the image wpix using
   the existing image header wcs. The input celestial coordinates file
   contains j2000 GSC catalog coordinates of 5 objects in the field.
   The image wcs is in b1950.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; imcopy dev$wpix wpix
       ... copy the test image into the current directory
   
@@ -560,7 +559,7 @@ ccfind: Find catalog sources in an image
   cl&gt; ccfind wpix.coords wpix.match wpix usewcs+
   
   Input File: wpix.coords  Output File: wpix.match
-      Image: wpix  Wcs: 
+      Image: wpix  Wcs:
   Insystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   Refsystem: wpix.imh logical  Projection: TAN  Ra/Dec axes: 1/2
@@ -570,7 +569,7 @@ ccfind: Find catalog sources in an image
   
   cl&gt; type wpix.match
   # Input File: wpix.coords  Output File: wpix.match
-  #     Image: wpix  Wcs: 
+  #     Image: wpix  Wcs:
   # Insystem: j2000  Coordinates: equatorial FK5
   #     Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   # Refsystem: wpix.imh logical  Projection: TAN  Ra/Dec axes: 1/2
@@ -584,30 +583,29 @@ ccfind: Find catalog sources in an image
   13:30:01.816  47:12:58.79     134.373    356.327
   
   cl&gt; ccmap wpix.match ccmap.db xcol=3 ycol=4 lngcol=1 latcol=2 ...
-  </pre>
+  </pre></div>
   <p>
   2. Repeat the previous example but input the image coordinate system by hand.
   The scale is known to be ~0.77 arcseconds per pixel, north is up, east is left,
   and the center of the image is near ra = 13:27:47, dec = 47:27:14 in 1950
   coordinates.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccfind wpix.coords wpix.match wpix xmag=-0.77 ymag=.77 lngref=13:27:47 \<br>
   latref=47:27:14 refsystem=b1950.
   
   Input File: wpix.coords  Output File: wpix.match.1
-      Image: wpix  Wcs: 
+      Image: wpix  Wcs:
   Insystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   Refsystem: b1950  Coordinates: equatorial FK4
       Equinox: B1950.000 Epoch: B1950.00000000 MJD: 33281.92346
   Located 5 objects in image wpix
   
-  
-  cl&gt; type wpix.match 
+  cl&gt; type wpix.match
   
   # Input File: wpix.coords  Output File: wpix.match
-  #     Image: wpix  Wcs: 
+  #     Image: wpix  Wcs:
   # Insystem: j2000  Coordinates: equatorial FK5
   #     Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   # Refsystem: b1950  Coordinates: equatorial FK4
@@ -618,7 +616,7 @@ ccfind: Find catalog sources in an image
   13:29:38.700  47:13:36.23     442.013    409.654
   13:29:55.424  47:10:05.15     224.351    131.200
   13:30:01.816  47:12:58.79     134.373    356.327
-  </pre>
+  </pre></div>
   <p>
   3. Repeat the previous example but read the ra, dec, and epoch from the
   image header keywords RA, DEC, and EPOCH. It turns out the telescope
@@ -626,7 +624,7 @@ ccfind: Find catalog sources in an image
   EPOCH is 0.0 instead of 1987.26 so we will fix up the header before
   trying out the example.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; hedit wpix EPOCH 1987.26
   cl&gt; hedit wpix RA '13:29:21'
   cl&gt; hedit wpix DEC '47:15:42'
@@ -635,7 +633,7 @@ ccfind: Find catalog sources in an image
   latref=DEC refsystem=EPOCH
   
   Input File: wpix.coords  Output File: wpix.match
-      Image: wpix  Wcs: 
+      Image: wpix  Wcs:
   Insystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   Refsystem: 1987.26  Coordinates: equatorial FK5
@@ -643,7 +641,7 @@ ccfind: Find catalog sources in an image
   Located 5 objects in image wpix
   
   # Input File: wpix.coords  Output File: wpix.match
-  #     Image: wpix  Wcs: 
+  #     Image: wpix  Wcs:
   # Insystem: j2000  Coordinates: equatorial FK5
   #     Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   # Refsystem: 1987.26  Coordinates: equatorial FK5
@@ -654,18 +652,18 @@ ccfind: Find catalog sources in an image
   13:29:38.700  47:13:36.23     442.013    409.654
   13:29:55.424  47:10:05.15     224.351    131.200
   13:30:01.816  47:12:58.79     134.373    356.327
-  </pre>
+  </pre></div>
   <p>
   4. Use ccfind to predict the pixel coordinate in the last example by
   turning off the object centering, and mark the predicted coordinates
   on the image display with red dots.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccfind wpix.coords wpix.match wpix xmag=-0.77 ymag=.77 lngref=RA \<br>
   latref=DEC refsystem=EPOCH center-
   
   Input File: wpix.coords  Output File: wpix.match
-      Image: wpix  Wcs: 
+      Image: wpix  Wcs:
   Insystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   Refsystem: 1987.26  Coordinates: equatorial FK5
@@ -675,7 +673,7 @@ ccfind: Find catalog sources in an image
   cl&gt; type wpix.match
   
   # Input File: wpix.coords  Output File: wpix.match
-  #     Image: wpix  Wcs: 
+  #     Image: wpix  Wcs:
   # Insystem: j2000  Coordinates: equatorial FK5
   #     Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   # Refsystem: 1987.26  Coordinates: equatorial FK5
@@ -690,22 +688,21 @@ ccfind: Find catalog sources in an image
   cl&gt; display wpix 1
   
   cl&gt; fields wpix.match 3,4 | tvmark 1 STDIN col=204
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   starfind, ccxymatch, ccmap, ccsetwcs, cctran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,14 +7,14 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   dofoe objects
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_summary">
   <h3>Summary</h3>
-  <!-- BeginSection: 'SUMMARY' -->
   <p>
   The <b>dofoe</b> reduction task is specialized for scattered light
   subtraction, extraction, flat fielding, and wavelength calibration of Fiber
@@ -27,10 +27,10 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   keeping necessary when dealing with the complexities of reducing this type
   of data.
   </p>
-  <!-- EndSection:   'SUMMARY' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_objects">
   <dt><b>objects</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects' -->
   <dd>List of object spectra to be processed.  Previously processed spectra are
@@ -38,21 +38,21 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   dependent calibration data has changed.  Extracted spectra are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apref">
   <dt><b>apref = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""' -->
   <dd>Aperture reference spectrum.  This spectrum is used to define the basic
   extraction apertures and is typically a flat field spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flat">
   <dt><b>flat = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = "" (optional)' -->
   <dd>Flat field spectrum.  If specified the one dimensional flat field spectrum
   is extracted and used to make flat field calibrations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_arcs">
   <dt><b>arcs = <span style="font-family: monospace;">""</span> (at least one if dispersion correcting)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)' -->
   <dd>List of arc spectra.  The first arc in the list is used to create a
@@ -60,7 +60,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   automatically reidentified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_arctable">
   <dt><b>arctable = <span style="font-family: monospace;">""</span> (optional) (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)' -->
   <dd>Table defining arc spectra to be assigned to object spectra (see
@@ -68,7 +68,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   parameter, <i>params.sort</i>, such as the observation time is made.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_readnoise">
   <dt><b>readnoise = <span style="font-family: monospace;">"0."</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "0." (apsum)' -->
   <dd>Read out noise in photons.  This parameter defines the minimum noise
@@ -77,7 +77,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   (case insensitive) may be specified to get the value from the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gain">
   <dt><b>gain = <span style="font-family: monospace;">"1."</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "1." (apsum)' -->
   <dd>Detector gain or conversion factor between photons/electrons and
@@ -86,7 +86,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   from the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datamax">
   <dt><b>datamax = INDEF (apsum.saturation)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datamax' Line='datamax = INDEF (apsum.saturation)' -->
   <dd>The maximum data value which is not a cosmic ray.
@@ -101,7 +101,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <b>apextract</b> package.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_norders">
   <dt><b>norders = 12 (apfind)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='norders' Line='norders = 12 (apfind)' -->
   <dd>Number of orders to be found.  This number is used during the automatic
@@ -113,14 +113,14 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   and adjustments to the automatic aperture definitions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_width">
   <dt><b>width = 4. (apedit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='width' Line='width = 4. (apedit)' -->
   <dd>Approximate base full width of the fiber profiles.  This parameter is used
   for the profile centering algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_arcaps">
   <dt><b>arcaps = <span style="font-family: monospace;">"2x2"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcaps' Line='arcaps = "2x2"' -->
   <dd>When there is only a single fiber set this parameter to <span style="font-family: monospace;">""</span>.  When there is
@@ -131,7 +131,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   checked interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitflat">
   <dt><b>fitflat = yes (flat1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitflat' Line='fitflat = yes (flat1d)' -->
   <dd>Fit and divide the extracted flat field orders by a smooth function
@@ -143,7 +143,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   levels and blaze function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = <span style="font-family: monospace;">"none"</span> (apsum, apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (apsum, apscatter)' -->
   <dd>Type of background light subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no
@@ -160,7 +160,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   and <b>apscat2</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clean">
   <dt><b>clean = yes (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clean' Line='clean = yes (apsum)' -->
   <dd>Detect and correct for bad pixels during extraction?  This is the same
@@ -170,7 +170,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   can be useful.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispcor">
   <dt><b>dispcor = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispcor' Line='dispcor = yes' -->
   <dd>Dispersion correct spectra?  Depending on the <i>params.linearize</i>
@@ -178,33 +178,33 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   function in the image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_redo">
   <dt><b>redo = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='redo' Line='redo = no' -->
   <dd>Redo operations previously done?  If no then previously processed spectra
   in the objects list will not be processed (unless they need to be updated).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = no' -->
   <dd>Update processing of previously processed spectra if aperture, flat
   field, or dispersion reference definitions are changed?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_batch">
   <dt><b>batch = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='batch' Line='batch = no' -->
   <dd>Process spectra as a background or batch job.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_listonly">
   <dt><b>listonly = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no' -->
   <dd>List processing steps but don't process?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_params">
   <dt><b>params = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='params' Line='params = "" (pset)' -->
   <dd>Name of parameter set containing additional processing parameters.  The
@@ -221,7 +221,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   Package parameters are those which generally apply to all task in the
   package.  This is also true of <b>dofoe</b>.
   </p>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
@@ -231,21 +231,21 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   as describe in <b>observatory</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp">
   <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
-  <pre>
-  	nearest - nearest neighbor
-  	 linear - linear
-  	  poly3 - 3rd order polynomial
-  	  poly5 - 5th order polynomial
-  	spline3 - cubic spline
-  	   sinc - sinc function
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nearest - nearest neighbor
+   linear - linear
+    poly3 - 3rd order polynomial
+    poly5 - 5th order polynomial
+  spline3 - cubic spline
+     sinc - sinc function
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispaxis">
   <dt><b>dispaxis = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2' -->
   <dd>Default dispersion axis.  The dispersion axis is 1 for dispersion
@@ -254,19 +254,19 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   precedence over this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database (directory) used for storing aperture and dispersion information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print verbose information available with various tasks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span>, plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile", plotfile = ""' -->
   <dd>Text and plot log files.  If a filename is not specified then no log is
@@ -274,13 +274,13 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   in various ways such as with <b>gkimosaic</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>Dummy parameter to be ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_version">
   <dt><b>version = <span style="font-family: monospace;">"ECHELLE: ..."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "ECHELLE: ..."' -->
   <dd>Version of the package.
@@ -296,7 +296,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">--  GENERAL PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF, nsum = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 10' -->
   <dd>The dispersion line (line or column perpendicular to the dispersion
@@ -306,7 +306,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   image along the dispersion axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extras">
   <dt><b>extras = no (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extras' Line='extras = no (apsum)' -->
   <dd>Include extra information in the output spectra?  When cleaning or using
@@ -318,7 +318,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- DEFAULT APERTURE LIMITS --
   
   </p>
-  <dl>
+  <dl id="l_lower">
   <dt><b>lower = -3., upper = 3. (apdefault)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lower' Line='lower = -3., upper = 3. (apdefault)' -->
   <dd>Default lower and upper aperture limits relative to the aperture center.
@@ -329,7 +329,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- AUTOMATIC APERTURE RESIZING PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_ylevel">
   <dt><b>ylevel = 0.05 (apresize)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ylevel' Line='ylevel = 0.05 (apresize)' -->
   <dd>Data level at which to set aperture limits during automatic resizing.
@@ -339,7 +339,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- TRACE PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_t_step">
   <dt><b>t_step = 10 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_step' Line='t_step = 10 (aptrace)' -->
   <dd>Step along the dispersion axis between determination of the spectrum
@@ -347,7 +347,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   signal-to-noise at each step.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_t_function">
   <dt><b>t_function = <span style="font-family: monospace;">"spline3"</span>, t_order = 2 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 2 (aptrace)' -->
   <dd>Default trace fitting function and order.  The fitting function types are
@@ -357,7 +357,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_t_niterate">
   <dt><b>t_niterate = 1, t_low = 3., t_high = 3. (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_niterate' Line='t_niterate = 1, t_low = 3., t_high = 3. (aptrace)' -->
   <dd>Default number of rejection iterations and rejection sigma thresholds.
@@ -366,7 +366,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- DEFAULT BACKGROUND PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_buffer">
   <dt><b>buffer = 1. (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 1. (apscatter)' -->
   <dd>Buffer distance from the edge of any aperture for data to be included
@@ -374,7 +374,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apscat1">
   <dt><b>apscat1 = <span style="font-family: monospace;">""</span>, apscat2 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "", apscat2 = "" (apscatter)' -->
   <dd>Parameter sets for the fitting functions across and along the dispersion.
@@ -382,7 +382,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   usually set interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_function">
   <dt><b>b_function = <span style="font-family: monospace;">"legendre"</span>, b_order = 1 (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "legendre", b_order = 1 (apsum)' -->
   <dd>Default background fitting function and order.  The fitting function types are
@@ -392,7 +392,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_naverage">
   <dt><b>b_naverage = -100 (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_naverage' Line='b_naverage = -100 (apsum)' -->
   <dd>Default number of points to average or median.  Positive numbers
@@ -402,7 +402,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_niterate">
   <dt><b>b_niterate = 0 (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_niterate' Line='b_niterate = 0 (apsum)' -->
   <dd>Default number of rejection iterations.  If greater than zero the fit is
@@ -410,7 +410,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   fit.  The number of iterations of this process is given by this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_low_reject">
   <dt><b>b_low_reject = 3., b_high_reject = 3. (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_low_reject' Line='b_low_reject = 3., b_high_reject = 3. (apsum)' -->
   <dd>Default background lower and upper rejection sigmas.  If greater than zero
@@ -418,7 +418,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   number of times the sigma of the residuals are rejected before refitting.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_smooth">
   <dt><b>b_smooth = 10 (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_smooth' Line='b_smooth = 10 (apsum)' -->
   <dd>Box car smoothing length for background when using background
@@ -430,7 +430,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- APERTURE EXTRACTION PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_weights">
   <dt><b>weights = <span style="font-family: monospace;">"none"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum)' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
@@ -453,7 +453,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pfit">
   <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (apsum) (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum) (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm for cleaning and variance weighted extractions.
@@ -461,7 +461,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   may try the other algorithm.  See <b>approfiles</b> for further information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 3., usigma = 3. (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3. (apsum)' -->
   <dd>Lower and upper rejection thresholds, given as a number of times the
@@ -471,7 +471,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- FLAT FIELD FUNCTION FITTING PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_f_interactive">
   <dt><b>f_interactive = no (fit1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_interactive' Line='f_interactive = no (fit1d)' -->
   <dd>Fit the one dimensional flat field order spectra interactively?
@@ -479,7 +479,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   spectrum is specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_f_function">
   <dt><b>f_function = <span style="font-family: monospace;">"spline3"</span>, f_order = 20 (fit1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_function' Line='f_function = "spline3", f_order = 20 (fit1d)' -->
   <dd>Function and order used to fit the composite one dimensional flat field
@@ -491,40 +491,40 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- ARC DISPERSION FUNCTION PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 10. (identify/reidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10. (identify/reidentify)' -->
   <dd>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordlist">
   <dt><b>coordlist = <span style="font-family: monospace;">"linelist$thar.dat"</span> (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelist$thar.dat" (ecidentify)' -->
   <dd>Arc line list consisting of an ordered list of wavelengths.
   Some standard line lists are available in the directory <span style="font-family: monospace;">"linelist$"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = 1. (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = 1. (ecidentify)' -->
   <dd>The maximum difference for a match between the dispersion function computed
   value and a wavelength in the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fwidth">
   <dt><b>fwidth = 4. (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4. (ecidentify)' -->
   <dd>Approximate full base width (in pixels) of arc lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 4. (reidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 4. (reidentify)' -->
   <dd>Radius from previous position to reidentify arc line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i_function">
   <dt><b>i_function = <span style="font-family: monospace;">"chebyshev"</span>, i_xorder = 3, i_yorder = 3 (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "chebyshev", i_xorder = 3, i_yorder = 3 (ecidentify)' -->
   <dd>The default function, function order for the pixel position dependence, and
@@ -532,14 +532,14 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   wavelengths.  The functions choices are <span style="font-family: monospace;">"chebyshev"</span> or <span style="font-family: monospace;">"legendre"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i_niterate">
   <dt><b>i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_niterate' Line='i_niterate = 3, i_low = 3.0, i_high = 3.0 (ecidentify)' -->
   <dd>Number of rejection iterations and sigma thresholds for rejecting arc
   lines from the dispersion function fits.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refit">
   <dt><b>refit = yes (ecreidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes (ecreidentify)' -->
   <dd>Refit the dispersion function?  If yes and there is more than 1 line
@@ -553,7 +553,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- AUTOMATIC ARC ASSIGNMENT PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_select">
   <dt><b>select = <span style="font-family: monospace;">"interp"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)' -->
   <dd>Selection method for assigning wavelength calibration spectra.
@@ -612,7 +612,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sort">
   <dt><b>sort = <span style="font-family: monospace;">"jd"</span>, group = <span style="font-family: monospace;">"ljd"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd", group = "ljd" (refspectra)' -->
   <dd>Image header keywords to be used as the sorting parameter for selection
@@ -630,7 +630,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   parameter UTMIDDLE is computed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_time">
   <dt><b>time = no, timewrap = 17. (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='time' Line='time = no, timewrap = 17. (refspectra)' -->
   <dd>Is the sorting parameter a 24 hour time?  If so then the time origin
@@ -642,7 +642,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   <p style="text-align:center">-- DISPERSION  CORRECTION PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_linearize">
   <dt><b>linearize = yes (dispcor)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='linearize' Line='linearize = yes (dispcor)' -->
   <dd>Interpolate the spectra to a linear dispersion sampling?  If yes the
@@ -652,7 +652,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   and the spectral data are not interpolated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_log">
   <dt><b>log = no (dispcor)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='log' Line='log = no (dispcor)' -->
   <dd>Use linear logarithmic wavelength coordinates?  Linear logarithmic
@@ -660,7 +660,7 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   in the logarithm of the wavelength.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flux">
   <dt><b>flux = yes (dispcor)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes (dispcor)' -->
   <dd>Conserve the total flux during interpolation?  If <i>no</i> the output
@@ -670,18 +670,18 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   simple interpolation.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_environment_parameters">
   <h3>Environment parameters</h3>
-  <!-- BeginSection: 'ENVIRONMENT PARAMETERS' -->
   <p>
   The environment parameter <i>imtype</i> is used to determine the extension
   of the images to be processed and created.  This allows use with any
   supported image extension.  For STF images the extension has to be exact;
   for example <span style="font-family: monospace;">"d1h"</span>.
   </p>
-  <!-- EndSection:   'ENVIRONMENT PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <b>dofoe</b> reduction task is specialized for scattered light
   subtraction, extraction, flat fielding, and wavelength calibration of Fiber
@@ -1031,11 +1031,9 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   FOE data.  The parameter values can be changed from the
   defaults by using the parameter editor,
   </p>
-  <pre>
-  
-  	cl&gt; epar params
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; epar params
+  </pre></div>
   <p>
   or simple typing <i>params</i>.  The parameter editor can also be
   entered when editing the <b>dofoe</b> parameters by typing <i>:e
@@ -1351,16 +1349,16 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   parameters are described fully in the help for the task <b>dispcor</b> which
   performs the correction.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following example uses artificial data and may be executed
   at the terminal (with IRAF V2.10).  This is also the sequence performed
   by the test procedure <span style="font-family: monospace;">"demos dofoe"</span>.  Because the images are small the
   dispersion solution is somewhat simplistic.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ec&gt; demos mkdofoe
   Creating image demoobj ...
   Creating image demoflat ...
@@ -1455,11 +1453,11 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   d...ec.imh: ap = 1, w1 = 4959.1, w2 = 4978.5, dw = 0.076, nw = 256
   d...ec.imh: ap = 2, w1 = 5003.4, w2 = 5022.1, dw = 0.073, nw = 256
   d...ec.imh: ap = 3, w1 = 5049.0, w2 = 5067.0, dw = 0.070, nw = 256
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_DOFOE">
   <dt><b>DOFOE V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DOFOE' Line='DOFOE V2.10.3' -->
   <dd>The image format type to be
@@ -1470,16 +1468,16 @@ dofoe: Process Fiber Optic Echelle (FOE) spectra
   light subtraction processing option has been added.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apedit, apfind, approfiles, aprecenter, apresize, apsum, aptrace, apvariance,
   ccdred, center1d, dispcor, fit1d, icfit, ecidentify, observatory,
   onedspec.package, refspectra, ecreidentify, setairmass, setjd
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'SUMMARY' 'PARAMETERS' 'ENVIRONMENT PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

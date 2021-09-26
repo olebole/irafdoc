@@ -7,14 +7,14 @@ tmatch: Find closest match between rows in two tables
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tmatch (input1, input2, output, match1, match2, maxnorm)
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task combines rows from two tables into one. Rows are combined by
   looking at each row in the first table and finding the row in the
@@ -76,28 +76,28 @@ tmatch: Find closest match between rows in two tables
   combination of rows matching within the specified tolerance in the output
   table, while this task only puts the closest match in the output table.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input1">
   <dt><b>input1 [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input1' Line='input1 [string]' -->
   <dd>First input table name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_input2">
   <dt><b>input2 [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input2' Line='input2 [string]' -->
   <dd>Second input table name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output [string]' -->
   <dd>Output table name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match1">
   <dt><b>match1 [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match1' Line='match1 [string]' -->
   <dd>A column template describing columns from the first table used to
@@ -111,7 +111,7 @@ tmatch: Find closest match between rows in two tables
   all columns NOT appearing in the list will be matched.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match2">
   <dt><b>match2 [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match2' Line='match2 [string]' -->
   <dd>A column name template describing columns from the second table used
@@ -119,7 +119,7 @@ tmatch: Find closest match between rows in two tables
   as 'match1'. The number of columns must equal those in 'match1'.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxnorm">
   <dt><b>maxnorm min= 0.0, max=INDEF [real]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxnorm' Line='maxnorm min= 0.0, max=INDEF [real]' -->
   <dd>The distance between two rows must be less than 'maxnorm' in order for
@@ -198,29 +198,29 @@ tmatch: Find closest match between rows in two tables
   or an explicit conversion factor should be supplied.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Two star catalogs are being matched. They both have the following
   columns:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   Name             CH*12      %12s ""
   RA               D        %10.1h hours
   Dec              D        %10.0h degrees
   V                R         %7.2f ""
   B-V              R         %7.2f ""
   U-B              R         %7.2f ""
-  </pre>
+  </pre></div>
   <p>
   To find the best match between the catalogs within a ten arcsecond
   radius one would use the following command:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tmatch catalog1.tab catalog2.tab match.tab \<br>
   &gt;&gt;&gt; ra,dec ra,dec 0:00:10 sphere+
-  </pre>
+  </pre></div>
   <p>
   The search radius can either be supplied in sexagesimal notation, as
   above, or in decimal degrees.
@@ -230,35 +230,34 @@ tmatch: Find closest match between rows in two tables
   would be the case if they were text files. The units conversion could
   then be supplied explicitly through the factor parameter:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tmatch catalog1.tab catalog2.tab match.tab \<br>
   &gt;&gt;&gt; ra,dec ra,dec 0:00:10 factor=15,1 sphere+
-  </pre>
+  </pre></div>
   <p>
   3. Suppose we want the output table to only contain the name from the
   first catalog and get the rest of its information from the second
   catalog. This could be done with the following command:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tmatch catalog1.tab catalog2.tab match.tab \<br>
   &gt;&gt;&gt; ra,dec ra,dec 0:00:10 incol1=name sphere+
-  </pre>
+  </pre></div>
   <p>
   4. To get diagnostic output from the task, use the following command:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tmatch catalog1.tab catalog2.tab match.tab ra,dec ra,dec \<br>
   &gt;&gt;&gt; diag=diag.txt nmcol1=name nmcol2=name 0:00:10 sphere+
-  </pre>
+  </pre></div>
   <p>
   The following is a subset of the diagnostic output produced:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   The following objects matched the same object:
   1:163 6601  GEM
   1:164 6601  GEM
   2:163 6601  GEM
-  
   
   The following objects have the largest norms:
   Norm = 0.00253
@@ -268,26 +267,26 @@ tmatch: Find closest match between rows in two tables
   Norm = 0.00247
   1:368 2101  SCO
   2:368 2101  SCO
-  </pre>
+  </pre></div>
   <p>
   The number before the colon is the table number, the number after the
   colon is the row number, and the rest of the line is from the name
   column.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Written by Bernie Simon
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tjoin
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'REFERENCES' 'SEE ALSO'  -->
   

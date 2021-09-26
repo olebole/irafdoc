@@ -7,14 +7,14 @@ tselect: Create a new table from selected rows of a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tselect intable outtable expr
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task creates a new table from a subset of rows in an input table.  
   The rows are selected on the basis of a boolean expression whose
@@ -24,13 +24,13 @@ tselect: Create a new table from selected rows of a table.
   in the expression in either their Fortran or SPP forms.  The following boolean
   operators can be used in the expression: 
   </p>
-  <pre>
-  equal		.eq.  ==	not equal		.ne.  !=
-  less than	.lt.  &lt;		less than or equal	.le.  &lt;=
-  greater than	.gt.  &gt;		greater than or equal	.ge.  &gt;=
-  or		.or.  ||	and			.and. &amp;&amp;
-  negation	.not. !		pattern match		      ?=
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  equal           .eq.  ==        not equal               .ne.  !=
+  less than       .lt.  &lt;         less than or equal      .le.  &lt;=
+  greater than    .gt.  &gt;         greater than or equal   .ge.  &gt;=
+  or              .or.  ||        and                     .and. &amp;&amp;
+  negation        .not. !         pattern match                 ?=
+  </pre></div>
   <p>
   The pattern match operator (?=) has no corresponding Fortran form.  It takes a
   string expression as its first argument and a pattern as its second argument.
@@ -41,35 +41,35 @@ tselect: Create a new table from selected rows of a table.
   character (\).
   The meta-characters are: 
   </p>
-  <pre>
-  beginning of string	^	end of string		$
-  one character		?	zero or more characters	*
-  white space		#	escape character	\<br>
-  begin ignoring case	{	end ignore case		}
-  begin character class	[	end character class	]
-  not, in char class	^	range, in char class	-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  beginning of string     ^       end of string           $
+  one character           ?       zero or more characters *
+  white space             #       escape character        \<br>
+  begin ignoring case     {       end ignore case         }
+  begin character class   [       end character class     ]
+  not, in char class      ^       range, in char class    -
+  </pre></div>
   <p>
   The expression may also include arithmetic operators and functions.
   Trigonometric functions use degrees, not radians.  The following arithmetic
   operators and functions can be used in the expression:
   </p>
-  <pre>
-  addition		+	subtraction		-
-  multiplication		*	division		/
-  negation		-	exponentiation		**
-  concatenation		//	date difference		delta(x,y)
-  absolute value		abs(x)	cosine			cos(x)
-  sine			sin(x)	tangent			tan(x)
-  arc cosine		acos(x)	arc sine		asin(x)
-  arc tangent		atan(x)	arc tangent		atan2(x,y)
-  exponential		exp(x)	square root		sqrt(x)
-  natural log		log(x)	common log		log10(x)
-  modulo			mod(x)	minimum			min(x,y)
-  row number		row()	maximum			max(x,y)
-  nearest integer		nint(x)	convert to integer	int(x)
-  convert to real		real(x) convert to string	str(x)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  addition                +       subtraction             -
+  multiplication          *       division                /
+  negation                -       exponentiation          **
+  concatenation           //      date difference         delta(x,y)
+  absolute value          abs(x)  cosine                  cos(x)
+  sine                    sin(x)  tangent                 tan(x)
+  arc cosine              acos(x) arc sine                asin(x)
+  arc tangent             atan(x) arc tangent             atan2(x,y)
+  exponential             exp(x)  square root             sqrt(x)
+  natural log             log(x)  common log              log10(x)
+  modulo                  mod(x)  minimum                 min(x,y)
+  row number              row()   maximum                 max(x,y)
+  nearest integer         nint(x) convert to integer      int(x)
+  convert to real         real(x) convert to string       str(x)
+  </pre></div>
   <p>
   The row number function returns an integer value corresponding to the
   row number in the table.  The date difference function returns a real
@@ -97,17 +97,17 @@ tselect: Create a new table from selected rows of a table.
   nonintuitive results, as when checking that a column is not equal to
   INDEF.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>Table(s) from which rows are copied. If input is redirected, this
   parameter will ignored and input will be read from STDIN instead.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>The new table(s) containing the copied rows.
@@ -115,7 +115,7 @@ tselect: Create a new table from selected rows of a table.
   tables must equal the number of input tables.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_expr">
   <dt><b>expr [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]' -->
   <dd>The boolean expression which determines which rows are copied to the new
@@ -123,53 +123,53 @@ tselect: Create a new table from selected rows of a table.
   passed to this parameter (preceded by the <span style="font-family: monospace;">"@"</span> character).
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Extract all binary stars brighter than fifth magnitude from a catalog:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tselect starcat.tab binary.tab "binary &amp;&amp; mag &lt;= 5."
-  </pre>
+  </pre></div>
   <p>
   2. Create a new set of spectra where all measurements with errors greater
   than ten percent are excluded. Use file name editing to create new tables
   with the extension <span style="font-family: monospace;">".tbl"</span> instead of <span style="font-family: monospace;">".tab"</span>:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tselect  *.tab  *.%tab%tbl%  "ERROR / (FLUX + .001) &lt; .1"
-  </pre>
+  </pre></div>
   <p>
   3. Create a table of engineering parameters whose names begin with a digit:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tselect datalog.tab sublog.tab "name ?= '^[0-9]'"
-  </pre>
+  </pre></div>
   <p>
   4. Return all observations in a schedule for the day of Dec 31, 1989:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tselect schedule.tab week.tab "abs(delta(date,'19891231:12'))&lt;.5"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Column names must be set off from operators by blanks in the
   expression so that they can be correctly parsed by the expression
   evaluator.  Expressions involving nulls may evaluate incorrectly, see
   above for a discussion.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tproject, tjoin, tproduct
   </p>
@@ -178,7 +178,7 @@ tselect: Create a new table from selected rows of a table.
   package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

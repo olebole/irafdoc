@@ -7,21 +7,21 @@ peak: Fit the psf to single stars
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   peak image photfile psfimage peakfile rejfile
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images containing the stars to be fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_photfile">
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of input photometry files containing initial estimates of the
@@ -34,7 +34,7 @@ peak: Fit the psf to single stars
   PSF tasks. Photfile may be an APPHOT/DAOPHOT text database or an STSDAS table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psfimage">
   <dt><b>psfimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The list of images containing the PSF models computed by the DAOPHOT PSF task.
@@ -44,7 +44,7 @@ peak: Fit the psf to single stars
   ? is the highest existing version number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_peakfile">
   <dt><b>peakfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='peakfile' Line='peakfile' -->
   <dd>The list of output photometry files. There must be one output photometry
@@ -55,7 +55,7 @@ peak: Fit the psf to single stars
   database if it is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rejfile">
   <dt><b>rejfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rejfile' Line='rejfile' -->
   <dd>The list of output rejected photometry files containing the positions and sky
@@ -70,7 +70,7 @@ peak: Fit the psf to single stars
   if it is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameters
@@ -78,7 +78,7 @@ peak: Fit the psf to single stars
   is undefined then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_daopars">
   <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
@@ -86,7 +86,7 @@ peak: Fit the psf to single stars
   then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span>, wcspsf = <span style="font-family: monospace;">")_.wcspsf"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i>, of the
@@ -155,7 +155,7 @@ peak: Fit the psf to single stars
   wcsin, wcspsf,  and wcsout are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -163,30 +163,30 @@ peak: Fit the psf to single stars
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical PEAK task parameters? Verify can be set to the DAOPHOT
   package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the PEAK task parameters if <i>verify</i> is <span style="font-family: monospace;">"yes"</span>? Update can be
   set to the default daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task ? Verbose can be set to the
   DAOPHOT package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   PEAK computes x and y centers, sky values  and magnitudes for all the stars in
   <i>photfile</i> by fitting the PSF model in <i>psfimage</i> to single stars in
@@ -344,9 +344,9 @@ peak: Fit the psf to single stars
   is the removal of stars from sparsely populated sky flats in preparation
   for smoothing.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   If <i>verbose</i> = yes, a single line is output to the terminal for each star
   fit or rejected. Full output is written to <i>allstarfile</i> and <i>rejfile</i>.
@@ -354,10 +354,10 @@ peak: Fit the psf to single stars
   parameters is written. For each star fit/rejected the following quantities are
   written to the output file.
   </p>
-  <pre>
-  	id  xcenter  ycenter  mag  merr  msky  niter  sharpness  chi
-  	    pier  perr
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  id  xcenter  ycenter  mag  merr  msky  niter  sharpness  chi
+      pier  perr
+  </pre></div>
   <p>
   Id is the id number of the star. Xcenter and ycenter are the fitted coordinates
   in pixels. Mag and merr are the fitted magnitude and magnitude error
@@ -366,152 +366,150 @@ peak: Fit the psf to single stars
   sharpness and goodness of fit statistic respectively. Pier and perror are the
   photometry error code and accompanying error message respectively.
   </p>
-  <!-- EndSection:   'OUTPUT' -->
+  </section>
+  <section id="s_errors">
   <h3>Errors</h3>
-  <!-- BeginSection: 'ERRORS' -->
   <p>
   If no errors occur during the fitting process then pier is 0. Non-zero
   values of pier flag the following error conditions.
   </p>
-  <pre>
-  	0		# No error
-  	1		# The sky is undefined
-  	2		# There are too few good pixels to fit the star
-  	3		# The fit is singular
-  	4		# The star is too faint
-  </pre>
-  <!-- EndSection:   'ERRORS' -->
+  <div class="highlight-default-notranslate"><pre>
+  0               # No error
+  1               # The sky is undefined
+  2               # There are too few good pixels to fit the star
+  3               # The fit is singular
+  4               # The star is too faint
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the PSF model for the test image dev$ypix. Good stars for making the
   PSF model can be found at (442,410), (348,189), and (379,67).
   </p>
-  <pre>
-     da&gt; datapars.epadu = 14.0
-     da&gt; datapars.readnoise = 75.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; datapars.epadu = 14.0
+  da&gt; datapars.readnoise = 75.0
   
-         ... set the gain and readout noise for the detector
+      ... set the gain and readout noise for the detector
   
-     da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
+  da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
   
-          ... answer verify prompts
+       ... answer verify prompts
   
-          ... find stars in the image
+       ... find stars in the image
   
-          ... answer will appear in ypix.coo.1
+       ... answer will appear in ypix.coo.1
   
-      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
-          apertures = 3.0
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+       apertures = 3.0
   
-          ... answer verify prompts
+       ... answer verify prompts
   
-          ... do aperture photometry on the detected stars
+       ... do aperture photometry on the detected stars
   
-          ... answer will appear in ypix.mag.1
+       ... answer will appear in ypix.mag.1
   
-      da&gt; display dev$ypix 1
+   da&gt; display dev$ypix 1
   
-      da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
-          fitrad=3.0 mkstars=yes display=imdr
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+       fitrad=3.0 mkstars=yes display=imdr
   
-          ... verify the critical parameters
+       ... verify the critical parameters
   
-          ... move the image cursor to a candidate star and hit the a key,
-              a plot of the stellar data appears
+       ... move the image cursor to a candidate star and hit the a key,
+           a plot of the stellar data appears
   
-          ... type ? for a listing of the graphics cursor menu
+       ... type ? for a listing of the graphics cursor menu
   
-          ... type a to accept the star, d to reject it
+       ... type a to accept the star, d to reject it
   
-          ... move to the next candidate stars and repeat the previous
-              steps
+       ... move to the next candidate stars and repeat the previous
+           steps
   
-          ... type l to list all the psf stars
+       ... type l to list all the psf stars
   
-          ... type f to fit the psf
+       ... type f to fit the psf
   
-          ... move cursor to first psf star and type s to see residuals,
-              repeat for all the psf stars
+       ... move cursor to first psf star and type s to see residuals,
+           repeat for all the psf stars
   
-          ... type w to save the PSF model
+       ... type w to save the PSF model
   
-          ... type q to quit, and q again to confirm
+       ... type q to quit, and q again to confirm
   
-          ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
-              ypix.psg.1
+       ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
+           ypix.psg.1
   
-      da&gt; peak dev$ypix default default default default 
+   da&gt; peak dev$ypix default default default default
   
-  	... the results will appear in ypix.pk.1 and ypix.prj.1
+       ... the results will appear in ypix.pk.1 and ypix.prj.1
   
-      da&gt; pdump ypix.pk.1 sharpness,chi yes | graph
+   da&gt; pdump ypix.pk.1 sharpness,chi yes | graph
   
-  	... plot chi versus sharpness, the stars should cluster around
-  	    sharpness = 0.0 and chi = 1.0, note that the frame does
-  	    not have a lot of stars
+       ... plot chi versus sharpness, the stars should cluster around
+           sharpness = 0.0 and chi = 1.0, note that the frame does
+           not have a lot of stars
   
-      da&gt; substar dev$ypix ypix.pk.1 "" default default
+   da&gt; substar dev$ypix ypix.pk.1 "" default default
   
-  	... subtract the fitted stars
+       ... subtract the fitted stars
   
-      da&gt; display ypix.sub.1 2 
+   da&gt; display ypix.sub.1 2
   
-  	... note that the psf stars subtract reasonably well but other
-  	    objects which are not stars don't
-  </pre>
+       ... note that the psf stars subtract reasonably well but other
+           objects which are not stars don't
+  </pre></div>
   <p>
   2. Run peak on a section of the input image using the photometry file and PSF
   model derived in example 1 for the parent image and writing the results
   in the coordinate system of the parent image.
   </p>
-  <pre>
-      da&gt; peak dev$ypix[150:450,150:450] default default default default \<br>
-          wcsin=tv wcspsf=tv wcsout=tv 
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; peak dev$ypix[150:450,150:450] default default default default \<br>
+      wcsin=tv wcspsf=tv wcsout=tv
   
-  	... answer the verify prompts
+      ... answer the verify prompts
   
-  	... fit the stars
+      ... fit the stars
   
-  	... the results will appear in ypix.pk.2 and ypix.prj.2
+      ... the results will appear in ypix.pk.2 and ypix.prj.2
   
-      da&gt; display dev$ypix[150:450,150:450] 1
+  da&gt; display dev$ypix[150:450,150:450] 1
   
-  	... display the image
+      ... display the image
   
-      da&gt; pdump ypix.pk.2 xc,yc yes | tvmark 1 STDIN col=204
+  da&gt; pdump ypix.pk.2 xc,yc yes | tvmark 1 STDIN col=204
   
-  	... mark the stars
+      ... mark the stars
   
-      da&gt; substar dev$ypix ypix.pk.2 "" default default 
+  da&gt; substar dev$ypix ypix.pk.2 "" default default
   
-  	... subtract stars from parent image
+      ... subtract stars from parent image
   
-  	... the output images is ypix.sub.2
+      ... the output images is ypix.sub.2
   
+  da&gt; substar dev$ypix[150:450,150:450] ypix.pk.2 "" default default  \<br>
+      wcsin=tv wcspsf=tv wcsout=tv
   
-      da&gt; substar dev$ypix[150:450,150:450] ypix.pk.2 "" default default  \<br>
-  	wcsin=tv wcspsf=tv wcsout=tv
+      ... subtract stars from the peak input image
   
-  	... subtract stars from the peak input image
-  
-  	... the output images is ypix.sub.3
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... the output images is ypix.sub.3
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars,daopars,nstar,allstar
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

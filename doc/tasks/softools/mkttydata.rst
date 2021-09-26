@@ -7,29 +7,29 @@ mkttydata: Build cache for termcap/graphcap device entries
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkttydata devices termcap_file output_file
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_devlist">
   <dt><b>devlist</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='devlist' Line='devlist' -->
   <dd>A comma delimited list of the devices whose termcap or graphcap entries
   are to be compiled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_termcap_file">
   <dt><b>termcap_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='termcap_file' Line='termcap_file' -->
   <dd>The name of the termcap or graphcap file be searched, e.g., <span style="font-family: monospace;">"dev$termcap"</span>,
   or <span style="font-family: monospace;">"dev$graphcap"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output_file">
   <dt><b>output_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output_file' Line='output_file' -->
   <dd>The name of the output file to be written, an SPP include file containing
@@ -38,15 +38,15 @@ mkttydata: Build cache for termcap/graphcap device entries
   and <span style="font-family: monospace;">"dev$cacheg.dat"</span> if the standard graphcap is being compiled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Causes a message to be printed for each device entry compiled.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>mkttydata</i> task is used by the IRAF system manager to precompile
   the <i>termcap</i> or <i>graphcap</i> entries for commonly used video or
@@ -78,12 +78,12 @@ mkttydata: Build cache for termcap/graphcap device entries
   enter <span style="font-family: monospace;">"graphcap"</span> rather than <span style="font-family: monospace;">"dev$graphcap"</span>, just because you happen to
   be in the dev directory.
   </p>
-  <pre>
-  			<i>termcap_file</i>	<i>output_file</i>
-  	
-  	termcap		dev$termcap	dev$cachet.dat
-  	graphcap	dev$graphcap	dev$cacheg.dat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+                  <i>termcap_file</i>      <i>output_file</i>
+  
+  termcap         dev$termcap     dev$cachet.dat
+  graphcap        dev$graphcap    dev$cacheg.dat
+  </pre></div>
   <p>
   After updating these files, perform a sysgen-relink to update the
   system libraries and relink all executables (this takes a while, and
@@ -119,30 +119,30 @@ mkttydata: Build cache for termcap/graphcap device entries
   For additional information on termcap see the Berkeley UNIX <span style="font-family: monospace;">"Programmer's
   Guide: Reference Manual"</span>, section 5.  IRAF uses a standard UNIX termcap.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Update the graphcap cache.
   </p>
-  <p>
-      cl&gt; mktty vt640,vt240,4012,cit414a dev$graphcap dev$cacheg.dat
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mktty vt640,vt240,4012,cit414a dev$graphcap dev$cacheg.dat
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   There is a fixed limit on the amount of data that can be cached.
   If the limit is exceedd the affected TTY modules will fail to compile.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   showcap, IRAF Site Manager's Guide
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

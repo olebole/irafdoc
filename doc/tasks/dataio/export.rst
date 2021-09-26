@@ -7,15 +7,15 @@ export: Convert IRAF images to some other format
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   export images binfiles
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>The list of input IRAF images to be converted.  The list may contain
@@ -27,7 +27,7 @@ export: Convert IRAF images to some other format
   than three dimensions should be converted using image sections.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_binfiles">
   <dt><b>binfiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='binfiles' Line='binfiles' -->
   <dd>The list of output binary files to create.  If any of the builtin formats
@@ -38,7 +38,7 @@ export: Convert IRAF images to some other format
   <p style="text-align:center">OUTPUT PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_format">
   <dt><b>format = <span style="font-family: monospace;">"raw"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "raw"' -->
   <dd>The type of binary file to write.  If the value is <span style="font-family: monospace;">"raw"</span> then the input
@@ -47,23 +47,23 @@ export: Convert IRAF images to some other format
   to the standard output after evaluation of the <i>outbands</i> parameter in
   the same format as would appear from the <i>LISTPIX</i> task.  Finally,
   the value may include any of the currently supported specific builtin formats:
-  <pre>
-  	eps		- Encapsulated PostScript
-  	gif		- Compuserve's GIF format
-  	imh		- IRAF OIF image
-  	miff		- ImageMagick MIFF format image
-  	pgm		- PBMPlus PGM format image
-  	ppm		- PBMPlus PPM format image
-  	ras		- Sun rasterfile format
-  	rgb		- SGI RGB format image
-  	xwd		- X11 Window dump file
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  eps             - Encapsulated PostScript
+  gif             - Compuserve's GIF format
+  imh             - IRAF OIF image
+  miff            - ImageMagick MIFF format image
+  pgm             - PBMPlus PGM format image
+  ppm             - PBMPlus PPM format image
+  ras             - Sun rasterfile format
+  rgb             - SGI RGB format image
+  xwd             - X11 Window dump file
+  </pre></div>
   If any of these builtin formats is selected one or more of the following 
   parameters may be ignored. See the <i>Builtin Formats</i> section for notes 
   about the formats supported by this task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outbands">
   <dt><b>outbands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outbands' Line='outbands = ""' -->
   <dd>Output image band expressions to write.  This is a comma-delimited list of 
@@ -72,7 +72,7 @@ export: Convert IRAF images to some other format
   to the maximum size.  See below for more information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no                    </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no                    ' -->
   <dd>Print verbose output to the screen during conversion?
@@ -81,7 +81,7 @@ export: Convert IRAF images to some other format
   <p style="text-align:center">RAW BINARY OUTPUT PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = yes' -->
   <dd>For raw binary file output only, prepend a header describing how the data 
@@ -95,15 +95,14 @@ export: Convert IRAF images to some other format
   of the header layout.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtype">
   <dt><b>outtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""' -->
   <dd>Output pixel type if <i>format</i> is set to <span style="font-family: monospace;">"raw"</span> or <span style="font-family: monospace;">"list"</span>.  This is a 
   string giving the type and size of each pixel, the syntax for the outtype 
   entry is
-  <pre>
-  
-  		&lt;type&gt;[&lt;nbytes&gt;]
+  <div class="highlight-default-notranslate"><pre>
+                  &lt;type&gt;[&lt;nbytes&gt;]
   where
       type = b            # byte
              u            # unsigned (short) integer
@@ -112,8 +111,7 @@ export: Convert IRAF images to some other format
              n            # native floating point
   
       nbytes = 1, 2, 4, or 8
-  
-  </pre>
+  </pre></div>
   If no value for <i>nbytes</i> is given the smallest size for the given type
   (i.e. 1 byte for <span style="font-family: monospace;">'b'</span>, 2 bytes for ints, 4 bytes for floating point) will
   be used.  If no value is entered at all the type of the input image is used, 
@@ -121,7 +119,7 @@ export: Convert IRAF images to some other format
   image is used.  This parameter is ignored for builtin format output options.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interleave">
   <dt><b>interleave = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interleave' Line='interleave = 0' -->
   <dd>Pixel interleave type.  If the <i>outbands</i> parameter is composite 
@@ -134,7 +132,7 @@ export: Convert IRAF images to some other format
   where the pixel storage is predefined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bswap">
   <dt><b>bswap = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bswap' Line='bswap = "no"' -->
   <dd>Type of byte-swapping to perform on output. The default is bswap=no which
@@ -146,9 +144,9 @@ export: Convert IRAF images to some other format
   builtin formats that don't have a specified byte order.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   	The <i>export</i> task will convert one or more images in an
   input list to a binary raster file, a text listing of pixels values,
@@ -204,9 +202,9 @@ export: Convert IRAF images to some other format
   supported builtin formats.  See the section on <i>Builtin Formats</i> for
   more information and the restrictions or requirements of each format.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_more_on_outbands_expressions">
   <h3>More on outbands expressions</h3>
-  <!-- BeginSection: 'MORE ON OUTBANDS EXPRESSIONS' -->
   <p>
   	The simplest specification for <i>outbands</i> is a null string, 
   in which case the image is converted directly (i.e. band storage, 
@@ -242,12 +240,12 @@ export: Convert IRAF images to some other format
   e.g. band-1, band-2 and so on.  For example (where rgbim is a 512x512x3 image, 
   and rim, gim, and bim are 512x512 images),
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; export rgbim file outtype="u2" header-                       (1)
   cl&gt; export rgbim file outtype="u2" header- outbands="b3,b2,b1"   (2)
   cl&gt; export rim,gim,bim file outty="u2" outbands="i3,i2,i1"       (3)
   cl&gt; export rim,gim,bim file outty="b" outbands="gray(i1,i2,i3)"  (4)
-  </pre>
+  </pre></div>
   <p>
   Example (1) converts the input image pixels to a raw binary file of 
   unsigned short integers with no header written as one image band following 
@@ -268,16 +266,15 @@ export: Convert IRAF images to some other format
   <p>
   <b>Operands</b>
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  iN                          # image list item
+  iN.param                    # image parameter
+  @"param"                    # parameter of 3-D image
+  bN                          # band within 3-D image
   
-  	iN		      	    # image list item
-  	iN.param		    # image parameter
-  	@"param"	    	    # parameter of 3-D image
-  	bN		      	    # band within 3-D image
-  
-  	func()		      	    # function
-  	constant	      	    # numeric constant
-  </pre>
+  func()                      # function
+  constant                    # numeric constant
+  </pre></div>
   <p>
       The 'iN.param' and '@<span style="font-family: monospace;">"param"</span>' syntax allows an image header parameter 
   to be accessed.  For example 'i2.otime' refers to the 'otime' image 
@@ -285,12 +282,10 @@ export: Convert IRAF images to some other format
   current image if the input list contains 3-D images.  They may
   be used in an outbands expression such as
   </p>
-  <pre>
-  
-      (i1*(i1.otime/i2.otime)),i2,(i3*(i3.otime/i2.otime))	(1)
-      (b1/@"otime")),(b2/@"otime"),(b3/@"otime")			(2)
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (i1*(i1.otime/i2.otime)),i2,(i3*(i3.otime/i2.otime))        (1)
+  (b1/@"otime")),(b2/@"otime"),(b3/@"otime")                  (2)
+  </pre></div>
   <p>
   to normalize the output bands by the exposure time value in the second image
   in the first example, or to normalize by the 'otime' keyword of a 3-D image
@@ -302,9 +297,9 @@ export: Convert IRAF images to some other format
   consisting of that value.  For example, writing a 32-bit RGB image with an 
   alpha channel of 255 could be written using
   </p>
-  <p>
-      cl&gt; export rgbim file outtype=<span style="font-family: monospace;">"b1"</span> outbands=<span style="font-family: monospace;">"b1,b2,b3,255"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rgbim file outtype="b1" outbands="b1,b2,b3,255"
+  </pre></div>
   <p>
   <b>Operators</b>
   </p>
@@ -312,25 +307,24 @@ export: Convert IRAF images to some other format
   The expression syntax implemented by <i>export</i> provides the following
   set of operators:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  ( expr )                    - grouping
+  + - * /                     - arithmetic
+  **                          - exponentiation
+  //                          - concatenate
+  expr ? expr1 : expr2        - conditional expression
   
-          ( expr )              	    - grouping
-          + - * /               	    - arithmetic
-          **                    	    - exponentiation
-          //                    	    - concatenate
-          expr ? expr1 : expr2  	    - conditional expression
-      
-          &amp;&amp;                    	    - logical and
-          ||                    	    - logical or
-          !                     	    - logical not
-          &lt;                     	    - less than
-          &lt;=                    	    - less than or equal
-          &gt;                     	    - greater than
-          &gt;=                    	    - greater than or equal
-          ==                    	    - equals
-          !=                    	    - not equals
-  	?=                          - substring equals
-  </pre>
+  &amp;&amp;                          - logical and
+  ||                          - logical or
+  !                           - logical not
+  &lt;                           - less than
+  &lt;=                          - less than or equal
+  &gt;                           - greater than
+  &gt;=                          - greater than or equal
+  ==                          - equals
+  !=                          - not equals
+  ?=                          - substring equals
+  </pre></div>
   <p>
   The conditional expression has the value <i>expr1</i> if <i>expr</i> is true,
   and <i>expr2</i> otherwise.  Since the expression is evaluated at every pixel
@@ -364,14 +358,14 @@ export: Convert IRAF images to some other format
   <p style="text-align:center"><b>Output Functions:</b>
   
   </p>
-  <pre>
-         band (args)     	    	  - force band interleaved storage
-         line (args)         	  - force line interleaved storage
-        flipx (args)   	     	  - flip image in X dimension
-        flipy (args)   	     	  - flip image in Y dimension
+  <div class="highlight-default-notranslate"><pre>
+   band (args)                - force band interleaved storage
+   line (args)                - force line interleaved storage
+  flipx (args)                - flip image in X dimension
+  flipy (args)                - flip image in Y dimension
   
-        block (val,width,height)	  - block fill area with a constant
-  </pre>
+  block (val,width,height)    - block fill area with a constant
+  </pre></div>
   <p>
       These functions define how the output data are written. For builtin 
   formats whose normal orientation and storage format is known these functions 
@@ -379,7 +373,7 @@ export: Convert IRAF images to some other format
   within expressions (e.g. <span style="font-family: monospace;">"255 + flipx(i1)"</span>), however their arguments may
   be expressions or (perhaps output) functions themselves.
   </p>
-  <dl>
+  <dl id="l_band">
   <dt><b>band (args)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='band' Line='band (args)' -->
   <dd>Force band storage in the output file regardless of the value of the
@@ -393,7 +387,7 @@ export: Convert IRAF images to some other format
   and <i>psscale()</i> functions only.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line (args)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='line' Line='line (args)' -->
   <dd>Force line storage in the output file regardless of the value of the
@@ -403,7 +397,7 @@ export: Convert IRAF images to some other format
   is ignored by builtin formats that do not support this scheme.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flipx">
   <dt><b>flipx (args)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='flipx' Line='flipx (args)' -->
   <dd>Flip the image left-to-right on output.  This function may be used as an
@@ -411,7 +405,7 @@ export: Convert IRAF images to some other format
   <i>psscale()</i> functions only.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flipy">
   <dt><b>flipy (args)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='flipy' Line='flipy (args)' -->
   <dd>Flip the image top-to-bottom on output.  Certain builtin formats (such as
@@ -423,7 +417,7 @@ export: Convert IRAF images to some other format
   <i>psdpi()</i>, or <i>psscale()</i> functions only.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_block">
   <dt><b>block (value, width, height)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='block' Line='block (value, width, height)' -->
   <dd>Fill an area with a constant value.  This function can be used to fill a
@@ -435,14 +429,13 @@ export: Convert IRAF images to some other format
   <p style="text-align:center"><b>Scaling Functions:</b>
   
   </p>
-  <pre>
-  
-     zscale (arg [,z1, z2 [, nbins]]) - scale to a fixed number of bins
-                 zscalem (arg1, arg2) - automatic scaling with filtering
-             gr[ea]y (arg1,arg2,arg3) - RGB to grayscale conversion
-            bscale (arg, zero, scale) - linearly transform intensity scale
-         gamma (arg, gamma [, scale]) - apply a gamma correction
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  zscale (arg [,z1, z2 [, nbins]]) - scale to a fixed number of bins
+              zscalem (arg1, arg2) - automatic scaling with filtering
+          gr[ea]y (arg1,arg2,arg3) - RGB to grayscale conversion
+         bscale (arg, zero, scale) - linearly transform intensity scale
+      gamma (arg, gamma [, scale]) - apply a gamma correction
+  </pre></div>
   <p>
           These functions may be used to scale the intensity values of the
   image before output in order to map image datatypes to a specified range.
@@ -450,7 +443,7 @@ export: Convert IRAF images to some other format
   functions may be used as arguments to the output functions above
   or as operands within more complex expressions.
   </p>
-  <dl>
+  <dl id="l_zscale">
   <dt><b>zscale (arg [,z1,z2 [,nbins]])</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='zscale' Line='zscale (arg [,z1,z2 [,nbins]])' -->
   <dd>Scale the pixels in a given range to a specified number of bins.  This
@@ -466,13 +459,12 @@ export: Convert IRAF images to some other format
   values will map to larger bin numbers.  For example, to map the dev$pix
   test image to 200 colors such that there are <span style="font-family: monospace;">"black"</span> stars on a <span style="font-family: monospace;">"white"</span>
   background one could use
-  <pre>
-  
-  	zscale (b1, @"i_maxpixval", @"i_minpixval", 200)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  zscale (b1, @"i_maxpixval", @"i_minpixval", 200)
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zscalem">
   <dt><b>zscalem (arg1, arg2)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='zscalem' Line='zscalem (arg1, arg2)' -->
   <dd>This is a variant of the zscale operand with automatic scale calculation;
@@ -482,76 +474,68 @@ export: Convert IRAF images to some other format
   the calculation.  This allows limiting the automatic scale calculation to
   pixels specified in a mask or to a certain range to exclude extreme or bad
   values that would otherwise perturb the result.  Typical usages might be
-  <pre>
-  
-  	zscalem (i1, i2==0)
-  	zscalem (i1, i1&gt;0&amp;&amp;i1&lt;10000)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  zscalem (i1, i2==0)
+  zscalem (i1, i1&gt;0&amp;&amp;i1&lt;10000)
+  </pre></div>
   where i1 are the image pixels and i2 would be pixels from the second
   input argument which defines a mask.  Note that you can't just say i2
   for a mask but must use it in an expression resulting in a true or false
   value.  Also note that the result is always in the range 0 to 255.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grey">
   <dt><b>grey (arg1,arg2,arg3) or gray (arg1,arg2,arg3)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='grey' Line='grey (arg1,arg2,arg3) or gray (arg1,arg2,arg3)' -->
   <dd>Convert three image operands or expressions to a single grayscale image
   using the standard NTSC equation:
-  <pre>
-  
-  	Gray = 0.3 * arg1 + 0.59 * arg2 + 0.11 * arg3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Gray = 0.3 * arg1 + 0.59 * arg2 + 0.11 * arg3
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bscale">
   <dt><b>bscale (arg, zero, scale)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='bscale' Line='bscale (arg, zero, scale)' -->
   <dd>Linearly transform the intensity scale of the image using the equation
-  <pre>
-  
-  	new[i] = (arg[i] - zero) / scale
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  new[i] = (arg[i] - zero) / scale
+  </pre></div>
   Pixels are scaled in their input datatype prior to converting to the output
   datatype.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gamma">
   <dt><b>gamma (arg, gamma [, scale])</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='gamma' Line='gamma (arg, gamma [, scale])' -->
   <dd>Apply a gamma correction to the pixels.  Pixel values are scaled according to
   the equation
-  <pre>
-  
-  	new = scale * [ (old/scale) ** (1.0/gamma) ]
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  new = scale * [ (old/scale) ** (1.0/gamma) ]
+  </pre></div>
   If no scale argument is given a value of 255 will be assumed.
   </dd>
   </dl>
   <p>
       <i>Additional functions</i> are supported for specific formats:
   </p>
-  <pre>
-        Function	           Description		    Formats
-        --------	           -----------		    -------
-      cmap (r,g,b [,ncols])  create 8-bit colormap    GIF,RAS,XWD,EPS
-   setcmap (args, [opts])    define a colormap        GIF,RAS,XWD,EPS
-     psdpi (args, dpi)       set dpi for output	    EPS
-   psscale (args, scale)     set scale of output	    EPS
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+       Function             Description              Formats
+       --------             -----------              -------
+     cmap (r,g,b [,ncols])  create 8-bit colormap    GIF,RAS,XWD,EPS
+  setcmap (args, [opts])    define a colormap        GIF,RAS,XWD,EPS
+    psdpi (args, dpi)       set dpi for output       EPS
+  psscale (args, scale)     set scale of output      EPS
+  </pre></div>
   <p>
   	These functions may take as arguments some of the output functions
   named above.  For example, one can specify the dpi resolution of EPS output
   and band storage of images using something like
   </p>
-  <pre>
-  
-  	psdpi(band(args), dpi)
-  
-  </pre>
-  <dl>
+  <div class="highlight-default-notranslate"><pre>
+  psdpi(band(args), dpi)
+  </pre></div>
+  <dl id="l_cmap">
   <dt><b>cmap (arg1,arg2,arg3 [, ncolors])</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='cmap' Line='cmap (arg1,arg2,arg3 [, ncolors])' -->
   <dd>Compute an 8-bit colormap from three image operands or expressions using a
@@ -564,7 +548,7 @@ export: Convert IRAF images to some other format
   used within another expression or function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_setcmap">
   <dt><b>setcmap (args, cmap [, brightness, contrast]) </b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='setcmap' Line='setcmap (args, cmap [, brightness, contrast]) ' -->
   <dd>Define the colormap to be used on output.  This function is only supported
@@ -572,21 +556,21 @@ export: Convert IRAF images to some other format
   compute the color index values.  The <i>cmap</i> argument may either be the
   filename of a normalized colormap table (such as is used by <i>XImtool</i>)
   or one of the builtin values:
-  <pre>
-  	aips0		- and RGB false color mapping
-  	blue		- various shades of blue
-  	color		- standard B/W and RGB colormap
-  	grayscale	- standard grayscale
-  	greyscale	- (alias for above)
-  	green		- various shades of green
-  	halley		- standard halley mission colormap
-  	heat		- temperatures as colors
-  	rainbow		- rainbow colors
-  	red		- various shades of red
-  	staircase	- RGB staircase
-  	standard	- RGB ramps
-  	overlay		- grayscale with IMDKERN overlay colors
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  aips0           - and RGB false color mapping
+  blue            - various shades of blue
+  color           - standard B/W and RGB colormap
+  grayscale       - standard grayscale
+  greyscale       - (alias for above)
+  green           - various shades of green
+  halley          - standard halley mission colormap
+  heat            - temperatures as colors
+  rainbow         - rainbow colors
+  red             - various shades of red
+  staircase       - RGB staircase
+  standard        - RGB ramps
+  overlay         - grayscale with IMDKERN overlay colors
+  </pre></div>
   Colormap names must be quoted with either single or double quote characters.
   The optional <i>brightness</i> and <i>contrast</i> arguments have default 
   values of 0.5 and 1.0 respectively corresponding to the default 
@@ -595,7 +579,7 @@ export: Convert IRAF images to some other format
   be used, IRAF logical paths may be used in the filename specification. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psdpi">
   <dt><b>psdpi (args, dpi)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='psdpi' Line='psdpi (args, dpi)' -->
   <dd>Specify the dots-per-inch resolution of the output image.  The default 
@@ -604,7 +588,7 @@ export: Convert IRAF images to some other format
   only be used as an argument to the <i>psscale()</i> function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psscale">
   <dt><b>psscale (args, scale)</b></dt>
   <!-- Sec='MORE ON OUTBANDS EXPRESSIONS' Level=0 Label='psscale' Line='psscale (args, scale)' -->
   <dd>Specify the scale of the output image.  The default value is 1.0 which 
@@ -617,9 +601,9 @@ export: Convert IRAF images to some other format
   only be used as an argument to the <i>psdpi()</i> function.
   </dd>
   </dl>
-  <!-- EndSection:   'MORE ON OUTBANDS EXPRESSIONS' -->
+  </section>
+  <section id="s_export_header_format">
   <h3>Export header format</h3>
-  <!-- BeginSection: 'EXPORT HEADER FORMAT' -->
   <p>
   	The header prepended to the binary data is ascii text consisting of
   keyword-value pairs, one per line, terminated with a newline after the
@@ -631,24 +615,24 @@ export: Convert IRAF images to some other format
   <p>
   Defined keywords are:
   </p>
-  <pre>
-  	date		    - date file was written (dd/mm/yy)
-  	hdrsize		    - size of header (bytes)
-  	ncols		    - no. of image columns
-  	nrows		    - no. of image rows
-  	nbands		    - no. of image bands
-  	datatype	    - pixel type (as &lt;type&gt;&lt;nbytes&gt;)
-  	outbands	    - outband expression list
-  	interleave	    - interleave value (same as above)
-  	bswap		    - are ints swapped relative to MII format?
-  	image1 		    - image names used in creating file
-  	  :
-  	imageN	
-  	header1 <span style="font-family: monospace;">'{'</span> &lt;header&gt; <span style="font-family: monospace;">'}'</span>  - image headers of above
-  	  :
-  	headerN	<span style="font-family: monospace;">'{'</span> &lt;header&gt; <span style="font-family: monospace;">'}'</span>
-  	end		    - terminate header
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  date                - date file was written (dd/mm/yy)
+  hdrsize             - size of header (bytes)
+  ncols               - no. of image columns
+  nrows               - no. of image rows
+  nbands              - no. of image bands
+  datatype            - pixel type (as &lt;type&gt;&lt;nbytes&gt;)
+  outbands            - outband expression list
+  interleave          - interleave value (same as above)
+  bswap               - are ints swapped relative to MII format?
+  image1              - image names used in creating file
+    :
+  imageN
+  header1 <span style="font-family: monospace;">'{'</span> &lt;header&gt; <span style="font-family: monospace;">'}'</span>  - image headers of above
+    :
+  headerN <span style="font-family: monospace;">'{'</span> &lt;header&gt; <span style="font-family: monospace;">'}'</span>
+  end                 - terminate header
+  </pre></div>
   <p>
   If the <i>header</i> parameter is set to <span style="font-family: monospace;">"long"</span> the image headers for 
   each image used in creating the file is included in the output header, 
@@ -657,30 +641,30 @@ export: Convert IRAF images to some other format
   <p>
   A sample (verbose) header might look like:
   </p>
-  <pre>
-      format = EXPORT
-      date = '19/06/94'
-      hdrsize = 2084
-      nrows = 512
-      ncols = 512
-      nbands = 1
-      datatype = 'i2'
-      outbands = ''
-      interleave = 0
-      bswap = no
-      image1 = "dev$pix"
-      header1 = {
-      IRAF-BPX=                   16  /  DATA BITS/PIXEL
-      IRAFTYPE= 'SHORT   '            /  PIXEL TYPE
-      CCDPICNO=                   53  /  ORIGINAL CCD PICTURE NUM
-      ITIME   =                  600  /  INTEGRATION TIME (SECS)
-      	:   :		:			:
-      }
-      end
-  </pre>
-  <!-- EndSection:   'EXPORT HEADER FORMAT' -->
+  <div class="highlight-default-notranslate"><pre>
+  format = EXPORT
+  date = '19/06/94'
+  hdrsize = 2084
+  nrows = 512
+  ncols = 512
+  nbands = 1
+  datatype = 'i2'
+  outbands = ''
+  interleave = 0
+  bswap = no
+  image1 = "dev$pix"
+  header1 = {
+  IRAF-BPX=                   16  /  DATA BITS/PIXEL
+  IRAFTYPE= 'SHORT   '            /  PIXEL TYPE
+  CCDPICNO=                   53  /  ORIGINAL CCD PICTURE NUM
+  ITIME   =                  600  /  INTEGRATION TIME (SECS)
+      :   :           :                       :
+  }
+  end
+  </pre></div>
+  </section>
+  <section id="s_builtin_formats">
   <h3>Builtin formats</h3>
-  <!-- BeginSection: 'BUILTIN FORMATS' -->
   <p>
   	While the task provides a way of writing general binary raster
   files there is still a need for converting to specific formats.  
@@ -698,17 +682,15 @@ export: Convert IRAF images to some other format
   can be written.  Complete examples for the most common cases are shown in
   the <i>Examples</i> section below.  The columns in the table are defined as
   </p>
-  <pre>
-  
-      #expr		- number of required <i>outbands</i> expressions
-      Type		- RGB or 8-bit colormap (index) file
-      bitpix		- number of bits-per-pixel
-      CLT?		- does the file have a colormap?
-      Alpha?		- does the file have an alpha channel?
-      Interleaving	- type of pixel interleaving
-      Notes		- see explanation below each table
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  #expr               - number of required <i>outbands</i> expressions
+  Type                - RGB or 8-bit colormap (index) file
+  bitpix              - number of bits-per-pixel
+  CLT?                - does the file have a colormap?
+  Alpha?              - does the file have an alpha channel?
+  Interleaving        - type of pixel interleaving
+  Notes               - see explanation below each table
+  </pre></div>
   <p>
   A general description and specific restrictions or requirements are given for 
   each format.  An error is generated of the input parameters do not meet the 
@@ -727,16 +709,14 @@ export: Convert IRAF images to some other format
   <p>
   	The currently supported builtin formats include:
   </p>
-  <dl>
+  <dl id="l_EPS">
   <dt><b>EPS     - Encapsulated PostScript</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='EPS' Line='EPS     - Encapsulated PostScript' -->
   <dd><pre>
-  
-    #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
-    -----    -----  ------  ----  ------  ------------  -----
-      1      index  8       no    no      none          
-  
-  </pre>
+  #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
+  -----    -----  ------  ----  ------  ------------  -----
+    1      index  8       no    no      none
+  </pre></div>
   	The output 8-bit Encapsulated PostScript image
   centered on the page at a default scale of 1.0 at 300dpi (i.e. the image will
   appear on a 300dpi printer about the same size as displayed on a 72dpi 
@@ -750,22 +730,20 @@ export: Convert IRAF images to some other format
   <i>cmap()</i> or <i>setcmap()</i> functions).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_GIF">
   <dt><b>GIF     - Compuserve's GIF format</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='GIF' Line='GIF     - Compuserve's GIF format' -->
   <dd><pre>
+  #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
+  -----    -----  ------  ----  ------  ------------  -----
+    1      index  8       yes   no      none          1
+    3      index  8       yes   no      none          2
   
-    #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
-    -----    -----  ------  ----  ------  ------------  -----
-      1      index  8       yes   no      none          1
-      3      index  8       yes   no      none          2
-  
-      Notes:
-  	1) Colormap generation enabled using <i>setcmap()</i> or else
-             default grayscale colormap will be used
-  	2) use of <i>cmap()</i> required to generate colormap
-  
-  </pre>
+    Notes:
+        1) Colormap generation enabled using <i>setcmap()</i> or else
+           default grayscale colormap will be used
+        2) use of <i>cmap()</i> required to generate colormap
+  </pre></div>
   	The output file is a GIF '87 image.  A linear colormap of 256 entries 
   will automatically be generated if only one image or expression is given for
   conversion and no colormap is specified.  
@@ -776,7 +754,7 @@ export: Convert IRAF images to some other format
   be 255, i.e. the output pixel size will be forced to 8-bits or less.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IMH">
   <dt><b>IMH     - IRAF image file</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='IMH' Line='IMH     - IRAF image file' -->
   <dd>	The output file is an IRAF OIF format image of the specified datatype.
@@ -785,77 +763,69 @@ export: Convert IRAF images to some other format
   task before writing out the final format.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_MIFF">
   <dt><b>MIFF    - ImageMagick MIFF format image</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='MIFF' Line='MIFF    - ImageMagick MIFF format image' -->
   <dd><pre>
+  #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
+  -----    -----  ------  ----  ------  ------------  -----
+    1      index  8       no    no      none
+    1      index  8       yes   no      none          1,2
+    3      rgb    24      no    no      pixel
   
-    #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
-    -----    -----  ------  ----  ------  ------------  -----
-      1      index  8       no    no      none
-      1      index  8       yes   no      none          1,2
-      3      rgb    24      no    no      pixel         
-  
-      Notes:
-  	1) Colormap generation enabled using <i>setcmap()</i>
-  	2) Colormap generation enabled using <i>cmap()</i>
-  
-  </pre>
+    Notes:
+        1) Colormap generation enabled using <i>setcmap()</i>
+        2) Colormap generation enabled using <i>cmap()</i>
+  </pre></div>
   	The output file is a Machine Independent File Format image, with or
   without a colormap or as a 24-bit RGB image.  Although MIFF permits 64K
   colors in a colormap the task only supports 256 colors, no compression is
   used in the image.  The maximum pixel value per color is assumed to be 255.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_PGM">
   <dt><b>PGM     - PBMPlus PGM format image</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='PGM' Line='PGM     - PBMPlus PGM format image' -->
   <dd><pre>
+  #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
+  -----    -----  ------  ----  ------  ------------  -----
+    1      index  8       no    no      none
+    3      index  8       no    no      none          1
   
-    #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
-    -----    -----  ------  ----  ------  ------------  -----
-      1      index  8       no    no      none
-      3      index  8       no    no      none          1
-  
-      Notes:
-  	1) Grayscale may be produce with <i>gray()</i> function
-  
-  </pre>
+    Notes:
+        1) Grayscale may be produce with <i>gray()</i> function
+  </pre></div>
   	The output file is an 8-bit raw (i.e. binary pixels) PGM image.  
   The maximum pixel value is assumed to be 255.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_PPM">
   <dt><b>PPM     - PBMPlus PPM format image</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='PPM' Line='PPM     - PBMPlus PPM format image' -->
   <dd><pre>
-  
-    #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
-    -----    -----  ------  ----  ------  ------------  -----
-      3      rgb    24      no    no      pixel         
-  
-  </pre>
+  #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
+  -----    -----  ------  ----  ------  ------------  -----
+    3      rgb    24      no    no      pixel
+  </pre></div>
   	The output file is an 24-bit raw (i.e. binary pixels) PPM image. 
   The maximum pixel value per color is assumed to be 255.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_RAS">
   <dt><b>RAS     - Sun rasterfile format</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='RAS' Line='RAS     - Sun rasterfile format' -->
   <dd><pre>
+  #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
+  -----    -----  ------  ----  ------  ------------  -----
+    1      index  8       no    no      none
+    1      index  8       yes   no      none          1,2
+    3      rgb    24      no    no      pixel
+    4      rgb    32      no    yes     pixel
   
-    #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
-    -----    -----  ------  ----  ------  ------------  -----
-      1      index  8       no    no      none
-      1      index  8       yes   no      none          1,2
-      3      rgb    24      no    no      pixel
-      4      rgb    32      no    yes     pixel
-  
-      Notes:
-  	1) Colormap generation enabled using <i>setcmap()</i>
-  	2) Colormap generation enabled using <i>cmap()</i>
-  
-  </pre>
+    Notes:
+        1) Colormap generation enabled using <i>setcmap()</i>
+        2) Colormap generation enabled using <i>cmap()</i>
+  </pre></div>
   	The output file will be a Sun rasterfile.  The header values
   (long integers) may be byte swapped by setting the <i>bswap</i> parameter 
   to <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"i4"</span>.  For 32-bit true-color rasterfiles the
@@ -863,38 +833,34 @@ export: Convert IRAF images to some other format
   pixel value is assumed to be 255.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_RGB">
   <dt><b>RGB     - SGI RGB format image</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='RGB' Line='RGB     - SGI RGB format image' -->
   <dd><pre>
-  
-    #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
-    -----    -----  ------  ----  ------  ------------  -----
-      1      index  8       no    no      none          
-      3      rgb    24      no    no      scanline      
-  
-  </pre>
+  #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
+  -----    -----  ------  ----  ------  ------------  -----
+    1      index  8       no    no      none
+    3      rgb    24      no    no      scanline
+  </pre></div>
   	The output file will be an SGI RGB (IRIS) format image.  Although
   this format supports colormaps they are not supported by this task.
   The maximum pixel value is assumed to be 255.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_XWD">
   <dt><b>XWD     - X11 Window dump file</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='XWD' Line='XWD     - X11 Window dump file' -->
   <dd><pre>
+  #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
+  -----    -----  ------  ----  ------  ------------  -----
+    1      index  8       yes   no      none          1,2,3
+    3      rgb    24      no    no      none
   
-    #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
-    -----    -----  ------  ----  ------  ------------  -----
-      1      index  8       yes   no      none          1,2,3
-      3      rgb    24      no    no      none          
-  
-      Notes:
-  	1) Linear grayscale colormap automatically generated
-  	2) Colormap generation enabled using <i>setcmap()</i>
-  	3) Colormap generation enabled using <i>cmap()</i>
-  
-  </pre>
+    Notes:
+        1) Linear grayscale colormap automatically generated
+        2) Colormap generation enabled using <i>setcmap()</i>
+        3) Colormap generation enabled using <i>cmap()</i>
+  </pre></div>
   	The output file will be an X11 window dump file.
   A linear colormap of 256 entries will automatically be generated if only 
   one image or expression is given for conversion, the <i>setcmap()</i> function
@@ -906,9 +872,9 @@ export: Convert IRAF images to some other format
   assumed to be 255.
   </dd>
   </dl>
-  <!-- EndSection:   'BUILTIN FORMATS' -->
+  </section>
+  <section id="s_color_output_images">
   <h3>Color output images</h3>
-  <!-- BeginSection: 'COLOR OUTPUT IMAGES' -->
   <p>
   	In theory the colormaps generated by the <i>cmap()</i> and
   <i>setcmap()</i> functions could be written in the header for raw binary
@@ -968,30 +934,26 @@ export: Convert IRAF images to some other format
   brightness/contrast values could be read from the control panel and the 
   rasterfile generated using
   </p>
-  <pre>
-  
-          setcmap (b1, "aips0", 0.36, 1.2)
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  setcmap (b1, "aips0", 0.36, 1.2)
+  </pre></div>
   <p>
   where the <span style="font-family: monospace;">"aips0"</span> is one of the builtin colormaps and the brightness and
   contrast arguments are those from the ximtool display.  Similarly, the
   expression
   </p>
-  <pre>
-  
-          setcmap (zscale(i1),"idl15.lut")
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  setcmap (zscale(i1),"idl15.lut")
+  </pre></div>
   <p>
   will save the image with the same intensity scaling and color as would be see
   by displaying it to ximtool using the default DISPLAY task settings,
   normalized XImtool brightness/contrast values and the <span style="font-family: monospace;">"idl15.lut"</span> LUT in the
   current directory.
   </p>
-  <!-- EndSection:   'COLOR OUTPUT IMAGES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   	The examples below are divided into several categories showing
   typical usage when creating various raw and builtin output files.  Note
@@ -1001,193 +963,235 @@ export: Convert IRAF images to some other format
   <p>
   <i>Creating Raw Binary Files</i>
   </p>
-  <pre>
-  
+  <p>
   List the pixels being one the standard output, apply a linear scale
   function first:
-  
-      cl&gt; export dev$pix "" list outbands="bscale(b1,1.0,3.2)"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix "" list outbands="bscale(b1,1.0,3.2)"
+  </pre></div>
+  <p>
   Convert the dev$pix test image to an 8-bit binary file with a gamma 
   correction, write the standard header:
-  
-      cl&gt; export dev$pix bfil raw header+ outty="u1" outbands="gamma(b1,1.8)"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix bfil raw header+ outty="u1" outbands="gamma(b1,1.8)"
+  </pre></div>
+  <p>
   Write the three bands of an IRAF image to a pixel interleaved binary 
   file of short integers, prepend a user-defined header:
-  
-      cl&gt; export rgbim bfil raw header="hdr.txt" outty="i2" outban="b1,b2,b3"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rgbim bfil raw header="hdr.txt" outty="i2" outban="b1,b2,b3"
+  </pre></div>
+  <p>
   Convert three images representing RGB to a 4-color line-interleaved
   file, the IRAF images don't require scaling, create alpha channel:
-  
-      cl&gt; export rim,gim,bim bfil raw outty="u1" outban="line(i1,i2,i3,0)"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rim,gim,bim bfil raw outty="u1" outban="line(i1,i2,i3,0)"
+  </pre></div>
+  <p>
   Write the three bands of an IRAF image to a line-interleaved binary 
   file of short integers:
-  
-      cl&gt; export rgbim binfil raw outtype="i2" outbands="line(b1,b2,b3)"
-      cl&gt; export rgbim binfil raw outtype="i2" outbands="" interleave=3
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rgbim binfil raw outtype="i2" outbands="line(b1,b2,b3)"
+  cl&gt; export rgbim binfil raw outtype="i2" outbands="" interleave=3
+  </pre></div>
+  <p>
   Write the three bands of an IRAF image to a grayscale binary file using 
   a custom conversion formula.  Pixel values are truncated to 8-bits:
-  
-      cl&gt; export rgbim grey raw outty="u1" outban="(.2*b1)+(.5*b2)+(.3*b3)"
-  
-  </pre>
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rgbim grey raw outty="u1" outban="(.2*b1)+(.5*b2)+(.3*b3)"
+  </pre></div>
   <p>
   <i>Creating Specific Formats</i>
   </p>
-  <pre>
-  
+  <p>
   Convert dev$pix to an 8-bit Sun rasterfile with no colormap, scale the 
   image to 8-bits using the default <i>zscale()</i> intensity mapping:
-  
-      cl&gt; export dev$pix dpix ras outbands="zscale(i1)"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix dpix ras outbands="zscale(i1)"
+  </pre></div>
+  <p>
   Apply various functions to the data before doing the same conversion:
-  
-      cl&gt; export dev$pix dpix ras outbands="zscale(log(i1))"
-      cl&gt; export dev$pix dpix ras outbands="zscale(sqrt(i1))"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix dpix ras outbands="zscale(log(i1))"
+  cl&gt; export dev$pix dpix ras outbands="zscale(sqrt(i1))"
+  </pre></div>
+  <p>
   Convert dev$pix to an 8-bit Sun rasterfile with no colormap, image pixel
   values are truncated to 8-bits:
-  
-      cl&gt; export dev$pix dpix ras
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix dpix ras
+  </pre></div>
+  <p>
   Convert three images representing RGB to a 24-bit Sun rasterfile, assume
   the IRAF images don't require intensity scaling:
-  
-      cl&gt; export rim,gim,bim rgb ras outbands="i1,i2,i3"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rim,gim,bim rgb ras outbands="i1,i2,i3"
+  </pre></div>
+  <p>
   Create a Silicon Graphics RGB format image from a 3-D image:
-  
-    cl&gt; export rgbim bdata rgb outbands="b1,b2,b3"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rgbim bdata rgb outbands="b1,b2,b3"
+  </pre></div>
+  <p>
   Convert dev$pix to an 8-bit GIF grayscale image, scale the image to map 
   only pixel values between 0 and 320:
-  
-    cl&gt; export dev$pix dpix gif outbands="zscale(i1,0.0,320.0)"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix dpix gif outbands="zscale(i1,0.0,320.0)"
+  </pre></div>
+  <p>
   Combine three images representing RGB into an 8-bit X11 window dump
   grayscale image:
-  
-    cl&gt; export rim,gim,bim gray xwd outbands="gray(i1,i2,i3)"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rim,gim,bim gray xwd outbands="gray(i1,i2,i3)"
+  </pre></div>
+  <p>
   Convert dev$pix to an Encapsulated PostScript file at half the normal scale 
   and apply a linear transformation to scale the pixel values:
-  
-      cl&gt; export dev$pix dpix eps \<br>
-      &gt;&gt;&gt;    outbands="psscale(bscale(i1,0.,0.32), 0.5)"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix dpix eps \<br>
+  &gt;&gt;&gt;    outbands="psscale(bscale(i1,0.,0.32), 0.5)"
+  </pre></div>
+  <p>
   Convert three images representing RGB to an 8-bit GIF color image with
   a computed colormap:
-  
-    cl&gt; export rim,gim,bim rgb gif outbands="cmap(i1,i2,i3)"
-  
-  Convert dev$pix to a color rasterfile using the builtin "heat" colormap
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export rim,gim,bim rgb gif outbands="cmap(i1,i2,i3)"
+  </pre></div>
+  <p>
+  Convert dev$pix to a color rasterfile using the builtin <span style="font-family: monospace;">"heat"</span> colormap
   and default intensity mapping:
-  
-    cl&gt; export dev$pix dpix ras outban='setcmap(zscale(i1),"heat")'
-  
-  Convert dev$pix to a color rasterfile using the XImtool "idl15.lut" 
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix dpix ras outban='setcmap(zscale(i1),"heat")'
+  </pre></div>
+  <p>
+  Convert dev$pix to a color rasterfile using the XImtool <span style="font-family: monospace;">"idl15.lut"</span> 
   LUT file in the current directory and default intensity mapping:
-  
-    cl&gt; copy /usr/local/lib/imtoolcmap/idl15.lut .
-    cl&gt; export dev$pix dpix ras outbands="setcmap(zscale(i1),'idl15.lut')"
-  
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; copy /usr/local/lib/imtoolcmap/idl15.lut .
+  cl&gt; export dev$pix dpix ras outbands="setcmap(zscale(i1),'idl15.lut')"
+  </pre></div>
+  <p>
   <i>Advanced Usage</i>
-  
+  </p>
+  <p>
   Given a set of DISPLAY task z1/z2 values of 10 and 320 respectively, and
   brightness/contrast values from XImtool of 0.6 and 1.2 respectively, 
   convert an image to an EPS file with the same appearance:
-  
-    im&gt; type expr
-    setcmap ( zscale (i1, 10.0, 320.0), "greyscale", 0.6, 1.2 )
-    im&gt; export dev$pix dpix eps outbands="@expr"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; type expr
+  setcmap ( zscale (i1, 10.0, 320.0), "greyscale", 0.6, 1.2 )
+  im&gt; export dev$pix dpix eps outbands="@expr"
+  </pre></div>
+  <p>
   Concatenate two images side-by-side to a PGM file, normalize each image 
   by it's exposure time and apply a default intensity mapping:
-  
-    cl&gt; export im1,im2 two pgm \<br>
-    &gt;&gt;&gt;     outbands='(zscale(i1/i1.otime)) // (zscale(i2/i2.otime))'
-  
-  Convert dev$pix to a color GIF using the XImtool "idl15" LUT with a spec-
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export im1,im2 two pgm \<br>
+  &gt;&gt;&gt;     outbands='(zscale(i1/i1.otime)) // (zscale(i2/i2.otime))'
+  </pre></div>
+  <p>
+  Convert dev$pix to a color GIF using the XImtool <span style="font-family: monospace;">"idl15"</span> LUT with a spec-
   ified brightness/contrast scale.  Map only pixel values between 5 and 300 
   to 201 output intensity values.  This should produce and image identical 
   to what one would get by displaying dev$pix to imtool, setting the same 
   brightness/contrast scale, and selecting the idl15 LUT:
-  
-    cl&gt; copy /usr/local/lib/imtoolcmap/idl15.lut .
-    cl&gt; type expr.dat
-  	setcmap (
-  	    zscale(i1, 5.0, 320.0, 201),
-  	    "idl15.lut", 
-  	    0.41, 
-  	    1.35)
-    cl&gt; export dev$pix dpix gif outbands="@expr.dat"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; copy /usr/local/lib/imtoolcmap/idl15.lut .
+  cl&gt; type expr.dat
+        setcmap (
+            zscale(i1, 5.0, 320.0, 201),
+            "idl15.lut",
+            0.41,
+            1.35)
+  cl&gt; export dev$pix dpix gif outbands="@expr.dat"
+  </pre></div>
+  <p>
   Combine three images representing RGB to an 8-bit Sun rasterfile with a
   computed colormap.  Scale the intensity value of each image differently.
-  
-    cl&gt; type expr.dat
-          cmap (
-              zscale (i1),
-              zscale (i2, 0.0, 1200.0),
-  	    zscale (i3, -1.0, 320.0) )
-    cl&gt; export im1,im2,im3 rgb ras outbands="@expr.dat"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type expr.dat
+        cmap (
+            zscale (i1),
+            zscale (i2, 0.0, 1200.0),
+            zscale (i3, -1.0, 320.0) )
+  cl&gt; export im1,im2,im3 rgb ras outbands="@expr.dat"
+  </pre></div>
+  <p>
   Do the same example but apply a gamma correction to the images:
-  
-    cl&gt; type expr.dat
-          cmap (
-              gamma (zscale(i1),        2.2),
-              gamma (zscale(i2,0,1200), 2.2),
-  	    gamma (zscale(i3,-1,320), 2.2) )
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type expr.dat
+        cmap (
+            gamma (zscale(i1),        2.2),
+            gamma (zscale(i2,0,1200), 2.2),
+            gamma (zscale(i3,-1,320), 2.2) )
+  </pre></div>
+  <p>
   Write four images to a grayscale GIF file such that they are tiled in a 
   2x2 grid:
-  
-    cl&gt; export im1,im2,im3,im4 quad gif \<br>
-    &gt;&gt;&gt;        outbands="band( (i1//i2), (i3//i4) )"
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export im1,im2,im3,im4 quad gif \<br>
+  &gt;&gt;&gt;        outbands="band( (i1//i2), (i3//i4) )"
+  </pre></div>
+  <p>
   Do the same example but create a border of 2 gray pixels around each
   of the images and apply the AIPS0 LUT with brightness/contrast values
   to create a color image:
-  
-    cl&gt; copy /usr/local/lib/imtoolcmap/aips0.lut .
-    cl&gt; type expr.dat
-          setcmap (
-              band( 
-                  128, 128,
-                  (repl (128,2) // i1// repl (128,2) // i2 // repl (128,2)), 
-                  128, 128,
-                  (repl (128,2) // i3// repl (128,2) // i4 // repl (128,2)),
-                  128, 128 ),
-              "aips0.lut",
-              0.54,
-              1.03)
-    cl&gt; export im1,im2,im3,im4 cquad gif outbands="@expr.dat"
-  
-  </pre>
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; copy /usr/local/lib/imtoolcmap/aips0.lut .
+  cl&gt; type expr.dat
+        setcmap (
+            band(
+                128, 128,
+                (repl (128,2) // i1// repl (128,2) // i2 // repl (128,2)),
+                128, 128,
+                (repl (128,2) // i3// repl (128,2) // i4 // repl (128,2)),
+                128, 128 ),
+            "aips0.lut",
+            0.54,
+            1.03)
+  cl&gt; export im1,im2,im3,im4 cquad gif outbands="@expr.dat"
+  </pre></div>
   <p>
   Automatically scale an image ignoring data in a bad pixel mask (bpm), map the
   result to the greyscale part of the <span style="font-family: monospace;">"overlay"</span> color map, and apply a
   overlay pattern given by another mask (pattern).
   </p>
-  <p>
-    cl&gt; export dev$pix,bpm,pattern foo gif \<br>
-    &gt;&gt;&gt; outbands = <span style="font-family: monospace;">"setcmap(i3==0?(zscalem(i1,i2==0)*200/255.):i3+203,'overlay')"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; export dev$pix,bpm,pattern foo gif \<br>
+  &gt;&gt;&gt; outbands = "setcmap(i3==0?(zscalem(i1,i2==0)*200/255.):i3+203,'overlay')"
+  </pre></div>
   <p>
   The pattern has values of 1 and 203 is added to get it into the color map
   values of the overlay colors.  The factor of 200/255 is to scale the result
   of zscalem from the range 0-255 to the range 0-200.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_notes">
   <h3>Notes</h3>
-  <!-- BeginSection: 'NOTES' -->
   <p>
   	This task is new with V2.11.
   </p>
@@ -1197,20 +1201,20 @@ export: Convert IRAF images to some other format
   see if IRAF on the alpha produces 32 or 64-bit longs, either way exchanging
   images may be a problem)
   </p>
-  <!-- EndSection:   'NOTES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   	Output of bitmap images is currently not supported.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   import, tvmark, imexpr
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'MORE ON OUTBANDS EXPRESSIONS' 'EXPORT HEADER FORMAT' 'BUILTIN FORMATS' 'COLOR OUTPUT IMAGES' 'EXAMPLES' 'NOTES' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,24 +7,24 @@ objmasks: Detect objects in images and make masks
 
 .. raw:: html
 
+  <section id="s_synopsis">
   <h3>Synopsis</h3>
-  <!-- BeginSection: 'SYNOPSIS' -->
-  <!-- EndSection:   'SYNOPSIS' -->
+  </section>
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   objmasks images objmasks skys
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images or multiextension files for which object masks are desired.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_objmasks">
   <dt><b>objmasks</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objmasks' Line='objmasks' -->
   <dd>List of object masks to be created.  This list must match the input list.
@@ -35,7 +35,7 @@ objmasks: Detect objects in images and make masks
   or sky sigma maps are desired or to just see the log information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_omtype">
   <dt><b>omtype = <span style="font-family: monospace;">"numbers"</span> (boolean|numbers|colors|all)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='omtype' Line='omtype = "numbers" (boolean|numbers|colors|all)' -->
   <dd>The type of encoding for the object mask values.  In all cases non-object pixels
@@ -44,7 +44,7 @@ objmasks: Detect objects in images and make masks
   in the <i>Output Data</i> section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skys">
   <dt><b>skys = <span style="font-family: monospace;">""</span>, sigmas = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skys' Line='skys = "", sigmas = ""' -->
   <dd>Optional lists of input or output sky and sigma maps.  Maps are either
@@ -58,7 +58,7 @@ objmasks: Detect objects in images and make masks
   per single input image pixel.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_masks">
   <dt><b>masks = <span style="font-family: monospace;">"!BPM"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks = "!BPM"' -->
   <dd>List of bad pixel masks for the input images.  Non-zero masks values are
@@ -74,7 +74,7 @@ objmasks: Detect objects in images and make masks
   pixel list files with the extension names as filenames.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extnames">
   <dt><b>extnames = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extnames' Line='extnames = ""' -->
   <dd>Extensions to select from multiextension files.  A null string matches all
@@ -86,7 +86,7 @@ objmasks: Detect objects in images and make masks
   characters 1, 2, and 3.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfiles">
   <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT"' -->
   <dd>List of output log files.  If no list is given then no output log information
@@ -95,7 +95,7 @@ objmasks: Detect objects in images and make masks
   the special name <span style="font-family: monospace;">"STDOUT"</span> corresponds to terminal output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blkstep">
   <dt><b>blkstep = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blkstep' Line='blkstep = 1' -->
   <dd>The mean and sigma of the background or sky pixels are determined in a
@@ -105,7 +105,7 @@ objmasks: Detect objects in images and make masks
   task will enforce a preset minimum number to insure a sufficient sample.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blksize">
   <dt><b>blksize = -10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blksize' Line='blksize = -10' -->
   <dd>The background mean sky and sky sigma are determined in a set of square
@@ -118,7 +118,7 @@ objmasks: Detect objects in images and make masks
   algorithm is described further in the <span style="font-family: monospace;">"Background Determination"</span> section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_convolve">
   <dt><b>convolve = <span style="font-family: monospace;">"block 3 3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='convolve' Line='convolve = "block 3 3"' -->
   <dd>Convolution filter to be applied prior to threshold detection.  The
@@ -127,7 +127,7 @@ objmasks: Detect objects in images and make masks
   The options are described in the <span style="font-family: monospace;">"Convolution Filter"</span> section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_hsigma">
   <dt><b>hsigma = 3., lsigma = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hsigma' Line='hsigma = 3., lsigma = 10.' -->
   <dd>Object pixels are identified by sigma thresholds about the mean background
@@ -139,7 +139,7 @@ objmasks: Detect objects in images and make masks
   the background, and so the thresholds need not be equal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_hdetect">
   <dt><b>hdetect = yes, ldetect = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hdetect' Line='hdetect = yes, ldetect = no' -->
   <dd>Identify objects as pixels which are above the background (<i>hdetect</i>)
@@ -148,7 +148,7 @@ objmasks: Detect objects in images and make masks
   objects.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_neighbors">
   <dt><b>neighbors = <span style="font-family: monospace;">"8"</span> (8|4)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='neighbors' Line='neighbors = "8" (8|4)' -->
   <dd>The threshold selected pixels are associated with other neighboring pixels to
@@ -158,13 +158,13 @@ objmasks: Detect objects in images and make masks
   as only horizontal or vertically adjacent.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minpix">
   <dt><b>minpix = 6</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minpix' Line='minpix = 6' -->
   <dd>The minimum number of neighboring pixels which define an acceptable object.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ngrow">
   <dt><b>ngrow = 2, agrow = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ngrow' Line='ngrow = 2, agrow = 2.' -->
   <dd>After an object is identified as a set of threshold detected pixels,
@@ -178,9 +178,9 @@ objmasks: Detect objects in images and make masks
   detection.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>OBJMASKS</b> is a task for creating masks covering objects in images.
   An optional secondary product of this task is to produce background
@@ -459,21 +459,21 @@ objmasks: Detect objects in images and make masks
   <p>
   The convolved value at pixel (i,j), denoted I'(i,j), is defined by
   </p>
-  <pre>
-      I'(i,j) = sum_kl{I(m,n)*W(k,l)} / sum_kl{W(k,l)}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  I'(i,j) = sum_kl{I(m,n)*W(k,l)} / sum_kl{W(k,l)}
+  </pre></div>
   <p>
   where I(m,n) is the unconvolved value at pixel (m,n), W(k,l) are the NX x
   NY (both must be odd) convolution weights, sum_kl is the double sum over k
   and l, and
   </p>
-  <pre>
-      m' = i + k - (NX+1)/2	for k = 1 to NX
-      n' = j + l - (NY+1)/2	for l = 1 to NY
+  <div class="highlight-default-notranslate"><pre>
+  m' = i + k - (NX+1)/2       for k = 1 to NX
+  n' = j + l - (NY+1)/2       for l = 1 to NY
   
-      m = m' (1&lt;=m'&lt;=C)	m = 1-m' (m'&lt;1)	  m = 2C-m' (m'&gt;C)
-      n = n' (1&lt;=n'&lt;=L)	n = 1-n' (n'&lt;1)	  n = 2L-n' (m'&gt;L)
-  </pre>
+  m = m' (1&lt;=m'&lt;=C)   m = 1-m' (m'&lt;1)   m = 2C-m' (m'&gt;C)
+  n = n' (1&lt;=n'&lt;=L)   n = 1-n' (n'&lt;1)   n = 2L-n' (m'&gt;L)
+  </pre></div>
   <p>
   The size of the image is C x L.  The last two lines represent boundary
   reflection at the edges of the image.
@@ -481,9 +481,9 @@ objmasks: Detect objects in images and make masks
   <p>
   The sky sigma of a convolved pixel is approximated by
   </p>
-  <pre>
-      sigma'(i,j) = sigma(i,j) / sum_kl{W(k,l)}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sigma'(i,j) = sigma(i,j) / sum_kl{W(k,l)}
+  </pre></div>
   <p>
   In the presence of bad pixels specified in the bad pixel mask the
   convolution weight applied to a bad pixel is set to zero.  If the central
@@ -520,7 +520,7 @@ objmasks: Detect objects in images and make masks
   the same and defines NX and the number of lines defines NY.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_block">
   <dt><b>block [NX] [NY]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='block' Line='block [NX] [NY]' -->
   <dd>The weights are all the same and the convolution size is given by the
@@ -528,24 +528,24 @@ objmasks: Detect objects in images and make masks
   filter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bilinear">
   <dt><b>bilinear [NX] [NY]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='bilinear' Line='bilinear [NX] [NY]' -->
   <dd>The weights are the bilinear matrix product of triangular one dimensional
   matrices of sizes given by the two numbers following the word <span style="font-family: monospace;">"bilinear"</span>.
   The weights are described by the matrix product relation 
-  <pre>
-      [1 ... (NX+1)/2 ... 1] * Transpose{[1 ... (NY+2)/2 ... 1]}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  [1 ... (NX+1)/2 ... 1] * Transpose{[1 ... (NY+2)/2 ... 1]}
+  </pre></div>
   For example for NX=5, and NY=3 the weights would be
-  <pre>
-      1 2 3 2 1
-      2 4 6 4 2
-      1 2 3 2 1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  1 2 3 2 1
+  2 4 6 4 2
+  1 2 3 2 1
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gauss">
   <dt><b>gauss [NX] [NY] [SX] [SY]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='gauss' Line='gauss [NX] [NY] [SX] [SY]' -->
   <dd>The weights are bidimensional gaussian values on a grid of size NX by NY
@@ -558,11 +558,11 @@ objmasks: Detect objects in images and make masks
   <dd>The weights are specified as a string of real values.  The values are
   whitespace separated within each line and the lines are delimited by
   comma.  For example
-  <pre>
-                                 1 2 1
-      1 2 1, 2 3 2, 1 2 1  ==&gt;   2 3 2
-                                 1 2 1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+                             1 2 1
+  1 2 1, 2 3 2, 1 2 1  ==&gt;   2 3 2
+                             1 2 1
+  </pre></div>
   </dd>
   </dl>
   <p>
@@ -626,9 +626,9 @@ objmasks: Detect objects in images and make masks
   is called the <span style="font-family: monospace;">"area"</span>  of the object.  The growing of an object stops
   when either maximum is exceedd at the end of a growing iteration.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following is a test example with default parameters that can be run
   by anyone.  An artificial galaxy field image is generated with the task
@@ -636,37 +636,37 @@ objmasks: Detect objects in images and make masks
   and a mask is created with <b>objmasks</b>.  The image is displayed with
   the object mask overlayed in colors.
   </p>
-  <pre>
-      np&gt; mkexample galfield galfield
-      Creating example galfield in image galfield ...
-      np&gt; objmasks omtype=color
-      List of images or MEF files: galfield
-      List of output object masks: gfmask
-      ACE:
-        Image: galfield - Example artificial galaxy field
-        Set sky and sigma:
-  	Determine sky and sigma by surface fits:
-  	  start line = 1, end line = 512, step = 51.1
-  	  xorder = 2, yorder = 2, xterms = half
-  	  hclip = 2., lclip = 3.
-  	Determine sky and sigma by block statistics:
-  	  Number of blocks: 5 5
-  	  Number of pixels per block: 100 100
-  	  Number of subblocks: 10 10
-  	  Number of pixels per subblock: 50 50
-        Detect objects:
-  	Convolution:
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	422 objects detected
-        Grow objects: ngrow = 2, agrow = 2.
-        Write object mask: gfmask[pl,type=mask]
-      np&gt; display galfield 1
-      z1=371.5644 z2=455.8792
-      np&gt; display galfield 2 overlay=gfmask[pl] ocolors="+203" 
-      z1=371.5644 z2=455.8792
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  np&gt; mkexample galfield galfield
+  Creating example galfield in image galfield ...
+  np&gt; objmasks omtype=color
+  List of images or MEF files: galfield
+  List of output object masks: gfmask
+  ACE:
+    Image: galfield - Example artificial galaxy field
+    Set sky and sigma:
+      Determine sky and sigma by surface fits:
+        start line = 1, end line = 512, step = 51.1
+        xorder = 2, yorder = 2, xterms = half
+        hclip = 2., lclip = 3.
+      Determine sky and sigma by block statistics:
+        Number of blocks: 5 5
+        Number of pixels per block: 100 100
+        Number of subblocks: 10 10
+        Number of pixels per subblock: 50 50
+    Detect objects:
+      Convolution:
+             1.      1.      1.
+             1.      1.      1.
+             1.      1.      1.
+      422 objects detected
+    Grow objects: ngrow = 2, agrow = 2.
+    Write object mask: gfmask[pl,type=mask]
+  np&gt; display galfield 1
+  z1=371.5644 z2=455.8792
+  np&gt; display galfield 2 overlay=gfmask[pl] ocolors="+203"
+  z1=371.5644 z2=455.8792
+  </pre></div>
   <p>
   2.  In the first example there was no input mask.  The next example
   creates a new object mask using the first object mask as an input
@@ -676,145 +676,145 @@ objmasks: Detect objects in images and make masks
   <span style="font-family: monospace;">"colors"</span> output.  In this example the output is forced to be a pl
   file by using the explicit extension.
   </p>
-  <pre>
-      np&gt; objmasks omtype=colors mask=gfmask[pl]
-      List of images or MEF files (galfield): 
-      List of output object masks (gfmask): gfmask1.pl
-      ACE:
-        Image: galfield - Example artificial galaxy field
-        Bad pixel mask: gfmask.pl
-        Set sky and sigma:
-  	Determine sky and sigma by surface fits:
-  	  start line = 1, end line = 512, step = 51.1
-  	  xorder = 2, yorder = 2, xterms = half
-  	  hclip = 2., lclip = 3.
-  	Determine sky and sigma by block statistics:
-  	  Number of blocks: 5 5
-  	  Number of pixels per block: 100 100
-  	  Number of subblocks: 10 10
-  	  Number of pixels per subblock: 50 50
-        Detect objects:
-  	Convolution:
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	44 objects detected
-        Grow objects: ngrow = 2, agrow = 2.
-        Write object mask: gfmask1.pl
-      np&gt; display galfield 2 overlay=gfmask1 ocolors="+203" 
-      z1=371.5644 z2=455.8792
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  np&gt; objmasks omtype=colors mask=gfmask[pl]
+  List of images or MEF files (galfield):
+  List of output object masks (gfmask): gfmask1.pl
+  ACE:
+    Image: galfield - Example artificial galaxy field
+    Bad pixel mask: gfmask.pl
+    Set sky and sigma:
+      Determine sky and sigma by surface fits:
+        start line = 1, end line = 512, step = 51.1
+        xorder = 2, yorder = 2, xterms = half
+        hclip = 2., lclip = 3.
+      Determine sky and sigma by block statistics:
+        Number of blocks: 5 5
+        Number of pixels per block: 100 100
+        Number of subblocks: 10 10
+        Number of pixels per subblock: 50 50
+    Detect objects:
+      Convolution:
+             1.      1.      1.
+             1.      1.      1.
+             1.      1.      1.
+      44 objects detected
+    Grow objects: ngrow = 2, agrow = 2.
+    Write object mask: gfmask1.pl
+  np&gt; display galfield 2 overlay=gfmask1 ocolors="+203"
+  z1=371.5644 z2=455.8792
+  </pre></div>
   <p>
   3.  The next example illustrates use with a multiextension file.  The
   example is two realizations of the galfield artificial data.
   </p>
-  <pre>
-      np&gt; mkexamples galfield mef.fits[im1]
-      Creating example galfield in image mef[im1] ...
-      np&gt; mkexamples galfield mef[im2,append] oseed=2
-      Creating example galfield in image mef[im2,append] ...
-      np&gt; objmasks
-      List of images or MEF files (galfield): mef
-      List of output object masks (gfmask1.pl): mefmask
-      ACE:
-        Image: mef[im1] - Example artificial galaxy field
-        Set sky and sigma:
-  	Determine sky and sigma by surface fits:
-  	  start line = 1, end line = 512, step = 51.1
-  	  xorder = 2, yorder = 2, xterms = half
-  	  hclip = 2., lclip = 3.
-  	Determine sky and sigma by block statistics:
-  	  Number of blocks: 5 5
-  	  Number of pixels per block: 100 100
-  	  Number of subblocks: 10 10
-  	  Number of pixels per subblock: 50 50
-        Detect objects:
-  	Convolution:
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	422 objects detected
-        Grow objects: ngrow = 2, agrow = 2.
-        Write object mask: mefmask[im1,append,type=mask]
-      ACE:
-        Image: mef[im2] - Example artificial galaxy field
-        Set sky and sigma:
-  	Determine sky and sigma by surface fits:
-  	  start line = 1, end line = 512, step = 51.1
-  	  xorder = 2, yorder = 2, xterms = half
-  	  hclip = 2., lclip = 3.
-  	Determine sky and sigma by block statistics:
-  	  Number of blocks: 5 5
-  	  Number of pixels per block: 100 100
-  	  Number of subblocks: 10 10
-  	  Number of pixels per subblock: 50 50
-        Detect objects:
-  	Convolution:
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	410 objects detected
-        Grow objects: ngrow = 2, agrow = 2.
-        Write object mask: mefmask[im2,append,type=mask]
-      np&gt; display mef[im1] 1 over=mefmask[im1]
-      z1=371.5644 z2=455.8792
-      np&gt; display mef[im2] 2 over=mefmask[im2]
-      z1=371.5666 z2=455.7844
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  np&gt; mkexamples galfield mef.fits[im1]
+  Creating example galfield in image mef[im1] ...
+  np&gt; mkexamples galfield mef[im2,append] oseed=2
+  Creating example galfield in image mef[im2,append] ...
+  np&gt; objmasks
+  List of images or MEF files (galfield): mef
+  List of output object masks (gfmask1.pl): mefmask
+  ACE:
+    Image: mef[im1] - Example artificial galaxy field
+    Set sky and sigma:
+      Determine sky and sigma by surface fits:
+        start line = 1, end line = 512, step = 51.1
+        xorder = 2, yorder = 2, xterms = half
+        hclip = 2., lclip = 3.
+      Determine sky and sigma by block statistics:
+        Number of blocks: 5 5
+        Number of pixels per block: 100 100
+        Number of subblocks: 10 10
+        Number of pixels per subblock: 50 50
+    Detect objects:
+      Convolution:
+             1.      1.      1.
+             1.      1.      1.
+             1.      1.      1.
+      422 objects detected
+    Grow objects: ngrow = 2, agrow = 2.
+    Write object mask: mefmask[im1,append,type=mask]
+  ACE:
+    Image: mef[im2] - Example artificial galaxy field
+    Set sky and sigma:
+      Determine sky and sigma by surface fits:
+        start line = 1, end line = 512, step = 51.1
+        xorder = 2, yorder = 2, xterms = half
+        hclip = 2., lclip = 3.
+      Determine sky and sigma by block statistics:
+        Number of blocks: 5 5
+        Number of pixels per block: 100 100
+        Number of subblocks: 10 10
+        Number of pixels per subblock: 50 50
+    Detect objects:
+      Convolution:
+             1.      1.      1.
+             1.      1.      1.
+             1.      1.      1.
+      410 objects detected
+    Grow objects: ngrow = 2, agrow = 2.
+    Write object mask: mefmask[im2,append,type=mask]
+  np&gt; display mef[im1] 1 over=mefmask[im1]
+  z1=371.5644 z2=455.8792
+  np&gt; display mef[im2] 2 over=mefmask[im2]
+  z1=371.5666 z2=455.7844
+  </pre></div>
   <p>
   4.  This example shows outputing the sky information.
   </p>
-  <pre>
-      np&gt; objmasks galfield gfmask2 sky=gfsky2
-      ACE:
-        Image: galfield - Example artificial galaxy field
-        Set sky and sigma:
-  	Determine sky and sigma by surface fits:
-  	  start line = 1, end line = 512, step = 51.1
-  	  xorder = 2, yorder = 2, xterms = half
-  	  hclip = 2., lclip = 3.
-  	Determine sky and sigma by block statistics:
-  	  Number of blocks: 5 5
-  	  Number of pixels per block: 100 100
-  	  Number of subblocks: 10 10
-  	  Number of pixels per subblock: 50 50
-  	Write sky map: gfsky2
-        Detect objects:
-  	Convolution:
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	422 objects detected
-  	Update sky map: gfsky2
-        Grow objects: ngrow = 2, agrow = 2.
-        Write object mask: gfmask2[pl,append,type=mask]
-      np&gt; imstat gfsky2
-      #               IMAGE      NPIX      MEAN    STDDEV       MIN       MAX
-  		   gfsky2        25     401.1    0.4397     400.3     401.9
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  np&gt; objmasks galfield gfmask2 sky=gfsky2
+  ACE:
+    Image: galfield - Example artificial galaxy field
+    Set sky and sigma:
+      Determine sky and sigma by surface fits:
+        start line = 1, end line = 512, step = 51.1
+        xorder = 2, yorder = 2, xterms = half
+        hclip = 2., lclip = 3.
+      Determine sky and sigma by block statistics:
+        Number of blocks: 5 5
+        Number of pixels per block: 100 100
+        Number of subblocks: 10 10
+        Number of pixels per subblock: 50 50
+      Write sky map: gfsky2
+    Detect objects:
+      Convolution:
+             1.      1.      1.
+             1.      1.      1.
+             1.      1.      1.
+      422 objects detected
+      Update sky map: gfsky2
+    Grow objects: ngrow = 2, agrow = 2.
+    Write object mask: gfmask2[pl,append,type=mask]
+  np&gt; imstat gfsky2
+  #               IMAGE      NPIX      MEAN    STDDEV       MIN       MAX
+                 gfsky2        25     401.1    0.4397     400.3     401.9
+  </pre></div>
   <p>
   5.  This examples shows specifying the sky information as constant values.
   In this case we already know that the artificial image has a
   constant background of 400 and a sigma of 10.
   </p>
-  <pre>
-      np&gt; objmasks galfield gfmask3 sky=400 sigma=10
-      ACE:
-        Image: galfield - Example artificial galaxy field
-        Set sky and sigma:
-  	Use constant input sky: 400.
-  	Use constant input sigma: 10.
-        Detect objects:
-  	Convolution:
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	       1.      1.      1.
-  	432 objects detected
-        Grow objects: ngrow = 2, agrow = 2.
-        Write object mask: gfmask3[pl,append,type=mask]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  np&gt; objmasks galfield gfmask3 sky=400 sigma=10
+  ACE:
+    Image: galfield - Example artificial galaxy field
+    Set sky and sigma:
+      Use constant input sky: 400.
+      Use constant input sigma: 10.
+    Detect objects:
+      Convolution:
+             1.      1.      1.
+             1.      1.      1.
+             1.      1.      1.
+      432 objects detected
+    Grow objects: ngrow = 2, agrow = 2.
+    Write object mask: gfmask3[pl,append,type=mask]
+  </pre></div>
   
-  <!-- EndSection:    'EXAMPLES' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SYNOPSIS' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

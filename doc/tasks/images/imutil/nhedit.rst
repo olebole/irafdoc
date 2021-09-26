@@ -7,21 +7,21 @@ nhedit: Edit image header using a command file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   nhedit images fields value comment
-  </pre>
-  <!-- EndSection:   'USAGE' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>Template specifying the images to be edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fields">
   <dt><b>fields</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields' -->
   <dd>Template specifying the fields to be edited in each image.  The template is
@@ -32,7 +32,7 @@ nhedit: Edit image header using a command file
   for more details.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_value">
   <dt><b>value</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
   <dd>Either a string constant or a general expression (if the first character is
@@ -42,7 +42,7 @@ nhedit: Edit image header using a command file
   value of each field to be printed rather than edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_comment">
   <dt><b>comment</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='comment' Line='comment' -->
   <dd>String constant for the comment section of the header card. This value will 
@@ -50,7 +50,7 @@ nhedit: Edit image header using a command file
   The special value <span style="font-family: monospace;">"."</span> causes the field to be printed rather than edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_comfile">
   <dt><b>comfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='comfile' Line='comfile = ""' -->
   <dd>Alternate command file. If specified, the <i>fields</i>, <i>value</i>, and 
@@ -58,7 +58,7 @@ nhedit: Edit image header using a command file
   file.  See below for a detailed discussion and examples.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_after">
   <dt><b>after = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='after' Line='after = ""' -->
   <dd>Insert the new field after the named <span style="font-family: monospace;">"pivot keyword"</span>.   If this keyword
@@ -66,7 +66,7 @@ nhedit: Edit image header using a command file
   image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_before">
   <dt><b>before = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='before' Line='before = ""' -->
   <dd>Insert the new field before the named <span style="font-family: monospace;">"pivot keyword"</span>. If this keyword 
@@ -74,7 +74,7 @@ nhedit: Edit image header using a command file
   image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_add">
   <dt><b>add = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='add' Line='add = no' -->
   <dd>Change the operation of the editor from update to add new field. If the
@@ -83,7 +83,7 @@ nhedit: Edit image header using a command file
   over the addonly, delete, and rename switches.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_addonly">
   <dt><b>addonly = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='addonly' Line='addonly = no' -->
   <dd>Change the operation of the editor from update to add a new field. If the
@@ -92,7 +92,7 @@ nhedit: Edit image header using a command file
   the delete and rename switches.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delete">
   <dt><b>delete = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no' -->
   <dd>Change the operation of the editor from update to delete field.
@@ -100,7 +100,7 @@ nhedit: Edit image header using a command file
   or the rename switch.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rename">
   <dt><b>rename = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rename' Line='rename = no' -->
   <dd>Change the operation of the editor from update field to rename field.
@@ -110,7 +110,7 @@ nhedit: Edit image header using a command file
   since this operation only affects the field name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = yes' -->
   <dd>Interactively verify all operations which modify the image database.
@@ -121,7 +121,7 @@ nhedit: Edit image header using a command file
   the parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_show">
   <dt><b>show = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='show' Line='show = yes' -->
   <dd>Print a record of each operation which modifies the database upon the standard
@@ -129,7 +129,7 @@ nhedit: Edit image header using a command file
   undo an edit operation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
   <dd>Enable updating of the image database.  If updating is disabled the edit
@@ -137,9 +137,9 @@ nhedit: Edit image header using a command file
   on disk.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   1. Basic Usage
   </p>
@@ -151,18 +151,18 @@ nhedit: Edit image header using a command file
   <span style="font-family: monospace;">"title"</span> of the image <span style="font-family: monospace;">"m74"</span> to <span style="font-family: monospace;">"sky flat"</span> and enter a comment  field we
   would enter the following command.
   </p>
-  <p>
-  	cl&gt; nhedit m74 title <span style="font-family: monospace;">"sky flat"</span> <span style="font-family: monospace;">"comment field"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit m74 title "sky flat" "comment field"
+  </pre></div>
   <p>
   If <i>verify</i> mode is selected the editor will print the old value of the
   field and query with the new value, allowing some other value to be entered
   instead, e.g.:
   </p>
-  <pre>
-  	cl&gt; nhedit m74 title "sky flat" "comment field"
-  	m74,i_title ("old title" -&gt; "sky flat"):
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit m74 title "sky flat" "comment field"
+  m74,i_title ("old title" -&gt; "sky flat"):
+  </pre></div>
   <p>
   To accept the new value shown to the right of the arrow, type carriage
   return or <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"y"</span> followed by carriage return.  To continue without
@@ -181,31 +181,31 @@ nhedit: Edit image header using a command file
   the image header, we repeat the command with the special value <span style="font-family: monospace;">"."</span> and <span style="font-family: monospace;">"."</span> 
   for the comment portion.
   </p>
-  <p>
-  	cl&gt; nhedit m74 title . .
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit m74 title . .
+  </pre></div>
   <p>
   To print (or edit) the values of all header fields a field template may be
   given.
   </p>
-  <p>
-  	cl&gt; nhedit m74 * . . 
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit m74 * . .
+  </pre></div>
   <p>
   To print (or edit) the values of only a few fields the field template may
   be given as a list.
   </p>
-  <p>
-  	cl&gt; nhedit m74 w0,wpc . .
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit m74 w0,wpc . .
+  </pre></div>
   <p>
   To print the value of one or more fields in a set of images, an image template
   may be given.  Both image templates and field templates may be given if
   desired.
   </p>
-  <p>
-  	cl&gt; nhedit n1.* exp . .
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit n1.* exp . .
+  </pre></div>
   <p>
   Abbreviations are not permitted for field names, i.e., the given template
   must match the full field name.  Currently, field name matches are case
@@ -228,13 +228,13 @@ nhedit: Edit image header using a command file
   <p>
   The major editing functions of the <i>nhedit</i> task are the following:
   </p>
-  <pre>
-  	update		modify the value of a field or fields
-  	addonly		add a new field
-  	add		add a new field or modify an old one
-  	delete		delete a set of fields
-  	rename		rename a set of fields
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  update          modify the value of a field or fields
+  addonly         add a new field
+  add             add a new field or modify an old one
+  delete          delete a set of fields
+  rename          rename a set of fields
+  </pre></div>
   <p>
   In addition, <i>nhedit</i> may be used merely to inspect the values of the header
   fields, without modification of the image database.
@@ -242,12 +242,12 @@ nhedit: Edit image header using a command file
   <p>
   2.1 Special header fields
   </p>
-  <pre>
-      add_blank		Add blank keyword field with optional comment
-               ex: nhedit add_blank "    this is a comment with no kw"
-      add_textf		Add the content of a text file into the header
-               ex: nhedit add_textf "my_text.txt" add+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  add_blank           Add blank keyword field with optional comment
+           ex: nhedit add_blank "    this is a comment with no kw"
+  add_textf           Add the content of a text file into the header
+           ex: nhedit add_textf "my_text.txt" add+
+  </pre></div>
   <p>
   All keyword addition can be inserted after or before an existent keyword; use
   the 'after' and 'before' parameter.
@@ -270,19 +270,19 @@ nhedit: Edit image header using a command file
   currently defined are shown below.  There is no guarantee that the names and/or
   usage of these fields will not change in the future.
   </p>
-  <pre>
-  	i_ctime		int		create time
-  	i_history	string		history comments
-  	i_limtime	int		time when min,max last updated
-  	i_maxpixval	real		maximum pixel value
-  	i_minpixval	real		minimum pixel value
-  	i_mtime		int		time of last modify
-  	i_naxis		int		number of axes (dimensionality)
-  	i_naxis[1-7]	int		length of each axis
-  	i_pixfile	string		pathname of pixel storage file
-  	i_pixtype	int		pixel datatype code
-  	i_title		string		title string
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  i_ctime         int             create time
+  i_history       string          history comments
+  i_limtime       int             time when min,max last updated
+  i_maxpixval     real            maximum pixel value
+  i_minpixval     real            minimum pixel value
+  i_mtime         int             time of last modify
+  i_naxis         int             number of axes (dimensionality)
+  i_naxis[1-7]    int             length of each axis
+  i_pixfile       string          pathname of pixel storage file
+  i_pixtype       int             pixel datatype code
+  i_title         string          title string
+  </pre></div>
   <p>
   The standard header field names have an <span style="font-family: monospace;">"i_"</span> prefix to reduce the possibility
   of a name collision with a user field name, and to distinguish the two classes
@@ -318,16 +318,16 @@ nhedit: Edit image header using a command file
   <p>
   For example, the command
   </p>
-  <p>
-  	cl&gt; nhedit m74 title <span style="font-family: monospace;">"title // ';ss'"</span> <span style="font-family: monospace;">"."</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit m74 title "title // ';ss'" "."
+  </pre></div>
   <p>
   would change the title to the literal string constant <span style="font-family: monospace;">"title // ';ss'"</span>,
   whereas the command
   </p>
-  <p>
-  	cl&gt; nhedit m74 title <span style="font-family: monospace;">"(title // ';ss')"</span> <span style="font-family: monospace;">"."</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit m74 title "(title // ';ss')" "."
+  </pre></div>
   <p>
   would concatenate the string <span style="font-family: monospace;">";ss"</span> to the old title string.  We require
   parenthesis for expression evaluation to avoid the need to doubly quote
@@ -336,9 +336,9 @@ nhedit: Edit image header using a command file
   be parenthesized, the first example in the basic usage section would have
   to be entered as shown below.
   </p>
-  <p>
-  	cl&gt; nhedit m74 title '<span style="font-family: monospace;">"sky flat"</span>'	# invalid command
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit m74 title '"sky flat"'       # invalid command
+  </pre></div>
   <p>
   Expression evaluation for <i>nhedit</i>, <i>hselect</i>, and similar tasks
   is carried out internally by the FMTIO library routine <b>evexpr</b>.
@@ -354,17 +354,17 @@ nhedit: Edit image header using a command file
   exception of the operators <span style="font-family: monospace;">"?"</span>, <span style="font-family: monospace;">"?="</span>, and <span style="font-family: monospace;">"@"</span>, the operator set is equivalent
   to that available in the CL and SPP languages.
   </p>
-  <pre>
-  	+  -  *  /		arithmetic operators
-  	**			exponentiation
-  	//			string concatenation
-  	!  -			boolean not, unary negation
-  	&lt;  &lt;= &gt;  &gt;=		order comparison (works for strings)
-  	== != &amp;&amp; ||		equals, not equals, and, or
-  	?=			string equals pattern
-  	? :			conditional expression
-  	@			reference a variable
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  +  -  *  /              arithmetic operators
+  **                      exponentiation
+  //                      string concatenation
+  !  -                    boolean not, unary negation
+  &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
+  == != &amp;&amp; ||             equals, not equals, and, or
+  ?=                      string equals pattern
+  ? :                     conditional expression
+  @                       reference a variable
+  </pre></div>
   <p>
   The operators <span style="font-family: monospace;">"=="</span>, <span style="font-family: monospace;">"&amp;&amp;"</span>, and <span style="font-family: monospace;">"||"</span> may be abbreviated as <span style="font-family: monospace;">"="</span>, <span style="font-family: monospace;">"&amp;"</span>, and <span style="font-family: monospace;">"|"</span>
   if desired.  The ?= operator performs pattern matching upon strings.
@@ -437,11 +437,11 @@ nhedit: Edit image header using a command file
       A number of standard intrinsic functions are recognized within expressions.
   The set of functions currently supported is shown below.
   </p>
-  <pre>
-  	abs	acos	asin	atan	atan2	bool	cos
-  	exp	int	log	log10	max	min	mod
-  	nint	real	sin	sqrt	str	tan	
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  abs     acos    asin    atan    atan2   bool    cos
+  exp     int     log     log10   max     min     mod
+  nint    real    sin     sqrt    str     tan
+  </pre></div>
   <p>
   The trigonometric functions operate in units of degrees rather than radians.
   The <i>min</i> and <i>max</i> functions may have any number of arguments up
@@ -451,11 +451,11 @@ nhedit: Edit image header using a command file
   <p>
   A function call may take either of the following forms:
   </p>
-  <pre>
-  	&lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
+  <div class="highlight-default-notranslate"><pre>
+          &lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   or
-  	&lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
-  </pre>
+          &lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
+  </pre></div>
   <p>
   The first form is the conventional form found in all programming languages.
   The second permits the generation of function names by string valued
@@ -469,101 +469,93 @@ nhedit: Edit image header using a command file
   fields), function calls, or references to any of the special variables.
   The following special variables are recognized within expressions:
   </p>
-  <pre>
-  	.		A string constant, used to flag printing
-  	$		The value of the "current field"
-  	$F		The name of the "current field"
-  	$I		The name of the "current image"
-  	$T		The current clock time (an integer value)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  $               The value of the "current field"
+  $F              The name of the "current field"
+  $I              The name of the "current image"
+  $T              The current clock time (an integer value)
+  </pre></div>
   <p>
   These builtin variables are especially useful for constructing context
   dependent expressions.  For example, the value of a field may be incremented
   by 100 by assigning it the value <span style="font-family: monospace;">"$ + 100"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Globally edit the database <span style="font-family: monospace;">"n1"</span>, setting the value of the string parameter
   <span style="font-family: monospace;">"obs"</span> to <span style="font-family: monospace;">"sky"</span> if <span style="font-family: monospace;">"s-flag"</span> is 1, to <span style="font-family: monospace;">"obj"</span> otherwise.
   </p>
-  <p>
-      cl&gt; nhedit n1.* obs '(@<span style="font-family: monospace;">"s-flag"</span> == 1 ? <span style="font-family: monospace;">"sky"</span> : <span style="font-family: monospace;">"obj"</span>)' <span style="font-family: monospace;">"Observation value"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit n1.* obs '(@"s-flag" == 1 ? "sky" : "obj")' "Observation value"
+  </pre></div>
   <p>
   2. Globally edit the same database, replacing the value of the parameter
   <span style="font-family: monospace;">"variance"</span> by the square root of the original value.
   </p>
-  <p>
-      cl&gt; nhedit n1.* var '(sqrt(var))' <span style="font-family: monospace;">"Variance value"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit n1.* var '(sqrt(var))' "Variance value"
+  </pre></div>
   <p>
   3. Replace the values of the fields A and B by the absolute value of the
   original value:
   </p>
-  <p>
-      cl&gt; nhedit n1.* a,b '(abs($))<span style="font-family: monospace;">' '</span>Absolute value'
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit n1.* a,b '(abs($))<span style="font-family: monospace;">' '</span>Absolute value'
+  </pre></div>
   <p>
   4. Add a blank field with a comment after a given field (K5DX).
   </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit file.fits add_blank "INSTRUMENT DESCRIPTION " after=k5dx add+
+  </pre></div>
   <p>
-      cl&gt; nhedit file.fits add_blank <span style="font-family: monospace;">"INSTRUMENT DESCRIPTION "</span> after=k5dx add+
-    
       Notice the use of the special field value 'add_blank' which will be 
   replaced by a blank keyword in the header.
   </p>
   <p>
   5. Add HISTORY card before a given keyword
   </p>
-  <pre>
-     cl&gt; nhedit file.fits history \<br>
-         "History text from column 9 to 80, no quotes" before=wcsdim add+
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit file.fits history \<br>
+      "History text from column 9 to 80, no quotes" before=wcsdim add+
+  </pre></div>
   <p>
   6. Run a command file through the first 50 extensions
   </p>
-  <pre>
-  
-      cl&gt;  for(i=1;i&lt;51;i=i+1) {
-            nhedit("mymef["//i//"]",comfile="home$hh.in")
-         }
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt;  for(i=1;i&lt;51;i=i+1) {
+        nhedit("mymef["//i//"]",comfile="home$hh.in")
+     }
+  </pre></div>
   <p>
   7. Add a text file to the header. This will be put as HISTORY lines with 
   text appropriately split when long lines are encountered. Start putting the
   text after the keyword KEYWN.
   </p>
-  <pre>
-  
-     cl&gt; nhedit add_textf "mytext_file.tx" after=KEYWN add+
-  
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit add_textf "mytext_file.tx" after=KEYWN add+
+  </pre></div>
   <p>
   8. Run nhedit through all the extensions in a MEF file. Assuming it is 6, then:
   </p>
-  <pre>
-  
-     cl&gt; for(i=1;i&lt;7;i=i+1)
-            nhedit("mymef.fits["//i//"]",comfi="home$myheader.txt")
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; for(i=1;i&lt;7;i=i+1)
+         nhedit("mymef.fits["//i//"]",comfi="home$myheader.txt")
+  </pre></div>
   <p>
   9. Run several fits files with the same set of header commands from the file
   <span style="font-family: monospace;">"hdrc.txt"</span>.
   </p>
-  <p>
-     cl&gt; nhedit file*.fits commfile=hdrc.txt
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nhedit file*.fits commfile=hdrc.txt
+  </pre></div>
   <p>
   As an example the 'hdrc.txt' content can be: (Notice the 'default_pars' command)
   </p>
-  <pre>
-  # 
+  <div class="highlight-default-notranslate"><pre>
+  #
   # Sample command file for nhedit task.
   #
   # Establish the default parameters for the rest of the commands.
@@ -573,7 +565,7 @@ nhedit: Edit image header using a command file
   # Notice the use of commas if you desire.
   "DETECTOR" 'Newfirm', "comment string"
   ONELE <span style="font-family: monospace;">'A'</span> "comment to A"
-  # 
+  #
   # Now delete a keyword
   ONELE1 del+ show+
   add_blank  "    /blank keyw"
@@ -593,16 +585,15 @@ nhedit: Edit image header using a command file
   history "this is a hist 22 after trim pkey"  after="TRIM" add+ show-
   comment "this is a comment" after="FR-SCALE" add+ show-
   # END OF HDRC.TXT FILE
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   hselect, hedit, mkheader, imgets, imheader
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

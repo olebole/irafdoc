@@ -7,15 +7,15 @@ wcsctran: Transform coordinates from one iraf image wcs to another
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   wcsctran input output image inwcs outwcs
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input coordinate files. The number of input coordinate
@@ -23,7 +23,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   may be entered by hand by setting input to <span style="font-family: monospace;">"STDIN"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The list of output coordinate files. The number of coordinate files
@@ -31,13 +31,13 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   on the terminal by setting output to <span style="font-family: monospace;">"STDOUT"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of input images containing the WCS information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_inwcs">
   <dt><b>inwcs, outwcs</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='inwcs' Line='inwcs, outwcs' -->
   <dd>The input and output coordinate systems. Coordinates in the input
@@ -92,7 +92,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_columns">
   <dt><b>columns = <span style="font-family: monospace;">"1 2 3 4 5 6 7"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns = "1 2 3 4 5 6 7"' -->
   <dd>The list of columns separated by whitespace or commas in the input coordinate
@@ -102,7 +102,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   order they are specified in the columns parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_units">
   <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>The units of the input coordinate values, normally degrees for the sky
@@ -126,7 +126,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   Units conversions are performed only if the input wcs is <span style="font-family: monospace;">"world"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_formats">
   <dt><b>formats = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""' -->
   <dd>The format for the computed output coordinates. If the formats
@@ -136,7 +136,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   the input coordinates and the value of the min_sigdigits parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_min_sigdigits">
   <dt><b>min_sigdigits = 7</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7' -->
   <dd>The minimum precision of the output coordinates if, the formats parameter
@@ -144,15 +144,15 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   format attribute is undefined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print comment lines to the output file as the task executes.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   WCSCTRAN transforms a list of coordinates, read from  the input file
   <i>input</i>, from the coordinate system defined by <i>inwcs</i> to the
@@ -247,9 +247,9 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   If the number of output columns is greater than the number of input columns,
   the extra coordinate columns are added to the end of the output line.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -258,7 +258,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   codes C are as follows:
     
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -275,17 +275,16 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-    
   
   Conventions for w (field width) specification:
-    
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-    
+  
   Escape sequences (e.g. "\n" for newline):
-    
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -295,15 +294,15 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-    
+  
   Examples
-    
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-    
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -316,7 +315,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-    
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
@@ -324,10 +323,10 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Additional information on IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
@@ -339,9 +338,9 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   FITS Format"</span> by Hanisch and Wells, available from our anonymous ftp
   archive.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Find the pixel coordinates of a list of objects in an image, given a list
   of their ras and decs in hh:mm:ss.s and dd:mm:ss format. Limit the precision
@@ -349,28 +348,28 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   ras and decs are assumed to be in columns 1 and 2 of the input coordinate
   file, and the ras must be converted from hours to decimal degrees.
   </p>
-  <pre>
-  	im&gt; wcsctran incoords outcoords image world logical units="h n" \<br>
-  	    formats="%8.3f %0.3f"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; wcsctran incoords outcoords image world logical units="h n" \<br>
+      formats="%8.3f %0.3f"
+  </pre></div>
   <p>
   2. Repeat the previous example using the same input coordinate list to
   produce output coordinate lists for a list of input images.
   </p>
-  <pre>
-  	im&gt; wcsctran incoords @outcoolist @imlist world logical units="h n" \<br>
-  	    formats="%8.3f %8.3f"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; wcsctran incoords @outcoolist @imlist world logical units="h n" \<br>
+      formats="%8.3f %8.3f"
+  </pre></div>
   <p>
   3. Transform pixel coordinates in a photometry file to ra and dec
   coordinates, writing the output coordinates in hh:mm:ss.ss and dd:mm:ss.s
   format. The input pixel coordinates are stored in columns 3 and 4 of the
   input coordinate file.
   </p>
-  <pre>
-  	im&gt; wcsctran magfile omagfile image logical world col="3 4" \<br>
-  	    formats="%12.2H %12.1h"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; wcsctran magfile omagfile image logical world col="3 4" \<br>
+      formats="%12.2H %12.1h"
+  </pre></div>
   <p>
   4. Given a set of pixel coordinates in the parent image, find the pixel
   coordinates of the same objects in an image which is a shifted, rotated
@@ -379,29 +378,29 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   The output coordinate lists is marked on the displayed transformed 
   image using the tvmark task.
   </p>
-  <pre>
-  	im&gt; display parent 1 fi+
-  	im&gt; rimcursor &gt; coolist
-  	im&gt; imlintran parent image 45.0 45.0 1.5 1.5 xin=256 yin=256 \<br>
-  	    xout=281 yout=263
-  	im&gt; wcsctran coolist ocoolist image physical logical
-  	im&gt; display image 2 fi+
-  	im&gt; tvmark 2 outcoolist
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; display parent 1 fi+
+  im&gt; rimcursor &gt; coolist
+  im&gt; imlintran parent image 45.0 45.0 1.5 1.5 xin=256 yin=256 \<br>
+      xout=281 yout=263
+  im&gt; wcsctran coolist ocoolist image physical logical
+  im&gt; display image 2 fi+
+  im&gt; tvmark 2 outcoolist
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   wcsreset, wcsedit, rimcursor, listpixels, lintran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

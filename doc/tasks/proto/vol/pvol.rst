@@ -7,39 +7,39 @@ pvol: Project volume image (generates 'rotating' volume images)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   pvol input output 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input 3d or 4d image (datacube).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output datacube, one image band per rotation (type real only).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nframes">
   <dt><b>nframes = (360 / <b>degrees</b>)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nframes' Line='nframes = (360 / \fBdegrees\fR)' -->
   <dd>Number of frames to generate, 1 per rotation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_degrees">
   <dt><b>degrees = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='degrees' Line='degrees = 10' -->
   <dd>Number of degrees to rotate datacube for each successive projection.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_theta0">
   <dt><b>theta0 = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='theta0' Line='theta0 = 0.0' -->
   <dd>Initial projection angle for rotation sequence by <b>degrees</b> increments.
@@ -47,7 +47,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   origin.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ptype">
   <dt><b>ptype = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ptype' Line='ptype = 2' -->
   <dd>Projection type;
@@ -62,28 +62,28 @@ pvol: Project volume image (generates 'rotating' volume images)
   6 = use last voxel value within cutoffs only.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imin">
   <dt><b>imin, imax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imin' Line='imin, imax = INDEF' -->
   <dd>Input voxel intensity ranges within which to apply intensity transformation.
   Defaults to input image min and max if not specified (see comments below).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_omin">
   <dt><b>omin, omax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='omin' Line='omin, omax = INDEF' -->
   <dd>Input voxel opacity ranges within which to apply opacity transformation.
   Defaults to input image min and max if not specified (see comments below).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_amin">
   <dt><b>amin, amax = 0.0, 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='amin' Line='amin, amax = 0.0, 1.0' -->
   <dd>Attenuation factor minimum and maximum for ptype=1 (opacity).  Voxel values
   &lt;= omin map to attenuation factor amin, &gt;= omax map to attenuation amax.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_izero">
   <dt><b>izero = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='izero' Line='izero = 1.0' -->
   <dd>Initial background iillumination intensity when <b>ptype</b> = 1 (opacity).
@@ -92,14 +92,14 @@ pvol: Project volume image (generates 'rotating' volume images)
   along the projection column toward the projection plane.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_oscale">
   <dt><b>oscale = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='oscale' Line='oscale = 1.0' -->
   <dd>Voxel opacity scale factor.  Multiplied by voxel value before attenuating
   remaining light along projection column for <b>ptype</b> = 1.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_opacelem">
   <dt><b>opacelem = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='opacelem' Line='opacelem = 1' -->
   <dd>Opacity element in 4th dimension of input image.  When input image is 4d,
@@ -107,7 +107,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   will be treated as opacity and the other will be considered intensity.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispower">
   <dt><b>dispower = 2.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispower' Line='dispower = 2.0' -->
   <dd>Inverse distance weighting power for <b>ptype</b> = 4,5.  Voxel intensities will
@@ -115,7 +115,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   <b>dispower</b> before being summed into the output projection pixel.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_discutoff">
   <dt><b>discutoff = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='discutoff' Line='discutoff = no' -->
   <dd>When distance weighting, measure the distance within that set of projecting
@@ -125,7 +125,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   rather than its placement inside the datacube.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_modn">
   <dt><b>modn = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='modn' Line='modn = 10' -->
   <dd>For ptype=5, only voxel values satisfying mod (int (voxval * 100.0)) =
@@ -134,7 +134,7 @@ pvol: Project volume image (generates 'rotating' volume images)
   voxel values (like solid objects in an otherwise empty datacube).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vecx">
   <dt><b>vecx = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vecx' Line='vecx = 1.0' -->
   <dd>Rotation axis X vector.  Part of the specification of a three-dimensional
@@ -142,19 +142,19 @@ pvol: Project volume image (generates 'rotating' volume images)
   viewed from the front.  PROTOTYPE only supports rotations around the x axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vecy">
   <dt><b>vecy, vecz = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vecy' Line='vecy, vecz = 0.0' -->
   <dd>Rotation axis Y and Z vectors.  In prototype, must be zero.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Output datacube title for rotation sequence.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxws">
   <dt><b>maxws = 2000000</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxws' Line='maxws = 2000000' -->
   <dd>Maximum workingset size in chars (usually 2 bytes).  Decrease if machine
@@ -162,22 +162,22 @@ pvol: Project volume image (generates 'rotating' volume images)
   lots of memory and PVOL does not affect other processes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_abs">
   <dt><b>abs = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='abs' Line='abs = no' -->
   <dd>If yes, take absolute value of voxel before applying any transformation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Report memory usage, progress around the rotation, and more detail on
   errors if yes.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   PVOL is used for visualizing the interiors of three-dimensional images.
   Opacity and intensity information is used to construct projected 2d images
@@ -237,26 +237,25 @@ pvol: Project volume image (generates 'rotating' volume images)
   First we consider the intensity/opacity transformation functions, then we
   discuss how the transformed value contributes to the final projected image.
   </p>
-  <pre>
-  	Intensity transformation:
+  <div class="highlight-default-notranslate"><pre>
+  Intensity transformation:
   
-  	if (voxval &lt; imin)
-  	    newval = imin
-  	else if (imin &lt;= voxval &amp;&amp; voxval &lt; imax)
-  	    newval = im_min + (im_max-im_min) * (voxval-imin)/(imax-imin)
-  	else
-  	    newval = imax
-  	
-  	Opacity transformation (0.0 &lt;= attenuation &lt;= 1.0):
-  	if (voxval &lt; omin)	# let maximum amount of light through
-  	    attenuation = amax
-  	else if (omin &lt;= voxval &amp;&amp; voxval &lt; omax)
-  	    attenuation = amin + (amax-amin) * (voxval*oscale - omin) /
-  		(omax-omin)
-  	else			# let minimum amount of light through
-  	    attenuation = amin
+  if (voxval &lt; imin)
+      newval = imin
+  else if (imin &lt;= voxval &amp;&amp; voxval &lt; imax)
+      newval = im_min + (im_max-im_min) * (voxval-imin)/(imax-imin)
+  else
+      newval = imax
   
-  </pre>
+  Opacity transformation (0.0 &lt;= attenuation &lt;= 1.0):
+  if (voxval &lt; omin)      # let maximum amount of light through
+      attenuation = amax
+  else if (omin &lt;= voxval &amp;&amp; voxval &lt; omax)
+      attenuation = amin + (amax-amin) * (voxval*oscale - omin) /
+          (omax-omin)
+  else                    # let minimum amount of light through
+      attenuation = amin
+  </pre></div>
   <p>
   The intensity class of projections includes <b>ptype</b> = 2, 3, 4, 5, and 6.
   The default, <b>ptype</b> 2, results in the AVERAGE transformed intensity along
@@ -277,10 +276,10 @@ pvol: Project volume image (generates 'rotating' volume images)
   background (and how far).  The distance weighting is accomplished as follows,
   where voxposition and totvoxels are determined according to <b>discutoff</b>:
   </p>
-  <pre>
-  	<b>ptype</b> = 4 (distance weighting):
-  	newval = newval * (voxposition / voxelsincolumn) ** <b>dispower</b>
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  <b>ptype</b> = 4 (distance weighting):
+  newval = newval * (voxposition / voxelsincolumn) ** <b>dispower</b>
+  </pre></div>
   <p>
   <b>ptype</b> = 5, MODULAR PROPORTIONAL DISTANCE WEIGHTING, is useful for better
   seeing into the interiors of high-contrast datacubes.  Rather than using each
@@ -288,13 +287,13 @@ pvol: Project volume image (generates 'rotating' volume images)
   based on the <b>modn</b> parameter (sometimes it is necessary to artificially
   <span style="font-family: monospace;">"thin out"</span> the data to see far enough into or through it).
   </p>
-  <pre>
-  	<b>ptype</b> = 5 (modular distance weighting):
-  	if (mod (int (newval/val_range * 100)) = <b>modn</b>)
-  	    use newval as in normal distance weighting
-  	else
-  	    ignore newval
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  <b>ptype</b> = 5 (modular distance weighting):
+  if (mod (int (newval/val_range * 100)) = <b>modn</b>)
+      use newval as in normal distance weighting
+  else
+      ignore newval
+  </pre></div>
   <p>
   <b>ptype</b> = 6 results in only the LAST transformed voxel intensity that
   is between the <b>imin</b> and <b>imax</b> cutoffs being used.  This corresponds
@@ -322,9 +321,9 @@ pvol: Project volume image (generates 'rotating' volume images)
   as determined in the opacity transformation function above, for each 
   contributing voxel along the projection column:
   </p>
-  <pre>
-  	projection pixel = projection pixel * attenuation
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  projection pixel = projection pixel * attenuation
+  </pre></div>
   <p>
   If the input image is 4-dimensional, with 2 elements in the 4th dimension,
   voxel intensities will be added after attenuation 
@@ -340,26 +339,25 @@ pvol: Project volume image (generates 'rotating' volume images)
   has been determined, it contributes to the output pixel onto which the
   current, arbitrarily-oriented column of voxels projects.  To summarize:
   </p>
-  <pre>
-  	1 OPACITY:
-  	    proj_pix = proj_pix * attenuation
-  	2 AVERAGE:
-  	    proj_pix = proj_pix + newval / nvox
-  	3 SUM:
-  	    proj_pix = proj_pix + newval
-  	4 INVDISPOW:
-  	    proj_pix = proj_pix + newval * (vox/voxincol)**dispow
-  	5 MOD:
-  	    if mod (int (newval/val_range * 100.0)) = <b>modn</b>
-  		proj_pix = proj_pix + newval * (vox/voxincol)**dispow
-  	6 LASTONLY:
-  	    if (<b>imin</b> &lt; newval &amp;&amp; newval &lt;= <b>imax</b>)
-  		proj_pix = newval
-  
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  1 OPACITY:
+      proj_pix = proj_pix * attenuation
+  2 AVERAGE:
+      proj_pix = proj_pix + newval / nvox
+  3 SUM:
+      proj_pix = proj_pix + newval
+  4 INVDISPOW:
+      proj_pix = proj_pix + newval * (vox/voxincol)**dispow
+  5 MOD:
+      if mod (int (newval/val_range * 100.0)) = <b>modn</b>
+          proj_pix = proj_pix + newval * (vox/voxincol)**dispow
+  6 LASTONLY:
+      if (<b>imin</b> &lt; newval &amp;&amp; newval &lt;= <b>imax</b>)
+          proj_pix = newval
+  </pre></div>
+  </section>
+  <section id="s_performance_and_size_constraints">
   <h3>Performance and size constraints</h3>
-  <!-- BeginSection: 'PERFORMANCE AND SIZE CONSTRAINTS' -->
   <p>
   Projections through 3d images inherently require large amounts of memory,
   or else the tasks will spend all their time thrashing with I/O.  In volume
@@ -378,23 +376,23 @@ pvol: Project volume image (generates 'rotating' volume images)
   available memory follow; image datatype is assumed to be REAL -- multiply
   number of YZ slices by 2 for SHORT images.
   </p>
-  <pre>
-  	Usable Memory	Image Size	Approx YZ Slices
-  	------------------------------------------------
-  	1 Mb		64*64*64	64 (whole image)
-  	1 Mb		512*512*512	1
-  	4 Mb		101*101*101	101 (whole image)
-  	4 Mb		1024*1024*1024	1
-  	8 Mb		128*128*128	128 (whole image)
-  	8 Mb		1448*1448*1448	1
-  	16 Mb		161*161*161	161 (whole image)
-  	16 Mb		2048*2048*2048	1
-  	32 Mb		203*203*203	203 (whole image)
-  	32 Mb		2896*2896*2896	1
-  	64 Mb		256*256*256	256 (whole image)
-  	128 Mb		322*322*322	322 (whole image)
-  	512 Mb		512*512*512	512 (whole image)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Usable Memory   Image Size      Approx YZ Slices
+  ------------------------------------------------
+  1 Mb            64*64*64        64 (whole image)
+  1 Mb            512*512*512     1
+  4 Mb            101*101*101     101 (whole image)
+  4 Mb            1024*1024*1024  1
+  8 Mb            128*128*128     128 (whole image)
+  8 Mb            1448*1448*1448  1
+  16 Mb           161*161*161     161 (whole image)
+  16 Mb           2048*2048*2048  1
+  32 Mb           203*203*203     203 (whole image)
+  32 Mb           2896*2896*2896  1
+  64 Mb           256*256*256     256 (whole image)
+  128 Mb          322*322*322     322 (whole image)
+  512 Mb          512*512*512     512 (whole image)
+  </pre></div>
   <p>
   PVOL checks to see how much memory it can grab, then actually allocates
   somewhat less than this (otherwise you wouldn't be able to do anything 
@@ -407,10 +405,10 @@ pvol: Project volume image (generates 'rotating' volume images)
   and not even let you back in later.  This is why the <b>maxws</b>
   parameter is supplied -- lower it if this type of behavior is experienced.
   </p>
-  <!-- EndSection:   'PERFORMANCE AND SIZE CONSTRAINTS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1.  Produce 36 rotation projections (one every 10 degrees) around the
       x-axis of a datacube, viewed from the front (negative z
       direction).  Assume that the single-valued input voxel values
@@ -428,7 +426,7 @@ pvol: Project volume image (generates 'rotating' volume images)
       cutoffs (0.1 to 1.0).
   
       cl&gt; pvol input[*:4,*:4,*:4] output nfr=2 deg=90 ptype=4 \<br>
-  	dispower=3 discutoff+ imin=.1 imax=1.0
+          dispower=3 discutoff+ imin=.1 imax=1.0
   
   4.  Project through a 4d image containing opacity information in
       element 2 of the 4th axis and intensity in element 1.  Scale
@@ -437,11 +435,10 @@ pvol: Project volume image (generates 'rotating' volume images)
       by subsequent opacities), with no distance weighting.
   
       cl&gt; pvol input output ptype=3 opacelem=2
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   1min 12sec cpu on an unloaded Sun-4 to produce
   36 rotation increments around a 50*50*50 datacube with <b>ptype</b>=2
@@ -457,9 +454,9 @@ pvol: Project volume image (generates 'rotating' volume images)
   17hr 20 min cpu on a Sun-4 to do 36 rotation steps around a 450*450*450
   datacube with <b>ptype</b>=4.
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Maximizing memory usage without adversely impacting other functions can be
   tricky.  Adverse effects may result from using too high a <b>maxws</b>.
@@ -474,14 +471,14 @@ pvol: Project volume image (generates 'rotating' volume images)
   Needs easier user interface to adjust translucency parameters (e.g. with
   mouse when workstations become fast enough to do this in real time).
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   i2sun, im3dtran, im3dstack
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'PERFORMANCE AND SIZE CONSTRAINTS' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

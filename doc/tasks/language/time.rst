@@ -7,32 +7,32 @@ time: Print the current time
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   time
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Time</i> writes the current time and date on the standard output.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_example">
   <h3>Example</h3>
-  <!-- BeginSection: 'EXAMPLE' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; time
   Fri 12:50:29 14-Feb-86
-  </pre>
-  <!-- EndSection:   'EXAMPLE' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   sleep, wait, jobs
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO'  -->
   

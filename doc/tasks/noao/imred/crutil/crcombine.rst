@@ -7,20 +7,20 @@ crcombine: Combine multiple exposures to eliminate cosmic rays
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   crcombine input output
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <p>
   See parameters for <b>imcombine</b>.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task is a version of <b>imcombine</b>.  See the help for that task
   for a description of the parameters and algorithms.
@@ -33,24 +33,24 @@ crcombine: Combine multiple exposures to eliminate cosmic rays
   images should be combined with an <span style="font-family: monospace;">"average"</span> and using a rejection
   algorithm.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To combine two images using the gain and read noise parameters in
   the image header:
   </p>
-  <pre>
-      cl&gt; crcombine obj012,obj013 abc gain=gain rdnoise=rdnoise 
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; crcombine obj012,obj013 abc gain=gain rdnoise=rdnoise
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imcombine
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

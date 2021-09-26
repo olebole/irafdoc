@@ -7,21 +7,21 @@ mktags: Tag all procedure declarations in a set of files
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mktags
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_files">
   <dt><b>files = <span style="font-family: monospace;">"*.x"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files = "*.x"' -->
   <dd>The files to be tagged, e.g., <span style="font-family: monospace;">"*.x"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_listing">
   <dt><b>listing = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='listing' Line='listing = no' -->
   <dd>If this switch is enabled a sorted list of all procedures declared in the
@@ -29,16 +29,16 @@ mktags: Tag all procedure declarations in a set of files
   name, line and file number, and procedure declaration on each output line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tags">
   <dt><b>tags = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tags' Line='tags = yes' -->
   <dd>If this switch is enabled a <span style="font-family: monospace;">"tags"</span> file will be written in the current
   directory for use with the VI editor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The named files are scanned for procedure declarations.  Each such declaration
   found is buffered internally.  When all files have been scanned the internal
@@ -73,19 +73,19 @@ mktags: Tag all procedure declarations in a set of files
   database.  If a printed listing is desired the <i>listing</i> switch must
   be enabled.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   A fixed amount of storage is allocated internally and overflow will occur if
   there are too many tags (procedures) or if there is too much text (the string
   buffer will overflow).
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'BUGS' 'SEE ALSO'  -->
   

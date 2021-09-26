@@ -7,14 +7,14 @@ wtar: Write a TAR format archive file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   wtar [-flags] [-f archive] [files]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_arguments">
   <h3>Arguments</h3>
-  <!-- BeginSection: 'ARGUMENTS' -->
   <dl>
   <dt><b>-d</b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='' Line='-d' -->
@@ -47,7 +47,7 @@ wtar: Write a TAR format archive file
   file.  The default is the standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_files">
   <dt><b>files</b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='files' Line='files' -->
   <dd>The names of the files or root directories of directory trees to be written
@@ -55,9 +55,9 @@ wtar: Write a TAR format archive file
   rooted at the current directory) is assumed.
   </dd>
   </dl>
-  <!-- EndSection:   'ARGUMENTS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The named files and directories are written to the indicated
   UNIX <span style="font-family: monospace;">"tar"</span> format output file.  Any directories in the file list are
@@ -86,54 +86,54 @@ wtar: Write a TAR format archive file
   filenames).  Magtape devices should be specified by their host (not IRAF)
   device name, e.g., <span style="font-family: monospace;">"/dev/nrmt8"</span> or <span style="font-family: monospace;">"MSA0"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Make a source-only archive of the IRAF system on the UNIX device
   /dev/nrmt8.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; cd iraf
   	cl&gt; wtar -of /dev/nrmt8
-  </pre>
+  </pre></div>
   <p>
   2. Archive the <span style="font-family: monospace;">"uparm"</span> directory to the VMS logical device MSA0:.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; wtar -f msa0 uparm
-  </p>
+  </pre></div>
   <p>
   3. Make a disk archive of the LIB and PKG directory trees in your home
   directory.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; wtar -f home$archive.tar lib pkg 
-  </p>
+  </pre></div>
   <p>
   4. Examine the resultant file to make sure everything worked correctly.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; rtar -tvf home$archive.tar
-  </p>
+  </pre></div>
   <p>
   5. Make a disk archive, using a host filename for the output file.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; wtar -f /tmp2/arc lib pkg sys
-  </p>
+  </pre></div>
   <p>
   IRAF magtape commands such as <i>rewind</i> may be used with <i>wtar</i>,
   but switching between IRAF and host device names can be confusing.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rtar, rmbin
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'ARGUMENTS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -7,13 +7,13 @@ apvariance: Extractions, variance weighting, cleaning, and noise model
 
 .. raw:: html
 
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apbackground approfiles apall apsum
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'SEE ALSO'  -->
   

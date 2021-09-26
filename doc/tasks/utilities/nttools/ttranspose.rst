@@ -7,14 +7,14 @@ ttranspose: Transpose or flip a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ttranspose intable outtable action
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task can be used to transpose a table
   so that input rows become output columns
@@ -64,16 +64,16 @@ ttranspose: Transpose or flip a table.
   Text tables with too many rows cannot be transposed
   due to the limit of 1024 on the length of each row of a text table.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>The list of input table names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>The list of output table names.
@@ -82,7 +82,7 @@ ttranspose: Transpose or flip a table.
   you can use outtable = <span style="font-family: monospace;">"STDOUT"</span> even if there several input tables.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_action">
   <dt><b>action = <span style="font-family: monospace;">"t"</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='action' Line='action = "t" [string]' -->
   <dd>This is a string made up of the letters <span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"h"</span>, and <span style="font-family: monospace;">"v"</span>
@@ -99,78 +99,78 @@ ttranspose: Transpose or flip a table.
   the letters <span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"h"</span> and <span style="font-family: monospace;">"v"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes [boolean]' -->
   <dd>Print the names of the tables as they are processed?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The input is the text file <span style="font-family: monospace;">"in"</span>,
   and the output is to be displayed on the screen.
   Each of the three operations (<span style="font-family: monospace;">"t"</span>, <span style="font-family: monospace;">"h"</span>, <span style="font-family: monospace;">"v"</span>)
   and some combinations are illustrated.
   </p>
-  <pre>
-  	tt&gt; type in
-  	one     two     three
-  	four    five    six
-  	seven   eight   nine
-  	ten     eleven  twelve
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; type in
+  one     two     three
+  four    five    six
+  seven   eight   nine
+  ten     eleven  twelve
   
-  	tt&gt; ttranspose in STDOUT t
-  	in --&gt; STDOUT
-  	one    four   seven  ten   
-  	two    five   eight  eleven
-  	three  six    nine   twelve
+  tt&gt; ttranspose in STDOUT t
+  in --&gt; STDOUT
+  one    four   seven  ten
+  two    five   eight  eleven
+  three  six    nine   twelve
   
-  	tt&gt; ttranspose in STDOUT h
-  	in --&gt; STDOUT
-  	three  two    one  
-  	six    five   four 
-  	nine   eight  seven
-  	twelve eleven ten  
+  tt&gt; ttranspose in STDOUT h
+  in --&gt; STDOUT
+  three  two    one
+  six    five   four
+  nine   eight  seven
+  twelve eleven ten
   
-  	tt&gt; ttranspose in STDOUT v
-  	in --&gt; STDOUT
-  	ten   eleven twelve
-  	seven eight  nine  
-  	four  five   six   
-  	one   two    three 
+  tt&gt; ttranspose in STDOUT v
+  in --&gt; STDOUT
+  ten   eleven twelve
+  seven eight  nine
+  four  five   six
+  one   two    three
   
-  	tt&gt; ttranspose in STDOUT hv
-  	in --&gt; STDOUT
-  	twelve eleven ten  
-  	nine   eight  seven
-  	six    five   four 
-  	three  two    one  
+  tt&gt; ttranspose in STDOUT hv
+  in --&gt; STDOUT
+  twelve eleven ten
+  nine   eight  seven
+  six    five   four
+  three  two    one
   
-  	tt&gt; ttranspose in STDOUT th
-  	in --&gt; STDOUT
-  	ten    seven  four   one   
-  	eleven eight  five   two   
-  	twelve nine   six    three 
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  tt&gt; ttranspose in STDOUT th
+  in --&gt; STDOUT
+  ten    seven  four   one
+  eleven eight  five   two
+  twelve nine   six    three
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   Type <span style="font-family: monospace;">"help ttools opt=sys"</span> for a description of the 'tables' package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

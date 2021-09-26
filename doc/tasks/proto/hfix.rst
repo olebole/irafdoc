@@ -7,22 +7,22 @@ hfix: Fix image headers with a user specified command
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   hfix images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images whose headers are to be fixed.  If <i>update</i> is yes then
   the user must have write permission on the image headers.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_command">
   <dt><b>command = <span style="font-family: monospace;">"edit $fname"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='command' Line='command = "edit $fname"' -->
   <dd>Command to be applied to a file containing the image header.  The command
@@ -34,15 +34,15 @@ hfix: Fix image headers with a user specified command
   section for some ideas.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
   <dd>Update the image header with the modified header.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task allows you to extract the image headers into a text file,
   modify this file with a specified command, and update the image header
@@ -70,42 +70,42 @@ hfix: Fix image headers with a user specified command
   be sure each field in the header parameters that you add or change begin in
   the proper columns.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Edit the header of the image test.imh:
   </p>
-  <pre>
-  	cl&gt; hfix test.imh
-  	&lt;Edit the header text&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hfix test.imh
+  &lt;Edit the header text&gt;
+  </pre></div>
   <p>
   2. Get the header of a single image and save the file:
   </p>
-  <pre>
-  	cl&gt; hfix myim command="copy $fname save" update-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hfix myim command="copy $fname save" update-
+  </pre></div>
   <p>
   3. A image header was created with an incorrect format such that the
   equal sign is in column 10 instead of 9:
   </p>
-  <pre>
-  	cl&gt; hfix *.imh \<br>
-  	&gt;&gt;&gt; command="!sed 's/ =/=/' $fname &gt;temp;mv temp $fname"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hfix *.imh \<br>
+  &gt;&gt;&gt; command="!sed 's/ =/=/' $fname &gt;temp;mv temp $fname"
+  </pre></div>
   <p>
   Note that this example should not be tried on a valid header where the
   equal sign is in column 9.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   images.hedit noao.artdata.mkheader
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

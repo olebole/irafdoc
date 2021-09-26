@@ -7,28 +7,28 @@ rgbdither: Create an 8-bit RGB dithered image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rgbdither red green blue rgb
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_red">
   <dt><b>red, green, blue</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='red' Line='red, green, blue' -->
   <dd>Input image names for the red, green, and blue components.  The images
   must all be two dimensional and of the same size.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rgb">
   <dt><b>rgb</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rgb' Line='rgb' -->
   <dd>Output image name for the RGB dithered composite image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rz1">
   <dt><b>rz1, rz2, gz1, gz2, bz1, bz2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rz1' Line='rz1, rz2, gz1, gz2, bz1, bz2' -->
   <dd>Range of values in the input images to be mapped to the minimum and maximum
@@ -37,7 +37,7 @@ rgbdither: Create an 8-bit RGB dithered image
   intensities even when using logarithmic mapping.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blkavg">
   <dt><b>blkavg = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blkavg' Line='blkavg = 3' -->
   <dd>Block average factor for the input images.  The input images may first be
@@ -48,7 +48,7 @@ rgbdither: Create an 8-bit RGB dithered image
   factor of 1 will use the pixel values without any averaging.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logmap">
   <dt><b>logmap = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logmap' Line='logmap = no' -->
   <dd>Use logarithmic intensity mapping?  The logarithm of the input pixel
@@ -57,7 +57,7 @@ rgbdither: Create an 8-bit RGB dithered image
   a greater dynamic range.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pattern">
   <dt><b>pattern = <span style="font-family: monospace;">"rgbgbrbrg"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "rgbgbrbrg"' -->
   <dd>Dither pattern given as a list of characters specifying a 3x3 array
@@ -66,9 +66,9 @@ rgbdither: Create an 8-bit RGB dithered image
   b is the blue image.  Note that each image should occur three times.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Rgbdither</b> takes three input IRAF images and produces a special
   composite IRAF image which may be displayed as an RGB color image using a
@@ -81,11 +81,11 @@ rgbdither: Create an 8-bit RGB dithered image
   are then replicated in the output image to form a specified 3x3 dither
   pattern such as the default of
   </p>
-  <pre>
-  		brg
-  		gbr
-  		rgb
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  brg
+  gbr
+  rgb
+  </pre></div>
   <p>
   where r is the red image pixel, g is the green image pixel, and b is the
   blue image pixel.  This produces a composite image which is three times
@@ -99,9 +99,9 @@ rgbdither: Create an 8-bit RGB dithered image
   how to display the composite image.  A better technique may be to use
   <b>rgbto8</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Three 2048x2048 images of the Trifid nebula are obtained in the B, V,
   and R bandpasses.  These images are properly registered.  Examination of
@@ -110,24 +110,24 @@ rgbdither: Create an 8-bit RGB dithered image
   block averaging factor 6 will yield a final composite image of size
   1023x1023 to be displayed.
   </p>
-  <pre>
-  	cl&gt; rgbdither trifidr trifidv trifidb trifidrgb \<br>
-  	&gt;&gt;&gt; rz1=1 rz2=500 gz1=1 gz2=500 bz1=1 bz2=500 blk=6
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rgbdither trifidr trifidv trifidb trifidrgb \<br>
+  &gt;&gt;&gt; rz1=1 rz2=500 gz1=1 gz2=500 bz1=1 bz2=500 blk=6
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   Example 1 takes 2:20 minutes (33 seconds CPU) on a SparcStation 2.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rgbdisplay, rgbto8, rgbsun, color.package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

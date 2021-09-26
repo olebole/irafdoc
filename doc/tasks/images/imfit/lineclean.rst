@@ -7,34 +7,34 @@ lineclean: Replace deviant pixels in image lines
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   lineclean input output
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input images to be cleaned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output cleaned images.  The number of output images must be the same as the
   number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Columns to be used in fitting the cleaning function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Number of sample points to combined to create a fitting point.
@@ -42,7 +42,7 @@ lineclean: Replace deviant pixels in image lines
   a median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = spline3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
   <dd>Cleaning function to be fit to the image lines.  The functions are:
@@ -72,46 +72,46 @@ lineclean: Replace deviant pixels in image lines
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>The order of the polynomials or the number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 2.5, high_reject = 2.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 2.5, high_reject = 2.5' -->
   <dd>Rejection limits below and above the fit in units of the residual sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 1.' -->
   <dd>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for interactive graphics.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>Graphics cursor input.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A one dimensional function is fit to each line of the input images.
   The function may be a legendre polynomial, chebyshev polynomial,
@@ -155,30 +155,30 @@ lineclean: Replace deviant pixels in image lines
   each image in the input list.  The interactive options are described
   in the help information <b>icfit</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To clean pixels deviating by more than 2.5 sigma:
   </p>
-  <p>
-  	cl&gt; lineclean image cleanimage
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; lineclean image cleanimage
+  </pre></div>
   <p>
   If the interactive flag is set then a prompt for an image line is
   printed:
   </p>
-  <p>
-  	image: Fit line = 100
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  image: Fit line = 100
+  </pre></div>
   <p>
   For a one or two dimensional image the line number is entered (1 for a one
   dimensional image).  For a three dimensional image two numbers are entered.
   For example:
   </p>
-  <p>
-  	image: Fit line = 10 2
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  image: Fit line = 10 2
+  </pre></div>
   <p>
   for line 10 of the second image plane.
   </p>
@@ -190,14 +190,14 @@ lineclean: Replace deviant pixels in image lines
   then respond with end-of-file or return to fit all the lines of the image
   and create the output image.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   fit1d, xtools.icfit, imsurfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

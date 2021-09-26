@@ -7,14 +7,14 @@ mkpkg: Make or update an object library or package
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkpkg [switches] [module ...] [name=value ...]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_arguments">
   <h3>Arguments</h3>
-  <!-- BeginSection: 'ARGUMENTS' -->
   <dl>
   <dt><b><b>-d[ddd]</b></b></dt>
   <!-- Sec='ARGUMENTS' Level=0 Label='' Line='\fB-d[ddd]\fR' -->
@@ -101,9 +101,9 @@ mkpkg: Make or update an object library or package
   command line.  Case is ignored in symbol names for portability reasons.
   </dd>
   </dl>
-  <!-- EndSection:   'ARGUMENTS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>mkpkg</i> utility is used to make or update IRAF packages or libraries.
   <i>Mkpkg</i> is used to bootstrap the IRAF system hence is implemented as
@@ -148,7 +148,7 @@ mkpkg: Make or update an object library or package
   Newline may be escaped with backslash to continue on the next line.
   All filenames are IRAF virtual filenames with the following extensions.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	.a		object library
   	.c		C source
   	.e		executable (e.g., "x_package.e")
@@ -162,14 +162,14 @@ mkpkg: Make or update an object library or package
   	.r		Ratfor source
   	.s		assembler source
   	.y		Yacc source
-  </pre>
+  </pre></div>
   <p>
   Since <i>mkpkg</i> is an IRAF utility it recognizes the major IRAF logical
   directories; these are summarized in the list below.  The IRAF (or UNIX)
   pathname convention is used to specify pathnames rooted in the current
   directory or a logical directory.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	as$		where .s files go		host$as/
   	bin$		installed executables		iraf$bin/
   	dev$		device tables			iraf$dev/
@@ -181,7 +181,7 @@ mkpkg: Make or update an object library or package
   	pkg$		applications packages		iraf$pkg/
   	sys$		the VOS, system libraries	iraf$sys/
   	tmp$		where temporary files go	[MACHDEP]
-  </pre>
+  </pre></div>
   <p>
   All other directories should be referenced by giving the path from either the
   current directory or from one of the system logical directories shown above.
@@ -197,14 +197,14 @@ mkpkg: Make or update an object library or package
   <b>mkpkg</b> module name for a library member list module is the same as the
   name of the actual library, hence must end with the extension <span style="font-family: monospace;">".a"</span>.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	libname.a:
   		member1		dep1 dep2 ... depN
   		member2		dep1 dep2 ... depN
   		  ...
   		memberN		dep1 dep2 ... depN
   		;
-  </pre>
+  </pre></div>
   <p>
   Here, <span style="font-family: monospace;">"libname.a"</span> is the IRAF virtual filename of the library (regardless of
   what directory it resides in), <span style="font-family: monospace;">"memberN"</span> is the name of a source file which
@@ -224,7 +224,7 @@ mkpkg: Make or update an object library or package
   back in when updating is complete.  These operations are performed by macro
   preprocessor directives, e.g.:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	$checkout libsys.a lib$
   	$update   libsys.a
   	$checkin  libsys.a lib$
@@ -241,7 +241,7 @@ mkpkg: Make or update an object library or package
   		onentry.x	&lt;clset.h&gt; &lt;fset.h&gt; &lt;knet.h&gt;
   		spline.x	&lt;math.h&gt; &lt;math/interp.h&gt;
   		;
-  </pre>
+  </pre></div>
   <p>
   Note that the checkout operation is required only in the directory from which
   the <span style="font-family: monospace;">"mkpkg"</span> command was entered, since the library has already been checked
@@ -265,7 +265,7 @@ mkpkg: Make or update an object library or package
   cannot contain two modules with the same name.  The same restrictions apply
   to the <i>$update</i> operator.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	libpkg.a:
   		@(i2)
   		alpha.x
@@ -277,7 +277,7 @@ mkpkg: Make or update an object library or package
   		gamma.f
   		delta.f
   		;
-  </pre>
+  </pre></div>
   <p>
   In the example above five object modules are to be updated in the library
   <span style="font-family: monospace;">"libpkg.a"</span>.  The files listed in module <span style="font-family: monospace;">"i2"</span>, if out of date, will be compiled
@@ -329,10 +329,10 @@ mkpkg: Make or update an object library or package
   logical directories are normally given in lower case, and locally defined
   symbols in upper case.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	$echo $(dev)graphcap
   	!xc $(XFLAGS) filea.x fileb.x
-  </pre>
+  </pre></div>
   <p>
   Symbols are most commonly defined locally with the <b>$set</b> directive.
   The <b>$include</b> directive is useful for sharing symbols amongst different
@@ -369,12 +369,12 @@ mkpkg: Make or update an object library or package
   <span style="font-family: monospace;">"$$"</span> is replaced by a single <span style="font-family: monospace;">"$"</span> whenever it is encountered in the input
   stream.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	$set GFLAGS = "-k -t silrdx -p ak/"
   	$set GEN    = "$generic $$(GFLAGS)"
   
   	ifolder (amulr.x, amul.x) $(GEN) amul.x $endif
-  </pre>
+  </pre></div>
   <p>
   4.2 Conditional Execution
   </p>
@@ -684,31 +684,31 @@ mkpkg: Make or update an object library or package
   intermediate files will be cleaned up when the errors have been corrected
   and the run successfully completes.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Update the current package.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; mkpkg
-  </p>
+  </pre></div>
   <p>
   Update the package library but do not relink.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; mkpkg libpkg.a
-  </p>
+  </pre></div>
   <p>
   Make a listing of the package.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; mkpkg listing
-  </p>
-  <pre>
+  </pre></div>
+  <p>
   Sample mkpkg-file for the above commands:
-  
-  
+  </p>
+  <div class="highlight-default-notranslate"><pre>
   	# Make my package.
   
   	$call relink
@@ -730,15 +730,15 @@ mkpkg: Make or update an object library or package
   	listing:
   		!pr task1.x task2.x file[ab].x | vpr -Pvup
   		;
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   xc, generic, softools package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'ARGUMENTS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

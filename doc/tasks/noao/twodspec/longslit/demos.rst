@@ -7,23 +7,23 @@ demos: Demonstration and test playbacks
 
 .. raw:: html
 
+  <section id="s_packages">
   <h3>Packages</h3>
-  <!-- BeginSection: 'PACKAGES' -->
   <p>
   noao.imred.argus, noao.imred.goldcams, noao.imred.kpcoude.fiber
   noao.imred.kpcoude.slit, noao.imred.nessie, noao.imred.specred
   noao.twodspec.longslit
   </p>
-  <!-- EndSection:   'PACKAGES' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   demos demoname
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_demoname">
   <dt><b>demoname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='demoname' Line='demoname' -->
   <dd>Demonstration or test procedure name.  Each package may have a different
@@ -31,9 +31,9 @@ demos: Demonstration and test playbacks
   line a menu of names is printed and then the name is queried.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Many packages have demonstration and test procedures.  These are generally
   based on artificial data and use the <i>stty playback</i> (see <b>stty</b>)
@@ -60,47 +60,47 @@ demos: Demonstration and test playbacks
   One should be aware that since the tasks are actually run parameters
   are sometimes changed.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  From the <b>goldcam</b> package list the menu and execute the
   qtest demo.
   </p>
-  <pre>
-  	go&gt; mkdir demo
-  	go&gt; cd demo
-  	go&gt; demos
-  		MENU of GOLDCAM Demonstrations
+  <div class="highlight-default-notranslate"><pre>
+  go&gt; mkdir demo
+  go&gt; cd demo
+  go&gt; demos
+          MENU of GOLDCAM Demonstrations
   
-  		qtest - Quick test of GOLDCAM (no comments, no delays)
+          qtest - Quick test of GOLDCAM (no comments, no delays)
   
-  	Demo name (qtest): 
-  	&lt;Demo follows&gt;
-  </pre>
+  Demo name (qtest):
+  &lt;Demo follows&gt;
+  </pre></div>
   <p>
   2.  From the <b>nessie</b> package create some simple test data.
   </p>
-  <pre>
-  	ne&gt; demos mkqdata
-  	Creating image demoobj ...
-  	Creating image demoflat ...
-  	Creating image demoarc1 ...
-  	Creating image demoarc2 ...
-  	ne&gt; demos mkqdata
-  	ne&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ne&gt; demos mkqdata
+  Creating image demoobj ...
+  Creating image demoflat ...
+  Creating image demoarc1 ...
+  Creating image demoarc2 ...
+  ne&gt; demos mkqdata
+  ne&gt;
+  </pre></div>
   <p>
   Note that the second execution does not create the data again.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   artdata.mkexamples, ccdred.ccdtest.demo
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'PACKAGES' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

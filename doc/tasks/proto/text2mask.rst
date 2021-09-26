@@ -7,15 +7,15 @@ text2mask: Convert text description to pixel mask
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   text2mask text mask ncols nlines
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_text">
   <dt><b>text</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='text' Line='text' -->
   <dd>Text file of pixel regions.  The format of this file consists of lines of
@@ -24,48 +24,48 @@ text2mask: Convert text description to pixel mask
   ending lines).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mask">
   <dt><b>mask</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mask' Line='mask' -->
   <dd>Pixel mask name to be created.  A pixel list image, .pl extension,
   is created so no extension is necessary.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols, nlines</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols, nlines' -->
   <dd>Dimensions for pixel mask image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_linterp">
   <dt><b>linterp = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='linterp' Line='linterp = 1' -->
   <dd>Mask code for rectangular regions which are narrower in the line direction
   than the column direction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cinterp">
   <dt><b>cinterp = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cinterp' Line='cinterp = 2' -->
   <dd>Mask code for rectangular regions which are narrower in the column direction
   than the line direction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_square">
   <dt><b>square = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='square' Line='square = 3' -->
   <dd>Mask code for square regions which are larger than a single pixel.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixel">
   <dt><b>pixel = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixel' Line='pixel = 4' -->
   <dd>Mask code for single pixels.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A text file describing individual pixels or rectangular regions is
   converted to a pixel mask image in pixel list format.  The name of
@@ -102,35 +102,35 @@ text2mask: Convert text description to pixel mask
   of bad pixels from flat fields or, even better, from the ratio of
   two flat fields of different exposure levels.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Convert a text region description into a mask and then use it to
   replace pixels by interpolation along the narrower dimension.
   </p>
-  <pre>
-      cl&gt; list2mask fp.dat mask
-      cl&gt; fixpix pix mask linterp=1,3,4 cinterp=2
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; list2mask fp.dat mask
+  cl&gt; fixpix pix mask linterp=1,3,4 cinterp=2
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_TEXT2MASK">
   <dt><b>TEXT2MASK V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='TEXT2MASK' Line='TEXT2MASK V2.11' -->
   <dd>This task is new and appears in conjunction with a new pixel mask
   based version of <b>fixpix</b>.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imreplace, imexpr, imcopy, imedit, fixpix
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

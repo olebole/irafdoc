@@ -7,14 +7,14 @@ rgcursor: Read the graphics cursor (makes a list)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   gcursor
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>rgcursor</i> iteratively reads the graphics cursor, writing the
   cursor values to the standard output.  The standard output is normally
@@ -57,61 +57,62 @@ rgcursor: Read the graphics cursor (makes a list)
   required by the applications program for which the cursor list is intended,
   consult the documentation for that program.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Interactively generate a starlist (file <span style="font-family: monospace;">"starlist"</span>) to be used as input
   to another program, e.g., for digital photometry.  In this case one would
   probably want to start with a contour plot labeled in image pixel coordinates.
   </p>
-  <pre>
-  	cl&gt; contour m74			# make the plot
-  	cl&gt; rgcursor &gt; starlist		# make the object list
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; contour m74                 # make the plot
+  cl&gt; rgcursor &gt; starlist         # make the object list
+  </pre></div>
+  <p>
+  At this point, the cursor loop is entered and the terminal is placed
+  into cursor mode.  Any of the following commands might be appropriate:
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  <b>command</b>           <b>action</b>
   
-  	At this point, the cursor loop is entered and the terminal
-  	is placed into cursor mode.  Any of the following commands
-  	might be appropriate:
+  :.markcur+      enables marking of the cursor position
+                      when the cursor is read
   
-  	<b>command</b>		<b>action</b>
+  :radius 7       set object radius in pixels
+  :annulus 10 15  set annulus radii to be used for sky
+  space_bar       mark the position of an object
+  space_bar       mark the position of an object
+                          (etc.)
   
-  	:.markcur+	enables marking of the cursor position
-  			    when the cursor is read
+  Z               zoom in on a feature to get a more
+                      accurate cursor read
+  space_bar       mark the position of the object
+  space_bar       mark the position of another object
+  0               replot the original plot
   
-  	:radius 7	set object radius in pixels
-  	:annulus 10 15	set annulus radii to be used for sky
-  	space_bar	mark the position of an object
-  	space_bar	mark the position of an object
-  				(etc.)
-  	
-  	Z		zoom in on a feature to get a more
-  			    accurate cursor read
-  	space_bar	mark the position of the object
-  	space_bar	mark the position of another object
-  	0		replot the original plot
-  	
-  	&lt;crtl/z&gt;	(EOF) terminates rgcursor
-  </pre>
+  &lt;crtl/z&gt;        (EOF) terminates rgcursor
+  </pre></div>
   <p>
   Given the above command sequence, the output file <span style="font-family: monospace;">"starlist"</span> might
   contain the following cursor values.
   </p>
-  <pre>
-  	234.435 78.9292 1 : radius 7
-  	234.475 78.9243 1 : annulus 10 15
-  	67.2822 282.319 1 \40
-  	766.252 344.224 1 \40
-  	822.918 311.748 1 \40
-  	76.8272 822.139 1 \40
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  234.435 78.9292 1 : radius 7
+  234.475 78.9243 1 : annulus 10 15
+  67.2822 282.319 1 \40
+  766.252 344.224 1 \40
+  822.918 311.748 1 \40
+  76.8272 822.139 1 \40
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rimcursor, cursor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

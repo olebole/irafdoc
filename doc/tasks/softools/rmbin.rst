@@ -7,14 +7,14 @@ rmbin: Find/delete binary files in subdirectories
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rmbin [-dinrv] [-o extns] [-e extns] dir1 dir2 ... dirN
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <dl>
   <dt><b>-d</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='-d' -->
@@ -72,9 +72,9 @@ rmbin: Find/delete binary files in subdirectories
   Note that flags may be inserted between directory name arguments to change
   switches for different directories.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>rmbin</i> task is used to descend a directory tree, deleting (or listing)
   all the binary files therein.  The task may also be used to delete or list
@@ -88,25 +88,25 @@ rmbin: Find/delete binary files in subdirectories
   to recompile the system; this currently takes about 20 hours on our UNIX
   11/750 development system, provided nothing else is running on the system.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Delete all binaries in the pkg and sys directories of IRAF.  The example
   is for a UNIX host, but this works for all other IRAF hosts as well.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	% cd $iraf
   	% rmbin -v pkg sys
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rtar, wtar, mkpkg
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

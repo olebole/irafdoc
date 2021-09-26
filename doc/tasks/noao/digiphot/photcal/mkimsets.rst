@@ -7,15 +7,15 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkimsets imlist idfilters imsets 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_imlist">
   <dt><b>imlist</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imlist' Line='imlist' -->
   <dd>The file(s) containing all the image names and filter ids associated with
@@ -26,7 +26,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   The default input is a list of APPHOT/DAOPHOT databases.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_idfilters">
   <dt><b>idfilters</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='idfilters' Line='idfilters' -->
   <dd>The ids of the filters, separated by whitespace or
@@ -36,7 +36,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   are written in <i>imsets</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imsets">
   <dt><b>imsets</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imsets' Line='imsets' -->
   <dd>The name of the output image set file which lists each observation of
@@ -45,7 +45,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   observation of that star field.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imobsparams">
   <dt><b>imobsparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imobsparams' Line='imobsparams = ""' -->
   <dd>The name of the output image list file containing the image name,
@@ -57,7 +57,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   is not saved.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_input">
   <dt><b>input = photfiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input = photfiles' -->
   <dd>The source of the information used to create the image set file.
@@ -95,7 +95,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_filter">
   <dt><b>filter</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter' -->
   <dd>The filter id keyword.
@@ -106,7 +106,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   containing the filter id, if <i>input</i> is <span style="font-family: monospace;">"user"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fields">
   <dt><b>fields = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields = ""' -->
   <dd>The list of additional fields, besides the image name and filter id,
@@ -121,7 +121,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   image name grouping process.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sort">
   <dt><b>sort = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = ""' -->
   <dd>Sort the extracted image list in order of the value of the quantity <i>sort</i>.
@@ -133,7 +133,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   before entering the editor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit the extracted image name list interactively, checking that the images
@@ -145,7 +145,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   and the filter id of the missing observation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rename">
   <dt><b>rename = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rename' Line='rename = yes' -->
   <dd>Enter new names for each observation of each field interactively.
@@ -157,16 +157,16 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   the name of the standard star in the standard star catalog.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_review">
   <dt><b>review = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='review' Line='review = yes' -->
   <dd>Review and edit <i>imsets</i> to check that the image set names are correct
   and that the images names have been properly grouped into sets.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   MKIMSETS is a script task which takes as input a list of
   the image names and filter ids, <i>imlist</i>, associated
@@ -248,9 +248,9 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   followed by, in filter order and separated by whitespace, the names of the
   images of that field, for that  observation.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create an image set file from a list of APPHOT databases which
   contain UBV observations of 5 standard stars. The UBV filters are
@@ -261,67 +261,67 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   requests MKIMSETS to sort the extracted data by image name. Note that
   the time of observation field was undefined in the input data sets.
   </p>
-  <pre>
-  	ph&gt; mkimsets *.mag.* "1,2,3" jan10.stdim sort="image"
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkimsets *.mag.* "1,2,3" jan10.stdim sort="image"
   
-  	   ... MKIMSETS constructs the image list and sorts on
-  	       the image name
+     ... MKIMSETS constructs the image list and sorts on
+         the image name
   
-  	   ... MKIMSETS enters the editor and lists the first few
-  	       lines of the intermediate image list file
+     ... MKIMSETS enters the editor and lists the first few
+         lines of the intermediate image list file
   
-  	   im001  1  3.0  1.150 INDEF
-  	   im002  2  2.0  1.150 INDEF
-  	   im003  3  2.0  1.140 INDEF
-  	   im004  1  6.0  1.300 INDEF
-  	   im005  2  4.0  1.300 INDEF
-  	   im006  3  2.0  1.300 INDEF
-  	   im007  1  5.0  1.263 INDEF
-  	   im008  3  1.0  1.270 INDEF
-  	   im009  2  3.0  1.270 INDEF
-  	   im010  1  2.0  1.030 INDEF
-  	   im011  3  10.0  1.030 INDEF
-  	   im012  1  30.0  1.093 INDEF
-  	   im013  2  20.0  1.110 INDEF
-  	   im014  3  10.0  1.110 INDEF
+     im001  1  3.0  1.150 INDEF
+     im002  2  2.0  1.150 INDEF
+     im003  3  2.0  1.140 INDEF
+     im004  1  6.0  1.300 INDEF
+     im005  2  4.0  1.300 INDEF
+     im006  3  2.0  1.300 INDEF
+     im007  1  5.0  1.263 INDEF
+     im008  3  1.0  1.270 INDEF
+     im009  2  3.0  1.270 INDEF
+     im010  1  2.0  1.030 INDEF
+     im011  3  10.0  1.030 INDEF
+     im012  1  30.0  1.093 INDEF
+     im013  2  20.0  1.110 INDEF
+     im014  3  10.0  1.110 INDEF
   
-  	   ... the user notices that standard 4 is missing a B
-  	       observation and that the observations of standard 3
-  	       are out of order and edits the file as follows
+     ... the user notices that standard 4 is missing a B
+         observation and that the observations of standard 3
+         are out of order and edits the file as follows
   
-  	   im001  1  3.0  1.150 INDEF
-  	   im002  2  2.0  1.150 INDEF
-  	   im003  3  2.0  1.140 INDEF
-  	   im004  1  6.0  1.300 INDEF
-  	   im005  2  4.0  1.300 INDEF
-  	   im006  3  2.0  1.300 INDEF
-  	   im007  1  5.0  1.263 INDEF
-  	   im009  2  3.0  1.270 INDEF
-  	   im008  3  1.0  1.270 INDEF
-  	   im010  1  2.0  1.030 INDEF
-  	   INDEF  2  INDEF  INDEF INDEF
-  	   im011  3  10.0  1.030 INDEF
-  	   im012  1  30.0  1.093 INDEF
-  	   im013  2  20.0  1.110 INDEF
-  	   im014  3  10.0  1.110 INDEF
+     im001  1  3.0  1.150 INDEF
+     im002  2  2.0  1.150 INDEF
+     im003  3  2.0  1.140 INDEF
+     im004  1  6.0  1.300 INDEF
+     im005  2  4.0  1.300 INDEF
+     im006  3  2.0  1.300 INDEF
+     im007  1  5.0  1.263 INDEF
+     im009  2  3.0  1.270 INDEF
+     im008  3  1.0  1.270 INDEF
+     im010  1  2.0  1.030 INDEF
+     INDEF  2  INDEF  INDEF INDEF
+     im011  3  10.0  1.030 INDEF
+     im012  1  30.0  1.093 INDEF
+     im013  2  20.0  1.110 INDEF
+     im014  3  10.0  1.110 INDEF
   
-  	   ... the user quits the editor
+     ... the user quits the editor
   
-  	   ... MKIMSETS groups the image list prompting for a
-  	       name for each image set
+     ... MKIMSETS groups the image list prompting for a
+         name for each image set
   
-  	   ... MKIMSETS enters the editor, displays the first few
-  	       lines of the imsets file, and allows the user to
-  	       correct any mistakes
+     ... MKIMSETS enters the editor, displays the first few
+         lines of the imsets file, and allows the user to
+         correct any mistakes
   
-  	   STD1 :    im001  im002  im003
-  	   STD2 :    im004  im005  im006
-  	   STD3 :    im007  im009  im008
-  	   STD4 :    im010  INDEF  im011
-  	   STD5 :    im012  im013  im014
+     STD1 :    im001  im002  im003
+     STD2 :    im004  im005  im006
+     STD3 :    im007  im009  im008
+     STD4 :    im010  INDEF  im011
+     STD5 :    im012  im013  im014
   
-  	   ... quit the editor
-  </pre>
+     ... quit the editor
+  </pre></div>
   <p>
   2. Create the image set file from the list of IRAF images associated with
   the APPHOT databases in example 1.  The images contain the image
@@ -334,87 +334,86 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   aid to the user. It is placed last in the fields parameter because  any
   internal blanks in the title would otherwise confuse the sorting routine.
   </p>
-  <pre>
-  	ph&gt; mkimsets *.imh "1,2,3" jan10.stdim input="images" \<br>
-  	    filter="f1pos" fields="ST,i_title" sort="ST"
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkimsets *.imh "1,2,3" jan10.stdim input="images" \<br>
+      filter="f1pos" fields="ST,i_title" sort="ST"
   
-  	   ... MKIMSETS constructs the image list and sorts on
-  	       the column containing the sidereal time
+     ... MKIMSETS constructs the image list and sorts on
+         the column containing the sidereal time
   
-  	   ... MKIMSETS enters the editor and lists the first
-  	       few lines of the temporary image list file, the sidereal
-  	       time is in column 3 and the image title containing
-  	       some blanks is in column 4
+     ... MKIMSETS enters the editor and lists the first
+         few lines of the temporary image list file, the sidereal
+         time is in column 3 and the image title containing
+         some blanks is in column 4
   
-  	   im001  1  12:30:50.2   STD1 U filter
-  	   im002  2  12:35:40.1   STD1 B
-  	   im003  3  12:40:16.2   STD1 v filter
-  	   im004  1  12:50:50.2   STD2
-  	   im005  2  12:55:40.1   STD2 B
-  	   im006  3  12:59:58.2   STD2 V
-  	   im007  1  13:10:50.2   STD3 U
-  	   im008  3  13:15:40.1   STD3 V
-  	   im009  2  13:20:16.2   STD3 B
-  	   im010  1  13:30:50.2   STD4 u
-  	   im011  3  13:40:40.1   STD4 V
-  	   im012  1  13:50:50.2   STD5 U
-  	   im013  2  13:55:40.1   STD5 B
-  	   im014  3  13:59:58.2   STD5 V
+     im001  1  12:30:50.2   STD1 U filter
+     im002  2  12:35:40.1   STD1 B
+     im003  3  12:40:16.2   STD1 v filter
+     im004  1  12:50:50.2   STD2
+     im005  2  12:55:40.1   STD2 B
+     im006  3  12:59:58.2   STD2 V
+     im007  1  13:10:50.2   STD3 U
+     im008  3  13:15:40.1   STD3 V
+     im009  2  13:20:16.2   STD3 B
+     im010  1  13:30:50.2   STD4 u
+     im011  3  13:40:40.1   STD4 V
+     im012  1  13:50:50.2   STD5 U
+     im013  2  13:55:40.1   STD5 B
+     im014  3  13:59:58.2   STD5 V
   
-  	   ... the user notices that standard 4 is missing a B
-  	       observation and that the observations of standard 3
-  	       are out of order and edits the file as follows
+     ... the user notices that standard 4 is missing a B
+         observation and that the observations of standard 3
+         are out of order and edits the file as follows
   
-  	   im001  1  12:30:50.2   STD1 U filter
-  	   im002  2  12:35:40.1   STD1 B
-  	   im003  3  12:40:16.2   STD1 v filter
-  	   im004  1  12:50:50.2   STD2
-  	   im005  2  12:55:40.1   STD2 B
-  	   im006  3  12:59:58.2   STD2 V
-  	   im007  1  13:10:50.2   STD3 U
-  	   im009  2  13:20:16.2   STD3 B
-  	   im008  3  13:15:40.1   STD3 V
-  	   im010  1  13:30:50.2   STD4 u
-  	   INDEF  2  INDEF        INDEF
-  	   im011  3  13:40:40.1   STD4 V
-  	   im012  1  13:50:50.2   STD5 U
-  	   im013  2  13:55:40.1   STD5 B
-  	   im014  3  13:59:58.2   STD5 V
+     im001  1  12:30:50.2   STD1 U filter
+     im002  2  12:35:40.1   STD1 B
+     im003  3  12:40:16.2   STD1 v filter
+     im004  1  12:50:50.2   STD2
+     im005  2  12:55:40.1   STD2 B
+     im006  3  12:59:58.2   STD2 V
+     im007  1  13:10:50.2   STD3 U
+     im009  2  13:20:16.2   STD3 B
+     im008  3  13:15:40.1   STD3 V
+     im010  1  13:30:50.2   STD4 u
+     INDEF  2  INDEF        INDEF
+     im011  3  13:40:40.1   STD4 V
+     im012  1  13:50:50.2   STD5 U
+     im013  2  13:55:40.1   STD5 B
+     im014  3  13:59:58.2   STD5 V
   
-  	   ... the user quits the editor
+     ... the user quits the editor
   
-  	   ... MKIMSETS groups the edited image list prompting for a
-  	       name for each image set
+     ... MKIMSETS groups the edited image list prompting for a
+         name for each image set
   
-  	   ... MKIMSETS enters the editor, displays the first few
-  	       lines of the image set file and permits the
-  	       user to correct any mistakes
+     ... MKIMSETS enters the editor, displays the first few
+         lines of the image set file and permits the
+         user to correct any mistakes
   
-  	   STD1 :    im001  im002  im003
-  	   STD2 :    im004  im005  im006
-  	   STD3 :    im007  im009  im008
-  	   STD4 :    im010  INDEF  im011
-  	   STD5 :    im012  im013  im014
+     STD1 :    im001  im002  im003
+     STD2 :    im004  im005  im006
+     STD3 :    im007  im009  im008
+     STD4 :    im010  INDEF  im011
+     STD5 :    im012  im013  im014
   
-  	   ... quit the editor
+     ... quit the editor
   
-  	   ... note that MKIMSETS did not save the output image list
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+     ... note that MKIMSETS did not save the output image list
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   images.hselect,ptools.dump,mknobsfile,mkobsfile
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

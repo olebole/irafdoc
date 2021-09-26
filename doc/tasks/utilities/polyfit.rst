@@ -7,14 +7,14 @@ polyfit: Fit polynomial to list of X,Y data
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   polyfit filelist order
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <dl>
   <dt><b><b>filelist</b></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='\fBfilelist\fR' -->
@@ -29,7 +29,7 @@ polyfit: Fit polynomial to list of X,Y data
   <dd>The order of the polynomial fit. (e.g. a parabolic fit has order 2)
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weighting">
   <dt><b>weighting = uniform</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = uniform' -->
   <dd>The type of weighting for the fit. The choices are:
@@ -67,9 +67,9 @@ polyfit: Fit polynomial to list of X,Y data
   X,Y pairs. This is useful as input to <i>graph</i>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A polynomial weighted fit of specified order is fit to the X,Y, SIGMAY data
   triples
@@ -113,17 +113,16 @@ polyfit: Fit polynomial to list of X,Y data
   The routine REGRES from the library of routines written by Bevington is used 
   for the fit; see <b>Data Reduction and Error Analysis</b>, by Bevington.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <p>
-  	cl&gt; polyfit STDIN 2
-  <br>
-  	cl&gt; polyfit datafile 4 verbose+
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; polyfit STDIN 2
+  cl&gt; polyfit datafile 4 verbose+
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The maximum number of data elements is currently limited to 1000
   X,Y,SIGMAY triples.  Also the system must be overdetermined.  That is, the
@@ -134,14 +133,14 @@ polyfit: Fit polynomial to list of X,Y data
   of the machine exponent range can produce overflow and underflow
   arithmetic exceptions.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   curfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

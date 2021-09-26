@@ -7,21 +7,21 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   gauss input output sigma
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be convolved with the elliptical Gaussian function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images. The number of output images must equal the number of
@@ -29,14 +29,14 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   convolved image will replace the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigma">
   <dt><b>sigma</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma' -->
   <dd>The sigma of the Gaussian function in pixels along the direction <i>theta</i>
   of the major axis of the Gaussian function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ratio">
   <dt><b>ratio = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.' -->
   <dd>The ratio of the sigma in the minor axis direction to the sigma in the major
@@ -44,7 +44,7 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   If <i>ratio</i> is 1 the Gaussian function is circular.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_theta">
   <dt><b>theta = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.' -->
   <dd>The position of the major axis of the elliptical Gaussian function.
@@ -52,14 +52,14 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   0 and 180 degrees.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsigma">
   <dt><b>nsigma = 4.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 4.0' -->
   <dd>The distance along the major axis of the Gaussian function at which
   the kernel is truncated in <i>sigma</i> pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bilinear">
   <dt><b>bilinear = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bilinear' Line='bilinear = yes' -->
   <dd>Use the fact that the Gaussian function is separable (bilinear) in x and y if
@@ -68,7 +68,7 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   the major axis of the Gaussian is other than 0, 90 or 180 degrees.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The algorithm used to compute the values of the out of bounds pixels. The
@@ -99,15 +99,15 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The constant for constant-valued boundary extension.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   GAUSS convolves the list of images in <i>input</i> with the
   Gaussian kernel specified by <i>sigma</i>, <i>ratio</i>, <i>theta</i> and
@@ -142,7 +142,7 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   The Gaussian kernel has an elliptical cross-section and Gaussian
   profile and is defined mathematically as follows.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1. Circularly Symmetric Gaussian Function
   
       ratio = 1   theta = 0.0   N = normalization factor
@@ -159,7 +159,7 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   
       C = sin (theta) ** 2 / sigmax ** 2 + cos (theta) ** 2 / sigmay ** 2
   
-      z = A * x ** 2 + B * x * y + C * y ** 2 
+      z = A * x ** 2 + B * x * y + C * y ** 2
   
       G = N * exp (-0.5 * z)
   
@@ -173,56 +173,56 @@ gauss: Convolve a list of 1 or 2-D images with an elliptical Gaussian
   
       C = sin (theta) ** 2 / sigmax ** 2 + cos (theta) ** 2 / sigmay ** 2
   
-      z = A * x ** 2 + B * x * y + C * y ** 2 
+      z = A * x ** 2 + B * x * y + C * y ** 2
   
       G = N * exp (-0.5 * z)
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Convolve an image with a circular Gaussian function of sigma 2.0, and
   size 4.0 sigma using nearest neighbor boundary extension and the bilinear
   kernel.
   </p>
-  <p>
-      cl&gt; gauss m83 m83.gau 2.0
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; gauss m83 m83.gau 2.0
+  </pre></div>
   <p>
   2. Do the same convolution using the full 2D kernel.
   </p>
-  <p>
-      cl&gt; gauss m83 m83.gau.2D 2.0 bilinear-
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; gauss m83 m83.gau.2D 2.0 bilinear-
+  </pre></div>
   <p>
   3. Convolve an image with an elliptical Gaussian function whose sigma in the
   major and minor axis direction is 2.0 and 1.5 respectively, and whose position
   angle is 45 degrees, using wrap around boundary extension. In this case the
   full 2D kernel is used by default.
   </p>
-  <p>
-      cl&gt; gauss m84 m84.gau 2.0 ratio=.75 theta=45. bound=wrap
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; gauss m84 m84.gau 2.0 ratio=.75 theta=45. bound=wrap
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   GAUSS requires approximately 30 and 8 cpu seconds to
   convolve a 512 square real image with circularly symmetric Gaussian function
   of sigma 2 pixels, using the full 2D kernel and the bilinear
   kernel respectively, on a Sparc Station 1.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   convolve, gradient, laplace, boxcar
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

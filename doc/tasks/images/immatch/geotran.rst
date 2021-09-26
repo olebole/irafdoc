@@ -7,21 +7,21 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   geotran input output database transforms
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be transformed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images. If the output image name is the same as the input
@@ -30,7 +30,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>The name of the text file containing the coordinate transformation (generally
@@ -44,7 +44,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_transforms">
   <dt><b>transforms</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms' -->
   <dd>The list of record name(s) in the file <i>database</i> containing the
@@ -57,7 +57,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   requested if database is not equal to the null string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_geometry">
   <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometric transformation. The geometry parameter is
@@ -76,7 +76,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmin">
   <dt><b>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>The minimum and maximum x and y reference values of the output image.
@@ -85,7 +85,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   GEOMAP and may be less than but may not exceed those values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xscale">
   <dt><b>xscale = 1.0, yscale = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xscale' Line='xscale = 1.0, yscale = 1.0' -->
   <dd>The output picture x and y scales in units of
@@ -99,7 +99,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   Xscale and yscale override the values of ncols and nlines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = INDEF, nlines = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = INDEF, nlines = INDEF' -->
   <dd>The number of columns and lines in the output image. Ncols and nlines default
@@ -107,7 +107,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   are overridden.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xsample">
   <dt><b>xsample = 1.0, ysample = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xsample' Line='xsample = 1.0, ysample = 1.0' -->
   <dd>The coordinate surface subsampling factor. The coordinate surfaces are
@@ -118,7 +118,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   value is strongly recommended.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolant">
   <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The interpolant used for rebinning the image.
@@ -191,7 +191,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The choices are:
@@ -221,20 +221,20 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0' -->
   <dd>The value of the constant for boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fluxconserve">
   <dt><b>fluxconserve = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes' -->
   <dd>Preserve the total image flux. The output pixel values are multiplied by
   the Jacobian of the coordinate transformation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xin">
   <dt><b>xin = INDEF, yin = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xin' Line='xin = INDEF, yin = INDEF' -->
   <dd>The x and y coordinates in pixel units in the input image which will map to
@@ -242,7 +242,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   numbers default to the center of the input image. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xout">
   <dt><b>xout = INDEF, yout = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xout' Line='xout = INDEF, yout = INDEF' -->
   <dd>The x and y reference coordinates in the output image which correspond
@@ -250,14 +250,14 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   yout default to the center of the output image reference coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xshift">
   <dt><b>xshift = INDEF, yshift = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift = INDEF, yshift = INDEF' -->
   <dd>The shift of the input origin in pixels. If the database file is undefined
   then xshift and yshift determine the shift of xin, yin.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = INDEF, ymag = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF' -->
   <dd>The scale factors of the coordinate transformation in units of input pixels
@@ -267,7 +267,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   the values found by GEOMAP.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xrotation">
   <dt><b>xrotation = INDEF, yrotation = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF' -->
   <dd>The rotation angles in degrees of the coordinate transformation.
@@ -279,7 +279,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   found by GEOMAP.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxblock">
   <dt><b>nxblock = 512, nyblock = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512' -->
   <dd>If the size of the output image is less than nxblock by nyblock then
@@ -287,15 +287,15 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   is computed in blocks of nxblock by nxblock pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about the progress of the task ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   GEOTRAN corrects an image for geometric distortion using the coordinate
   transformation determined by GEOMAP. The transformation is stored as the
@@ -317,19 +317,19 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   and may not exceed those values.
   The scale and size of the output picture is determined as follows.
   </p>
-  <pre>
-  	ncols = ncols (inimage)
-  	if (xscale == INDEF)
-  	    xscale = (xmax - xmin ) / (ncols - 1)
-  	else
-  	    ncols = (xmax - xmin) / xscale + 1
+  <div class="highlight-default-notranslate"><pre>
+  ncols = ncols (inimage)
+  if (xscale == INDEF)
+      xscale = (xmax - xmin ) / (ncols - 1)
+  else
+      ncols = (xmax - xmin) / xscale + 1
   
-  	nlines = nlines (inimage)
-  	if (yscale == INDEF)
-  	    yscale = (ymax - ymin ) / (nlines - 1)
-  	else
-  	    nlines = (ymax - ymin) / yscale + 1
-  </pre>
+  nlines = nlines (inimage)
+  if (yscale == INDEF)
+      yscale = (ymax - ymin ) / (nlines - 1)
+  else
+      nlines = (ymax - ymin) / yscale + 1
+  </pre></div>
   <p>
   The output image gray levels are determined by interpolating in the input
   image at the positions of the transformed output pixels. If the
@@ -364,17 +364,17 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   for the higher order distortion corrections that GEOTRAN is capable of
   performing.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   It requires approximately 70 and 290 cpu seconds to correct a 512 by 512
   square image for geometric distortion using a low order coordinate surface
   and bilinear and biquintic interpolation respectively (Vax 11/750 fpa).
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Register two images by transforming the coordinate system of the input
   image to the coordinate system of the reference image. The size of the
@@ -383,64 +383,64 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   in the task GEOMAP. The file <span style="font-family: monospace;">"database"</span> containing the record <span style="font-family: monospace;">"m51.coo"</span>
   was produced by GEOMAP.
   </p>
-  <pre>
-     cl&gt; geomap m51.coo database 1.0 512.0 1.0 512.0
-     cl&gt; geotran m51 m51.tran database m51.coo
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; geomap m51.coo database 1.0 512.0 1.0 512.0
+  cl&gt; geotran m51 m51.tran database m51.coo
+  </pre></div>
   <p>
   2. Repeat the above command but set the output image scale to 2.0 reference
   images pixels per output image pixel.
   </p>
-  <pre>
-     cl&gt; geomap m51.coo database 1.0 512.0 1.0 512.0
-     cl&gt; geotran m51 m51.tran database m51.coo xscale=2.0 yscale=2.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; geomap m51.coo database 1.0 512.0 1.0 512.0
+  cl&gt; geotran m51 m51.tran database m51.coo xscale=2.0 yscale=2.0
+  </pre></div>
   <p>
   3. Repeat the previous command using an output scale of
   2 reference units per pixel and bicubic spline interpolation with no
   flux correction. 
   </p>
-  <pre>
-     cl&gt; geomap m51.coo database 1.0 512.0 1.0 512.0
-     cl&gt; geotran m51 m51.tran database m51.coo xscale=2. yscale=2. \<br>
-     &gt;&gt;&gt; inter=spline3 flux-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; geomap m51.coo database 1.0 512.0 1.0 512.0
+  cl&gt; geotran m51 m51.tran database m51.coo xscale=2. yscale=2. \<br>
+  &gt;&gt;&gt; inter=spline3 flux-
+  </pre></div>
   <p>
   4. Register a list of 512 by 512 pixel square images using the set of
   transforms computed by GEOMAP. The input images, output images, and coordinate
   lists / transforms are listed in the files inlist, outlist and reclist
   respectively.
   </p>
-  <pre>
-     cl&gt; geomap @reclist database 1. 512. 1. 512.
-     cl&gt; geotran @inlist @outlist database @reclist
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; geomap @reclist database 1. 512. 1. 512.
+  cl&gt; geotran @inlist @outlist database @reclist
+  </pre></div>
   <p>
   5. Mosaic 3 512 square images into a larger 512 by 1536 square images after
   applying a shift to each input image.
   </p>
-  <pre>
-      cl&gt; geotran image1 outimage[1:512,1:512] "" ncols=512 nlines=1536 \<br>
-  	xshift=5.0 yshift=5.0
-      cl&gt; geotran image2 outimage[1:512,513:1024] "" xshift=10.0 yshift=10.0
-      cl&gt; geotran image3 outimage[1:512,1025:1536] "" xshift=15.0 yshift=15.0
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; geotran image1 outimage[1:512,1:512] "" ncols=512 nlines=1536 \<br>
+      xshift=5.0 yshift=5.0
+  cl&gt; geotran image2 outimage[1:512,513:1024] "" xshift=10.0 yshift=10.0
+  cl&gt; geotran image3 outimage[1:512,1025:1536] "" xshift=15.0 yshift=15.0
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Support does not yet exist in the IRAF world coordinate system interface
   for the higher order distortion corrections that GEOTRAN is capable of
   performing.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imshift, magnify, rotate, imlintran, geomap, geoxytran, gregister
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'TIMINGS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

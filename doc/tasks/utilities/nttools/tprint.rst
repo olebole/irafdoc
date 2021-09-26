@@ -7,14 +7,14 @@ tprint: Print tables--both headers and data.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tprint table
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task is similar to the 'tdump' task in that it takes an STSDAS
   table and produces a file in ASCII format;
@@ -44,10 +44,10 @@ tprint: Print tables--both headers and data.
   <p>
   The output will be printed to the standard output.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
   <dd>The file names of tables to be printed.
@@ -286,48 +286,48 @@ tprint: Print tables--both headers and data.
   (i.e. whether the columns contain arrays).
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Print all tables in the default directory.
   </p>
-  <pre>
-  	tt&gt; tprint *.tab
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tprint *.tab
+  </pre></div>
   <p>
   2.  Print 'junk.tab', but rearrange the columns.
   </p>
-  <pre>
-  	tt&gt; tlcol junk nlist=1 &gt;colnames.lis
-  	tt&gt; edit colnames.lis
-          (Rearrange the column names and perhaps delete some of them.)
-  	tt&gt; tprint junk columns=@colnames.lis
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tlcol junk nlist=1 &gt;colnames.lis
+  tt&gt; edit colnames.lis
+  (Rearrange the column names and perhaps delete some of them.)
+  tt&gt; tprint junk columns=@colnames.lis
+  </pre></div>
   <p>
   3.  After using the 'tinfo' task to find that 'big.tab' has 100000 rows,
   print the first five and last five rows.
   </p>
-  <pre>
-  	tt&gt; tprint big rows="1-5,99996-"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tprint big rows="1-5,99996-"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tdump, ranges
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

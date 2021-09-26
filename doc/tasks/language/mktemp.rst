@@ -7,33 +7,33 @@ mktemp: Make a temporary (unique) file name
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mktemp root
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_root">
   <dt><b>root</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='root' Line='root' -->
   <dd><br>
   The root (prefix) for the generated filename.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Mktemp</i> returns a unique filename string which may be used to create
   a temporary file name.  The string is the concatenation of three elements: the
   input argument, the process id, and a final character which changes on
   each call.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a unique filename with the root <span style="font-family: monospace;">"sav"</span> in the logical
   directory <span style="font-family: monospace;">"tmp"</span>.
@@ -41,9 +41,9 @@ mktemp: Make a temporary (unique) file name
   <p>
   	savefile = mktemp (<span style="font-family: monospace;">"tmp$sav"</span>)
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Since some time may elapse between the creation of the filename and the
   creation of a file with that name, there is no guarantee that the name
@@ -51,7 +51,7 @@ mktemp: Make a temporary (unique) file name
   to generate the name makes filename collisions unlikely.
   </p>
   
-  <!-- EndSection:    'BUGS' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

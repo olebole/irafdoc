@@ -7,21 +7,21 @@ flatdiv: Divide spectra by flat field
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   flatdiv input records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The root file name for the input records to be divided.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra to be included in the divide operation.
@@ -29,14 +29,14 @@ flatdiv: Divide spectra by flat field
   image file name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>New spectra are created by the flatdiv operation. This parameter
   specifies the root name to be used for the created spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_start_rec">
   <dt><b>start_rec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec' -->
   <dd>Each new spectrum created as <span style="font-family: monospace;">"output"</span> has its root name and a 
@@ -47,7 +47,7 @@ flatdiv: Divide spectra by flat field
   output record number is still incremented.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flat_file">
   <dt><b>flat_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat_file' Line='flat_file' -->
   <dd>The root name for the sensitivity spectra as produced by FLATFIT.
@@ -56,7 +56,7 @@ flatdiv: Divide spectra by flat field
   <span style="font-family: monospace;">"flat_file"</span> as the file name root and the aperture number appended.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coincor">
   <dt><b>coincor = )_.coincor</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coincor' Line='coincor = )_.coincor' -->
   <dd>If set to yes, coincidence correction is applied to the data during
@@ -83,9 +83,9 @@ flatdiv: Divide spectra by flat field
   </dl>
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The input spectra are divided by the flat fields which are
   represented by spectra produced by FLATFIT.
@@ -107,48 +107,48 @@ flatdiv: Divide spectra by flat field
   in-place division is desired that the input and output names remain
   matched.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following example divides a series of spectra to produce 20 new
   spectra having names nite1.1221 ... nite1.1240.
   </p>
-  <p>
-  	cl&gt; flatdiv nite1 1201-1220 nite1 1221
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flatdiv nite1 1201-1220 nite1 1221
+  </pre></div>
   <p>
   The same spectra as above are simultaneously corrected for
   coincidence losses.
   </p>
-  <p>
-  	cl&gt; flatdiv nite1 1201-1220 nite1 1221 coincor=yes
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flatdiv nite1 1201-1220 nite1 1221 coincor=yes
+  </pre></div>
   <p>
   The flattened spectra replace the unflattened spectra.
   </p>
-  <p>
-  	cl&gt; flatdiv nite1 1201-1220 nite1 1201
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flatdiv nite1 1201-1220 nite1 1201
+  </pre></div>
   <p>
   Note that the input record numbers must be contiguous and the starting
   output record number must be the same as the first input record number.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   Approximately 1 second is required to correct a spectrum of length
   1024 points.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   coincor, flatfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

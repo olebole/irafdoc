@@ -7,8 +7,8 @@ flatfields: Discussion of CCD flat field calibrations
 
 .. raw:: html
 
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This topic describes the different types of CCD flat fields and
   the tasks available in the <b>ccdred</b> and spectroscopy packages for
@@ -27,9 +27,9 @@ flatfields: Discussion of CCD flat field calibrations
   the flat field calibrations to the observations using <b>ccdproc</b> is
   the same in all cases, however.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_1__direct_imaging">
   <h3>1. direct imaging</h3>
-  <!-- BeginSection: '1. Direct Imaging' -->
   <p>
   The starting point for determining the flat field calibration is an
   observation of something which should have uniform response at all
@@ -103,9 +103,9 @@ flatfields: Discussion of CCD flat field calibrations
   With this introduction turn to the individual documentation for these
   four tasks for further details.
   </p>
-  <!-- EndSection:   '1. Direct Imaging' -->
+  </section>
+  <section id="s_2__scan_mode">
   <h3>2. scan mode</h3>
-  <!-- BeginSection: '2. Scan Mode' -->
   <p>
   There are two types of scan modes supported by the <b>ccdred</b>
   package; <i>shortscan</i> and <i>longscan</i> (see <b>ccdproc</b> for
@@ -136,9 +136,9 @@ flatfields: Discussion of CCD flat field calibrations
   one or more blank sky observations or an unscanned lamp observation.  Other
   corrections are not generally used.
   </p>
-  <!-- EndSection:   '2. Scan Mode' -->
+  </section>
+  <section id="s_3__spectroscopy">
   <h3>3. spectroscopy</h3>
-  <!-- BeginSection: '3. Spectroscopy' -->
   <p>
   Spectroscopic flat fields differ from direct imaging in that the
   spectrum of the sky or lamp and transmission variations with wavelength
@@ -193,15 +193,15 @@ flatfields: Discussion of CCD flat field calibrations
   is used.  Note also that the sky observations must be explicitly
   processed through the flat field stage before computing the iillumination.
   </p>
-  <!-- EndSection:   '3. Spectroscopy' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ccdproc, guide, mkillumcor, mkillumflat, mkskycor, mkskyflat
   apextract.apnormalize, longslit.response, longslit.iillumination
-  </pre>
+  </pre></div>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DESCRIPTION' '1. Direct Imaging' '2. Scan Mode' '3. Spectroscopy' 'SEE ALSO'  -->
   

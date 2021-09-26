@@ -7,35 +7,35 @@ findgain: Estimate the gain and readnoise of a CCD
 
 .. raw:: html
 
+  <section id="s_synopsis">
   <h3>Synopsis</h3>
-  <!-- BeginSection: 'SYNOPSIS' -->
   <p>
   FINDGAIN uses Janesick's method for determining the gain and read noise
   in a CCD from a pair of dome flat exposures and a pair of zero frame
   exposures (zero length dark exposures).
   </p>
-  <!-- EndSection:   'SYNOPSIS' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   findgain flat1 flat2 zero1 zero2
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_flat1">
   <dt><b>flat1, flat2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat1' Line='flat1, flat2' -->
   <dd>First and second dome flats.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zero1">
   <dt><b>zero1, zero2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero1' Line='zero1, zero2' -->
   <dd>First and second zero frames (zero length dark exposures).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_section">
   <dt><b>section = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = ""' -->
   <dd>The selected image section for the statistics.  This should be chosen
@@ -44,7 +44,7 @@ findgain: Estimate the gain and readnoise of a CCD
   over this section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_center">
   <dt><b>center = <span style="font-family: monospace;">"mean"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = "mean"' -->
   <dd>The statistical measure of central tendency that is used to estimate
@@ -53,14 +53,14 @@ findgain: Estimate the gain and readnoise of a CCD
   algorithm as the IMSTATISTICS task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nclip">
   <dt><b>nclip = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nclip' Line='nclip = 3' -->
   <dd>Number of sigma clipping iterations.  If the value is zero then no clipping
   is performed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 4, usigma = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 4, usigma = 4' -->
   <dd>Lower and upper sigma clipping factors used with the mean value and
@@ -72,7 +72,7 @@ findgain: Estimate the gain and readnoise of a CCD
   estimates will be affected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_binwidth">
   <dt><b>binwidth = 0.1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = 0.1' -->
   <dd>The bin width of the histogram (in sigma) that is used to estimate the
@@ -80,15 +80,15 @@ findgain: Estimate the gain and readnoise of a CCD
   The default case of center=<b>mean</b> does not use this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Verbose output?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   FINDGAIN uses Janesick's method for determining the gain and read noise
   in a CCD from a pair of dome flat exposures and a pair of zero frame
@@ -107,22 +107,22 @@ findgain: Estimate the gain and readnoise of a CCD
   unmasked bad pixels.  This means that clipping factors should be
   symmetric and should have values four or more sigma from the mean.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_algorithm">
   <h3>Algorithm</h3>
-  <!-- BeginSection: 'ALGORITHM' -->
   <p>
   The formulae used by the task are:
   </p>
-  <pre>
-      flatdif = flat1 - flat2
+  <div class="highlight-default-notranslate"><pre>
+   flatdif = flat1 - flat2
   
-      zerodif = zero1 - zero2
+   zerodif = zero1 - zero2
   
-         gain = ((mean(flat1) + mean(flat2)) - (mean(zero1) + mean(zero2))) /
-  	      ((sigma(flatdif))**2 - (sigma(zerodif))**2 )
+      gain = ((mean(flat1) + mean(flat2)) - (mean(zero1) + mean(zero2))) /
+             ((sigma(flatdif))**2 - (sigma(zerodif))**2 )
   
-     readnoise = gain * sigma(zerodif) / sqrt(2)
-  </pre>
+  readnoise = gain * sigma(zerodif) / sqrt(2)
+  </pre></div>
   <p>
   where the gain is given in electrons per ADU and the readnoise in
   electrons.  Pairs of each type of comparison frame are used to reduce
@@ -132,9 +132,9 @@ findgain: Estimate the gain and readnoise of a CCD
   (sigma**2) is related to the exposure level and read-noise variance
   (sigma(readout)**2) as follows:
   </p>
-  <pre>
-       variance(e) = N(e) + variance(readout)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  variance(e) = N(e) + variance(readout)
+  </pre></div>
   <p>
   Where N(e) is the number of electrons (above the zero level) in a
   given duration exposure.
@@ -148,23 +148,23 @@ findgain: Estimate the gain and readnoise of a CCD
   histogram that is used in the calculation.  <b>Findgain</b> uses the
   <b>imstatistics</b> task to compute the statistics.
   </p>
-  <!-- EndSection:   'ALGORITHM' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   To calculate the gain and readnoise within a 100x100 section:
   </p>
-  <pre>
-      ms&gt; findgain flat1 flat2 zero1 zero2 section="[271:370,361:460]"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ms&gt; findgain flat1 flat2 zero1 zero2 section="[271:370,361:460]"
+  </pre></div>
   <p>
   To calculate the gain and readnoise using the mode to estimate the data
   level for each image section:
   </p>
-  <pre>
-      ms&gt; findgain.section="[271:370,361:460]"
-      ms&gt; findgain flat1 flat2 zero1 zero2 center=mode
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ms&gt; findgain.section="[271:370,361:460]"
+  ms&gt; findgain flat1 flat2 zero1 zero2 center=mode
+  </pre></div>
   <p>
   The effects of cosmic rays can be seen in the following example using
   artificial noise created with the <b>artdata.mknoise</b> package.  The
@@ -173,29 +173,29 @@ findgain: Estimate the gain and readnoise of a CCD
   flat field images have means of 1000.  The first execution uses the default
   clipping and the second turns off the clipping.
   </p>
-  <pre>
-      cl&gt; findgain flat1 flat2 zero1 zero2
-      FINDGAIN:
-        center = mean, binwidth = 0.1
-        nclip = 3, lclip = 4., uclip = 4.
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; findgain flat1 flat2 zero1 zero2
+  FINDGAIN:
+    center = mean, binwidth = 0.1
+    nclip = 3, lclip = 4., uclip = 4.
   
-        Flats      = flat1 &amp;  flat2
-        Zeros      = zero1 &amp;  zero2
-        Gain       =  5.01 electrons per ADU
-        Read noise = 10.00 electrons
-      cl&gt; findgain flat1 flat2 zero1 zero2 nclip=0
-      FINDGAIN:
-        center = mean, binwidth = 0.1
-        nclip = 0, lclip = 4., uclip = 4.
+    Flats      = flat1 &amp;  flat2
+    Zeros      = zero1 &amp;  zero2
+    Gain       =  5.01 electrons per ADU
+    Read noise = 10.00 electrons
+  cl&gt; findgain flat1 flat2 zero1 zero2 nclip=0
+  FINDGAIN:
+    center = mean, binwidth = 0.1
+    nclip = 0, lclip = 4., uclip = 4.
   
-        Flats      = flat1  &amp;  flat2
-        Zeros      = zero1  &amp;  zero2
-        Gain       =  2.86 electrons per ADU
-        Read noise = 189.5 electrons
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+    Flats      = flat1  &amp;  flat2
+    Zeros      = zero1  &amp;  zero2
+    Gain       =  2.86 electrons per ADU
+    Read noise = 189.5 electrons
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The image headers are not checked to see if the frames have been
   processed.
@@ -204,24 +204,24 @@ findgain: Estimate the gain and readnoise of a CCD
   There is no provision for finding the <span style="font-family: monospace;">"best"</span> values and their errors
   from several flats and zeros.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_FINDGAIN">
   <dt><b>FINDGAIN - V2.12</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FINDGAIN' Line='FINDGAIN - V2.12' -->
   <dd>New task derived from MSCFINDGAIN.  This makes use of the new clipping
   feature in IMSTATISTICS.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imstatistics
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHM' 'EXAMPLES' 'BUGS' 'REVISIONS' 'SEE ALSO'  -->
   

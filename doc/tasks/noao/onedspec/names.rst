@@ -7,21 +7,21 @@ names: Generate a list of image names from a string
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   names input records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The root file name for the input records to be calibrated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra to be included in the calibration operation.
@@ -29,7 +29,7 @@ names: Generate a list of image names from a string
   image file name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = ""' -->
   <dd>If not a null string, this character string will be appended to
@@ -37,7 +37,7 @@ names: Generate a list of image names from a string
   image sections.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_check">
   <dt><b>check = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='check' Line='check = no' -->
   <dd>If set to yes, a check is made that each name implied by the range
@@ -46,9 +46,9 @@ names: Generate a list of image names from a string
   even if no image exists.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A sequence of image names is generated from the input root file name
   and the range description by appending the possible range values to
@@ -62,35 +62,35 @@ names: Generate a list of image names from a string
   The generated image names are written to STDOUT, but may be redirected
   to a file for further use.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following will generate names of the form nite1.0001, nite1.0002 ...
   nite1.0010 and place the list in the file nite1.lst.
   </p>
-  <pre>
-  	cl&gt; names nite1 1-10 &gt;nite1.lst
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; names nite1 1-10 &gt;nite1.lst
+  </pre></div>
   <p>
   The next example uses the append option to specify that only the
   first 512 pixels of each image (spectrum) are to used in the image name.
   </p>
-  <pre>
-  	cl&gt; names nite1 1-10 append="[1:512]" &gt;nite1.lst
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; names nite1 1-10 append="[1:512]" &gt;nite1.lst
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_NAMES">
   <dt><b>NAMES V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='NAMES' Line='NAMES V2.10' -->
   <dd>This task is unchanged.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The append option is only useful for adding image sections since it is
   added after the ONEDSPEC name is generated.  Appending other strings
@@ -98,7 +98,7 @@ names: Generate a list of image names from a string
   the package.
   </p>
   
-  <!-- EndSection:    'BUGS' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS'  -->
   

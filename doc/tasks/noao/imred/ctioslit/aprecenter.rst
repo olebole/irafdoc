@@ -7,21 +7,21 @@ aprecenter: Recenter apertures
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   aprecenter input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images in which apertures are to be recentered.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
@@ -33,7 +33,7 @@ aprecenter: Recenter apertures
   for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_references">
   <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
@@ -46,7 +46,7 @@ aprecenter: Recenter apertures
   and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Run this task interactively?  If the task is not run interactively then
@@ -54,7 +54,7 @@ aprecenter: Recenter apertures
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = yes' -->
   <dd>Find the spectra and define apertures automatically?  In order for
@@ -62,25 +62,25 @@ aprecenter: Recenter apertures
   input image or reference image defined in the database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes' -->
   <dd>Recenter the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_resize">
   <dt><b>resize = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no' -->
   <dd>Resize the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF' -->
   <dd>The dispersion line (line or column perpendicular to the dispersion axis) to
@@ -88,7 +88,7 @@ aprecenter: Recenter apertures
   image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 1' -->
   <dd>Number of dispersion lines to be summed or medianed.  The lines are taken
@@ -96,13 +96,13 @@ aprecenter: Recenter apertures
   and a negative values selects a median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aprecenter">
   <dt><b>aprecenter = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aprecenter' Line='aprecenter = ""' -->
   <dd>List of apertures to be used in shift calculation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_npeaks">
   <dt><b>npeaks = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='npeaks' Line='npeaks = INDEF' -->
   <dd>Select the specified number of apertures with the highest peak values
@@ -111,7 +111,7 @@ aprecenter: Recenter apertures
   of total number of apertures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shift">
   <dt><b>shift = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = yes' -->
   <dd>Use the median shift from recentering the selected apertures to apply to
@@ -120,9 +120,9 @@ aprecenter: Recenter apertures
   of apertures.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_additional_parameters">
   <h3>Additional parameters</h3>
-  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
   <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters are taken from the
@@ -134,9 +134,9 @@ aprecenter: Recenter apertures
   When this operation is performed from the task <b>apall</b> all parameters
   except the package parameters are included in that task.
   </p>
-  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   For each image in the input image list, the aperture center positions
   are redefined by centering at the specified dispersion line using the
@@ -188,16 +188,16 @@ aprecenter: Recenter apertures
   The aperture recentering algorithm may be selected from nearly every task
   in the package.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <p>
-  	cl&gt; aprecenter newimage reference=flat
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; aprecenter newimage reference=flat
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_APRECENTER">
   <dt><b>APRECENTER V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APRECENTER' Line='APRECENTER V2.11' -->
   <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
@@ -206,14 +206,14 @@ aprecenter: Recenter apertures
   parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   center1d, ranges, apfind, apresize, apedit, apall
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

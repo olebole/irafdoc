@@ -7,21 +7,21 @@ disptrans: Transform dispersion units and apply air correction
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   disptrans input output units
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of dispersion calibrated input spectra to be dispersion transformed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output dispersion transformed spectra.  If given the input names
@@ -29,14 +29,14 @@ disptrans: Transform dispersion units and apply air correction
   output spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_units">
   <dt><b>units</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units' -->
   <dd>Output dispersion units.  A wide range of dispersion units may be
   specified and they are described in the UNITS section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_error">
   <dt><b>error = 0.01</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='error' Line='error = 0.01' -->
   <dd>Maximum error allowed in the output dispersion transformation expressed
@@ -47,7 +47,7 @@ disptrans: Transform dispersion units and apply air correction
   function used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_linearize">
   <dt><b>linearize = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='linearize' Line='linearize = no' -->
   <dd>Resample the spectrum data to linear increments in the output dispersion
@@ -57,13 +57,13 @@ disptrans: Transform dispersion units and apply air correction
   of the output dispersion units.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print a log of each spectrum transformed to the standard output?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_air">
   <dt><b>air = <span style="font-family: monospace;">"none"</span> (none|air2vac|vac2air)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='air' Line='air = "none" (none|air2vac|vac2air)' -->
   <dd>Apply an air to vacuum or vacuum to air conversion?  It is the
@@ -74,7 +74,7 @@ disptrans: Transform dispersion units and apply air correction
   to air.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_t">
   <dt><b>t = 15, p = 760, f = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t' Line='t = 15, p = 760, f = 4' -->
   <dd>Temperature t in degrees C, pressure p in mmHg, and water vapour pressure f
@@ -84,23 +84,23 @@ disptrans: Transform dispersion units and apply air correction
   <p>
   OTHER PARAMETERS
   </p>
-  <dl>
+  <dl id="l_interp">
   <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
-  <pre>
-  	nearest - nearest neighbor
-  	 linear - linear
-  	  poly3 - 3rd order polynomial
-  	  poly5 - 5th order polynomial
-  	spline3 - cubic spline
-  	   sinc - sinc function
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nearest - nearest neighbor
+   linear - linear
+    poly3 - 3rd order polynomial
+    poly5 - 5th order polynomial
+  spline3 - cubic spline
+     sinc - sinc function
+  </pre></div>
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The dispersion function in the input spectra, y = f(x) where x is the
   pixel coordinate and y is the input dispersion coordinate, is
@@ -148,9 +148,9 @@ disptrans: Transform dispersion units and apply air correction
   lines lists are in Angstroms.  There are, however, linelists for
   He-Ne-Ar, Th-Ar, and Th in vacuum wavelengths.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_units">
   <h3>Units</h3>
-  <!-- BeginSection: 'UNITS' -->
   <p>
   The dispersion units are specified by strings having a unit type from the
   list below along with the possible preceding modifiers, <span style="font-family: monospace;">"inverse"</span>, to
@@ -161,45 +161,45 @@ disptrans: Transform dispersion units and apply air correction
   recognized standard scientific abbreviations except for those given
   explicitly below.
   </p>
-  <pre>
-  	   angstroms - Wavelength in Angstroms
-  	  nanometers - Wavelength in nanometers
-  	millimicrons - Wavelength in millimicrons
-  	     microns - Wavelength in microns
-  	 millimeters - Wavelength in millimeters
-  	  centimeter - Wavelength in centimeters
-  	      meters - Wavelength in meters
-  	       hertz - Frequency in hertz (cycles per second)
-  	   kilohertz - Frequency in kilohertz
-  	   megahertz - Frequency in megahertz
-  	    gigahertz - Frequency in gigahertz
-  	         m/s - Velocity in meters per second
-  	        km/s - Velocity in kilometers per second
-  	          ev - Energy in electron volts
-  	         kev - Energy in kilo electron volts
-  	         mev - Energy in mega electron volts
+  <div class="highlight-default-notranslate"><pre>
+     angstroms - Wavelength in Angstroms
+    nanometers - Wavelength in nanometers
+  millimicrons - Wavelength in millimicrons
+       microns - Wavelength in microns
+   millimeters - Wavelength in millimeters
+    centimeter - Wavelength in centimeters
+        meters - Wavelength in meters
+         hertz - Frequency in hertz (cycles per second)
+     kilohertz - Frequency in kilohertz
+     megahertz - Frequency in megahertz
+      gigahertz - Frequency in gigahertz
+           m/s - Velocity in meters per second
+          km/s - Velocity in kilometers per second
+            ev - Energy in electron volts
+           kev - Energy in kilo electron volts
+           mev - Energy in mega electron volts
   
-  	          nm - Wavelength in nanometers
-  	          mm - Wavelength in millimeters
-  	          cm - Wavelength in centimeters
-  	           m - Wavelength in meters
-  	          Hz - Frequency in hertz (cycles per second)
-  	         KHz - Frequency in kilohertz
-  	         MHz - Frequency in megahertz
-  	         GHz - Frequency in gigahertz
-  		  wn - Wave number (inverse centimeters)
-  </pre>
+            nm - Wavelength in nanometers
+            mm - Wavelength in millimeters
+            cm - Wavelength in centimeters
+             m - Wavelength in meters
+            Hz - Frequency in hertz (cycles per second)
+           KHz - Frequency in kilohertz
+           MHz - Frequency in megahertz
+           GHz - Frequency in gigahertz
+            wn - Wave number (inverse centimeters)
+  </pre></div>
   <p>
   The velocity units require a trailing value and unit defining the
   velocity zero point.  For example to transform to velocity relative to
   a wavelength of 1 micron the unit string would be:
   </p>
-  <pre>
-  	km/s 1 micron
-  </pre>
-  <!-- EndSection:   'UNITS' -->
+  <div class="highlight-default-notranslate"><pre>
+  km/s 1 micron
+  </pre></div>
+  </section>
+  <section id="s_air_vacuum_conversion">
   <h3>Air/vacuum conversion</h3>
-  <!-- BeginSection: 'AIR/VACUUM CONVERSION' -->
   <p>
   The air to vacuum and vacuum to air conversions are obtained by multiplying
   or dividing by the air index of refraction as computed from the
@@ -207,44 +207,44 @@ disptrans: Transform dispersion units and apply air correction
   These formulas include temperature, pressure, and water vapour terms
   with the default values being the standard ones.
   </p>
-  <!-- EndSection:   'AIR/VACUUM CONVERSION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Convert a spectrum dispersion calibrated in Angstroms to electron
   volts and resample to a linear sampling.
   </p>
-  <pre>
-      cl&gt; disptrans spec1 evspec1 ev linear+
-      evspec1: Dispersion transformed to ev.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; disptrans spec1 evspec1 ev linear+
+  evspec1: Dispersion transformed to ev.
+  </pre></div>
   <p>
   2. Apply an air to vacuum correction to an echelle spectrum using the
   default standard temperature and pressure.  Don't resample but rather use
   a nonlinear dispersion function.
   </p>
-  <pre>
-      cl&gt; disptrans highres.ec vac.ec angs air=air2vac
-      vac.ec: Dispersion transformed to angstroms in vacuum with
-        t = 15. C, p = 760. mmHg, f = 4. mmHg.
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; disptrans highres.ec vac.ec angs air=air2vac
+  vac.ec: Dispersion transformed to angstroms in vacuum with
+    t = 15. C, p = 760. mmHg, f = 4. mmHg.
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_DISPTRANS">
   <dt><b>DISPTRANS V2.10.4</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DISPTRANS' Line='DISPTRANS V2.10.4' -->
   <dd>New task with this release.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   dispcor, identify, scopy, dopcor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'UNITS' 'AIR/VACUUM CONVERSION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ runmed: Running median a list of images at each pixel position
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   runmed input output window
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images.  The list is used in the order provided without
@@ -23,7 +23,7 @@ runmed: Running median a list of images at each pixel position
   be at least three images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images. The number of output images must be the same as
@@ -31,28 +31,28 @@ runmed: Running median a list of images at each pixel position
   output image name the original image is replaced by the filtered image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_window">
   <dt><b>window</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window' -->
   <dd>Number of images for the running window.  This must be at least three, and
   less than or equal to the number of images in the input list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_masks">
   <dt><b>masks = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks = ""' -->
   <dd>List of output masks indicating the number of pixels used in calculating the
   filter value.  If specified the list must match the output list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_inmaskkey">
   <dt><b>inmaskkey = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='inmaskkey' Line='inmaskkey = ""' -->
   <dd>Keyword in the input image containing a maskname for selecting or ignoring
   pixels.  Pixels to be used are selected by zero values in the mask.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outmaskkey">
   <dt><b>outmaskkey = <span style="font-family: monospace;">"HOLES"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outmaskkey' Line='outmaskkey = "HOLES"' -->
   <dd>Keyword in the output image to containing the name of the output mask.
@@ -60,7 +60,7 @@ runmed: Running median a list of images at each pixel position
   keyword is not added or replaced in the output image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtype">
   <dt><b>outtype = <span style="font-family: monospace;">"filter"</span> (filter|difference|ratio)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "filter" (filter|difference|ratio)' -->
   <dd>The type of output values in the images.  The choices are <span style="font-family: monospace;">"filter"</span> for
@@ -69,13 +69,13 @@ runmed: Running median a list of images at each pixel position
   and filter value (input/filter).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exclude">
   <dt><b>exclude = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exclude' Line='exclude = no' -->
   <dd>Exclude the input image from the filter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nclip">
   <dt><b>nclip = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nclip' Line='nclip = 0.' -->
   <dd>This parameter allows clipping high values from the median calculation.
@@ -84,14 +84,14 @@ runmed: Running median a list of images at each pixel position
   after scaling, mask rejections, and image exclusion.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_navg">
   <dt><b>navg = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='navg' Line='navg = 1' -->
   <dd>Number of central values to average.  A value of 1 is used to compute
   the median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|!&lt;keyword&gt;|@&lt;file&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|!&lt;keyword&gt;|@&lt;file&gt;)' -->
   <dd>Scale the images with the specified method.  The choices are
@@ -103,13 +103,13 @@ runmed: Running median a list of images at each pixel position
   The values in a file must be in the same order as the input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_normscale">
   <dt><b>normscale = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='normscale' Line='normscale = yes' -->
   <dd>Normalize the scales to the first image scale?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outscale">
   <dt><b>outscale = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outscale' Line='outscale = yes' -->
   <dd>Scale output images?  If yes the output images will be on the system
@@ -117,13 +117,13 @@ runmed: Running median a list of images at each pixel position
   to match the input levels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blank">
   <dt><b>blank = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0' -->
   <dd>Filter value when all data have been excluded from the calculation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_storetype">
   <dt><b>storetype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='storetype' Line='storetype = "real"' -->
   <dd>Internal storage type which may be <span style="font-family: monospace;">"real"</span> or <span style="font-family: monospace;">"short"</span>.  The short
@@ -131,15 +131,15 @@ runmed: Running median a list of images at each pixel position
   is a problem real storage is recommended.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print progress information to the standard output.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>RUNMED</b> takes a list of input images (<i>input</i>) and produces
   a set of filtered output images (<i>output</i>).  The output images
@@ -270,17 +270,17 @@ runmed: Running median a list of images at each pixel position
   size of the input images being processed and <b>imtile</b>
   can be use to piece the output back together.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imcombine, rskysub, irproc
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

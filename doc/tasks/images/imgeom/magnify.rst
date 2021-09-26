@@ -7,29 +7,29 @@ magnify: Magnify a list of 1-D or 2-D images
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   magnify input output xmag ymag
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of one or two dimensional images to be magnified.  Image sections are
   allowed.  Images with an axis containing only one pixel are not magnified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output image names.  If the output image name is the same as the input
   image name then the magnified image replaces the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag, ymag</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag, ymag' -->
   <dd>The magnification factors for the first and second image dimensions
@@ -39,7 +39,7 @@ magnify: Magnify a list of 1-D or 2-D images
   between -1 and 1 are interpreted as reciprocal magnifications.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x1">
   <dt><b>x1 = INDEF, x2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, x2 = INDEF' -->
   <dd>The starting and ending coordinates in x in the input image which become
@@ -48,7 +48,7 @@ magnify: Magnify a list of 1-D or 2-D images
   in x of the input image; i.e. a value of 1 and nx.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_y1">
   <dt><b>y1 = INDEF, y2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='y1' Line='y1 = INDEF, y2 = INDEF' -->
   <dd>The starting and ending coordinates in y in the input image which become
@@ -57,7 +57,7 @@ magnify: Magnify a list of 1-D or 2-D images
   in y of the input image; i.e. a value of 1 and ny.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dx">
   <dt><b>dx = INDEF, dy = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dx' Line='dx = INDEF, dy = INDEF' -->
   <dd>The intervals between the output pixels in terms of the input image.
@@ -65,7 +65,7 @@ magnify: Magnify a list of 1-D or 2-D images
   override the magnification factors.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolant">
   <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The interpolant used for rebinning the image.
@@ -138,7 +138,7 @@ magnify: Magnify a list of 1-D or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>Boundary extension type for references to pixels outside the bounds of the
@@ -169,28 +169,28 @@ magnify: Magnify a list of 1-D or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>Constant value for constant boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fluxconserve">
   <dt><b>fluxconserve = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes' -->
   <dd>Preserve the total image flux.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = STDOUT</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = STDOUT' -->
   <dd>Log file for recording information about the magnification.  A null
   logfile may be used to turn off log information.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The list of input images are expanded or contracted by interpolation
   to form the output images.  The output image names are specified by the
@@ -232,35 +232,35 @@ magnify: Magnify a list of 1-D or 2-D images
   the boundary extended input image.  Thus, boundary extensions which are
   discontinuous (constant and wrap) may introduce interpolation errors.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To expand an image by a factor of 2.5:
   </p>
-  <p>
-  	cl&gt; magnify imagein imageout 2.5 2.5
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; magnify imagein imageout 2.5 2.5
+  </pre></div>
   <p>
   2. To subsample the lines of an image in steps of 3.5:
   </p>
-  <p>
-  	cl&gt; magnify imagein imageout dx=3.5 dy=1
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; magnify imagein imageout dx=3.5 dy=1
+  </pre></div>
   <p>
   3. To magnify the central part of an image by 2 into a 11 by 31 image:
   </p>
-  <pre>
-  	cl&gt; magnify imagein imageout 2 2 x1=25.3 x2=30.3 \<br>
-  	&gt;&gt;&gt; y1=20 y2=35
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; magnify imagein imageout 2 2 x1=25.3 x2=30.3 \<br>
+  &gt;&gt;&gt; y1=20 y2=35
+  </pre></div>
   <p>
   4. To use a higher order interpolator with wrap around boundary extension:
   </p>
-  <pre>
-  	cl&gt; magnify imagein imageout 2 2 x1=-10 y1=-10 \<br>
-  	&gt;&gt;&gt; interpolation=spline3 boundary=wrap
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; magnify imagein imageout 2 2 x1=-10 y1=-10 \<br>
+  &gt;&gt;&gt; interpolation=spline3 boundary=wrap
+  </pre></div>
   <p>
   It is important to remember that the magnification affects the pixel intervals!
   This means that the number of pixels in an expanded image is not simply
@@ -287,14 +287,14 @@ magnify: Magnify a list of 1-D or 2-D images
   It is important to understand why the output image is 11 by 31 and
   what the pixel coordinates are in terms of the input pixel coordinates.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imshift, blkavg, rotate, imlintran, register, geotran, geomap
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

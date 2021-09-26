@@ -7,27 +7,27 @@ calcomp: Plot metacode on a Calcomp pen plotter
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   calcomp input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Name of input GKI metacode file, file template, or list of files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"calcomp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "calcomp"' -->
   <dd>Name of the destination plotter (as referenced in graphcap).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_generic">
   <dt><b>generic = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
   <dd>Ignore remaining kernel dependent parameters -- if yes, then none of the
@@ -35,27 +35,27 @@ calcomp: Plot metacode on a Calcomp pen plotter
   instance, when using <span style="font-family: monospace;">":.snap calcomp"</span> from cursor mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_debug">
   <dt><b>debug = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no' -->
   <dd>Print decoded graphics instructions during processing -- print each GKI 
   metacode instruction on standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print elements of polylines, etc. in debug mode -- if yes, this is essentially
   all of the information present in the input metacode file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gkiunits">
   <dt><b>gkiunits = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
   <dd>Print coordinates in GKI rather than NDC units if in debug mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xscale">
   <dt><b>xscale = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xscale' Line='xscale = INDEF' -->
   <dd>X scale in device units per GKI unit; e.g. 0.0003 is 3 ten-thousandths of an
@@ -65,13 +65,13 @@ calcomp: Plot metacode on a Calcomp pen plotter
   to override the scale in the metacode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_yscale">
   <dt><b>yscale = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='yscale' Line='yscale = INDEF' -->
   <dd>Y scale in device units per GKI unit -- see xscale.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_txquality">
   <dt><b>txquality = <span style="font-family: monospace;">"normal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='txquality' Line='txquality = "normal"' -->
   <dd>Text quality; <span style="font-family: monospace;">"normal"</span> means use the text quality specified in the metacode
@@ -81,7 +81,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   takes twice as long as <span style="font-family: monospace;">"low"</span> or <span style="font-family: monospace;">"medium"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lwtype">
   <dt><b>lwtype = <span style="font-family: monospace;">"ntracing"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lwtype' Line='lwtype = "ntracing"' -->
   <dd>Type of line and text width implementation.  <span style="font-family: monospace;">"Ntracing"</span> causes the pen plotter
@@ -91,7 +91,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   or text are requested.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ltover">
   <dt><b>ltover = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ltover' Line='ltover = no' -->
   <dd>Line type override, if yes, causes the pen plotter to draw all lines solidly,
@@ -99,7 +99,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   This may be desired for previewing a plot quickly.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lwover">
   <dt><b>lwover = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lwover' Line='lwover = yes' -->
   <dd>Line width override; causes all lines and text to come out with single width
@@ -107,7 +107,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   present in the parent plot, then set lwover = no.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lcover">
   <dt><b>lcover = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lcover' Line='lcover = no' -->
   <dd>Line color override, if yes, causes the pen plotter to ignore any requests in
@@ -115,7 +115,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   sites with Calcomp plotters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dashlen">
   <dt><b>dashlen = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dashlen' Line='dashlen = INDEF' -->
   <dd>Length of the dash in dashed lines in device units, usually inches.  Shorter
@@ -123,7 +123,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   local default from dev$graphcap will be used; a good range is 0.1 to 0.5 inches.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gaplen">
   <dt><b>gaplen = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gaplen' Line='gaplen = INDEF' -->
   <dd>Length of the gap in dashed or dotted lines, in device units.  Longer gaps 
@@ -131,7 +131,7 @@ calcomp: Plot metacode on a Calcomp pen plotter
   default from dev$graphcap will be used.  A good range is 0.05 to 0.2 inches.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plwsep">
   <dt><b>plwsep = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plwsep' Line='plwsep = INDEF' -->
   <dd>Parallel line width separation -- if bold lines are implemented with <span style="font-family: monospace;">"lwtype
@@ -139,9 +139,9 @@ calcomp: Plot metacode on a Calcomp pen plotter
   INDEF, a local default is used from the device table dev$graphcap.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <b>calcomp</b> is an IRAF graphics kernel.  It may be run standalone to
   plot a GKI metacode file, or from cursor mode via <span style="font-family: monospace;">":.snap calcomp"</span>.
@@ -187,45 +187,45 @@ calcomp: Plot metacode on a Calcomp pen plotter
   this reason, all intersection angles less than 5 degrees are treated as
   though they were exactly 5 degrees.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Plot a metacode file exactly as is:
   </p>
-  <p>
-      cl&gt; calcomp metacodefile
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; calcomp metacodefile
+  </pre></div>
   <p>
   2. Get the fastest plot you can -- no bold lines or text, no dashed or dotted
   lines:
   </p>
-  <p>
-      cl&gt; calcomp metacodefile lwover+ ltover+ txquality=low
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; calcomp metacodefile lwover+ ltover+ txquality=low
+  </pre></div>
   <p>
   3. Get a plot half the size of the original; suppose the original plot had
   metacode scales = 0.0003 inches / GKI unit:
   </p>
-  <p>
-      cl&gt; calcomp metacodefile xscale=0.00015 yscale=0.00015
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; calcomp metacodefile xscale=0.00015 yscale=0.00015
+  </pre></div>
   <p>
   4. Get the highest quality plot you can without having to change pens:
   </p>
-  <p>
-      cl&gt; calcomp metacodefile txqual=high 
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; calcomp metacodefile txqual=high
+  </pre></div>
   <p>
   5. Get a high-quality plot where you have to change the pen each time the
   metacode switches from bold to single-width lines or text:
   </p>
-  <p>
-      cl&gt; calcomp metacodefile txqual=high lwtype=penchange
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; calcomp metacodefile txqual=high lwtype=penchange
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   Pen plotters vary considerably in their plotting rates.  At NOAO, plotting a
   metacode file from a 1024-pixel image generated by <b>longplot</b>, overriding
@@ -238,24 +238,24 @@ calcomp: Plot metacode on a Calcomp pen plotter
   plot as single-width lines.  The slowest of all is to produce plots with
   a lot of bold text, or with dashed and dotted AND bold data lines.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   When using multiple tracing to simulate bold lines that intersect at very
   acute angles, i.e. less than 5 degrees, each bold line will thin slightly
   as it approaches the obtuse vertex.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   See task <b>longplot</b>, also in the plot package, for a task designed to
   use the <b>calcomp</b> graphics kernel for exact scaling and/or long, e.g.
   spectral, plots.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

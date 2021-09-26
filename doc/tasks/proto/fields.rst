@@ -7,34 +7,34 @@ fields: Extract specified fields from a list
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   fields files fields
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_files">
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
   <dd>File or files from which the fields are to be extracted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fields">
   <dt><b>fields</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields' -->
   <dd>The fields to be extracted.  
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lines">
   <dt><b>lines = <span style="font-family: monospace;">"1-"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = "1-"' -->
   <dd>The lines from which the fields are to be extracted.  If multiple files are 
   being extracted, the same lines apply to each file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_quit_if_missing">
   <dt><b>quit_if_missing = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='quit_if_missing' Line='quit_if_missing = no' -->
   <dd>This flag determines the task behavior when a field is missing from the
@@ -42,16 +42,16 @@ fields: Extract specified fields from a list
   is reported.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_print_file_names">
   <dt><b>print_file_names = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='print_file_names' Line='print_file_names = no' -->
   <dd>If <b>print_file_name</b> = yes, the first string of each output line of
   extracted fields is the file name.  
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The list processing tool <i>fields</i> is used to extract whitespace
   separated fields from the specified files and lines.
@@ -66,42 +66,40 @@ fields: Extract specified fields from a list
   <i>fields</i> will either continue processing after printing a warning
   message, or call an error and exit.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Reverse the order of the 5 columns in list file <span style="font-family: monospace;">"list"</span>.
   </p>
-  <pre>
-  
-  	cl&gt; fields list 5-1 &gt; newlist
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fields list 5-1 &gt; newlist
+  </pre></div>
   <p>
   2. Extract columns 1 and 3 from file <span style="font-family: monospace;">"newlist"</span> and pipe them to task
   <i>graph</i>.
   </p>
-  <pre>
-  
-  	cl&gt; fields newlist 1,3 | graph
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fields newlist 1,3 | graph
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_FIELDS">
   <dt><b>FIELDS V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FIELDS' Line='FIELDS V2.11' -->
   <dd>The default value for the <i>lines</i> parameter was changed to an open
   upper limit.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   joinlines, xtools.ranges
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

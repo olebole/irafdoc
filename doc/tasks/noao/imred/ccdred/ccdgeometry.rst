@@ -7,8 +7,8 @@ ccdgeometry: Discussion of CCD coordinate/geometry keywords
 
 .. raw:: html
 
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <b>ccdred</b> package maintains and updates certain geometry
   information about the images.  This geometry is described by four image
@@ -17,7 +17,7 @@ ccdgeometry: Discussion of CCD coordinate/geometry keywords
   different in the image header using the image header translation
   feature of the package.
   </p>
-  <dl>
+  <dl id="l_DATASEC">
   <dt><b>DATASEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='DATASEC' Line='DATASEC' -->
   <dd>The section of the image containing the CCD data.  If absent the
@@ -28,7 +28,7 @@ ccdgeometry: Discussion of CCD coordinate/geometry keywords
   not recorded in the image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_CCDSEC">
   <dt><b>CCDSEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='CCDSEC' Line='CCDSEC' -->
   <dd>The section of the CCD to corresponding to the data section.  This
@@ -46,7 +46,7 @@ ccdgeometry: Discussion of CCD coordinate/geometry keywords
   that the first pixel of the data section has CCD coordinate (1,1).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_BIASSEC">
   <dt><b>BIASSEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='BIASSEC' Line='BIASSEC' -->
   <dd>The section of the image containing prescan or overscan bias information.
@@ -59,7 +59,7 @@ ccdgeometry: Discussion of CCD coordinate/geometry keywords
   strip used in the fit then the <i>sample</i> parameter should be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_TRIMSEC">
   <dt><b>TRIMSEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='TRIMSEC' Line='TRIMSEC' -->
   <dd>The section of the image extracted during processing when the trim
@@ -91,7 +91,7 @@ ccdgeometry: Discussion of CCD coordinate/geometry keywords
   respectively and no subsampling is allowed.  This may be added later.
   </p>
   
-  <!-- EndSection:    'DESCRIPTION' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DESCRIPTION'  -->
   

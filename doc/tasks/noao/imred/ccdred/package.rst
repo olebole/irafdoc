@@ -7,15 +7,15 @@ package: CCD image reduction package
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccdred
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_pixeltype">
   <dt><b>pixeltype = <span style="font-family: monospace;">"real real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixeltype' Line='pixeltype = "real real"' -->
   <dd>Output pixel datatype and calculation datatype.  When images are processed
@@ -32,26 +32,26 @@ package: CCD image reduction package
   short and real with a default of real if none is specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print log information to the standard output?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Text log file.  If no filename is specified then no log file is kept.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>Log metacode plot file for the overscan bias vector fits.  If no filename
   is specified then no metacode plot file is kept.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_backup">
   <dt><b>backup = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='backup' Line='backup = ""' -->
   <dd>Backup prefix for backup images.  If no prefix is specified then no backup
@@ -59,41 +59,41 @@ package: CCD image reduction package
   has the specified prefix.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_instrument">
   <dt><b>instrument = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='instrument' Line='instrument = ""' -->
   <dd>CCD instrument translation file.  This is usually set with
   <b>setinstrument</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ssfile">
   <dt><b>ssfile = <span style="font-family: monospace;">"subsets"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ssfile' Line='ssfile = "subsets"' -->
   <dd>Subset translation file used to define the subset identifier.  See
   <b>subsets</b> for more.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Interactive graphics output device when fitting the overscan bias vector.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.  The default is the standard graphics cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_version">
   <dt><b>version = <span style="font-family: monospace;">"June 1987"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "June 1987"' -->
   <dd>Package version.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The CCD reduction package is loaded when this command is entered.  The
   package contains parameters which affect the operation of the tasks it
@@ -143,14 +143,14 @@ package: CCD image reduction package
   image will be <span style="font-family: monospace;">"origccd001"</span>.  The prefix may be a directory but it must
   end with <span style="font-family: monospace;">'/'</span> or <span style="font-family: monospace;">'$'</span> (for logical directories).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccdproc, instruments, setinstrument, subsets
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'SEE ALSO'  -->
   

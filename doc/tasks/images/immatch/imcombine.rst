@@ -7,15 +7,15 @@ imcombine: Combine images pixel-by-pixel using various algorithms
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   imcombine input output
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images to combine.  If the <i>project</i> parameter is <span style="font-family: monospace;">"no"</span>
@@ -32,21 +32,21 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   dimensional image.  For this type of combining there is one output for each
   input and so the following parameters specify matching lists.
   </p>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output combined image(s).  If there are fewer than 100 input images the
   names of the input images are recorded in header keywords IMCMBnnn.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_headers">
   <dt><b>headers = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='headers' Line='headers = "" (optional)' -->
   <dd>Optional output multiextension FITS file(s).  The extensions are dataless
   headers from each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bpmasks">
   <dt><b>bpmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpmasks' Line='bpmasks = "" (optional)' -->
   <dd>Optional output bad pixel mask(s) with good values of 0 and bad values of
@@ -55,7 +55,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   the keyword BPM.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rejmask">
   <dt><b>rejmask = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rejmask' Line='rejmask = "" (optional)' -->
   <dd>Optional output mask file(s) identifying rejected or excluded pixels.  The
@@ -69,14 +69,14 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   pixel coordinate system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nrejmasks">
   <dt><b>nrejmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nrejmasks' Line='nrejmasks = "" (optional)' -->
   <dd>Optional output pixel mask(s) giving the number of input pixels rejected or
   excluded from the input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_expmasks">
   <dt><b>expmasks = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expmasks' Line='expmasks = "" (optional)' -->
   <dd>Optional output exposure mask(s) giving the sum of the exposure values of
@@ -89,7 +89,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigma">
   <dt><b>sigma = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = "" (optional)' -->
   <dd>Optional output sigma image(s).  The sigma is the standard deviation,
@@ -97,7 +97,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   rejected pixels) about the output combined pixel values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imcmb">
   <dt><b>imcmb = <span style="font-family: monospace;">"$I"</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imcmb' Line='imcmb = "$I" (optional)' -->
   <dd>A keyword in the input images that is copied
@@ -110,7 +110,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   not exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"STDOUT"</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT" (optional)' -->
   <dd>Optional output log file.  If no file is specified then no log information is
@@ -118,19 +118,19 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_combine">
   <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median|lmedian|sum|quadrature|nmodel)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|lmedian|sum|quadrature|nmodel)' -->
   <dd>Type of combining operation performed on the final set of pixels (after
   offsetting, masking, thresholding, and rejection).  The choices are:
-  <pre>
-      average - weighted average
-       median - median
-      lmedian - median except use the lower value if only two
-          sum - (weighted) sum
-   quadrature - weighted quadrature average
-       nmodel - weighted quadrature average of noise model values
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+     average - weighted average
+      median - median
+     lmedian - median except use the lower value if only two
+         sum - (weighted) sum
+  quadrature - weighted quadrature average
+      nmodel - weighted quadrature average of noise model values
+  </pre></div>
   The details of each choice is given in the DESCRIPTION.
   Note that if weights are used then the weighted <span style="font-family: monospace;">"sum"</span> is the same as
   the weighted <span style="font-family: monospace;">"average"</span> since the weights are normalized to unit total weight.
@@ -141,24 +141,24 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   pixel sigmas may be computed by the noise model used by this task (nmodel).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reject">
   <dt><b>reject = <span style="font-family: monospace;">"none"</span> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)' -->
   <dd>Type of rejection operation performed on the pixels remaining after offsetting,
   masking and thresholding.  The algorithms are described in the
   DESCRIPTION section.  The rejection choices are:
-  <pre>
-        none - No rejection
-      minmax - Reject the nlow and nhigh pixels
-     ccdclip - Reject pixels using CCD noise parameters
-    crreject - Reject only positive pixels using CCD noise parameters
-     sigclip - Reject pixels using a sigma clipping algorithm
-   avsigclip - Reject pixels using an averaged sigma clipping algorithm
-       pclip - Reject pixels using sigma based on percentiles
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+       none - No rejection
+     minmax - Reject the nlow and nhigh pixels
+    ccdclip - Reject pixels using CCD noise parameters
+   crreject - Reject only positive pixels using CCD noise parameters
+    sigclip - Reject pixels using a sigma clipping algorithm
+  avsigclip - Reject pixels using an averaged sigma clipping algorithm
+      pclip - Reject pixels using sigma based on percentiles
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_project">
   <dt><b>project = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='project' Line='project = no' -->
   <dd>Project (combine) across the highest dimension of the input images?  If
@@ -168,7 +168,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   the highest dimension may have a separate offset.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtype">
   <dt><b>outtype = <span style="font-family: monospace;">"real"</span> (none|short|ushort|integer|long|real|double)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "real" (none|short|ushort|integer|long|real|double)' -->
   <dd>Output image pixel datatype.  The pixel datatypes are <span style="font-family: monospace;">"double"</span>, <span style="font-family: monospace;">"real"</span>,
@@ -179,7 +179,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   The datatypes may be abbreviated to a single character.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outlimits">
   <dt><b>outlimits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outlimits' Line='outlimits = ""' -->
   <dd>Output region limits specified as pairs of whitespace separated values.
@@ -192,7 +192,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   size.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offsets">
   <dt><b>offsets = <span style="font-family: monospace;">"none"</span> (none|wcs|world|physical|grid|&lt;filename&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offsets' Line='offsets = "none" (none|wcs|world|physical|grid|&lt;filename&gt;)' -->
   <dd>Integer offsets to add to each image axes.  The options are:
@@ -221,9 +221,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <dt><b><span style="font-family: monospace;">"grid"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"grid"' -->
   <dd>A uniform grid of offsets is specified by a string of the form
-  <pre>
-  	grid [n1] [s1] [n2] [s2] ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  grid [n1] [s1] [n2] [s2] ...
+  </pre></div>
   where ni is the number of images in dimension i and si is the step
   in dimension i.  For example <span style="font-family: monospace;">"grid 5 100 5 100"</span> specifies a 5x5
   grid with origins offset by 100 pixels.
@@ -239,24 +239,24 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_masktype">
   <dt><b>masktype = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masktype' Line='masktype = "none"' -->
   <dd>Type of pixel masking to use.  The choices are
-  <pre>
-           none - No pixel masking
-      goodvalue - good pixels defined by maskvalue parameter
-       badvalue - bad pixels defined by maskvalue parameter
-        novalue - pixels with no value defined by maskvalue parameter
-       goodbits - good pixels defined by maskvalue parameter
-        badbits - bad pixels defined by maskvalue parameter
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+       none - No pixel masking
+  goodvalue - good pixels defined by maskvalue parameter
+   badvalue - bad pixels defined by maskvalue parameter
+    novalue - pixels with no value defined by maskvalue parameter
+   goodbits - good pixels defined by maskvalue parameter
+    badbits - bad pixels defined by maskvalue parameter
+  </pre></div>
   Except for <span style="font-family: monospace;">"none"</span>, these choices use the mask specified by the header
   keyword BPM.  To use a different keyword to specify the mask the syntax
   is
-  <pre>
-    !&lt;keyword&gt; [goodvalue|badvalue|novalue|goodbits|badbits]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  !&lt;keyword&gt; [goodvalue|badvalue|novalue|goodbits|badbits]
+  </pre></div>
   where if the optional second word is missing the default is <span style="font-family: monospace;">"goodvalue"</span>.
   If <span style="font-family: monospace;">"none"</span> (or <span style="font-family: monospace;">""</span>) no pixel masking is done
   even if an image has an associated  pixel mask.  The masking defines
@@ -277,7 +277,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   bad data was used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maskvalue">
   <dt><b>maskvalue = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maskvalue' Line='maskvalue = 0' -->
   <dd>Mask value used with the <i>masktype</i> parameter.  If the mask type
@@ -286,14 +286,14 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   and 4.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blank">
   <dt><b>blank = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0.' -->
   <dd>Output value to be used when there are no pixels for combining after any
   rejection.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Multiplicative image scaling to be applied.  The choices are none, multiply
@@ -304,7 +304,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   line in the order of the input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zero">
   <dt><b>zero = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = "none" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Additive zero level image shifts to be applied.  The choices are none, add
@@ -315,7 +315,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   values do not allow a correction to the weights.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weight">
   <dt><b>weight = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weight' Line='weight = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Weights to be applied during the final averaging.  The choices are none,
@@ -328,7 +328,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   of the variance in the scaled image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_statsec">
   <dt><b>statsec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""' -->
   <dd>Section of images to use in computing image statistics for scaling and
@@ -354,7 +354,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <p style="text-align:center">Algorithm Parameters
   
   </p>
-  <dl>
+  <dl id="l_lthreshold">
   <dt><b>lthreshold = INDEF, hthreshold = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lthreshold' Line='lthreshold = INDEF, hthreshold = INDEF' -->
   <dd>Low and high thresholds to be applied to the input pixels.  This is done
@@ -362,7 +362,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   are not used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlow">
   <dt><b>nlow = 1,  nhigh = 1 (minmax)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)' -->
   <dd>The number of low and high pixels to be rejected by the <span style="font-family: monospace;">"minmax"</span> algorithm.
@@ -373,7 +373,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   to an integer, is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nkeep">
   <dt><b>nkeep = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nkeep' Line='nkeep = 1' -->
   <dd>The minimum number of pixels to retain or the maximum number to reject
@@ -384,7 +384,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   missing due to non-overlapping offsets, bad pixel masks, or thresholds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mclip">
   <dt><b>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)' -->
   <dd>Use the median as the estimate for the true intensity rather than the
@@ -394,7 +394,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   However, computing the median is slower than the average.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)' -->
   <dd>Low and high sigma clipping factors for the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>, <span style="font-family: monospace;">"sigclip"</span>,
@@ -404,7 +404,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <span style="font-family: monospace;">"crreject"</span> algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rdnoise">
   <dt><b>rdnoise = <span style="font-family: monospace;">"0."</span>, gain = <span style="font-family: monospace;">"1."</span>, snoise = <span style="font-family: monospace;">"0."</span> (ccdclip, crreject)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)' -->
   <dd>Readout noise in electrons, gain in electrons/DN, and sensitivity noise as
@@ -412,16 +412,16 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   algorithms as well as with the <span style="font-family: monospace;">"nmodel"</span> combining option.  The values may
   be either numeric or an image header keyword which contains the value.
   The noise model for a pixel is:
-  <pre>
-      variance in DN = (rdnoise/gain)^2 + DN/gain + (snoise*DN)^2
-      variance in e- = (rdnoise)^2 + (gain*DN) + (snoise*(gain*DN))^2
-  		   = rdnoise^2 + Ne + (snoise * Ne)^2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  variance in DN = (rdnoise/gain)^2 + DN/gain + (snoise*DN)^2
+  variance in e- = (rdnoise)^2 + (gain*DN) + (snoise*(gain*DN))^2
+                 = rdnoise^2 + Ne + (snoise * Ne)^2
+  </pre></div>
   where DN is the data number and Ne is the number of electrons.  Sensitivity
   noise typically comes from noise introduced during flat fielding.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigscale">
   <dt><b>sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigscale' Line='sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)' -->
   <dd>This parameter determines when poisson corrections are made to the
@@ -436,7 +436,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   zero level.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pclip">
   <dt><b>pclip = -0.5 (pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pclip' Line='pclip = -0.5 (pclip)' -->
   <dd>Percentile clipping algorithm parameter.  If greater than
@@ -449,7 +449,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   See the DESCRIPTION section for further details.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.' -->
   <dd>Radius in pixels for additional pixel to be rejected in an image with a
@@ -461,7 +461,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <p style="text-align:center">Environment Variables
   
   </p>
-  <dl>
+  <dl id="l_imcombine_maxmemory">
   <dt><b>imcombine_maxmemory (default = 250000000)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imcombine_maxmemory' Line='imcombine_maxmemory (default = 250000000)' -->
   <dd>This task tries to use the maximum possible memory for efficiency when
@@ -475,7 +475,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   disappear.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imcombine_option">
   <dt><b>imcombine_option (default = 1)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imcombine_option' Line='imcombine_option (default = 1)' -->
   <dd>This environment variable is used to select certain experimental or
@@ -490,9 +490,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   than 2Gb in size.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A set of images or the highest dimension elements (for example
   the planes in an image cube) are combined by weighted averaging, medianing,
@@ -543,17 +543,17 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   An outline of the steps taken by the program is given below and the
   following sections elaborate on the steps.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   o   Check the input images and stack them if needed
   o   Set the input image offsets and the final output image size.
   o   Set the input image scales and weights possibly by computing
       image statistics
   o   Write the log file and optional header output
-  </pre>
+  </pre></div>
   <p>
   For each output image line:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   o   Get input image lines that overlap the output image line
   o   Reject masked pixels
   o   Reject pixels outside the threshold limits
@@ -562,7 +562,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   o   Combine remaining pixels using the weighted average or median
   o   Compute sigmas of remaining pixels about the combined values
   o   Write the output image line and other optional images.
-  </pre>
+  </pre></div>
   <p>
   OPTIONAL OUTPUTS
   </p>
@@ -570,7 +570,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   There are various additional outputs that may be produced by providing
   the filenames.
   </p>
-  <dl>
+  <dl id="l_Headers">
   <dt><b>Headers</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='Headers' Line='Headers' -->
   <dd>The output image can only have one set of header keywords which are
@@ -583,7 +583,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   combined image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Bad">
   <dt><b>Bad Pixel Masks</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='Bad' Line='Bad Pixel Masks' -->
   <dd>The <i>bpmasks</i> parameter produces optional output bad pixel mask(s) with
@@ -592,7 +592,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   added to the output image header under the keyword BPM.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Rejection">
   <dt><b>Rejection Masks</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='Rejection' Line='Rejection Masks' -->
   <dd>The <i>rejmasks</i> parameter produces optional output mask file(s)
@@ -635,16 +635,16 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   Note that one can use image sections to extract a mask matching the input
   image.  For the example case with the offsets masks in the input
   coordinates can be extracted with the commands
-  <pre>
-      cl&gt; imcopy rejmask[*,*,1] mask1
-      cl&gt; imcopy rejmask[11:1020,11:1020,2] mask2
-      cl&gt; imcopy rejmask[21:1020,21:1020,3] mask3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy rejmask[*,*,1] mask1
+  cl&gt; imcopy rejmask[11:1020,11:1020,2] mask2
+  cl&gt; imcopy rejmask[21:1020,21:1020,3] mask3
+  </pre></div>
   For the case of equal sized and registered images one could also use
   <b>imslice</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Mask">
   <dt><b>Mask of the Number of Rejected Pixels</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='Mask' Line='Mask of the Number of Rejected Pixels' -->
   <dd>The <i>nrejmasks</i> parameter produces optional pixel mask(s) giving the
@@ -655,7 +655,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   to the number of input images indicate no input pixels were used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Exposure">
   <dt><b>Exposure Masks</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='Exposure' Line='Exposure Masks' -->
   <dd>The <i>expmasks</i> parameter produces optional output exposure mask(s)
@@ -668,7 +668,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   keyword and zero is the value of the MASKZERO keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Sigma">
   <dt><b>Sigma of Combined Pixels</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='Sigma' Line='Sigma of Combined Pixels' -->
   <dd>The <i>sigma</i> parameter produces optional output sigma image(s).  The
@@ -677,7 +677,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   pixel values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Output">
   <dt><b>Output Log File</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='Output' Line='Output Log File' -->
   <dd>The <i>logfile</i> parameter produces an optional output log file.  If no
@@ -737,9 +737,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   a grid then the special offset string  beginning with the word <span style="font-family: monospace;">"grid"</span>
   is used.  The format is
   </p>
-  <pre>
-  	grid [n1] [s1] [n2] [s2] ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  grid [n1] [s1] [n2] [s2] ...
+  </pre></div>
   <p>
   where ni is the number of images in dimension i and si is the step in
   dimension i.  For example <span style="font-family: monospace;">"grid 5 100 5 100"</span> specifies a 5x5 grid with
@@ -761,11 +761,11 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   each dimension of the images.  In the first example cited above the
   offset file might contain:
   </p>
-  <pre>
-  	0 0
-  	10 0
-  	20 0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  0 0
+  10 0
+  20 0
+  </pre></div>
   <p>
   where we assume the second dimension has zero offsets.
   </p>
@@ -776,11 +776,11 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   value in each dimension and subtract it from all the other offsets
   in that dimension.  The above example could also be specified as:
   </p>
-  <pre>
-  	225 15
-  	235 15
-  	245 15
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  225 15
+  235 15
+  245 15
+  </pre></div>
   <p>
   There may be cases where one doesn't want the minimum offsets reset
   to zero.  If all the offsets are positive and the comment <span style="font-family: monospace;">"# Absolute"</span>
@@ -788,12 +788,12 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   blank values between the first output pixel and the first overlapping
   input pixel.  Continuing with the above example, the file
   </p>
-  <pre>
-  	# Absolute
-  	10 10
-  	20 10
-  	30 10
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  # Absolute
+  10 10
+  20 10
+  30 10
+  </pre></div>
   <p>
   will have the first pixel of the first image in the 11th pixel of the
   output image.  Note that there is no way to <span style="font-family: monospace;">"pad"</span> the other side of
@@ -899,13 +899,13 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   <span style="font-family: monospace;">"myval"</span> is the name of an image header keyword and <span style="font-family: monospace;">"scales.dat"</span> is
   a text file containing a list of scale factors.
   </p>
-  <pre>
-  	scale = none		No scaling
-  	zero = mean		Intensity offset by the mean
-  	scale = exposure	Scale by the exposure time
-  	zero = !myval		Intensity offset by an image keyword
-  	scale = @scales.dat	Scales specified in a file
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  scale = none            No scaling
+  zero = mean             Intensity offset by the mean
+  scale = exposure        Scale by the exposure time
+  zero = !myval           Intensity offset by an image keyword
+  scale = @scales.dat     Scales specified in a file
+  </pre></div>
   <p>
   The image statistics are computed by sampling a uniform grid of points with
   the smallest grid step that yields less than 100000 pixels; sampling is used
@@ -913,9 +913,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   restrict the sampling to a region of the image the <i>statsec</i> parameter
   is used.  This parameter has the following syntax:
   </p>
-  <pre>
-  	[input|output|overlap] [image section]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  [input|output|overlap] [image section]
+  </pre></div>
   <p>
   The initial modifier defaults to <span style="font-family: monospace;">"input"</span> if absent.  The modifiers are useful
   if the input images have offsets.  In that case <span style="font-family: monospace;">"input"</span> specifies
@@ -1016,9 +1016,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   weights are computed from the initial weights (the exposure time, image
   statistics, or input values) using the formula:
   </p>
-  <pre>
-  	weight_final = weight_initial / (scale * sky)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  weight_final = weight_initial / (scale * sky)
+  </pre></div>
   <p>
   where the sky values are those from the image statistics before conversion
   to zero level shifts and adjustment to zero mean over all images.  The
@@ -1161,10 +1161,10 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   thresholding then a matching fraction of the remaining pixels, truncated
   to an integer, are used.  Thus,
   </p>
-  <pre>
-  	nl = n * nlow/nimages + 0.001 
-  	nh = n * nhigh/nimages + 0.001 
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nl = n * nlow/nimages + 0.001
+  nh = n * nhigh/nimages + 0.001
+  </pre></div>
   <p>
   where n is the number of pixels surviving offseting, masking, and
   thresholding, nimages is the number of input images, nlow and nhigh
@@ -1177,11 +1177,11 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   pixels to be rejected the fractions to be rejected are nlow=0.1 and nhigh=0.2
   and the number rejected as a function of n is:
   </p>
-  <pre>
-  	 n   0  1  2  3  4  5  6  7  8  9 10
-  	 nl  0  0  0  0  0  0  0  0  0  0  1
-  	 nh  0  0  0  0  0  1  1  1  1  1  2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  n   0  1  2  3  4  5  6  7  8  9 10
+  nl  0  0  0  0  0  0  0  0  0  0  1
+  nh  0  0  0  0  0  1  1  1  1  1  2
+  </pre></div>
   <p>
   CCDCLIP
   If the images are obtained using a CCD with known read out noise, gain, and
@@ -1191,9 +1191,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   data values at a pixel with true value &lt;I&gt;, as approximated by the median
   or average with the lowest and highest value excluded, is given by:
   </p>
-  <pre>
-  	sigma = ((rn / g) ** 2 + &lt;I&gt; / g + (s * &lt;I&gt;) ** 2) ** 1/2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sigma = ((rn / g) ** 2 + &lt;I&gt; / g + (s * &lt;I&gt;) ** 2) ** 1/2
+  </pre></div>
   <p>
   where rn is the read out noise in electrons, g is the gain in
   electrons per data value, s is a sensitivity noise given as a fraction,
@@ -1305,9 +1305,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   to the square root of the median or mean at each point.  This is
   described by the equation:
   </p>
-  <pre>
-  	sigma(column,line) = sqrt (gain(line) * signal(column,line))
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sigma(column,line) = sqrt (gain(line) * signal(column,line))
+  </pre></div>
   <p>
   where the <i>estimated</i> signal is the mean or median (hopefully excluding
   any bad pixels) and the gain is the <i>estimated</i> proportionality
@@ -1482,9 +1482,9 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   QUADRATURE
   The pixels are combined as
   </p>
-  <pre>
-      sqrt (sum {(wt * sigma)^2}) / sum {wt}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sqrt (sum {(wt * sigma)^2}) / sum {wt}
+  </pre></div>
   <p>
   This is used when the input pixel values represent <span style="font-family: monospace;">"sigmas"</span>.  This option
   is usually a second pass after the input data has been combined.  It is
@@ -1496,11 +1496,11 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   QUADRATURE
   The pixels are combined as
   </p>
-  <pre>
-      value = max (0, scaled_pixel_value)
-      variance = rdnoise^2 + value / gain + (snoise * value)^2
-      output = sqrt (sum {variance * wt^2}) / sum {wt}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  value = max (0, scaled_pixel_value)
+  variance = rdnoise^2 + value / gain + (snoise * value)^2
+  output = sqrt (sum {variance * wt^2}) / sum {wt}
+  </pre></div>
   <p>
   This is used when the variances in the input images can be computed
   by the above noise model.  Note that the gain and rdnoise are adjusted
@@ -1520,48 +1520,48 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   finite population by a factor of n/(n-1), of the unrejected input pixel
   values about the output combined pixel values.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To average and median images without any other features:
   </p>
-  <pre>
-  	cl&gt; imcombine obj* avg combine=average reject=none
-  	cl&gt; imcombine obj* med combine=median reject=none
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcombine obj* avg combine=average reject=none
+  cl&gt; imcombine obj* med combine=median reject=none
+  </pre></div>
   <p>
   2.  To reject cosmic rays:
   </p>
-  <pre>
-  	cl&gt; imcombine obs1,obs2 Obs reject=crreject rdnoise=5.1, gain=4.3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcombine obs1,obs2 Obs reject=crreject rdnoise=5.1, gain=4.3
+  </pre></div>
   <p>
   3.  To make a grid for display purposes with 21 64x64 images:
   </p>
-  <pre>
-  	cl&gt; imcombine @list grid offset="grid 5 65 5 65"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcombine @list grid offset="grid 5 65 5 65"
+  </pre></div>
   <p>
   4.  To apply a mask image with good pixels marked with a zero value and
   bad pixels marked with a value of one:
   </p>
-  <pre>
-  	cl&gt; hedit ims* bpm badpix.pl add+ ver-
-  	cl&gt; imcombine ims* final combine=median masktype=goodval
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit ims* bpm badpix.pl add+ ver-
+  cl&gt; imcombine ims* final combine=median masktype=goodval
+  </pre></div>
   <p>
   5.  To scale image by the exposure time and then adjust for varying
   sky brightness and make a weighted average:
   </p>
-  <pre>
-  	cl&gt; imcombine obj* avsig combine=average reject=avsig \<br>
-  	&gt;&gt;&gt; scale=exp zero=mode weight=exp  expname=exptime
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcombine obj* avsig combine=average reject=avsig \<br>
+  &gt;&gt;&gt; scale=exp zero=mode weight=exp  expname=exptime
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_IMCOMBINE">
   <dt><b>IMCOMBINE V2.12</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.12' -->
   <dd>A number of enhancements for dealing with large numbers of images were
@@ -1583,7 +1583,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   such as exposure time and airmass remain representative.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IMCOMBINE">
   <dt><b>IMCOMBINE V2.11.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.11.2' -->
   <dd>The grow algorithm was improved to give a 2D growing radius.
@@ -1593,7 +1593,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   of the input and output types.  Previously it was only the input types.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IMCOMBINE">
   <dt><b>IMCOMBINE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.11' -->
   <dd>The limit of the number of images that may be combined has been removed.
@@ -1607,7 +1607,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   A combination of ushort and short images now defaults to integer.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IMCOMBINE">
   <dt><b>IMCOMBINE V2.14</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.14' -->
   <dd>The <span style="font-family: monospace;">"masktype"</span> parameter has been generalized to allow both using a
@@ -1617,7 +1617,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IMCOMBINE">
   <dt><b>IMCOMBINE V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.10.3' -->
   <dd>The input scalings from an @file or header keyword are now truly
@@ -1625,7 +1625,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   pixel types now include unsigned short integer.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IMCOMBINE">
   <dt><b>IMCOMBINE V2.10.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.10.2' -->
   <dd>The weighting was changed from using the square root of the exposure time
@@ -1639,43 +1639,43 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   the output images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IMCOMBINE">
   <dt><b>IMCOMBINE V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMCOMBINE' Line='IMCOMBINE V2.10' -->
   <dd>This task was greatly revised to provide many new features.  These features
   are:
-  <pre>
-      o Bad pixel masks
-      o Combining offset and different size images
-      o Blank value for missing data
-      o Combining across the highest dimension (the project option)
-      o Separating threshold rejection, the rejection algorithms,
-        and the final combining statistic
-      o New CCDCLIP, CRREJECT, and PCLIP algorithms
-      o Rejection now may reject more than one pixel per output pixel
-      o Choice of a central median or average for clipping
-      o Choice of final combining operation
-      o Simultaneous multiplicative and zero point scaling
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  o Bad pixel masks
+  o Combining offset and different size images
+  o Blank value for missing data
+  o Combining across the highest dimension (the project option)
+  o Separating threshold rejection, the rejection algorithms,
+    and the final combining statistic
+  o New CCDCLIP, CRREJECT, and PCLIP algorithms
+  o Rejection now may reject more than one pixel per output pixel
+  o Choice of a central median or average for clipping
+  o Choice of final combining operation
+  o Simultaneous multiplicative and zero point scaling
+  </pre></div>
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_limitations">
   <h3>Limitations</h3>
-  <!-- BeginSection: 'LIMITATIONS' -->
   <p>
   Though the previous limit on the number of images that can be combined
   was removed in V2.11 the method has the limitation that only a single
   bad pixel mask will be used for all images.
   </p>
-  <!-- EndSection:   'LIMITATIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccdred.combine mscred.combine onedspec.scombine, wpfc.noisemodel,
   obsolete.ocombine
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'LIMITATIONS' 'SEE ALSO'  -->
   

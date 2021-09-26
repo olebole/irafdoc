@@ -7,15 +7,15 @@ specfocus: Determine spectral focus and alignment variations
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   specfocus images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of 1D or 2D focus images.  Typically the input is a list of raw
@@ -23,7 +23,7 @@ specfocus: Determine spectral focus and alignment variations
   allow use of extraction techniques beyond those provided by this task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_focus">
   <dt><b>focus = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='focus' Line='focus = ""' -->
   <dd>List of focus identification values to be associated with each input image
@@ -35,20 +35,20 @@ specfocus: Determine spectral focus and alignment variations
   starting value, B is an ending value, and C is an increment.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_corwidth">
   <dt><b>corwidth = 20.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='corwidth' Line='corwidth = 20.' -->
   <dd>Correlation width in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_level">
   <dt><b>level = 0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='level' Line='level = 0.5' -->
   <dd>Percent or fraction of the correlation peak at which to measure focus
   widths.  The default is 50% or full width at half maximum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shifts">
   <dt><b>shifts = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = yes' -->
   <dd>Compute dispersion shifts across the dispersion when there are multiple
@@ -57,14 +57,14 @@ specfocus: Determine spectral focus and alignment variations
   determine by crosscorrelation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispaxis">
   <dt><b>dispaxis = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2' -->
   <dd>Dispersion axis for 2D images.  The image header keyword DISPAXIS has
   precedence over this value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nspectra">
   <dt><b>nspectra = 1, ndisp = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nspectra' Line='nspectra = 1, ndisp = 1' -->
   <dd>The number of spectral samples across the dispersion
@@ -76,7 +76,7 @@ specfocus: Determine spectral focus and alignment variations
   multispec format each line is used as a separate sample.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_slit1">
   <dt><b>slit1 = INDEF, slit2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='slit1' Line='slit1 = INDEF, slit2 = INDEF' -->
   <dd>The lower and upper edges of the slit (or data region) in pixel
@@ -84,37 +84,37 @@ specfocus: Determine spectral focus and alignment variations
   of INDEF specifies the image edges.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>File in which to record the results.  If no file is specified no log
   output is produced.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   All keys select an image and a sample (one of the <i>ndisp</i> samples along
   the dispersion and one of the <i>nspectra</i> samples across the dispersion)
   which is then generally highlighted.
   </p>
-  <pre>
-     ?  Help summary
-     b  Best focus at each sample summary graphs
-     d  Delete image, sample, or point
-     p  Profiles at one sample for all images and all samples for one image
-     q  Quit
-     r  Redraw
-     s  Spectra at one sample for all images and all samples for one image
-     u  Undelete spectrum, sample, or point
-     w  Profile widths verses focus and distribution of widths
-     z  Zoom on a single sample showing correlation profile and spectrum
-     &lt;space&gt;  Status line output for selected image and sample
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  <div class="highlight-default-notranslate"><pre>
+  ?  Help summary
+  b  Best focus at each sample summary graphs
+  d  Delete image, sample, or point
+  p  Profiles at one sample for all images and all samples for one image
+  q  Quit
+  r  Redraw
+  s  Spectra at one sample for all images and all samples for one image
+  u  Undelete spectrum, sample, or point
+  w  Profile widths verses focus and distribution of widths
+  z  Zoom on a single sample showing correlation profile and spectrum
+  &lt;space&gt;  Status line output for selected image and sample
+  </pre></div>
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task estimates the dispersion width of spectral lines in sequences of
   arc spectra taken at different focus settings (or with some other parameter
@@ -371,74 +371,73 @@ specfocus: Determine spectral focus and alignment variations
   the graphs with the focus, width, and shift.  Finally the <span style="font-family: monospace;">'q'</span>
   key quits the task.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  A series of 2D focus images is obtained with focus values
   starting at 400 in steps of -50.  The slit is between columns 50
   and 130.  There are 3 samples across the dispersion and 3 along
   the dispersion.
   </p>
-  <pre>
-      cl&gt; lpar specfocus
-  	   images = "@imlist"       List of images
-  	   (focus = "400x-50")     Focus values
-  	(corwidth = 20)             Correlation width
-  	   (level = 0.5)            Percent or fraction of peak
-  	  (shifts = yes)            Compute shifts across the disp?\n
-  	(dispaxis = 2)              Dispersion axis (long slit only)
-  	(nspectra = 3)              Number of spec samples (ls only)
-  	   (ndisp = 3)              Number of dispersion samples
-  	   (slit1 = 50)             Lower slit edge
-  	   (slit2 = 130)            Upper slit edge\n
-  	 (logfile = "logfile")      Logfile
-  	    (mode = "ql")
-      cl&gt; specfocus @imlist
-      &lt;Interactive graphics which is exited with the <span style="font-family: monospace;">'q'</span> key&gt;
-      SPECFOCUS: NOAO/IRAF V2.10EXPORT valdes Thu 19:41:41 17-Sep-92
-        Best avg focus at 206.6584 with avg width of 2.91 at 50% of peak
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; lpar specfocus
+         images = "@imlist"       List of images
+         (focus = "400x-50")     Focus values
+      (corwidth = 20)             Correlation width
+         (level = 0.5)            Percent or fraction of peak
+        (shifts = yes)            Compute shifts across the disp?\n
+      (dispaxis = 2)              Dispersion axis (long slit only)
+      (nspectra = 3)              Number of spec samples (ls only)
+         (ndisp = 3)              Number of dispersion samples
+         (slit1 = 50)             Lower slit edge
+         (slit2 = 130)            Upper slit edge\n
+       (logfile = "logfile")      Logfile
+          (mode = "ql")
+  cl&gt; specfocus @imlist
+  &lt;Interactive graphics which is exited with the <span style="font-family: monospace;">'q'</span> key&gt;
+  SPECFOCUS: NOAO/IRAF V2.10EXPORT valdes Thu 19:41:41 17-Sep-92
+    Best avg focus at 206.6584 with avg width of 2.91 at 50% of peak
   
-        -- Average Over All Samples
+    -- Average Over All Samples
   
-  				     Image  Focus  Width
-  				jdv011.imh   100.   3.78
-  				jdv010.imh   150.   3.28
-  				jdv009.imh   200.   2.95
-  				jdv008.imh   250.   3.17
-  				jdv007.imh   300.   3.41
-  				jdv006.imh   350.   3.74
-  				jdv005.imh   400.   4.16
+                                   Image  Focus  Width
+                              jdv011.imh   100.   3.78
+                              jdv010.imh   150.   3.28
+                              jdv009.imh   200.   2.95
+                              jdv008.imh   250.   3.17
+                              jdv007.imh   300.   3.41
+                              jdv006.imh   350.   3.74
+                              jdv005.imh   400.   4.16
   
-        -- Image jdv009.imh at Focus 200. --
+    -- Image jdv009.imh at Focus 200. --
   
+          Width at 50% of Peak:
   
-  	    Width at 50% of Peak:
+                       Columns
+                         50-76      77-103    104-130
+             Lines  +---------------------------------
+             2-267  |    2.93       2.58       2.74
+           268-533  |    3.17       2.76       2.89
+           534-799  |    3.77       2.23       3.50
   
-  			 Columns
-  			   50-76      77-103    104-130 
-  	       Lines  +---------------------------------
-  	       2-267  |    2.93       2.58       2.74   
-  	     268-533  |    3.17       2.76       2.89   
-  	     534-799  |    3.77       2.23       3.50   
+          Position Shifts Relative To Central Sample:
   
-  	    Position Shifts Relative To Central Sample:
-  
-  			 Columns
-  			   50-76      77-103    104-130 
-  	       Lines  +---------------------------------
-  	       2-267  |    0.68       0.00       0.18   
-  	     268-533  |    0.64       0.00       0.13   
-  	     534-799  |    0.92       0.00       0.16   
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+                       Columns
+                         50-76      77-103    104-130
+             Lines  +---------------------------------
+             2-267  |    0.68       0.00       0.18
+           268-533  |    0.64       0.00       0.13
+           534-799  |    0.92       0.00       0.16
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imexamine, implot, ranges, splot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

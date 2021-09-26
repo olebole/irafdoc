@@ -7,41 +7,41 @@ rvcorrect: Compute radial velocity corrections
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rvcorrect
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_files">
   <dt><b>files = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files = ""' -->
   <dd>List of files containing date, time, coordinates of observation, and possibly
   an observed radial velocity.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_images">
   <dt><b>images = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images = ""' -->
   <dd>List of images containing date, time, coordinates of observation, and possibly
   an observed radial velocity.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = yes' -->
   <dd>Print header for output?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_input">
   <dt><b>input = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input = no' -->
   <dd>Print input data in output?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imupdate">
   <dt><b>imupdate = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imupdate' Line='imupdate = no' -->
   <dd>Update the image header with the computed values of heliocentric correction
@@ -51,14 +51,14 @@ rvcorrect: Compute radial velocity corrections
   of rest (in the <i>VSUN</i> keyword).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_epoch">
   <dt><b>epoch = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='epoch' Line='epoch = INDEF' -->
   <dd>Epoch of observation coordinates in Julian years. If zero or INDEF then the
   epoch is assumed to be the same as the date of observation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory for  which corrections are to be computed.  The default is a
@@ -72,28 +72,28 @@ rvcorrect: Compute radial velocity corrections
   if present.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vsun">
   <dt><b>vsun = 20.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vsun' Line='vsun = 20.' -->
   <dd>Velocity in km/s of the sun relative to the desired standard of rest.  The
   default is for the Local Standard of Rest (LSR).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ra_vsun">
   <dt><b>ra_vsun = 18:00:00</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ra_vsun' Line='ra_vsun = 18:00:00' -->
   <dd>Right ascension in hours of the solar motion relative to the desired standard
   of rest.  The default is for the Local Standard of Rest (LSR).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dec_vsun">
   <dt><b>dec_vsun = 30:00:00</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dec_vsun' Line='dec_vsun = 30:00:00' -->
   <dd>Declination in degrees of the solar motion relative to the desired standard
   of rest.  The default is for the Local Standard of Rest (LSR).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_epoch_vsun">
   <dt><b>epoch_vsun = 1900.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='epoch_vsun' Line='epoch_vsun = 1900.' -->
   <dd>Epoch in years for the solar motion components.
@@ -103,7 +103,7 @@ rvcorrect: Compute radial velocity corrections
   If no input files or images are specified then the following parameters
   are used for input.
   </p>
-  <dl>
+  <dl id="l_year">
   <dt><b>year, month, day, ut</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='year' Line='year, month, day, ut' -->
   <dd>Date and time of observation.  If the year is less than 100 then the century is
@@ -112,19 +112,19 @@ rvcorrect: Compute radial velocity corrections
   0 hours universal time.  Universal time of observation in hours.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ra">
   <dt><b>ra , dec </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra , dec ' -->
   <dd>Right ascension (hours) and declination (degrees) of observation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vobs">
   <dt><b>vobs = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vobs' Line='vobs = 0.' -->
   <dd>Observed velocity (km/s) to be corrected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_keywpars">
   <dt><b>keywpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = ""' -->
   <dd>The image header keyword translation table as described in
@@ -135,14 +135,14 @@ rvcorrect: Compute radial velocity corrections
   If no input files or images are specified the following parameters are
   set by the task.
   </p>
-  <dl>
+  <dl id="l_hjd">
   <dt><b>hjd</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hjd' Line='hjd' -->
   <dd>Heliocentric Julian date.  The date of observation is corrected for
   light travel difference to the sun.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vhelio">
   <dt><b>vhelio</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vhelio' Line='vhelio' -->
   <dd>Heliocentric radial velocity in km/s.  The observed velocity is corrected
@@ -150,7 +150,7 @@ rvcorrect: Compute radial velocity corrections
   barycenter, and the orbit of the barycenter about the Sun.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vlsr">
   <dt><b>vlsr</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vlsr' Line='vlsr' -->
   <dd>Local standard of rest radial velocity in km/s.
@@ -158,9 +158,9 @@ rvcorrect: Compute radial velocity corrections
   relative to the specified standard of rest.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The observed radial velocity is corrected for the motion of the
   observer in the direction of the observation.  The components of the
@@ -225,25 +225,25 @@ rvcorrect: Compute radial velocity corrections
   component corrections for the diurnal, lunar, annual, and solar
   velocities.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_diurnal_velocity">
   <h3>Diurnal velocity</h3>
-  <!-- BeginSection: 'DIURNAL VELOCITY' -->
   <p>
   The geodetic latitude to geocentric latitude correction is given by
   </p>
-  <pre>
-  	dlat = -(11. * 60. + 32.743000) * sin (2*lat) +
-  		1.163300 * sin (4*lat) - 0.002600 * sin (6*lat)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  dlat = -(11. * 60. + 32.743000) * sin (2*lat) +
+          1.163300 * sin (4*lat) - 0.002600 * sin (6*lat)
+  </pre></div>
   <p>
   where lat is the geodetic latitude and dlat is the additive correction.
   The distance, r, of the observer from the Earth's center in meters is given by
   </p>
-  <pre>
-  	r = 6378160.0 * (0.998327073 + 0.00167643800 * cos(2*lat) -
-  	    0.00000351 * cos(4*lat) + 0.000000008 * cos(6*lat)) +
-  	    altitude
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  r = 6378160.0 * (0.998327073 + 0.00167643800 * cos(2*lat) -
+      0.00000351 * cos(4*lat) + 0.000000008 * cos(6*lat)) +
+      altitude
+  </pre></div>
   <p>
   where lat is the corrected latitude and altitude is the altitude above
   sea level.  The rotational velocity (perpendicular to the radius vector)
@@ -263,25 +263,25 @@ rvcorrect: Compute radial velocity corrections
   <p>
   where lmst is the local mean sidereal time.
   </p>
-  <!-- EndSection:   'DIURNAL VELOCITY' -->
+  </section>
+  <section id="s_barycentric_velocity">
   <h3>Barycentric velocity</h3>
-  <!-- BeginSection: 'BARYCENTRIC VELOCITY' -->
   <p>
   The orbital elements of the lunar orbit are computed from the following
   interpolation formulas
   </p>
-  <pre>
-  	t = (JD - 2415020) / 36525.
+  <div class="highlight-default-notranslate"><pre>
+  t = (JD - 2415020) / 36525.
   
-  	oblq = 23.452294-t*(0.0130125+t*(0.00000164-t*0.000000503))
-  	omega = 259.183275-t*(1934.142008+t*(0.002078+t*0.000002))
-  	mlong = 270.434164+t*(481267.88315+t*(-0.001133+t*0.0000019))-
-  	    omega
-  	lperi = 334.329556+t*(4069.034029-t*(0.010325+t*0.000012))-
-  	    omega
-  	em = 0.054900489
-  	inclin = 5.1453964
-  </pre>
+  oblq = 23.452294-t*(0.0130125+t*(0.00000164-t*0.000000503))
+  omega = 259.183275-t*(1934.142008+t*(0.002078+t*0.000002))
+  mlong = 270.434164+t*(481267.88315+t*(-0.001133+t*0.0000019))-
+      omega
+  lperi = 334.329556+t*(4069.034029-t*(0.010325+t*0.000012))-
+      omega
+  em = 0.054900489
+  inclin = 5.1453964
+  </pre></div>
   <p>
   where t is the time from the Julian day 2415020 (~J1900) in Julian centuries,
   oblq is the mean obliquity of the ecliptic, omega is the longitude of the mean
@@ -291,21 +291,21 @@ rvcorrect: Compute radial velocity corrections
   tlong, is computed from the mean longitude using the correction for the mean
   anomaly to the true anomaly (radians)
   </p>
-  <pre>
-  	manom = mlong - lperi
-  	tanom = manom + (2 * em - 0.25 * em**3) * sin (manom) +
-  	    1.25 * em**2 * sin (2 * manom) + 13/12 * em**3 *
-  	    sin (3 * manom)
-  	tlong = tanom + lperi
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  manom = mlong - lperi
+  tanom = manom + (2 * em - 0.25 * em**3) * sin (manom) +
+      1.25 * em**2 * sin (2 * manom) + 13/12 * em**3 *
+      sin (3 * manom)
+  tlong = tanom + lperi
+  </pre></div>
   <p>
   The velocity of the Moon around the Earth's center in the plane of the orbit
   in km/s is
   </p>
-  <pre>
-  	vmoon = (TWOPI * 384403.12040) / (27.321661 * 86400) /
-  	    sqrt (1. - em**2)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  vmoon = (TWOPI * 384403.12040) / (27.321661 * 86400) /
+      sqrt (1. - em**2)
+  </pre></div>
   <p>
   where 384403.12040 is the mean lunar distance (km) and 27.321661 is the mean
   lunar month (days).  The component along the line to the observation is
@@ -322,21 +322,21 @@ rvcorrect: Compute radial velocity corrections
   <p>
   	vlunar = v / 81.53
   </p>
-  <!-- EndSection:   'BARYCENTRIC VELOCITY' -->
+  </section>
+  <section id="s_annual_velocity">
   <h3>Annual velocity</h3>
-  <!-- BeginSection: 'ANNUAL VELOCITY' -->
   <p>
   The orbital elements of the Earth's orbit are computed from the following
   interpolation formulas
   </p>
-  <pre>
-  	t = (ast_julday (epoch) - 2415020) / 36525.
+  <div class="highlight-default-notranslate"><pre>
+  t = (ast_julday (epoch) - 2415020) / 36525.
   
-  	manom = 358.47583+t*(35999.04975-t*(0.000150+t*0.000003))
-  	oblq = 23.452294-t*(0.0130125+t*(0.00000164-t*0.000000503))
-  	lperi = 101.22083+t*(1.7191733+t*(0.000453+t*0.000003))
-  	eccen = 0.01675104-t*(0.00004180+t*0.000000126)
-  </pre>
+  manom = 358.47583+t*(35999.04975-t*(0.000150+t*0.000003))
+  oblq = 23.452294-t*(0.0130125+t*(0.00000164-t*0.000000503))
+  lperi = 101.22083+t*(1.7191733+t*(0.000453+t*0.000003))
+  eccen = 0.01675104-t*(0.00004180+t*0.000000126)
+  </pre></div>
   <p>
   where t is the time from the Julian day 2415020 (~J1900) in Julian centuries,
   manom is the mean anomaly (degrees), oblq is the mean obliquity of the ecliptic
@@ -344,19 +344,19 @@ rvcorrect: Compute radial velocity corrections
   eccen is the eccentricity of the orbit.  The true anomaly (radians) is 
   obtained from the mean anomaly (radians) by
   </p>
-  <pre>
-  	tanom = manom + (2 * eccen - 0.25 * eccen**3) * sin (manom) +
-  	    1.25 * eccen**2 * sin (2 * manom) +
-  	    13./12. * eccen**3 * sin (3 * manom)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tanom = manom + (2 * eccen - 0.25 * eccen**3) * sin (manom) +
+      1.25 * eccen**2 * sin (2 * manom) +
+      13./12. * eccen**3 * sin (3 * manom)
+  </pre></div>
   <p>
   The orbital velocity of the Earth-Moon barycenter perpendicular to
   the radius vector is given by
   </p>
-  <pre>
-  	v = ((TWOPI * 149598500.) / (365.2564 * 86400.)) /
-  	    sqrt (1. - eccen**2)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  v = ((TWOPI * 149598500.) / (365.2564 * 86400.)) /
+      sqrt (1. - eccen**2)
+  </pre></div>
   <p>
   where the semi-major axis is 149598500 km and the year is 365.2564 days.
   To compute the projection of this velocity along the line of observation
@@ -374,17 +374,17 @@ rvcorrect: Compute radial velocity corrections
   <p>
   	slong = lperi + tanom + 180
   </p>
-  <!-- EndSection:   'ANNUAL VELOCITY' -->
+  </section>
+  <section id="s_solar_motion">
   <h3>Solar motion</h3>
-  <!-- BeginSection: 'SOLAR MOTION' -->
   <p>
   The solar motion is computed by precessing the coordinates of the solar
   motion to the observation epoch and taking the appropriate component
   along the line of sight.
   </p>
-  <!-- EndSection:   'SOLAR MOTION' -->
+  </section>
+  <section id="s_accuracy">
   <h3>Accuracy</h3>
-  <!-- BeginSection: 'ACCURACY' -->
   <p>
   The calculations are done using IRAF double precision.
   No correction is made for the perturbation of the other planets.  The
@@ -393,28 +393,28 @@ rvcorrect: Compute radial velocity corrections
   velocity are better than a 0.005 of a kilometer per second.
   Relative velocities over short intervals are even better.
   </p>
-  <!-- EndSection:   'ACCURACY' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. For use directly without data files or images there are two common modes.
   Because of the large number of parameters the parameter values are often
   set using the task <b>eparam</b>.  Then simply execute the command
   </p>
-  <p>
-  	cl&gt; rvcorrect
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rvcorrect
+  </pre></div>
   <p>
   2. To set some of the parameters on the command line
   </p>
-  <p>
-  	cl&gt; rvcorrect ra=12:22:1.116 dec=15:55:16.244 ut=5:30
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rvcorrect ra=12:22:1.116 dec=15:55:16.244 ut=5:30
+  </pre></div>
   <p>
   3. To use a text file generate a file containing the year, month, day, ut,
   ra, and dec with one observation per line.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type rv.obs
   1987 10 21 11:00:24  3:36:15   0:22:04
   1987 10 21 11:08:00  8:19:35  -0:51:35
@@ -433,62 +433,62 @@ rvcorrect: Compute radial velocity corrections
   2447090.00884     0.00    27.70    18.55      0.250    0.009   27.438   -9.152
   2447090.01129     0.00    23.99    13.50      0.275    0.007   23.704  -10.484
   2443957.97716   -67.50   -41.37   -31.48      0.002    0.012   26.117    9.884
-  </pre>
+  </pre></div>
   <p>
   4. To use observation parameters from a set of images the command is
   </p>
-  <p>
-  	cl&gt; rvcorrect images=hz44.001,aboo.001 &gt; rv.dat
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rvcorrect images=hz44.001,aboo.001 &gt; rv.dat
+  </pre></div>
   <p>
   5. A CL loop can be used to compute a table in which one parameter varies.
   </p>
-  <pre>
-  	cl&gt; for (x=0.; x&lt;=12.; x=x+1)
-  	&gt;&gt;&gt; rvcorrect (ut=x, header=no)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; for (x=0.; x&lt;=12.; x=x+1)
+  &gt;&gt;&gt; rvcorrect (ut=x, header=no)
+  </pre></div>
   <p>
   6. To get the total velocity correction in a script the following may be done.
   </p>
-  <pre>
-  	rvcorrect (vobs=12.3, ra=12:33, dec=30:22, ut=5:30, &gt; "dev$null")
-  	vlsr = rvcorrect.vlsr
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  rvcorrect (vobs=12.3, ra=12:33, dec=30:22, ut=5:30, &gt; "dev$null")
+  vlsr = rvcorrect.vlsr
+  </pre></div>
   <p>
   Note that this does not work when the task is run as a background job!
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_RVCORRECT">
   <dt><b>RVCORRECT V2.11.4</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='RVCORRECT' Line='RVCORRECT V2.11.4' -->
   <dd>The ut keyword can be in either date plus time or hours.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_RVCORRECT">
   <dt><b>RVCORRECT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='RVCORRECT' Line='RVCORRECT V2.11' -->
   <dd>Y2K update: The date keyword can be in the full format with full
   year and time.  The time takes precedence over a time keyword.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_acknowledgments">
   <h3>Acknowledgments</h3>
-  <!-- BeginSection: 'ACKNOWLEDGMENTS' -->
   <p>
   Some of the formulas used were obtained by inspection of the code
   for the subroutine DOP in the program DOPSET written by R. N. Manchester
   and M. A. Gordon of NRAO dated January 1970.
   </p>
-  <!-- EndSection:   'ACKNOWLEDGMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   observatory, asttimes
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'DIURNAL VELOCITY' 'BARYCENTRIC VELOCITY' 'ANNUAL VELOCITY' 'SOLAR MOTION' 'ACCURACY' 'EXAMPLES' 'REVISIONS' 'ACKNOWLEDGMENTS' 'SEE ALSO'  -->
   

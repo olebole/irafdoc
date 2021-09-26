@@ -7,14 +7,14 @@ tcopy: Copy tables.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tcopy intable outtable
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task is used to copy tables.  The input may be a general filename
   template, including wildcard characters or the name of a file (preceded
@@ -36,16 +36,16 @@ tcopy: Copy tables.
   for example, then the command <span style="font-family: monospace;">"tcopy tab* test/"</span> would copy both files
   to the subdirectory <span style="font-family: monospace;">"test"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>A list of one or more tables to be copied.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>Either a directory name or a list of output table names.
@@ -62,23 +62,23 @@ tcopy: Copy tables.
   <dd>Display names of input and output tables as they are copied?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To simply copy a table:
   </p>
-  <pre>
-      tt&gt; tcopy table.tab tablecopy.tab
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tcopy table.tab tablecopy.tab
+  </pre></div>
   <p>
   2.  To copy one or more tables, possibly changing table type:
   </p>
-  <pre>
-      tt&gt; tcopy table1.tab,table2.tab a.fits,b.tab
-      tt&gt; tcopy a.fits,b.tab a.tab,b.fits
-      tt&gt; tcopy a.fits &gt; a.txt
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tcopy table1.tab,table2.tab a.fits,b.tab
+  tt&gt; tcopy a.fits,b.tab a.tab,b.fits
+  tt&gt; tcopy a.fits &gt; a.txt
+  </pre></div>
   <p>
   The number of input and output tables must be the same.
   In the third case,
@@ -90,13 +90,13 @@ tcopy: Copy tables.
   <p>
   3.  To copy a set of tables to a new directory:
   </p>
-  <pre>
-      tt&gt; tcopy table*.tab directory
-      		or
-      tt&gt; tcopy table*.tab directory$
-      		or
-      tt&gt; tcopy table*.tab osdirectory
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tcopy table*.tab directory
+              or
+  tt&gt; tcopy table*.tab directory$
+              or
+  tt&gt; tcopy table*.tab osdirectory
+  </pre></div>
   <p>
   where <span style="font-family: monospace;">"directory"</span> is an IRAF environment variable for a directory name,
   and <span style="font-family: monospace;">"osdirectory"</span> is an operating system directory name
@@ -105,9 +105,9 @@ tcopy: Copy tables.
   <p>
   4.  To copy only specified extensions of a FITS file:
   </p>
-  <pre>
-      tt&gt; tcopy xyz.fits[3],xyz.fits[5] b.fits
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tcopy xyz.fits[3],xyz.fits[5] b.fits
+  </pre></div>
   <p>
   If <span style="font-family: monospace;">"b.fits"</span> did not already exist,
   it would be created and would then contain two table extensions.
@@ -120,30 +120,30 @@ tcopy: Copy tables.
   <p>
   5.  The input and/or output may be redirected:
   </p>
-  <pre>
-      tt&gt; dir l+ | tproject columns=c7,c3 | tcopy dir.tab &gt; verbose.lis
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; dir l+ | tproject columns=c7,c3 | tcopy dir.tab &gt; verbose.lis
+  </pre></div>
   <p>
   <span style="font-family: monospace;">"verbose.lis"</span> contains just the one line <span style="font-family: monospace;">"# STDIN -&gt; dir.tab"</span>,
   and <span style="font-family: monospace;">"dir.tab"</span> has the output of 'tproject', the file names and sizes.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tdelete
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

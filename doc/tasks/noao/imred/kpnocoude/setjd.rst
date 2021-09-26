@@ -7,15 +7,15 @@ setjd: Compute and set Julian dates in images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   setjd images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>The list of images for which to compute Julian dates.  If the <i>listonly</i>
@@ -23,7 +23,7 @@ setjd: Compute and set Julian dates in images
   the calculated Julian date values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory of observation, used to define the time zone relative to
@@ -37,7 +37,7 @@ setjd: Compute and set Julian dates in images
   additional information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_date">
   <dt><b>date = <span style="font-family: monospace;">"date-obs"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='date' Line='date = "date-obs"' -->
   <dd>Date of observation keyword.  The value must be in FITS format.
@@ -48,7 +48,7 @@ setjd: Compute and set Julian dates in images
   to the <i>time</i> value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_time">
   <dt><b>time = <span style="font-family: monospace;">"ut"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='time' Line='time = "ut"' -->
   <dd>Time of observation keyword with value given in decimal hours or HH:MM:SS.S
@@ -60,7 +60,7 @@ setjd: Compute and set Julian dates in images
   is given in the date keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exposure">
   <dt><b>exposure = <span style="font-family: monospace;">"exptime"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = "exptime"' -->
   <dd>Exposure time keyword with value in seconds.  If specified the time
@@ -70,7 +70,7 @@ setjd: Compute and set Julian dates in images
   <span style="font-family: monospace;">"-exptime"</span>, in which case the time is used as the end of the exposure.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ra">
   <dt><b>ra = <span style="font-family: monospace;">"ra"</span>, dec = <span style="font-family: monospace;">"dec"</span>, epoch = <span style="font-family: monospace;">"epoch"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra = "ra", dec = "dec", epoch = "epoch"' -->
   <dd>If the heliocentric Julian date is requested the right ascension (in hours)
@@ -84,7 +84,7 @@ setjd: Compute and set Julian dates in images
   will be printed though the task will still compute the values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_jd">
   <dt><b>jd = <span style="font-family: monospace;">"jd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='jd' Line='jd = "jd"' -->
   <dd>If specified compute the geocentric Julian day (Greenwich) at the
@@ -92,7 +92,7 @@ setjd: Compute and set Julian dates in images
   header keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_hjd">
   <dt><b>hjd = <span style="font-family: monospace;">"hjd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hjd' Line='hjd = "hjd"' -->
   <dd>If specified compute the heliocentric Julian day (Greenwich) at the
@@ -100,7 +100,7 @@ setjd: Compute and set Julian dates in images
   header keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ljd">
   <dt><b>ljd = <span style="font-family: monospace;">"ljd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ljd' Line='ljd = "ljd"' -->
   <dd>If specified compute the local Julian day number.  This is an integer
@@ -109,23 +109,23 @@ setjd: Compute and set Julian dates in images
   <b>refspectra</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_utdate">
   <dt><b>utdate = yes, uttime = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='utdate' Line='utdate = yes, uttime = yes' -->
   <dd>Define whether the date and time of observation are in local standard
   time or in universal time.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_listonly">
   <dt><b>listonly = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no' -->
   <dd>List the computed values only and do not modify the image headers.
   When simply listing the images need not have write permission.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Setjd</b> computes the geocentric, heliocentric, and integer
   local Julian dates from information given in the headers of
@@ -186,59 +186,59 @@ setjd: Compute and set Julian dates in images
   date makes a good sort parameter and the local Julian day number makes a
   good group parameter.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Compute all the Julian date quantities for 4 arc exposures with
   header parameters given below.
   </p>
-  <pre>
-      demoarc1:
-  	OBSERVAT= 'KPNO              '  /  observatory
-  	EXPTIME =                  60.  /  actual integration time
-  	DATE-OBS= '26/11/91          '  /  date (dd/mm/yy) of obs.
-  	UT      = '12:11:30.00       '  /  universal time
-  	RA      = '06:37:02.00       '  /  right ascension
-  	DEC     = '06:09:03.00       '  /  declination
-  	EPOCH   =               1991.9  /  epoch of ra and dec
+  <div class="highlight-default-notranslate"><pre>
+  demoarc1:
+      OBSERVAT= 'KPNO              '  /  observatory
+      EXPTIME =                  60.  /  actual integration time
+      DATE-OBS= '26/11/91          '  /  date (dd/mm/yy) of obs.
+      UT      = '12:11:30.00       '  /  universal time
+      RA      = '06:37:02.00       '  /  right ascension
+      DEC     = '06:09:03.00       '  /  declination
+      EPOCH   =               1991.9  /  epoch of ra and dec
   
-      demoarc2:
-  	OBSERVAT= 'KPNO              '  /  observatory
-  	EXPTIME =                  60.  /  actual integration time
-  	DATE-OBS= '26/11/91          '  /  date (dd/mm/yy) of obs.
-  	UT      = '12:41:30.00       '  /  universal time
-  	RA      = '06:37:02.00       '  /  right ascension
-  	DEC     = '06:09:03.00       '  /  declination
-  	EPOCH   =               1991.9  /  epoch of ra and dec
+  demoarc2:
+      OBSERVAT= 'KPNO              '  /  observatory
+      EXPTIME =                  60.  /  actual integration time
+      DATE-OBS= '26/11/91          '  /  date (dd/mm/yy) of obs.
+      UT      = '12:41:30.00       '  /  universal time
+      RA      = '06:37:02.00       '  /  right ascension
+      DEC     = '06:09:03.00       '  /  declination
+      EPOCH   =               1991.9  /  epoch of ra and dec
   
-      demoarc3:
-  	OBSERVAT= 'CTIO              '  /  observatory
-  	EXPTIME =                  60.  /  actual integration time
-  	DATE-OBS= '27/11/91          '  /  date (dd/mm/yy) of obs.
-  	UT      = '11:11:30.00       '  /  universal time
-  	RA      = '06:37:02.00       '  /  right ascension
-  	DEC     = '06:09:03.00       '  /  declination
-  	EPOCH   =               1991.9  /  epoch of ra and dec
+  demoarc3:
+      OBSERVAT= 'CTIO              '  /  observatory
+      EXPTIME =                  60.  /  actual integration time
+      DATE-OBS= '27/11/91          '  /  date (dd/mm/yy) of obs.
+      UT      = '11:11:30.00       '  /  universal time
+      RA      = '06:37:02.00       '  /  right ascension
+      DEC     = '06:09:03.00       '  /  declination
+      EPOCH   =               1991.9  /  epoch of ra and dec
   
-      demoarc4:
-  	OBSERVAT= 'CTIO              '  /  observatory
-  	EXPTIME =                  60.  /  actual integration time
-  	DATE-OBS= '27/11/91          '  /  date (dd/mm/yy) of obs.
-  	UT      = '12:21:30.00       '  /  universal time
-  	RA      = '06:37:02.00       '  /  right ascension
-  	DEC     = '06:09:03.00       '  /  declination
-  	EPOCH   =               1991.9  /  epoch of ra and dec
+  demoarc4:
+      OBSERVAT= 'CTIO              '  /  observatory
+      EXPTIME =                  60.  /  actual integration time
+      DATE-OBS= '27/11/91          '  /  date (dd/mm/yy) of obs.
+      UT      = '12:21:30.00       '  /  universal time
+      RA      = '06:37:02.00       '  /  right ascension
+      DEC     = '06:09:03.00       '  /  declination
+      EPOCH   =               1991.9  /  epoch of ra and dec
   
-      cl&gt; setjd demoarc?.imh
-      # SETJD: Observatory parameters for Kitt Peak ...
-      #              Image            JD           HJD   LOCALJD
-  	    demoarc1.imh  2448587.0083  2448587.0127   2448586
-  	    demoarc2.imh  2448587.0292  2448587.0336   2448586
-      # SETJD: Observatory parameters for Cerro Tololo ...
-  	    demoarc3.imh  2448587.9667  2448587.9711   2448587
-  	    demoarc4.imh  2448588.0153  2448588.0197   2448587
-  </pre>
+  cl&gt; setjd demoarc?.imh
+  # SETJD: Observatory parameters for Kitt Peak ...
+  #              Image            JD           HJD   LOCALJD
+          demoarc1.imh  2448587.0083  2448587.0127   2448586
+          demoarc2.imh  2448587.0292  2448587.0336   2448586
+  # SETJD: Observatory parameters for Cerro Tololo ...
+          demoarc3.imh  2448587.9667  2448587.9711   2448587
+          demoarc4.imh  2448588.0153  2448588.0197   2448587
+  </pre></div>
   <p>
   Note the use of the observatory parameter to switch observatories and
   the local Julian day number which is constant over a night even though
@@ -248,13 +248,13 @@ setjd: Compute and set Julian dates in images
   2.  To compute only the geocentric Julian date from the <span style="font-family: monospace;">"DATE"</span> and
   <span style="font-family: monospace;">"TIME"</span> keywords in an image,
   </p>
-  <pre>
-      cl&gt; setjd obs1 date=date time=time exp="" hjd="" ljd=""
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; setjd obs1 date=date time=time exp="" hjd="" ljd=""
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SETJD">
   <dt><b>SETJD V2.11.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SETJD' Line='SETJD V2.11.2' -->
   <dd>Y2K update:  Updated to use the new FITS format for the date.  If the
@@ -262,7 +262,7 @@ setjd: Compute and set Julian dates in images
   time keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SETJD">
   <dt><b>SETJD V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SETJD' Line='SETJD V2.11' -->
   <dd>The checking of the epoch keyword value was improved.  Previously if
@@ -273,14 +273,14 @@ setjd: Compute and set Julian dates in images
   the epoch value is unlikely.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   setairmass, hedit, refspectra, observatory
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

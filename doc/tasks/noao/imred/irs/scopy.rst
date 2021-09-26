@@ -7,21 +7,21 @@ scopy: Select and copy apertures in different spectral formats
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   scopy input output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images containing spectra to be copied.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output image names or root names.  Image
@@ -37,7 +37,7 @@ scopy: Select and copy apertures in different spectral formats
   number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_w1">
   <dt><b>w1 = INDEF, w2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='w1' Line='w1 = INDEF, w2 = INDEF' -->
   <dd>Starting and ending wavelengths to be copied.  If <i>w1</i> is not specified
@@ -53,7 +53,7 @@ scopy: Select and copy apertures in different spectral formats
   outside that of a spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span>, beams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "", beams = ""' -->
   <dd>List of apertures and beams to be selected from the input spectra.  The
@@ -69,7 +69,7 @@ scopy: Select and copy apertures in different spectral formats
   spectra the aperture numbers select the first spatial axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bands">
   <dt><b>bands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bands' Line='bands = ""' -->
   <dd>List of bands in 3D multispec.
@@ -78,7 +78,7 @@ scopy: Select and copy apertures in different spectral formats
   The null list selects all bands.  The syntax is as described above.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apmodulus">
   <dt><b>apmodulus = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apmodulus' Line='apmodulus = 0' -->
   <dd>Modulus to be applied to the input aperture numbers before matching against
@@ -88,7 +88,7 @@ scopy: Select and copy apertures in different spectral formats
   related.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_format">
   <dt><b>format = <span style="font-family: monospace;">"multispec"</span> (multispec|onedspec)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "multispec" (multispec|onedspec)' -->
   <dd>Output image format and name syntax.  The <span style="font-family: monospace;">"multispec"</span> format consists of
@@ -100,7 +100,7 @@ scopy: Select and copy apertures in different spectral formats
   be used in that case.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_renumber">
   <dt><b>renumber = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='renumber' Line='renumber = no' -->
   <dd>Renumber the output aperture numbers?  If set the output aperture
@@ -109,20 +109,20 @@ scopy: Select and copy apertures in different spectral formats
   change the starting number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offset">
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Offset to be added to the input or renumbered aperture number to form
   the final output aperture number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clobber">
   <dt><b>clobber = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber = no' -->
   <dd>Modify an existing output image either by overwriting or merging?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_merge">
   <dt><b>merge = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='merge' Line='merge = no' -->
   <dd>Merge apertures into existing spectra?  This
@@ -132,7 +132,7 @@ scopy: Select and copy apertures in different spectral formats
   with the same aperture number and new apertures are added if not present.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rebin">
   <dt><b>rebin = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rebin' Line='rebin = yes' -->
   <dd>Rebin the spectrum to the exact wavelength range specified by the <i>w1</i>
@@ -149,15 +149,15 @@ scopy: Select and copy apertures in different spectral formats
   linearized.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print a record of each aperture copied?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Scopy</b> selects regions of spectra from an input list of spectral
   images and copies them to output images.  This task can be used to extract
@@ -166,17 +166,17 @@ scopy: Select and copy apertures in different spectral formats
   is a list of some of the uses and many examples are given in the EXAMPLES
   section.
   </p>
-  <pre>
-     o Pack many spectra into individual images into a single image
-     o Unpack images with multiple spectra into separate images
-     o Extract a set of lines or columns from long slit spectra
-     o Extract a set of spatial positions from Fabry-Perot spectra
-     o Extract specific wavelength regions
-     o Select a subset of spectra to create a new image
-     o Merge a subset of spectra into an existing image
-     o Combine spectra from different images into one image
-     o Renumber apertures
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  o Pack many spectra into individual images into a single image
+  o Unpack images with multiple spectra into separate images
+  o Extract a set of lines or columns from long slit spectra
+  o Extract a set of spatial positions from Fabry-Perot spectra
+  o Extract specific wavelength regions
+  o Select a subset of spectra to create a new image
+  o Merge a subset of spectra into an existing image
+  o Combine spectra from different images into one image
+  o Renumber apertures
+  </pre></div>
   <p>
   Input spectra are specified by an image list which may include explicit
   image names, wildcard templates and @files containing image names.
@@ -204,10 +204,10 @@ scopy: Select and copy apertures in different spectral formats
   called <span style="font-family: monospace;">"onedspec"</span> format.  Including such spectra in an
   input list may be accomplished either with wildcard templates such as
   </p>
-  <pre>
-  	name*
-  	name.????.imh
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  name*
+  name.????.imh
+  </pre></div>
   <p>
   where the image type extension <span style="font-family: monospace;">".imh"</span> must be given to complete the
   template but the actual extension could also be that for an STF type
@@ -325,9 +325,9 @@ scopy: Select and copy apertures in different spectral formats
   relation between image lines and aperture numbers though often they
   are the same.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Because there are so many possiblities there are many examples.  To
   help find examples close to those of interest they are divided into
@@ -348,28 +348,28 @@ scopy: Select and copy apertures in different spectral formats
   <p>
   1.  Select a single spectrum (aperture 3):
   </p>
-  <pre>
-  	cl&gt; scopy example1 ap3 aperture=3
-  	example1[3]  --&gt;  ap3[3]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example1 ap3 aperture=3
+  example1[3]  --&gt;  ap3[3]
+  </pre></div>
   <p>
   2.  Select a wavelength region from a single spectrum:
   </p>
-  <pre>
-  	cl&gt; scopy example1 ap3 aperture=3 w1=5500 w2=6500
-  	example1[3]  --&gt;  ap3[3]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example1 ap3 aperture=3 w1=5500 w2=6500
+  example1[3]  --&gt;  ap3[3]
+  </pre></div>
   <p>
   3.  Select a subset of spectra (apertures 1, 2, 4, 6, and 9): 
   </p>
-  <pre>
-  	cl&gt; scopy example1 subset apertures="1-2,4,6-9x3"
-  	example1[1]  --&gt;  subset[1]
-  	example1[2]  --&gt;  subset[2]
-  	example1[4]  --&gt;  subset[4]
-  	example1[6]  --&gt;  subset[6]
-  	example1[9]  --&gt;  subset[9]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example1 subset apertures="1-2,4,6-9x3"
+  example1[1]  --&gt;  subset[1]
+  example1[2]  --&gt;  subset[2]
+  example1[4]  --&gt;  subset[4]
+  example1[6]  --&gt;  subset[6]
+  example1[9]  --&gt;  subset[9]
+  </pre></div>
   <p>
   This example shows various features of the aperture list syntax.
   </p>
@@ -377,14 +377,13 @@ scopy: Select and copy apertures in different spectral formats
   4.  Select the same apertures (1 and 3) from multiple spectra and in the
   same wavelength region:
   </p>
-  <pre>
-  	cl&gt; scopy example* %example%subset%* apertures=1,3 w1=5500 w2=6500
-  	example1[1]  --&gt;  subset1[1]
-  	example1[3]  --&gt;  subset1[3]
-  	example2[1]  --&gt;  subset2[1]
-  	example2[3]  --&gt;  subset2[3]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example* %example%subset%* apertures=1,3 w1=5500 w2=6500
+  example1[1]  --&gt;  subset1[1]
+  example1[3]  --&gt;  subset1[3]
+  example2[1]  --&gt;  subset2[1]
+  example2[3]  --&gt;  subset2[3]
+  </pre></div>
   <p>
   The output list uses the pattern substitution feature of image templates.
   </p>
@@ -392,43 +391,39 @@ scopy: Select and copy apertures in different spectral formats
   5.  Select the same aperture from multiple spectra and pack them in a
   a single image:
   </p>
-  <pre>
-  	cl&gt; scopy example* ap2 aperture=2 renumber+
-  	example1[2]  --&gt;  ap2[1]
-  	example2[2]  --&gt;  ap2[2]
-  	example3[2]  --&gt;  ap2[3]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example* ap2 aperture=2 renumber+
+  example1[2]  --&gt;  ap2[1]
+  example2[2]  --&gt;  ap2[2]
+  example3[2]  --&gt;  ap2[3]
+  </pre></div>
   <p>
   6.  To renumber the apertures sequentially starting with 11:
   </p>
-  <pre>
-  	cl&gt; scopy example1 renum renumber+
-  	example1[1]  --&gt;  renum[11]
-  	example1[5]  --&gt;  renum[12]
-  	example1[9]  --&gt;  renum[13]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example1 renum renumber+
+  example1[1]  --&gt;  renum[11]
+  example1[5]  --&gt;  renum[12]
+  example1[9]  --&gt;  renum[13]
+  </pre></div>
   <p>
   7.  To replace apertures (2) in one image with that from another:
   </p>
-  <pre>
-  	cl&gt; scopy example1 example2 aperture=2 clobber+ merge+
-  	example1[2]  --&gt; example2[2]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example1 example2 aperture=2 clobber+ merge+
+  example1[2]  --&gt; example2[2]
+  </pre></div>
   <p>
   8.  To merge two sets of spectra with different aperture numbers into
       one image:
   </p>
-  <pre>
-  	cl&gt; scopy example![12]* merge
-  	example1[1]  -&gt;  merge[1]
-  	example1[3]  -&gt;  merge[3]
-  	...
-  	example2[2]  -&gt;  merge[2]
-  	example2[4]  -&gt;  merge[4]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example![12]* merge
+  example1[1]  -&gt;  merge[1]
+  example1[3]  -&gt;  merge[3]
+  example2[2]  -&gt;  merge[2]
+  example2[4]  -&gt;  merge[4]
+  </pre></div>
   <p>
   The input list uses the ![] character substitution syntax of image templates.
   </p>
@@ -436,14 +431,14 @@ scopy: Select and copy apertures in different spectral formats
   9.  To merge a set of spectra with the same aperture numbers into another
   existing image:
   </p>
-  <pre>
-  	cl&gt; scopy example2 example1 clobber+ merge+ renumber+
-  	example1[5]  --&gt;  example1[2]
-  	example1[9]  --&gt;  example1[3]
-  	example2[1]  --&gt;  example1[4]
-  	example2[5]  --&gt;  example1[5]
-  	example2[9]  --&gt;  example1[6]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example2 example1 clobber+ merge+ renumber+
+  example1[5]  --&gt;  example1[2]
+  example1[9]  --&gt;  example1[3]
+  example2[1]  --&gt;  example1[4]
+  example2[5]  --&gt;  example1[5]
+  example2[9]  --&gt;  example1[6]
+  </pre></div>
   <p>
   Both images contained apertures 1, 5, and 9.  The listing does not show
   the renumbering of the aperture 1 from example1 since the aperture number
@@ -454,18 +449,16 @@ scopy: Select and copy apertures in different spectral formats
   variance weighted extraction, band 2 is nonweighted extraction,
   band 3 is the sky, and band 4 is the sigma:
   </p>
-  <pre>
-  	cl&gt; scopy example3d.ms[*,*,1] var1.ms
-  	example3d.ms[*,*,1][1]  --&gt;  var1.ms[1]
-  	example3d.ms[*,*,1][2]  --&gt;  var1.ms[2]
-  	...
-  	cl&gt; scopy example3d.ms[10:400,3,3] skyap3
-  	example3d.ms[10:400,3,3][3]  --&gt;  skyap3[3]
-  	cl&gt; scopy example3d.ms[*,*,1] "" clobber+
-  	example3d.ms[*,*,1][1]  --&gt;  example3d.ms[1]
-  	example3d.ms[*,*,1][2]  --&gt;  example3d.ms[2]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example3d.ms[*,*,1] var1.ms
+  example3d.ms[*,*,1][1]  --&gt;  var1.ms[1]
+  example3d.ms[*,*,1][2]  --&gt;  var1.ms[2]
+  cl&gt; scopy example3d.ms[10:400,3,3] skyap3
+  example3d.ms[10:400,3,3][3]  --&gt;  skyap3[3]
+  cl&gt; scopy example3d.ms[*,*,1] "" clobber+
+  example3d.ms[*,*,1][1]  --&gt;  example3d.ms[1]
+  example3d.ms[*,*,1][2]  --&gt;  example3d.ms[2]
+  </pre></div>
   <p>
   Note that this could also be done with <b>imcopy</b>.  The last example
   is done in place; i.e. replacing the input image by the output image
@@ -477,33 +470,30 @@ scopy: Select and copy apertures in different spectral formats
   <p>
   1.  Expand a multi-spectrum image to individual single spectrum images:
   </p>
-  <pre>
-  	cl&gt; scopy example1 record format=onedspec
-  	example1[1]  --&gt;  record.0001
-  	example1[5]  --&gt;  record.0005
-  	example1[9]  --&gt;  record.0009
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy example1 record format=onedspec
+  example1[1]  --&gt;  record.0001
+  example1[5]  --&gt;  record.0005
+  example1[9]  --&gt;  record.0009
+  </pre></div>
   <p>
   2.  Pack a set of individual 1D spectra into a single image:
   </p>
-  <pre>
-  	cl&gt; scopy record.????.imh record.ms
-  	record.0001[1]  --&gt;  record.ms[1]
-  	record.0005[5]  --&gt;  record.ms[5]
-  	record.0009[9]  --&gt;  record.ms[9]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy record.????.imh record.ms
+  record.0001[1]  --&gt;  record.ms[1]
+  record.0005[5]  --&gt;  record.ms[5]
+  record.0009[9]  --&gt;  record.ms[9]
+  </pre></div>
   <p>
   3.  Copy a set of record syntax spectra to a different rootname and renumber:
   </p>
-  <pre>
-  	cl&gt; scopy record.????.imh newroot format=onedspec
-  	record.0001[1]  --&gt;  newroot.0001
-  	record.0005[5]  --&gt;  newroot.0002
-  	record.0009[9]  --&gt;  newroot.0003
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy record.????.imh newroot format=onedspec
+  record.0001[1]  --&gt;  newroot.0001
+  record.0005[5]  --&gt;  newroot.0002
+  record.0009[9]  --&gt;  newroot.0003
+  </pre></div>
   <p>
   III. LONG SLIT IMAGES
   </p>
@@ -516,45 +506,42 @@ scopy: Select and copy apertures in different spectral formats
   <p>
   1.  To extract column 250 into a spectrum:
   </p>
-  <pre>
-  	cl&gt; scopy longslit1 c250 aperture=250
-  	longslit1[250]  --&gt;  c250[250]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy longslit1 c250 aperture=250
+  longslit1[250]  --&gt;  c250[250]
+  </pre></div>
   <p>
   2.  To sum and extract every set of 10 columns:
   </p>
-  <pre>
-  	cl&gt; nsum = 10  (or epar the package parameters)
-  	cl&gt; scopy longslit1 sum10 apertures=5-500x10
-  	longslit1[5]  --&gt;  sum10[5]
-  	longslit1[15]  --&gt;  sum10[15]
-  	longslit1[25]  --&gt;  sum10[25]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nsum = 10  (or epar the package parameters)
+  cl&gt; scopy longslit1 sum10 apertures=5-500x10
+  longslit1[5]  --&gt;  sum10[5]
+  longslit1[15]  --&gt;  sum10[15]
+  longslit1[25]  --&gt;  sum10[25]
+  </pre></div>
   <p>
   3.  To extract the sum of 10 columns centered on column 250 from a set
   of 2D images:
   </p>
-  <pre>
-  	cl&gt; nsum = 10  (or epar the package parameters)
-  	cl&gt; scopy longslit* %longslit%c250.%* aperture=250
-  	longslit1[250]  --&gt;  c250.1[250]
-  	longslit2[250]  --&gt;  c250.2[250]
-  	longslit3[250]  --&gt;  c250.3[250]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nsum = 10  (or epar the package parameters)
+  cl&gt; scopy longslit* %longslit%c250.%* aperture=250
+  longslit1[250]  --&gt;  c250.1[250]
+  longslit2[250]  --&gt;  c250.2[250]
+  longslit3[250]  --&gt;  c250.3[250]
+  </pre></div>
   <p>
   4.  To extract the sum of 10 columns centered on column 250 from a set of
   2D images and merge them into a single, renumbered output image:
   </p>
-  <pre>
-  	cl&gt; nsum = 10  (or epar the package parameters)
-  	cl&gt; scopy longslit* c250 aperture=250 renum+
-  	longslit1[250]  --&gt;  c250[1]
-  	longslit2[250]  --&gt;  c250[2]
-  	longslit3[250]  --&gt;  c250[3]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nsum = 10  (or epar the package parameters)
+  cl&gt; scopy longslit* c250 aperture=250 renum+
+  longslit1[250]  --&gt;  c250[1]
+  longslit2[250]  --&gt;  c250[2]
+  longslit3[250]  --&gt;  c250[3]
+  </pre></div>
   <p>
   IV. FABRY-PEROT IMAGES
   </p>
@@ -568,37 +555,35 @@ scopy: Select and copy apertures in different spectral formats
   1.  To extract a spectrum from the spatial position (250,250) where
   dispaxis=3:
   </p>
-  <pre>
-  	cl&gt; scopy fp1 a250 aperture=250 band=250
-  	longslit1[250]  --&gt;  a250[250]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; scopy fp1 a250 aperture=250 band=250
+  longslit1[250]  --&gt;  a250[250]
+  </pre></div>
   <p>
   2.  To sum and extract every set of 10 lines and bands (dispaxis=1):
   </p>
-  <pre>
-  	cl&gt; nsum = "10"
-  	cl&gt; scopy fp1 sum10 apertures=5-500x10 bands=5-500x10
-  	longslit1[5]  --&gt;  sum10[5]
-  	longslit1[15]  --&gt;  sum10[15]
-  	longslit1[25]  --&gt;  sum10[25]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nsum = "10"
+  cl&gt; scopy fp1 sum10 apertures=5-500x10 bands=5-500x10
+  longslit1[5]  --&gt;  sum10[5]
+  longslit1[15]  --&gt;  sum10[15]
+  longslit1[25]  --&gt;  sum10[25]
+  </pre></div>
   <p>
   3.  To extract the sum of 10 columns and 20 lines centered on column 250 and
   line 100 from a set of 3D images with dispaxis=3:
   </p>
-  <pre>
-  	cl&gt; nsum = "10 20"
-  	cl&gt; scopy longslit* %longslit%c250.%* aperture=250 band=100
-  	longslit1[250]  --&gt;  c250.1[250]
-  	longslit2[250]  --&gt;  c250.2[250]
-  	longslit3[250]  --&gt;  c250.3[250]
-  	...
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nsum = "10 20"
+  cl&gt; scopy longslit* %longslit%c250.%* aperture=250 band=100
+  longslit1[250]  --&gt;  c250.1[250]
+  longslit2[250]  --&gt;  c250.2[250]
+  longslit3[250]  --&gt;  c250.3[250]
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SCOPY">
   <dt><b>SCOPY V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SCOPY' Line='SCOPY V2.11' -->
   <dd>Previously both w1 and w2 had to be specified to select a range to
@@ -606,7 +591,7 @@ scopy: Select and copy apertures in different spectral formats
   to the first or last pixel.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SCOPY">
   <dt><b>SCOPY V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SCOPY' Line='SCOPY V2.10.3' -->
   <dd>Additional support for 3D multispec/equispec or spatial spectra has been
@@ -615,20 +600,20 @@ scopy: Select and copy apertures in different spectral formats
   aperture and band.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SCOPY">
   <dt><b>SCOPY V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SCOPY' Line='SCOPY V2.10' -->
   <dd>This task is new.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ranges, sarith, imcopy, dispcor, specshift
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

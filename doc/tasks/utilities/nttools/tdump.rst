@@ -7,14 +7,14 @@ tdump: Dump the contents of a table to an ASCII file.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tdump table
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task converts an STSDAS table to ASCII format.
   The output does not include row numbers or column names;
@@ -57,10 +57,10 @@ tdump: Dump the contents of a table to an ASCII file.
   which prints all rows for those columns that will fit on a page,
   then prints all rows for the next set of columns.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name]' -->
   <dd>The name of the STSDAS table to be dumped.
@@ -146,45 +146,42 @@ tdump: Dump the contents of a table to an ASCII file.
   which will be used if the value to be printed includes a blank or tab.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Dump the table <span style="font-family: monospace;">"junk.tab"</span> to STDOUT:
   </p>
-  <pre>
-  
-       tt&gt; tdump junk.tab cdfile=STDOUT pfile=STDOUT datafile=STDOUT
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tdump junk.tab cdfile=STDOUT pfile=STDOUT datafile=STDOUT
+  </pre></div>
   <p>
   2.  Dump <span style="font-family: monospace;">"junk.tab"</span>, but with the order of the columns rearranged:
   </p>
-  <pre>
-  
-       tt&gt; tlcol junk.tab nlist=1 &gt; colnames.lis
-       tt&gt; edit colnames.lis
-          (Rearrange the column names and perhaps delete some of them.)
-       tt&gt; tdump junk.tab columns=@colnames.lis
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tlcol junk.tab nlist=1 &gt; colnames.lis
+  tt&gt; edit colnames.lis
+     (Rearrange the column names and perhaps delete some of them.)
+  tt&gt; tdump junk.tab columns=@colnames.lis
+  </pre></div>
   <p>
   3.  Dump only the first 100 rows of the file <span style="font-family: monospace;">"big.fits"</span>:
   </p>
-  <pre>
-  	tt&gt; tdump big.fits rows="1-100"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tdump big.fits rows="1-100"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tprint, tlcol, tcreate, ranges
   </p>
@@ -193,7 +190,7 @@ tdump: Dump the contents of a table to an ASCII file.
   package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

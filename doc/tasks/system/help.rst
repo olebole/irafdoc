@@ -7,15 +7,15 @@ help: Print online documentation
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   help [template]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_template">
   <dt><b>template</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='template' Line='template' -->
   <dd>A string listing the modules or packages for which help is desired.
@@ -25,7 +25,7 @@ help: Print online documentation
   subpackage) and describing briefly what it is.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_file_template">
   <dt><b>file_template = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='file_template' Line='file_template = no' -->
   <dd>If this switch is set the template is interpreted as a filename matching
@@ -36,28 +36,28 @@ help: Print online documentation
   a conventional text formatter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_all">
   <dt><b>all = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='all' Line='all = no' -->
   <dd>Print help for all help modules matching <i>template</i>, rather than only the
   first one found.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_parameter">
   <dt><b>parameter = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='parameter' Line='parameter = "all"' -->
   <dd>If the value of this parameter is not <span style="font-family: monospace;">"all"</span>, only the help text
   for the given parameter will be printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_section">
   <dt><b>section = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "all"' -->
   <dd>If the value of this parameter is not <span style="font-family: monospace;">"all"</span>, only the help text for the
   given section (e.g. <span style="font-family: monospace;">"usage"</span>, <span style="font-family: monospace;">"description"</span>, <span style="font-family: monospace;">"examples"</span>) will be printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_option">
   <dt><b>option = help</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = help' -->
   <dd>The option parameter specifies the type of help desired, chosen from
@@ -111,32 +111,32 @@ help: Print online documentation
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_page">
   <dt><b>page = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='page' Line='page = yes' -->
   <dd>Pause after every page of output text.  Turning this off for large documents
   speeds up output considerably.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlpp">
   <dt><b>nlpp = 59</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlpp' Line='nlpp = 59' -->
   <dd>The number of lines per page if output is redirected, e.g., to <i>lprint</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lmargin">
   <dt><b>lmargin = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lmargin' Line='lmargin = 1' -->
   <dd>Left margin on output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rmargin">
   <dt><b>rmargin = 72</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rmargin' Line='rmargin = 72' -->
   <dd>Right margin on output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_search">
   <dt><b>search = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='search' Line='search = no' -->
   <dd>If enabled the 
@@ -147,7 +147,7 @@ help: Print online documentation
   parameter is ignored with search turned on.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_home">
   <dt><b>home = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='home' Line='home = ""' -->
   <dd>The home page for the task.  If not set and no 
@@ -160,7 +160,7 @@ help: Print online documentation
   a homepage file which provides links to tasks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_printer">
   <dt><b>printer = <span style="font-family: monospace;">"printer"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='printer' Line='printer = "printer"' -->
   <dd>Default hardcopy printer name. If the <i>value</i> of the parameter is the
@@ -168,13 +168,13 @@ help: Print online documentation
   environment variable <i>printer</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_showtype">
   <dt><b>showtype = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='showtype' Line='showtype = no' -->
   <dd>Add task-type suffix in package menus?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_quickref">
   <dt><b>quickref = <span style="font-family: monospace;">"uparm$quick.ref"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='quickref' Line='quickref = "uparm$quick.ref"' -->
   <dd>Name of the quick-reference file used for searching.  This file is created
@@ -182,7 +182,7 @@ help: Print online documentation
   or when any help database file has been updated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_uifname">
   <dt><b>uifname = <span style="font-family: monospace;">"lib$scr/help.gui"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='uifname' Line='uifname = "lib$scr/help.gui"' -->
   <dd>The user interface file.   This file is what defines the look and behavior
@@ -190,7 +190,7 @@ help: Print online documentation
   of this file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_helpdb">
   <dt><b>helpdb = <span style="font-family: monospace;">"helpdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "helpdb"' -->
   <dd>The filename of the help database to be searched.  If the <i>value</i> of the
@@ -198,7 +198,7 @@ help: Print online documentation
   of the CL environment variable <i>helpdb</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"terminal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "terminal"' -->
   <dd>Output device if the standard output is not redirected.  Allowable values
@@ -239,9 +239,9 @@ help: Print online documentation
   </dl>
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_basic_usage">
   <h3>Basic usage</h3>
-  <!-- BeginSection: 'BASIC USAGE' -->
   <p>
   Despite the complex appearing hidden parameters, <b>help</b> is easy to use
   for simple tasks.  <b>Help</b> is most commonly used to get help on the current
@@ -250,34 +250,34 @@ help: Print online documentation
   For example, if the current package is <b>plot</b>, the command and its output
   might appear as follows:
   </p>
-  <pre>
-  	pl&gt; help
-  		contour - Make a contour plot of an image
-  		  graph - Graph one or more image sections or lists
-  		   pcol - Plot a column of an image
-  		  pcols - Plot the average of a range of image columns
-  		   prow - Plot a line (row) of an image
-  		  prows - Plot the average of a range of image lines
-  		surface - Make a surface plot of an image
-  	pl&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pl&gt; help
+          contour - Make a contour plot of an image
+            graph - Graph one or more image sections or lists
+             pcol - Plot a column of an image
+            pcols - Plot the average of a range of image columns
+             prow - Plot a line (row) of an image
+            prows - Plot the average of a range of image lines
+          surface - Make a surface plot of an image
+  pl&gt;
+  </pre></div>
   <p>
   To get help on a module one supplies the module name as an argument,
   </p>
-  <p>
-  	pl&gt; help graph
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  pl&gt; help graph
+  </pre></div>
   <p>
   and the manual page for the <b>plot.graph</b> program will be printed on the
   terminal.  To get a hardcopy of the manual page on the printer, the output
   may be redirected to the line printer, as follows:
   </p>
-  <p>
-  	pl&gt; help graph | lprint
-  </p>
-  <!-- EndSection:   'BASIC USAGE' -->
+  <div class="highlight-default-notranslate"><pre>
+  pl&gt; help graph | lprint
+  </pre></div>
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The function of the <b>help</b> program is to perform a depth first search
   of the help database <i>helpdb</i>, printing help for all packages and modules
@@ -306,9 +306,9 @@ help: Print online documentation
   matching meta-characters, i.e., <span style="font-family: monospace;">"*?[]"</span>, are permitted in patterns.
   Simple patterns are assumed to be abbreviations.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_gui_operation">
   <h3>Gui operation</h3>
-  <!-- BeginSection: 'GUI OPERATION' -->
   <p>
   The GUI component of the task is a front-end to the IRAF 
   <a href="system.help"><b>help</b></A>
@@ -361,9 +361,9 @@ help: Print online documentation
   parameter) and package menu file will be created in the user's <i>uparm</i>
   directory to speed up help searching and subsequent startups of the task.
   </p>
-  <!-- EndSection:   'GUI OPERATION' -->
+  </section>
+  <section id="s_navigating_the_help_system">
   <h3>Navigating the help system</h3>
-  <!-- BeginSection: 'NAVIGATING THE HELP SYSTEM' -->
   <p>
   When run as a GUI browser <i>HELP</i> works very much like any WWW browser.
   The top panel is a list widget that will always contain a CL package listing,
@@ -423,9 +423,9 @@ help: Print online documentation
   The history list may be cleared except for the current page by selecting
   the <i>Clear History</i> menu item.
   </p>
-  <!-- EndSection:   'NAVIGATING THE HELP SYSTEM' -->
+  </section>
+  <section id="s_browsing_a_help_document">
   <h3>Browsing a help document</h3>
-  <!-- BeginSection: 'BROWSING A HELP DOCUMENT' -->
   <p>
   Once a help page is loaded the middle menubar above the display panel
   will change to activate widgets based on the position within the history
@@ -457,9 +457,9 @@ help: Print online documentation
   currently selected option.  This feature may be disabled by selecting the
   <span style="font-family: monospace;">"Show missing files"</span> item from the main menubar <b>Options</b> menu.
   </p>
-  <!-- EndSection:   'BROWSING A HELP DOCUMENT' -->
+  </section>
+  <section id="s_searching">
   <h3>Searching</h3>
-  <!-- BeginSection: 'SEARCHING' -->
   <p>
   Searching the help database is done by selecting the <b>Search</b> button
   from the main menubar to bring up the search panel.  Users may then enter 
@@ -491,9 +491,9 @@ help: Print online documentation
   automatically, searches can be done either forward or backward through
   the text and may be case insensitive.
   </p>
-  <!-- EndSection:   'SEARCHING' -->
+  </section>
+  <section id="s_user_defined_home_pages">
   <h3>User_defined home pages</h3>
-  <!-- BeginSection: 'USER_DEFINED HOME PAGES' -->
   <p>
   By default the <i>help</i> GUI will start with the online help page displayed
   in the main help window.  The user can change this by setting the task
@@ -504,9 +504,9 @@ help: Print online documentation
   <p>
   HTML files may contain URLs of the form
   </p>
-  <pre>
-  	<b>&lt;a href=</b><i>[package.]task</i><b>&gt;</b><i>url_text</i><b>&lt;/a&gt;</b>
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  <b>&lt;a href=</b><i>[package.]task</i><b>&gt;</b><i>url_text</i><b>&lt;/a&gt;</b>
+  </pre></div>
   <p>
   where <i>url_text</i> is the text to appear in the window and the URL itself
   consists of an optional package and task name delimited by a period.  For
@@ -514,16 +514,16 @@ help: Print online documentation
   <a href="onedspec.splot"><b>splot</b></A>
   task in a document one would use the URL
   </p>
-  <pre>
-  	<b>&lt;a href=onedspec.splot&gt;splot&lt;/a&gt;</b>
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  <b>&lt;a href=onedspec.splot&gt;splot&lt;/a&gt;</b>
+  </pre></div>
   <p>
   In this way users can create a homepage which serves as a <i>"bookmark"</i>
   file or index of shortcuts to the most commonly accessed help pages.
   </p>
-  <!-- EndSection:   'USER_DEFINED HOME PAGES' -->
+  </section>
+  <section id="s_loading_files">
   <h3>Loading files</h3>
-  <!-- BeginSection: 'LOADING FILES' -->
   <p>
   Text files may be loaded on the command line when starting the task by
   specifying the filename and setting the
@@ -547,9 +547,9 @@ help: Print online documentation
   the panel.  Filenames or directories may be entered directly using the
   <b>Selection</b> box at the bottom of the panel.
   </p>
-  <!-- EndSection:   'LOADING FILES' -->
+  </section>
+  <section id="s_saving_files">
   <h3>Saving files</h3>
-  <!-- BeginSection: 'SAVING FILES' -->
   <p>
   Once a file has been loaded in the browser it may be saved to disk as 
   either <i>source</i> (i.e. the original LROFF file if that was converted
@@ -570,9 +570,9 @@ help: Print online documentation
   occur automatically.  Users can overwrite existing files by selecting the
   <i>Options</i> toggle at the bottom of the panel.
   </p>
-  <!-- EndSection:   'SAVING FILES' -->
+  </section>
+  <section id="s_hardcopy_output_and_saving_disk_files_">
   <h3>Hardcopy output and saving disk files.</h3>
-  <!-- BeginSection: 'HARDCOPY OUTPUT AND SAVING DISK FILES.' -->
   <p>
   Help pages may be output to any configured IRAF printer by selecting the
   main menubar <b>Print</b> button to bring up the print panel.  Task help pages
@@ -593,9 +593,9 @@ help: Print online documentation
   formatted PostScript.  The choice of formats is dictated by the type of file
   being displayed (e.g. you cannot save PostScript of a program source).
   </p>
-  <!-- EndSection:   'HARDCOPY OUTPUT AND SAVING DISK FILES.' -->
+  </section>
+  <section id="s_lroff_directive_extensions_for_html">
   <h3>Lroff directive extensions for html</h3>
-  <!-- BeginSection: 'LROFF DIRECTIVE EXTENSIONS FOR HTML' -->
   <p>
   To better support HTML links within documents and to other help pages two
   new directives have been added to the LROFF text formatter.  These are
@@ -603,11 +603,10 @@ help: Print online documentation
   to specify a name (an HTML <i>NAME</i> directive).  The syntax for these are
   as follows:
   </p>
-  <pre>
-  
-  	<b>.hn</b><i> &lt;name&gt;</i>
-  	<b>.hr</b><i> &lt;link&gt; &lt;text&gt; </i>
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  <b>.hn</b><i> &lt;name&gt;</i>
+  <b>.hr</b><i> &lt;link&gt; &lt;text&gt; </i>
+  </pre></div>
   <p>
   where <i>&lt;name&gt;</i> is the destination name of an internal link, <i>&lt;link&gt;</i>
   is the URL of the link to be created, and <i>&lt;text&gt;</i> is the text to be
@@ -622,131 +621,118 @@ help: Print online documentation
   plain text or PostScript.
   </p>
   <span id="examples_target"></span>
-  <!-- EndSection:   'LROFF DIRECTIVE EXTENSIONS FOR HTML' -->
+  </section>
+  <section id="s_gui_examples">
   <h3>Gui examples</h3>
-  <!-- BeginSection: 'GUI EXAMPLES' -->
   <p>
   1) Start <i>help</i> as a GUI browser:
   </p>
-  <pre>
-  
-  	cl&gt; help dev=gui
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help dev=gui
+  </pre></div>
   <p>
   2) Begin by searching for the phrase 'gauss', tasks and packages may be
   selected from the search panel which will appear when the task starts:
   </p>
-  <pre>
-  
-  	cl&gt; help gauss dev=gui search+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help gauss dev=gui search+
+  </pre></div>
   <p>
   3) Load an LROFF help page in the browser at startup
   </p>
-  <pre>
-  
-  	cl&gt; help mytask.hlp dev=gui file+
-  </pre>
-  <!-- EndSection:   'GUI EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help mytask.hlp dev=gui file+
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Print the help text for the program <i>delete</i> in the package
   <i>system</i> (output will be directed to the terminal):
   </p>
-  <pre>
-  	cl&gt; help system.delete
+  <div class="highlight-default-notranslate"><pre>
+          cl&gt; help system.delete
   or
-  	cl&gt; help delete
+          cl&gt; help delete
   or
-  	cl&gt; help del
-  </pre>
+          cl&gt; help del
+  </pre></div>
   <p>
   2. Print the help text on the line printer:
   </p>
-  <pre>
-  
-  	cl&gt; help delete | lprint
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help delete | lprint
+  </pre></div>
   <p>
   3. Print help for the current package:
   </p>
-  <pre>
-  
-  	cl&gt; help
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help
+  </pre></div>
   <p>
   4. Print the usage section of all modules in the package <b>images</b>:
   </p>
-  <pre>
-  
-  	cl&gt; help images.* section=usage
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help images.* section=usage
+  </pre></div>
   <p>
   5. Print a directory of all help blocks in the packages <b>clpackage</b>
   and <b>clio</b> (and any others whose names begin with the string <span style="font-family: monospace;">"cl"</span>):
   </p>
-  <pre>
-  
-  	cl&gt; help cl* op=dir
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help cl* op=dir
+  </pre></div>
   <p>
   6. Print a directory of each package in the database (useful for getting an
   overview of the contents of a help database):
   </p>
-  <pre>
-  
-  	cl&gt; help * op=dir
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help * op=dir
+  </pre></div>
   <p>
   7. Print the source for all of the string utilities in the system library
   package <b>fmtio</b>:
   </p>
-  <pre>
-  
-  	cl&gt; help fmtio.str* op=source
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help fmtio.str* op=source
+  </pre></div>
   <p>
   8. Find all tasks that delete something:
   </p>
-  <pre>
-  
-  	cl&gt; help * | match delete
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help * | match delete
+  </pre></div>
   <p>
   9. Print the manual pages for the <i>help</i> and <i>lprint</i> tasks on the
   default printer device:
   </p>
-  <pre>
-  
-  	cl&gt; help help,lprint | lpr
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help help,lprint | lpr
+  </pre></div>
   <p>
   10. Capture the manual page for task <i>hedit</i> in a text file, in a form
   suitable for printing on any device.
   </p>
-  <pre>
-  
-  	cl&gt; help hedit dev=text &gt; hedit.txt
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help hedit dev=text &gt; hedit.txt
+  </pre></div>
   <p>
   11. Print the manual page for task <i>hedit</i> as a Postscript file. 
   </p>
-  <pre>
-  
-  	cl&gt; help hedit dev=ps | lprint
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help hedit dev=ps | lprint
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   On some systems, typing the next command keystroke before the end-of-page
   prompt is printed may result in the character being echoed (messing up the
   output) and then ignored when raw mode is enabled for the prompt.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <a href="system.references">references</A>
   <p>
   ,
@@ -756,11 +742,13 @@ help: Print online documentation
   ,
   <a href="system.hdbexamine">hdbexamine</A>
   ,
+  <a href="system.mkmanpage">mkmanpage</A>
+  ,
   <a href="system.lroff">lroff</A>
   , the online task help documents.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'BASIC USAGE' 'DESCRIPTION' 'GUI OPERATION' 'NAVIGATING THE HELP SYSTEM' 'BROWSING A HELP DOCUMENT' 'SEARCHING' 'USER_DEFINED HOME PAGES' 'LOADING FILES' 'SAVING FILES' 'HARDCOPY OUTPUT AND SAVING DISK FILES.' 'LROFF DIRECTIVE EXTENSIONS FOR HTML' 'GUI EXAMPLES' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

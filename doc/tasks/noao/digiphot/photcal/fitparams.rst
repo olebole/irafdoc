@@ -7,15 +7,15 @@ fitparams: Compute the parameters of the transformation equations
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   fitparams observations catalogs config parameters
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_observations">
   <dt><b>observations</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observations' Line='observations' -->
   <dd>The list of files containing the observational data.  Observations files are
@@ -26,7 +26,7 @@ fitparams: Compute the parameters of the transformation equations
   the description section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catalogs">
   <dt><b>catalogs</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs' -->
   <dd>The list of files containing the catalog data.  Catalog files are
@@ -39,7 +39,7 @@ fitparams: Compute the parameters of the transformation equations
   the description section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_config">
   <dt><b>config</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='config' Line='config' -->
   <dd>The name of the configuration file. The configuration file is a text file
@@ -49,7 +49,7 @@ fitparams: Compute the parameters of the transformation equations
   is given in the configuration file section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_parameters">
   <dt><b>parameters</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters' -->
   <dd>The name of the output database file.
@@ -62,7 +62,7 @@ fitparams: Compute the parameters of the transformation equations
   last record written takes precedence.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weighting">
   <dt><b>weighting = <span style="font-family: monospace;">"uniform"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "uniform"' -->
   <dd>The following weighting schemes are supported.
@@ -100,7 +100,7 @@ fitparams: Compute the parameters of the transformation equations
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_addscatter">
   <dt><b>addscatter = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='addscatter' Line='addscatter = yes' -->
   <dd>Add an additional scatter term to the weights if the average error in the fit
@@ -113,7 +113,7 @@ fitparams: Compute the parameters of the transformation equations
   may wish to turn off <i>addscatter</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tolerance">
   <dt><b>tolerance = 3.0e-5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 3.0e-5' -->
   <dd>The convergence tolerance for the non-linear least squares fit.
@@ -122,7 +122,7 @@ fitparams: Compute the parameters of the transformation equations
   iteration to iteration is less than <i>tolerance</i>. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxiter">
   <dt><b>maxiter = 15</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 15' -->
   <dd>The maximum number of iterations for the non-linear least squares fit.
@@ -130,7 +130,7 @@ fitparams: Compute the parameters of the transformation equations
   if the fit has not converged.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nreject">
   <dt><b>nreject = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0' -->
   <dd>The maximum number of bad data rejection iterations. If <i>nreject</i> is
@@ -140,7 +140,7 @@ fitparams: Compute the parameters of the transformation equations
   to zero.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 3.0, high_reject = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0' -->
   <dd>The lower and upper rejection limits in units of the rms of the fit.
@@ -149,14 +149,14 @@ fitparams: Compute the parameters of the transformation equations
   are zero.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.0' -->
   <dd>The default rejection growing radius. Points within a distance given
   by this parameter of any rejected point are also rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Fit equations interactively ? When this parameter is <i>yes</i>, the user will 
@@ -164,7 +164,7 @@ fitparams: Compute the parameters of the transformation equations
   process.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"STDOUT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "STDOUT"' -->
   <dd>The name of the output text file to which selected detailed results of the
@@ -173,7 +173,7 @@ fitparams: Compute the parameters of the transformation equations
   output is appended to logfile which can therefor become quite large.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_log_unmatched">
   <dt><b>log_unmatched = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='log_unmatched' Line='log_unmatched = yes' -->
   <dd>Write the list of observations with no corresponding catalog entries to
@@ -182,21 +182,21 @@ fitparams: Compute the parameters of the transformation equations
   mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_log_fit">
   <dt><b>log_fit = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='log_fit' Line='log_fit = no' -->
   <dd>Write the error analysis of the final fit in logfile? This option is
   useful for users who like to run fitparams in non-interactive mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_log_results">
   <dt><b>log_results = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='log_results' Line='log_results = no' -->
   <dd>Write the results of the current fit to logfile? This option is
   useful for users who like to run fitparams in non-interactive mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catdir">
   <dt><b>catdir = <span style="font-family: monospace;">")_.catdir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdir' Line='catdir = ")_.catdir"' -->
   <dd>The directory containing the supported standard star catalogs.
@@ -207,14 +207,14 @@ fitparams: Compute the parameters of the transformation equations
   and standard star catalog directory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device. 
   This parameter is used only if <b>interactive=yes</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input. When null the standard graphics cursor is used.
@@ -222,9 +222,9 @@ fitparams: Compute the parameters of the transformation equations
   This parameter is used only if <b>interactive=yes</b>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   FITPARAMS parses the configuration file <i>config</i> checking for
   grammar and syntax errors.  FITPARAMS attempts to recover from any
@@ -277,9 +277,9 @@ fitparams: Compute the parameters of the transformation equations
   of the interactive non-linear least squares package INLFIT.
   INLFIT is described more fully below. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_the_configuration_file">
   <h3>The configuration file</h3>
-  <!-- BeginSection: 'THE CONFIGURATION FILE' -->
   <p>
   The configuration file is a text file which specifies how the data is
   organized in the input files and how the transformation
@@ -338,24 +338,24 @@ fitparams: Compute the parameters of the transformation equations
   <p>
   Example 1. Configuration file for reducing UBV photoelectric photometry.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # Configuration file for reducing UBV photoelectric photometry.
   
   catalog
   
-  V	2		# V magnitude
-  BV	3		# B - V color
-  UB	4		# U - B color
+  V       2               # V magnitude
+  BV      3               # B - V color
+  UB      4               # U - B color
   
   observation
   
-  v	2		# v instrumental magnitude
-  b 	3		# b instrumental magnitude
-  u 	4		# u instrumental magnitude
-  ev	5		# error in v instrumental magnitude
-  eb 	6		# error in b instrumental magnitude
-  eu 	7		# error in u instrumental magnitude
-  X       8		# airmass		
+  v       2               # v instrumental magnitude
+  b       3               # b instrumental magnitude
+  u       4               # u instrumental magnitude
+  ev      5               # error in v instrumental magnitude
+  eb      6               # error in b instrumental magnitude
+  eu      7               # error in u instrumental magnitude
+  X       8               # airmass
   
   transformation
   
@@ -373,32 +373,31 @@ fitparams: Compute the parameters of the transformation equations
   UBFIT: UB = u1 - u2 * X + u3 * (u - b)
          weight (UBFIT) = 1.0 / (eu ** 2 + eb ** 2)
          plot(UBFIT) = UB, UB - (u1 - u2 * X + u3 * (u - b))
-  </pre>
+  </pre></div>
   <p>
   Example 2. Configuration file for reducing UBV CCD photometry.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   catalog
   
-  V		2	# V magnitude
-  BV		3	# B - V color
-  UB		4	# U - B color
-  error(V)	5	# error in V magnitude
-  error(BV)	6	# error in B-V color
-  error(UB)	7	# error in U-B color
+  V               2       # V magnitude
+  BV              3       # B - V color
+  UB              4       # U - B color
+  error(V)        5       # error in V magnitude
+  error(BV)       6       # error in B-V color
+  error(UB)       7       # error in U-B color
   
   observation
   
-  m1		2	# filter 1 instrumental magnitude
-  error(m1)	3	# error in filter 1 instrumental magnitude
-  Xm1		4	# airmass of filter 1  observation
-  m2	 	6	# filter 2 instrumental magnitude
-  error(m2) 	7	# error in filter 2 instrumental magnitude
-  Xm2		8	# airmass of filter 2 observation
-  m3	 	10	# filter 3 instrumental magnitude
-  error(m3) 	11	# error in filter 3 instrumental magnitude
-  Xm3	        12	# airmass of filter 3 observation		
-  
+  m1              2       # filter 1 instrumental magnitude
+  error(m1)       3       # error in filter 1 instrumental magnitude
+  Xm1             4       # airmass of filter 1  observation
+  m2              6       # filter 2 instrumental magnitude
+  error(m2)       7       # error in filter 2 instrumental magnitude
+  Xm2             8       # airmass of filter 2 observation
+  m3              10      # filter 3 instrumental magnitude
+  error(m3)       11      # error in filter 3 instrumental magnitude
+  Xm3             12      # airmass of filter 3 observation
   
   transformation
   
@@ -410,10 +409,10 @@ fitparams: Compute the parameters of the transformation equations
   
   fit   v1 = 25.0, v2=0.17, v3=-0.02
   VFIT: m1 = v1 + V + v2 * Xm1 + v3 * BV
-  </pre>
-  <!-- EndSection:   'THE CONFIGURATION FILE' -->
+  </pre></div>
+  </section>
+  <section id="s_the_non_linear_interactive_fitting_package">
   <h3>The non-linear interactive fitting package</h3>
-  <!-- BeginSection: 'THE NON-LINEAR INTERACTIVE FITTING PACKAGE' -->
   <p>
   DESCRIPTION
   </p>
@@ -453,15 +452,13 @@ fitparams: Compute the parameters of the transformation equations
   algorithm to fit the data. Detailed descriptions of the algorithm can
   be found in the following two references.
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   1. Bevington, P.R., 1969, Data Reduction and Error Analysis for the
      Physical Sciences, Chapter 11, page 235.
   
   2. Press, W.H. et al., 1986, Numerical Recipes: The Art of Scientific
      Computing, Chapter 14, page 523.
-  
-  </pre>
+  </pre></div>
   <p>
   CURSOR COMMANDS
   </p>
@@ -476,7 +473,7 @@ fitparams: Compute the parameters of the transformation equations
   is printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_c">
   <dt><b>c</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='c' Line='c' -->
   <dd>The id, coordinates of the data point nearest the cursor, along with the
@@ -484,21 +481,21 @@ fitparams: Compute the parameters of the transformation equations
   line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_d">
   <dt><b>d</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='d' Line='d' -->
   <dd>The data point nearest the cursor and not previously deleted is marked with an
   X. It will not be used in further fits until it is undeleted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_f">
   <dt><b>f</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='f' Line='f' -->
   <dd>The function is fit to the data and the fit is graphed using the default
   plot type.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_g">
   <dt><b>g</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='g' Line='g' -->
   <dd>Redefine the graph keys <span style="font-family: monospace;">"h-l"</span> from their defaults. A prompt is issued for the
@@ -506,18 +503,16 @@ fitparams: Compute the parameters of the transformation equations
   plotted at which point the user must enter the x and y axis data to plot,
   delimited by a comma. The data types are the following (they can be
   abbreviated to up to three characters).
-  <pre>
-  
-      function    Dependent variable or function
-      fit         Fitted value
-      residuals   Residuals (function - fit)
-      ratio       Ratio (function / fit)
-      nonlinear   Nonlinear component
-      identifier  Independent variable named "identifier" (if defined)
-      var n       Independent variable number "n"
-      user n      User defined plot equation "n"  (if defined)
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  function    Dependent variable or function
+  fit         Fitted value
+  residuals   Residuals (function - fit)
+  ratio       Ratio (function / fit)
+  nonlinear   Nonlinear component
+  identifier  Independent variable named "identifier" (if defined)
+  var n       Independent variable number "n"
+  user n      User defined plot equation "n"  (if defined)
+  </pre></div>
   The application program can define independent variable names and user plot 
   functions, aside from the standard options provided. If variable names are 
   supplied, the user can reference them by their names. Otherwise they can be 
@@ -530,7 +525,7 @@ fitparams: Compute the parameters of the transformation equations
   number (the user must know the equation order in this case). 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_h">
   <dt><b>h, i, j, k, l</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='h' Line='h, i, j, k, l' -->
   <dd>By default each key produces a different graph. The graphs are described by
@@ -538,37 +533,35 @@ fitparams: Compute the parameters of the transformation equations
   keys,
   which may be redefined by the application program or interactively by using 
   the <span style="font-family: monospace;">'g'</span> key, are the following.
-  <pre>
-  
-          h       function, fit
-          i       function, residuals
-          j       function, ratio
-          k       var 1, function
-          l       user 1, user 2 (default)
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  h       function, fit
+  i       function, residuals
+  j       function, ratio
+  k       var 1, function
+  l       user 1, user 2 (default)
+  </pre></div>
   The initial graph key, if not redefined by the application program is <span style="font-family: monospace;">'h'</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='o' Line='o' -->
   <dd>Overplot the next fit provided the graph format has not changed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_q">
   <dt><b>q</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='q' Line='q' -->
   <dd>Exit from the interactive curve fitting package.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_r">
   <dt><b>r</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='r' Line='r' -->
   <dd>Redraw the current graph.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_t">
   <dt><b>t</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='t' Line='t' -->
   <dd>Toggle fit overplotting on and off. If this option is on the data
@@ -576,7 +569,7 @@ fitparams: Compute the parameters of the transformation equations
   The fitted values are marked using boxes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_u">
   <dt><b>u</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='u' Line='u' -->
   <dd>Undelete the data point nearest the cursor which has been previously deleted.
@@ -584,7 +577,7 @@ fitparams: Compute the parameters of the transformation equations
   program before calling inlfit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_w">
   <dt><b>w [key]</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='w' Line='w [key]' -->
   <dd>Set the graph window or data range along each axis to be graphed.. This is a 
@@ -593,7 +586,7 @@ fitparams: Compute the parameters of the transformation equations
   typing <span style="font-family: monospace;">"help gtools"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_I">
   <dt><b>I</b></dt>
   <!-- Sec='THE NON-LINEAR INTERACTIVE FITTING PACKAGE' Level=0 Label='I' Line='I' -->
   <dd>Interrupt the task immediately without saving the current fit.
@@ -744,77 +737,76 @@ fitparams: Compute the parameters of the transformation equations
   <dd>Print help for the general IRAF graphics options.
   </dd>
   </dl>
-  <!-- EndSection:   'THE NON-LINEAR INTERACTIVE FITTING PACKAGE' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Fit a set of UBV standard star data non-interactively using the automatic
   bad data rejection algorithm and the configuration file shown in example
   2 under the configuration file section.
   </p>
-  <pre>
-      ph&gt; fitparams m92.obs m92.cat m92.config m92.fit nreject=10 inter-
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; fitparams m92.obs m92.cat m92.config m92.fit nreject=10 inter-
   
-  	... compute valued for the parameters in all the transformation
-  	    equations
+      ... compute valued for the parameters in all the transformation
+          equations
   
-      ph&gt; page m92.fit
+  ph&gt; page m92.fit
   
-  	... check that the fitted parameter values are reasonable
+      ... check that the fitted parameter values are reasonable
   
-      ph&gt; invertfit m92.obs m92.cat m92.config m92.fit m92.out
+  ph&gt; invertfit m92.obs m92.cat m92.config m92.fit m92.out
   
-  	... evaluate the transformation equations for all the standard
-  	    stars
-  </pre>
+      ... evaluate the transformation equations for all the standard
+          stars
+  </pre></div>
   <p>
   2. Fit the same set of data interactively but deleting bad points by
   eye instead of using the automatic rejection algorithm.
   </p>
-  <pre>
-      ph&gt; fitparams m92.obs m92.cat m92.config m92.fit 
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; fitparams m92.obs m92.cat m92.config m92.fit
   
-  	... a default plot of the UFIT equation comes up on the screen
-  	    (the fit or right-hand side of the equation is plotted
-  	    versus the function or left-hand side of the equation)
+      ... a default plot of the UFIT equation comes up on the screen
+          (the fit or right-hand side of the equation is plotted
+          versus the function or left-hand side of the equation)
   
-  	... type <span style="font-family: monospace;">'?'</span> to show the available commands
+      ... type <span style="font-family: monospace;">'?'</span> to show the available commands
   
-  	... type <span style="font-family: monospace;">'i'</span> to plot the residuals versus the function (LHS of
-  	    the equation)
+      ... type <span style="font-family: monospace;">'i'</span> to plot the residuals versus the function (LHS of
+          the equation)
   
-  	... delete bad points with the <span style="font-family: monospace;">'d'</span> key and refit using the <span style="font-family: monospace;">'f'</span>
-  	    key
+      ... delete bad points with the <span style="font-family: monospace;">'d'</span> key and refit using the <span style="font-family: monospace;">'f'</span>
+          key
   
-  	... check for any dependencies of the residuals on the color
-  	    term by reprogramming the graph key <span style="font-family: monospace;">'l'</span> using the <span style="font-family: monospace;">'g'</span> key 
-  	    (type <span style="font-family: monospace;">'g'</span> to enter the reprogramming menu, <span style="font-family: monospace;">'l'</span> after the
-  	    prompt to reprogram the <span style="font-family: monospace;">'l'</span> key, and "UB, residuals" in
-  	    response to the question of which axes to plot
+      ... check for any dependencies of the residuals on the color
+          term by reprogramming the graph key <span style="font-family: monospace;">'l'</span> using the <span style="font-family: monospace;">'g'</span> key
+          (type <span style="font-family: monospace;">'g'</span> to enter the reprogramming menu, <span style="font-family: monospace;">'l'</span> after the
+          prompt to reprogram the <span style="font-family: monospace;">'l'</span> key, and "UB, residuals" in
+          response to the question of which axes to plot
   
-  	... list the plot windowing menu by typing <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'?'</span>
-  	    after the "window:" prompt
+      ... list the plot windowing menu by typing <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'?'</span>
+          after the "window:" prompt
   
-  	... type <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'z'</span> after the ":window" prompt to zoom
-  	    up on an interesting area in the plot, a <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'a'</span>
-  	    will return to normal scaling
+      ... type <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'z'</span> after the ":window" prompt to zoom
+          up on an interesting area in the plot, a <span style="font-family: monospace;">'w'</span> followed by <span style="font-family: monospace;">'a'</span>
+          will return to normal scaling
   
-  	... type <span style="font-family: monospace;">'q'</span> to quit the fit for this equation 
+      ... type <span style="font-family: monospace;">'q'</span> to quit the fit for this equation
   
-  	... answer "yes" to the question about saving the fit
+      ... answer "yes" to the question about saving the fit
   
-  	... proceed to the next fit by typing "next" in response to the
-  	    prompt
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... proceed to the next fit by typing "next" in response to the
+          prompt
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   chkconfig,mkconfig,gtools,inlfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'THE CONFIGURATION FILE' 'THE NON-LINEAR INTERACTIVE FITTING PACKAGE' 'EXAMPLES' 'SEE ALSO'  -->
   

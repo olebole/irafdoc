@@ -7,15 +7,15 @@ flprcache: Flush the process cache
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   flprcache process
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_process">
   <dt><b>process</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='process' Line='process' -->
   <dd>Either the task number as printed by <i>prcache</i>, or the name of one
@@ -23,9 +23,9 @@ flprcache: Flush the process cache
   are flushed from the cache (unless they are locked in the cache).
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   When an executable task is first run, the CL spawns the associated executable
   file as a subprocess and then runs the task.  When the task completes the
@@ -44,34 +44,34 @@ flprcache: Flush the process cache
   Processes which have been <span style="font-family: monospace;">"locked"</span> in the cache with <i>prcache</i> are
   not flushed unless explicitly named.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Run <i>prcache</i> to get the process slot number, then flush the process
   by slot number.
   </p>
-  <p>
-  	cl&gt; flpr 5
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flpr 5
+  </pre></div>
   <p>
   2. Flush all idle processes which are not locked in the cache.
   </p>
-  <p>
-  	cl&gt; flpr
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flpr
+  </pre></div>
   <p>
   3. Flush the <span style="font-family: monospace;">"x_system.e"</span> process by naming the <span style="font-family: monospace;">"directory"</span> task, which
   is contained in that process.  Lock a fresh copy of the process in the cache.
   This initializes the process, and may be necessary if a system task is
   interrupted at the wrong time.
   </p>
-  <p>
-  	cl&gt; flpr dir; prc dir
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flpr dir; prc dir
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   In some circumstances the CL may believe that a process in the
   process cache is running when this is not the case.  The CL will
@@ -82,14 +82,14 @@ flprcache: Flush the process cache
   The user may eventually be required to kill the sub-process using
   operating system facilities.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   prcache
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,48 +7,48 @@ rotate: Rotate and shift a list of 2-D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rotate input output rotation
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be rotated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rotation">
   <dt><b>rotation</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rotation' Line='rotation' -->
   <dd>Angle of rotation of the image in degrees. Positive angles will rotate
   the image counter-clockwise from the x axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xin">
   <dt><b>xin = INDEF, yin = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xin' Line='xin = INDEF, yin = INDEF' -->
   <dd>The origin of the rotation in pixels. Xin and yin default to the center of
   the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xout">
   <dt><b>xout = INDEF, yout = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xout' Line='xout = INDEF, yout = INDEF' -->
   <dd>The origin of the output image. Xout and yout default to the center of the
   output image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = INDEF, nlines = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = INDEF, nlines = INDEF' -->
   <dd>The number of columns and rows in the output image. The default is to
@@ -58,7 +58,7 @@ rotate: Rotate and shift a list of 2-D images
   any origin shifts.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolant">
   <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The interpolant. The options are the following:
@@ -130,7 +130,7 @@ rotate: Rotate and shift a list of 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The choices are:
@@ -160,13 +160,13 @@ rotate: Rotate and shift a list of 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The value of the constant for constant boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxblock">
   <dt><b>nxblock = 512, nyblock = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512' -->
   <dd>If the dimensions of the output image are less than nxblock and nyblock
@@ -174,29 +174,28 @@ rotate: Rotate and shift a list of 2-D images
   segments of the image are rotated.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   ROTATE rotates the list of images in input by rotation degrees and writes
   the output to the images specified by output. The origins of the input and
   output images may be specified by setting xin, yin, xout and yout. The
   transformation is described below.
   </p>
-  <pre>
-      xt = (x - xin) * cos (rotation) - (y - yin) * sin (rotation) + xout
-      yt = (x - xin) * sin (rotation) + (y - yin) * cos (rotation) + yout
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  xt = (x - xin) * cos (rotation) - (y - yin) * sin (rotation) + xout
+  yt = (x - xin) * sin (rotation) + (y - yin) * cos (rotation) + yout
+  </pre></div>
   <p>
   The output image gray levels are determined by interpolating in the input
   image at the positions of the transformed output pixels. ROTATE uses the
   routines in the 2-D interpolation package.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1. Rotate an image 45 degrees around its center.
   
      cl&gt; rotate m51 m51r45 45.0
@@ -218,18 +217,18 @@ rotate: Rotate and shift a list of 2-D images
      and image section notation.
   
      cl&gt; imcopy m92[-*,-*] m92d180
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   It requires approximately 70 and 290 cpu seconds to rotate a 512 by 512
   real image using bilinear and biquintic interpolation respectively
   (Vax 11/750 fpa).
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The interpolation operation is done in real arithmetic. However the output
   type of the pixels is set equal to the input type. This can lead to truncation
@@ -239,14 +238,14 @@ rotate: Rotate and shift a list of 2-D images
   Simple 90, 180, 270 etc degree rotations are best performed using the
   imtranspose task and/or image section notation.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imtranspose, imshift, magnify, lintran, geotran, geomap
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

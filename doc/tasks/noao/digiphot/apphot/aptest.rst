@@ -7,15 +7,15 @@ aptest: Run basic tests on the apphot package tasks
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   aptest imname
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_imname">
   <dt><b>imname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imname' Line='imname' -->
   <dd>The name of the output test image. The actual test image is stored in fits
@@ -23,7 +23,7 @@ aptest: Run basic tests on the apphot package tasks
   APTEST will exit with a warning message.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aplogfile">
   <dt><b>aplogfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aplogfile' Line='aplogfile = ""' -->
   <dd>The name of the output log file. By default all the text output is logged
@@ -31,7 +31,7 @@ aptest: Run basic tests on the apphot package tasks
   exit with a warning message.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_applotfile">
   <dt><b>applotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='applotfile' Line='applotfile = ""' -->
   <dd>The name of the output log file. By default all the plot output is logged in
@@ -39,9 +39,9 @@ aptest: Run basic tests on the apphot package tasks
   exit with a warning message.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   APTEST is a simple script which exercises each of the tasks in the APPHOT
   package in turn. At startup APTEST reads a small fits image stored in the
@@ -52,44 +52,39 @@ aptest: Run basic tests on the apphot package tasks
   <i>aplogfile</i>, and spools the plot output from the RADPROF task to the plot
   metacode file <i>applotfile</i>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Check to see that all the APPHOT tasks are functioning correctly.
   </p>
-  <pre>
-  	ap&gt; apphot
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; apphot
   
-  	... load the apphot package
   
-  	ap&gt; aptest testim
+  ap&gt; aptest testim
   
-  	... run the test script
   
-  	ap&gt; lprint testim.log
+  ap&gt; lprint testim.log
   
-  	... print the text output
   
-  	ap&gt; gkidir testim.plot
+  ap&gt; gkidir testim.plot
   
-  	... list the contents of the plot file
   
-  	ap&gt; gkiextract testim.plot 1-N | stdplot
+  ap&gt; gkiextract testim.plot 1-N | stdplot
   
-  	... send the plots to the plotter
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

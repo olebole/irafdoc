@@ -7,15 +7,15 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   flat1d input output
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Calibration images to be used to make the flat fields.  The images may
@@ -23,7 +23,7 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   modified in the output image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Flat field images to be created or modified.  The number of output images
@@ -31,26 +31,26 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   it is first created and initialized to unit response.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_axis">
   <dt><b>axis = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='axis' Line='axis = 1' -->
   <dd>Axis along which the one dimensional fitting is done.  Axis 1 corresponds
   to fitting the image lines and axis 2 corresponds to fitting the columns.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Set the fitting parameters interactively?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Lines or columns to be used in the fits.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Number of sample points to combined to create a fitting point.
@@ -58,7 +58,7 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   a median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = spline3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
   <dd>Function to be fit to the image lines or columns.  The functions are
@@ -67,53 +67,53 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   may be abbreviated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>The order of the polynomials or the number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 2.5, high_reject = 2.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 2.5, high_reject = 2.5' -->
   <dd>Low and high rejection limits in units of the residual sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 1.' -->
   <dd>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minflat">
   <dt><b>minflat = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minflat' Line='minflat = 0.' -->
   <dd>When the fitted value is less than the value of this parameter the flat
   field value is set to unity.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device for interactive graphics output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Flat fields are created containing only the small scale variations in the
   calibration images.  The large scale variations in the images are modeled
@@ -151,32 +151,34 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   parameter <i>minflat</i> and the deletion of the parameter <i>type</i>
   which is always <span style="font-family: monospace;">"ratio"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Create a flat field from the calibration image <span style="font-family: monospace;">"quartz"</span> with the
   spectrum running along the lines.  Exclude the first and last columns,
   use a spline fit of 25 pieces (a width of 32 pixels over 800 columns),
   and set grow to 4 pixels.
   </p>
-  <pre>
-  	cl&gt; flat1d quartz flat order=25 sample="2:799" grow=4 \<br>
-  	&gt;&gt;&gt; interactive=no
-  
-  			or
-  
-  	cl&gt; flat1d quartz[2:799,*] flat order=25 grow=4 inter-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flat1d quartz flat order=25 sample="2:799" grow=4 \<br>
+  &gt;&gt;&gt; interactive=no
+  </pre></div>
+  <p>
+  or
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flat1d quartz[2:799,*] flat order=25 grow=4 inter-
+  </pre></div>
   <p>
   The fitting parameters may be set interactively in which case the fitting
   parameters need not be specified.  The command would be
   </p>
-  <pre>
-  	cl&gt; flat1d quartz flat
-  	quartz: Fit column = 1 10
-  	quartz: Fit column =
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flat1d quartz flat
+  quartz: Fit column = 1 10
+  quartz: Fit column =
+  </pre></div>
   <p>
   The user selects sample columns to be fit interactively with the interactive
   curve fitting package.  When satisfied with the fit parameters
@@ -190,43 +192,43 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   containing the output images is also created.  For
   example the files might contain
   </p>
-  <pre>
-  	  File quartzs			File flats
-  	_______________			__________
-  	quartz[23:40,*]			   flat
-  	quartz[55:61,*]			   flat
-  	quartz[73:84,*]			   flat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+    File quartzs                  File flats
+  _______________                 __________
+  quartz[23:40,*]                    flat
+  quartz[55:61,*]                    flat
+  quartz[73:84,*]                    flat
+  </pre></div>
   <p>
   A flat field for the slits is then obtained with the command
   </p>
-  <p>
-  	cl&gt; flat1d @quartzs flats axis=2
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flat1d @quartzs flats axis=2
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_FLAT1D">
   <dt><b>FLAT1D V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FLAT1D' Line='FLAT1D V2.10.3' -->
   <dd>The image header keyword <span style="font-family: monospace;">"CCDMEAN = 1."</span> is now added or updated.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The creation of multi-slit files and the need for an equal number of
   repeated output files is annoying.  It will be worked on in the future.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   fit1d, icfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,21 +7,21 @@ ofixpix: Fix bad pixels using text file (proto V2.10.4)
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ofixpix images badpixels
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>List of two dimensional images to be modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_badpixels">
   <dt><b>badpixels</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='badpixels' Line='badpixels' -->
   <dd>File containing the regions of bad pixels.  A region is described by
@@ -29,15 +29,15 @@ ofixpix: Fix bad pixels using text file (proto V2.10.4)
   of the bad region and the first and last lines of the bad region.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print the image names and the bad pixel regions?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Bad pixel regions in the list of two dimensional images are replaced by
   linear interpolation using pixels bordering the bad pixel regions.
@@ -82,37 +82,37 @@ ofixpix: Fix bad pixels using text file (proto V2.10.4)
   is used.  The verbose parameter may be used to produce of log of the pixel
   modifications.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   A detector has bad lines 10 and 25 to 27 and a partial bad column
   at column 31 between lines 35 and 50.  A bad region file is created containing
   the lines
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1 100 10 10
   1 100 25 27
   31 31 35 50
-  </pre>
+  </pre></div>
   <p>
   The set of images <span style="font-family: monospace;">"image*"</span> are fixed by:
   </p>
-  <p>
-  	cl&gt; ofixpix image* badpixfile
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ofixpix image* badpixfile
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_OFIXPIX">
   <dt><b>OFIXPIX V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='OFIXPIX' Line='OFIXPIX V2.11' -->
   <dd>This is the V2.10.4 and earlier version of PROTO.FIXPIX.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   This is a simple minded task which can be improved by using more sophisticated
   interpolation.  The bad pixel file will eventually be replaced by image
@@ -120,14 +120,14 @@ ofixpix: Fix bad pixels using text file (proto V2.10.4)
   the bad pixel regions are relative to the image section.  Also if the image
   is trimmed or rotated then the bad pixel regions must be changed.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   epix, imedit, fixpix
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  -->
   

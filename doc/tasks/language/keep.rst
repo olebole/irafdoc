@@ -7,14 +7,14 @@ keep: Make recent set, task, etc. declarations permanent
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   keep
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Normally when a script task terminates any tasks, packages, environment
   variables, etc. defined during the execution of that task are discarded
@@ -25,27 +25,27 @@ keep: Make recent set, task, etc. declarations permanent
   the higher level script terminates the task definitions will still be lost
   (unless this higher level script also uses <i>keep</i>).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_example">
   <h3>Example</h3>
-  <!-- BeginSection: 'EXAMPLE' -->
   <p>
   1. The most common use for <i>keep</i> is to retain a set of definitions
   in a script task.
   </p>
-  <pre>
-  	set	pkdir = "home$hebrew/"
-  	task	aleph, beth, kaph = hebrew.cl
+  <div class="highlight-default-notranslate"><pre>
+  set     pkdir = "home$hebrew/"
+  task    aleph, beth, kaph = hebrew.cl
   
-  	keep
-  </pre>
-  <!-- EndSection:   'EXAMPLE' -->
+  keep
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   task, package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO'  -->
   

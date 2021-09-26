@@ -7,29 +7,29 @@ ccget: Extract objects from a text file catalog
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccget input output lngcenter latcenter lngwidth latwidth
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The input text file catalog(s). The text file columns must be
   delimited by whitespace and all the input catalogs must have the same format.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The output catalogs containing the extracted objects. The number of
   output catalogs must be one or equal to the number of input catalogs.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngcenter">
   <dt><b>lngcenter, latcenter</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngcenter' Line='lngcenter, latcenter' -->
   <dd>The center of the field containing the objects to be extracted. Lngcenter and
@@ -39,13 +39,13 @@ ccget: Extract objects from a text file catalog
   <i>fclngunits</i> and <i>latunits</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngwidth">
   <dt><b>lngwidth, latwidth</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngwidth' Line='lngwidth, latwidth' -->
   <dd>The width of the user specified field in degrees.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fcsystem">
   <dt><b>fcsystem = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fcsystem' Line='fcsystem = ""' -->
   <dd>The celestial coordinate system of the field center. If undefined fcsystem
@@ -172,7 +172,7 @@ ccget: Extract objects from a text file catalog
   not required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fclngunits">
   <dt><b>fclngunits = <span style="font-family: monospace;">""</span>, fclatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fclngunits' Line='fclngunits = "", fclatunits = ""' -->
   <dd>The units of the field center coordinates. The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
@@ -183,7 +183,7 @@ ccget: Extract objects from a text file catalog
   galactic, and supergalactic systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_colaliases">
   <dt><b>colaliases = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colaliases' Line='colaliases = ""' -->
   <dd>The list of input catalog column aliases separated by commas. By default the
@@ -194,13 +194,13 @@ ccget: Extract objects from a text file catalog
   file will be assigned default names beginning with c6.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngcolumn">
   <dt><b>lngcolumn = <span style="font-family: monospace;">"c2"</span>, latcolumn = <span style="font-family: monospace;">"c3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = "c2", latcolumn = "c3"' -->
   <dd>The input catalog columns containing the coordinates of catalog objects.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catsystem">
   <dt><b>catsystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catsystem' Line='catsystem = "j2000"' -->
   <dd>The celestial coordinate system of the input catalog(s). The two systems of
@@ -208,7 +208,7 @@ ccget: Extract objects from a text file catalog
   described in the <i>fcsystem</i> parameter section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catlngunits">
   <dt><b>catlngunits = <span style="font-family: monospace;">""</span>, catlatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catlngunits' Line='catlngunits = "", catlatunits = ""' -->
   <dd>The units of the catalog coordinates. The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
@@ -219,7 +219,7 @@ ccget: Extract objects from a text file catalog
   galactic, and supergalactic systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outsystem">
   <dt><b>outsystem = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem = ""' -->
   <dd>The celestial coordinate system of the output coordinates. If undefined
@@ -229,7 +229,7 @@ ccget: Extract objects from a text file catalog
   section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_olngunits">
   <dt><b>olngunits = <span style="font-family: monospace;">""</span>, olatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""' -->
   <dd>The units of the output coordinates. The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
@@ -240,7 +240,7 @@ ccget: Extract objects from a text file catalog
   supergalactic systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_olngformat">
   <dt><b>olngformat = <span style="font-family: monospace;">""</span>, olatformat=<span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat=""' -->
   <dd>The output ra / longitude and dec / latitude formats if the output
@@ -249,7 +249,7 @@ ccget: Extract objects from a text file catalog
   and <span style="font-family: monospace;">"  %9.7g"</span> for radians.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exprs">
   <dt><b>exprs = <span style="font-family: monospace;">"c[*]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exprs' Line='exprs = "c[*]"' -->
   <dd>The list of output columns and column expressions separated by commas.
@@ -260,7 +260,7 @@ ccget: Extract objects from a text file catalog
   expression are output in the order in which they appear in exprs.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_formats">
   <dt><b>formats = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='formats' Line='formats = ""' -->
   <dd>An optional list of column formats separated by commas. Column formats must
@@ -271,15 +271,15 @@ ccget: Extract objects from a text file catalog
   <span style="font-family: monospace;">"f,%7.3f,%7.3f"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages on the standard output about actions taken by the task.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Ccget extracts objects in a user specified field from the input catalogs
   <i>input</i> and writes the extracted records to the output
@@ -328,16 +328,16 @@ ccget: Extract objects from a text file catalog
   of %5b, %10d, %10g, or %s for boolean, integer, floating point, or
   string columns  respectively.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_column_names">
   <h3>Column names</h3>
-  <!-- BeginSection: 'COLUMN NAMES' -->
   <p>
   By default column names are of the form c1, c2, ..., cN. However users can
   also define their own column names, which must have the following syntax
   </p>
-  <pre>
-  	{a-zA-Z}[{a-zA-Z0-9._$}]*
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  {a-zA-Z}[{a-zA-Z0-9._$}]*
+  </pre></div>
   <p>
   where [] indicates optional, {} indicates a class, - indicates an ascii
   range of characters, and * indicates zero or more occurrences. In words
@@ -346,9 +346,9 @@ ccget: Extract objects from a text file catalog
   The ccget task imposes a 19 character limit on the columns names so it is
   best to keep them short.
   </p>
-  <!-- EndSection:   'COLUMN NAMES' -->
+  </section>
+  <section id="s_column_expressions">
   <h3>Column expressions</h3>
-  <!-- BeginSection: 'COLUMN EXPRESSIONS' -->
   <p>
   Expressions must consist of operands and operators. The operands may be
   column names, numeric constants, functions, and quoted string constants.
@@ -358,37 +358,28 @@ ccget: Extract objects from a text file catalog
   <p>
   The following operators are supported:
   </p>
-  <p>
-      
-  </p>
-  <pre>
-              +  -  *  /              arithmetic operators
-              **                      exponentiation
-              //                      string concatenation
-              !  -                    boolean not, unary negation
-              &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
-              == != &amp;&amp; ||             equals, not equals, and, or
-              ?=                      string equals pattern
-              ? :                     conditional expression
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  +  -  *  /              arithmetic operators
+  **                      exponentiation
+  //                      string concatenation
+  !  -                    boolean not, unary negation
+  &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
+  == != &amp;&amp; ||             equals, not equals, and, or
+  ?=                      string equals pattern
+  ? :                     conditional expression
+  </pre></div>
   <p>
   The following intrinsic functions are supported:
   </p>
-  <p>
-      
-  </p>
-  <pre>
-              abs     atan2   deg     log     min     real    sqrt
-              acos    bool    double  log10   mod     short   str
-              asin    cos     exp     long    nint    sin     tan
-              atan    cosh    int     max     rad     sinh    tanh
-  </pre>
-  <p>
-      
-  </p>
-  <!-- EndSection:   'COLUMN EXPRESSIONS' -->
+  <div class="highlight-default-notranslate"><pre>
+  abs     atan2   deg     log     min     real    sqrt
+  acos    bool    double  log10   mod     short   str
+  asin    cos     exp     long    nint    sin     tan
+  atan    cosh    int     max     rad     sinh    tanh
+  </pre></div>
+  </section>
+  <section id="s_column_formats">
   <h3>Column formats</h3>
-  <!-- BeginSection: 'COLUMN FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -396,7 +387,7 @@ ccget: Extract objects from a text file catalog
   format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -414,14 +405,12 @@ ccget: Extract objects from a text file catalog
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
   
-  
   Conventions for w (field width) specification:
   
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-  
   
   Escape sequences (e.g. "\n" for newline):
   
@@ -463,15 +452,15 @@ ccget: Extract objects from a text file catalog
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'COLUMN FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_some_builtin_catalog_formats">
   <h3>Some builtin catalog formats</h3>
-  <!-- BeginSection: 'SOME BUILTIN CATALOG FORMATS' -->
   <p>
   The nlandolt.dat catalog in noao$photcal/catalogs/ has the following format.
   </p>
-  <pre>
-  # Column     Quantity 
+  <div class="highlight-default-notranslate"><pre>
+  # Column     Quantity
   
          1           id
          2           ra
@@ -482,57 +471,57 @@ ccget: Extract objects from a text file catalog
          7          v-r
          8          r-i
          9          v-i
-        10            n   
-        11            m 
+        10            n
+        11            m
         12       err(v)
         13     err(b-v)
         14     err(u-b)
         15     err(v-r)
         16     err(r-i)
         17     err(v-i)
-  </pre>
+  </pre></div>
   <p>
   where the coordinates are in j2000, the errors are all mean errors of the mean,
   and n and m are the number of observations and number of independent nights
   of observations respectively.
   </p>
-  <!-- EndSection:   'SOME BUILTIN CATALOG FORMATS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   The catalog references are
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   nlandolt.dat - Landolt, A.U. 1992, A.J. 104, 340
-  </pre>
-  <!-- EndSection:   'REFERENCES' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Example 1. Extract all Landolt standard stars within a 1 degree field
   surrounding the position ra = 3:55:00 dec = 0:00:00 (J2000).
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0
-  </pre>
+  </pre></div>
   <p>
   Example 2. Repeat example 1 but output the coordinates in the b1950
   celestial coordinate system.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
   outsystem=b1950
-  </pre>
+  </pre></div>
   <p>
   Example 3. Repeat example 1 but extract only the id, ra, dec, v, 
   and b-v fields from the Landolt catalog.  Note that since these
   columns are the first five in the catalog they can be specified
   as a range.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
   exprs="c[1-5]"
-  </pre>
+  </pre></div>
   <p>
   Example 4. Repeat example 1 but extract the id, ra, dec, b and
   b-r colors. Note that b and b-r are not columns in the input catalog
@@ -540,21 +529,21 @@ ccget: Extract objects from a text file catalog
   specified to give the desired spacing, although defaults will be
   supplied.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
   exprs="c[1-3],c4+c5,c5+c7" formats="%7.3f,%7.3f
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'COLUMN NAMES' 'COLUMN EXPRESSIONS' 'COLUMN FORMATS' 'SOME BUILTIN CATALOG FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

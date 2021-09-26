@@ -7,28 +7,28 @@ skysub: Sky subtract extracted multispec spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   skysub input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input multispec spectra to sky subtract.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output sky subtracted spectra.  If no output is specified then
   the output replaces the input spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_objaps">
   <dt><b>objaps = <span style="font-family: monospace;">""</span>, objbeams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objaps' Line='objaps = "", objbeams = ""' -->
   <dd>Object aperture and beam numbers.  An empty list selects all aperture
@@ -38,14 +38,14 @@ skysub: Sky subtract extracted multispec spectra
   sky spectra after subtraction by a mean sky.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skyaps">
   <dt><b>skyaps = <span style="font-family: monospace;">""</span>, skybeams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skyaps' Line='skyaps = "", skybeams = ""' -->
   <dd>Sky aperture and beam numbers.  An empty list selects all aperture or
   beam numbers.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skyedit">
   <dt><b>skyedit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skyedit' Line='skyedit = yes' -->
   <dd>Edit the sky spectra?  If yes the sky spectra are graphed using the
@@ -53,7 +53,7 @@ skysub: Sky subtract extracted multispec spectra
   the <span style="font-family: monospace;">'d'</span> key and exit with <span style="font-family: monospace;">'q'</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_combine">
   <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median|sum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median|sum)' -->
   <dd>Option for combining pixels at the same dispersion coordinate after any
@@ -62,26 +62,26 @@ skysub: Sky subtract extracted multispec spectra
   values when the number of pixels is even.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reject">
   <dt><b>reject = <span style="font-family: monospace;">"none"</span> (none|minmax|avsigclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|avsigclip)' -->
   <dd>Type of rejection operation performed on the pixels which overlap at each
   dispersion coordinate.  The algorithms are discussed in the
   DESCRIPTION section.  The rejection choices are:
-  <pre>
-        none - No rejection
-      minmax - Reject the nlow and nhigh pixels
-   avsigclip - Reject pixels using an averaged sigma clipping algorithm
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+       none - No rejection
+     minmax - Reject the nlow and nhigh pixels
+  avsigclip - Reject pixels using an averaged sigma clipping algorithm
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = no' -->
   <dd>Scale the sky spectra by the mode?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_saveskys">
   <dt><b>saveskys = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='saveskys' Line='saveskys = yes' -->
   <dd>Save the sky spectra?  If no then the mean sky spectra will be deleted after
@@ -89,15 +89,15 @@ skysub: Sky subtract extracted multispec spectra
   the prefix <span style="font-family: monospace;">"sky"</span> and then the output name is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Logfile for making a record of the sky subtraction operation.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task selects a subset of aperture spectra from a multispec
   format image, called sky spectra though they could be anything,
@@ -128,23 +128,23 @@ skysub: Sky subtract extracted multispec spectra
   The sky spectra are combined using one of combining and rejection options from
   the task <b>scombine</b> except for the option <span style="font-family: monospace;">"none"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To median and subtract apertures 1,10,15,20 from all apertures:
   </p>
-  <pre>
-      ms&gt; skysub obj010.ms out=skysub010.ms skyaps="1,10,15,20"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  ms&gt; skysub obj010.ms out=skysub010.ms skyaps="1,10,15,20"
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   specplot, scombine
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

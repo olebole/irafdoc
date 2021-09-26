@@ -7,15 +7,15 @@ package: Discussion and overview of package including sections on:
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   onedspec
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
@@ -29,30 +29,32 @@ package: Discussion and overview of package including sections on:
   <b>observatory</b> for additional information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_caldir">
   <dt><b>caldir = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir = ""' -->
   <dd>Calibration directory containing standard star data.  This parameter
   is used by several tasks in the package through redirection.  A list of
   standard calibration directories may be obtained by listing the file
   <span style="font-family: monospace;">"onedstds$README"</span>; for example:
-  	cl&gt; page onedstds$README
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; page onedstds$README
+  </pre></div>
   The user may copy or create their own calibration files and specify
   the directory.  The directory <span style="font-family: monospace;">""</span> refers to the current working directory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp">
   <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
-  <pre>
-  	nearest - nearest neighbor
-  	 linear - linear
-  	  poly3 - 3rd order polynomial
-  	  poly5 - 5th order polynomial
-  	spline3 - cubic spline
-  	   sinc - sinc function
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nearest - nearest neighbor
+   linear - linear
+    poly3 - 3rd order polynomial
+    poly5 - 5th order polynomial
+  spline3 - cubic spline
+     sinc - sinc function
+  </pre></div>
   </dd>
   </dl>
   <p>
@@ -62,7 +64,7 @@ package: Discussion and overview of package including sections on:
   elements to form a one dimensional spectrum as the tasks in the
   ONEDSPEC package expect.
   </p>
-  <dl>
+  <dl id="l_dispaxis">
   <dt><b>dispaxis = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 1' -->
   <dd>The image axis corresponding to the dispersion.  If there is an image
@@ -72,7 +74,7 @@ package: Discussion and overview of package including sections on:
   or 3.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "1"' -->
   <dd>The number of neighboring elements to sum.  This is a string parameter
@@ -91,22 +93,22 @@ package: Discussion and overview of package including sections on:
   the sum of lines 9 to 12.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>This is a dummy parameter.  It is applicable only in the <b>imred.irs</b>
   and <b>imred.iids</b> packages.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_version">
   <dt><b>version = <span style="font-family: monospace;">"ONEDSPEC V3: November 1991"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "ONEDSPEC V3: November 1991"' -->
   <dd>Package version identification.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <b>onedspec</b> package contains generic tasks for the reduction,
   analysis, and display of one dimensional spectra.  The specifics of
@@ -120,7 +122,7 @@ package: Discussion and overview of package including sections on:
   <p style="text-align:center">Table 1:  Functions provided in the <b>onedspec</b> package
   
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1.  Graphical display of spectra
             bplot - Batch plots of spectra
          identify - Identify features and fit dispersion functions
@@ -162,7 +164,7 @@ package: Discussion and overview of package including sections on:
           sinterp - Interpolate a table of x,y to create a spectrum
             slist - List spectrum header parameters
             splot - Interactive spectral plot/analysis
-  </pre>
+  </pre></div>
   <p>
   There are other packages which provide additional functions or specialized
   tasks for spectra.  Radial velocity measurements are available in the
@@ -173,31 +175,31 @@ package: Discussion and overview of package including sections on:
   <p style="text-align:center">Table 2:  <b>Imred</b> spectroscopy packages
   
   </p>
-  <pre>
-   	  argus - CTIO ARGUS reduction package
-         ctioslit - CTIO spectrophotometric reduction package
-  	echelle - Echelle spectral reductions (slit and FOE)
-   	  hydra - KPNO HYDRA (and NESSIE) reduction package
-  	   iids - KPNO IIDS spectral reductions
-  	    irs - KPNO IRS spectral reductions
-        kpnocoude - KPNO coude reduction package (slit and 3 fiber)
-         kpnoslit - KPNO low/moderate dispersion slits (Goldcam, RCspec, Whitecam)
-          specred - Generic slit and fiber spectral reduction package
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+      argus - CTIO ARGUS reduction package
+   ctioslit - CTIO spectrophotometric reduction package
+    echelle - Echelle spectral reductions (slit and FOE)
+      hydra - KPNO HYDRA (and NESSIE) reduction package
+       iids - KPNO IIDS spectral reductions
+        irs - KPNO IRS spectral reductions
+  kpnocoude - KPNO coude reduction package (slit and 3 fiber)
+   kpnoslit - KPNO low/moderate dispersion slits (Goldcam, RCspec, Whitecam)
+    specred - Generic slit and fiber spectral reduction package
+  </pre></div>
   <p>
   Finally, there are non-NOAO packages which may contain generally useful
   software for spectra.  Currently available packages are <b>stsdas</b>
   and <b>xray</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_spectrum_image_formats_and_coordinate_systems">
   <h3>Spectrum image formats and coordinate systems</h3>
-  <!-- BeginSection: 'SPECTRUM IMAGE FORMATS AND COORDINATE SYSTEMS' -->
   <p>
   See the separate help topic <i>specwcs</i>.
   </p>
-  <!-- EndSection:   'SPECTRUM IMAGE FORMATS AND COORDINATE SYSTEMS' -->
+  </section>
+  <section id="s_interpolation">
   <h3>Interpolation</h3>
-  <!-- BeginSection: 'INTERPOLATION' -->
   <p>
   Changing the dispersion sampling of spectra, such as when converting to a
   constant sampling interval per pixel or a common sampling for combining or
@@ -209,14 +211,14 @@ package: Discussion and overview of package including sections on:
   The interpolation type is set by the package parameter <i>interp</i>.
   The available interpolation types are:
   </p>
-  <pre>
-  	nearest - nearest neighbor
-  	 linear - linear
-  	  poly3 - 3rd order polynomial
-  	  poly5 - 5th order polynomial
-  	spline3 - cubic spline
-  	   sinc - sinc function
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nearest - nearest neighbor
+   linear - linear
+    poly3 - 3rd order polynomial
+    poly5 - 5th order polynomial
+  spline3 - cubic spline
+     sinc - sinc function
+  </pre></div>
   <p>
   The default interpolation type is a 5th order polynomial.
   </p>
@@ -251,9 +253,9 @@ package: Discussion and overview of package including sections on:
   spectrum by ringing is much more severe than with other interpolation
   types.
   </p>
-  <!-- EndSection:   'INTERPOLATION' -->
+  </section>
+  <section id="s_units">
   <h3>Units</h3>
-  <!-- BeginSection: 'UNITS' -->
   <p>
   In versions of the NOAO spectroscopy packages prior to V2.10 the dispersion
   units used were restricted to Angstroms.  In V2.10 the first,
@@ -279,64 +281,64 @@ package: Discussion and overview of package including sections on:
   abbreviated as words but the syntax is not sophisticated enough to
   recognized standard scientific abbreviations except as noted below.
   </p>
-  <pre>
-  		Table 1:  Unit Types
+  <div class="highlight-default-notranslate"><pre>
+          Table 1:  Unit Types
   
-  	   angstroms - Wavelength in Angstroms
-  	  nanometers - Wavelength in nanometers
-  	millimicrons - Wavelength in millimicrons
-  	     microns - Wavelength in microns
-  	 millimeters - Wavelength in millimeters
-  	  centimeter - Wavelength in centimeters
-  	      meters - Wavelength in meters
-  	       hertz - Frequency in hertz (cycles per second)
-  	   kilohertz - Frequency in kilohertz
-  	   megahertz - Frequency in megahertz
-  	   gigahertz - Frequency in gigahertz
-  	         m/s - Velocity in meters per second
-  	        km/s - Velocity in kilometers per second
-  	          ev - Energy in electron volts
-  	         kev - Energy in kilo electron volts
-  	         mev - Energy in mega electron volts
-  		   z - Redshift
+     angstroms - Wavelength in Angstroms
+    nanometers - Wavelength in nanometers
+  millimicrons - Wavelength in millimicrons
+       microns - Wavelength in microns
+   millimeters - Wavelength in millimeters
+    centimeter - Wavelength in centimeters
+        meters - Wavelength in meters
+         hertz - Frequency in hertz (cycles per second)
+     kilohertz - Frequency in kilohertz
+     megahertz - Frequency in megahertz
+     gigahertz - Frequency in gigahertz
+           m/s - Velocity in meters per second
+          km/s - Velocity in kilometers per second
+            ev - Energy in electron volts
+           kev - Energy in kilo electron volts
+           mev - Energy in mega electron volts
+             z - Redshift
   
-  	          nm - Wavelength in nanometers
-  	          mm - Wavelength in millimeters
-  	          cm - Wavelength in centimeters
-  	           m - Wavelength in meters
-  	          Hz - Frequency in hertz (cycles per second)
-  	         KHz - Frequency in kilohertz
-  	         MHz - Frequency in megahertz
-  	         GHz - Frequency in gigahertz
-  		  wn - Wave number (inverse centimeters)
-  </pre>
+            nm - Wavelength in nanometers
+            mm - Wavelength in millimeters
+            cm - Wavelength in centimeters
+             m - Wavelength in meters
+            Hz - Frequency in hertz (cycles per second)
+           KHz - Frequency in kilohertz
+           MHz - Frequency in megahertz
+           GHz - Frequency in gigahertz
+            wn - Wave number (inverse centimeters)
+  </pre></div>
   <p>
   The velocity and redshift units require a trailing value and unit defining the
   velocity zero point.  For example to plot velocity relative to
   a wavelength of 1 micron the unit string would be:
   </p>
-  <pre>
-  	km/s 1 micron
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  km/s 1 micron
+  </pre></div>
   <p>
   Some additional examples of units strings are:
   </p>
-  <pre>
-  	milliang
-  	megahertz
-  	inv mic
-  	log hertz
-  	m/s 3 inv mic
-  	z 5015 ang
-  </pre>
-  <!-- EndSection:   'UNITS' -->
+  <div class="highlight-default-notranslate"><pre>
+  milliang
+  megahertz
+  inv mic
+  log hertz
+  m/s 3 inv mic
+  z 5015 ang
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apextract, longslit, rv, imred, specwcs
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'SPECTRUM IMAGE FORMATS AND COORDINATE SYSTEMS' 'INTERPOLATION' 'UNITS' 'SEE ALSO'  -->
   

@@ -7,22 +7,22 @@ wcsreset: Reset the specified image wcs
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   wcsreset image wcs
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images for which the coordinate system is to be reset.  Image
   sections are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcs">
   <dt><b>wcs    </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs    ' -->
   <dd>The name of the coordinate system to be reset. The following systems are
@@ -51,15 +51,15 @@ wcsreset: Reset the specified image wcs
   coordinate system only if it is present in the image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about actions taken by the task?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   WCSRESET resets the coordinate system <i>wcs</i> in the images specified by
   <i>image</i> to the logical coordinate system, and prints messages about the
@@ -112,9 +112,9 @@ wcsreset: Reset the specified image wcs
   to <span style="font-family: monospace;">"multispec"</span>, only images with the coordinate system <span style="font-family: monospace;">"multispec"</span>
   will have their coordinate system reset.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Detailed documentation for the IRAF world coordinate system interface MWCS
   can be found in the file <span style="font-family: monospace;">"iraf$sys/mwcs/MWCS.hlp"</span>. This file can be
@@ -124,33 +124,33 @@ wcsreset: Reset the specified image wcs
   FITS Format"</span> by Hanisch and Wells, available from our anonymous ftp
   archive.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The user runs implot on a section of the spectrum outspec with the
   wcs parameter set to <span style="font-family: monospace;">"physical"</span>.
   </p>
-  <pre>
-  	implot outsec[30:50] wcs=physical
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  implot outsec[30:50] wcs=physical
+  </pre></div>
   <p>
   To his/her surprise the range of the plot in x produced by implot is
   [129,149] not [30:50] as expected.  The user lists the image header with the
   imheader task and sees the following.
   </p>
-  <pre>
-          WCSDIM  =                    1
-          CTYPE1  = 'LINEAR  '
-          CRVAL1  =     4953.94775390626
-          CRPIX1  =                 -98.
-          CDELT1  =   0.0714096948504449
-          CD1_1   =   0.0714096948504449
-          WAT0_001= 'system=linear
-          WAT1_001= 'wtype=linear label=Wavelength units=Angstroms 
-          LTV1    =                 -99.
-          LTM1_1  =                   1.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  WCSDIM  =                    1
+  CTYPE1  = 'LINEAR  '
+  CRVAL1  =     4953.94775390626
+  CRPIX1  =                 -98.
+  CDELT1  =   0.0714096948504449
+  CD1_1   =   0.0714096948504449
+  WAT0_001= 'system=linear
+  WAT1_001= 'wtype=linear label=Wavelength units=Angstroms
+  LTV1    =                 -99.
+  LTM1_1  =                   1.
+  </pre></div>
   <p>
   The standard FITS keywords CTYPE1, CRVAL1, CRPIX1, and CDELT1 are present.
   The CD1_1 keyword is part of the new FITS CD matrix notation and in this
@@ -160,9 +160,9 @@ wcsreset: Reset the specified image wcs
   outspec was created by extracting a piece of a larger spectrum using the
   imcopy task as shown below.
   </p>
-  <pre>
-  	cl&gt; imcopy inspec[100:200] outspec
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy inspec[100:200] outspec
+  </pre></div>
   <p>
   The section [30:50] in outspec actually corresponds to the section [129:149]
   in inspec and it is this coordinate system that implot is plotting when
@@ -170,23 +170,23 @@ wcsreset: Reset the specified image wcs
   about the pixel coordinate system of the original image and runs wcsreset
   to reset the physical coordinate system to the logical coordinate system.
   </p>
-  <pre>
-  	wcsreset outspec physical
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  wcsreset outspec physical
+  </pre></div>
   <p>
   The new header of outspec looks like the following.
   </p>
-  <pre>
-      WCSDIM  =                    1
-      CTYPE1  = 'LINEAR  '
-      CRVAL1  =     4953.94775390626
-      CRPIX1  =                 -98.
-      CDELT1  =   0.0714096948504449
-      CD1_1   =   0.0714096948504449
-      WAT0_001= 'system=linear                                                    
-      WAT1_001= 'wtype=linear label=Wavelength units=Angstroms
-      LTM1_1  =                   1.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  WCSDIM  =                    1
+  CTYPE1  = 'LINEAR  '
+  CRVAL1  =     4953.94775390626
+  CRPIX1  =                 -98.
+  CDELT1  =   0.0714096948504449
+  CD1_1   =   0.0714096948504449
+  WAT0_001= 'system=linear
+  WAT1_001= 'wtype=linear label=Wavelength units=Angstroms
+  LTM1_1  =                   1.
+  </pre></div>
   <p>
   It is identical to the header listed above except that the
   LTV1 keyword is not defined and is therefore 0. The user runs
@@ -202,63 +202,63 @@ wcsreset: Reset the specified image wcs
   <p>
   The image header is the following.
   </p>
-  <pre>
-  	CRPIX1  =               129.75
-          CRPIX2  =               130.93
-          CRVAL1  =      201.94541667302
-          CRVAL2  =             47.45444
-          CTYPE1  = 'RA---TAN'
-          CTYPE2  = 'DEC--TAN'
-          CDELT1  =        -2.1277777E-4
-          CDELT2  =         2.1277777E-4
-          WCSDIM  =                    2
-          CD1_1   =  -2.1277777000000E-4
-          CD2_2   =  2.12777770000000E-4
-          LTV1    =                -128.
-          LTV2    =                -128.
-          LTM1_1  =                   1.
-          LTM2_2  =                   1.
-          WAT0_001= 'system=image
-  	WAT1_001= 'wtype=tan axtype=ra
-  	WAT2_001= 'wtype=tan axtype=dec
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  CRPIX1  =               129.75
+  CRPIX2  =               130.93
+  CRVAL1  =      201.94541667302
+  CRVAL2  =             47.45444
+  CTYPE1  = 'RA---TAN'
+  CTYPE2  = 'DEC--TAN'
+  CDELT1  =        -2.1277777E-4
+  CDELT2  =         2.1277777E-4
+  WCSDIM  =                    2
+  CD1_1   =  -2.1277777000000E-4
+  CD2_2   =  2.12777770000000E-4
+  LTV1    =                -128.
+  LTV2    =                -128.
+  LTM1_1  =                   1.
+  LTM2_2  =                   1.
+  WAT0_001= 'system=image
+  WAT1_001= 'wtype=tan axtype=ra
+  WAT2_001= 'wtype=tan axtype=dec
+  </pre></div>
   <p>
   The user runs implot on skypix wcs = <span style="font-family: monospace;">"physical"</span>
   </p>
-  <pre>
-  	implot skypix wcs=physical
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  implot skypix wcs=physical
+  </pre></div>
   <p>
   and sees a plot in x which extends from 129 to 384 which are the coordinates
   of skypix in the original image.
   The user resets the physical coordinate system to the logical coordinate
   system.
   </p>
-  <pre>
-  	cl&gt; wcsreset m51 physical
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; wcsreset m51 physical
+  </pre></div>
   <p>
   The new header looks like the following. Note that the LTV1 and LTV2 keywords
   have disappeared, they are 0. but everything else is the same.
   </p>
-  <pre>
-  	CRPIX1  =               129.75
-          CRPIX2  =               130.93
-          CRVAL1  =      201.94541667302
-          CRVAL2  =             47.45444
-          CTYPE1  = 'RA---TAN'
-          CTYPE2  = 'DEC--TAN'
-          CDELT1  =        -2.1277777E-4
-          CDELT2  =         2.1277777E-4
-          WCSDIM  =                    2
-          CD1_1   =  -2.1277777000000E-4
-          CD2_2   =  2.12777770000000E-4
-          LTM1_1  =                   1.
-          LTM2_2  =                   1.
-          WAT0_001= 'system=image
-  	WAT1_001= 'wtype=tan axtype=ra
-  	WAT2_001= 'wtype=tan axtype=dec
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  CRPIX1  =               129.75
+  CRPIX2  =               130.93
+  CRVAL1  =      201.94541667302
+  CRVAL2  =             47.45444
+  CTYPE1  = 'RA---TAN'
+  CTYPE2  = 'DEC--TAN'
+  CDELT1  =        -2.1277777E-4
+  CDELT2  =         2.1277777E-4
+  WCSDIM  =                    2
+  CD1_1   =  -2.1277777000000E-4
+  CD2_2   =  2.12777770000000E-4
+  LTM1_1  =                   1.
+  LTM2_2  =                   1.
+  WAT0_001= 'system=image
+  WAT1_001= 'wtype=tan axtype=ra
+  WAT2_001= 'wtype=tan axtype=dec
+  </pre></div>
   <p>
   When the user runs implot with wcs = <span style="font-family: monospace;">"physical"</span> he/she sees a plot which
   extends from 1 to 256 as expected.
@@ -266,20 +266,20 @@ wcsreset: Reset the specified image wcs
   <p>
   3. Initialize the world coordinate system of the previous image.
   </p>
-  <pre>
-  	cl&gt; wcsreset skypix world
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; wcsreset skypix world
+  </pre></div>
   <p>
   The header now looks like the following.
   </p>
-  <pre>
-  	WCSDIM  =                    2
-  	LTM1_1  =                   1.
-  	LTM2_2  =                   1.
-  	WAT0_001= 'system=physical               
-  	WAT1_001= 'wtype=linear
-  	WAT2_001= 'wtype=linear
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  WCSDIM  =                    2
+  LTM1_1  =                   1.
+  LTM2_2  =                   1.
+  WAT0_001= 'system=physical
+  WAT1_001= 'wtype=linear
+  WAT2_001= 'wtype=linear
+  </pre></div>
   <p>
   The world system defaults to the physical coordinates system and the
   physical coordinate system is identical to the logical coordinate system.
@@ -291,23 +291,23 @@ wcsreset: Reset the specified image wcs
   system <span style="font-family: monospace;">"spec1"</span> cannot be found in the image header a warning message
   will be issued and nothing will be changed.
   </p>
-  <pre>
-  	cl&gt; wcsreset spectrum spec1
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; wcsreset spectrum spec1
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rimcursor,listpixels,wcsedit,hedit,hfix
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

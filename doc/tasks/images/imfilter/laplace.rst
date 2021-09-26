@@ -7,21 +7,21 @@ laplace: Laplacian filter a list of 1 or 2-D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   laplace input output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be convolved.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images. The number of output images must equal the number of
@@ -29,7 +29,7 @@ laplace: Laplacian filter a list of 1 or 2-D images
   convolved image will replace the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_laplace">
   <dt><b>laplace = <span style="font-family: monospace;">"xycentral"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='laplace' Line='laplace = "xycentral"' -->
   <dd>The Laplacian filters are a set of four three by three kernels which
@@ -67,7 +67,7 @@ laplace: Laplacian filter a list of 1 or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The algorithm used to compute the values of the out of bounds pixels.
@@ -98,15 +98,15 @@ laplace: Laplacian filter a list of 1 or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The constant for constant-valued boundary extension.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   LAPLACE convolves the list of images specified by <i>input</i> with one of
   four 3 by 3 Laplacian kernels specified by <i>laplace</i>
@@ -129,62 +129,60 @@ laplace: Laplacian filter a list of 1 or 2-D images
   The four Laplacian filters are listed below. The I[*,*] are the elements of the
   input image and the O[*,*] are the elements of the output image.
   </p>
-  <pre>
-      			xycenter
+  <div class="highlight-default-notranslate"><pre>
+                          xycenter
   
-  	     0*I[-1,1]  + 1*I[0,1]  + 0*I[1,1]  +
+               0*I[-1,1]  + 1*I[0,1]  + 0*I[1,1]  +
       O[0,0] = 1*I[-1,0]  - 4*I[0,0]  + 1*I[1,0]  +
                0*I[-1,-1] + 1*I[0,-1] + 0*I[1,-1]
   
-  
-  		       diagonals
+                         diagonals
   
             I[-1,1]/sqrt(2)  + I[0,1]*0         +  I[1,1]/sqrt(2) +
   O[0,0] =  I[-1,0]*0        - I[0,0]*4/sqrt(2) +  I[1,0]*0       +
-  	  I[-1,-1]/sqrt(2) + I[0,-1]*0        +  I[1,-1]/sqrt(2) 
+            I[-1,-1]/sqrt(2) + I[0,-1]*0        +  I[1,-1]/sqrt(2)
   
-  		         xyall
+                           xyall
   
-  	       2/3*I[-1,1]  -  1/3*I[0,1]  + 2/3*I[1,1]  +
+                 2/3*I[-1,1]  -  1/3*I[0,1]  + 2/3*I[1,1]  +
       O[0,0] = - 1/3*I[-1,0]  -  4/3*I[0,0]  - 1/3*I[1,0]  +
                  2/3*I[-1,-1] -  1/3*I[0,-1] + 2/3*I[1,-1]
   
-  		       xydiagonals
+                         xydiagonals
   
             I[-1,1]/sqrt(2)/2  + I[0,1]/2           + I[1,1]/sqrt(2)/2 +
   O[0,0] =  I[-1,0]/2          - I[0,0]*(2-sqrt(2)) + I[1,0]/2         +
-  	  I[-1,-1]/sqrt(2)/2 + I[0,-1]/2          + I[1,-1]/sqrt(2) 
-  
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+            I[-1,-1]/sqrt(2)/2 + I[0,-1]/2          + I[1,-1]/sqrt(2)
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Convolve an image with the Laplacian filter xyall using nearest neighbor
   boundary extension.
   </p>
-  <p>
-      cl&gt; laplace m83 m83.lap xyall
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; laplace m83 m83.lap xyall
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   LAPLACE requires approximately 1.7 cpu seconds to convolve a
   512 square real image with a 3 by 3 Laplacian kernel on a Sparc
   Station 1.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   convolve, gauss, gradient, boxcar
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

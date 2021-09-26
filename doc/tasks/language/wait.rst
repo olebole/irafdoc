@@ -7,24 +7,24 @@ wait: Wait for all background jobs to complete
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   wait [job job ...]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_job">
   <dt><b>job</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='job' Line='job' -->
   <dd>A background job number, as printed when the job is submitted,
   or as given by the <i>jobs</i> command.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>wait</i> task causes the CL to hibernate until a background job or
   jobs terminates.  No arguments, or a job number of 0 means to wait
@@ -32,35 +32,35 @@ wait: Wait for all background jobs to complete
   specified to wait for a particular job.  If a background job is
   not running the wait returns immediately.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Wait for any background jobs to finish, beeping the terminal when done.
   </p>
-  <p>
-  	cl&gt; wait;beep
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; wait;beep
+  </pre></div>
   <p>
   2. Wait for job 3 to terminate.
   </p>
-  <p>
-  	cl&gt; wait 3
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; wait 3
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Deadlock is possible.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   jobs, kill, service
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,51 +7,51 @@ sarith: Spectrum arithmetic
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   sarith input1 op input2 output
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input1">
   <dt><b>input1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input1' Line='input1' -->
   <dd>List of input images to be used as operands.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_op">
   <dt><b>op    </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='op' Line='op    ' -->
   <dd>Operator to be applied to the first operand or to both operands.  The
   unary or single operand operators are:
-  <pre>
-  	abs  - absolute value
-  	copy - copy (see also <b>scopy</b>)
-  	dex  - decimal exponentiation (antilog of base 10 logarithm)
-  	exp  - base e exponentiation (antilog of natural logarithm)
-  	flam - convert F-nu to F-lambda
-  	fnu  - convert F-lambda to F-nu
-  	inv  - inverse
-  	ln   - natural logarithm
-  	log  - base 10 logarithm
-  	lum  - convert magnitude to luminosity
-  	mag  - convert luminosity to magnitude
-  	sqrt - square root
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  abs  - absolute value
+  copy - copy (see also <b>scopy</b>)
+  dex  - decimal exponentiation (antilog of base 10 logarithm)
+  exp  - base e exponentiation (antilog of natural logarithm)
+  flam - convert F-nu to F-lambda
+  fnu  - convert F-lambda to F-nu
+  inv  - inverse
+  ln   - natural logarithm
+  log  - base 10 logarithm
+  lum  - convert magnitude to luminosity
+  mag  - convert luminosity to magnitude
+  sqrt - square root
+  </pre></div>
   The binary or two operand operators are:
-  <pre>
-  	replace - replace first operand values by second operand values
-  	+       - addition
-  	-       - subtraction
-  	*       - multiplication
-  	/       - division
-  	^       - exponentiation
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  replace - replace first operand values by second operand values
+  +       - addition
+  -       - subtraction
+  *       - multiplication
+  /       - division
+  ^       - exponentiation
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_input2">
   <dt><b>input2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input2' Line='input2' -->
   <dd>Lists of input spectra or constants to be used as second operands for
@@ -60,7 +60,7 @@ sarith: Spectrum arithmetic
   the first operand list in number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of resultant output images or root names.  Image
@@ -76,7 +76,7 @@ sarith: Spectrum arithmetic
   number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_w1">
   <dt><b>w1 = INDEF, w2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='w1' Line='w1 = INDEF, w2 = INDEF' -->
   <dd>Starting and ending wavelengths to be copied.  If <i>w1</i> is not specified
@@ -92,7 +92,7 @@ sarith: Spectrum arithmetic
   outside that of a spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span>, beams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "", beams = ""' -->
   <dd>List of apertures and beams to be selected from the input spectra.  The
@@ -109,7 +109,7 @@ sarith: Spectrum arithmetic
   spectra the aperture numbers select the first spatial axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bands">
   <dt><b>bands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bands' Line='bands = ""' -->
   <dd>List of bands in 3D multispec.
@@ -118,7 +118,7 @@ sarith: Spectrum arithmetic
   The null list selects all bands.  The syntax is as described above.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apmodulus">
   <dt><b>apmodulus = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apmodulus' Line='apmodulus = 0' -->
   <dd>Modulus to be applied to the input aperture numbers before matching against
@@ -128,7 +128,7 @@ sarith: Spectrum arithmetic
   related.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reverse">
   <dt><b>reverse = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reverse' Line='reverse = no' -->
   <dd>Reverse the order of the operands in a binary operation?  Because the first
@@ -140,7 +140,7 @@ sarith: Spectrum arithmetic
   the order of the operands in a binary operation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ignoreaps">
   <dt><b>ignoreaps = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no' -->
   <dd>Ignore aperture numbers in the second operand?  Normally, spectra in
@@ -151,7 +151,7 @@ sarith: Spectrum arithmetic
   used to allow using a single spectrum with multiple aperture spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_format">
   <dt><b>format = <span style="font-family: monospace;">"multispec"</span> (multispec|onedspec)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "multispec" (multispec|onedspec)' -->
   <dd>Output image format and name syntax.  The <span style="font-family: monospace;">"multispec"</span> format consists of
@@ -163,7 +163,7 @@ sarith: Spectrum arithmetic
   be used in this case.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_renumber">
   <dt><b>renumber = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='renumber' Line='renumber = no' -->
   <dd>Renumber the output aperture numbers?  If set the output aperture
@@ -172,20 +172,20 @@ sarith: Spectrum arithmetic
   change the starting number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offset">
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Offset to be added to the input or renumbered aperture number to form
   the final output aperture number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clobber">
   <dt><b>clobber = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber = no' -->
   <dd>Modify an existing output image either by overwriting or merging?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_merge">
   <dt><b>merge = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='merge' Line='merge = no' -->
   <dd>Merge apertures into existing spectra?  This
@@ -195,7 +195,7 @@ sarith: Spectrum arithmetic
   with the same aperture number and new apertures are added if not present.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rebin">
   <dt><b>rebin = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rebin' Line='rebin = yes' -->
   <dd>Rebin the spectrum to the exact wavelength range specified by the <i>w1</i>
@@ -212,22 +212,22 @@ sarith: Spectrum arithmetic
   linearized.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_errval">
   <dt><b>errval = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='errval' Line='errval = 0.' -->
   <dd>Value for resultant pixel if an arithmetic error occurs such as dividing
   by zero or the square root of a negative number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print a record of each operation?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Sarith</b> performs arithmetic operations on spectra.  It is
   distinguished from <b>imarith</b> in that it includes unary operators, like
@@ -251,34 +251,34 @@ sarith: Spectrum arithmetic
   produce the specified output spectra, which may be the same as the
   input spectra.  The operators include:
   </p>
-  <pre>
-  	abs  - absolute value
-  	copy - copy (see also <b>scopy</b>)
-  	dex  - decimal exponentiation (antilog of base 10 logarithm)
-  	exp  - base e exponentiation (antilog of natural logarithm)
-  	flam - convert F-nu to F-lambda
-  	fnu  - convert F-lambda to F-nu
-  	inv  - inverse
-  	ln   - natural logarithm
-  	log  - base 10 logarithm
-  	lum  - convert magnitude to luminosity
-  	mag  - convert luminosity to magnitude
-  	sqrt - square root
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  abs  - absolute value
+  copy - copy (see also <b>scopy</b>)
+  dex  - decimal exponentiation (antilog of base 10 logarithm)
+  exp  - base e exponentiation (antilog of natural logarithm)
+  flam - convert F-nu to F-lambda
+  fnu  - convert F-lambda to F-nu
+  inv  - inverse
+  ln   - natural logarithm
+  log  - base 10 logarithm
+  lum  - convert magnitude to luminosity
+  mag  - convert luminosity to magnitude
+  sqrt - square root
+  </pre></div>
   <p>
   The luminosity to magnitude and magnitude to luminosity operators are
   based on the standard relation:
   </p>
-  <pre>
-  	mag = -2.5 * log (lum)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  mag = -2.5 * log (lum)
+  </pre></div>
   <p>
   where the log is base 10.  The F-nu to F-lambda and F-lambda to F-nu
   operators are based on the relation:
   </p>
-  <pre>
-  	F-nu = F-lambda * lambda / nu
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  F-nu = F-lambda * lambda / nu
+  </pre></div>
   <p>
   where lambda is wavelength and nu is frequency (currently the wavelength
   is assumed to be Angstroms and so F-lambda is in units of per Angstrom
@@ -293,14 +293,14 @@ sarith: Spectrum arithmetic
   pixels.  The binary operators are the standard arithmetic ones plus
   exponentiation and replacement:
   </p>
-  <pre>
-  	replace - replace first operand values by second operand values
-  	+       - addition
-  	-       - subtraction
-  	*       - multiplication
-  	/       - division
-  	^       - exponentiation
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  replace - replace first operand values by second operand values
+  +       - addition
+  -       - subtraction
+  *       - multiplication
+  /       - division
+  ^       - exponentiation
+  </pre></div>
   <p>
   If the second operand is a spectrum, as mentioned previously, it is
   interpolated, without flux conservation, to the dispersion
@@ -316,16 +316,16 @@ sarith: Spectrum arithmetic
   the <i>reverse</i> parameter is used.  For example to subtract a
   spectrum from the constant 1:
   </p>
-  <pre>
-  	cl&gt; sarith 1 - spec invspec reverse+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith 1 - spec invspec reverse+
+  </pre></div>
   <p>
   or to subtract two spectra using the subtractand as the dispersion
   reference:
   </p>
-  <pre>
-  	cl&gt; sarith spec1 - spec2 diff reverse+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith spec1 - spec2 diff reverse+
+  </pre></div>
   <p>
   When a binary operation on a pair of spectra is performed the aperture
   numbers may be required to be the same if <i>ignoreaps</i> is no.  For
@@ -397,10 +397,10 @@ sarith: Spectrum arithmetic
   called <span style="font-family: monospace;">"onedspec"</span> format.  Including such spectra in an
   input list may be accomplished either with wildcard templates such as
   </p>
-  <pre>
-  	name*
-  	name.????.imh
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  name*
+  name.????.imh
+  </pre></div>
   <p>
   where the image type extension <span style="font-family: monospace;">".imh"</span> must be given to complete the
   template but the actual extension could also be that for an STF type
@@ -507,9 +507,9 @@ sarith: Spectrum arithmetic
   replace the one in the output use the <i>renumber</i> or
   <i>offset</i> options.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   In addition to the examples in this section there are many examples
   in the help for <b>scopy</b> which illustrate aspects of selecting
@@ -528,11 +528,11 @@ sarith: Spectrum arithmetic
   <p>
   1.  Examples of unary operations:
   </p>
-  <pre>
-  	cl&gt; sarith example1 mag "" magexample
-  	cl&gt; sarith magexample lum "" example2
-  	cl&gt; sarith example1 log "" logexample
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example1 mag "" magexample
+  cl&gt; sarith magexample lum "" example2
+  cl&gt; sarith example1 log "" logexample
+  </pre></div>
   <p>
   Note that a place holder for the second operand is required on the command
   line which will be ignored.
@@ -540,102 +540,94 @@ sarith: Spectrum arithmetic
   <p>
   2.  Examples of binary operations using constants:
   </p>
-  <pre>
-  	cl&gt; sarith example1 + 1000 example2
-  	cl&gt; sarith example1 - 1000 example2 reverse+
-  	cl&gt; sarith example1 / 1000 example2
-  	cl&gt; sarith example1 ** 2 example2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example1 + 1000 example2
+  cl&gt; sarith example1 - 1000 example2 reverse+
+  cl&gt; sarith example1 / 1000 example2
+  cl&gt; sarith example1 ** 2 example2
+  </pre></div>
   <p>
   3.  Examples of binary operations between spectra with matching apertures:
   </p>
-  <pre>
-  	cl&gt; sarith example1 + example2 example3
-  	cl&gt; sarith example1 - example2 example3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example1 + example2 example3
+  cl&gt; sarith example1 - example2 example3
+  </pre></div>
   <p>
   4.  Example of binary operations between spectra with the second image
   consisting of a single spectrum:
   </p>
-  <pre>
-  	cl&gt; sarith example1 / flatspec flatexample1 ignore+ errval=1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example1 / flatspec flatexample1 ignore+ errval=1
+  </pre></div>
   <p>
   II.  MORE COMPLEX EXAMPLES
   </p>
   <p>
   5.  Unary and constant operations on a list of images:
   </p>
-  <pre>
-  	cl&gt; sarith example* fnu "" %example%fnu%
-  	cl&gt; sarith example* + 1000 %example%fnu%
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example* fnu "" %example%fnu%
+  cl&gt; sarith example* + 1000 %example%fnu%
+  </pre></div>
   <p>
   6.  Binary operations on a list of images using a single second operand
   with matching apertures:
   </p>
-  <pre>
-  	cl&gt; sarith example* - skyspec %example%skysub%*
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example* - skyspec %example%skysub%*
+  </pre></div>
   <p>
   7.  Selecting apertures to operate upon:
   </p>
-  <pre>
-  	cl&gt; sarith example* - skyspec %example%skysub%* aper=1,5,9
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example* - skyspec %example%skysub%* aper=1,5,9
+  </pre></div>
   <p>
   8.  Extract the sum of each 10 columns in a long slit spectrum and normalize
   by the central spectrum:
   </p>
-  <pre>
-  	cl&gt; nsum = "10"
-  	cl&gt; sarith longslit copy "" longslit.ms aper=5-500x10
-  	longslit[5]  --&gt;  longslit.ms[5]
-  	longslit[15]  --&gt;  longslit.ms[15]
-  	longslit[25]  --&gt;  longslit.ms[25]
-  	...
-  	cl&gt; sarith longslit.ms / longslit.ms[*,25] norm ignore+
-  	longslit.ms[5]  /  longslit.ms[*,25][245]  --&gt;  norm[5]
-  	longslit.ms[15]  /  longslit.ms[*,25][245]  --&gt;  norm[15]
-  	longslit.ms[25]  /  longslit.ms[*,25][245]  --&gt;  norm[25]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; nsum = "10"
+  cl&gt; sarith longslit copy "" longslit.ms aper=5-500x10
+  longslit[5]  --&gt;  longslit.ms[5]
+  longslit[15]  --&gt;  longslit.ms[15]
+  longslit[25]  --&gt;  longslit.ms[25]
+  cl&gt; sarith longslit.ms / longslit.ms[*,25] norm ignore+
+  longslit.ms[5]  /  longslit.ms[*,25][245]  --&gt;  norm[5]
+  longslit.ms[15]  /  longslit.ms[*,25][245]  --&gt;  norm[15]
+  longslit.ms[25]  /  longslit.ms[*,25][245]  --&gt;  norm[25]
+  </pre></div>
   <p>
   9.  In place operations:
   </p>
-  <pre>
-  	cl&gt; sarith example* + 1000 example* clobber+
-  	example1[1]  +  1000.  --&gt;  example1[1]
-  	example1[2]  +  1000.  --&gt;  example1[2]
-  	...
-  	example2[1]  +  1000.  --&gt;  example2[1]
-  	example2[2]  +  1000.  --&gt;  example2[2]
-  	...
-  	cl&gt; sarith example* flam "" example* clobber+
-  	example1[1]  -- flam --&gt;  example1[1]
-  	example1[2]  -- flam --&gt;  example1[2]
-  	...
-  	example2[1]  -- flam --&gt;  example2[1]
-  	example2[2]  -- flam --&gt;  example2[2]
-  	...
-  	cl&gt; sarith example* - skyspec "" clobber+ ignore+
-  	example1[1]  +  skyspec[1]  --&gt;  example1[1]
-  	example1[2]  +  skyspec[1]  --&gt;  example1[2]
-  	...
-  	example2[1]  +  skyspec[1]  --&gt;  example2[1]
-  	example2[2]  +  skyspec[1]  --&gt;  example2[2]
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example* + 1000 example* clobber+
+  example1[1]  +  1000.  --&gt;  example1[1]
+  example1[2]  +  1000.  --&gt;  example1[2]
+  example2[1]  +  1000.  --&gt;  example2[1]
+  example2[2]  +  1000.  --&gt;  example2[2]
+  cl&gt; sarith example* flam "" example* clobber+
+  example1[1]  -- flam --&gt;  example1[1]
+  example1[2]  -- flam --&gt;  example1[2]
+  example2[1]  -- flam --&gt;  example2[1]
+  example2[2]  -- flam --&gt;  example2[2]
+  cl&gt; sarith example* - skyspec "" clobber+ ignore+
+  example1[1]  +  skyspec[1]  --&gt;  example1[1]
+  example1[2]  +  skyspec[1]  --&gt;  example1[2]
+  example2[1]  +  skyspec[1]  --&gt;  example2[1]
+  example2[2]  +  skyspec[1]  --&gt;  example2[2]
+  </pre></div>
   <p>
   10.  Merging existing spectra with the results of operations:
   </p>
-  <pre>
-  	cl&gt; sarith example* / flat "" clobber+ merge+ renum+ ignor+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sarith example* / flat "" clobber+ merge+ renum+ ignor+
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SARITH">
   <dt><b>SARITH V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SARITH' Line='SARITH V2.11' -->
   <dd>Previously both w1 and w2 had to be specified to select a range to
@@ -646,7 +638,7 @@ sarith: Spectrum arithmetic
   handled properly.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SARITH">
   <dt><b>SARITH V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SARITH' Line='SARITH V2.10.3' -->
   <dd>Additional support for 3D multispec/equispec or spatial spectra has been
@@ -655,20 +647,20 @@ sarith: Spectrum arithmetic
   aperture and band.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SARITH">
   <dt><b>SARITH V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SARITH' Line='SARITH V2.10' -->
   <dd>This task is new.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   scopy, splot, imarith, imfunction
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

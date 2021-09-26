@@ -7,14 +7,14 @@ tscopy: Copy row/column subsets of tables using selectors.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tscopy intable outtable
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task is used to copy tables.  The input may be a filename
   template, including wildcard characters or the name of a file (preceded
@@ -35,16 +35,16 @@ tscopy: Copy row/column subsets of tables using selectors.
   for example, then the command <span style="font-family: monospace;">"tscopy tab* test/"</span> would copy both files to the subdirectory
   'test'.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>A list of one or more tables to be copied. Row/column selectors are supported.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>Either a directory name or a list of output table names. The standard
@@ -57,28 +57,28 @@ tscopy: Copy row/column subsets of tables using selectors.
   <dd>Display names of input and output tables as files are copied?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To simply copy a table:
   </p>
-  <pre>
-        cl&gt; tscopy table tablecopy
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tscopy table tablecopy
+  </pre></div>
   <p>
   2. To copy a table into an ASCII table:
   </p>
-  <pre>
-        cl&gt; tscopy table STDOUT &gt; table.txt
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tscopy table STDOUT &gt; table.txt
+  </pre></div>
   <p>
   3. To copy several tables:
   </p>
-  <pre>
-        cl&gt; tscopy table1,table2,tab67 a,b,c
-        cl&gt; tscopy tab*.tab a,b,c
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tscopy table1,table2,tab67 a,b,c
+  cl&gt; tscopy tab*.tab a,b,c
+  </pre></div>
   <p>
   In the latter case the extension is given explicitly in case there
   are other files beginning with <span style="font-family: monospace;">"tab"</span> that are not tables; there must
@@ -88,13 +88,13 @@ tscopy: Copy row/column subsets of tables using selectors.
   <p>
   4. To copy a set of tables to a new directory:
   </p>
-  <pre>
-        cl&gt; tscopy table*.tab directory
-  			or
-        cl&gt; tscopy table*.tab directory$
-  			or
-        cl&gt; tscopy table*.tab osdirectory
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tscopy table*.tab directory
+                    or
+  cl&gt; tscopy table*.tab directory$
+                    or
+  cl&gt; tscopy table*.tab osdirectory
+  </pre></div>
   <p>
   where <span style="font-family: monospace;">"directory"</span> is an IRAF environment variable for a directory name,
   and <span style="font-family: monospace;">"osdirectory"</span> is an operating system directory name
@@ -103,31 +103,31 @@ tscopy: Copy row/column subsets of tables using selectors.
   <p>
   5. To copy a subset of rows and columns:
   </p>
-  <pre>
-        cl&gt; tscopy "table.tab[c:wave,flux][r:wave=(4000:5000)]" tableout
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tscopy "table.tab[c:wave,flux][r:wave=(4000:5000)]" tableout
+  </pre></div>
   <p>
   This command will copy only columns named <span style="font-family: monospace;">"wave"</span> and <span style="font-family: monospace;">"flux"</span> from the input
   table to the output. It will also select and copy only the rows in which
   the <span style="font-family: monospace;">"wave"</span> value lies between 4000 and 5000.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   selectors
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

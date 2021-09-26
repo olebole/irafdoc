@@ -7,21 +7,21 @@ addsets: Add subsets of strings of spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   addsets input records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The root file name for the input spectra in the string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra indicating the elements of the string.
@@ -29,21 +29,21 @@ addsets: Add subsets of strings of spectra
   elements to the input root name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>This is the root file name for the names of the spectra which will
   be created by the addset operation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_start_rec">
   <dt><b>start_rec = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec = 1' -->
   <dd>The starting record number to be appended to the root name of the
   created spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_subset">
   <dt><b>subset = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='subset' Line='subset = 2' -->
   <dd>The length of the substring of spectra which will be added together.
@@ -52,7 +52,7 @@ addsets: Add subsets of strings of spectra
   2 at a time, added, and the sum written as a new spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weighting">
   <dt><b>weighting = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = yes' -->
   <dd>If set to yes, an average of the substring of spectra is generated
@@ -62,9 +62,9 @@ addsets: Add subsets of strings of spectra
   sum is generated.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Every <span style="font-family: monospace;">"subset"</span> group of spectra will be accumulated and the sum will be
   written as a new spectrum. For example, if the input string contains
@@ -81,26 +81,26 @@ addsets: Add subsets of strings of spectra
   Subset may be set to 1 to allow a copy operation although this is not
   a very efficient way to do so.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following three examples are those described above.
   </p>
-  <pre>
-  	cl&gt; addsets nite1 2001-2100
-  	cl&gt; addsets nite1 2001-2023 subset=4
-  	cl&gt; addsets nite1 2001-2010 subset=1 output=nite2 \<br>
-  	&gt;&gt;&gt; start_rec=2001
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; addsets nite1 2001-2100
+  cl&gt; addsets nite1 2001-2023 subset=4
+  cl&gt; addsets nite1 2001-2010 subset=1 output=nite2 \<br>
+  &gt;&gt;&gt; start_rec=2001
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   bswitch
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

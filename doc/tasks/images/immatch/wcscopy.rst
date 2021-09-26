@@ -7,37 +7,37 @@ wcscopy: Copy the wcs from one image to another
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   wcscopy images refimages
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>The list of input images which will inherit the wcs of the reference image.
   If the image does not exists a dataless image header is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>The list of reference images containing the reference wcs. The number of
   reference images must be one or equal to the number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about the progress of the task?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   WCSCOPY copies the world coordinate system information in the header of the
   reference image <i>reference</i> to the headers of the input images
@@ -49,9 +49,9 @@ wcscopy: Copy the wcs from one image to another
   The WCS is treated as an independent object and
   there is no check made on the dimensionality and sizes of the images.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Information  on  IRAF  world  coordinate  systems including
   more detailed descriptions of the <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>
@@ -69,39 +69,39 @@ wcscopy: Copy the wcs from one image to another
   by Hanisch and Wells, available from our anonymous ftp archive.
       
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Make sure that the world coordinates systems of a list of input images
   that have been registered to a reference image with the xregister task
   are identical to the world coordinate system of the reference image.
   </p>
-  <pre>
-  	cl&gt; xregister @inlist refimage [200:400,200:400] shifts \<br>
-  	    output=@outlist xwindow=21 ywindow=21
-  	cl&gt; wcscopy @outlist refimage
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; xregister @inlist refimage [200:400,200:400] shifts \<br>
+      output=@outlist xwindow=21 ywindow=21
+  cl&gt; wcscopy @outlist refimage
+  </pre></div>
   <p>
   2.  Create a data-less WCS image by specifying a new image.
   </p>
-  <pre>
-  	cl&gt; wcscopy new dev$wpix
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; wcscopy new dev$wpix
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tprecess,imalign,xregister,geomap,register,geotran,wcsmap,wregister,wcsedit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

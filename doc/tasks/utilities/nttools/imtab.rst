@@ -7,14 +7,14 @@ imtab: Copy an image to a table column.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imtab input outtable colname
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task copies data from an image to a table.
   Pixel values are read from the image line by line
@@ -45,16 +45,16 @@ imtab: Copy an image to a table column.
   the column name for the image data
   and gives the column names for the pixel coordinates.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input = <span style="font-family: monospace;">""</span> [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input = "" [file name template]' -->
   <dd>The names of the images to be written to the tables.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable = <span style="font-family: monospace;">""</span> [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = "" [file name template]' -->
   <dd>The names of the output tables.
@@ -66,7 +66,7 @@ imtab: Copy an image to a table column.
   they will be in the following columns.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_colname">
   <dt><b>colname = <span style="font-family: monospace;">""</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colname' Line='colname = "" [string]' -->
   <dd>A column of this name will be created in the output table,
@@ -139,22 +139,22 @@ imtab: Copy an image to a table column.
   tbltype = <span style="font-family: monospace;">"text"</span> means the output will be a plain text file.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Copy image <span style="font-family: monospace;">"hr465_flux.imh"</span> to table <span style="font-family: monospace;">"hr465.tab"</span>, column <span style="font-family: monospace;">"flux"</span>:
   </p>
-  <pre>
-  	tt&gt; imtab hr465_flux.imh hr465.tab flux
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; imtab hr465_flux.imh hr465.tab flux
+  </pre></div>
   <p>
   2.  Copy the 2-D image <span style="font-family: monospace;">"ir27.hhh"</span> to column <span style="font-family: monospace;">"ir27"</span> of table <span style="font-family: monospace;">"map.tab"</span>,
   saving the pixel numbers in columns <span style="font-family: monospace;">"pix1"</span> and <span style="font-family: monospace;">"pix2"</span>:
   </p>
-  <pre>
-  	tt&gt; imtab ir27.hhh map.tab ir27 pname="pix"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; imtab ir27.hhh map.tab ir27 pname="pix"
+  </pre></div>
   <p>
   3.  Copy the 1-D section [257:257,129:384] of
   x0y70206t.d0h to column <span style="font-family: monospace;">"x0y70206"</span> of table <span style="font-family: monospace;">"focus.tab"</span>.
@@ -169,30 +169,30 @@ imtab: Copy an image to a table column.
   Physical or world coordinates will be 2-D in this case
   because the original image <span style="font-family: monospace;">"x0y70206t.d0h"</span> is 2-D.
   </p>
-  <pre>
-  	tt&gt; imtab x0y70206t.d0h[257:257,129:384] focus.tab x0y70206 \<br>
-  	&gt;&gt;&gt; pname="p" wcs="world" formats="%12.1H %12.1h"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; imtab x0y70206t.d0h[257:257,129:384] focus.tab x0y70206 \<br>
+  &gt;&gt;&gt; pname="p" wcs="world" formats="%12.1H %12.1h"
+  </pre></div>
   <p>
   4.  Use the same image as in the previous example,
   but print the values on the standard output.
   </p>
-  <pre>
-  	tt&gt; imtab x0y70206t.d0h[257:257,129:384] STDOUT x0y70206 \<br>
-  	&gt;&gt;&gt; pname="p" wcs="world" formats="%12.1H %12.1h"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; imtab x0y70206t.d0h[257:257,129:384] STDOUT x0y70206 \<br>
+  &gt;&gt;&gt; pname="p" wcs="world" formats="%12.1H %12.1h"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   The 'tabim' task copies a column of a table to an image.
   The 'listpixels' task in the 'images' package writes data values and
@@ -206,7 +206,7 @@ imtab: Copy an image to a table column.
   the tables package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

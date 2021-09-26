@@ -7,28 +7,28 @@ aclist: List the supported astrometric catalogs
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   aclist catalogs
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_catalogs">
   <dt><b>catalogs</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs' -->
   <dd>The names of the astrometric catalogs to be listed. If catalogs = <span style="font-family: monospace;">"*"</span> then
   all the astrometric catalogs in the catalog configuration file are listed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>List the catalog query and output formats after the catalog name ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catdb">
   <dt><b>catdb = <span style="font-family: monospace;">")_.catdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
   <dd>The catalog configuration file. The value of catdb defaults to the value
@@ -36,9 +36,9 @@ aclist: List the supported astrometric catalogs
   file is <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Aclist lists the supported astrometric catalogs specified by the
   <i>catalogs</i> parameter. If catalogs = <span style="font-family: monospace;">"*"</span> then all the supported catalogs
@@ -55,35 +55,35 @@ aclist: List the supported astrometric catalogs
   Users can add records to this file or create their own configuration
   file using catdb as a model.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List all the astrometric catalogs in the catalog configuration file.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; aclist *
-  </pre>
+  </pre></div>
   <p>
   2. List the query format and the output format for the usno2@noao catalog.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; aclist usno2@noao verbose+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   aslist
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

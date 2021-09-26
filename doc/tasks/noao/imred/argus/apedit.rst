@@ -7,21 +7,21 @@ apedit: Edit apertures interactively
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   apedit input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images for which apertures are to be edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
@@ -33,7 +33,7 @@ apedit: Edit apertures interactively
   for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_references">
   <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
@@ -48,7 +48,7 @@ apedit: Edit apertures interactively
   and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Run this task interactively?  If the task is not run interactively then
@@ -56,7 +56,7 @@ apedit: Edit apertures interactively
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = no' -->
   <dd>Find the spectra and define apertures automatically?  In order for
@@ -64,32 +64,32 @@ apedit: Edit apertures interactively
   input image or reference image defined in the database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no' -->
   <dd>Recenter the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_resize">
   <dt><b>resize = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no' -->
   <dd>Resize the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF' -->
   <dd>The dispersion line (line or column perpendicular to the dispersion axis) to
   be graphed.  A value of INDEF uses the middle of the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 10' -->
   <dd>Number of dispersion lines to be summed or medianed.  The lines are taken
@@ -97,29 +97,29 @@ apedit: Edit apertures interactively
   lines and a negative selects a median of lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_width">
   <dt><b>width = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='width' Line='width = 5.' -->
   <dd>Width of spectrum profiles.  This parameter is used for the profile
   centering algorithm in this and other tasks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radius">
   <dt><b>radius = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 5.' -->
   <dd>The profile centering error radius for the centering algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.' -->
   <dd>Centering threshold for the centering algorithm.  The range of pixel intensities
   near the initial centering position must exceed this threshold.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_additional_parameters">
   <h3>Additional parameters</h3>
-  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
   <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters are taken from the
@@ -131,14 +131,14 @@ apedit: Edit apertures interactively
   When this operation is performed from the task <b>apall</b> all parameters
   except the package parameters are included in that task.
   </p>
-  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  </section>
+  <section id="s_cursor_keys">
   <h3>Cursor keys</h3>
-  <!-- BeginSection: 'CURSOR KEYS' -->
   <p>
   When editing the apertures interactively the following cursor keys are
   available.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?    Print help
   a    Toggle the ALL flag
   b an Set background fitting parameters
@@ -168,28 +168,28 @@ apedit: Edit apertures interactively
   +  c Select the next aperture (in ID) to be the current aperture
   -  c Select the previous aperture (in ID) to be the current aperture
   I    Interrupt task immediately.  Database information is not saved.
-  </pre>
+  </pre></div>
   <p>
   The letter a following the key indicates if all apertures are affected when
   the ALL flag is set.  The letter c indicates that the key affects the
   current aperture while the letter n indicates that the key affects the
   aperture whose center is nearest the cursor.
   </p>
-  <!-- EndSection:   'CURSOR KEYS' -->
+  </section>
+  <section id="s_colon_commands">
   <h3>Colon commands</h3>
-  <!-- BeginSection: 'COLON COMMANDS' -->
-  <pre>
-  :show [file]	   Print a list of the apertures (default STDOUT)
+  <div class="highlight-default-notranslate"><pre>
+  :show [file]       Print a list of the apertures (default STDOUT)
   :parameters [file] Print current parameter values (default STDOUT)
   :read [name]       Read from database (default current image)
   :write [name]      Write to database (default current image)
-  </pre>
+  </pre></div>
   <p>
   The remaining colon commands are task parameters and print the current
   value if no value is given or reset the current value to that specified.
   Use :parameters to see current parameter values.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   :apertures      :apidtable      :avglimits      :b_function
   :b_grow         :b_high_reject  :b_low_reject   :b_naverage
   :b_niterate     :b_order        :b_sample       :background
@@ -205,11 +205,11 @@ apedit: Edit apertures interactively
   :t_order        :t_sample       :t_step         :t_width
   :threshold      :title          :ulimit         :upper
   :usigma         :weights        :width          :write
-  :ylevel		:t_nlost
-  </pre>
-  <!-- EndSection:   'COLON COMMANDS' -->
+  :ylevel         :t_nlost
+  </pre></div>
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   For each image in the input image list, apertures are defined and edited
   interactively.  The aperture editor is invoked when the parameters
@@ -396,9 +396,9 @@ apedit: Edit apertures interactively
   The aperture editor may be selected from nearly every task using the
   <b>edit</b> parameter.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The aperture editor is a very flexible and interactive tool
   for which it is impossible illustrate all likely uses.  The following
@@ -407,18 +407,18 @@ apedit: Edit apertures interactively
   <p>
   1.  To define and edit apertures for image <span style="font-family: monospace;">"n1.001"</span>:
   </p>
-  <p>
-  	cl&gt; apedit n1.001
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apedit n1.001
+  </pre></div>
   <p>
   2.  To define apertures for one image and then apply them to several other
   images:
   </p>
-  <pre>
-  	cl&gt; apedit n1.* ref=n1.001
-  	Edit apertures for n1.001? (yes)
-  	Edit apertures for n1.002? (yes) NO
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apedit n1.* ref=n1.001
+  Edit apertures for n1.001? (yes)
+  Edit apertures for n1.002? (yes) NO
+  </pre></div>
   <p>
   Answer <span style="font-family: monospace;">"yes"</span> to the first query for editing n1.001.  To
   the next query (for n1.002) respond with <span style="font-family: monospace;">"NO"</span>.  The remaining
@@ -433,10 +433,10 @@ apedit: Edit apertures interactively
   to set the ALL flag is very useful when dealing with many spectra in a
   single image.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_APEDIT">
   <dt><b>APEDIT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APEDIT' Line='APEDIT V2.11' -->
   <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
@@ -450,12 +450,12 @@ apedit: Edit apertures interactively
   <p>
   SEE ALSO
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   apdefault, apfind, aprecenter, apresize, aptrace, apsum, apall
   center1d, cursor, gtools, icfit
-  </pre>
+  </pre></div>
   
-  <!-- EndSection:    'REVISIONS' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'CURSOR KEYS' 'COLON COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS'  -->
   

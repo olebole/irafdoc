@@ -7,21 +7,21 @@ setimpars: Save/restore parameter sets for a particular image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   setimpars image restore update
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The image for which the daophot parameters are to be saved or restored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_restore">
   <dt><b>restore</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='restore' Line='restore' -->
   <dd>If restore = yes, parfile is <span style="font-family: monospace;">""</span>, and the file <span style="font-family: monospace;">"image.pars"</span> exists, SETIMPARS
@@ -29,14 +29,14 @@ setimpars: Save/restore parameter sets for a particular image
   parfile is not <span style="font-family: monospace;">""</span>, then restore is automatically assumed to be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update' -->
   <dd>If update = yes, SETIMPARS saves the new current values of the DAOPHOT algorithm
   parameters in the file <i>image.pars</i> and any previously existing file of the same name is overwritten.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_review">
   <dt><b>review = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='review' Line='review = no' -->
   <dd>Review and/or edit the values of the parameters in the parameter sets DATAPARS,
@@ -44,7 +44,7 @@ setimpars: Save/restore parameter sets for a particular image
   task for each of the named parameter sets in turn?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_parfile">
   <dt><b>parfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='parfile' Line='parfile' -->
   <dd>The name of the input file containing the values of the DAOPHOT algorithm
@@ -56,7 +56,7 @@ setimpars: Save/restore parameter sets for a particular image
   <i>daopars</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the DATAPARS parameter values. Datapars must be
@@ -66,7 +66,7 @@ setimpars: Save/restore parameter sets for a particular image
   unlearned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_findpars">
   <dt><b>findpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='findpars' Line='findpars = ""' -->
   <dd>The name of the file containing the FINDPARS parameter values. Findpars
@@ -76,7 +76,7 @@ setimpars: Save/restore parameter sets for a particular image
   is <span style="font-family: monospace;">""</span>, FINDPARS is unlearned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_centerpars">
   <dt><b>centerpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='centerpars' Line='centerpars = ""' -->
   <dd>The name of the file containing the CENTERPARS parameter values.  Centerpars
@@ -86,7 +86,7 @@ setimpars: Save/restore parameter sets for a particular image
   is <span style="font-family: monospace;">""</span>, CENTERPARS is unlearned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitskypars">
   <dt><b>fitskypars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitskypars' Line='fitskypars = ""' -->
   <dd>The name of the file containing the FITSKYPARS parameter values. Fitskypars
@@ -96,7 +96,7 @@ setimpars: Save/restore parameter sets for a particular image
   is <span style="font-family: monospace;">""</span>, FITSKYPARS is unlearned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_photpars">
   <dt><b>photpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photpars' Line='photpars = ""' -->
   <dd>The name of the file containing the PHOTPARS parameter values. Photpars must be
@@ -106,7 +106,7 @@ setimpars: Save/restore parameter sets for a particular image
   unlearned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_daopars">
   <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the DAOPARS parameter values. Daopars must be a
@@ -115,16 +115,16 @@ setimpars: Save/restore parameter sets for a particular image
   parameter <i>unlearn</i> is <span style="font-family: monospace;">"yes"</span> and daopars is <span style="font-family: monospace;">""</span>, DAOPARS is unlearned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_unlearn">
   <dt><b>unlearn = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='unlearn' Line='unlearn = no' -->
   <dd>Return the values of the parameters in the parameter sets DATAPARS, FINDPARS,
   CENTERPARS, FITSKYPARS, PHOTPARS, and DAOPARS to their default values?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   SETIMPARS saves and restores the DAOPHOT task and algorithm parameters for the
   image <i>image</i>. On startup SETIMPARS initializes all the DAOPHOT package
@@ -149,73 +149,73 @@ setimpars: Save/restore parameter sets for a particular image
   DAOPARS in the file <i>image.pars</i>. Any previously existing file of the same
   name is overwritten.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Save the current values of the daophot task and algorithm parameters for
   the image m92v.
   </p>
-  <pre>
-  	da&gt; setimpars m92v no yes
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; setimpars m92v no yes
   
-  	    ... m92v parameters are saved in m92v.pars
-  </pre>
+      ... m92v parameters are saved in m92v.pars
+  </pre></div>
   <p>
   2. Make some minor alterations in the current values of the m92v algorithm
   parameters and save the new parameters set.
   </p>
-  <pre>
-  	da&gt; setimpars m92v no yes
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; setimpars m92v no yes
   
-  	    ... m92v parameters are saved in new version of m92v.pars
-  </pre>
+      ... m92v parameters are saved in new version of m92v.pars
+  </pre></div>
   <p>
   3. Begin work on the image m92b. Initialize the values of the daophot task
   and algorithm parameters for m92b using those stored for m92v. After doing
   some preliminary editing and reductions for m92b, save the parameters,
   and return to work on m92v.
   </p>
-  <pre>
-  	da&gt; setimpars m92b yes no parfile=m92v.pars
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; setimpars m92b yes no parfile=m92v.pars
   
-  	    ... current parameters for m92v are set using saved
-  		m92v parameters
+      ... current parameters for m92v are set using saved
+          m92v parameters
   
-  	da&gt; daoedit m92b
+  da&gt; daoedit m92b
   
-  	    ... edit the parameters as necessary for the new image
+      ... edit the parameters as necessary for the new image
   
-  	da&gt; daofind m92b
+  da&gt; daofind m92b
   
-  	    ... find the stars in m92b
+      ... find the stars in m92b
   
-  	da&gt; phot m92b
+  da&gt; phot m92b
   
-  	    ... do the initial photometry for stars in m92b
+      ... do the initial photometry for stars in m92b
   
-  	da&gt; setimpars m92b no yes
+  da&gt; setimpars m92b no yes
   
-  	    ... current m92b parameters are saved in m92b.pars
+      ... current m92b parameters are saved in m92b.pars
   
-  	da&gt; setimpars m92v yes no
+  da&gt; setimpars m92v yes no
   
-  	    ... m92v parameters are restored from m92v.pars
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... m92v parameters are restored from m92v.pars
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   daoedit,datapars,findpars,centerpars,fitskypars,photpars,daopars
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

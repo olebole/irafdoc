@@ -7,50 +7,50 @@ lumatch: Match the lookup tables of two frames
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   lumatch frame ref_frame
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_frame">
   <dt><b>frame</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='frame' Line='frame' -->
   <dd>Frame whose lookup table is to be adjusted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ref_frame">
   <dt><b>ref_frame</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ref_frame' Line='ref_frame' -->
   <dd>Frame whose lookup table is to be matched.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The lookup tables mapping the display frame values to the grey levels
   on the display monitor are matched in one frame to a reference frame.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   To match the lookup tables in frame 3 to those in frame 1:
   </p>
-  <p>
-  	cl&gt; lumatch 3 1
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; lumatch 3 1
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   cv
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -7,35 +7,35 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkcwwcs wcsname
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_wcsname">
   <dt><b>wcsname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsname' Line='wcsname' -->
   <dd>Image to be created or modified.  If a new (non-existent) image is specified
   then a data-less image (NDIM=0) is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsref">
   <dt><b>wcsref = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsref' Line='wcsref = ""' -->
   <dd>Image whose WCS is first inherited and then updated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_equinox">
   <dt><b>equinox = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='equinox' Line='equinox = INDEF' -->
   <dd>Equinox of the coordinates specified in decimal years.  If INDEF then the
   current value is not modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ra">
   <dt><b>ra = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra = INDEF' -->
   <dd>Right ascension in hours.  This may be typed in standard sexagesimal
@@ -44,7 +44,7 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
   then the current value is not modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dec">
   <dt><b>dec = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dec' Line='dec = INDEF' -->
   <dd>Declination in degrees.  This may be typed in standard sexagesimal
@@ -52,7 +52,7 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
   If INDEF then the current value is not modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = INDEF, pa = 0., lefthanded = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = INDEF, pa = 0., lefthanded = yes' -->
   <dd>Celestial pixel scale in arc seconds per pixel, the position angle in
@@ -67,28 +67,28 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
   counterclockwise and if not it is clockwise.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_projection">
   <dt><b>projection = <span style="font-family: monospace;">"tan"</span> (tan|sin|linear)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan" (tan|sin|linear)' -->
   <dd>WCS projection function for the celestial axes which may be
   <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"sin"</span>, or <span style="font-family: monospace;">"linear"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wave">
   <dt><b>wave = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wave' Line='wave = INDEF' -->
   <dd>Reference wavelength in arbitrary units.  If INDEF then the current
   value is not modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wscale">
   <dt><b>wscale = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wscale' Line='wscale = INDEF' -->
   <dd>Wavelength scale in arbitrary units per pixel.  If INDEF then the current
   value is not modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rapix">
   <dt><b>rapix = INDEF, decpix = INDEF, wpix = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rapix' Line='rapix = INDEF, decpix = INDEF, wpix = INDEF' -->
   <dd>The reference pixel for the right ascension (first image axis), for
@@ -97,9 +97,9 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
   and lie outside the size of the image as allowed by the standard.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   MKCWWCS creates or modifies a celestial (RA/DEC) plus wavelength
   three-dimensional WCS in an image header.  If a
@@ -124,16 +124,16 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
   have a uniform pixel scale (apart from the effects of the projection
   function).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a data-less header by specifying a new wcs name.
   </p>
-  <pre>
-      cl&gt; mkcwwcs new ra=1:20:23.1 dec=-12:11:13 wave=5500. \<br>
-      &gt;&gt;&gt; scale=0.25 wscale=1.23
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkcwwcs new ra=1:20:23.1 dec=-12:11:13 wave=5500. \<br>
+  &gt;&gt;&gt; scale=0.25 wscale=1.23
+  </pre></div>
   <p>
   The reference pixel will be (0,0,0).  To apply it later to an actual
   image (say with WCSCOPY) would require assigning the reference pixel.
@@ -143,18 +143,18 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
   2. Modify the WCS of an existing image by changing the reference value
   and pixel.
   </p>
-  <pre>
-      cl&gt; mkcwwcs old ra=1:20:23.1 dec=-12:11:13 wave=5500. \<br>
-      &gt;&gt;&gt; rapix=1234 decpix=345 wpix=1024
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkcwwcs old ra=1:20:23.1 dec=-12:11:13 wave=5500. \<br>
+  &gt;&gt;&gt; rapix=1234 decpix=345 wpix=1024
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   wcsedit,wcscopy,mkcwcs
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

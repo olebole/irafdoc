@@ -7,47 +7,47 @@ extinct: Use BSWITCH for extinction correction
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   extinct root records output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_root">
   <dt><b>root</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='root' Line='root' -->
   <dd>The root name for the input spectra to be corrected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra to be included in the extinction operation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The root name for the output corrected spectra
   </dd>
   </dl>
-  <dl>
+  <dl id="l_start_rec">
   <dt><b>start_rec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec' -->
   <dd>The starting record number for the output corrected spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nr_aps">
   <dt><b>nr_aps = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nr_aps' Line='nr_aps = 2' -->
   <dd>The number of instrument apertures for this data set.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The input spectra are corrected for atmospheric extinction. 
   EXTINCT redirects the spectra through the task BSWITCH so all
@@ -61,28 +61,28 @@ extinct: Use BSWITCH for extinction correction
   appropriately to the instrument. For IIDS and IRS data, this
   is 2.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <p>
-  	cl&gt; extinct  nite1 1001-1032 nite1ex
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; extinct  nite1 1001-1032 nite1ex
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The input string of spectra must be ordered so that only
   one spectrum from each aperture is present among substrings
   of length nr_aps.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   bswitch
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

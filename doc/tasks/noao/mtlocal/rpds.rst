@@ -7,15 +7,15 @@ rpds: Convert a PDS image into an IRAF image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rpds pds_file file_list iraf_file
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_pds_file">
   <dt><b>pds_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pds_file' Line='pds_file' -->
   <dd>The PDS data source. The data source may be a template specifying
@@ -26,7 +26,7 @@ rpds: Convert a PDS image into an IRAF image
   the tape files specified by file_list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_file_list">
   <dt><b>file_list</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list' -->
   <dd>A string parameter containing the list of tape files to be processed.
@@ -36,7 +36,7 @@ rpds: Convert a PDS image into an IRAF image
   will convert files 1 through 8.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_iraf_file">
   <dt><b>iraf_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file' -->
   <dd>The IRAF file which will receive the PDS data if the make_image
@@ -44,20 +44,20 @@ rpds: Convert a PDS image into an IRAF image
   number or disk sequence number will be appended to the output file name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_make_image">
   <dt><b>make_image = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes' -->
   <dd>If make_image is not set, the PDS image headers are listed on the standard
   output and no image file is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_long_header">
   <dt><b>long_header = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no' -->
   <dd>If this switch is set the full PDS header is printed on the standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_short_header">
   <dt><b>short_header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes' -->
   <dd>If this switch is set only the output filename,
@@ -65,26 +65,26 @@ rpds: Convert a PDS image into an IRAF image
   on the standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datatype">
   <dt><b>datatype = <span style="font-family: monospace;">"s"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "s"' -->
   <dd>The IRAF image data type, s (short integer), i (integer), l (long integer),
    r (real) or d (double).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tenbit">
   <dt><b>tenbit = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tenbit' Line='tenbit = no' -->
   <dd>Old ten bit format?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ninetrack">
   <dt><b>ninetrack = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ninetrack' Line='ninetrack = yes' -->
   <dd>Ninetrack or old seven track tapes?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offset">
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Offset is an integer parameter which is added to the tape file number
@@ -95,41 +95,41 @@ rpds: Convert a PDS image into an IRAF image
   and <span style="font-family: monospace;">"pds003"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Kitt Peak PDS data is read into IRAF from either a
   list of disk files or magnetic tape.
   The PDS header may optionally be printed on the standard output as either a
   full listing or a short description.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Convert a ninetrack PDS image tape to a set of IRAF images.
   </p>
-  <pre>
-  	cl&gt; pdsread mtb1600 1-999 images
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pdsread mtb1600 1-999 images
+  </pre></div>
   <p>
   List the contents of a nintrack PDS tape on the standard output.
   </p>
-  <pre>
-  	cl&gt; pdsread mtb1600 1-999 images ma-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pdsread mtb1600 1-999 images ma-
+  </pre></div>
   <p>
   Convert a list of pds file on disk to IRAF images.
   </p>
-  <pre>
-  	cl&gt; pdsread pds* 1 images
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pdsread pds* 1 images
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   
-  <!-- EndSection:    'BUGS' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS'  -->
   

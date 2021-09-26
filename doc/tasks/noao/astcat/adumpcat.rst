@@ -7,15 +7,15 @@ adumpcat: Catalog access debugging task
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   adumpcat catalog output ra dec size
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_catalog">
   <dt><b>catalog</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog' -->
   <dd>The name of the catalog to be queried. Catalog names have the form
@@ -23,7 +23,7 @@ adumpcat: Catalog access debugging task
   stored in a record called catalog in  the catalog configuration file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The name of the output query results file. The query results are written
@@ -31,14 +31,14 @@ adumpcat: Catalog access debugging task
   HTML markup, etc as well as the object list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ra">
   <dt><b>ra  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra  ' -->
   <dd>The right ascension of the field center in the units expected by the catalog
   query. The value of ra replaces the default value of the ra query parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dec">
   <dt><b>dec  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dec' Line='dec  ' -->
   <dd>The declination of the field center in the units expected by the catalog query.
@@ -47,7 +47,7 @@ adumpcat: Catalog access debugging task
   correctly.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_size">
   <dt><b>size</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='size' Line='size' -->
   <dd>The field size in units expected by the catalog query. The value of size
@@ -55,7 +55,7 @@ adumpcat: Catalog access debugging task
   hwidth, x/rahwidth, y/dechwidth, or radius query parameters as appropriate.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catdb">
   <dt><b>catdb = <span style="font-family: monospace;">")_.catdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
   <dd>The catalog configuration file. The name of the catalog configuration file
@@ -63,9 +63,9 @@ adumpcat: Catalog access debugging task
   default configuration file is <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Adumpcat is a simple catalog access debugging task which queries the
   astrometric catalog <i>catalog</i>, captures the results, and writes them
@@ -90,9 +90,9 @@ adumpcat: Catalog access debugging task
   The output of adumpcat can be used to refine the catalog record in the
   catalog configuration file.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the supported catalogs, select a catalog to query, make the query,
   and capture the results. The aclist task is used to list the supported
@@ -103,7 +103,7 @@ adumpcat: Catalog access debugging task
   results containing leading and trailing comments and
   HTML markup as shown below.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; aclist *
   usno2@noao
   
@@ -169,21 +169,21 @@ adumpcat: Catalog access debugging task
     950 N. Cherry Ave., P.O. Box 26732,
     Tucson, AZ  85726, Phone: 520-318-8000, FAX: 520-318-8360
     &lt;P&gt;Updated: 04Aug1998&lt;/address&gt;&lt;/body&gt;&lt;/html&gt;
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   aclist, agetcat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

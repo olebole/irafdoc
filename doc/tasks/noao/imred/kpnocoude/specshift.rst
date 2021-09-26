@@ -7,28 +7,28 @@ specshift: Shift spectral dispersion coordinate systems
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   specshift spectra shift
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_spectra">
   <dt><b>spectra</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spectra' Line='spectra' -->
   <dd>List of spectra to be modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shift">
   <dt><b>shift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift' -->
   <dd>Dispersion coordinate shift to be added to the current dispersion coordinate
   system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be modified.  The null list
@@ -39,15 +39,15 @@ specshift: Shift spectral dispersion coordinate systems
   for N-dimensional spatial spectra such as long slit and Fabry-Perot.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print a record of each aperture modified?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task applies a shift to the dispersion coordinate system of selected
   spectra.  The image data is not modified as with <b>imshift</b> but rather
@@ -74,33 +74,33 @@ specshift: Shift spectral dispersion coordinate systems
   The <i>verbose</i> parameter lists the images, the apertures, the shift, and
   the old and new values for the first physical pixel are printed.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To add 1.23 Angstroms to the coordinates of all apertures in the
   image <span style="font-family: monospace;">"ngc456.ms"</span>:
   </p>
-  <pre>
-  	cl&gt; specshift ngc456.ms 1.23
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; specshift ngc456.ms 1.23
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SPECSHIFT">
   <dt><b>SPECSHIFT V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SPECSHIFT' Line='SPECSHIFT V2.10.3' -->
   <dd>First version.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   sapertures, dopcor, imcoords.wcsreset, hedit, ranges, onedspec.package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

@@ -7,8 +7,8 @@ logging: Discussion of CL logging
 
 .. raw:: html
 
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The CL has some simple logging features to allow the recording of events of
   interactive sessions.  From these saved event logs, one can trace a particular
@@ -19,13 +19,13 @@ logging: Discussion of CL logging
   There are currently five types of logging messages, with a parameter to
   control what is actually logged.  These include:
   </p>
-  <pre>
-         commands - commands and keystrokes of an interactive session
-       background - messages about and from background jobs
-           errors - logging of error messages
-            trace - start/stop trace of script and executable tasks
-             user - user messages, via the <i>putlog</i> builtin
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+    commands - commands and keystrokes of an interactive session
+  background - messages about and from background jobs
+      errors - logging of error messages
+       trace - start/stop trace of script and executable tasks
+        user - user messages, via the <i>putlog</i> builtin
+  </pre></div>
   <p>
   All of these types of messages except the interactive commands will show up as
   comments (i.e., starting with a <span style="font-family: monospace;">'#'</span>) in the logfile.  This facilitates using a
@@ -36,10 +36,10 @@ logging: Discussion of CL logging
   These parameters can be set on the command line, in the <span style="font-family: monospace;">"login.cl"</span> file, or
   with the command <span style="font-family: monospace;">"eparam cl"</span>. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_keeplog">
   <dt><b>keeplog = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keeplog' Line='keeplog = no' -->
   <dd>The overall on/off switch for the CL logging.  When set to `yes', the logfile
@@ -48,13 +48,13 @@ logging: Discussion of CL logging
   existing file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"home$logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "home$logfile"' -->
   <dd>The name of the logfile.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logmode">
   <dt><b>logmode = <span style="font-family: monospace;">"commands nobackground noerrors notrace"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logmode' Line='logmode = "commands nobackground noerrors notrace"' -->
   <dd><i>Logmode</i> controls what goes into the logfile.  The following options
@@ -91,32 +91,32 @@ logging: Discussion of CL logging
   </dl>
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Turn all the logging features on except for background logging:
   </p>
-  <p>
-  	cl&gt; logmode = <span style="font-family: monospace;">"commands nobackground errors trace"</span>
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; logmode = "commands nobackground errors trace"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Background logging to the same logfile can cause problems.  The environment
   variable <i>filewait</i> should be set to `no' to avoid file access conflicts.
   Even with this, reliability is not guaranteed and some messages will not
   get into the logfile.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   cl, putlog
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

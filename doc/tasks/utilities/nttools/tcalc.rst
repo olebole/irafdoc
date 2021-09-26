@@ -7,14 +7,14 @@ tcalc: Perform arithmetic operations on table columns.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tcalc table outcol equals
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task evaluates an arbitrary expression that includes column names,
   constants, and operators, and creates a specified column in the 
@@ -49,150 +49,141 @@ tcalc: Perform arithmetic operations on table columns.
   remember that integer division truncates.
    
   </p>
-  <pre>
-  +	addition		-	subtraction
-  *	multiplication		/	division
-  -	negation		**	exponentiation
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  +       addition                -       subtraction
+  *       multiplication          /       division
+  -       negation                **      exponentiation
+  </pre></div>
   <p>
   The following logical operators are supported. Logical operators will
   return a value of 1 if true or 0 if false. Logical operators are
   supported in both their Fortran and SPP form.
   </p>
-  <pre>
-   .or. ||		logical or	.and. 	&amp;&amp;	logical and
-   .eq. ==		equality	.ne. 	!=	inequality
-   .lt. &lt;		less than	.gt. 	&gt;	greater than
-   .le. &lt;=		less or equal	.ge. 	&gt;=	greater or equal
-   .not. !		not
-  </pre>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
+  </dd>
+  </dl>
+  </pre></div>
   The following functions are supported. These functions all take a
   single argument, which may be an expression. The argument or result of
   trigonometric functions are in radians.
-  </p>
-  <pre>
-  abs 	absolute value		acos 	arc cosine
-  asin 	arc sine		atan 	arc tangent
-  cos 	arc cosine		cosh 	hyperbolic cosine
-  cube 	third power		double	convert to double
-  exp 	E raised to power	int 	convert to integer
-  log 	natural logarithm	log10 	common logarithm
-  nint 	nearest integer		real	convert to real
-  sin 	sine			sinh 	hyperbolic sine
-  sqr 	second power		sqrt 	square root
-  tan 	tangent			tanh	hyperbolic tangent
-  </pre>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
+  abs     absolute value          acos    arc cosine
+  asin    arc sine                atan    arc tangent
+  cos     arc cosine              cosh    hyperbolic cosine
+  cube    third power             double  convert to double
+  exp     E raised to power       int     convert to integer
+  log     natural logarithm       log10   common logarithm
+  nint    nearest integer         real    convert to real
+  sin     sine                    sinh    hyperbolic sine
+  sqr     second power            sqrt    square root
+  tan     tangent                 tanh    hyperbolic tangent
+  </pre></div>
   The following functions take two arguments.
-  </p>
-  <pre>
-  atan2 	arc tangent		dim 	positive difference
-  max 	maximum			min 	minimum
-  mod 	modulus			sign	sign transfer
-  </pre>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
+  atan2   arc tangent             dim     positive difference
+  max     maximum                 min     minimum
+  mod     modulus                 sign    sign transfer
+  </pre></div>
   Conditional expressions of the form <span style="font-family: monospace;">"if expr then expr else expr"</span> are
   supported. The expression after the else may be another conditional
   expression.  The words <span style="font-family: monospace;">"if"</span>, <span style="font-family: monospace;">"then"</span>, and <span style="font-family: monospace;">"else"</span> must be surrounded by
   blanks.
-  </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table  [file name template]</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table  [file name template]' -->
-  <dd>The input table, or tables; these files are modified in-place.
+  <!-- Sec='PARAMETERS' Level=-1 Label='table' Line='table  [file name template]' -->
+  <dd><p>
+  The input table, or tables; these files are modified in-place.
   Results will be written to a new column in the table unless an
   existing column name is specified, in which case the existing values
   will be overwritten.
   </dd>
   </dl>
-  <dl>
+  </p>
+  <dl id="l_outcol">
   <dt><b>outcol [string]</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='outcol' Line='outcol [string]' -->
-  <dd>Output column name.  This is the column where results are written.
+  <!-- Sec='PARAMETERS' Level=-1 Label='outcol' Line='outcol [string]' -->
+  <dd><p>
+  Output column name.  This is the column where results are written.
   Caution: if this column already exists, then it will be overwritten
   with the results of the calculation.  Note that column names are not
   case sensitive.
   </dd>
   </dl>
-  <dl>
+  </p>
+  <dl id="l_equals">
   <dt><b>equals [string]</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='equals' Line='equals [string]' -->
-  <dd>The arithmetic expression to evaluate. If the expression is too long
+  <!-- Sec='PARAMETERS' Level=-1 Label='equals' Line='equals [string]' -->
+  <dd><p>
+  The arithmetic expression to evaluate. If the expression is too long
   to pass as a parameter, place the expression in a file and set the
   value of this parameter to the file name preceded by an <span style="font-family: monospace;">"@"</span>, for
   example, <span style="font-family: monospace;">"@filename"</span>.
   </dd>
   </dl>
+  </p>
   <dl>
   <dt><b>(datatype = real) [string, allowed values: real | double | int ]</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(datatype = real) [string, allowed values: real | double | int ]' -->
-  <dd>Type of data stored in the output column, if it is a new column.
+  <!-- Sec='PARAMETERS' Level=-1 Label='' Line='(datatype = real) [string, allowed values: real | double | int ]' -->
+  <dd><p>
+  Type of data stored in the output column, if it is a new column.
   </dd>
   </dl>
+  </p>
   <dl>
   <dt><b>(colunits) [string]</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(colunits) [string]' -->
-  <dd>Units for the output column, if it is a new column.  This parameter
+  <!-- Sec='PARAMETERS' Level=-1 Label='' Line='(colunits) [string]' -->
+  <dd><p>
+  Units for the output column, if it is a new column.  This parameter
   may be blank.
   </dd>
   </dl>
+  </p>
   <dl>
   <dt><b>(colfmt) [string]</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='' Line='(colfmt) [string]' -->
-  <dd>Print format for the output column, if it is a new column.  If this
+  <!-- Sec='PARAMETERS' Level=-1 Label='' Line='(colfmt) [string]' -->
+  <dd><p>
+  Print format for the output column, if it is a new column.  If this
   parameter is left blank then a default will be used.  Type <span style="font-family: monospace;">"help
   ttools opt=sysdoc"</span> for more information about print formats.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </p>
+  </section>
+  <section id="s_examples_">
   <h3>Examples </h3>
-  <!-- BeginSection: 'EXAMPLES ' -->
-  <p>
   1.  Create a column called 'FLUX', which will contain a value equal to
   10.0**(-x/2.5) where x is the value in the column 'MAG'.  The new
   column will contain single precision data.
-  </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tcalc "intab" "FLUX" "10.0**(-mag/2.5)"
-  </pre>
-  <p>
+  </pre></div>
   2.  Create a column called 'POLY', which will contain a value equal to
   x+x**2 where x is the row number in the table.
-  </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tcalc "test" "POLY" "rownum+sqr(rownum)"
-  </pre>
-  <p>
+  </pre></div>
   3.  Set quotient to zero where divison by zero would otherwise occur:
-  </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tcalc "test" "QUOT" "if y != 0 then x / y else 0."
-  </pre>
-  <!-- EndSection:   'EXAMPLES ' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
-  <p>
   This task was written by Bernie Simon.
-  </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
-  <p>
   imcalc
-  </p>
-  <p>
   Type <span style="font-family: monospace;">"help ttools opt=sys"</span> for a higher-level description of the 'tables' 
   package.
-  </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES ' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

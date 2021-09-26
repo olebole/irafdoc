@@ -7,41 +7,41 @@ imcntr: Locate the center of a stellar image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imcntr input x_init y_init
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of images which contain the star to be centered.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x_init">
   <dt><b>x_init</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x_init' Line='x_init' -->
   <dd>The approximate column coordinate as a starting point for the centering.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_y_init">
   <dt><b>y_init</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='y_init' Line='y_init' -->
   <dd>The approximate line (row) coordinate as a starting point for the centering.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cboxsize">
   <dt><b>cboxsize = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cboxsize' Line='cboxsize = 5' -->
   <dd>The size of the extraction box to be used during the centering process.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Given the approximate coordinates of the center of an object, (x_init, y_init),
   IMCNTR will compute a more accurate center using the algorithms described in
@@ -66,32 +66,32 @@ imcntr: Locate the center of a stellar image
   nearby objects will affect the result. If too small, the center will be
   poorly defined.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The following example locates the center of a star near (123, 234)
   in 3 images.
   <br>
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; imcntr m92red,m92blu,m92grn 123 234
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The routine will probably fail if the desired object is within 2 or 3 pixels
   of the image boundary.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   pradprof
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

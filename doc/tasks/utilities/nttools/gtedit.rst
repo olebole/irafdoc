@@ -7,14 +7,14 @@ gtedit: Graphically edit a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   gtedit input xcolumn ycolumn
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The 'gtedit' task lets you graphically edit 
   an STSDAS table.
@@ -35,11 +35,11 @@ gtedit: Graphically edit a table.
   <p>
   To mark a point for deletion you can:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1) Specify the points individually
   2) Define a box in which all points will be deleted
   3) Delete all points on one side of the cursor or line segment
-  </pre>
+  </pre></div>
   <p>
   You can also toggle between <span style="font-family: monospace;">"delete mode"</span> and <span style="font-family: monospace;">"undelete mode"</span>. When
   you are in undelete mode, any previously-deleted points that you
@@ -49,52 +49,51 @@ gtedit: Graphically edit a table.
   If you don't like using 'gtedit', you can switch to the 'tedit'
   task and edit the table in the usual manner.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
-  <pre>
-  	GTEDIT Interactive Cursor Commands
+  <div class="highlight-default-notranslate"><pre>
+          GTEDIT Interactive Cursor Commands
   
-  ?	Print options
-  :	Colon commands
-  a	print out the complete row for the data point nearest the cursor
-  b	delete all points with Y values less than the cursor Y position
-  c	mark the corner of a box
-  d	delete the point nearest the cursor
-  e	exit and save changes in the output table
-  f	make all the marked deletions and replot remaining data
-  h	print out the column names of the input table
-  l	delete all points with X values less than the cursor X position
-  p	replot the graph possibly using new data columns
-  q	quit and do not save changes made since the last <span style="font-family: monospace;">'f'</span>
-  r	delete all points with X values greater than the cursor X position
-  s	mark one end of a line segment
-  t	delete all points with Y values greater than the cursor Y position
-  u	toggle between delete and undelete mode
-  v	change from gtedit to tedit mode
-  z	display current status (delete or undelete)
+  ?       Print options
+  :       Colon commands
+  a       print out the complete row for the data point nearest the cursor
+  b       delete all points with Y values less than the cursor Y position
+  c       mark the corner of a box
+  d       delete the point nearest the cursor
+  e       exit and save changes in the output table
+  f       make all the marked deletions and replot remaining data
+  h       print out the column names of the input table
+  l       delete all points with X values less than the cursor X position
+  p       replot the graph possibly using new data columns
+  q       quit and do not save changes made since the last <span style="font-family: monospace;">'f'</span>
+  r       delete all points with X values greater than the cursor X position
+  s       mark one end of a line segment
+  t       delete all points with Y values greater than the cursor Y position
+  u       toggle between delete and undelete mode
+  v       change from gtedit to tedit mode
+  z       display current status (delete or undelete)
   
-  :x(-) xcolumn	set the table column for the X axis and possibly replot
-  :y(-) ycolumn	set the table column for the Y axis and possibly replot
+  :x(-) xcolumn   set the table column for the X axis and possibly replot
+  :y(-) ycolumn   set the table column for the Y axis and possibly replot
   - do not automatically replot after reading in new column
-  
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input [file name]' -->
   <dd>The input table to be edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcolumn">
   <dt><b>xcolumn</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn' -->
   <dd>The name of the column in the input table to use for the X-axis of the plot.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ycolumn">
   <dt><b>ycolumn</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ycolumn' Line='ycolumn' -->
   <dd>The name of the column in the input table to use for the Y-axis of the plot.
@@ -140,31 +139,31 @@ gtedit: Graphically edit a table.
   attributes.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Edit a table containing the output photometry from DAOPHOT. 
   Initially plot the magnitude (MAG) versus the error in the magnitude (MAGERR)
   to decide which points to delete.
   </p>
-  <pre>
-       st&gt; gtedit m31.mag MAG MERR
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  st&gt; gtedit m31.mag MAG MERR
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Dennis Crabtree.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'CURSOR COMMANDS' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

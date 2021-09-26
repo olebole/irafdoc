@@ -7,39 +7,39 @@ qphot: Measure quick magnitudes for a list of stars
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   qphot image cbox annulus dannulus apertures
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images containing the objects to be measured.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cbox">
   <dt><b>cbox</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cbox' Line='cbox' -->
   <dd>The width of the centering box in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_annulus">
   <dt><b>annulus</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='annulus' Line='annulus' -->
   <dd>The inner radius of the sky annulus in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dannulus">
   <dt><b>dannulus</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dannulus' Line='dannulus' -->
   <dd>The width of the sky annulus in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures' -->
   <dd>The list of aperture radii in pixels. Apertures is a string parameter 
@@ -48,7 +48,7 @@ qphot: Measure quick magnitudes for a list of stars
   e.g. <span style="font-family: monospace;">"1.0:20.0:1.0"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""' -->
   <dd>The list of text files containing initial coordinates for the objects to
@@ -61,7 +61,7 @@ qphot: Measure quick magnitudes for a list of stars
   and version is the next available version number for the file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "default"' -->
   <dd>The name of the results file or results directory. If output is
@@ -74,7 +74,7 @@ qphot: Measure quick magnitudes for a list of stars
   an output summary is also written to the standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>The name of the file containing radial profile plots of the stars written
@@ -83,68 +83,68 @@ qphot: Measure quick magnitudes for a list of stars
   The user should be aware that this can be a time consuming operation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zmag">
   <dt><b>zmag = 25.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zmag' Line='zmag = 25.0' -->
   <dd>The zero point of the magnitude scale.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exposure">
   <dt><b>exposure = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = ""' -->
   <dd>The image header keyword containing the exposure time.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_airmass">
   <dt><b>airmass = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass = ""' -->
   <dd>The image header keyword containing the airmass of the observation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_filter">
   <dt><b>filter = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = ""' -->
   <dd>The image header keyword containing the filter id of the observation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obstime">
   <dt><b>obstime = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obstime' Line='obstime = ""' -->
   <dd>The image header keyword containing the time of the observation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_epadu">
   <dt><b>epadu = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='epadu' Line='epadu = 1.0' -->
   <dd>The gain in photons per adu. Epadu is used to compute the magnitude errors.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Interactive or batch mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radplots">
   <dt><b>radplots = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radplots' Line='radplots = no' -->
   <dd>If radplots is <span style="font-family: monospace;">"yes"</span> and QPHOT is run in interactive mode then a radial profile
   of each star is plotted on the screen after it is measured.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from <i>coords</i> and
@@ -212,7 +212,7 @@ qphot: Measure quick magnitudes for a list of stars
   wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -220,21 +220,21 @@ qphot: Measure quick magnitudes for a list of stars
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages in non-interactive mode ? Verbose may be set to the apphot
   package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The default graphics device.  Graphics may be set to the apphot package
   parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The default display device. Display may be set to the apphot package parameter
@@ -244,9 +244,9 @@ qphot: Measure quick magnitudes for a list of stars
   QPHOT to work interactively from a contour plot.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   QPHOT computes accurate centers, sky values, and magnitudes for a list of
   objects in the IRAF image <i>image</i> whose initial coordinates are
@@ -313,79 +313,76 @@ qphot: Measure quick magnitudes for a list of stars
   and <i>obstime</i> are book-keeping parameters. Setting  them to appropriate
   values will simplify future analysis and calibration steps.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The following list of cursor commands are currently available.
   </p>
-  <pre>
-  	Interactive Photometry Commands
+  <div class="highlight-default-notranslate"><pre>
+          Interactive Photometry Commands
   
-  ?	Print help
-  :	Colon commands
-  w	Save the current parameters
-  d	Plot radial profile of current star
-  i	Interactively set parameters using current star
-  c	Fit center of current star
-  t	Fit sky around the cursor
+  ?       Print help
+  :       Colon commands
+  w       Save the current parameters
+  d       Plot radial profile of current star
+  i       Interactively set parameters using current star
+  c       Fit center of current star
+  t       Fit sky around the cursor
   a       Average sky values fit around several cursor positions
-  s	Fit sky for current centered star
-  p	Do photometry for current star, using current sky
-  o	Do photometry for current star, using current sky, output results
-  f	Do photometry for current star
-  spbar	Do photometry for current star, output results
-  e	Print error messages
-  m	Move to next star in coordinate list
-  n	Do photometry for next star in coordinate list, output results
-  l	Do photometry for remaining stars in coordinate list, output results
-  r	Rewind the coordinate list
-  q	Exit task
+  s       Fit sky for current centered star
+  p       Do photometry for current star, using current sky
+  o       Do photometry for current star, using current sky, output results
+  f       Do photometry for current star
+  spbar   Do photometry for current star, output results
+  e       Print error messages
+  m       Move to next star in coordinate list
+  n       Do photometry for next star in coordinate list, output results
+  l       Do photometry for remaining stars in coordinate list, output results
+  r       Rewind the coordinate list
+  q       Exit task
   
+          Colon Commands
   
-  	Colon Commands
+  :show   List the parameters
+  :m [n]  Move to next [nth] star in coordinate list
+  :n [n]  Do photometry for next [nth] star in coordinate list, output results
   
-  :show	List the parameters
-  :m [n]	Move to next [nth] star in coordinate list
-  :n [n]	Do photometry for next [nth] star in coordinate list, output results
+          Colon Parameter Editing Commands
   
-  	Colon Parameter Editing Commands
+  :image          [string]        Image name
+  :output         [string]        Output file name
+  :coords         [string]        Coords file name
   
-  :image		[string]	Image name
-  :output		[string]	Output file name
-  :coords		[string]	Coords file name
+  :cbox           [value]         Width of the centering box (pixels)
+  :annulus        [value]         Inner radius of sky annulus (pixels)
+  :dannulus       [value]         Width of sky annulus (pixels)
+  :apertures      [string]        List of aperture radii (pixels)
+  :zmag           [value]         Zero point of magnitude scale (magnitudes)
+  :epadu          [value]         Gain (electrons  per adu)
   
-  :cbox		[value]		Width of the centering box (pixels)
-  :annulus	[value]		Inner radius of sky annulus (pixels)
-  :dannulus	[value]		Width of sky annulus (pixels)
-  :apertures	[string]	List of aperture radii (pixels)
-  :zmag		[value]		Zero point of magnitude scale (magnitudes)
-  :epadu		[value]		Gain (electrons  per adu)
+  :exposure       [string]        Exposure time image header keyword
+  :airmass        [string]        Airmass image header keyword
+  :filter         [string]        Filter image header keyword
+  :obstime        [string]        Time of observation image header keyword
   
-  :exposure	[string]	Exposure time image header keyword
-  :airmass	[string]	Airmass image header keyword
-  :filter		[string]	Filter image header keyword
-  :obstime	[string]	Time of observation image header keyword
-  
-  :radplot	[y/n]		Plot radial profile of object
-  
+  :radplot        [y/n]           Plot radial profile of object
   
   The following commands are available from inside the interactive setup menu
   using the i key.
   
-  
                       Interactive Qphot Setup Menu
   
-  	v	Mark and verify the critical parameters (c,a,d,r)
+          v       Mark and verify the critical parameters (c,a,d,r)
   
-  	c	Mark and verify the centering box width
-  	a	Mark and verify the inner radius of the sky annulus
-  	d	Mark and verify the width of the sky annulus
-  	r	Mark and verify the aperture radii
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+          c       Mark and verify the centering box width
+          a       Mark and verify the inner radius of the sky annulus
+          d       Mark and verify the width of the sky annulus
+          r       Mark and verify the aperture radii
+  </pre></div>
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   In interactive mode the following quantities are printed on the standard
   output as each object is measured. Error is a simple string which indicates
@@ -395,9 +392,9 @@ qphot: Measure quick magnitudes for a list of stars
   apertures 1 through N respectively and xcenter, ycenter and msky are the
   x and y centers and the sky value respectively.
   </p>
-  <pre>
-      image  xcenter  ycenter  msky  mag[1 ... N]  error
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  image  xcenter  ycenter  msky  mag[1 ... N]  error
+  </pre></div>
   <p>
   In both interactive and batch mode full output is written to the text file
   <i>output</i>. At the beginning of each file is a header listing the
@@ -405,13 +402,13 @@ qphot: Measure quick magnitudes for a list of stars
   These parameters can be subsequently altered. For each star measured the
   following record is written.
   </p>
-  <pre>
-  	image  xinit  yinit  id  coords  lid
-  	   xcenter  ycenter  xshift  yshift  xerr  yerr  cier cerror
-  	   msky  stdev  sskew  nsky  nsrej  sier  serror
-  	   itime  xairmass  ifilter  otime
-  	   rapert  sum  area  flux mag  merr  pier  perror
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  image  xinit  yinit  id  coords  lid
+     xcenter  ycenter  xshift  yshift  xerr  yerr  cier cerror
+     msky  stdev  sskew  nsky  nsrej  sier  serror
+     itime  xairmass  ifilter  otime
+     rapert  sum  area  flux mag  merr  pier  perror
+  </pre></div>
   <p>
   Image and coords are the name of the image and coordinate file respectively.
   Id and lid are the sequence numbers of stars in the output and coordinate
@@ -420,10 +417,10 @@ qphot: Measure quick magnitudes for a list of stars
   xshift, yshift, and xerr, yerr are self explanatory and output in pixel units.
   The sense of the xshift and yshift definitions is the following.
   </p>
-  <pre>
-  	xshift = xcenter - xinit
-  	yshift = ycenter - yinit
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  xshift = xcenter - xinit
+  yshift = ycenter - yinit
+  </pre></div>
   <p>
   Sier and serror are the sky fitting error code and accompanying error message
   respectively.  Msky, stdev and sskew are the best estimate of the sky value
@@ -443,13 +440,13 @@ qphot: Measure quick magnitudes for a list of stars
   in square pixels, and the total number of counts in the aperture excluding
   sky. Mag and merr are the magnitude and error in the magnitude in the aperture.
   </p>
-  <pre>
-  	flux = sum - area * msky
-  	 mag = zmag - 2.5 * log10 (flux) + 2.5 * log10 (itime)
-  	merr = 1.0857 * err / flux
-  	 err = sqrt (flux / epadu + area * stdev**2 +
-  	       area**2 * stdev**2 / nsky)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  flux = sum - area * msky
+   mag = zmag - 2.5 * log10 (flux) + 2.5 * log10 (itime)
+  merr = 1.0857 * err / flux
+   err = sqrt (flux / epadu + area * stdev**2 +
+         area**2 * stdev**2 / nsky)
+  </pre></div>
   <p>
   Pier and perror are photometry error code and accompanying error message.
   </p>
@@ -462,14 +459,14 @@ qphot: Measure quick magnitudes for a list of stars
   <i>plotfile</i>  if it is defined each time the result of an object
   measurement is written to <i>output</i> .
   </p>
-  <!-- EndSection:   'OUTPUT' -->
+  </section>
+  <section id="s_errors">
   <h3>Errors</h3>
-  <!-- BeginSection: 'ERRORS' -->
   <p>
   If the object centering was error free then the field cier will be zero.
   Non-zero values of cier flag the following error conditions.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   0        # No error
   101      # The centering box is off image
   102      # The centering box is partially off the image
@@ -479,18 +476,17 @@ qphot: Measure quick magnitudes for a list of stars
   106      # The x or y center fit did not converge
   107      # The x or y center shift is greater than 1 pixel
   108      # There is bad data in the centering box
-  
-  </pre>
+  </pre></div>
   <p>
   If all goes well during the sky fitting process then the error code sier
   will be 0. Non-zero values of sier flag the following error conditions.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   0         # No error
   201       # There are no sky pixels in the sky annulus
   202       # Sky annulus is partially off the image
-  203	  # The histogram of sky pixels has no width
-  204	  # The histogram of sky pixels is flat or concave
+  203       # The histogram of sky pixels has no width
+  204       # The histogram of sky pixels is flat or concave
   205       # There are too few points for a good sky fit
   206       # The sky fit is singular
   207       # The sky fit did not converge
@@ -499,42 +495,36 @@ qphot: Measure quick magnitudes for a list of stars
   210       # The sky file is at EOF
   211       # Cannot read the sky value correctly
   212       # The best fit parameter are non-physical
-  
-  </pre>
+  </pre></div>
   <p>
   If no error occurs during the measurement of the magnitudes then pier is
   0. Non-zero values of pier flag the following error conditions.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   0        # No error
   301      # The aperture is off the image
   302      # The aperture is partially off the image
   303      # The sky value is undefined
-  305	 # There is bad data in the aperture
-  </pre>
-  <!-- EndSection:   'ERRORS' -->
+  305      # There is bad data in the aperture
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Perform aperture photometry interactively for a few stars in dev$ypix using
   the display and the image cursor.
   </p>
-  <pre>
-  	ap&gt; display dev$ypix 1 fi+
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix 1 fi+
   
-  	... display the image
   
-  	ap&gt; qphot dev$ypix 5. 10. 5. 2.,4.,6.0 
+  ap&gt; qphot dev$ypix 5. 10. 5. 2.,4.,6.0
   
-  	... move image cursor to objects of interest and tap space bar
   
-  	... a 1 line summary will be printed on the standard output
-  	    for each object measured
+      for each object measured
   
-  	... type q to quit and q again to confirm the quit
   
-  	... full output will appear in ypix.mag.1
-  </pre>
+  </pre></div>
   <p>
   2. Perform aperture photometry interactively for a few stars in dev$ypix
   using the contour plot and the graphics cursor. This option is only useful
@@ -542,187 +532,141 @@ qphot: Measure quick magnitudes for a list of stars
   not to an image display server. Setup the task parameters using the
   interactive setup menu defined by the i key command as in example 1.
   </p>
-  <pre>
-          ap&gt; show stdimcur
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; show stdimcur
   
-          ... record the default value of stdimcur
   
-  	ap&gt; set stdimcur = stdgraph
+  ap&gt; set stdimcur = stdgraph
   
-          ... define the image cursor to be the graphics cursor
   
-          ap&gt; contour dev$ypix
+  ap&gt; contour dev$ypix
   
-          ... make a contour plot of dev$ypix
   
-  	ap&gt; contour dev$pix &gt;G ypix.plot1
+  ap&gt; contour dev$pix &gt;G ypix.plot1
   
-  	... store the contour plot of dev$ypix in the file ypix.plot1
   
-  	ap&gt; qphot dev$ypix 5. 10. 5. 2.,4.,6.0 
+  ap&gt; qphot dev$ypix 5. 10. 5. 2.,4.,6.0
   
-          ... type ? to see the help screen
   
-  	... move image cursor to objects of interest and tap space bar
   
-  	... a 1 line summary will be printed on the standard output
-  	    for each object measured
+      for each object measured
   
-  	... type q to quit and q again to confirm the quit
   
-  	... full output will be written to ypix.mag.2
   
-          ap&gt; set stdimcur = &lt;default&gt;
+  ap&gt; set stdimcur = &lt;default&gt;
   
-          ... reset stdimcur to its previous value
-  </pre>
+  </pre></div>
   <p>
   3. Setup and run QPHOT interactively on a list of objects temporarily
   overriding the fwhmpsf, sigma, cbox, annulus, dannulus, and apertures
    parameters determined in examples 1 or 2.
   </p>
-  <pre>
-          ap&gt; daofind dev$ypix fwhmpsf=2.6 sigma=25.0 verify-
-  
-          ... make a coordinate list
-  
-          ... the output will appear in the text file ypix.coo.1
-  
-          ap&gt; qphot dev$ypix 7.0 12.0 5.0 "3.0,5.0" coords=ypix.coo.1
-  
-          ... type ? for optional help
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; daofind dev$ypix fwhmpsf=2.6 sigma=25.0 verify-
   
   
-          ... move the graphics cursor to the stars and tap space bar
   
-                                  or
+  ap&gt; qphot dev$ypix 7.0 12.0 5.0 "3.0,5.0" coords=ypix.coo.1
   
-          ... select stars from the input coordinate list with m / :m #
-              and measure with spbar
   
-          ... measure stars selected from the input coordinate list
-              with n / n #
   
-          ... a one line summary of results will appear on the standard output
-              for each star measured
+                          or
   
-  	... type q to quit and q again to confirm the quit
+      and measure with spbar
   
-          ... the output will appear in ypix.mag.3 ...
-  </pre>
+      with n / n #
+  
+      for each star measured
+  
+  
+  </pre></div>
   <p>
   4. Display and measure some stars in an image section and write the output
   coordinates in the coordinate system of the parent image.
   </p>
-  <pre>
-          ap&gt; display dev$ypix[150:450,150:450] 1
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix[150:450,150:450] 1
   
-          ... display the image section
   
-          ap&gt; qphot dev$ypix[150:450,150:450] 7.0 12.0 5.0 "3.0,5.0" wcsout=tv
+  ap&gt; qphot dev$ypix[150:450,150:450] 7.0 12.0 5.0 "3.0,5.0" wcsout=tv
   
-          ... move cursor to stars and type spbar
   
-          ... type q to quit and q again to confirm quit
   
-          ... output will appear in ypix.mag.4
   
-          ap&gt; pdump ypix.mag.4 xc,yc yes | tvmark 1 STDIN col=204
-  </pre>
+  ap&gt; pdump ypix.mag.4 xc,yc yes | tvmark 1 STDIN col=204
+  </pre></div>
   <p>
   5. Run QPHOT in batch mode using the coordinate file and the previously
   saved parameters.
   </p>
-  <pre>
-          ap&gt; qphot dev$ypix 7. 12.0 5.0 "3.0,5.0" coords=ypix.coo.1 inter-
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; qphot dev$ypix 7. 12.0 5.0 "3.0,5.0" coords=ypix.coo.1 inter-
   
-          ... output will appear in ypix.mag.5 ...
-  </pre>
+  </pre></div>
   <p>
   6. Repeat example 5 but assume that the input coordinate are ra and dec
   in degrees and degrees and submit the task to the background.
   </p>
-  <pre>
-          ap&gt; display dev$ypix
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix
   
-          ap&gt; rimcursor wcs=world &gt; radec.coo
+  ap&gt; rimcursor wcs=world &gt; radec.coo
   
-          ... move to selected stars and type any key
   
-          ... type ^Z to quit
   
-          ap&gt; qphot dev$ypix 7.0 12.0 5.0 "3.0,5.0" coords=radec.coo \<br>
-              wcsin=world inter- &amp;
+  ap&gt; qphot dev$ypix 7.0 12.0 5.0 "3.0,5.0" coords=radec.coo \<br>
+      wcsin=world inter- &amp;
   
-          ... output will appear in ypix.ctr.6
   
-          ap&gt; pdump ypix.mag.6 xc,yc yes | tvmark 1 STDIN col=204
+  ap&gt; pdump ypix.mag.6 xc,yc yes | tvmark 1 STDIN col=204
   
-          ... mark the stars on the display
-  </pre>
+  </pre></div>
   <p>
   7. Run QPHOT interactively without using the image display.
   </p>
-  <pre>
-          ap&gt; show stdimcur
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; show stdimcur
   
-          ... record the default value of stdimcur
   
-          ap&gt; set stdimcur = text
+  ap&gt; set stdimcur = text
   
-          ... set the image cursor to the standard input
   
-          ap&gt; qphot dev$ypix 7.0 12.0 5.0 "3.0,5.0" coords=ypix.coo.1
+  ap&gt; qphot dev$ypix 7.0 12.0 5.0 "3.0,5.0" coords=ypix.coo.1
   
-          ... type ? for optional help
   
-          ... type :m 3 to set the initial coordinates to those of the
-              third star in the list
+      third star in the list
   
-          ... type "442 409 101 i" to enter the interactive setup menu
-          ... enter the maximum radius in pixels for the radial profile or
-              accept the default with a CR
-          ... type v to enter the default menu
-          ... reset cbox, annulus, dannulus, and apertures using the graphics
-              cursor and the stellar radial profile plot
-          ... typing &lt;CR&gt; after the prompt leaves the parameter at its default
-              value
-  	... type q to quit the setup menu
+      accept the default with a CR
+      cursor and the stellar radial profile plot
+      value
   
-          ... type r to rewind the coordinate list
   
-          ... type l to measure all the stars in the coordinate list
   
-          ... a one line summary of the answers will appear on the standard
-              output for each star measured
+      output for each star measured
   
-          ... type q to quit followed by q to confirm the quit
   
-          ... full output will appear in the text file ypix.mag.7
   
-          ap&gt; set stdimcur = &lt;default&gt;
+  ap&gt; set stdimcur = &lt;default&gt;
   
-          ... reset the value of stdimcur
-  </pre>
+  </pre></div>
   <p>
   8. Use a image cursor command file to drive the qphot task. The cursor command
   file shown below computes the centers, sky values, and magnitudes  for 3 stars
   and quits the task.
   </p>
-  <pre>
-          ap&gt; type cmdfile
-          442 410 101 \040
-          349 188 101 \040
-          225 131 101 \040
-          q
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; type cmdfile
+  442 410 101 \040
+  349 188 101 \040
+  225 131 101 \040
+  q
   
-          ap&gt; qphot dev$ypix 7.0 12.0 5.0 "3.0,5.0" icommands=cmdfile
+  ap&gt; qphot dev$ypix 7.0 12.0 5.0 "3.0,5.0" icommands=cmdfile
   
-          ... full output will appear in ypix.mag.8
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   It is the responsibility of the user to make sure that the image displayed
   in the image display is the same as that specified by the image parameter.
@@ -734,14 +678,14 @@ qphot: Measure quick magnitudes for a list of stars
   blue or yellow overlays. It may be necessary to run gflush and to
   redisplay the image to get the overlays position correctly.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   phot,wphot,polyphot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

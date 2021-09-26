@@ -7,15 +7,15 @@ agetim: Extract FITS images from image surveys
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   agetim regions output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_regions">
   <dt><b>regions</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='regions' Line='regions' -->
   <dd>The source  of the extraction region definitions. The options are:
@@ -46,7 +46,7 @@ agetim: Extract FITS images from image surveys
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>The list of output FITS image files. The number of output files must be equal
@@ -59,7 +59,7 @@ agetim: Extract FITS images from image surveys
   in the image survey list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aregpars">
   <dt><b>aregpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aregpars' Line='aregpars = ""' -->
   <dd>The region definition parameter set. The aregpars parameters define the
@@ -68,14 +68,14 @@ agetim: Extract FITS images from image surveys
   <i>regions</i> = <span style="font-family: monospace;">"pars"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imsurveys">
   <dt><b>imsurveys = <span style="font-family: monospace;">")_.imsurveys"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imsurveys' Line='imsurveys = ")_.imsurveys"' -->
   <dd>The list of input image surveys. By default the image survey name is set to the
   value of the package parameter imsurveys. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsedit">
   <dt><b>wcsedit = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsedit' Line='wcsedit = no' -->
   <dd>Convert a DSS WCS to a FITS WCS or add an approximate FITS style WCS to the
@@ -85,7 +85,7 @@ agetim: Extract FITS images from image surveys
   file <i>imdb</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_hdredit">
   <dt><b>hdredit = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hdredit' Line='hdredit = no' -->
   <dd>Add a set of standard keywords to the image header which may be required or
@@ -96,20 +96,20 @@ agetim: Extract FITS images from image surveys
   configuration file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = no' -->
   <dd>Update the default values of the algorithm parameters, e.g. aregpars
   on task termination ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print status messages on the terminal as the task proceeds ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imdb">
   <dt><b>imdb = <span style="font-family: monospace;">")_.imdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"' -->
   <dd>The image surveys configuration file. Imdb defaults to the value of the
@@ -117,9 +117,9 @@ agetim: Extract FITS images from image surveys
   <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Agetim extracts fits images from local or remote image surveys
   <i>imsurveys</i> using a list of region definitions supplied by the user
@@ -137,13 +137,13 @@ agetim: Extract FITS images from image surveys
   If <i>regions</i> is a file name they are read from file whose format is
   the following.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # Optional comment
   
   ra1 dec1 xwidth1 ywidth1 [raunits1 [decunits1 [system1]]]
   ra2 dec2 xwidth2 ywidth2 [raunits2 [decunits2 [system2]]]
   raN decN xwidthN ywidthN [raunitsN [decunitsN [systemN]]]
-  </pre>
+  </pre></div>
   <p>
   Quantities in square brackets are optional. If system is undefined the
   coordinate system defaults to the query coordinate system, i.e. if the
@@ -160,14 +160,14 @@ agetim: Extract FITS images from image surveys
   is assumed in examples 1 and 2, is specified in example 3, and example
   is same target as example but expressed in the B1950.0 coordinate system.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # List of targets
   
-  13:29:53.27 +47:11:48.4 10.0 10.0 
-  13:29:53.27 +47:11:48.4 10.0 10.0 hours degrees 
+  13:29:53.27 +47:11:48.4 10.0 10.0
+  13:29:53.27 +47:11:48.4 10.0 10.0 hours degrees
   13:29:53.27 +47:11:48.4 10.0 10.0 hours degrees J2000.0
   13:27:46.90 +47:27:16.0 10.0 10.0 hours degrees B1950.0
-  </pre>
+  </pre></div>
   <p>
   For each specified image survey in <i>imsurvey</i> agetim loops through the
   regions list, formats the image survey query, makes a local or remote
@@ -208,93 +208,93 @@ agetim: Extract FITS images from image surveys
   updated at task termination. If <i>verbose</i> = yes then detailed status
   reports are issued as the task executes.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Extract data from the default image survey using the default region
   definition, display the resulting image,  and examine its header.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; agetim pars default
   cl&gt; display reg001.1.fits 1 fi+
   cl&gt; imheader reg001.1.fits lo+ | page
-  </pre>
+  </pre></div>
   <p>
   2. Repeat the previous example but convert the DSS WCS to a FITS WCS.
   The DSS WCS is unaltered.
   </p>
-  <pre>
-  cl&gt; agetim pars default wcsedit+ 
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; agetim pars default wcsedit+
   cl&gt; display reg001.2.fits 1 fi+
   cl&gt; imheader reg001.2.fits
-  </pre>
+  </pre></div>
   <p>
   3. Repeat example 2 but extract data for two surveys.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; agetim pars default wcsedit+ imsurveys="dss1@cadc,dss2@cadc"
   cl&gt; display reg001.3.fits 1 fi+
   cl&gt; imheader reg001.3.fits
   cl&gt; display reg002.1.fits 2 fi+
   cl&gt; imheader reg002.1.fits
-  </pre>
+  </pre></div>
   <p>
   4. Repeat example 2 but add the values of the standard astrometry image
   keywords if these do not already exist in the image header and are defined.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; agetim pars default wcsedit+ hdredit+
   cl&gt; display reg001.4.fits 1 fi+
   cl&gt; imheader reg001.4.fits
-  </pre>
+  </pre></div>
   <p>
   5. Extract images for a list of regions in a text file.  Note that the
   coordinate system and coordinate units are not specified in this regions
   list and default to those expected by the image survey query.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   page regions
-  00:00:00.0 -90:00:00 10.0 10.0 
-  00:00:00.0 -60:00:00 10.0 10.0 
-  00:00:00.0 -30:00:00 10.0 10.0 
-  00:00:00.0 +00:00:00 10.0 10.0 
-  00:00:00.0 +30:00:00 10.0 10.0 
-  00:00:00.0 +60:00:00 10.0 10.0 
-  00:00:00.0 +90:00:00 10.0 10.0 
+  00:00:00.0 -90:00:00 10.0 10.0
+  00:00:00.0 -60:00:00 10.0 10.0
+  00:00:00.0 -30:00:00 10.0 10.0
+  00:00:00.0 +00:00:00 10.0 10.0
+  00:00:00.0 +30:00:00 10.0 10.0
+  00:00:00.0 +60:00:00 10.0 10.0
+  00:00:00.0 +90:00:00 10.0 10.0
   cl&gt; agetim regions default
-  </pre>
+  </pre></div>
   <p>
   6. Run agetim on a list of images containing valid FITS WCS information.
   Note that in the following example the test image dev$pix does not
   have a FITS WCS so no data is extracted for it.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; page imlist
   dev$pix
   dev$ypix
   cl&gt; agetim @imlist default
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   If output file is not a fits file, as may be the case if an error occurred
   in the network transfer, and header editing is enabled agetim will
   crash with a file seek error. The bug is due to missing error check 
   statements in the FITS kernel and will be fixed for the next release.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   aslist, adumpim, aregpars
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

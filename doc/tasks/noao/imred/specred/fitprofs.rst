@@ -7,15 +7,15 @@ fitprofs: Fit gaussian profiles
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   fitprofs input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images to be fit.  The images may be one dimensional
@@ -25,7 +25,7 @@ fitprofs: Fit gaussian profiles
   DISPAXIS in the image header or the <i>dispaxis</i> parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lines">
   <dt><b>lines = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""' -->
   <dd>List of lines, columns, or apertures to be selected from the input image
@@ -34,13 +34,13 @@ fitprofs: Fit gaussian profiles
   is a pair of hyphen separated numbers.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bands">
   <dt><b>bands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bands' Line='bands = ""' -->
   <dd>List of bands for 3D images.  The empty list, <span style="font-family: monospace;">""</span>, selects all bands.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispaxis">
   <dt><b>dispaxis = <span style="font-family: monospace;">")_.dispaxis"</span>, nsum = <span style="font-family: monospace;">")_.nsum"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = ")_.dispaxis", nsum = ")_.nsum"' -->
   <dd>Parameters for defining vectors in 2D and 3D images.  The
@@ -53,7 +53,7 @@ fitprofs: Fit gaussian profiles
   <p>
   The following are the fitting parameters.
   </p>
-  <dl>
+  <dl id="l_region">
   <dt><b>region = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='region' Line='region = ""' -->
   <dd>Region of the input vectors to be fit specified as a pair of space
@@ -63,7 +63,7 @@ fitprofs: Fit gaussian profiles
   A fitting region must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_positions">
   <dt><b>positions = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='positions' Line='positions = ""' -->
   <dd>File of initial or fixed profile positions and (optional) peaks, profile
@@ -79,7 +79,7 @@ fitprofs: Fit gaussian profiles
   wavelength for dispersion corrected spectra and pixels otherwise.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = ""' -->
   <dd>Background values defining the linear background.  If not specified the
@@ -95,14 +95,14 @@ fitprofs: Fit gaussian profiles
   the average of the dispersion coordinates of the pixels used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_profile">
   <dt><b>profile = <span style="font-family: monospace;">"gaussian"</span> (gaussian|lorentzian|voigt)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (gaussian|lorentzian|voigt)' -->
   <dd>Default profile type to be fit when a profile type is not specified in
   the positions file.  The type are <span style="font-family: monospace;">"gaussian"</span>, <span style="font-family: monospace;">"lorentzian"</span>, or <span style="font-family: monospace;">"voigt"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gfwhm">
   <dt><b>gfwhm = 20., lfwhm = 20.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gfwhm' Line='gfwhm = 20., lfwhm = 20.' -->
   <dd>Default gaussian and lorentzian full width at half maximum (FWHM).
@@ -110,7 +110,7 @@ fitprofs: Fit gaussian profiles
   not specified in the position file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitbackground">
   <dt><b>fitbackground = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitbackground' Line='fitbackground = yes' -->
   <dd>Fit the background?  If <span style="font-family: monospace;">"yes"</span> a linear background across the fitting region
@@ -118,7 +118,7 @@ fitprofs: Fit gaussian profiles
   be fixed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitpositions">
   <dt><b>fitpositions = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitpositions' Line='fitpositions = "all"' -->
   <dd>Position fitting option.  This may be <span style="font-family: monospace;">"fixed"</span> to fix all positions at their
@@ -127,7 +127,7 @@ fitprofs: Fit gaussian profiles
   positions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitgfwhm">
   <dt><b>fitgfwhm = <span style="font-family: monospace;">"all"</span>, fitlfwhm = <span style="font-family: monospace;">"all"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitgfwhm' Line='fitgfwhm = "all", fitlfwhm = "all"' -->
   <dd>Profile width fitting options.  These may be <span style="font-family: monospace;">"fixed"</span> to fix all widths
@@ -139,7 +139,7 @@ fitprofs: Fit gaussian profiles
   The following parameters are used for error estimates as described
   below in the ERROR ESTIMATES section.
   </p>
-  <dl>
+  <dl id="l_nerrsample">
   <dt><b>nerrsample = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nerrsample' Line='nerrsample = 0' -->
   <dd>Number of samples for the error computation.  A value less than 10 turns
@@ -149,13 +149,13 @@ fitprofs: Fit gaussian profiles
   takes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigma0">
   <dt><b>sigma0 = INDEF, invgain = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma0' Line='sigma0 = INDEF, invgain = INDEF' -->
   <dd>The pixel sigmas are modeled by the formula:
-  <pre>
-      sigma**2 = sigma0**2 + invgain * I
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sigma**2 = sigma0**2 + invgain * I
+  </pre></div>
   where I is the pixel value and <span style="font-family: monospace;">"**2"</span> means the square of the quantity.  If
   either parameter is specified as INDEF or with a value less than zero then
   no sigma estimates are made and so no error estimates for the measured
@@ -165,7 +165,7 @@ fitprofs: Fit gaussian profiles
   <p>
   The following parameters determine the output of the task.
   </p>
-  <dl>
+  <dl id="l_components">
   <dt><b>components = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='components' Line='components = ""' -->
   <dd>All profiles defined by the position file are simultaneously fit but only
@@ -176,7 +176,7 @@ fitprofs: Fit gaussian profiles
   list, <span style="font-family: monospace;">""</span>, selects all profiles.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print fitting results and record of output images created on the
@@ -186,14 +186,14 @@ fitprofs: Fit gaussian profiles
   the task is run as a background task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Logfile for fitting results.  If not specified the results will not be
   logged.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">"plotfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = "plotfile"' -->
   <dd>File to contain plot output.  The plots show the image vector with
@@ -202,14 +202,14 @@ fitprofs: Fit gaussian profiles
   <b>gkimosaic</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output images.  If not specified then no output images are created.
   If images are specified the list is matched with the input list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_option">
   <dt><b>option = <span style="font-family: monospace;">"fit"</span> (fit|difference)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "fit" (fit|difference)' -->
   <dd>Image output option.  The choices are <span style="font-family: monospace;">"fit"</span> to output the fitted image
@@ -217,7 +217,7 @@ fitprofs: Fit gaussian profiles
   or <span style="font-family: monospace;">"difference"</span> to output the data with the profiles subtracted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clobber">
   <dt><b>clobber = no, merge = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber = no, merge = no' -->
   <dd>Clobber or modify any existing output images?  If clobbering is not
@@ -228,9 +228,9 @@ fitprofs: Fit gaussian profiles
   as selected lines or apertures.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Fitprofs</b> fits one dimensional profile functions to image vectors
   and outputs the fitting parameters, plots, and model or residual
@@ -279,20 +279,20 @@ fitprofs: Fit gaussian profiles
   values (the profile and widths) or determine the peak from the data.
   Below are examples of the file line formats
   </p>
-  <pre>
-  	wavelength
-  	wavelength peak
-  	wavelength peak (gaussian|lorenzian|voigt)
-  	wavelength peak gaussian gfwhm
-  	wavelength peak lorentzian lfwhm
-  	wavelength peak voigt gfwhm
-  	wavelength peak voigt gfwhm lfwhm
+  <div class="highlight-default-notranslate"><pre>
+  wavelength
+  wavelength peak
+  wavelength peak (gaussian|lorenzian|voigt)
+  wavelength peak gaussian gfwhm
+  wavelength peak lorentzian lfwhm
+  wavelength peak voigt gfwhm
+  wavelength peak voigt gfwhm lfwhm
   
-  	1234.5			&lt;- Wavelength only
-  	1234.5 -100		&lt;- Wavelength and peak
-  	1234.5 INDEF v		&lt;- Wavelength and profile type
-  	1234.5 INDEF g 12	&lt;- Wavelength and gaussian FWHM
-  </pre>
+  1234.5                  &lt;- Wavelength only
+  1234.5 -100             &lt;- Wavelength and peak
+  1234.5 INDEF v          &lt;- Wavelength and profile type
+  1234.5 INDEF g 12       &lt;- Wavelength and gaussian FWHM
+  </pre></div>
   <p>
   where peak is the peak value, gfwhm is the gaussian FWHM, and lfwhm is
   the lorentzian FWHM.  This format is the same as used by <b>splot</b>
@@ -340,9 +340,9 @@ fitprofs: Fit gaussian profiles
   The images  may be of the total fit (sum of profiles without background)
   or of the difference (residuals) of the data minus the model.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_error_estimates">
   <h3>Error estimates</h3>
-  <!-- BeginSection: 'ERROR ESTIMATES' -->
   <p>
   Error estimates may be computed for the fitted parameters.
   This requires a model for the pixel sigmas.  Currently this
@@ -351,9 +351,9 @@ fitprofs: Fit gaussian profiles
   by the parameters <i>sigma0</i> and <i>invgain</i>.  These parameters are
   used to compute the pixel value sigma from the following formula:
   </p>
-  <pre>
-      sigma**2 = sigma0**2 + invgain * I
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sigma**2 = sigma0**2 + invgain * I
+  </pre></div>
   <p>
   where I is the pixel value and <span style="font-family: monospace;">"**2"</span> means the square of the quantity.
   </p>
@@ -392,65 +392,64 @@ fitprofs: Fit gaussian profiles
   very good estimates.  A compromise value of 50 is recommended
   for many applications.
   </p>
-  <!-- EndSection:   'ERROR ESTIMATES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following example creates an artificial spectrum and fits it.
   It requires the <b>artdata</b> and <b>proto</b> packages be loaded.
   </p>
-  <pre>
-      cl&gt; mk1dspec test slope=1 temp=0 lines=testlines nl=20
-      cl&gt; mknoise test rdnoise=10 poisson=yes
-      cl&gt; fields testlines fields=1,3 &gt; fitlines
-      cl&gt; fitprofs test reg="4000 8000" pos=fitlines
-      # Jul 27 17:49 test - Ap 1: 
-      # Nfit=20, background=YES, positions=all, gfwhm=all, lfwhm=all
-      #   center      cont      flux      eqw      core   gfwhm   lfwhm
-        6832.611  1363.188  -13461.8    9.875  -408.339   30.97      0.
-        7963.674  1507.641  -8193.58    5.435  -395.207   19.48      0.
-        5688.055   1217.01  -7075.11    5.814  -392.006   16.96      0.
-  	6831.3   1363.02  -7102.01     5.21  -456.463   14.62      0.
-        7217.335  1412.323   -10110.    7.158  -427.797    22.2      0.
-        6709.286  1347.437  -4985.06      3.7  -225.346   20.78      0.
-        6434.317  1312.319  -7121.03    5.426  -342.849   19.51      0.
-        6130.415  1273.506    -6164.     4.84  -224.146   25.83      0.
-        4569.375  1074.138   -3904.6    3.635  -183.963   19.94      0.
-        5656.645  1212.999  -8202.81    6.762  -303.617   25.38      0.
-         4219.53  1029.458  -5161.64    5.014  -241.135   20.11      0.
-        4551.424  1071.845  -3802.61    3.548   -139.39   25.63      0.
-        4604.649  1078.643  -5539.15    5.135  -264.654   19.66      0.
-        6966.557  1380.294  -11717.5    8.489  -600.581   18.33      0.
-        4259.019  1034.501  -4280.38    4.138  -213.446   18.84      0.
-        5952.958  1250.843  -8006.98    6.401  -318.313   23.63      0.
-         4531.89  1069.351  -712.598   0.6664  -155.197   4.313      0.
-        7814.418  1488.579  -2926.49    1.966  -164.891   16.67      0.
-        5310.929  1168.846  -10132.2    8.669  -487.502   19.53      0.
-        5022.948  1132.066   -7532.8    6.654  -325.594   21.73      0.
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mk1dspec test slope=1 temp=0 lines=testlines nl=20
+  cl&gt; mknoise test rdnoise=10 poisson=yes
+  cl&gt; fields testlines fields=1,3 &gt; fitlines
+  cl&gt; fitprofs test reg="4000 8000" pos=fitlines
+  # Jul 27 17:49 test - Ap 1:
+  # Nfit=20, background=YES, positions=all, gfwhm=all, lfwhm=all
+  #   center      cont      flux      eqw      core   gfwhm   lfwhm
+    6832.611  1363.188  -13461.8    9.875  -408.339   30.97      0.
+    7963.674  1507.641  -8193.58    5.435  -395.207   19.48      0.
+    5688.055   1217.01  -7075.11    5.814  -392.006   16.96      0.
+      6831.3   1363.02  -7102.01     5.21  -456.463   14.62      0.
+    7217.335  1412.323   -10110.    7.158  -427.797    22.2      0.
+    6709.286  1347.437  -4985.06      3.7  -225.346   20.78      0.
+    6434.317  1312.319  -7121.03    5.426  -342.849   19.51      0.
+    6130.415  1273.506    -6164.     4.84  -224.146   25.83      0.
+    4569.375  1074.138   -3904.6    3.635  -183.963   19.94      0.
+    5656.645  1212.999  -8202.81    6.762  -303.617   25.38      0.
+     4219.53  1029.458  -5161.64    5.014  -241.135   20.11      0.
+    4551.424  1071.845  -3802.61    3.548   -139.39   25.63      0.
+    4604.649  1078.643  -5539.15    5.135  -264.654   19.66      0.
+    6966.557  1380.294  -11717.5    8.489  -600.581   18.33      0.
+    4259.019  1034.501  -4280.38    4.138  -213.446   18.84      0.
+    5952.958  1250.843  -8006.98    6.401  -318.313   23.63      0.
+     4531.89  1069.351  -712.598   0.6664  -155.197   4.313      0.
+    7814.418  1488.579  -2926.49    1.966  -164.891   16.67      0.
+    5310.929  1168.846  -10132.2    8.669  -487.502   19.53      0.
+    5022.948  1132.066   -7532.8    6.654  -325.594   21.73      0.
+  </pre></div>
   <p>
   2.  Suppose there is no obvious continuum level near the fitting
   region but you want to specify a flat continuum level as the average
   of pixels in a specified wavelength region.  The background region
   would be specified as
   </p>
-  <pre>
-      background = "avg(4250,4425.3) avg(4250,4425.3)"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  background = "avg(4250,4425.3) avg(4250,4425.3)"
+  </pre></div>
   <p>
   Note that the value must be given twice to get a flat continuum.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_FITPROFS">
   <dt><b>FITPROFS V2.11.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FITPROFS' Line='FITPROFS V2.11.3' -->
   <dd>Modified to allow a more general specification of the background.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_FITPROFS">
   <dt><b>FITPROFS V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FITPROFS' Line='FITPROFS V2.11' -->
   <dd>Modified to include lorentzian and voigt profiles.  The parameters and
@@ -458,21 +457,21 @@ fitprofs: Fit gaussian profiles
   controls the number of Monte-Carlo samples used in the error estimates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_FITPROFS">
   <dt><b>FITPROFS V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FITPROFS' Line='FITPROFS V2.10.3' -->
   <dd>Error estimates based on a simple noise model are now computed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_FITPROFS">
   <dt><b>FITPROFS V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FITPROFS' Line='FITPROFS V2.10' -->
   <dd>This task is new.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   The following CPU times were obtained with a Sun Sparcstation I.  The
   number of pixels in the fitting region and the number of lines fit
@@ -480,39 +479,39 @@ fitprofs: Fit gaussian profiles
   was considered as well as the constrained case of  fitting line positions
   and a single width with fixed background.
   </p>
-  <pre>
-  	Npixels Nprofs Fitbkg Fitpos  Fitsig   CPU(sec)
-  	  100	   5	 yes	all	all	  1.9
-  	  100	  10	 yes	all	all	  3.3
-  	  100	  15	 yes	all	all	  5.6
-  	  100	  20	 yes	all	all	  9.0
-  	  512	   5	 yes	all	all	  4.7
-  	  512	  10	 yes	all	all	 10.0
-  	  512	  15	 yes	all	all	 17.6
-  	  512	  20	 yes	all	all	 27.8
-  	 1000	   5	 yes	all	all	  8.0
-  	 1000	  10	 yes	all	all	 18.0
-  	 1000	  15	 yes	all	all	 31.8
-  	 1000	  20	 yes	all	all	 50.2
-  	 1000	  25	 yes	all	all	 72.8
-  	 1000	  30	 yes	all	all	100.2
-  	  512	   5	  no	all  single	  2.8
-  	  512	  10	  no	all  single	  5.3
-  	  512	  15	  no	all  single	  8.6
-  	  512	  20	  no	all  single	 12.8
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Npixels Nprofs Fitbkg Fitpos  Fitsig   CPU(sec)
+    100      5     yes    all     all       1.9
+    100     10     yes    all     all       3.3
+    100     15     yes    all     all       5.6
+    100     20     yes    all     all       9.0
+    512      5     yes    all     all       4.7
+    512     10     yes    all     all      10.0
+    512     15     yes    all     all      17.6
+    512     20     yes    all     all      27.8
+   1000      5     yes    all     all       8.0
+   1000     10     yes    all     all      18.0
+   1000     15     yes    all     all      31.8
+   1000     20     yes    all     all      50.2
+   1000     25     yes    all     all      72.8
+   1000     30     yes    all     all     100.2
+    512      5      no    all  single       2.8
+    512     10      no    all  single       5.3
+    512     15      no    all  single       8.6
+    512     20      no    all  single      12.8
+  </pre></div>
   <p>
   Crudely this implies CPU time goes as the 1.4 power of the number of profiles
   and the 0.75 power of the number of pixels.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   splot, stsdas.fitting.ngaussfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ERROR ESTIMATES' 'EXAMPLES' 'REVISIONS' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

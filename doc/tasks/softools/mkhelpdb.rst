@@ -7,15 +7,15 @@ mkhelpdb: Make (compile) a help database
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkhelpdb helpdir helpdb
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_helpdir">
   <dt><b>helpdir = <span style="font-family: monospace;">"lib$root.hd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdir' Line='helpdir = "lib$root.hd"' -->
   <dd>The filename of the root help directory file (<span style="font-family: monospace;">".hd"</span> file) defining the
@@ -23,7 +23,7 @@ mkhelpdb: Make (compile) a help database
   directory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_helpdb">
   <dt><b>helpdb = <span style="font-family: monospace;">"lib$helpdb.mip"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "lib$helpdb.mip"' -->
   <dd>The filename of the help database file to be written.  By convention this
@@ -31,7 +31,7 @@ mkhelpdb: Make (compile) a help database
   format is machine independent).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>If this switch is enabled, <i>mkhelpdb</i> will print a detailed description
@@ -40,9 +40,9 @@ mkhelpdb: Make (compile) a help database
   by default.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>mkhelpdb</i> task descends a tree of help directory (<span style="font-family: monospace;">".hd"</span>) files and
   compiles a binary help database from the information therein.  The help
@@ -75,35 +75,32 @@ mkhelpdb: Make (compile) a help database
   The <i>help</i> utilities make use of the following types of files.  Examples
   of these files will be found throughout the IRAF directories.
   </p>
-  <pre>
-  	.hd		help directory file (tree structured)
-  	.hlp		manual page
-  	.men		package menu (module listing)
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Update the standard IRAF help database.
   </p>
-  <pre>
-  	cl&gt; softools
-  	so&gt; mkhelpdb helpdir=lib$root.hd helpdb=lib$helpdb.mip
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; softools
+  so&gt; mkhelpdb helpdir=lib$root.hd helpdb=lib$helpdb.mip
+  </pre></div>
   <p>
   2. Update the NOAO package help database.
   </p>
-  <p>
-  	so&gt; mkhelpdb helpdir=noao$lib/root.hd helpdb=noao$lib/helpdb.mip
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  so&gt; mkhelpdb helpdir=noao$lib/root.hd helpdb=noao$lib/helpdb.mip
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   hdbexamine, help
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

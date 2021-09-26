@@ -7,21 +7,21 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   apfit input output fittype
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images to be fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output images to be created with the  fitting results.  If the null
@@ -30,7 +30,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   of <span style="font-family: monospace;">".fit"</span>, <span style="font-family: monospace;">".diff"</span>, or <span style="font-family: monospace;">".ratio"</span> is added based on the type of fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and fit.  This only applies
@@ -42,7 +42,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fittype">
   <dt><b>fittype = <span style="font-family: monospace;">"difference"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fittype' Line='fittype = "difference"' -->
   <dd>Type of fitted output.  The choices are:
@@ -67,7 +67,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_references">
   <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
@@ -80,7 +80,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Run this task interactively?  If the task is not run interactively then
@@ -88,7 +88,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   fitting are disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = yes' -->
   <dd>Find the spectra and define apertures automatically?  In order for
@@ -96,38 +96,38 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   input image or reference image defined in the database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes' -->
   <dd>Recenter the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_resize">
   <dt><b>resize = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes' -->
   <dd>Resize the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trace">
   <dt><b>trace = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes' -->
   <dd>Trace the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fittrace">
   <dt><b>fittrace = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes' -->
   <dd>Interactively fit the traced positions by a function?  The <i>interactive</i>
   parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fit">
   <dt><b>fit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fit' Line='fit = yes' -->
   <dd>Fit the spectra and produce a fitted output image?
@@ -137,14 +137,14 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   The following two parameters are used in the finding, recentering, resizing,
   editing, and tracing operations.
   </p>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF' -->
   <dd>The starting dispersion line (line or column perpendicular to the dispersion
   axis) for the tracing.  A value of INDEF starts at the middle of the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 1' -->
   <dd>Number of dispersion lines to be summed or medianed at each step along
@@ -152,7 +152,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10.' -->
   <dd>Division threshold for ratio fit type.  If a pixel in the fitted spectrum
@@ -162,7 +162,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   <p>
   The following parameters control the profile and spectrum fitting.
   </p>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none"' -->
   <dd>Type of background subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no
@@ -175,7 +175,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   option only the background sample regions parameter is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pfit">
   <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm to use with variance weighting or cleaning.
@@ -187,13 +187,13 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   function, <span style="font-family: monospace;">"fit2d"</span>, described by Marsh (see <b>approfile</b>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clean">
   <dt><b>clean = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no' -->
   <dd>Detect and replace deviant pixels?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skybox">
   <dt><b>skybox = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skybox' Line='skybox = 1' -->
   <dd>Box car smoothing length for sky background when using background
@@ -204,7 +204,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   the sky regions are limited due to a small slit length.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_saturation">
   <dt><b>saturation = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation = INDEF' -->
   <dd>Saturation or nonlinearity level.  During variance weighted extractions
@@ -212,7 +212,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   profile determination.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_readnoise">
   <dt><b>readnoise = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0.' -->
   <dd>Read out noise in photons.  This parameter defines the minimum noise
@@ -221,7 +221,7 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   (case insensitive) may be specified to get the value from the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gain">
   <dt><b>gain = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = 1' -->
   <dd>Detector gain or conversion factor between photons/electrons and
@@ -230,16 +230,16 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   from the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 3., usigma = 3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3.' -->
   <dd>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_additional_parameters">
   <h3>Additional parameters</h3>
-  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
   <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters from
@@ -249,9 +249,9 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   editing the apertures from <b>apedit</b>, and tracing parameters from
   <b>aptrace</b>.
   </p>
-  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The two dimensional spectra within the defined apertures of the input
   images are fit by a model and new output images are created with either
@@ -346,20 +346,20 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   limit to noise in ratio image.  Outside of the apertures the ratio
   output pixels are set to one.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To compute the residuals of a model fit where the image already has
   aperture defined:
   </p>
-  <p>
-  	cl&gt; apfit ls1 inter- rec- res- trace- read=3 gain=1 back=fit
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apfit ls1 inter- rec- res- trace- read=3 gain=1 back=fit
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_APFIND">
   <dt><b>APFIND V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APFIND' Line='APFIND V2.11' -->
   <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
@@ -368,15 +368,15 @@ apfit: Fit 2D spectra and output the fit, difference, or ratio
   parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apbackground, approfile, apvariance,
   apdefault, apfind, aprecenter, apresize, apedit, aptrace, apsum, apall
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

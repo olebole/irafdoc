@@ -7,21 +7,21 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   linmatch input reference regions lintransform
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input images to be matched.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>The list of reference images to which the input images are to be matched
@@ -32,7 +32,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_regions">
   <dt><b>regions</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='regions' Line='regions' -->
   <dd>The list of image regions used to compute the intensity 
@@ -49,7 +49,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   sections separated by whitespace and/or newlines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lintransform">
   <dt><b>lintransform</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lintransform' Line='lintransform' -->
   <dd>The name of the text file where the computed scaling factors are written.
@@ -62,7 +62,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   each image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>The list of output matched images. If <i>output</i> is the NULL string
@@ -72,7 +72,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_databasefmt">
   <dt><b>databasefmt = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='databasefmt' Line='databasefmt = yes' -->
   <dd>If <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span> the computed bscale and bzero factors
@@ -80,7 +80,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   simple text file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>The list of records to be written to or read from <i>lintransform</i> one
@@ -97,7 +97,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = yes' -->
   <dd>Append new records to an existing <i>lintransform</i> file or start a new 
@@ -105,7 +105,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   ignored if <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shifts">
   <dt><b>shifts = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""' -->
   <dd>An optional list of shifts files containing the x and y shifts to be applied
@@ -120,7 +120,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   parameter is set to <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xshift">
   <dt><b>xshift = 0.0 yshift = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift = 0.0 yshift = 0.0' -->
   <dd>The default x and y shifts to be applied to the reference image regions
@@ -130,7 +130,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   is set to <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dnx">
   <dt><b>dnx = 31 dny = 31</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dnx' Line='dnx = 31 dny = 31' -->
   <dd>The default size of a single image region used to compute the bscale
@@ -140,14 +140,14 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   is set to <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxnregions">
   <dt><b>maxnregions = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxnregions' Line='maxnregions = 100' -->
   <dd>The maximum number of image regions or objects with measured photometry
   that can be used to compute the bscale and bzero factors.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scaling">
   <dt><b>scaling = <span style="font-family: monospace;">"mean mean"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scaling' Line='scaling = "mean mean"' -->
   <dd>The algorithms used to compute the bscale and bzero factors respectively.
@@ -219,7 +219,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datamin">
   <dt><b>datamin = INDEF datamax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datamin' Line='datamin = INDEF datamax = INDEF' -->
   <dd>The minimum and maximum good data values. Datamin and datamax are used by
@@ -229,14 +229,14 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   regions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxiter">
   <dt><b>maxiter = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 10' -->
   <dd>The maximum number of iterations performed by the least squares fitting
   algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nreject">
   <dt><b>nreject = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0' -->
   <dd>The maximum number of rejection cycles used to detect and reject bad pixels
@@ -245,7 +245,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   or <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_loreject">
   <dt><b>loreject = INDEF hireject = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF hireject = INDEF' -->
   <dd>The high- and low-side bad data rejection limits used to detect and reject
@@ -254,7 +254,7 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <span style="font-family: monospace;">"mode"</span>, <span style="font-family: monospace;">"fit"</span>, or <span style="font-family: monospace;">"photometry"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gain">
   <dt><b>gain = <span style="font-family: monospace;">"1.0 1.0"</span> readnoise = <span style="font-family: monospace;">"0.0 0.0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "1.0 1.0" readnoise = "0.0 0.0"' -->
   <dd>The reference and input image gain and readout noise in e-/ADU and
@@ -266,47 +266,47 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   to compute the per pixel errors values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Compute the bscale and bzero scaling factors for each image interactively
   using graphics cursor and optionally image cursor input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about the progress of the task during task execution in
   non-interactive mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">"stdimage"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"' -->
   <dd>The default image display device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The default graphics cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The default image cursor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   LINMATCH computes the bscale and bzero factors required to match
   the intensity scales of a list of input
@@ -314,9 +314,9 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   images <i>reference</i> using the following definition of
   bscale and bzero and a variety of techniques.
   </p>
-  <pre>
-  	reference = bscale * input + bzero
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  reference = bscale * input + bzero
+  </pre></div>
   <p>
   The computed bscale and bzero factors are stored
   in the text file <i>lintransform</i>, in the record <i>records</i> if
@@ -429,66 +429,65 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   of the available interactive commands is given in the CURSOR COMMANDS
   section.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   The following graphics cursor commands are currently available in LINMATCH.
   
-  		Interactive Keystroke Commands
+                  Interactive Keystroke Commands
   
-  ?	Print help 
-  :	Colon commands
+  ?       Print help
+  :       Colon commands
   
-  g	Draw a plot of the current fit
-  i	Draw the residuals plot for the current fit
-  p	Draw a plot of current photometry
-  s	Draw histograms for the image region nearest the cursor
-  l	Draw the least squares fit for the image region nearest the cursor 
-  h	Draw histogram plot of each image region in turn
-  l	Draw least squares fits plot of each image region in turn
-  r	Redraw the current plot
-  d	Delete the image region nearest the cursor
-  u	Undelete the image region nearest the cursor
-  f	Recompute the intensity matching function
-  w	Update the task parameters
-  q	Exit
+  g       Draw a plot of the current fit
+  i       Draw the residuals plot for the current fit
+  p       Draw a plot of current photometry
+  s       Draw histograms for the image region nearest the cursor
+  l       Draw the least squares fit for the image region nearest the cursor
+  h       Draw histogram plot of each image region in turn
+  l       Draw least squares fits plot of each image region in turn
+  r       Redraw the current plot
+  d       Delete the image region nearest the cursor
+  u       Undelete the image region nearest the cursor
+  f       Recompute the intensity matching function
+  w       Update the task parameters
+  q       Exit
   
+                  Colon Commands
   
-  		Colon Commands
+  :markcoords         Mark objects on the display
+  :marksections       Mark image sections on the display
+  :show               Show current values of all the parameters
   
-  :markcoords	    Mark objects on the display
-  :marksections	    Mark image sections on the display
-  :show	            Show current values of all the parameters
+                  Show/set Parameters
   
-  		Show/set Parameters
-  
-  :input		[string]    Show/set the current input image
-  :reference	[string]    Show/set the current reference image / phot file 
-  :regions	[string]    Show/set the current image regions
-  :photfile	[string]    Show/set the current input photometry file
-  :lintransform	[string]    Show/set the linear transform database file name
-  :dnx		[value]	    Show/set the default x size of an image region
-  :dny		[value]	    Show/set the default y size of an image region
-  :shifts		[string]    Show/set the current shifts file
-  :xshift		[value]     Show/set the input image x shift
-  :yshift		[value]     Show/set the input image y shift
-  :output		[string]    Show/set the current output image name
-  :maxnregions		    Show the maximum number of objects / regions
-  :gain		[string]    Show/set the gain value / image header keyword
-  :readnoise	[string]    Show/set the readout noise value / image header
+  :input          [string]    Show/set the current input image
+  :reference      [string]    Show/set the current reference image / phot file
+  :regions        [string]    Show/set the current image regions
+  :photfile       [string]    Show/set the current input photometry file
+  :lintransform   [string]    Show/set the linear transform database file name
+  :dnx            [value]     Show/set the default x size of an image region
+  :dny            [value]     Show/set the default y size of an image region
+  :shifts         [string]    Show/set the current shifts file
+  :xshift         [value]     Show/set the input image x shift
+  :yshift         [value]     Show/set the input image y shift
+  :output         [string]    Show/set the current output image name
+  :maxnregions                Show the maximum number of objects / regions
+  :gain           [string]    Show/set the gain value / image header keyword
+  :readnoise      [string]    Show/set the readout noise value / image header
                               keyword
   
-  :scaling		    Show the current scaling algorithm
-  :datamin	[value]     Show/set the minimum good data value
-  :datamax	[value]     Show/set the maximum good data value
-  :nreject	[value]	    Show/set the maximum number of rejection cycles
-  :loreject	[value]     Show/set low side k-sigma rejection parameter
-  :hireject	[value]     Show/set high side k-sigma rejection parameter
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  :scaling                    Show the current scaling algorithm
+  :datamin        [value]     Show/set the minimum good data value
+  :datamax        [value]     Show/set the maximum good data value
+  :nreject        [value]     Show/set the maximum number of rejection cycles
+  :loreject       [value]     Show/set low side k-sigma rejection parameter
+  :hireject       [value]     Show/set high side k-sigma rejection parameter
+  </pre></div>
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   MEAN, MEDIAN, AND MODE
   </p>
@@ -499,37 +498,37 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   estimate, stdev for the measured standard deviation, and npix for the
   number of points.
   </p>
-  <pre>
-         mstat = mean, median, or mode 
-        emstat = min (sqrt (mean / gain + readnoise ** 2 / gain ** 2),
-                 stdev / sqrt(npix))
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   mstat = mean, median, or mode
+  emstat = min (sqrt (mean / gain + readnoise ** 2 / gain ** 2),
+           stdev / sqrt(npix))
+  </pre></div>
   <p>
   If only a single image region is specified then mstat is used to compute
   one of bscale or bzero but not both as shown below.  Bscale is computed by
   default.
   </p>
-  <pre>
-           bscale = mstat[ref] / mstat[input]
-      err[bscale] = abs (bscale) * sqrt (emstat[ref] ** 2 / mstat[ref] ** 2 +
-  	          emstat[input] ** 2 / mstat[input] ** 2)
-  	  bzero = constant
-       err[bzero] = 0.0
+  <div class="highlight-default-notranslate"><pre>
+       bscale = mstat[ref] / mstat[input]
+  err[bscale] = abs (bscale) * sqrt (emstat[ref] ** 2 / mstat[ref] ** 2 +
+                emstat[input] ** 2 / mstat[input] ** 2)
+        bzero = constant
+   err[bzero] = 0.0
   
-  	  bzero = mstat[ref] - mstat[input]
-       err[bzero] = sqrt (emstat[ref] ** 2 + emstat[input] ** 2)
-  	 bscale = constant
-      err[bscale] = 0.0
-  </pre>
+        bzero = mstat[ref] - mstat[input]
+   err[bzero] = sqrt (emstat[ref] ** 2 + emstat[input] ** 2)
+       bscale = constant
+  err[bscale] = 0.0
+  </pre></div>
   <p>
   If more than one image region is defined then the computed mean, median,
   or mode values for the input and reference image regions are used as
   shown below to compute the bscale and bzero factors and their errors
   using a weighted least squares fit.
   </p>
-  <pre>
-  	mstat[ref] = bscale * mstat[input] + bzero
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  mstat[ref] = bscale * mstat[input] + bzero
+  </pre></div>
   <p>
   If an image region contains data outside the limits defined
   by <i>datamin</i> and <i>datamax</i> that image region is eliminated
@@ -566,14 +565,14 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   computed by doing a pixel to pixel weighted least squares fit of the reference
   image counts to the input image counts as shown below.
   </p>
-  <pre>
-      counts[ref] = bscale * counts[input] + bzero
-           weight = 1.0 / (err[ref] ** 2 + bscale ** 2 * err[input] ** 2)
-         err[ref] = sqrt (counts[ref] / gain[ref] + readnoise[ref] ** 2 /
-                    gain[ref] ** 2)
-       err[input] = sqrt (counts[input] / gain[input] +
-       		  readnoise[input] ** 2 / gain[input] ** 2)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  counts[ref] = bscale * counts[input] + bzero
+       weight = 1.0 / (err[ref] ** 2 + bscale ** 2 * err[input] ** 2)
+     err[ref] = sqrt (counts[ref] / gain[ref] + readnoise[ref] ** 2 /
+                gain[ref] ** 2)
+   err[input] = sqrt (counts[input] / gain[input] +
+                readnoise[input] ** 2 / gain[input] ** 2)
+  </pre></div>
   <p>
   The fitting technique takes into account errors in both the reference and
   input image counts and provides an error estimate for the computed bscale
@@ -605,14 +604,14 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   bscale and bzero factors and estimate their errors as shown
   below.
   </p>
-  <pre>
-  	 bscale = 10.0 ** ((mag[ref] - mag[input]) / 2.5)
-  	  bzero = sky[ref] - bscale * sky[input]
-      err[bscale] = 0.4 * log(10.0) * bscale * sqrt (merr[ref] ** 2 +
-  		  magerr[input] ** 2)) 
-       err[bzero] = sqrt (serr[ref] ** 2 + err[bscale] ** 2 *
-                    sky[input] ** 2 + bscale ** 2 * sky[input] ** 2)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+       bscale = 10.0 ** ((mag[ref] - mag[input]) / 2.5)
+        bzero = sky[ref] - bscale * sky[input]
+  err[bscale] = 0.4 * log(10.0) * bscale * sqrt (merr[ref] ** 2 +
+                magerr[input] ** 2))
+   err[bzero] = sqrt (serr[ref] ** 2 + err[bscale] ** 2 *
+                sky[input] ** 2 + bscale ** 2 * sky[input] ** 2)
+  </pre></div>
   <p>
   The final bscale and bzero for the input image are computed by calculation
   the average of the individual bscale and bzero values weighted by their
@@ -629,44 +628,44 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   <p>
   The best fitting line is the defined below.
   </p>
-  <pre>
-  		y = a * x + b
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = a * x + b
+  </pre></div>
   <p>
   The error ellipses  are 
   </p>
-  <pre>
-  	S = (x - xfit) ** 2 / err[x] ** 2 + (y - yfit) ** 2 /
-  	    err[y] ** 2   
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  S = (x - xfit) ** 2 / err[x] ** 2 + (y - yfit) ** 2 /
+      err[y] ** 2
+  </pre></div>
   <p>
   where S is the quantity to be minimized. Initial values of a and b are
   estimated by  fitting the data to a straight line assuming uniform
   weighting.  The best fit values of a and b are then
   determined by iterating on the relationship
   </p>
-  <pre>
-  	dy = x' * da + db
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  dy = x' * da + db
+  </pre></div>
   <p>
   where da and db are corrections to the previously determined values of a and
   b and dy and x' are defined as.
   </p>
-  <pre>
-  	dy = y - (ax + b)
-  	x' = x + a * err[x] ** 2 * dy / (a ** 2 * err[x] ** 2 +
-  	     err[y] ** 2) 
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  dy = y - (ax + b)
+  x' = x + a * err[x] ** 2 * dy / (a ** 2 * err[x] ** 2 +
+       err[y] ** 2)
+  </pre></div>
   <p>
   The new values of the a and b then become.
   </p>
-  <pre>
-          a = a + da
-  	b = b + db
-  </pre>
-  <!-- EndSection:   'ALGORITHMS' -->
+  <div class="highlight-default-notranslate"><pre>
+  a = a + da
+  b = b + db
+  </pre></div>
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   A review of doubly weighted linear regression problems in
   astronomy can be found in the paper <span style="font-family: monospace;">"Linear Regression in Astronomy. II"</span>
@@ -676,9 +675,9 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   by Stetson (1989 Proceeding of the V Advanced School of Astrophysics,
   p 51).
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Match the intensity scales of a list of images to a reference
   image using a list of stars on the displayed reference image with
@@ -688,41 +687,41 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   Make sure that the correct gain and readout noise values are in the
   image headers.
   </p>
-  <pre>
-  	cl&gt; display refimage 1 
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; display refimage 1
   
-  	cl&gt; rimcursor &gt; objlist
-  	    ... mark several candidate stars by moving the cursor to the
-  	        star of interest and hitting the space bar key
-  	    ... type EOF to terminate the list
+  cl&gt; rimcursor &gt; objlist
+      ... mark several candidate stars by moving the cursor to the
+          star of interest and hitting the space bar key
+      ... type EOF to terminate the list
   
-  	cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
-  	    out=@outlist dnx=31 dny=31 scaling="mean mean" gain=gain \<br>
-  	    readnoise=readnoise
-  </pre>
+  cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
+      out=@outlist dnx=31 dny=31 scaling="mean mean" gain=gain \<br>
+      readnoise=readnoise
+  </pre></div>
   <p>
   2. Repeat the previous command but force the bzero factor to be -100.0
   instead of using the fitted value.
   </p>
-  <pre>
-  	cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
-  	    out=@outlist dnx=31 dny=31 scaling="mean -100.0" \<br>
-  	    gain=gain readnoise=rdnoise
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
+      out=@outlist dnx=31 dny=31 scaling="mean -100.0" \<br>
+      gain=gain readnoise=rdnoise
+  </pre></div>
   <p>
   3. Repeat the first example but compute bscale and bzero 
   the bscale and bzero values using boxcar smoothed versions of 
   the input images. Make sure the gain and readout noise are
   adjusted appropriately.
   </p>
-  <pre>
-  	cl&gt; linmatch @bimlist brefimage objlist lintran.db \<br>
-  	    dnx=31 dny=31 scaling="mean mean" gain=gain \<br>
-  	    readnoise=rdnoise
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; linmatch @bimlist brefimage objlist lintran.db \<br>
+      dnx=31 dny=31 scaling="mean mean" gain=gain \<br>
+      readnoise=rdnoise
   
-  	cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
-  	    out=@outimlist records=@bimlist scaling="file file"
-  </pre>
+  cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
+      out=@outimlist records=@bimlist scaling="file file"
+  </pre></div>
   <p>
   4. Match the intensity of an input image which has been spatially
   registered and psfmatched to the reference image using the <span style="font-family: monospace;">"fit"</span> algorithm
@@ -730,20 +729,20 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   pixels by setting datamax to 28000 counts, and the effects of any deviant pixels
   by setting nreject, loreject, and hireject to appropriate values.
   </p>
-  <pre>
-  	cl&gt; linmatch image refimage [50:150,50:150] lintran.db \<br>
-  	    out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
-  	    loreject=3 hireject=3 gain=gain readnoise=rdnoise
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; linmatch image refimage [50:150,50:150] lintran.db \<br>
+      out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
+      loreject=3 hireject=3 gain=gain readnoise=rdnoise
+  </pre></div>
   <p>
   5. Repeat the previous example but use several image sections to compute
   the bscale and bzero values.
   </p>
-  <pre>
-  	cl&gt; linmatch image refimage sections lintran.db \<br>
-  	    out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
-  	    loreject=3 hireject=3 gain=gain readnoise=rdnoise
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; linmatch image refimage sections lintran.db \<br>
+      out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
+      loreject=3 hireject=3 gain=gain readnoise=rdnoise
+  </pre></div>
   <p>
   6. Match the intensity scales of two images using photometry 
   computed with the apphot package qphot task. The two images are
@@ -751,75 +750,74 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   include all the light from the stars. The filecalc task used to compute
   the error in the mean sky is in the addon ctio package.
   </p>
-  <pre>
-  	cl&gt; display refimage 1 fi+
-  	cl&gt; rimcursor &gt; objlist
-  	    ... mark several candidate stars by moving the cursor to the
-  	        star of interest and hitting the space bar key
-  	    ... type EOF to terminate the list
-  	cl&gt; qphot refimage coords=objlist inter-
-  	cl&gt; qphot image coords=objlist inter-
-  	cl&gt; pdump refimage.mag.1 msky,stdev,nsky,mag,merr yes | filecalc \<br>
-  	    STDIN "$1;$2/sqrt($3);$4;$5" &gt; refimage.phot
-  	cl&gt; pdump image.mag.1 msky,stdev,nsky,mag,merr yes | filecalc \<br>
-  	    STDIN "$1;$2/sqrt($3);$4;$5" &gt; image.phot
-  	cl&gt; linmatch image refimage.phot image.phot lintran.db \<br>
-  	    out=outimage scaling="phot phot" nreject=3 loreject=3\<br>
-  	    hireject=3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; display refimage 1 fi+
+  cl&gt; rimcursor &gt; objlist
+      ... mark several candidate stars by moving the cursor to the
+          star of interest and hitting the space bar key
+      ... type EOF to terminate the list
+  cl&gt; qphot refimage coords=objlist inter-
+  cl&gt; qphot image coords=objlist inter-
+  cl&gt; pdump refimage.mag.1 msky,stdev,nsky,mag,merr yes | filecalc \<br>
+      STDIN "$1;$2/sqrt($3);$4;$5" &gt; refimage.phot
+  cl&gt; pdump image.mag.1 msky,stdev,nsky,mag,merr yes | filecalc \<br>
+      STDIN "$1;$2/sqrt($3);$4;$5" &gt; image.phot
+  cl&gt; linmatch image refimage.phot image.phot lintran.db \<br>
+      out=outimage scaling="phot phot" nreject=3 loreject=3\<br>
+      hireject=3
+  </pre></div>
   <p>
   7. Register two images interactively using the fit algorithms and
   five non-overlapping image regions in the sections file.
   </p>
-  <pre>
-  	cl&gt; linmatch image refimage sections lintran.db \<br>
-  	    out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
-  	    loreject=3 hireject=3 gain=gain readnoise=rdnoise \<br>
-  	    interactive +
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; linmatch image refimage sections lintran.db \<br>
+      out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
+      loreject=3 hireject=3 gain=gain readnoise=rdnoise \<br>
+      interactive +
   
-  	    ... a plot of bscale and bzero versus region number
-  		appears
+      ... a plot of bscale and bzero versus region number
+          appears
   
-  	    ... type ? to get a list of the keystroke and : commands
+      ... type ? to get a list of the keystroke and : commands
   
-  	    ... type i to see a plot of the bscale and bzero residuals
-  		versus region
+      ... type i to see a plot of the bscale and bzero residuals
+          versus region
   
-  	    ... type g to return to the default bscale and bzero versus
-  		region plot
+      ... type g to return to the default bscale and bzero versus
+          region plot
   
-  	    ... type l to examine plot of the fits and residuals for the
-  		individual regions
-  		... step forward and back in the regions list with the
-  		space bar and -keys
-  		... flip back and forth between the fit and residuals
-  		keys with l and i keys
-  		... return to the main plot by typing q
+      ... type l to examine plot of the fits and residuals for the
+          individual regions
+          ... step forward and back in the regions list with the
+          space bar and -keys
+          ... flip back and forth between the fit and residuals
+          keys with l and i keys
+          ... return to the main plot by typing q
   
-  	    ... return to the residuals plot by typing i and delete a
-  		region with a large residual by moving to the
-  		bad point and typing d
+      ... return to the residuals plot by typing i and delete a
+          region with a large residual by moving to the
+          bad point and typing d
   
-  	    ... type f to recompute the fit
+      ... type f to recompute the fit
   
-  	    ... type q to quit the interactive loop, n to go to the
-  		next image or q to quit the task
-  		
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type q to quit the interactive loop, n to go to the
+          next image or q to quit the task
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imexpr, imcombine, ctio.filecalc, apphot.qphot, apphot.phot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

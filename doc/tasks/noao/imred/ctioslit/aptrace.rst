@@ -7,21 +7,21 @@ aptrace: Trace positions of spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   aptrace images
-  </pre>
-  <!-- EndSection:   'USAGE' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images to be traced.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
@@ -33,7 +33,7 @@ aptrace: Trace positions of spectra
   for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_references">
   <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
@@ -46,7 +46,7 @@ aptrace: Trace positions of spectra
   and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Run this task interactively?  If the task is not run interactively then
@@ -54,7 +54,7 @@ aptrace: Trace positions of spectra
   fitting are disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = yes' -->
   <dd>Find the spectra and define apertures automatically?  In order for
@@ -62,38 +62,38 @@ aptrace: Trace positions of spectra
   input image or reference image defined in the database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no' -->
   <dd>Recenter the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_resize">
   <dt><b>resize = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes' -->
   <dd>Resize the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trace">
   <dt><b>trace = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes' -->
   <dd>Trace the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fittrace">
   <dt><b>fittrace = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes' -->
   <dd>Interactively fit the traced positions by a function?  The <i>interactive</i>
   parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF, nsum = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 1' -->
   <dd>The dispersion line (line or column perpendicular to the dispersion
@@ -106,14 +106,14 @@ aptrace: Trace positions of spectra
   value selects a median.  Tracing always uses a sum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_step">
   <dt><b>step = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step = 10' -->
   <dd>Step along the dispersion axis between determination of the spectrum
   positions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlost">
   <dt><b>nlost = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlost' Line='nlost = 3' -->
   <dd>Number of consecutive steps in which the profile is lost before quitting
@@ -127,7 +127,7 @@ aptrace: Trace positions of spectra
   by a function of the dispersion line.  These parameters are those used by
   the ICFIT package.
   </p>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"legendre"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"' -->
   <dd>Default trace fitting function.  The fitting function types are
@@ -135,7 +135,7 @@ aptrace: Trace positions of spectra
   <span style="font-family: monospace;">"spline3"</span> cubic spline.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 2' -->
   <dd>Default trace function order.  The order refers to the number of
@@ -143,7 +143,7 @@ aptrace: Trace positions of spectra
   functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Default fitting sample.  The sample is given by a set of colon separated
@@ -151,7 +151,7 @@ aptrace: Trace positions of spectra
   to all points.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Default number of points to average or median.  Positive numbers
@@ -160,7 +160,7 @@ aptrace: Trace positions of spectra
   points.  A value of 1 does no averaging and each data point is used in the
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0' -->
   <dd>Default number of rejection iterations.  If greater than zero the fit is
@@ -168,7 +168,7 @@ aptrace: Trace positions of spectra
   fit.  The number of iterations of this process is given by this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 3., high_reject = 3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3., high_reject = 3.' -->
   <dd>Default lower and upper rejection sigma.  If greater than zero traced
@@ -176,16 +176,16 @@ aptrace: Trace positions of spectra
   number of times the sigma of the residuals are rejected before refitting.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.' -->
   <dd>Default reject growing radius.  Traced points within a distance given by this
   parameter of any rejected point are also rejected.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_additional_parameters">
   <h3>Additional parameters</h3>
-  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
   <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters from
@@ -198,9 +198,9 @@ aptrace: Trace positions of spectra
   When this operation is performed from the task <b>apall</b> all parameters
   except the package parameters are included in that task.
   </p>
-  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   For each image in the input image list the position of the spectrum
   within each aperture are determined at a number of points along the
@@ -298,9 +298,9 @@ aptrace: Trace positions of spectra
   the <span style="font-family: monospace;">'t'</span> key.  The aperture tracing algorithm may be selected from many
   of the tasks in the package with the <i>trace</i> parameter.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_aptrace_database_coefficients">
   <h3>Aptrace database coefficients</h3>
-  <!-- BeginSection: 'APTRACE DATABASE COEFFICIENTS' -->
   <p>
   The path of an aperture is described by a function that gives an additive
   offset relative to the aperture center as stored under the database keyword
@@ -314,13 +314,13 @@ aptrace: Trace positions of spectra
   (the line or column coordinate along the dispersion).  The first
   coefficient is the function type code with values:
   </p>
-  <pre>
-  	Code	Type
-  	   1	Chebyshev polynomial
-  	   2	Legendre polynomial
-  	   3	Cubic spline
-  	   4	Linear spline
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Code    Type
+     1    Chebyshev polynomial
+     2    Legendre polynomial
+     3    Cubic spline
+     4    Linear spline
+  </pre></div>
   <p>
   The second coefficient is the order (actually the number of terms) of
   the polynomial or the number of pieces in the spline.
@@ -331,9 +331,9 @@ aptrace: Trace positions of spectra
   input variable to the range -1 to 1 in the polynomial functions.  If the
   independent variable is x and the normalized variable is n, then
   </p>
-  <pre>
-  	n = (2 * x - (xmax + xmin)) / (xmax - xmin)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  n = (2 * x - (xmax + xmin)) / (xmax - xmin)
+  </pre></div>
   <p>
   where xmin and xmax are the two coefficients.
   </p>
@@ -342,10 +342,10 @@ aptrace: Trace positions of spectra
   pieces.  A spline coordinate s and the nearest integer below s,
   denoted as j, are defined by
   </p>
-  <pre>
-  	s = (x - xmin) / (xmax - xmin) * npieces
-  	j = integer part of s
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  s = (x - xmin) / (xmax - xmin) * npieces
+  j = integer part of s
+  </pre></div>
   <p>
   where npieces are the number of pieces.
   </p>
@@ -361,79 +361,79 @@ aptrace: Trace positions of spectra
   <p>
   The polynomial can be expressed as the sum
   </p>
-  <pre>
-  	y = sum from i=1 to order {c_i * z_i}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = sum from i=1 to order {c_i * z_i}
+  </pre></div>
   <p>
   where the c_i are the coefficients and the z_i are defined
   interactively as:
   </p>
-  <pre>
-  	z_1 = 1
-  	z_2 = n
-  	z_i = 2 * n * z_{i-1} - z_{i-2}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  z_1 = 1
+  z_2 = n
+  z_i = 2 * n * z_{i-1} - z_{i-2}
+  </pre></div>
   <p>
   2. Legendre Polynomial
   </p>
   <p>
   The polynomial can be expressed as the sum
   </p>
-  <pre>
-  	y = sum from i=1 to order {c_i * z_i}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = sum from i=1 to order {c_i * z_i}
+  </pre></div>
   <p>
   where the c_i are the coefficients and the z_i are defined
   interactively as:
   </p>
-  <pre>
-  	z_1 = 1
-  	z_2 = n
-  	z_i = ((2*i-3) * n * z_{i-1} - (i-2) * z_{i-2}) / (i - 1)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  z_1 = 1
+  z_2 = n
+  z_i = ((2*i-3) * n * z_{i-1} - (i-2) * z_{i-2}) / (i - 1)
+  </pre></div>
   <p>
   3. Linear Spline
   </p>
   <p>
   The linear spline is evaluated as
   </p>
-  <pre>
-  	y = c_j * a + c_{j+1} * b
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = c_j * a + c_{j+1} * b
+  </pre></div>
   <p>
   where j is as defined earlier and a and b are fractional difference
   between s and the nearest integers above and below
   </p>
-  <pre>
-  	a = (j + 1) - s
-  	b = s - j
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  a = (j + 1) - s
+  b = s - j
+  </pre></div>
   <p>
   4.  Cubic Spline
   </p>
   <p>
   The cubic spline is evaluated as
   </p>
-  <pre>
-  	y = sum from i=0 to 3 {c_{i+j} * z_i}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = sum from i=0 to 3 {c_{i+j} * z_i}
+  </pre></div>
   <p>
   where j is as defined earlier.  The term z_i are computed from
   a and b, as defined earlier, as follows
   </p>
-  <pre>
-  	z_0 = a**3
-  	z_1 = 1 + 3 * a * (1 + a * b)
-  	z_2 = 1 + 3 * b * (1 + a * b)
-  	z_3 = b**3
-  </pre>
-  <!-- EndSection:   'APTRACE DATABASE COEFFICIENTS' -->
+  <div class="highlight-default-notranslate"><pre>
+  z_0 = a**3
+  z_1 = 1 + 3 * a * (1 + a * b)
+  z_2 = 1 + 3 * b * (1 + a * b)
+  z_3 = b**3
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_APTRACE">
   <dt><b>APTRACE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APTRACE' Line='APTRACE V2.11' -->
   <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
@@ -442,15 +442,15 @@ aptrace: Trace positions of spectra
   parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apdefault, apfind, aprecenter, apresize, apedit, apall,
   center1d, icfit, gtools
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'APTRACE DATABASE COEFFICIENTS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

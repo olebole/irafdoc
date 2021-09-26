@@ -7,14 +7,14 @@ titable: Insert 2-D tables into rows of a 3-D table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   titable intable outtable
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task performs the inverse operation of task txtable: it inserts one or 
   more 2-D tables into rows of a 3-D table  The input may be a filename 
@@ -73,16 +73,16 @@ titable: Insert 2-D tables into rows of a 3-D table.
   scalars, the task will always insert them into the output table, provided
   there is a match in column names.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name list/template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name list/template]' -->
   <dd>A list of one or more tables to be inserted. Row/column selectors are supported.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [table name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]' -->
   <dd>Name of 3-D output table, including extension. No support exists for 
@@ -108,18 +108,18 @@ titable: Insert 2-D tables into rows of a 3-D table.
   <dd>Display names of input and output tables as files are processed ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Insert columns named FLUX and WAVELENGTH from input tables into a 3-D table:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; titable "itable*.tab[c:FLUX,WAVELENGTH]" otable.tab
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The output and template table names must be supplied in full, including 
   the extension (e.g. <span style="font-family: monospace;">".tab"</span>). If the output table name is not typed in full, 
@@ -127,20 +127,20 @@ titable: Insert 2-D tables into rows of a 3-D table.
   rows actually inserted. This behavior relates to the way the underlying 
   <span style="font-family: monospace;">"access"</span> routine in IRAF's fio library works.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by I. Busko.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   txtable, selectors
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

@@ -7,14 +7,14 @@ generic: Preprocess a generic source file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   generic [-k] [-o ofile] [-p prefix] [-t types] files
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <dl>
   <dt><b>-k</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='-k' -->
@@ -57,7 +57,7 @@ generic: Preprocess a generic source file
   r	- SPP real
   d	- SPP double
   x	- SPP complex
-  </pre>
+  </pre></div>
   </dd>
   </dl>
   This option cannot be used in combination with the -o option, and should
@@ -65,7 +65,7 @@ generic: Preprocess a generic source file
   multiple output files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_files">
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
   <dd>The input file or files to be processed.  Generic input files should have
@@ -73,9 +73,9 @@ generic: Preprocess a generic source file
   input file can be given if the -o option is specified.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The generic preprocessor is used to translate generic source code (code
   written to work for any datatype) into type dependent source code,
@@ -118,13 +118,13 @@ generic: Preprocess a generic source file
   preprocessor directives have the form <span style="font-family: monospace;">"$NAME"</span>, where $ marks a <i>generic</i>
   directive, and where NAME is the name of the directive.
   </p>
-  <dl>
+  <dl id="l_PIXEL">
   <dt><b>PIXEL</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='PIXEL' Line='PIXEL' -->
   <dd>Replaced by the current type name, e.g., <span style="font-family: monospace;">"int"</span>, <span style="font-family: monospace;">"real"</span>, etc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_XPIXEL">
   <dt><b>XPIXEL</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='XPIXEL' Line='XPIXEL' -->
   <dd>Replaced by the current type name in upper case, preceded by an X,
@@ -132,27 +132,27 @@ generic: Preprocess a generic source file
   to be called from SPP or Fortran.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_INDEF">
   <dt><b>INDEF</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='INDEF' Line='INDEF' -->
   <dd>Replaced by the numeric constant denoting indefinite for the current
   datatype.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_INDEF">
   <dt><b>INDEF[SILRDX]</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='INDEF' Line='INDEF[SILRDX]' -->
   <dd>These strings are <i>not</i> replaced, since the <span style="font-family: monospace;">"INDEF"</span> in this case is
   not generic.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SZ_PIXEL">
   <dt><b>SZ_PIXEL</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='SZ_PIXEL' Line='SZ_PIXEL' -->
   <dd>Replaced by <span style="font-family: monospace;">"SZ_INT"</span>, <span style="font-family: monospace;">"SZ_REAL"</span>, etc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_TY_PIXEL">
   <dt><b>TY_PIXEL</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='TY_PIXEL' Line='TY_PIXEL' -->
   <dd>Replaced by <span style="font-family: monospace;">"TY_INT"</span>, <span style="font-family: monospace;">"TY_REAL"</span>, etc.
@@ -205,7 +205,7 @@ generic: Preprocess a generic source file
   which follows is skipped over, and is not copied to the output file.
   Control transfers to the matching $ELSE or $ENDIF.  The following may be
   used in the boolean expression:
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   "datatype"	denotes the current type
   ubcsilrdx	any subset of these characters denotes
   		    the corresponding datatype
@@ -215,7 +215,6 @@ generic: Preprocess a generic source file
   != ==		the relational operators
    &gt;  &lt;  &gt;= &lt;=
   
-  
   Examples:
   
   	$if (datatype != dx)
@@ -223,7 +222,7 @@ generic: Preprocess a generic source file
   
   	$if (sizeof(i) &lt;= sizeof(r))
   	    (code to be compiled if size int &lt;= real)
-  </pre>
+  </pre></div>
   $IF constructs may be nested.  The directive may appear anywhere on
   a line.
   </dd>
@@ -245,12 +244,12 @@ generic: Preprocess a generic source file
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='$for (types)' -->
   <dd>For each of the listed types, output a translated copy of the code between
   the $FOR and the matching $ENDFOR.  Nesting is permitted.
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   Example:
   	$for (silrd)
   	(any amount of generic code)
   	$endfor
-  </pre>
+  </pre></div>
   </dd>
   </dl>
   <dl>
@@ -289,9 +288,9 @@ generic: Preprocess a generic source file
   <dd>SPP Fortran escapes are not preprocessed.
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Translate the generic source <span style="font-family: monospace;">"aadd.gx"</span> to produce the six output files
   <span style="font-family: monospace;">"aadds.x"</span>, <span style="font-family: monospace;">"aaddi.x"</span>, etc., in the subdirectory <span style="font-family: monospace;">"ak"</span>, clobbering any
@@ -299,21 +298,22 @@ generic: Preprocess a generic source file
   written in C and is implemented as a CL foreign task, hence the UNIX
   command syntax.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; generic -k -p ak/ -t silrdx aadd.gx
-  </p>
+  </pre></div>
   <p>
   2. Perform an inline transformation ($FOR directive) of the source file
   <span style="font-family: monospace;">"imsum.gx"</span>, producing the single file <span style="font-family: monospace;">"imsum.x"</span> as output.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; generic -k -o imsum.x imsum.gx
-      
+  </pre></div>
+  <p>
   3. The following is a simple example of a typical generic source file.
   For additional examples, see the <span style="font-family: monospace;">".gx"</span> sources in the VOPS, IMIO, IMAGES
   and other directories.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # ALIM -- Compute the limits (minimum and maximum values) of a vector.
   # (this is a copy of the file vops$alim.gx).
   
@@ -341,15 +341,15 @@ generic: Preprocess a generic source file
   	    $endif
   	}
   end
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   xc, xyacc
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -7,21 +7,21 @@ substar: Subtract the fitted stars from the original image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   substar image photfile exfile psfimage subimage
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images from which to subtract the scaled and shifted PSF.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_photfile">
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of PSF fitted photometry files. There must be one photometry file
@@ -33,7 +33,7 @@ substar: Subtract the fitted stars from the original image
   database or an STSDAS table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exfile">
   <dt><b>exfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exfile' Line='exfile' -->
   <dd>The list of photometry files containing the ids of stars to be excluded
@@ -46,7 +46,7 @@ substar: Subtract the fitted stars from the original image
   database or an STSDAS table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psfimage">
   <dt><b>psfimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The list of images containing the PSF models computed by the DAOPHOT PSF task.
@@ -56,7 +56,7 @@ substar: Subtract the fitted stars from the original image
   ? is the highest existing version number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_subimage">
   <dt><b>subimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='subimage' Line='subimage' -->
   <dd>The list of output subtracted images. There must be one output subtracted
@@ -65,7 +65,7 @@ substar: Subtract the fitted stars from the original image
   where question mark stands for the next available version number. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameters
@@ -73,7 +73,7 @@ substar: Subtract the fitted stars from the original image
   is undefined then the default parameter set in uparm directory
   </dd>
   </dl>
-  <dl>
+  <dl id="l_daopars">
   <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
@@ -81,7 +81,7 @@ substar: Subtract the fitted stars from the original image
   then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span>, wcspsf = <span style="font-family: monospace;">")_.wcspsf"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i>, of the
@@ -150,7 +150,7 @@ substar: Subtract the fitted stars from the original image
   wcsin, wcspsf,  and wcsout are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -158,30 +158,30 @@ substar: Subtract the fitted stars from the original image
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical SUBSTAR task parameters? Verify can be set to the DAOPHOT
   package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_update"' -->
   <dd>Update the SUBSTAR task parameters if <i>verify</i> is <span style="font-family: monospace;">"yes"</span>? Update can be
   set to the default daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task ? Verbose can be set to the
   DAOPHOT package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   SUBSTAR task takes an input photometry list <i>photfile</i> containing
   the fitted coordinates and magnitudes, and an input PSF <i>psfimage</i>, and
@@ -249,146 +249,144 @@ substar: Subtract the fitted stars from the original image
   neighbors from bright stars which are to be used to determine aperture
   corrections.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Subtract the NSTAR photometry results for the test image dev$ypix from the
   image dev$ypix.
   </p>
-  <pre>
-     da&gt; datapars.epadu = 14.0
-     da&gt; datapars.readnoise = 75.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; datapars.epadu = 14.0
+  da&gt; datapars.readnoise = 75.0
   
-         ... set the gain and readout noise for the detector
+      ... set the gain and readout noise for the detector
   
-     da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
+  da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
   
-          ... answer verify prompts
+       ... answer verify prompts
   
-          ... find stars in the image
+       ... find stars in the image
   
-          ... answer will appear in ypix.coo.1
+       ... answer will appear in ypix.coo.1
   
-      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
-          apertures = 3.0
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+       apertures = 3.0
   
-          ... answer verify prompts
+       ... answer verify prompts
   
-          ... do aperture photometry on the detected stars
+       ... do aperture photometry on the detected stars
   
-          ... answer will appear in ypix.mag.1
+       ... answer will appear in ypix.mag.1
   
-      da&gt; display dev$ypix 1
+   da&gt; display dev$ypix 1
   
-      da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
-          fitrad=3.0 mkstars=yes display=imdr
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+       fitrad=3.0 mkstars=yes display=imdr
   
-          ... verify the critical parameters
+       ... verify the critical parameters
   
-          ... move the image cursor to a candidate star and hit the a key,
-              a plot of the stellar data appears
+       ... move the image cursor to a candidate star and hit the a key,
+           a plot of the stellar data appears
   
-          ... type ? for a listing of the graphics cursor menu
+       ... type ? for a listing of the graphics cursor menu
   
-          ... type a to accept the star, d to reject it
+       ... type a to accept the star, d to reject it
   
-          ... move to the next candidate stars and repeat the previous
-              steps
+       ... move to the next candidate stars and repeat the previous
+           steps
   
-          ... type l to list all the psf stars
+       ... type l to list all the psf stars
   
-          ... type f to fit the psf
+       ... type f to fit the psf
   
-          ... move cursor to first psf star and type s to see residuals,
-              repeat for all the psf stars
+       ... move cursor to first psf star and type s to see residuals,
+           repeat for all the psf stars
   
-          ... type w to save the PSF model
+       ... type w to save the PSF model
   
-          ... type q to quit, and q again to confirm
+       ... type q to quit, and q again to confirm
   
-          ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
-              ypix.psg.1
+       ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
+           ypix.psg.1
   
-      da&gt; group dev$ypix default default default
+   da&gt; group dev$ypix default default default
   
-          ... verify the prompts
+       ... verify the prompts
   
-          ... the output will appear in ypix.grp.1
+       ... the output will appear in ypix.grp.1
   
-      da&gt; nstar dev$ypix default default default default
+   da&gt; nstar dev$ypix default default default default
   
-          ... verify the prompts
+       ... verify the prompts
   
-          ... the results will appear in ypix.nst.1 and ypix.nrj.1
+       ... the results will appear in ypix.nst.1 and ypix.nrj.1
   
-      da&gt; pdump ypix.nst.1 sharpness,chi yes | graph
+   da&gt; pdump ypix.nst.1 sharpness,chi yes | graph
   
-          ... plot chi versus sharpness, the stars should cluster around
-              sharpness = 0.0 and chi = 1.0, note that the frame does
-              not have a lot of stars
+       ... plot chi versus sharpness, the stars should cluster around
+           sharpness = 0.0 and chi = 1.0, note that the frame does
+           not have a lot of stars
   
-      da&gt; substar dev$ypix default  "" default default
+   da&gt; substar dev$ypix default  "" default default
   
-          ... subtract the fitted stars
+       ... subtract the fitted stars
   
-      da&gt; display ypix.sub.1 2
+   da&gt; display ypix.sub.1 2
   
-          ... note that the psf stars subtract reasonably well but other
-              objects which are not stars don't
-  </pre>
+       ... note that the psf stars subtract reasonably well but other
+           objects which are not stars don't
+  </pre></div>
   <p>
   2. Rerun the previous example on a section of the test image  using the group
   file and PSF model derived in example 1 for the parent image and writing the
   results in the coordinate system of the parent image.
   </p>
-  <pre>
-      da&gt; nstar dev$ypix[150:450,150:450] default default default default \<br>
-          wcsin=tv wcspsf=tv wcsout=tv
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; nstar dev$ypix[150:450,150:450] default default default default \<br>
+      wcsin=tv wcspsf=tv wcsout=tv
   
-          ... answer the verify prompts
+      ... answer the verify prompts
   
-          ... fit the stars
+      ... fit the stars
   
-          ... the results will appear in ypix.nst.2 and ypix.nst.2
+      ... the results will appear in ypix.nst.2 and ypix.nst.2
   
-      da&gt; display dev$ypix[150:450,150:450] 1
+  da&gt; display dev$ypix[150:450,150:450] 1
   
-          ... display the image
+      ... display the image
   
-      da&gt; pdump ypix.nst.2 xc,yc yes | tvmark 1 STDIN col=204
+  da&gt; pdump ypix.nst.2 xc,yc yes | tvmark 1 STDIN col=204
   
-          ... mark the stars
+      ... mark the stars
   
-      da&gt; substar dev$ypix ypix.nst.2 "" default default
+  da&gt; substar dev$ypix ypix.nst.2 "" default default
   
-          ... subtract stars from parent image
+      ... subtract stars from parent image
   
-          ... the output images is ypix.sub.2
+      ... the output images is ypix.sub.2
   
+  da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \<br>
+      wcsin=tv wcspsf=tv wcsout=tv
   
-      da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \<br>
-          wcsin=tv wcspsf=tv wcsout=tv
+      ... subtract stars from the nstarinput image
   
-          ... subtract stars from the nstarinput image
-  
-          ... the output images is ypix.sub.3
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... the output images is ypix.sub.3
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars,daopars,nstar,peak
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

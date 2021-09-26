@@ -7,29 +7,29 @@ rgbto8: Create an 8-bit RGB image with special color map
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rgbto8 red green blue rgb
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_red">
   <dt><b>red, green, blue</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='red' Line='red, green, blue' -->
   <dd>Input image names for the red, green, and blue components.  The images
   must all be two dimensional and of the same size.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rgb">
   <dt><b>rgb</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rgb' Line='rgb' -->
   <dd>Output image name for the RGB 8-bit image.  A color map with the same
   image name but the extension <span style="font-family: monospace;">".sao"</span> or <span style="font-family: monospace;">".imt"</span> will also be created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maptype">
   <dt><b>maptype = <span style="font-family: monospace;">"saoimage"</span> (saoimage|imtool|ximtool)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maptype' Line='maptype = "saoimage" (saoimage|imtool|ximtool)' -->
   <dd>This parameter selects the type of color map file to be produced.  The
@@ -39,7 +39,7 @@ rgbto8: Create an 8-bit RGB image with special color map
   or <span style="font-family: monospace;">".xim"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rz1">
   <dt><b>rz1, rz2, gz1, gz2, bz1, bz2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rz1' Line='rz1, rz2, gz1, gz2, bz1, bz2' -->
   <dd>Range of values in the input images to be mapped to the minimum and maximum
@@ -48,7 +48,7 @@ rgbto8: Create an 8-bit RGB image with special color map
   intensities even when using logarithmic mapping.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logmap">
   <dt><b>logmap = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logmap' Line='logmap = no' -->
   <dd>Use logarithmic intensity mapping?  The logarithm of the input pixel
@@ -57,9 +57,9 @@ rgbto8: Create an 8-bit RGB image with special color map
   a greater dynamic range.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Rgbto8</b> takes three input IRAF images and produces an 8-bit color map
   which samples the full range of RGB color values and an associated image
@@ -97,9 +97,9 @@ rgbto8: Create an 8-bit RGB image with special color map
   but with SAOimage you can adjust the colors using the <span style="font-family: monospace;">"gamma"</span> selections
   and the mouse.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Three 2048x2048 images of the Trifid nebula are obtained in
   the B, V, and R bandpasses.  These images are properly registered.
@@ -107,29 +107,29 @@ rgbto8: Create an 8-bit RGB image with special color map
   in each band.  A half size image is created by subsampling using image
   sections.
   </p>
-  <pre>
-      cl&gt; rgbto8 trifidr[*:2,*:2] trifidv[*:2,*:2] trifidb[*:2,*:2] \<br>
-      &gt;&gt;&gt; trifid8 maptype=saoimage rz1=1 rz2=500 gz1=1 gz2=500 \<br>
-      &gt;&gt;&gt; bz1=1 bz2=500
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rgbto8 trifidr[*:2,*:2] trifidv[*:2,*:2] trifidb[*:2,*:2] \<br>
+  &gt;&gt;&gt; trifid8 maptype=saoimage rz1=1 rz2=500 gz1=1 gz2=500 \<br>
+  &gt;&gt;&gt; bz1=1 bz2=500
+  </pre></div>
   <p>
   The file trifid8.sao will be created containing the color map for use
   with the image trifid8.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   Example 1 takes 5 minutes on a SparcStation 2.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rgbdisplay, rgbdither, rgbsun, color.package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

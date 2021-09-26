@@ -7,15 +7,15 @@ rcamera: Convert a CAMERA image into an IRAF image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rcamera camera_file file_list iraf_file
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_camera_file">
   <dt><b>camera_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='camera_file' Line='camera_file' -->
   <dd>The CAMERA data source.  If the data source is a list of disk files or an
@@ -26,7 +26,7 @@ rcamera: Convert a CAMERA image into an IRAF image
   then the files specified by the file_list parameter will be read from the tape.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_file_list">
   <dt><b>file_list</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list' -->
   <dd>The files to be read from a tape are specified by the file_list string.  The
@@ -37,7 +37,7 @@ rcamera: Convert a CAMERA image into an IRAF image
   will convert the files 1 through 8.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_iraf_file">
   <dt><b>iraf_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file' -->
   <dd>The IRAF file which will receive the CAMERA data if the make_image parameter
@@ -49,7 +49,7 @@ rcamera: Convert a CAMERA image into an IRAF image
   produce the files data001 and data003.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_image_list">
   <dt><b>image_list = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image_list' Line='image_list = "1"' -->
   <dd>The list of CAMERA images to extract from a single tape file. For all recent
@@ -57,7 +57,7 @@ rcamera: Convert a CAMERA image into an IRAF image
   per file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_make_image">
   <dt><b>make_image = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes' -->
   <dd>This switch determines whether CAMERA image data is converted to an IRAF image
@@ -65,20 +65,20 @@ rcamera: Convert a CAMERA image into an IRAF image
   long_header or short_header switches.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_long_header">
   <dt><b>long_header = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no' -->
   <dd>If this switch is set the full CAMERA header is printed on the standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_short_header">
   <dt><b>short_header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes' -->
   <dd>If this switch is set only the output filename,
   the title string, and the image dimensions are printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_standard_format">
   <dt><b>standard_format = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='standard_format' Line='standard_format = yes' -->
   <dd>The CAMERA standard format has the least significant byte first.  Some CAMERA
@@ -86,7 +86,7 @@ rcamera: Convert a CAMERA image into an IRAF image
   the non-standard CAMERA data this parameter is set to no.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datatype">
   <dt><b>datatype = <span style="font-family: monospace;">"s"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "s"' -->
   <dd>The IRAF image file may be of a different data type than the CAMERA image data.
@@ -97,7 +97,7 @@ rcamera: Convert a CAMERA image into an IRAF image
   which is the appropriate minimum size for the input pixel values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offset">
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Offset is an integer parameter specifying the offset to the tape file number
@@ -107,9 +107,9 @@ rcamera: Convert a CAMERA image into an IRAF image
   <span style="font-family: monospace;">"cam002"</span> and <span style="font-family: monospace;">"cam003"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Kitt Peak CAMERA format image data is read from the specified source;
   either a disk or magnetic tape.
@@ -117,36 +117,36 @@ rcamera: Convert a CAMERA image into an IRAF image
   output as either a full listing or a short description.  Image data may
   optionally be converted to an IRAF image of specified data type.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Convert a camera image tape to a set of IRAF images.
   </p>
-  <pre>
-  	cl&gt; rcamera mtb1600 1-999 images
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rcamera mtb1600 1-999 images
+  </pre></div>
   <p>
   Convert a list of camera disk files to IRAF images.
   </p>
-  <pre>
-  	cl&gt; rcamera cam* 1 images
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rcamera cam* 1 images
+  </pre></div>
   <p>
   List the contents of a camera tape on the standard output without
   creating an image file.
   </p>
-  <pre>
-  	cl&gt; rcamera mtb1600 1-999 images ma-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rcamera mtb1600 1-999 images ma-
+  </pre></div>
   <p>
   Read images 1-3 and 6-8 from an old CAMERA tape with many images per file.
   </p>
-  <pre>
-  	cl&gt; rcam mtb1600[1] image image_list=1-3,6-8
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rcam mtb1600[1] image image_list=1-3,6-8
+  </pre></div>
   
-  <!-- EndSection:    'EXAMPLES' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

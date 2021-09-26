@@ -7,15 +7,15 @@ rimcursor: Read the image display cursor (makes a list)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rimcursor [image]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The name of the reference image to which coordinates should refer.
@@ -25,7 +25,7 @@ rimcursor: Read the image display cursor (makes a list)
   <i>image</i> is the currently displayed image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcs">
   <dt><b>wcs = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
   <dd>The world coordinate system (<i>wcs</i>) to be used for coordinate output.
@@ -67,7 +67,7 @@ rimcursor: Read the image display cursor (makes a list)
   may be any linear or nonlinear world system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wxformat">
   <dt><b>wxformat = <span style="font-family: monospace;">""</span>, wyformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""' -->
   <dd>The default output format for the x and y coordinates. If wxformat or wyformat
@@ -76,16 +76,16 @@ rimcursor: Read the image display cursor (makes a list)
   header, then rimcursor uses a default format.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The source for image cursor input.  By default, the hardware image cursor
   is read.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The task <b>rimcursor</b> iteratively reads the image display cursor,
   writing the cursor values to the standard output.  The standard output
@@ -154,9 +154,9 @@ rimcursor: Read the image display cursor (makes a list)
   coordinates by specifying cursor input from the file rather than the
   image display cursor.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -165,7 +165,7 @@ rimcursor: Read the image display cursor (makes a list)
   codes C are as follows:
       
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -178,22 +178,20 @@ rimcursor: Read the image display cursor (makes a list)
   rN      convert integer in any radix N
   s       string (D field specifies max chars to print)
   t       advance To column given as field W
-  u       unsigned decimal integer 
+  u       unsigned decimal integer
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-      
-      
+  
   Conventions for w (field width) specification:
-      
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-      
-      
+  
   Escape sequences (e.g. "\n" for newline):
-      
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -203,15 +201,15 @@ rimcursor: Read the image display cursor (makes a list)
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-      
+  
   Examples
-      
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-      
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -219,58 +217,59 @@ rimcursor: Read the image display cursor (makes a list)
   %12.5g      print a real number right justified in general format
   %-12.5g     same as above but left justified
   
-  %h	    format as nn:nn:nn.n
-  %15h	    right justify nn:nn:nn.n in field of 15 characters
-  %-15h	    left justify nn:nn:nn.n in a field of 15 characters
-  %12.2h	    right justify nn:nn:nn.nn
-  %-12.2h	    left justify nn:nn:nn.nn
-      
-  %H	    / by 15 and format as nn:nn:nn.n
-  %15H	    / by 15 and right justify nn:nn:nn.n in field of 15 characters
-  %-15H	    / by 15 and left justify nn:nn:nn.n in field of 15 characters
-  %12.2H	    / by 15 and right justify nn:nn:nn.nn
-  %-12.2H	    / by 15 and left justify nn:nn:nn.nn
+  %h          format as nn:nn:nn.n
+  %15h        right justify nn:nn:nn.n in field of 15 characters
+  %-15h       left justify nn:nn:nn.n in a field of 15 characters
+  %12.2h      right justify nn:nn:nn.nn
+  %-12.2h     left justify nn:nn:nn.nn
+  
+  %H          / by 15 and format as nn:nn:nn.n
+  %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
+  %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
+  %12.2H      / by 15 and right justify nn:nn:nn.nn
+  %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Interactively generate a starlist (file <span style="font-family: monospace;">"starlist"</span>) to be used as input
   to another program, e.g., for digital photometry.
   </p>
-  <pre>
-      cl&gt; display dev$pix 1	# display image in frame 1
-      cl&gt; rimcursor &gt; starlist	# make the object list
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; display dev$pix 1    # display image in frame 1
+  cl&gt; rimcursor &gt; starlist # make the object list
+  </pre></div>
+  <p>
+  At this point, the cursor loop is entered and the terminal is placed
+  into cursor mode.  The positions are marked using the space bar.
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  space_bar               mark the position of the object
+  space_bar               mark the position of another object
   
-      At this point, the cursor loop is entered and the terminal
-      is placed into cursor mode.  The positions are marked using
-      the space bar.
-  
-      space_bar		mark the position of the object
-      space_bar		mark the position of another object
-      
-      &lt;ctrl/z&gt;		(EOF) terminates rimcursor
-  </pre>
+  &lt;ctrl/z&gt;                (EOF) terminates rimcursor
+  </pre></div>
   <p>
   Given the above command sequence, the output file <span style="font-family: monospace;">"starlist"</span> might
   contain the following cursor values.
   </p>
-  <pre>
-      441. 410. 101 \040 
-      208. 506. 101 \040 
-      378. 68. 101 \040 
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  441. 410. 101 \040
+  208. 506. 101 \040
+  378. 68. 101 \040
+  </pre></div>
   <p>
   2. Get world coordinates for the default world coordinate system.
   </p>
-  <pre>
-      cl&gt; rimcur wcs=world
-      12.13436 63.5565 101 \040
-      12.13448 63.5529 101 \040
-      12.13499 63.5588 101 \040
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rimcur wcs=world
+  12.13436 63.5565 101 \040
+  12.13448 63.5529 101 \040
+  12.13499 63.5588 101 \040
+  </pre></div>
   <p>
   Since there is no format information in the image header, the coordinates are
   decimal RA and DEC in degrees.
@@ -278,43 +277,43 @@ rimcursor: Read the image display cursor (makes a list)
   <p>
   3. Output the RA and DEC coordinates for an image in sexagesimal degrees.
   </p>
-  <pre>
-      cl&gt; rimcur wcs=world xformat=%12.2h yformat=%12.2h
-      19:47:12.25 33:15:03.66
-      19:43:12.10 33:14:38.06
-      19:45:12.40 33:15:56.03
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rimcur wcs=world xformat=%12.2h yformat=%12.2h
+  19:47:12.25 33:15:03.66
+  19:43:12.10 33:14:38.06
+  19:45:12.40 33:15:56.03
+  </pre></div>
   <p>
   4. Output the RA in sexagesimal hours and DEC in sexagesimal degrees for an
   image.
   </p>
-  <pre>
-      cl&gt; rimcur wcs=world xformat=%12.2H yformat=%12.2h
-      13:47:12.25 47:15:03.66
-      13:47:12.10 47:15:38.06
-      13:47:12.40 47:15:56.03
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rimcur wcs=world xformat=%12.2H yformat=%12.2h
+  13:47:12.25 47:15:03.66
+  13:47:12.10 47:15:38.06
+  13:47:12.40 47:15:56.03
+  </pre></div>
   <p>
   5. Convert a list of pixel coordinates to world coordinates.
   </p>
-  <pre>
-      cl&gt; rimcur obs001 wcs=world cursor=coordlist &gt;worldlist
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rimcur obs001 wcs=world cursor=coordlist &gt;worldlist
+  </pre></div>
+  </section>
+  <section id="s_notes">
   <h3>Notes</h3>
-  <!-- BeginSection: 'NOTES' -->
   <p>
   Future plans call for implementation of cursor mode commands for image
   display cursors similar to those available for graphics cursors.
   </p>
-  <!-- EndSection:   'NOTES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rgcursor, cursors
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'NOTES' 'SEE ALSO'  -->
   

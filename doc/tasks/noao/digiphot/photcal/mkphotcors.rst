@@ -7,15 +7,15 @@ mkphotcors: Prepare the photometric corrections files
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkphotcors imsets idfilters obsparams shifts apercors
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_imsets">
   <dt><b>imsets</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imsets' Line='imsets' -->
   <dd>The name of the input/output text file of observations, where  a complete
@@ -31,7 +31,7 @@ mkphotcors: Prepare the photometric corrections files
   file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_idfilters">
   <dt><b>idfilters</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='idfilters' Line='idfilters' -->
   <dd>The list of filters separated by whitespace or commas which define a complete
@@ -42,7 +42,7 @@ mkphotcors: Prepare the photometric corrections files
   check that there are the correct number of images in each observation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obsparams">
   <dt><b>obsparams</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obsparams' Line='obsparams' -->
   <dd>The name of the input/output text file containing the quantities filter id,
@@ -56,7 +56,7 @@ mkphotcors: Prepare the photometric corrections files
   is <span style="font-family: monospace;">""</span>, the user is not prompted for input and no output file is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shifts">
   <dt><b>shifts</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts' -->
   <dd>The name of the input/output text file containing the x-y shifts to be applied
@@ -69,7 +69,7 @@ mkphotcors: Prepare the photometric corrections files
   file is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apercors">
   <dt><b>apercors</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apercors' Line='apercors' -->
   <dd>The name of the input/output text file containing the aperture corrections
@@ -83,7 +83,7 @@ mkphotcors: Prepare the photometric corrections files
   file is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obscolumns">
   <dt><b>obscolumns = <span style="font-family: monospace;">"2 3 4 5"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"' -->
   <dd>The list of numbers separated by commas or whitespace specifying which 
@@ -95,22 +95,22 @@ mkphotcors: Prepare the photometric corrections files
   set to <span style="font-family: monospace;">"0 0 column"</span> if the airmass values are in column.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no' -->
   <dd>Verify all data entered interactively ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about actions taken by MKPHOTCORS, and any warning or error
   messages generated.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   MKPHOTCORS takes an image set file <i>imsets</i> and a list of filter ids
   <i>idfilters</i> and writes one or more of the photometric corrections files
@@ -221,9 +221,9 @@ mkphotcors: Prepare the photometric corrections files
   If <i>apercors</i> is <span style="font-family: monospace;">""</span>,  MKPHOTCORS does not prompt for input and no new
   file is written.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   A sample image set file for a set of UBV 100 second, 600 seconds, and 
   1800 second exposure images of the globular cluster m92 is shown below.
@@ -232,11 +232,11 @@ mkphotcors: Prepare the photometric corrections files
   the names of the actual IRAF images comprising each data set. The image names
   must match those in the photometry files.
   </p>
-  <pre>
-  	M92S : m92us  m92bs m92vs
-  	M92M : m92um  m92bm m92vm
-  	M92L : m92ul  m92bl m92vl
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  M92S : m92us  m92bs m92vs
+  M92M : m92um  m92bm m92vm
+  M92L : m92ul  m92bl m92vl
+  </pre></div>
   <p>
   A sample observing parameters file is shown for the above data set. In this
   example the user forgot to tell the photometry code to pick up the filter ids,
@@ -245,47 +245,47 @@ mkphotcors: Prepare the photometric corrections files
   correct them after the fact via the observing parameters file. The filters
   U B V are represented by the numbers 1 2 3. 
   </p>
-  <pre>
-  	m92us  1  100   1.10 03:10:53
-  	m92bs  2  100   1.09 03:14:06
-  	m92vs  3  100   1.06 03:18:54
-  	m92um  1  600   1.03 04:15:05
-  	m92bm  2  600   1.03 04:29:43
-  	m92vm  3  600   1.03 04:44:56
-  	m92ul  1  1800  1.06 06:10:33
-  	m92bl  2  1800  1.12 06:45:32
-  	m92vl  3  1800  1.18 07:23:02
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  m92us  1  100   1.10 03:10:53
+  m92bs  2  100   1.09 03:14:06
+  m92vs  3  100   1.06 03:18:54
+  m92um  1  600   1.03 04:15:05
+  m92bm  2  600   1.03 04:29:43
+  m92vm  3  600   1.03 04:44:56
+  m92ul  1  1800  1.06 06:10:33
+  m92bl  2  1800  1.12 06:45:32
+  m92vl  3  1800  1.18 07:23:02
+  </pre></div>
   <p>
   A sample shifts file for the above data set is shown below.
   Only the long exposure frames have significant frame to frame shifts
   so only those images are included in the shifts file.
   The long u frame is used a position reference so its x-y shift is zero.
   </p>
-  <pre>
-  	m92ul  0.0  0.0
-  	m92bl  5.4  8.4
-  	m92vl  9.6  17.1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  m92ul  0.0  0.0
+  m92bl  5.4  8.4
+  m92vl  9.6  17.1
+  </pre></div>
   <p>
   A sample aperture corrections file for the above data set is shown below.
   Note that the aperture correction appears to vary in a systematic
   way  with filter.
   </p>
-  <pre>
-  	m92us  -.153
-  	m92bs  -.110
-  	m92vs  -.083
-  	m92um  -.149
-  	m92bm  -.108
-  	m92vm  -.090
-  	m92ul  -.160
-  	m92bl  -.123
-  	m92vl  -.079
-  </pre>
-  <!-- EndSection:   'OUTPUT' -->
+  <div class="highlight-default-notranslate"><pre>
+  m92us  -.153
+  m92bs  -.110
+  m92vs  -.083
+  m92um  -.149
+  m92bm  -.108
+  m92vm  -.090
+  m92ul  -.160
+  m92bl  -.123
+  m92vl  -.079
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Type in the image set file and accompanying shifts and aperture corrections
   files  for a set of UBV observations of a crowded field in NGC4147. The filter
@@ -295,30 +295,30 @@ mkphotcors: Prepare the photometric corrections files
   and wrote them to the photometry
   files so the observing parameters file is not required.
   </p>
-  <pre>
-  	ph&gt; mkphotcors n4147.imsets "1,2,3" "" n4147.shifts n4147.apcors
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkphotcors n4147.imsets "1,2,3" "" n4147.shifts n4147.apcors
+  </pre></div>
   <p>
   2. Type in the shifts and aperture corrections files for the already
   existing image set file m17.imsets. In this case the filter set is <span style="font-family: monospace;">"J H K"</span>.
   </p>
-  <pre>
-  	ph&gt; mkphotcors m17.imsets "J,H,K" "" m17.shifts m17.apcors
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkphotcors m17.imsets "J,H,K" "" m17.shifts m17.apcors
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   mkimsets,mknobsfile,mkobsfile
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,33 +7,33 @@ prows: Plot the average of a range of image lines
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   prows image row1 row2
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>Input image containing rows to be plotted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_row1">
   <dt><b>row1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='row1' Line='row1' -->
   <dd>First row to average.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_row2">
   <dt><b>row2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='row2' Line='row2' -->
   <dd>Last row to average.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcs">
   <dt><b>wcs = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
   <dd>The world coordinate system (<i>wcs</i>) to be used for axis labeling when
@@ -71,7 +71,7 @@ prows: Plot the average of a range of image lines
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wx1">
   <dt><b>wx1=0., wx2=0., wy1=0., wy2=0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wx1' Line='wx1=0., wx2=0., wy1=0., wy2=0.' -->
   <dd>The range of window (user) coordinates to be included in the plot.
@@ -79,7 +79,7 @@ prows: Plot the average of a range of image lines
   from the minimum to maximum data values along the degenerate axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vx1">
   <dt><b>vx1=0., vx2=0., vy1=0., vy2=0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1=0., vx2=0., vy1=0., vy2=0.' -->
   <dd>NDC coordinates (0-1) of the plotting device viewport.  If not set
@@ -87,13 +87,13 @@ prows: Plot the average of a range of image lines
   labels is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pointmode">
   <dt><b>pointmode = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pointmode' Line='pointmode = no' -->
   <dd>Plot individual points instead of a continuous line?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_marker">
   <dt><b>marker = <span style="font-family: monospace;">"box"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "box"' -->
   <dd>Marker or line type to be drawn.  If <b>pointmode</b> = yes the markers are
@@ -106,26 +106,26 @@ prows: Plot the average of a range of image lines
   at the ends).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_szmarker">
   <dt><b>szmarker = 0.005</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='szmarker' Line='szmarker = 0.005' -->
   <dd>The size of the marker drawn when <b>pointmode</b> = yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logx">
   <dt><b>logx = no, logy = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = no' -->
   <dd>Draw the x or y axis in log units, versus linear?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xlabel">
   <dt><b>xlabel = <span style="font-family: monospace;">"wcslabel"</span>, ylabel = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "wcslabel", ylabel = ""' -->
   <dd>Label for the X-axis or Y-axis.  if <b>xlabel</b> = <span style="font-family: monospace;">"wcslabel"</span>
   the world coordinate system label in the image, if defined, is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xformat">
   <dt><b>xformat = <span style="font-family: monospace;">"wcsformat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "wcsformat"' -->
   <dd>The numerical format for the coordinate labels.  The values may be <span style="font-family: monospace;">""</span>
@@ -136,46 +136,46 @@ prows: Plot the average of a range of image lines
   format will be used.  Any other value will override the image attribute.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>Title for plot.  If not changed from the default, the title string from the
   image header, appended with the rows being plotted, is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_majrx">
   <dt><b>majrx=5, minrx=5, majry=5, minry=5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='majrx' Line='majrx=5, minrx=5, majry=5, minry=5' -->
   <dd>The number of major and minor divisions along the x or y axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_round">
   <dt><b>round = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='round' Line='round = no' -->
   <dd>Round axes up to nice values?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fill">
   <dt><b>fill = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes' -->
   <dd>Fill the plotting viewport regardless of the device aspect ratio?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
   <dd>Append to an existing plot?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device=<span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device="stdgraph"' -->
   <dd>Output device.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Plot the average of specified rows from an image.  The user can control the
   plot size and placement, the scaling and labeling of axes.  Rows can be
@@ -200,46 +200,46 @@ prows: Plot the average of a range of image lines
   square full device viewports (e.g., the vt640), a plot drawn by <i>prows</i>
   appears extended in the x direction unless <b>fill</b> = no.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Plot rows 128 through 150 of image crab.5009 with default parameters:
   </p>
-  <p>
-      cl&gt; prows crab.5009 128 150
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; prows crab.5009 128 150
+  </pre></div>
   <p>
   2. Overplot rows 128 through 150 of crab.red using circles to mark the 
   added points:
   </p>
-  <p>
-      cl&gt; prows crab.red 128 150 append+ pointmode+ marker=circle
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; prows crab.red 128 150 append+ pointmode+ marker=circle
+  </pre></div>
   <p>
   3. Annotate the axes of the plot:
   </p>
-  <p>
-      cl&gt; prows crab.5009 64 128 xlabel=<span style="font-family: monospace;">"Column Number"</span> ylabel=Intensity
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; prows crab.5009 64 128 xlabel="Column Number" ylabel=Intensity
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   To plot the average of 20 rows from a 512 square image, <i>prows</i> takes
   about 1.5 cp seconds.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   prow, pcol, pcols
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

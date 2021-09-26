@@ -7,28 +7,28 @@ ccxymatch: Match celestial and pixel coordinate lists
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccxymatch input reference output tolerance [ptolerance]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input pixel coordinate files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>The list of input celestial coordinate files. The number of celestial coordinate
   files must be one or equal to the number of pixel coordinate files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The output matched coordinate files containing: 1) the celestial coordinates
@@ -37,13 +37,13 @@ ccxymatch: Match celestial and pixel coordinate lists
   objects in the celestial coordinate and pixel lists in columns 5 and 6.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tolerance">
   <dt><b>tolerance</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance' -->
   <dd>The matching tolerance in arcseconds. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ptolerance">
   <dt><b>ptolerance</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ptolerance' Line='ptolerance' -->
   <dd>The matching tolerance in pixels. The ptolerance parameter is required 
@@ -51,7 +51,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refpoints">
   <dt><b>refpoints = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refpoints' Line='refpoints = ""' -->
   <dd>A file of tie points used to compute the linear transformation
@@ -65,21 +65,21 @@ ccxymatch: Match celestial and pixel coordinate lists
   <i>lngref</i>, and <i>latref</i> are used to compute the linear transformation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xin">
   <dt><b>xin = INDEF, yin = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xin' Line='xin = INDEF, yin = INDEF' -->
   <dd>The x and y origin of the pixel coordinate system. Xin and yin default to 
   0.0 and 0.0 respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = INDEF, ymag = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF' -->
   <dd>The x and y scale factors in arcseconds per pixel. Xmag and
   ymag default to 1.0 and 1.0 respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xrotation">
   <dt><b>xrotation = INDEF, yrotation = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF' -->
   <dd>The x and y rotation angles measured in degrees counter-clockwise. Xrotation
@@ -90,7 +90,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   must be added to both the xrotation and yrotation values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_projection">
   <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in
@@ -99,7 +99,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngref">
   <dt><b>lngref = INDEF, latref = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = INDEF, latref = INDEF' -->
   <dd>The origin of the celestial coordinate system. Lngref and latref define the
@@ -108,28 +108,28 @@ ccxymatch: Match celestial and pixel coordinate lists
   and latref are assumed to be in units of <i>lngunits</i> and <i>latunits</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngcolumn">
   <dt><b>lngcolumn = 1, latcolumn = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 1, latcolumn = 2' -->
   <dd>The columns in the celestial coordinate list containing the ra / longitude
   and dec / latitude coordinate values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcolumn">
   <dt><b>xcolumn = 1, ycolumn = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2' -->
   <dd>The columns in the pixel coordinate list containing the x and y coordinate
   values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngunits">
   <dt><b>lngunits = <span style="font-family: monospace;">"hours"</span>, latunits = <span style="font-family: monospace;">"degrees"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "hours", latunits = "degrees"' -->
   <dd>The units of the celestial coordinates. The options are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
   and <span style="font-family: monospace;">"radians"</span> for lngunits, and <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span> for latunits.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_separation">
   <dt><b>separation = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='separation' Line='separation = 3.0' -->
   <dd>The minimum separation in arcseconds for objects in the celestial coordinate
@@ -137,7 +137,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   are removed from the celestial coordinate lists prior to matching.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pseparation">
   <dt><b>pseparation = 9.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pseparation' Line='pseparation = 9.0' -->
   <dd>The minimum separation in pixels  for objects in the pixel coordinate
@@ -145,7 +145,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   are removed from the pixel coordinate lists prior to matching.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_matching">
   <dt><b>matching = <span style="font-family: monospace;">"triangles"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='matching' Line='matching = "triangles"' -->
   <dd>The matching algorithm. The choices are:
@@ -193,7 +193,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nmatch">
   <dt><b>nmatch = 30</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nmatch' Line='nmatch = 30' -->
   <dd>The maximum number of celestial and pixel coordinates used
@@ -203,7 +203,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   algorithm depend on a high power of the lengths of the respective lists.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ratio">
   <dt><b>ratio = 10.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 10.0' -->
   <dd>The maximum ratio of the longest to shortest side of the 
@@ -213,14 +213,14 @@ ccxymatch: Match celestial and pixel coordinate lists
   be set higher than 10.0 but may be set as low as 5.0.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nreject">
   <dt><b>nreject = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 10' -->
   <dd>The maximum number of rejection iterations for the <span style="font-family: monospace;">"triangles"</span> pattern
   matching algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngformat">
   <dt><b>lngformat = <span style="font-family: monospace;">""</span>, latformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""' -->
   <dd>The format of the output celestial coordinates. The default formats are
@@ -228,7 +228,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   <span style="font-family: monospace;">"radians"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xformat">
   <dt><b>xformat = <span style="font-family: monospace;">"%13.3f"</span>, yformat = <span style="font-family: monospace;">"%13.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%13.3f", yformat = "%13.3f"' -->
   <dd>The format of the output pixel coordinates.
@@ -236,15 +236,15 @@ ccxymatch: Match celestial and pixel coordinate lists
   13 characters with 3 places following the decimal point.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about the progress of the task ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   CCXYMATCH matches ra / dec or longitude / latitude coordinates in the
   celestial coordinate list <i>reference</i> to their corresponding x and y
@@ -274,14 +274,13 @@ ccxymatch: Match celestial and pixel coordinate lists
   points can be typed in by hand if <i>refpoints</i> is <span style="font-family: monospace;">"STDIN"</span>. The formats of
   two sample refpoints files are shown below.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # First sample refpoints file (1 reference file and N input files)
   
   ra1 dec1  [ra2 dec2 [ra3 dec3]] # tie points for reference coordinate file
    x1   y1  [ x2  y2  [ x3   y3]] # tie points for input coordinate file 1
    x1   y1  [ x2  y2  [ x3   y3]] # tie points for input coordinate file 2
    x1   y1  [ x2  y2  [ x3   y3]] # tie points for input coordinate file N
-  
   
   # Second sample refpoints file (N reference files and N input files)
   
@@ -292,8 +291,7 @@ ccxymatch: Match celestial and pixel coordinate lists
    ..   ..  [ ..   .. [ ..   ..]]
   ra1 dec1  [ra2 dec2 [ra3 dec3]] # tie points for reference coordinate file N
    x1   y1  [ x2   y2 [ x3   y3]] # tie points for input coordinate file N
-  
-  </pre>
+  </pre></div>
   <p>
   If the refpoints file is undefined the parameters <i>xin</i>, <i>xin</i>,
   <i>xmag</i>, <i>ymag</i>, <i>xrotation</i>, <i>xrotation</i> are used
@@ -302,19 +300,19 @@ ccxymatch: Match celestial and pixel coordinate lists
   are the orientation of the x and y axes and their deviation from
   perpendicularity respectively.
   </p>
-  <pre>
-  	 xi = a + b * x + c * y
-  	eta = d + e * x + f * y
-      
-  	xrotation = orientation - skew / 2
-  	yrotation = orientation + skew / 2
-  	b = xmag * cos (xrotation)
-  	c = -ymag * sin (yrotation)
-  	e = xmag * sin (xrotation)
-  	f = ymag * cos (yrotation)
-  	a = 0.0 - b * xin - c * yin = xshift
-  	d = 0.0 - e * xin - f * yin = yshift
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+  
+  xrotation = orientation - skew / 2
+  yrotation = orientation + skew / 2
+  b = xmag * cos (xrotation)
+  c = -ymag * sin (yrotation)
+  e = xmag * sin (xrotation)
+  f = ymag * cos (yrotation)
+  a = 0.0 - b * xin - c * yin = xshift
+  d = 0.0 - e * xin - f * yin = yshift
+  </pre></div>
   <p>
   Both methods of computing the initial linear transformation compute the
   standard coordinates xi and eta by projecting the celestial coordinates
@@ -371,9 +369,9 @@ ccxymatch: Match celestial and pixel coordinate lists
   If <i>verbose</i> is yes, detailed messages about actions taken by the
   task are written to the terminal as the task executes.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   The <span style="font-family: monospace;">"triangles"</span> algorithm uses a sophisticated pattern matching
   technique which requires no tie point information from the user.
@@ -419,9 +417,9 @@ ccxymatch: Match celestial and pixel coordinate lists
   distortions but will also produce more false matches which after some point
   will swamp the true matches.
   </p>
-  <!-- EndSection:   'ALGORITHMS' -->
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -430,7 +428,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   codes C are as follows:
    
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -447,18 +445,16 @@ ccxymatch: Match celestial and pixel coordinate lists
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-   
-  
   
   Conventions for w (field width) specification:
-   
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-   
+  
   Escape sequences (e.g. "\n" for newline):
-   
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -468,15 +464,15 @@ ccxymatch: Match celestial and pixel coordinate lists
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-   
+  
   Examples
-   
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-   
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -489,7 +485,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-   
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
@@ -497,18 +493,18 @@ ccxymatch: Match celestial and pixel coordinate lists
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   A detailed description of the <span style="font-family: monospace;">"triangles"</span> pattern matching algorithm used here
   can be found in the article <span style="font-family: monospace;">"A Pattern-Matching Algorithm for Two-
   Dimensional Coordinate Lists"</span> by E.J. Groth, A.J. 91, 1244 (1986).
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the plate solution for a 1528 by 2288 B band image of M51 by
   matching a list of reference stars extracted from the Guide Star Catalog
@@ -516,7 +512,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   task. The approximate image center is RA = 13:29:52.8 and DEC = +47:11:41
   (J2000) and the image scale is 0.43 arcseconds / pixel.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; regions 13:29:52.8 47:11:41 0.27 m51b.gsc.tab
   
   cl&gt; tprint  m51b.gsc.tab &gt; m51b.gsc
@@ -550,35 +546,35 @@ ccxymatch: Match celestial and pixel coordinate lists
   cl&gt; type m51b.coo.1
   
      ...
-  #N XCENTER   YCENTER   MAG      SHARPNESS   SROUND      GROUND      ID 
+  #N XCENTER   YCENTER   MAG      SHARPNESS   SROUND      GROUND      ID
      ...
-     401.034   147.262   -2.315   0.473       -0.075      -0.170      1     
-     261.137   453.696   -1.180   0.481       -0.373      -0.135      2     
-     860.002   480.061   -1.397   0.373       -0.218      -0.178      3     
-     69.342    675.895   -0.955   0.368       -0.294      -0.133      4     
-     1127.791  680.033   -1.166   0.449       -0.515      -0.326      5     
-     972.435   691.544   -1.722   0.449       -0.327      -0.060      6     
-     1348.891  715.084   -1.069   0.389       -0.242      -0.145      7     
-     946.114   797.067   -0.543   0.406       -0.198      -0.069      8     
-     698.455   811.407   -1.620   0.437       -0.038      -0.028      9     
-     964.566   853.201   -0.317   0.382       0.031       -0.086      10    
-     236.088   864.817   -3.515   0.429       -0.164      -0.035      11    
-     919.703   909.835   -3.775   0.447       0.051       0.007       12    
-     406.592   985.807   -0.715   0.424       -0.307      -0.068      13    
-     920.790   986.083   -0.600   0.364       -0.047      0.021       14    
-     761.403   1037.795  -1.944   0.383       -0.023      0.120       15    
-     692.012   1050.603  -0.508   0.339       -0.365      -0.164      16    
-     1023.330  1060.144  -1.897   0.381       -0.246      -0.288      17    
-     681.864   1066.937  -0.059   0.467       -0.175      0.135       18    
-     1307.802  1085.564  -1.173   0.435       0.032       -0.207      19    
-     716.494   1094.800  -0.389   0.421       -0.412      -0.032      20    
-     715.935   1106.616  -3.747   0.649       0.271       0.245       21    
-     1093.813  1300.189  -1.557   0.377       -0.309      -0.078      22    
-     596.406   1353.798  -0.461   0.383       0.029       -0.103      23    
-     1212.117  1362.636  -0.362   0.369       -0.180      0.043       24    
-     251.355   1488.048  -0.909   0.357       -0.390      0.077       25    
-     600.659   1630.261  -1.392   0.423       0.013       -0.312      26    
-     329.448   2179.233  -0.824   0.442       -0.463      0.325       27    
+     401.034   147.262   -2.315   0.473       -0.075      -0.170      1
+     261.137   453.696   -1.180   0.481       -0.373      -0.135      2
+     860.002   480.061   -1.397   0.373       -0.218      -0.178      3
+     69.342    675.895   -0.955   0.368       -0.294      -0.133      4
+     1127.791  680.033   -1.166   0.449       -0.515      -0.326      5
+     972.435   691.544   -1.722   0.449       -0.327      -0.060      6
+     1348.891  715.084   -1.069   0.389       -0.242      -0.145      7
+     946.114   797.067   -0.543   0.406       -0.198      -0.069      8
+     698.455   811.407   -1.620   0.437       -0.038      -0.028      9
+     964.566   853.201   -0.317   0.382       0.031       -0.086      10
+     236.088   864.817   -3.515   0.429       -0.164      -0.035      11
+     919.703   909.835   -3.775   0.447       0.051       0.007       12
+     406.592   985.807   -0.715   0.424       -0.307      -0.068      13
+     920.790   986.083   -0.600   0.364       -0.047      0.021       14
+     761.403   1037.795  -1.944   0.383       -0.023      0.120       15
+     692.012   1050.603  -0.508   0.339       -0.365      -0.164      16
+     1023.330  1060.144  -1.897   0.381       -0.246      -0.288      17
+     681.864   1066.937  -0.059   0.467       -0.175      0.135       18
+     1307.802  1085.564  -1.173   0.435       0.032       -0.207      19
+     716.494   1094.800  -0.389   0.421       -0.412      -0.032      20
+     715.935   1106.616  -3.747   0.649       0.271       0.245       21
+     1093.813  1300.189  -1.557   0.377       -0.309      -0.078      22
+     596.406   1353.798  -0.461   0.383       0.029       -0.103      23
+     1212.117  1362.636  -0.362   0.369       -0.180      0.043       24
+     251.355   1488.048  -0.909   0.357       -0.390      0.077       25
+     600.659   1630.261  -1.392   0.423       0.013       -0.312      26
+     329.448   2179.233  -0.824   0.442       -0.463      0.325       27
   
   cl&gt; ccxymatch m51b.coo.1 m51b.gsc m51b.mat.1 1.0 3.0 lngcolumn=2 latcolumn=4
   
@@ -608,7 +604,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   cl&gt; ccmap m51b.mat.1 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \<br>
   latcolumn=2 refpoint=user lngref=13:29:52.8 latref=47:11:41  interactive=no
   
-  Coords File: m51b.mat.1  Image: 
+  Coords File: m51b.mat.1  Image:
       Database: ccmap.db  Record: m51b.mat.1
   Refsystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.000 MJD: 51544.50000
@@ -633,12 +629,12 @@ ccxymatch: Match celestial and pixel coordinate lists
   1307.8 1085.6  13:29:29.73 47:12:04.1  13:29:29.70 47:12:04.0  0.318  0.123
    401.0  147.3  13:30:07.96 47:05:18.3  13:30:07.96 47:05:18.4  0.028 -0.073
    236.1  864.8  13:30:14.95 47:10:27.6  13:30:14.94 47:10:27.5  0.127  0.073
-  </pre>
+  </pre></div>
   <p>
   2. Repeat example 1 but replace the daofind pixel list with one generated
   using the center task and a finder chart created with the skymap task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; regions 13:29:52.8 47:11:41 0.27 m51b.gsc.tab
   
   cl&gt; gasp.skymap m51b.gsc.tab 13:29:52.8 47:11:41 INDEF 0.27            \<br>
@@ -649,7 +645,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   
   cl&gt; display m51b 1 fi+
   cl&gt; center m51b cbox=7.0 ...
-  cl&gt; pdump m51b.ctr.1 xcenter,ycenter yes &gt; m51b.pix 
+  cl&gt; pdump m51b.ctr.1 xcenter,ycenter yes &gt; m51b.pix
   
   cl&gt; type m51b.pix
   
@@ -691,7 +687,7 @@ ccxymatch: Match celestial and pixel coordinate lists
   cl&gt; ccmap m51b.mat.2 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \<br>
   latcolumn=2 refpoint=user lngref=13:29:52.8 latref=47:11:41 interactive=no
   
-  Coords File: m51b.mat.2  Image: 
+  Coords File: m51b.mat.2  Image:
       Database: junk.db  Record: m51b.mat.2
   Refsystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.000 MJD: 51544.50000
@@ -709,14 +705,14 @@ ccxymatch: Match celestial and pixel coordinate lists
   
                           Input Coordinate Listing
      X      Y        Ra         Dec        Ra(fit)    Dec(fit)    Dra    Ddec
-  </pre>
+  </pre></div>
   <p>
   3. Repeat example 1 but use the <span style="font-family: monospace;">"tolerance"</span> matching algorithm and apriori
   knowledge of the celestial and pixel coordinates of the nucleus of M51,
   the x and y image scales, and the orientation of the detector on the telescope
   to match the two lists.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccxymatch m51b.coo.1 m51b.gsc m51b.mat.3 2.0 lngcolumn=2 latcolumn=4 \<br>
   matching=tolerance xin=761.40 yin=1037.80 xmag=-0.43 ymag=0.43 xrot=0.0  \<br>
   yrot=0.0 lngref=13:29:52.80 latref=47:11:42.9
@@ -745,11 +741,10 @@ ccxymatch: Match celestial and pixel coordinate lists
    13:29:29.730   47:12:04.10       1307.802      1085.564     16    60
    13:29:38.700   47:13:36.20       1093.813      1300.189     13    63
   
-  
   cl&gt; ccmap m51b.mat.3 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \<br>
   latcolumn=2 refpoint=user lngref=13:29:52.8 latref=47:11:41 interactive=no
   
-  Coords File: m51b.mat.3  Image: 
+  Coords File: m51b.mat.3  Image:
       Database: ccmap.db  Record: m51.mat.3
   Refsystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.000 MJD: 51544.50000
@@ -775,12 +770,12 @@ ccxymatch: Match celestial and pixel coordinate lists
    236.1  864.8  13:30:14.95 47:10:27.6  13:30:14.92 47:10:27.5  0.290  0.116
   1307.8 1085.6  13:29:29.73 47:12:04.1  13:29:29.72 47:12:04.0  0.082  0.060
   1093.8 1300.2  13:29:38.70 47:13:36.2  13:29:38.73 47:13:36.4 -0.332 -0.184
-  </pre>
+  </pre></div>
   <p>
   4. Repeat example 3 but input the appropriate linear transformation via a list
   of tie points, rather than setting the transformation parameters directly.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type refpts
   13:29:55.42 47:10:05.2  13:29:38.70 47:13:36.2  13:30:14.95 47:10:27.6
        698.5       811.4      1093.8      1300.2       236.1       864.8
@@ -809,7 +804,6 @@ ccxymatch: Match celestial and pixel coordinate lists
   #    Column 5: Reference line number
   #    Column 6: Input line number
   
-  
    13:30:07.960   47:05:18.30        401.034       147.262     17    42
    13:29:48.600   47:07:42.50        860.002       480.061      8    44
    13:29:37.400   47:09:09.20       1127.791       680.033     12    46
@@ -818,24 +812,23 @@ ccxymatch: Match celestial and pixel coordinate lists
    13:29:29.730   47:12:04.10       1307.802      1085.564     16    60
    13:29:38.700   47:13:36.20       1093.813      1300.189     13    63
   
-  
   cl&gt; ccmap m51b.mat.4 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \<br>
   latcolumn=2 refpoint=user lngref=13:29:52.8 latref=47:11:41 interactive=no
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   stsdas.gasp.regions,stsdas.gasp.skymap,tables.ttools.tprint,daophot.daofind,ccmap
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ALGORITHMS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

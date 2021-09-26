@@ -7,14 +7,14 @@ tainsert: Copy a column of scalars to an array entry in another table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tainsert intable outtable row column
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task reads an entire column from one table
   and inserts those values (presumably more than one)
@@ -41,23 +41,23 @@ tainsert: Copy a column of scalars to an array entry in another table.
   ORIG_ROW is written by 'taextract'.
   If that keyword exists, its value is used as the row number.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name]' -->
   <dd>Name of the input table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]' -->
   <dd>Name of the output table.
   If this table doesn't exist it will be created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_row">
   <dt><b>row = -1 [integer]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='row' Line='row = -1 [integer]' -->
   <dd>This is the row number in the output table.
@@ -65,7 +65,7 @@ tainsert: Copy a column of scalars to an array entry in another table.
   the value of the header keyword ORIG_ROW.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_column">
   <dt><b>column [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
   <dd>Column name in the input table and, by default, also in the output table.
@@ -75,7 +75,7 @@ tainsert: Copy a column of scalars to an array entry in another table.
   It is an error if this column in the input table contains array entries.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outcolumn">
   <dt><b>outcolumn = <span style="font-family: monospace;">""</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outcolumn' Line='outcolumn = "" [string]' -->
   <dd>If 'outcolumn' is specified,
@@ -131,9 +131,9 @@ tainsert: Copy a column of scalars to an array entry in another table.
   otherwise, the print format will be copied from the column in the input table.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Copy the entire column <span style="font-family: monospace;">"polar"</span> from table <span style="font-family: monospace;">"scalar.tab"</span>,
   and insert the values into row 5, column <span style="font-family: monospace;">"polar"</span>, of table <span style="font-family: monospace;">"array.tab"</span>.
@@ -141,34 +141,34 @@ tainsert: Copy a column of scalars to an array entry in another table.
   If column <span style="font-family: monospace;">"polar"</span> does not exist in <span style="font-family: monospace;">"array.tab"</span>,
   that column will be created.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   at&gt; tainsert scalar.tab array.tab 5 polar
-  </pre>
+  </pre></div>
   <p>
   2. Copy the arrays from row 5, columns <span style="font-family: monospace;">"wavelength"</span> and <span style="font-family: monospace;">"flux"</span>,
   from <span style="font-family: monospace;">"array.tab"</span> to a temporary table,
   sort them on the wavelength,
   and insert them back where they came from.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   at&gt; taextract array temp 5 wavelength
   at&gt; taextract array temp 5 flux
   at&gt; tsort temp wavelength
   at&gt; tainsert temp array 0 wavelength
   at&gt; tainsert temp array 0 flux
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   taextract
   </p>
@@ -177,7 +177,7 @@ tainsert: Copy a column of scalars to an array entry in another table.
   package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

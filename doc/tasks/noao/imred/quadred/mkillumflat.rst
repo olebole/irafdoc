@@ -7,21 +7,21 @@ mkillumflat: Make illumination corrected flat fields
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkillumflat input output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input flat field images to be illumination corrected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output illumination corrected flat field images.
@@ -29,13 +29,13 @@ mkillumflat: Make illumination corrected flat fields
   input image then the output image replaces the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdtype">
   <dt><b>ccdtype = <span style="font-family: monospace;">"flat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "flat"' -->
   <dd>CCD image type to select from the input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xboxmin">
   <dt><b>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25' -->
   <dd>Minimum and maximum smoothing box size along the x and y axes.  The
@@ -48,20 +48,20 @@ mkillumflat: Make illumination corrected flat fields
   image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clip">
   <dt><b>clip = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes' -->
   <dd>Clean the input images of objects?  If yes then a clipping algorithm is
   used to detect and exclude objects from the smoothing.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lowsigma">
   <dt><b>lowsigma = 2.5, highsigma = 2.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5' -->
   <dd>Sigma clipping thresholds above and below the smoothed illumination.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_divbyzero">
   <dt><b>divbyzero = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='divbyzero' Line='divbyzero = 1.' -->
   <dd>The illumination flat field is the ratio of the flat field to a
@@ -71,15 +71,15 @@ mkillumflat: Make illumination corrected flat fields
   parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdproc">
   <dt><b>ccdproc (parameter set)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)' -->
   <dd>CCD processing parameters.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   First, the input flat field images are processed as needed.  Then the
   large scale illumination pattern of the images is removed.  The
@@ -124,25 +124,25 @@ mkillumflat: Make illumination corrected flat fields
   the moving average, except for the first few lines where an iterative
   process is used.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Two examples in which a new image is created and in which the
   input flat fields are corrected in place are:
   </p>
-  <pre>
-      cl&gt; mkllumflat flat004 FlatV
-      cl&gt; mkillumflat flat* ""
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkllumflat flat004 FlatV
+  cl&gt; mkillumflat flat* ""
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccdproc, flatfields, mkfringecor, mkillumcor, mkskycor, mkskyflat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

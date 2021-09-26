@@ -7,23 +7,23 @@ allocate: Allocate a device, i.e., magtape drive mta, mtb, ...
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   allocate device
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_device">
   <dt><b>device</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device' -->
   <dd>The device to be allocated.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Allocate</b> allocates a device for exclusive access by one user, and
   readies the device for i/o by some other program.  A list of the devices
@@ -31,9 +31,9 @@ allocate: Allocate a device, i.e., magtape drive mta, mtb, ...
   which needs to be configured by the site manager before it can be used.
   The status of given device may be obtained by calling <i>devstatus</i>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Print a list of the allocatable devices.  The logical device names are
   given at the left in the output text; ignore the information to the right.
@@ -41,30 +41,30 @@ allocate: Allocate a device, i.e., magtape drive mta, mtb, ...
   when new tape devices are installed.  Beginning with V2.9 it is used for
   informational purposes only.
   </p>
-  <pre>
-  	cl&gt; type dev$devices
-  	mta ...
-  	mtb ...
-  	mtc ...
-  	iis ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type dev$devices
+  mta ...
+  mtb ...
+  mtc ...
+  iis ...
+  </pre></div>
   <p>
   2. Allocate a tape drive after checking its status.
   </p>
-  <pre>
-  	cl&gt; devstatus mtb
-  	device mtb is not currently allocated
-  	cl&gt;
-  	cl&gt; allocate mtb
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; devstatus mtb
+  device mtb is not currently allocated
+  cl&gt;
+  cl&gt; allocate mtb
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   deallocate, devstatus
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

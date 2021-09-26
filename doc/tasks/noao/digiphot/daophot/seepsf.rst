@@ -7,15 +7,15 @@ seepsf: Compute an image from the point spread function
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   seepsf psfimage image
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_psfimage">
   <dt><b>psfimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The list of input PSF images computed by the PSF task. Each PSF image consists
@@ -24,7 +24,7 @@ seepsf: Compute an image from the point spread function
   pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of output PSF images consisting of the sum of the analytic function
@@ -32,7 +32,7 @@ seepsf: Compute an image from the point spread function
   each input PSF image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dimension">
   <dt><b>dimension = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dimension' Line='dimension = INDEF' -->
   <dd>The dimensions of the output PSF image. By default <i>image</i> is a 2D image
@@ -43,7 +43,7 @@ seepsf: Compute an image from the point spread function
   header parameter <span style="font-family: monospace;">"SCALE"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xpsf">
   <dt><b>xpsf = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xpsf' Line='xpsf = INDEF' -->
   <dd>The x coordinate of the output PSF. <i>Xpsf</i> is only used if <i>psfimage</i>
@@ -51,7 +51,7 @@ seepsf: Compute an image from the point spread function
   set to &gt; 0.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ypsf">
   <dt><b>ypsf = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ypsf' Line='ypsf = INDEF' -->
   <dd>The y coordinate of the output PSF. <i>Ypsf</i> is only used if <i>psfimage</i>
@@ -59,7 +59,7 @@ seepsf: Compute an image from the point spread function
   set to &gt; 0.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_magnitude">
   <dt><b>magnitude = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='magnitude' Line='magnitude = INDEF' -->
   <dd>The intensity scale of the output PSF. By default the intensity scale is set by
@@ -67,9 +67,9 @@ seepsf: Compute an image from the point spread function
   This parameter is stored in the keyword <span style="font-family: monospace;">"PSFMAG"</span> in <i>psfimage</i>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   SEEPSF takes the input PSF <i>psfimage</i> computed by the PSF task, consisting
   of the parameters of a 2D analytic function stored in the image header and an
@@ -105,38 +105,38 @@ seepsf: Compute an image from the point spread function
   <i>image</i> can also be used as input to other image processing program, for
   example it might be used as the kernel in a convolution operation.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the output PSF in image scale coordinates of PSF function
   for image dev$ypix.
   </p>
-  <pre>
-      da&gt; seepsf ypix.psf.3 ypixpsf
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; seepsf ypix.psf.3 ypixpsf
+  </pre></div>
   <p>
   2. Compute the output PSF in image scale coordinates of the variable
   PSF for the image m92b at position (113.63,50.48) pixels relative to the
   original image.
   </p>
-  <pre>
-      da&gt; seepsf m92b.psf.2 m92psf xpsf=113.63 ypsf=50.48
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; seepsf m92b.psf.2 m92psf xpsf=113.63 ypsf=50.48
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars,daopars,psf
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

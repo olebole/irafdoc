@@ -7,21 +7,21 @@ sflip: Flip data and/or dispersion coordinates in spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   sflip input output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images containing spectra to be flipped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Matching list of output image names for flipped spectra.
@@ -30,7 +30,7 @@ sflip: Flip data and/or dispersion coordinates in spectra
   same then the flipped spectrum will replace the original spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coord_flip">
   <dt><b>coord_flip = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coord_flip' Line='coord_flip = no' -->
   <dd>Flip the dispersion coordinates?  If yes then the relationship between the
@@ -42,7 +42,7 @@ sflip: Flip data and/or dispersion coordinates in spectra
   axis is flipped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_data_flip">
   <dt><b>data_flip = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='data_flip' Line='data_flip = yes' -->
   <dd>Flip the order of the data pixels as they are stored in the image along
@@ -51,9 +51,9 @@ sflip: Flip data and/or dispersion coordinates in spectra
   axis of the image.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The dispersion coordinate system and/or the data in the spectra specified
   by the input list of images are flipped and stored in the matching output
@@ -109,32 +109,32 @@ sflip: Flip data and/or dispersion coordinates in spectra
   a one dimensional spectrum can be flipped in both dispersion coordinates
   and data pixel order by
   </p>
-  <pre>
-      cl&gt; imcopy spec1[-*] spec2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy spec1[-*] spec2
+  </pre></div>
   <p>
   Higher dimensional spectra need appropriate dimensions in the image
   sections.  One advantage of <b>sflip</b> is that it will determine the
   appropriate dispersion axis itself.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   In the following the spectra can be one dimensional, multispec,
   long slit, or spectral data cubes.
   </p>
-  <pre>
-      cl&gt; sflip spec1 spec1f		# Flip data to new image
-      cl&gt; sflip spec1 spec1		# Flip data to same image
-      cl&gt; sflip spec1 spec1f coord+ data-	# Flip coordinates and not data
-      cl&gt; sflip spec1 spec1f coord+ 	# Flip both coordinates and data
-      cl&gt; sflip spec* f//spec*		# Flip a list of images
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sflip spec1 spec1f              # Flip data to new image
+  cl&gt; sflip spec1 spec1               # Flip data to same image
+  cl&gt; sflip spec1 spec1f coord+ data- # Flip coordinates and not data
+  cl&gt; sflip spec1 spec1f coord+       # Flip both coordinates and data
+  cl&gt; sflip spec* f//spec*            # Flip a list of images
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SFLIP">
   <dt><b>SFLIP V2.10.4</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SFLIP' Line='SFLIP V2.10.4' -->
   <dd>New in this release.  Note that the V2.9 SFLIP was different in that
@@ -142,14 +142,14 @@ sflip: Flip data and/or dispersion coordinates in spectra
   not handled in the same way.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imcopy, scopy, dispcor, sapertures
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

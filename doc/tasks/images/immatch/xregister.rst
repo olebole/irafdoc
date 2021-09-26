@@ -7,21 +7,21 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   xregister input reference regions shifts
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input images to be registered.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>The list of reference images to which the input images are to be registered.
@@ -29,7 +29,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_regions">
   <dt><b>regions</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='regions' Line='regions' -->
   <dd>The list of reference image region(s) used to compute the 
@@ -43,7 +43,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   final x and y shift.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shifts">
   <dt><b>shifts</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts' -->
   <dd>The name of the text file where the computed x and y shifts 
@@ -55,7 +55,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   for each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>The list of output shifted images. If <i>output</i> is the NULL string
@@ -64,14 +64,14 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   then the number of output images must equal the number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_databasefmt">
   <dt><b>databasefmt = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='databasefmt' Line='databasefmt = yes' -->
   <dd>If <i>databasefmt</i> is <span style="font-family: monospace;">"yes"</span> the results are written to a text database
   file, otherwise they are written to a simple text file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>The list of records to be written to or read from <i>shifts</i> for each
@@ -87,7 +87,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = yes' -->
   <dd>Append new records to an existing <i>shifts</i> file or start a new shifts
@@ -95,7 +95,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   if <i>databasefmt</i> is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""' -->
   <dd>An optional list of coordinates files containing the x and y coordinates of
@@ -108,7 +108,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   and <i>dylag</i> supplied by the user.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xlag">
   <dt><b>xlag = 0, ylag = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlag' Line='xlag = 0, ylag = 0' -->
   <dd>The initial x and y lags of the input image with respect to the reference
@@ -118,7 +118,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   has been determined using the x and y coordinates in the <i>coords</i> file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dxlag">
   <dt><b>dxlag = 0, dylag = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dxlag' Line='dxlag = 0, dylag = 0' -->
   <dd>The increment in <i>xlag</i> and <i>ylag</i> to be applied to successive input
@@ -131,7 +131,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   has been determined using x and y coordinates in the <i>coords</i> file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = none</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = none' -->
   <dd>The default background function to be subtracted from the input
@@ -172,7 +172,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   background subtraction is required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_border">
   <dt><b>border = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='border' Line='border = INDEF' -->
   <dd>The width of the border region around the input and reference image data
@@ -180,14 +180,14 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   is not <span style="font-family: monospace;">"none"</span>. By default the entire region is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_loreject">
   <dt><b>loreject = INDEF, ls hireject = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF, ls hireject = INDEF' -->
   <dd>The k-sigma rejection limits for removing the effects of bad data from the
   background fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apodize">
   <dt><b>apodize = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apodize' Line='apodize = 0.0' -->
   <dd>The fraction of the input and reference image data endpoints in x and y
@@ -195,7 +195,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   cosine bell function before the cross-correlation function is computed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_filter">
   <dt><b>filter = none</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = none' -->
   <dd>The spatial filter to be applied to the reference and input image
@@ -214,7 +214,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_correlation">
   <dt><b>correlation = discrete</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='correlation' Line='correlation = discrete' -->
   <dd>The algorithm used to compute the cross-correlation function. The options
@@ -256,7 +256,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xwindow">
   <dt><b>xwindow = 11, ywindow = 11</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xwindow' Line='xwindow = 11, ywindow = 11' -->
   <dd>The x and y width of the cross-correlation function region
@@ -266,7 +266,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   are automatically rounded up to the next nearest odd number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = centroid</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = centroid' -->
   <dd>The algorithm used to compute the x and y position of the cross-correlation
@@ -313,14 +313,14 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcbox">
   <dt><b>xcbox = 5, ycbox = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcbox' Line='xcbox = 5, ycbox = 5' -->
   <dd>The width of the box centered on the peak of the cross-correlation function
   used to compute the fractional pixel x and y center.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp_type">
   <dt><b>interp_type = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "linear"' -->
   <dd>The interpolant type use to computed the output shifted image.
@@ -377,7 +377,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary_type">
   <dt><b>boundary_type = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
   <dd>The boundary extension algorithm used to compute the output shifted
@@ -408,53 +408,53 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0' -->
   <dd>The default constant for constant boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Compute the cross-correlation function and the shifts for each image
   interactively using graphics cursor and optionally image cursor input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose' -->
   <dd>Print messages about the progress of the task during task execution
   in non-interactive mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">"stdimage"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"' -->
   <dd>The default image display device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The default graphics cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The default image display cursor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   XREGISTER computes the x and y shifts required to register a list of input
   images <i>input</i> to a list of reference images <i>reference</i> using
@@ -660,107 +660,104 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   plots of the input and reference images with and without the initial and / or
   computed shifts factored in.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The following graphics cursor commands are currently available in
   XREGISTER.
   </p>
-  <pre>
-  		Interactive Keystroke Commands
+  <div class="highlight-default-notranslate"><pre>
+                  Interactive Keystroke Commands
   
-  ?	Print help 
-  :	Colon commands
-  t	Define the offset between the reference and the input image
-  c	Draw a contour plot of the cross-correlation function
-  x	Draw a column plot of the cross-correlation function
-  y	Draw a line plot of the cross-correlation function
-  r	Redraw the current plot
-  f	Recompute the cross-correlation function
-  o	Enter the image overlay plot submenu 
-  w	Update the task parameters
-  q	Exit
+  ?       Print help
+  :       Colon commands
+  t       Define the offset between the reference and the input image
+  c       Draw a contour plot of the cross-correlation function
+  x       Draw a column plot of the cross-correlation function
+  y       Draw a line plot of the cross-correlation function
+  r       Redraw the current plot
+  f       Recompute the cross-correlation function
+  o       Enter the image overlay plot submenu
+  w       Update the task parameters
+  q       Exit
   
+                  Colon Commands
   
-  		Colon Commands
+  :mark           Mark regions on the display
+  :show           Show the current values of the parameters
   
-  :mark		Mark regions on the display
-  :show	        Show the current values of the parameters
+                  Show/Set Parameters
   
-  		Show/Set Parameters
-  
-  :reference	[string]    Show/set the current reference image name
-  :input		[string]    Show/set the current input image name
-  :regions	[string]    Show/set the regions list
-  :shifts		{string]    Show/set the shifts database file name
-  :coords		[string]    Show/set the current coordinates file name
-  :output		[string]    Show/set the current output image name
-  :records	[string]    Show/set the current database record name
-  :xlag		[value]     Show/set the initial lag in x
-  :ylag		[value]     Show/set the initial lag in y
-  :dxlag		[value]     Show/set the incremental lag in x
-  :dylag		[value]     Show/set the incremental lag in y
-  :cregion	[value]	    Show/set the current region
-  :background	[string]    Show/set the background fitting function
-  :border		[value]     Show/set border region for background fitting
-  :loreject	[value]     Show/set low side k-sigma rejection
-  :hireject	[value]     Show/set high side k-sigma rejection 
-  :apodize	[value]	    Show/set percent of end points to apodize
-  :filter		[string]    Show/set the default spatial filter 
-  :correlation	[string]    Show/set cross-correlation function 
-  :xwindow	[value]     Show/set width of correlation window in x
-  :ywindow	[value]     Show/set width of correlation window in y
-  :function	[string]    Show/set correlation peak centering function 
-  :xcbox		[value]	    Show/set the centering box width in x
-  :ycbox		[value]	    Show/set the centering box width in y
-  </pre>
+  :reference      [string]    Show/set the current reference image name
+  :input          [string]    Show/set the current input image name
+  :regions        [string]    Show/set the regions list
+  :shifts         {string]    Show/set the shifts database file name
+  :coords         [string]    Show/set the current coordinates file name
+  :output         [string]    Show/set the current output image name
+  :records        [string]    Show/set the current database record name
+  :xlag           [value]     Show/set the initial lag in x
+  :ylag           [value]     Show/set the initial lag in y
+  :dxlag          [value]     Show/set the incremental lag in x
+  :dylag          [value]     Show/set the incremental lag in y
+  :cregion        [value]     Show/set the current region
+  :background     [string]    Show/set the background fitting function
+  :border         [value]     Show/set border region for background fitting
+  :loreject       [value]     Show/set low side k-sigma rejection
+  :hireject       [value]     Show/set high side k-sigma rejection
+  :apodize        [value]     Show/set percent of end points to apodize
+  :filter         [string]    Show/set the default spatial filter
+  :correlation    [string]    Show/set cross-correlation function
+  :xwindow        [value]     Show/set width of correlation window in x
+  :ywindow        [value]     Show/set width of correlation window in y
+  :function       [string]    Show/set correlation peak centering function
+  :xcbox          [value]     Show/set the centering box width in x
+  :ycbox          [value]     Show/set the centering box width in y
+  </pre></div>
   <p>
   The following submenu of image cursor commands is also available.
   </p>
-  <pre>
-  		Image Overlay Plot Submenu
+  <div class="highlight-default-notranslate"><pre>
+                  Image Overlay Plot Submenu
   
+  ?       Print help
+  c       Overlay the marked column of the reference image
+          with the same column of the input image
+  l       Overlay the marked line of the reference image
+          with the same line of the input image
+  x       Overlay the marked column of the reference image
+          with the x and y lagged column of the input image
+  y       Overlay the marked line of the reference image
+          with the x and y lagged line of the input image
+  v       Overlay the marked column of the reference image
+          with the x and y shifted column of the input image
+  h       Overlay the marked line of the reference image
+          with the x and y shifted line of the input image
+  q       Quit
   
-  ?	Print help
-  c  	Overlay the marked column of the reference image
-  	with the same column of the input image
-  l  	Overlay the marked line of the reference image
-  	with the same line of the input image
-  x 	Overlay the marked column of the reference image
-  	with the x and y lagged column of the input image
-  y 	Overlay the marked line of the reference image
-  	with the x and y lagged line of the input image
-  v 	Overlay the marked column of the reference image
-  	with the x and y shifted column of the input image
-  h 	Overlay the marked line of the reference image
-  	with the x and y shifted line of the input image
-  q	Quit 
+                  Image Overlay Sub-menu Colon Commands
   
-  
-  		Image Overlay Sub-menu Colon Commands
-  
-  :c  [m] [n] 	Overlay the middle [mth] column of the reference image
-  		with the mth [nth] column of the input image
-  :l  [m] [n]	Overlay the middle [mth] line of the reference image
-  		with the mth [nth]  line of the input image
-  :x  [m] 	Overlay the middle [mth] column of the reference image
-  		with the x and y lagged column of the input image
-  :y  [m] 	Overlay the middle [mth] line of the reference image
-  		with the x and y lagged line of the input image
-  :v  [m] 	Overlay the middle [mth] column of the reference image
-  		with the x and y shifted column of the input image
-  :h  [m] 	Overlay the middle [mth] line of the reference image
-  		with the x and y shifted line of the input image
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  :c  [m] [n]     Overlay the middle [mth] column of the reference image
+                  with the mth [nth] column of the input image
+  :l  [m] [n]     Overlay the middle [mth] line of the reference image
+                  with the mth [nth]  line of the input image
+  :x  [m]         Overlay the middle [mth] column of the reference image
+                  with the x and y lagged column of the input image
+  :y  [m]         Overlay the middle [mth] line of the reference image
+                  with the x and y lagged line of the input image
+  :v  [m]         Overlay the middle [mth] column of the reference image
+                  with the x and y shifted column of the input image
+  :h  [m]         Overlay the middle [mth] line of the reference image
+                  with the x and y shifted line of the input image
+  </pre></div>
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   The cross-correlation function is computed in the following manner.
   The symbols I and R refer to the input and reference images respectively.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   correlation = discrete
   
           &lt;I&gt; = SUMj SUMi { I[i+xlag,j+ylag] } / (Nx * Ny)
@@ -768,10 +765,9 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
        sumsqI = sqrt (SUMj SUMi { (I[i+xlag,j+ylag] - &lt;I&gt;) ** 2 })
        sumsqR = sqrt (SUMj SUMi { (R[i,j] - &lt;R&gt;) ** 2 })
   
-  	  X = SUMj SUMi { (I[i+xlag,j+ylag] - &lt;I&gt;) * (R[i,j] - &lt;R&gt;) }
-  	      ----------------------------------------------------
-  			 sumsqI * sumsqR
-  
+            X = SUMj SUMi { (I[i+xlag,j+ylag] - &lt;I&gt;) * (R[i,j] - &lt;R&gt;) }
+                ----------------------------------------------------
+                           sumsqI * sumsqR
   
   correlation = fourier
   
@@ -779,57 +775,56 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
           &lt;R&gt; = SUMj SUMi { R[i,j] } / (Nx * Ny)
        sumsqI = sqrt (SUMj SUMi { (I[i,j] - &lt;I&gt;) ** 2 })
        sumsqR = sqrt (SUMj SUMi { (R[i,j] - &lt;R&gt;) ** 2 })
-         FFTI = FFT { (I - &lt;I&gt;) / sumsqI } 
-         FFTR = FFT { (R - &lt;R&gt;) / sumsqR } 
+         FFTI = FFT { (I - &lt;I&gt;) / sumsqI }
+         FFTR = FFT { (R - &lt;R&gt;) / sumsqR }
   
             X = FFTINV { FFTR * conj { FFTI } }
-  
   
   correlation = difference
   
           &lt;I&gt; = SUMj SUMi { I[i+xlag,j+ylag] } / (Nx * Ny)
           &lt;R&gt; = SUMj SUMi { R[i,j] } / (Nx * Ny)
   
-  	  X = SUMj SUMi { abs ((I[i+xlag,j+ylag] - &lt;I&gt;) - (R[i,j] - &lt;R&gt;)) }
-  	  X = 1.0 - X / max { X }
-  </pre>
-  <!-- EndSection:   'ALGORITHMS' -->
+            X = SUMj SUMi { abs ((I[i+xlag,j+ylag] - &lt;I&gt;) - (R[i,j] - &lt;R&gt;)) }
+            X = 1.0 - X / max { X }
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Register a list of images whose dimensions are all 256 by 256 pixels
   and whose shifts with respect to the reference image are all less than
   5.0 pixels, using the discrete cross-correlation algorithm and a search
   window of 21 pixels in x and y.
   </p>
-  <pre>
-  	cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
-  	    xwindow=21 ywindow=21
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
+      xwindow=21 ywindow=21
+  </pre></div>
   <p>
   2. Register the previous list of images, but compute the cross_correlation
   function using boxcar smoothed versions of the input images.
   </p>
-  <pre>
-  	cl&gt; xregister @binimlist brefimage [*,*] shifts.db xwindow=21 \<br>
-  	    ywindow=21
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; xregister @binimlist brefimage [*,*] shifts.db xwindow=21 \<br>
+      ywindow=21
   
-  	cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
-  	    records=@binimlist correlation=file
-  </pre>
+  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
+      records=@binimlist correlation=file
+  </pre></div>
   <p>
   3. Register the previous list of images but write the results to a simple
   text file instead of a text database file and do the actual shifting with
   the imshift task.
   </p>
-  <pre>
-  	cl&gt; xregister @binimlist brefimage [*,*] shifts.db xwindow=21 \<br>
-  	    ywindow=21 databasefmt-
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; xregister @binimlist brefimage [*,*] shifts.db xwindow=21 \<br>
+      ywindow=21 databasefmt-
   
-  	cl&gt; fields shifts.db 2,3 &gt; shifts
+  cl&gt; fields shifts.db 2,3 &gt; shifts
   
-  	cl&gt; imshift @inimlist @outimlist shifts_file=shifts
-  </pre>
+  cl&gt; imshift @inimlist @outimlist shifts_file=shifts
+  </pre></div>
   <p>
   4. Register list of 512 by 512 pixel square solar sunspot images that were
   observed as a time series. Compute the cross-correlation function using
@@ -837,65 +832,65 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   shift of 10 pixels in x and 1 pixel in y, and use the computed shift of
   the previous image as the initial guess for the current image.
   </p>
-  <pre>
-  	cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
-  	    xlag=10 ylag=1 dxlag=INDEF dylag=INDEF correlation=fourier \<br>
-  	    xwindow=21 ywindow=21
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
+      xlag=10 ylag=1 dxlag=INDEF dylag=INDEF correlation=fourier \<br>
+      xwindow=21 ywindow=21
+  </pre></div>
   <p>
   5. Register two 2K square images interactively using discrete cross-correlation
   and an initial search window of 15 pixels in x and y.
   </p>
-  <pre>
-  	cl&gt; display refimage
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; display refimage
   
-  	cl&gt; xregister inimage refimage [900:1100,900:1100] shifts.db \<br>
-  	    xwindow=15 ywindow=15 interactive+
+  cl&gt; xregister inimage refimage [900:1100,900:1100] shifts.db \<br>
+      xwindow=15 ywindow=15 interactive+
   
-  	    ... a contour plot of the cross-correlation function appears
-  		with the graphics cursor ready to accept commands
+      ... a contour plot of the cross-correlation function appears
+          with the graphics cursor ready to accept commands
   
-  	    ... type x and y to get line and column plots of the cross-
-  		correlation function at various points and c to return
-  		to the default contour plot
+      ... type x and y to get line and column plots of the cross-
+          correlation function at various points and c to return
+          to the default contour plot
   
-  	    ... type ? to get a list of the available commands
+      ... type ? to get a list of the available commands
   
-  	    ... type :mark to mark a new region on the image display
+      ... type :mark to mark a new region on the image display
   
-  	    ... type f to recompute the cross-correlation function using
-  		the new data
+      ... type f to recompute the cross-correlation function using
+          the new data
   
-  	    ... increase the search window to 21 pixels in x and y
-  		with the :xwindow 21 and :ywindow 21 commands
+      ... increase the search window to 21 pixels in x and y
+          with the :xwindow 21 and :ywindow 21 commands
   
-  	    ... type f to recompute the cross-correlation function with the
-  		new search window
+      ... type f to recompute the cross-correlation function with the
+          new search window
   
-  	    ... type o to enter the image data overlay plot submenu, 
-  		move the cursor to a line in the displayed reference image
-  		and type l to see of plot of the line in the input and
-  		reference image, type h to see a plot of the same line in
-  		the reference image and the x and y shifted line in the input
-  		image, type q to return to the main menu
+      ... type o to enter the image data overlay plot submenu,
+          move the cursor to a line in the displayed reference image
+          and type l to see of plot of the line in the input and
+          reference image, type h to see a plot of the same line in
+          the reference image and the x and y shifted line in the input
+          image, type q to return to the main menu
   
-  	    ... type q to quit the task, and q again to verify the previous
-  	    	q command
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type q to quit the task, and q again to verify the previous
+          q command
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rv.fxcor,proto.imalign,images.imcombine,ctio.immatch,center1d,images.imshift
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

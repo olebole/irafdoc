@@ -7,14 +7,14 @@ thistogram: Make a histogram of a column in a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   thistogram intable outtable column
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task generates a histogram of the values in a column.
   The histogram may be written to STDOUT or to a table.
@@ -44,16 +44,16 @@ thistogram: Make a histogram of a column in a table.
   to ensure that the value is included in the range.
   The relationships between the parameters is as follows:
   </p>
-  <pre>
-      dx = (highval - lowval) / nbins
-      dx = (chigh - clow) / (nbins - 1)
-      clow = lowval + dx / 2
-      chigh = highval - dx / 2
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  dx = (highval - lowval) / nbins
+  dx = (chigh - clow) / (nbins - 1)
+  clow = lowval + dx / 2
+  chigh = highval - dx / 2
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>A list of input tables.
@@ -62,7 +62,7 @@ thistogram: Make a histogram of a column in a table.
   The name of the column is specified using the 'column' parameter,
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable = STDOUT [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = STDOUT [file name template]' -->
   <dd>Output tables or STDOUT.
@@ -77,7 +77,7 @@ thistogram: Make a histogram of a column in a table.
   will be written to an output table of the specified name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_column">
   <dt><b>column [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
   <dd>Column name in input tables that will be used to generate the histogram.
@@ -156,57 +156,57 @@ thistogram: Make a histogram of a column in a table.
   This column will be of integer data type.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Generate a histogram of the values in the 'flux' column in every table
   whose name begins with <span style="font-family: monospace;">"hr"</span>; put all the histograms in the ASCII file
   'hist.lis'.
   </p>
-  <pre>
-  	tt&gt; thistogram hr*.tab STDOUT flux &gt; hist.lis
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thistogram hr*.tab STDOUT flux &gt; hist.lis
+  </pre></div>
   <p>
   2.  Generate the same histograms as in the previous example, but put the
   results in tables rather than displaying them on the terminal screen. 
   One output file is produced for each input table; for example,
   the histogram for an input table 'hr465.tab' would be put in 'hr465h.tab'.
   </p>
-  <pre>
-  	tt&gt; thistogram hr*.tab hr*%%h%.tab flux
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thistogram hr*.tab hr*%%h%.tab flux
+  </pre></div>
   <p>
   3.  Plot the histogram of column <span style="font-family: monospace;">'V'</span> in 'bs.tab':
   </p>
-  <pre>
-  	tt&gt; thistogram bs STDOUT V | sgraph (crvstyle="pseudohist")
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thistogram bs STDOUT V | sgraph (crvstyle="pseudohist")
+  </pre></div>
   <p>
   4.  Plot the same histogram as in the previous example,
   but set the spacing between bins to be 0.1.
   </p>
-  <pre>
-  	tt&gt; thistogram bs STDOUT V nbins=INDEF dx=0.1 | \\<br>
-  	&gt;&gt;&gt;   sgraph (crvstyle="pseudohist")
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thistogram bs STDOUT V nbins=INDEF dx=0.1 | \\<br>
+  &gt;&gt;&gt;   sgraph (crvstyle="pseudohist")
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ranges
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

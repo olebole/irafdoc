@@ -7,21 +7,21 @@ apresize: Resize apertures
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   apresize input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images in which apertures are to be resized.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
@@ -33,7 +33,7 @@ apresize: Resize apertures
   for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_references">
   <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
@@ -46,7 +46,7 @@ apresize: Resize apertures
   and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Run this task interactively?  If the task is not run interactively then
@@ -54,7 +54,7 @@ apresize: Resize apertures
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = yes' -->
   <dd>Find the spectra and define apertures automatically?  In order for
@@ -62,25 +62,25 @@ apresize: Resize apertures
   input image or reference image defined in the database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no' -->
   <dd>Recenter the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_resize">
   <dt><b>resize = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = yes' -->
   <dd>Resize the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF' -->
   <dd>The dispersion line (line or column perpendicular to the dispersion axis) to
@@ -88,7 +88,7 @@ apresize: Resize apertures
   image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 1' -->
   <dd>Number of dispersion lines to be summed or medianed.  The lines are taken
@@ -96,7 +96,7 @@ apresize: Resize apertures
   sum and a negative value selects a median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_llimit">
   <dt><b>llimit = INDEF, ulimit = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='llimit' Line='llimit = INDEF, ulimit = INDEF' -->
   <dd>Lower and upper aperture size limits.  If the parameter <i>ylevel</i> is
@@ -106,7 +106,7 @@ apresize: Resize apertures
   dispersion line used).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ylevel">
   <dt><b>ylevel = 0.1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ylevel' Line='ylevel = 0.1' -->
   <dd>Data level at which to set aperture limits.  If it is INDEF then the
@@ -117,13 +117,13 @@ apresize: Resize apertures
   depending on the parameter <i>bkg</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_peak">
   <dt><b>peak = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='peak' Line='peak = yes' -->
   <dd>Is the data level specified by <i>ylevel</i> a fraction of the peak?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bkg">
   <dt><b>bkg = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bkg' Line='bkg = yes' -->
   <dd>Subtract a simple background when interpreting the <b>ylevel</b> parameter.
@@ -131,22 +131,22 @@ apresize: Resize apertures
   away from the aperture center.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_r_grow">
   <dt><b>r_grow = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='r_grow' Line='r_grow = 0.' -->
   <dd>Change the lower and upper aperture limits by this fractional amount.
   The factor is multiplied by each limit and the result added to limit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_avglimits">
   <dt><b>avglimits = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='avglimits' Line='avglimits = no' -->
   <dd>Apply the average lower and upper aperture limits to all apertures.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_additional_parameters">
   <h3>Additional parameters</h3>
-  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
   <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters are taken from the
@@ -158,9 +158,9 @@ apresize: Resize apertures
   When this operation is performed from the task <b>apall</b> all parameters
   except the package parameters are included in that task.
   </p>
-  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   For each image in the input image list, the aperture limits are
   redefined to be either specified values or by finding the points at
@@ -239,40 +239,40 @@ apresize: Resize apertures
   The aperture resizing algorithm may be selected from nearly every task
   in the package with the <i>resize</i> parameter.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To resize all apertures to the range -4 to 4:
   </p>
-  <p>
-  	cl&gt; apresize image llimit=-4 ulimit=4 ylevel=INDEF
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apresize image llimit=-4 ulimit=4 ylevel=INDEF
+  </pre></div>
   <p>
   2.  To resize all aperture to a point which is 5% of the peak relative
   to a local background:
   </p>
-  <p>
-  	cl&gt; apresize image ylevel=.05 peak+ bkg+
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apresize image ylevel=.05 peak+ bkg+
+  </pre></div>
   <p>
   3.  To resize all apertures to the point where the data exceeds 100
   data units:
   </p>
-  <p>
-  	cl&gt; apresize image ylevel=100 peak- bkg-
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apresize image ylevel=100 peak- bkg-
+  </pre></div>
   <p>
   4.  To resize all apertures to default values of the task except
   averaging all the results at the end:
   </p>
-  <p>
-  	cl&gt; apresize image avg+
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apresize image avg+
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_APRESIZE">
   <dt><b>APRESIZE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APRESIZE' Line='APRESIZE V2.11' -->
   <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
@@ -281,14 +281,14 @@ apresize: Resize apertures
   parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   center1d, ranges, apfind, aprecenter, apedit, apall
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

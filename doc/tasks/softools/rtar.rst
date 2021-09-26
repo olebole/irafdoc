@@ -7,14 +7,14 @@ rtar: Read a TAR format archive file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rtar [ flags ] [ archive ] [ after ] [ files ]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <dl>
   <dt><b>-a</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='-a' -->
@@ -145,9 +145,9 @@ rtar: Read a TAR format archive file
   file are on the tape, the last one overwrites all earlier.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Rtar</i> reads multiple files from a UNIX <i>tar</i> format file,
   restoring the files to disk on the local host machine.
@@ -183,9 +183,9 @@ rtar: Read a TAR format archive file
   in the archive.  If the last character in the <i>files</i> filename is
   a <b>$</b> then an exact match is required (excluding the $ meta-character).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_diagnostics">
   <h3>Diagnostics</h3>
-  <!-- BeginSection: 'DIAGNOSTICS' -->
   <p>
   A file read error occurring while reading the archive file is fatal unless
   caught and corrected by the host system.
@@ -195,9 +195,9 @@ rtar: Read a TAR format archive file
   File write errors on the output file are reported but do not cause
   termination of <i>rtar</i>.  The output file being written will be corrupted.
   </p>
-  <!-- EndSection:   'DIAGNOSTICS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Since <i>rtar</i> is a bootstrap utility implemented as a foreign task in
   the CL, it may be called either from within the CL (as in the examples),
@@ -206,44 +206,44 @@ rtar: Read a TAR format archive file
   <p>
   1. List the contents of the disk archive file <span style="font-family: monospace;">"foo.tar"</span>.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; rtar -tvf foo.tar
-  </p>
+  </pre></div>
   <p>
   2. Unpack the tape archive on unix device /dev/nrmt8 in the current
   directory.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; rtar -xf /dev/nrmt8
-  </p>
+  </pre></div>
   <p>
   3. Unpack the tape archive on the VMS device MSA0: in the current
   directory.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; rtar -xf msa0
-  </p>
+  </pre></div>
   <p>
   When working within the CL, commands such as <i>rewind</i> may be used
   with <i>rtar</i>, but switching between IRAF and host device names may be
   confusing.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The current limit on file name length is 100 characters (this restriction
   is imposed by the standard UNIX <i>tar</i> format).
   File links are not recreated.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   wtar, rmbin
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'DIAGNOSTICS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

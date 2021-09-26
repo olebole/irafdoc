@@ -7,15 +7,15 @@ imextensions: Make a list of image extensions
 
 .. raw:: html
 
+  <section id="s_usage___">
   <h3>Usage   </h3>
-  <!-- BeginSection: 'USAGE   ' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   imextensions input
-  </pre>
-  <!-- EndSection:   'USAGE   ' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input files containing image extensions to be listed.  This list
@@ -24,15 +24,15 @@ imextensions: Make a list of image extensions
   with other IRAF image tasks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">"file"</span> (none|list|file)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "file" (none|list|file)' -->
   <dd>Output type for the list of image extensions.  The choices are:
-  <pre>
-      none - no output
-      list - a list as a single line
-      file - a list of one image extension per line
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  none - no output
+  list - a list as a single line
+  file - a list of one image extension per line
+  </pre></div>
   The <span style="font-family: monospace;">"none"</span> output is used to just set the number of image extensions in the
   <i>nimages</i> parameter.  The <span style="font-family: monospace;">"list"</span> output is used for a short list that
   can be scanned into a CL variable.  The <span style="font-family: monospace;">"file"</span> output is used for a long
@@ -41,7 +41,7 @@ imextensions: Make a list of image extensions
   size of a CL string) the task will abort with an error.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_index">
   <dt><b>index = <span style="font-family: monospace;">"1-"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='index' Line='index = "1-"' -->
   <dd>Extension index range list.  The range list syntax is specified under the
@@ -49,7 +49,7 @@ imextensions: Make a list of image extensions
   includes 0 to select the primary image header in FITS files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extname">
   <dt><b>extname = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extname' Line='extname = ""' -->
   <dd>Extension name pattern.  If a null string is specified then there is
@@ -58,7 +58,7 @@ imextensions: Make a list of image extensions
   selected.  The pattern syntax is described under the help topic <i>match</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extver">
   <dt><b>extver = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extver' Line='extver = ""' -->
   <dd>Extension version range list.  If a null list is specified then there is
@@ -67,7 +67,7 @@ imextensions: Make a list of image extensions
   The range list syntax is described under the help topic <b>ranges</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lindex">
   <dt><b>lindex = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lindex' Line='lindex = yes' -->
   <dd>List the image extensions with the extension index?  If the value is
@@ -77,19 +77,19 @@ imextensions: Make a list of image extensions
   always listed regardless of the value of this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lname">
   <dt><b>lname = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lname' Line='lname = no' -->
   <dd>List the image extensions with the extension name if there is one?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lver">
   <dt><b>lver = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lver' Line='lver = no' -->
   <dd>List the image extensions with the extension version if there is one?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ikparams">
   <dt><b>ikparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ikparams' Line='ikparams = ""' -->
   <dd>Include the specified image kernel parameters in the image extension
@@ -97,7 +97,7 @@ imextensions: Make a list of image extensions
   IRAF image formats.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nimages">
   <dt><b>nimages</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nimages' Line='nimages' -->
   <dd>This is an output parameter which is set to the number of image extensions
@@ -108,9 +108,9 @@ imextensions: Make a list of image extensions
   include the command <span style="font-family: monospace;">"cache imextensions"</span> at the beginning of the script.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Imextensions</b> selects and lists image extensions in files.  Image
   extensions currently occur in multi-extension FITS files and multi-group
@@ -141,84 +141,84 @@ imextensions: Make a list of image extensions
   not the <i>lindex</i> parameter is set to insure that a proper image name is
   generated.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Get a list of image extensions in a CL string and use it to select
   header keywords.  This illustrates the use of the <span style="font-family: monospace;">"list"</span> output and
   a CL variable.
   </p>
-  <pre>
-      cl&gt; imext obj001 output=list | scan (s1)
-      cl&gt; = s1
-      obj001[1],obj001[2],obj001[3]
-      cl&gt; if (imext.nimages &gt; 0)
-      &gt;&gt;&gt; hselect (s1, "$I,title", yes)
-      obj001[1]   Alpha Leo
-      obj001[2]   Beta Leo
-      obj001[3]   Gamma Leo
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imext obj001 output=list | scan (s1)
+  cl&gt; = s1
+  obj001[1],obj001[2],obj001[3]
+  cl&gt; if (imext.nimages &gt; 0)
+  &gt;&gt;&gt; hselect (s1, "$I,title", yes)
+  obj001[1]   Alpha Leo
+  obj001[2]   Beta Leo
+  obj001[3]   Gamma Leo
+  </pre></div>
   <p>
   2.  Do the same thing as in the first example using an <span style="font-family: monospace;">"@file"</span>.
   </p>
-  <pre>
-      cl&gt; imext obj001 output=file &gt; list.dat
-      cl&gt; type list.dat
-      obj001[1]
-      obj001[2]
-      obj001[3]
-      cl&gt; if (imext.nimages &gt; 0)
-      &gt;&gt;&gt; hselect @list.dat $I,title yes
-      obj001[1]   Alpha Leo
-      obj001[2]   Beta Leo
-      obj001[3]   Gamma Leo
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imext obj001 output=file &gt; list.dat
+  cl&gt; type list.dat
+  obj001[1]
+  obj001[2]
+  obj001[3]
+  cl&gt; if (imext.nimages &gt; 0)
+  &gt;&gt;&gt; hselect @list.dat $I,title yes
+  obj001[1]   Alpha Leo
+  obj001[2]   Beta Leo
+  obj001[3]   Gamma Leo
+  </pre></div>
   <p>
   3.  Create a list selecting only the first and third extension and using the
   image extension name, version, and an image kernel section.
   </p>
-  <pre>
-      cl&gt; imext obj*[1:100,1:100] index=1,3 lindex- lname+ lver+ ikparams=expand
-      obj001.fits[aleo,1,expand][1:100,1:100]
-      obj003.fits[gleo,1,expand][1:100,1:100]
-      obj002.fits[im1,1,expand][1:100,1:100]
-      obj002.fits[im3,1,expand][1:100,1:100]
-      cl&gt; = imext.nimages
-      4
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imext obj*[1:100,1:100] index=1,3 lindex- lname+ lver+ ikparams=expand
+  obj001.fits[aleo,1,expand][1:100,1:100]
+  obj003.fits[gleo,1,expand][1:100,1:100]
+  obj002.fits[im1,1,expand][1:100,1:100]
+  obj002.fits[im3,1,expand][1:100,1:100]
+  cl&gt; = imext.nimages
+  4
+  </pre></div>
   <p>
   4.  List only the primary images in a set of multi-extension FITS files.
   A primary image need not contain image data; i.e. this will select
   global headers with NDIM=0 as well as headers with image data.
   </p>
-  <pre>
-      cl&gt; imext *.fits index=0
-      abc.fits[0]
-      def.fits[0]
-      ghi.fits[0]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imext *.fits index=0
+  abc.fits[0]
+  def.fits[0]
+  ghi.fits[0]
+  </pre></div>
   <p>
   5.  Use this task in a script to test on the existence of extension name
   <span style="font-family: monospace;">"joy"</span>.  This example shows the use of the pattern matching and of the
   <b>cache</b> command to insure the script works as a background task.
   </p>
-  <pre>
-      procedure example (image)
+  <div class="highlight-default-notranslate"><pre>
+  procedure example (image)
   
-      file    image   {prompt="Image"}
+  file    image   {prompt="Image"}
   
-      begin
-  	    file    im
+  begin
+          file    im
   
-  	    cache imextensions
-  	    im = image
+          cache imextensions
+          im = image
   
-  	    imextensions (im, output="none", extname="joy")
-  	    if (imextensions.nimages == 0)
-  		call printf ("No joy found with %s\n", im) 
-      end
-  </pre>
+          imextensions (im, output="none", extname="joy")
+          if (imextensions.nimages == 0)
+              call printf ("No joy found with %s\n", im)
+  end
+  </pre></div>
   <p>
   Note that proper script programming would make all the hidden parameters
   explicit.
@@ -226,18 +226,18 @@ imextensions: Make a list of image extensions
   <p>
   6.  Example of the extension name pattern matching.
   </p>
-  <pre>
-      cl&gt; imext obj.fits extname=joy lindex- lname+
-      obj.fits[joy]
-      obj.fits[nojoy]
-      obj.fits[joyfull]
-      cl&gt; imext obj.fits extname="^joy$" lindex- lname+
-      obj.fits[joy]
-      cl&gt; imext obj.fits extname="{joy}$" lindex- lname+
-      obj.fits[joy]
-      obj.fits[Joy]
-      obj.fits[nojoy]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imext obj.fits extname=joy lindex- lname+
+  obj.fits[joy]
+  obj.fits[nojoy]
+  obj.fits[joyfull]
+  cl&gt; imext obj.fits extname="^joy$" lindex- lname+
+  obj.fits[joy]
+  cl&gt; imext obj.fits extname="{joy}$" lindex- lname+
+  obj.fits[joy]
+  obj.fits[Joy]
+  obj.fits[nojoy]
+  </pre></div>
   <p>
   The first example matches <span style="font-family: monospace;">"joy"</span> anywhere in the extension name, the
   second requires an exact match with the begin and end string characters,
@@ -247,40 +247,40 @@ imextensions: Make a list of image extensions
   <p>
   7.  An example with a Geiss file.
   </p>
-  <pre>
-      cl&gt; imext y00vk102r.d0h index="x5"
-      y00vk102r.d0h[1]
-      y00vk102r.d0h[6]
-      y00vk102r.d0h[11]
-      y00vk102r.d0h[16]
-      y00vk102r.d0h[21]
-      y00vk102r.d0h[26]
-      y00vk102r.d0h[31]
-      y00vk102r.d0h[36]
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imext y00vk102r.d0h index="x5"
+  y00vk102r.d0h[1]
+  y00vk102r.d0h[6]
+  y00vk102r.d0h[11]
+  y00vk102r.d0h[16]
+  y00vk102r.d0h[21]
+  y00vk102r.d0h[26]
+  y00vk102r.d0h[31]
+  y00vk102r.d0h[36]
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_IMEXTENSIONS">
   <dt><b>IMEXTENSIONS V2.11.?</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMEXTENSIONS' Line='IMEXTENSIONS V2.11.?' -->
   <dd>Image sections are now allowed in the input names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IMEXTENSIONS">
   <dt><b>IMEXTENSIONS V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMEXTENSIONS' Line='IMEXTENSIONS V2.11' -->
   <dd>This task is new in this release.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   files, sections, ranges, match
-  </pre>
+  </pre></div>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE   ' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

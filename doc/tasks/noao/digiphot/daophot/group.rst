@@ -7,21 +7,21 @@ group: Group stars based on positional overlap and signal/noise
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   group image photfile psfimage groupfile
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images containing the stars to be grouped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_photfile">
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of input photometry files containing initial estimates of the
@@ -34,7 +34,7 @@ group: Group stars based on positional overlap and signal/noise
   text database or an STSDAS binary table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psfimage">
   <dt><b>psfimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The list of images containing the PSF models computed by the DAOPHOT PSF task.
@@ -44,7 +44,7 @@ group: Group stars based on positional overlap and signal/noise
   ? is the highest existing version number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_groupfile">
   <dt><b>groupfile = </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='groupfile' Line='groupfile = ' -->
   <dd>The list of output grouped photometry files. There must be one output group
@@ -55,7 +55,7 @@ group: Group stars based on positional overlap and signal/noise
   written, otherwise an STSDAS table is written.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameters
@@ -63,7 +63,7 @@ group: Group stars based on positional overlap and signal/noise
   is undefined then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_daopars">
   <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
@@ -71,7 +71,7 @@ group: Group stars based on positional overlap and signal/noise
   then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span>, wcspsf = <span style="font-family: monospace;">")_.wcspsf"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i>, of the
@@ -139,7 +139,7 @@ group: Group stars based on positional overlap and signal/noise
   wcsin, wcspsf,  and wcsout are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -147,30 +147,30 @@ group: Group stars based on positional overlap and signal/noise
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical GROUP task parameters? Verify can be set to the DAOPHOT
   package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the GROUP task parameters if <i>verify</i> is <span style="font-family: monospace;">"yes"</span>? Update can be
   set to the default daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task ? Verbose can be set to the
   DAOPHOT package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   GROUP takes the photometry file <i>photfile</i> file containing the stellar
   coordinates and photometry and associates the stars into natural groups based
@@ -257,116 +257,113 @@ group: Group stars based on positional overlap and signal/noise
   to estimate a magnitude for them based on the weighted sum of the pixels
   of a radial weighting function and the value of the PSF at that point.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Group the PHOT task output results for the test image dev$ypix using
   a critical S/N ratio of 1 and printing the output summary on the terminal.
   Good stars for making the PSF model can be found at (442,410), (348,189),
   and (379,67).
   </p>
-  <pre>
-     da&gt; datapars.epadu = 14.0
-     da&gt; datapars.readnoise = 75.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; datapars.epadu = 14.0
+  da&gt; datapars.readnoise = 75.0
   
-         ... set the gain and readout noise for the detector
+      ... set the gain and readout noise for the detector
   
-     da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
+  da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
   
-          ... answer verify prompts
+       ... answer verify prompts
   
-          ... find stars in the image
+       ... find stars in the image
   
-          ... answer will appear in ypix.coo.1
+       ... answer will appear in ypix.coo.1
   
-      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
-          apertures = 3.0
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+       apertures = 3.0
   
-          ... answer verify prompts
+       ... answer verify prompts
   
-          ... do aperture photometry on the detected stars
+       ... do aperture photometry on the detected stars
   
-          ... answer will appear in ypix.mag.1
+       ... answer will appear in ypix.mag.1
   
-      da&gt; display dev$ypix 1
+   da&gt; display dev$ypix 1
   
-      da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
-          fitrad=3.0 mkstars=yes display=imdr
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+       fitrad=3.0 mkstars=yes display=imdr
   
-          ... verify the critical parameters
+       ... verify the critical parameters
   
-          ... move the image cursor to a candidate star and hit the a key,
-              a plot of the stellar data appears
+       ... move the image cursor to a candidate star and hit the a key,
+           a plot of the stellar data appears
   
-          ... type ? for a listing of the graphics cursor menu
+       ... type ? for a listing of the graphics cursor menu
   
-          ... type a to accept the star, d to reject it
+       ... type a to accept the star, d to reject it
   
-          ... move to the next candidate stars and repeat the previous
-              steps
+       ... move to the next candidate stars and repeat the previous
+           steps
   
-          ... type l to list all the psf stars
+       ... type l to list all the psf stars
   
-          ... type f to fit the psf
+       ... type f to fit the psf
   
-          ... move cursor to first psf star and type s to see residuals,
-              repeat for all the psf stars
+       ... move cursor to first psf star and type s to see residuals,
+           repeat for all the psf stars
   
-          ... type w to save the PSF model
+       ... type w to save the PSF model
   
-          ... type q to quit, and q again to confirm
+       ... type q to quit, and q again to confirm
   
-          ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
-              ypix.psg.1
+       ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
+           ypix.psg.1
   
+   da&gt; group dev$ypix default default default crit=1.0 verbose+
   
-      da&gt; group dev$ypix default default default crit=1.0 verbose+
+       ... verify the critical parameters
   
-          ... verify the critical parameters
-  
-          ... answers will appear in ypix.grp.1
-  
-  </pre>
+       ... answers will appear in ypix.grp.1
+  </pre></div>
   <p>
   2. Run group on a section of the input image using the photometry file and PSF
   model derived in example 1 for the parent image and writing the results
   in the coordinate system of the parent image. Note that the results for
   example 2 are identical to those in example 1.
   </p>
-  <pre>
-      da&gt; group dev$ypix[150:450,150:450] default default default  \<br>
-          wcsin=tv wcspsf=tv wcsout=tv
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; group dev$ypix[150:450,150:450] default default default  \<br>
+      wcsin=tv wcspsf=tv wcsout=tv
   
-          ... answer the verify prompts
+      ... answer the verify prompts
   
-          ... fit the stars
+      ... fit the stars
   
-          ... the results will appear in ypix.grp.2
+      ... the results will appear in ypix.grp.2
   
-      da&gt; display dev$ypix[150:450,150:450] 1
+  da&gt; display dev$ypix[150:450,150:450] 1
   
-          ... display the image
+      ... display the image
   
-      da&gt; pdump ypix.grp.2 xc,yc yes | tvmark 1 STDIN col=204
+  da&gt; pdump ypix.grp.2 xc,yc yes | tvmark 1 STDIN col=204
   
-          ... mark the stars
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... mark the stars
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   psf,grpselect,nstar
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,30 +7,30 @@ deallocate: Deallocate a previously allocated device
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   deallocate device
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_device">
   <dt><b>device</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device' -->
   <dd>The device to be deallocated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rewind">
   <dt><b>rewind = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rewind' Line='rewind = yes' -->
   <dd>Rewind the device before deallocating?
   Ignored for devices other than magtape.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Deallocate a previously allocated device.  The CL will print an error
   message if one attempts to logout while devices are still allocated,
@@ -38,23 +38,23 @@ deallocate: Deallocate a previously allocated device
   with the devices still allocated.  The CL does not automatically
   deallocate devices upon logout.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Deallocate logical magtape drive B.
   </p>
-  <p>
-  	cl&gt; dealloc mtb
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dealloc mtb
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   allocate, devstatus, file dev$devices, dev$tapecap
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

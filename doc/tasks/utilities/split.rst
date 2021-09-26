@@ -7,56 +7,56 @@ split: Split a large file into smaller segments
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   split input output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The name of the input file (only a single file can be processed).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The root name of the output files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlines">
   <dt><b>nlines = 1000</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines = 1000' -->
   <dd>The maximum number of lines per output segment file, if the input file
   is a text file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nbytes">
   <dt><b>nbytes = 16384</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nbytes' Line='nbytes = 16384' -->
   <dd>The maximum number of bytes per output segment file, if the input file
   is a binary file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxfiles">
   <dt><b>maxfiles = 999</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxfiles' Line='maxfiles = 999' -->
   <dd>Maximum number of output files.  Used to determine the amount of zero
   padding needed for the filename extensions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print the name and size of each output file as it is generated.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>split</i> task is used to break large files up into smaller segments,
   e.g., when it is necessary to deal with an unmanageably large file.
@@ -67,37 +67,37 @@ split: Split a large file into smaller segments
   be applied again to break a large segment up into smaller segments without
   losing any information.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Split a large text file into segments, each of which is the default size.
   </p>
-  <p>
-  	cl&gt; split textfile seg
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; split textfile seg
+  </pre></div>
   <p>
   2. Split a large <i>tar</i> format archive file (10240 byte records) up into
   a series of smaller files, each of which contains 10 records from the input
   tar file.
   </p>
-  <p>
-  	cl&gt; split big.arc seg nb=(10240*10)
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; split big.arc seg nb=(10240*10)
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   very fast
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   concatenate, copy
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

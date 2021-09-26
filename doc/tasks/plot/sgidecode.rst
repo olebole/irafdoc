@@ -7,41 +7,41 @@ sgidecode: Decode an SGI format metacode file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   sgidecode input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The input SGI metacode files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_generic">
   <dt><b>generic = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
   <dd>Ignore remaining parameters?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print metacode in a verbose format?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gkiunits">
   <dt><b>gkiunits = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
   <dd>By default, coordinates are printed in NDC rather than GKI units.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>sgidecode</i> is a debugging tool used to decode SGI metacode
   files.  The plotting instructions are decoded and printed in readable
@@ -53,23 +53,23 @@ sgidecode: Decode an SGI format metacode file
   = yes, coordinates are printed in gki units (0-32767).  Parameter
   <b>verbose</b> is currently not implemented.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Decode the metacode in file <span style="font-family: monospace;">"home$vdm.sgi"</span>.
   </p>
-  <p>
-      cl&gt; sgidecode home$vdm.sgi
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sgidecode home$vdm.sgi
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   gkidecode sgikern
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

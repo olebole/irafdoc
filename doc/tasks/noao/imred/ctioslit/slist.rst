@@ -7,28 +7,28 @@ slist: List spectrum headers
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   slist1d input records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The image root name for the spectra to be listed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The record string for the spectra to be listed. The records will be appended
   to the root name to form image names of the type <span style="font-family: monospace;">"root.xxxx"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_long_header">
   <dt><b>long_header = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no' -->
   <dd>If set to yes, then a complete listing of the header elements
@@ -37,9 +37,9 @@ slist: List spectrum headers
   time, spectrum length, and image title.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Each spectrum in the list implied by the root name and the record string
   is opened and the header is read. The pixel file is not accessed in order
@@ -50,26 +50,26 @@ slist: List spectrum headers
   A warning message is issued if
   a requested image is not found, but otherwise proceeds.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following example lists 8 spectral headers in long form on the printer:
   </p>
-  <pre>
-  	cl&gt; slist1d nite1 1001-1008 | lprint
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; slist1d nite1 1001-1008 | lprint
+  </pre></div>
   <p>
   The next example lists the same spectral headers but in short form
   on the terminal
   </p>
-  <pre>
-  	cl&gt; slist1d nite1 1001-1008 long-
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; slist1d nite1 1001-1008 long-
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SLIST1D">
   <dt><b>SLIST1D V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SLIST1D' Line='SLIST1D V2.10' -->
   <dd>This task is the same as V2.9 <b>slist</b> and applies only to the older
@@ -77,20 +77,20 @@ slist: List spectrum headers
   has been revised for multiaperture spectra.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   SLIST1D does not inform the user if the pixel file can or cannot be read.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   slist, imheader
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  -->
   

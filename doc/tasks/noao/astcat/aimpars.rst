@@ -7,15 +7,15 @@ aimpars: Default image data parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   aimpars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_observat">
   <dt><b>observat = <span style="font-family: monospace;">"OBSERVAT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observat' Line='observat = "OBSERVAT"' -->
   <dd>The image header keyword defining the observatory at which the data
@@ -24,7 +24,7 @@ aimpars: Default image data parameters
   already exist. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_esitelng">
   <dt><b>esitelng = <span style="font-family: monospace;">"INDEF"</span>, esitelat = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='esitelng' Line='esitelng = "INDEF", esitelat = "INDEF"' -->
   <dd>The image header keywords defining the longitude and latitude of the
@@ -33,7 +33,7 @@ aimpars: Default image data parameters
   <span style="font-family: monospace;">"ESITELAT"</span> are written to the image header if they do not already exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_esitealt">
   <dt><b>esitealt = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='esitealt' Line='esitealt = "INDEF"' -->
   <dd>The image header keyword defining the altitude of the observatory in meters
@@ -41,7 +41,7 @@ aimpars: Default image data parameters
   <span style="font-family: monospace;">"ESITEALT"</span> is written to the image header if it does not already exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_esitetz">
   <dt><b>esitetz = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='esitetz' Line='esitetz = "INDEF"' -->
   <dd>The image header keyword defining the timezone of the observatory 
@@ -51,7 +51,7 @@ aimpars: Default image data parameters
   <span style="font-family: monospace;">"ESITETZ"</span> is written to the image header if it does not already exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_emjdobs">
   <dt><b>emjdobs = <span style="font-family: monospace;">"MJD-OBS"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='emjdobs' Line='emjdobs = "MJD-OBS"' -->
   <dd>The image header keyword defining the effective MJD of the observation
@@ -61,7 +61,7 @@ aimpars: Default image data parameters
   <span style="font-family: monospace;">"EMJDOBS"</span> is written to the image header if it does not already exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edatamin">
   <dt><b>edatamin = <span style="font-family: monospace;">"INDEF"</span>, edatamax = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edatamin' Line='edatamin = "INDEF", edatamax = "INDEF"' -->
   <dd>The image header keywords defining the minimum and maximum good data
@@ -70,7 +70,7 @@ aimpars: Default image data parameters
   are written to the image header if they do not already exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_egain">
   <dt><b>egain = <span style="font-family: monospace;">"GAIN"</span>, erdnoise = <span style="font-family: monospace;">"RDNOISE"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='egain' Line='egain = "GAIN", erdnoise = "RDNOISE"' -->
   <dd>The image header keywords defining the effective gain in electrons per ADU 
@@ -80,7 +80,7 @@ aimpars: Default image data parameters
   not already exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ewavlen">
   <dt><b>ewavlen = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ewavlen' Line='ewavlen = "INDEF"' -->
   <dd>The image header keyword defining the effective wavelength in microns or
@@ -89,7 +89,7 @@ aimpars: Default image data parameters
   not already exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_etemp">
   <dt><b>etemp = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='etemp' Line='etemp = "INDEF"' -->
   <dd>The image header keyword defining the effective temperature in degrees
@@ -98,7 +98,7 @@ aimpars: Default image data parameters
   not already exist.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_epress">
   <dt><b>epress = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='epress' Line='epress = "INDEF"' -->
   <dd>The image header keyword defining the effective pressure in millibars or
@@ -107,9 +107,9 @@ aimpars: Default image data parameters
   not already exist.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The standard image parameter set is used to encode quantities in the image
   headers that may be required by the astrometric analysis tasks. The current
@@ -130,50 +130,50 @@ aimpars: Default image data parameters
   with the same name as the parameter name is inserted into the image
   header, if one with that name does not already exist.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the default image header parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; lpar aimpars
-  </pre>
+  </pre></div>
   <p>
   2. Edit the default image header parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; aimpars
-  </pre>
+  </pre></div>
   <p>
   3. Edit the default image header parameters from the agetim task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; epar agetim
-  </pre>
+  </pre></div>
   <p>
   4. Save the current awcspars parameter values in a text file called
   aimhdr1.par.  Use the saved parameter set in the next call to the agetim
   task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; epar aimpars
   cl&gt; agetim ... aimpars=aimhdr1.par ...
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   agetim
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

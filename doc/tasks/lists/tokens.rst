@@ -7,48 +7,48 @@ tokens: Break a file up into a stream of tokens
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tokens files
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_files">
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
   <dd>The list of files to be converted into a stream of tokens.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ignore_comments">
   <dt><b>ignore_comments = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ignore_comments' Line='ignore_comments = yes' -->
   <dd>Ignore comments in the input string?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_begin_comment">
   <dt><b>begin_comment = <span style="font-family: monospace;">"#"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='begin_comment' Line='begin_comment = "#"' -->
   <dd>The string marking the start of a comment
   </dd>
   </dl>
-  <dl>
+  <dl id="l_end_comment">
   <dt><b>end_comment = <span style="font-family: monospace;">"eol"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='end_comment' Line='end_comment = "eol"' -->
   <dd>The string marking the end of a comment.  The value <b>end_comment</b> = <span style="font-family: monospace;">"eol"</span>
   means the end of a line terminates a comment.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_newlines">
   <dt><b>newlines = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newlines' Line='newlines = yes' -->
   <dd>Is newline a legal token?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>tokens</i> breaks the input up into a series of tokens.
   The makeup of the
@@ -72,23 +72,23 @@ tokens: Break a file up into a stream of tokens
   desired as an output token, it is considered whitespace and serves only to
   delimit tokens.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Break up the source file for this task into tokens:
   </p>
-  <p>
-  	cl&gt; tokens tokens.x
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tokens tokens.x
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   words
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

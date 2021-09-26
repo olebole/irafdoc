@@ -7,21 +7,21 @@ mkscript: Make a command script
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   mkscript script task submit
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_script">
   <dt><b>script</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='script' Line='script' -->
   <dd>Script file name.  Commands will be successively added to this file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_task">
   <dt><b>task   </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='task' Line='task   ' -->
   <dd>Task name of command to be added to the script.  If given on the command
@@ -30,7 +30,7 @@ mkscript: Make a command script
   name for each new command.  Currently the task name must not be abbreviated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_submit">
   <dt><b>submit</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='submit' Line='submit' -->
   <dd>Submit the completed script as a background job as the last act of the task?
@@ -38,7 +38,7 @@ mkscript: Make a command script
   script.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
   <dd>Append new commands to an existing script file?
@@ -46,28 +46,28 @@ mkscript: Make a command script
   the user will be asked to confirm the deletion.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_hidden">
   <dt><b>hidden = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hidden' Line='hidden = yes' -->
   <dd>Include hidden parameters in each command?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = yes' -->
   <dd>Verify each command, any file deletions, and the final script?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"script.log"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "script.log"' -->
   <dd>Script log file name.  When the script is submitted as a background job
   by this task any command and error output is directed to this file.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A command script is created consisting of a number of commands to be
   executed sequentially.  The task assumes the responsibility of formatting
@@ -145,14 +145,14 @@ mkscript: Make a command script
   However, if the hidden parameters are never changed then the commands
   are more readable when the hidden parameters are not included.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   One of the most common usages in data reductions is to create repeated
   commands with different input data or parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; mkscript script.cl transform
   
   [<i>eparam</i> is called to set the parameter values for <i>transform</i>]
@@ -182,11 +182,11 @@ mkscript: Make a command script
   Script script.cl submitted at:
   Fri 10:32:57 01-Nov-85
   [1]
-  </pre>
+  </pre></div>
   <p>
   To combine several tasks:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; mkscript script.cl ver- sub- hid-
   Task name of command to be added to script: response
   
@@ -195,25 +195,25 @@ mkscript: Make a command script
   Add another command? (yes):
   Task name of command to be added to script: imarith
   Add another command? (yes): no
-  </pre>
+  </pre></div>
   <p>
   To run the command script as a foreground job:
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; cl &lt; script.cl
-  </p>
+  </pre></div>
   <p>
   To run the command script as a background job:
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; cl &lt; script.cl &gt;&amp; logfile &amp;
-  </p>
+  </pre></div>
   <p>
   Note that the output including possible error output is redirected to a logfile.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The current implementation is preliminary.  It is done with a script which
   makes it seem somewhat slow.  The most important bug is that the command
@@ -222,14 +222,14 @@ mkscript: Make a command script
   also truncated by the command formatter.  The script will then fail when
   executed!  Also the task name may not be abbreviated.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   eparam
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

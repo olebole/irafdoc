@@ -7,14 +7,14 @@ xc: Compile and/or link a program
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   xc [flags] files
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_flags">
   <h3>Flags</h3>
-  <!-- BeginSection: 'FLAGS' -->
   <dl>
   <dt><b>-a</b></dt>
   <!-- Sec='FLAGS' Level=0 Label='' Line='-a' -->
@@ -206,9 +206,9 @@ xc: Compile and/or link a program
   <dd>Create a non-shareable image (default).
   </dd>
   </dl>
-  <!-- EndSection:   'FLAGS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   XC is a machine independent utility for compiling and linking IRAF
   tasks or files.  The XC utility may also be used to compile and/or link
@@ -225,7 +225,7 @@ xc: Compile and/or link a program
   These are : .x, .r, .f, .c, .s, .o, .a, .e. The mapping of these to their
   VMS counterparts is:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
        .x -&gt; .x    SPP code
        .r -&gt; .r    Ratfor code
        .f -&gt; .for  Fortran code
@@ -234,16 +234,16 @@ xc: Compile and/or link a program
        .o -&gt; .obj  Object module
        .a -&gt; .olb  Library file
        .e -&gt; .exe  Executable Image
-  </pre>
+  </pre></div>
   <p>
   XC is available both in the CL, via the foreign task interface, and as
   a standalone DCL callable task.  Usage is equivalent in either case.  Upper
   case flags must be quoted to be recognized (the upper case flags will be
   done away with at some point).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Any upper case flags in the following examples must be doubly quoted in
   the CL, singly quoted in VMS, to make it to XC without VMS mapping
@@ -253,55 +253,55 @@ xc: Compile and/or link a program
   1. Compile and link the source file <span style="font-family: monospace;">"mytask.x"</span> to produce the executable
   <span style="font-family: monospace;">"mytask.e"</span>.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; xc mytask.x
-  </p>
+  </pre></div>
   <p>
   2. Translate the file <span style="font-family: monospace;">"file.x"</span> into Fortran.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; xc -f file.x
-  </p>
+  </pre></div>
   <p>
   3. Compile but do not link <span style="font-family: monospace;">"mytask.x"</span> and the support file <span style="font-family: monospace;">"util.x"</span>.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; xc -c file.x util.x
-  </p>
+  </pre></div>
   <p>
   4. Now link these for debugging.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; xc -x file.o util.o
-  </p>
+  </pre></div>
   <p>
   5. Link the same files without the VMS debug stuff, but link in the library
   -ldeboor (the DeBoor spline routines) as well.
   </p>
-  <p>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; xc file.o util.o -ldeboor
-  </p>
+  </pre></div>
   <p>
   XC is often combined with <i>mkpkg</i> to automatically maintain large packages
   or libraries.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The -S flag should generate assembler
   output but does not presently do so in the VMS version.  All case sensitive
   switches should be done away with in both the UNIX and VMS versions of the
   utility.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   mkpkg, generic
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'FLAGS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

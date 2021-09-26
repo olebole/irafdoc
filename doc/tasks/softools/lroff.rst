@@ -7,8 +7,8 @@ lroff: Lroff (line-roff) text formatter
 
 .. raw:: html
 
+  <section id="s_purpose">
   <h3>Purpose</h3>
-  <!-- BeginSection: 'PURPOSE' -->
   <p>
   <b>Lroff</b> is a simple text formatter used by the IRAF on-line Help command,
   and other utilities (MANPAGE, LIST), to format text.  
@@ -16,16 +16,16 @@ lroff: Lroff (line-roff) text formatter
   <b>lroff</b> is line oriented, rather than page oriented,
   and is implemented as a library procedure rather than as a task.
   </p>
-  <!-- EndSection:   'PURPOSE' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   status = lroff (input, output, left_margin, right_margin)
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>An integer procedure, called by <b>lroff</b> to get lines of input,
@@ -35,35 +35,35 @@ lroff: Lroff (line-roff) text formatter
   (End Of String marker).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>A procedure, called by <b>lroff</b> to output formatted lines of text,
   which takes the <b>lroff</b> output buffer as an argument (<span style="font-family: monospace;">"output (buffer)"</span>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_left_margin">
   <dt><b>left_margin</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='left_margin' Line='left_margin' -->
   <dd>The first column to be filled (&gt;= 1).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_right_margin">
   <dt><b>right_margin</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='right_margin' Line='right_margin' -->
   <dd>The last column to be filled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_status">
   <dt><b>status</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='status' Line='status' -->
   <dd>ERR is returned if meaningless margins are specified, or if an unrecoverable
   error occurs during processing.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Lroff</b> input may be bracketed by <span style="font-family: monospace;">".help"</span> and <span style="font-family: monospace;">".endhelp"</span> directives in
   the actual source file of the program being documented (if intended as input
@@ -162,9 +162,9 @@ lroff: Lroff (line-roff) text formatter
   To keep the current default value from being changed, use a negative
   argument.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_example">
   <h3>Example</h3>
-  <!-- BeginSection: 'EXAMPLE' -->
   <br>
   <p>
   Many examples of the use of the <b>lroff</b> command directives in help text
@@ -185,37 +185,49 @@ lroff: Lroff (line-roff) text formatter
   The <b>lroff</b>-format help text fragment
   <br>
   </p>
-  <pre>
-   .help stcopy	2	"string utilities"
-   .ih
-   NAME
-   stcopy -- copy a string.
-   .ih
-   PURPOSE
-   Stcopy is used to copy an EOS delimited character
-   string.  The EOS delimiter MUST be present.
-   .ih
-   USAGE
-   stcopy (from, to, maxchar)
-   .ih
-   PARAMETERS
-   .ls from
-   The input string.
-   .le
-   .ls to
-   The output string, of length no less than "maxchar"
-   characters (excluding the EOS).
-   .le
-   .ls maxchar
-   The maximum number of characters to be copied.
-   Note that "maxchar" does not include the EOS.
-   Thus, the destination string must contain storage
-   for at least (maxchar + 1) characters.
-   .le
-   .ih
-   DESCRIPTION
-   ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  </section>
+  <section id="s_name">
+  <h3>Name</h3>
+  stcopy -- copy a string.
+  </section>
+  <section id="s_purpose">
+  <h3>Purpose</h3>
+  Stcopy is used to copy an EOS delimited character
+  string.  The EOS delimiter MUST be present.
+  </section>
+  <section id="s_usage">
+  <h3>Usage</h3>
+  stcopy (from, to, maxchar)
+  </section>
+  <section id="s_parameters">
+  <h3>Parameters</h3>
+  <dl id="l_from">
+  <dt><b>from</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='from' Line='from' -->
+  <dd>The input string.
+  </dd>
+  </dl>
+  <dl id="l_to">
+  <dt><b>to</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='to' Line='to' -->
+  <dd>The output string, of length no less than "maxchar"
+  characters (excluding the EOS).
+  </dd>
+  </dl>
+  <dl id="l_maxchar">
+  <dt><b>maxchar</b></dt>
+  <!-- Sec='PARAMETERS' Level=0 Label='maxchar' Line='maxchar' -->
+  <dd>The maximum number of characters to be copied.
+  Note that "maxchar" does not include the EOS.
+  Thus, the destination string must contain storage
+  for at least (maxchar + 1) characters.
+  </dd>
+  </dl>
+  </section>
+  <section id="s_description">
+  <h3>Description</h3>
+  </pre></div>
   <p>
   would be converted by <b>lroff</b> (as called from Help) into something like
   the following.  Remember that the margins are runtime arguments to <b>lroff</b>.
@@ -240,22 +252,22 @@ lroff: Lroff (line-roff) text formatter
   <br>
   <b>PARAMETERS</b>
   </p>
-  <dl>
+  <dl id="l_from">
   <dt><b>from</b></dt>
-  <!-- Sec='EXAMPLE' Level=0 Label='from' Line='from' -->
+  <!-- Sec='DESCRIPTION' Level=0 Label='from' Line='from' -->
   <dd>The input string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_to">
   <dt><b>to</b></dt>
-  <!-- Sec='EXAMPLE' Level=0 Label='to' Line='to' -->
+  <!-- Sec='DESCRIPTION' Level=0 Label='to' Line='to' -->
   <dd>The output string, of length no less than <span style="font-family: monospace;">"maxchar"</span>
   characters (excluding the EOS).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxchar">
   <dt><b>maxchar</b></dt>
-  <!-- Sec='EXAMPLE' Level=0 Label='maxchar' Line='maxchar' -->
+  <!-- Sec='DESCRIPTION' Level=0 Label='maxchar' Line='maxchar' -->
   <dd>The maximum number of characters to be copied.
   Note that <span style="font-family: monospace;">"maxchar"</span> does not include the EOS.
   Thus, the destination string must contain storage
@@ -269,9 +281,9 @@ lroff: Lroff (line-roff) text formatter
    ...
   <br>
   </p>
-  <!-- EndSection:   'EXAMPLE' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   help
   </p>
@@ -283,36 +295,36 @@ lroff: Lroff (line-roff) text formatter
   be included in <b>lroff</b> text, as they will be ignored by <b>lroff</b> if not
   intercepted by the procedure calling <b>lroff</b>.
   </p>
-  <!-- EndSection:   'SEE ALSO' -->
+  </section>
+  <section id="s_request_summary">
   <h3>Request summary</h3>
-  <!-- BeginSection: 'REQUEST SUMMARY' -->
   <br>
-  <pre>
-  Request Initial Default  Break		Meaning
+  <div class="highlight-default-notranslate"><pre>
+  Request Initial Default  Break          Meaning
   
-    .fi	  yes		  yes	Begin filling output lines.
-    .nf	  no		  yes	Stop filling output lines.
-    .ju	  yes		  no	Right justify output lines.
-    .nj	  no		  no	Don't right justify.
-    .rj text		  yes	Rt justify text on next line.
-    .sh n		  n=2	  yes	Skip n lines, start section.
-    .ih m n	m=2,n=5	  yes	Like SH, but indent n spaces.
-    .br			  yes	Stop filling current line.
-    .ce			  yes	Center following line.
-    .sp n		  n=1	  yes	Space "n" lines.
-    .in n	  n=0	  n=0	  yes	Set left margin to "current+n".
-    .ls n	label	  n=8	  yes	Begin labeled text block.
-    .le			  yes	End labeled text block.
+    .fi     yes             yes   Begin filling output lines.
+    .nf     no              yes   Stop filling output lines.
+    .ju     yes             no    Right justify output lines.
+    .nj     no              no    Don't right justify.
+    .rj text                yes   Rt justify text on next line.
+    .sh n           n=2     yes   Skip n lines, start section.
+    .ih m n       m=2,n=5   yes   Like SH, but indent n spaces.
+    .br                     yes   Stop filling current line.
+    .ce                     yes   Center following line.
+    .sp n           n=1     yes   Space "n" lines.
+    .in n   n=0     n=0     yes   Set left margin to "current+n".
+    .ls n label     n=8     yes   Begin labeled text block.
+    .le                     yes   End labeled text block.
   
   additional directives provided by MANPAGE:
   
-    .bp			  yes	Start a new page of output.
-    .tp n   n=4		  yes	Break page if &lt; n lines left.
-    .ks			  yes	Begin saving output.
-    .ke			  yes	Output saved text all on one page.
-  </pre>
+    .bp                     yes   Start a new page of output.
+    .tp n   n=4             yes   Break page if &lt; n lines left.
+    .ks                     yes   Begin saving output.
+    .ke                     yes   Output saved text all on one page.
+  </pre></div>
   
-  <!-- EndSection:    'REQUEST SUMMARY' -->
+  </section>
   
-  <!-- Contents: 'NAME' 'PURPOSE' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO' 'REQUEST SUMMARY'  -->
+  <!-- Contents: 'NAME' 'PURPOSE' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'NAME' 'PURPOSE' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'SEE ALSO' 'REQUEST SUMMARY'  -->
   

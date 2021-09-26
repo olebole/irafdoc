@@ -7,22 +7,22 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   fixpix images masks
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of two dimensional images to be <span style="font-family: monospace;">"fixed"</span> (modified) by
   linear interpolation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_masks">
   <dt><b>masks</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks' -->
   <dd>List of bad pixel masks, images, or files (collectively called masks)
@@ -33,7 +33,7 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   mask formats are given in the DESCRIPTION section.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_linterp">
   <dt><b>linterp = <span style="font-family: monospace;">"INDEF"</span>, cinterp = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='linterp' Line='linterp = "INDEF", cinterp = "INDEF"' -->
   <dd>Normally interpolation is performed across the narrowest dimension spanning
@@ -48,7 +48,7 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   lines and 3 for pixels with narrow dimension along columns.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>If this parameter is set to yes a line identifying each image and
@@ -56,16 +56,16 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   set then a list of the pixels modified is also printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixels">
   <dt><b>pixels = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixels' Line='pixels = no' -->
   <dd>List the pixels modified?  This is only done if this parameters and
   the <i>verbose</i> parameter are set.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Pixels in a list of images identified by bad pixel masks, images, or text
   files (collectively called masks here) are replaced by linear interpolation
@@ -150,53 +150,52 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   of bad pixels from flat fields or, even better, from the ratio of
   two flat fields of different exposure levels.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  A list of images have bad pixel masks defined in the image header.
   To replace the bad pixels by interpolation along the narrowest
   dimension:
   </p>
-  <pre>
-      cl&gt; fixpix obj* BPM
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fixpix obj* BPM
+  </pre></div>
   <p>
   2.  A simple mask of 0s and 1s defines bad columns in spectral data
   with dispersion along the lines.  To interpolate along the lines:
   </p>
-  <pre>
-      cl&gt; fixpix spec00*h ccdmask linterp=1 v+
-      FIXPIX: image spec001.imh with mask ccdmask
-      FIXPIX: image spec002.imh with mask ccdmask
-      ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fixpix spec00*h ccdmask linterp=1 v+
+  FIXPIX: image spec001.imh with mask ccdmask
+  FIXPIX: image spec002.imh with mask ccdmask
+  </pre></div>
   <p>
   3.  A text file of bad pixels is used and the modified pixels are printed
   with:
   </p>
-  <pre>
-      cl&gt; type mask.dat
-      1 2 1 1
-      25 26 25 25
-      26 27 27 27
-      49 50 50 50
-      10 10
-      20 21 20 20
-      cl&gt; fixpix myimage mask.dat v+ p+
-      FIXPIX: image myimage with mask mask.dat
-         1    1       1.       1.   1    2
-         2    1       1.       1.   2    2
-        10   10       1.       1.   9   10  11   10
-        20   20       1.       1.  20   19  20   21
-        21   20       1.       1.  21   19  21   21
-        25   25       1.       1.  25   24  25   26
-        26   25       1.       1.  26   26  26   28
-        26   27       1.       1.  26   26  26   28
-        27   27       1.       1.  27   26  27   28
-        49   50       1.       1.  49   49
-        50   50       1.       1.  50   49
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type mask.dat
+  1 2 1 1
+  25 26 25 25
+  26 27 27 27
+  49 50 50 50
+  10 10
+  20 21 20 20
+  cl&gt; fixpix myimage mask.dat v+ p+
+  FIXPIX: image myimage with mask mask.dat
+     1    1       1.       1.   1    2
+     2    1       1.       1.   2    2
+    10   10       1.       1.   9   10  11   10
+    20   20       1.       1.  20   19  20   21
+    21   20       1.       1.  21   19  21   21
+    25   25       1.       1.  25   24  25   26
+    26   25       1.       1.  26   26  26   28
+    26   27       1.       1.  26   26  26   28
+    27   27       1.       1.  27   26  27   28
+    49   50       1.       1.  49   49
+    50   50       1.       1.  50   49
+  </pre></div>
   <p>
   4.  Because a text file input automatically sets the mask values to
   2 or 3 you may need to set the linterp and cinterp parameters to
@@ -207,13 +206,13 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   obviously not what is intended.  To make this work set linterp to
   3:
   </p>
-  <pre>
-      cl&gt; fixpix myimage mask.dat linterp=3
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fixpix myimage mask.dat linterp=3
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_FIXPIX">
   <dt><b>FIXPIX V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='FIXPIX' Line='FIXPIX V2.11' -->
   <dd>This task replaces the old task (now obsolete.ofixpix) and works with the
@@ -221,14 +220,14 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   in choosing the interpolation direction.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   epix, imedit, ccdproc, text2mask, obsolete.ofixpix
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

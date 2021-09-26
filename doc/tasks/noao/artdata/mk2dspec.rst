@@ -7,21 +7,21 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mk2dspec input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Spectra to create or modify.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output spectra when modifying input spectra.  If no output spectra are
@@ -29,7 +29,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   If an output list is given then it must match in number the input list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_models">
   <dt><b>models = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='models' Line='models = ""' -->
   <dd>List of model parameter files.  If the list of model files is shorter than the
@@ -41,7 +41,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   section).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_comments">
   <dt><b>comments = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes' -->
   <dd>Include comments recording task parameters in the image header?
@@ -50,19 +50,19 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   <p>
   WHEN CREATING NEW SPECTRA
   </p>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the spectra.  Maximum of 79 characters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = 100, nlines = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 100, nlines = 512' -->
   <dd>Number of columns and lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
@@ -75,9 +75,9 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   for further information.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task creates or modifies two dimensional spectra by taking one
   dimensional spectra, convolving them with a spatial profile across the
@@ -115,7 +115,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   then only the first part of the spectrum is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='scale' Line='scale' -->
   <dd>The template spectrum is scaled by this parameter to define the
@@ -127,10 +127,10 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line='&lt;profile type&gt;' -->
   <dd>The spatial profiles are identified by two keywords, <span style="font-family: monospace;">"gaussian"</span>
   or <span style="font-family: monospace;">"slit"</span>.  The profiles are defined by the following formulae,
-  <pre>
-      gaussian:   I(x) = exp (-ln(2) * (2*(x-xc)/fwhm)**2)
-          slit:   I(x) = exp (-ln(2) * (2*(x-xc)/fwhm)**10)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  gaussian:   I(x) = exp (-ln(2) * (2*(x-xc)/fwhm)**2)
+      slit:   I(x) = exp (-ln(2) * (2*(x-xc)/fwhm)**10)
+  </pre></div>
   where x is the column coordinate, xc is the profile center, and
   fwhm is the full width at half maximum.  The <span style="font-family: monospace;">"gaussian"</span> profile
   is the usual gaussian specified in terms of a FWHM.  The <span style="font-family: monospace;">"slit"</span>
@@ -140,7 +140,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   1D spectrum flux.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fwhm">
   <dt><b>fwhm, dfwhm</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='fwhm' Line='fwhm, dfwhm' -->
   <dd>The full width at half maximum and derivative with line number.  The fwhm is
@@ -149,7 +149,7 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   	fwhm + (l - nlines/2) * dfwhm
   </dd>
   </dl>
-  <dl>
+  <dl id="l_center">
   <dt><b>center, dcenter</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='center' Line='center, dcenter' -->
   <dd>The profile center and derivative with line number.  The center is
@@ -164,32 +164,32 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   spectral lines are not perpendicular to the dispersion but are always
   aligned with the image lines.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create an artificial multifiber spectrum:
   </p>
-  <pre>
-  	cl&gt; type multifiber.dat
-  	arc 4 gauss 3 0 20 .01
-  	spec1 .5 gauss 3 0 30 .01
-  	spec2 .4 gauss 3 0 40 .01
-  	spec3 .9 gauss 3 0 50 .01
-  	spec4 .2 gauss 3 0 60 .01
-  	spec5 .6 gauss 3 0 70 .01
-  	spec6 1 gauss 3 0 80 .01
-  	spec7 1 gauss 3 0 90 .01
-  	cl&gt; mk1dspec arc cont=0 peak=500 nl=30
-  	cl&gt; mk1dspec spec1 nlines=99 seed=1
-  	cl&gt; mk1dspec spec2 nlines=80 seed=2
-  	cl&gt; mk1dspec spec3 nlines=45 seed=3
-  	cl&gt; mk1dspec spec4 nlines=95 seed=4
-  	cl&gt; mk1dspec spec5 nlines=66 seed=5
-  	cl&gt; mk1dspec spec6 nlines=90 seed=6
-  	cl&gt; mk1dspec spec7 nlines=85 seed=7
-  	cl&gt; mk2dspec multifiber model=multifiber.dat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type multifiber.dat
+  arc 4 gauss 3 0 20 .01
+  spec1 .5 gauss 3 0 30 .01
+  spec2 .4 gauss 3 0 40 .01
+  spec3 .9 gauss 3 0 50 .01
+  spec4 .2 gauss 3 0 60 .01
+  spec5 .6 gauss 3 0 70 .01
+  spec6 1 gauss 3 0 80 .01
+  spec7 1 gauss 3 0 90 .01
+  cl&gt; mk1dspec arc cont=0 peak=500 nl=30
+  cl&gt; mk1dspec spec1 nlines=99 seed=1
+  cl&gt; mk1dspec spec2 nlines=80 seed=2
+  cl&gt; mk1dspec spec3 nlines=45 seed=3
+  cl&gt; mk1dspec spec4 nlines=95 seed=4
+  cl&gt; mk1dspec spec5 nlines=66 seed=5
+  cl&gt; mk1dspec spec6 nlines=90 seed=6
+  cl&gt; mk1dspec spec7 nlines=85 seed=7
+  cl&gt; mk2dspec multifiber model=multifiber.dat
+  </pre></div>
   <p>
   In this example artificial one dimensional spectra are generated with
   <b>mk1dspec</b>.
@@ -197,23 +197,23 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   <p>
   2. Create an artificial multislit spectrum:
   </p>
-  <pre>
-  	cl&gt; type multislit.dat
-  	arc 10 slit 18 0 120 .01
-  	sky 2.5 slit 18 0 140 .01
-  	sky 2.5 slit 18 0 160 .01
-  	sky 2.5 slit 18 0 180 .01
-  	sky 2.5 slit 18 0 200 .01
-  	sky 2.5 slit 18 0 220 .01
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type multislit.dat
+  arc 10 slit 18 0 120 .01
+  sky 2.5 slit 18 0 140 .01
+  sky 2.5 slit 18 0 160 .01
+  sky 2.5 slit 18 0 180 .01
+  sky 2.5 slit 18 0 200 .01
+  sky 2.5 slit 18 0 220 .01
   
-  	spec1 .05 gauss 3 0 140 .01
-  	spec2 .2 gauss 4 0 161 .01
-  	spec3 .1 gauss 3 0 179 .01
-  	spec4 .1 gauss 3 0 200 .01
-  	spec5 .15 gauss 4 0 220 .01
-  	cl&gt; mk1dspec sky peak=1 nl=100
-  	cl&gt; mk2dspec multislit model=multislit.dat nc=400
-  </pre>
+  spec1 .05 gauss 3 0 140 .01
+  spec2 .2 gauss 4 0 161 .01
+  spec3 .1 gauss 3 0 179 .01
+  spec4 .1 gauss 3 0 200 .01
+  spec5 .15 gauss 4 0 220 .01
+  cl&gt; mk1dspec sky peak=1 nl=100
+  cl&gt; mk2dspec multislit model=multislit.dat nc=400
+  </pre></div>
   <p>
   Note how two spectra are overlaid to provide a sky spectrum with a
   narrower object spectrum.
@@ -221,17 +221,17 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   <p>
   3. Create an artificial long slit spectrum:
   </p>
-  <pre>
-  	cl&gt; type longslit.dat
-  	sky 22 slit 160 0 220 .01 
-  	spec5 .05 gauss 3 0 140 .01
-  	spec1 .05 gauss 3 0 190 .01
-  	spec4 .5 gauss 3 0 220 .01
-  	spec2 2 gauss 40 0 220 .01
-  	spec5 .1 gauss 3 0 240 .01
-  	spec1 .02 gauss 3 0 290 .01
-  	cl&gt; mk2dspec longslit model=longslit.dat nc=400
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type longslit.dat
+  sky 22 slit 160 0 220 .01
+  spec5 .05 gauss 3 0 140 .01
+  spec1 .05 gauss 3 0 190 .01
+  spec4 .5 gauss 3 0 220 .01
+  spec2 2 gauss 40 0 220 .01
+  spec5 .1 gauss 3 0 240 .01
+  spec1 .02 gauss 3 0 290 .01
+  cl&gt; mk2dspec longslit model=longslit.dat nc=400
+  </pre></div>
   <p>
   Note how objects are overlaid on a long slit sky spectrum.  The width
   of the spec2 spectrum is wider simulating a galaxy spectrum.
@@ -239,27 +239,27 @@ mk2dspec: Make/add artificial 2D spectra using 1D spectra templates
   <p>
   4. To include noise use the task <b>mknoise</b>:
   </p>
-  <pre>
-  	cl&gt; mk2dspec longslit model=longslit.dat nc=400
-  	cl&gt; mknoise longslit rdnoise=10 gain=2 poisson+ ncos=100
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mk2dspec longslit model=longslit.dat nc=400
+  cl&gt; mknoise longslit rdnoise=10 gain=2 poisson+ ncos=100
+  </pre></div>
   <p>
   5. Use a real long slit spectrum and add an object with an artificial spectrum:
   </p>
-  <pre>
-  	cl&gt; mk1dspec artspec1d nlines=50
-  	cl&gt; mk2dspec ls005 out=ls005new model=STDIN
-  	artspec1d 1 gauss 5 0 125 0
-  	[EOF]
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mk1dspec artspec1d nlines=50
+  cl&gt; mk2dspec ls005 out=ls005new model=STDIN
+  artspec1d 1 gauss 5 0 125 0
+  [EOF]
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   mk1dspec, mknoise, mkheader
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

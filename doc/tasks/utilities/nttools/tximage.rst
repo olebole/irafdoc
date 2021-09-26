@@ -7,14 +7,14 @@ tximage: Extract images from rows of 3-D tables.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tximage intable output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task extracts one or more 1-D images from cells of a 3-D table.
   The input may be a filename template, including wildcard characters, 
@@ -68,17 +68,17 @@ tximage: Extract images from rows of 3-D tables.
   keyword ORIG_ROW. This allows 'tiimage' to put the data back where 
   'tximage' got them from.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name list/template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name list/template]' -->
   <dd>A list of one or more tables to be expanded. A column selector selecting
   a single column is mandatory. Row selectors are supported as well.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output [file name template]' -->
   <dd>Either a directory name or a list of output image names.
@@ -90,37 +90,37 @@ tximage: Extract images from rows of 3-D tables.
   <dd>Display names of input and output files ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Extract 1-D images from a column named FLUX from rows 11 to 13 of a 3-D 
   table:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; tximage "table.tab[c:FLUX][r:row=(11:13)]" image
-  </pre>
+  </pre></div>
   <p>
   This will generate three images named <span style="font-family: monospace;">"image_r0011"</span>, <span style="font-family: monospace;">"image_r0012"</span>
   and <span style="font-family: monospace;">"image_r0013"</span>.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by I. Busko.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tiimage, selectors
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

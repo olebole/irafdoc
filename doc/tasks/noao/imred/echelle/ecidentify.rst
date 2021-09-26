@@ -7,28 +7,28 @@ ecidentify: Identify features in spectrum for dispersion solution
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ecidentify images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of echelle format spectra in which to identify lines and fit
   dispersion functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database in which the feature data and dispersion functions are recorded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordlist">
   <dt><b>coordlist = <span style="font-family: monospace;">"linelists$idhenear.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat"' -->
   <dd>User coordinate list consisting of an ordered list of line coordinates.  A
@@ -39,20 +39,20 @@ ecidentify: Identify features in spectrum for dispersion solution
   described under the topic <i>linelists</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_units">
   <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>The units to use if no database entry exists.  The units are specified as
   described in
-  <pre>
-      cl&gt; help onedspec.package section=units
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help onedspec.package section=units
+  </pre></div>
   If no units are specified and a coordinate list is used then the units of
   the coordinate list are selected.  If a database entry exists then the
   units defined there override both this parameter and the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = 1.' -->
   <dd>The maximum difference for a match between the feature coordinate function
@@ -60,14 +60,14 @@ ecidentify: Identify features in spectrum for dispersion solution
   is that of the user coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxfeatures">
   <dt><b>maxfeatures = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxfeatures' Line='maxfeatures = 100' -->
   <dd>Maximum number of the strongest features to be selected automatically from
   the coordinate list (function <span style="font-family: monospace;">'l'</span>) or from the image data (function <span style="font-family: monospace;">'y'</span>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zwidth">
   <dt><b>zwidth = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zwidth' Line='zwidth = 10.' -->
   <dd>Width of graphs, in user coordinates, when in zoom mode (function <span style="font-family: monospace;">'z'</span>).
@@ -76,34 +76,34 @@ ecidentify: Identify features in spectrum for dispersion solution
   <p>
   The following parameters are used in determining feature positions.
   </p>
-  <dl>
+  <dl id="l_ftype">
   <dt><b>ftype = <span style="font-family: monospace;">"emission"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "emission"' -->
   <dd>Type of features to be identified.  The possibly abbreviated choices are
   <span style="font-family: monospace;">"emission"</span> and <span style="font-family: monospace;">"absorption"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fwidth">
   <dt><b>fwidth = 4.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4.' -->
   <dd>Width in pixels of features to be identified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.' -->
   <dd>The maximum distance, in pixels, allowed between a feature position
   and the initial estimate when defining a new feature.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10.' -->
   <dd>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minsep">
   <dt><b>minsep = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.' -->
   <dd>The minimum separation, in pixels, allowed between feature positions
@@ -115,7 +115,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   the user coordinates.  If a previous solution is read from the database
   then the parameters from that solution override the defaults below.
   </p>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "chebyshev"' -->
   <dd>The function to be fit to the user coordinates as a function of the pixel
@@ -123,7 +123,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   <span style="font-family: monospace;">"chebyshev"</span> and <span style="font-family: monospace;">"legendre"</span> polynomials.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xorder">
   <dt><b>xorder = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder = 2' -->
   <dd>Order of the fitting function along each echelle order.
@@ -131,7 +131,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_yorder">
   <dt><b>yorder = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='yorder' Line='yorder = 2' -->
   <dd>Order of the fitting function with respect to the aperture number.
@@ -139,7 +139,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 0, lowreject = 3, highreject = 3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0, lowreject = 3, highreject = 3.' -->
   <dd>Default number of rejection iterations and the sigma clipping thresholds.  If
@@ -149,24 +149,24 @@ ecidentify: Identify features in spectrum for dispersion solution
   <p>
   The following parameters control the graphics input and output.
   </p>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_curosr">
   <dt><b>curosr = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='curosr' Line='curosr = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
   cursor is read.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_cursor_keys">
   <h3>Cursor keys</h3>
-  <!-- BeginSection: 'CURSOR KEYS' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
              ECIDENTIFY CURSOR KEY AND COLON COMMAND SUMMARY
   
   ?  Help                   a  Affect all features     c  Center feature(s)
@@ -186,7 +186,6 @@ ecidentify: Identify features in spectrum for dispersion solution
   :minsep [value]           :read [image]              :write [image]
   :zwidth [value]
   
-  
          ECHELLE DISPERSION FUNCTION FITTING COMMAND SUMMARY
   
   ?  Help             c  Print coordinates             d  Delete point
@@ -196,8 +195,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   
   :show               :function [value]   :highreject [value]   :lowreject [value]
   :niterate [value]   :xorder [value]     :yorder [value]
-  
-  </pre>
+  </pre></div>
   <p>
               ECIDENTIFY CURSOR KEYS AND COLON COMMANDS
   </p>
@@ -207,13 +205,13 @@ ecidentify: Identify features in spectrum for dispersion solution
   <dd>Clear the screen and print a menu of cursor and colon commands.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_a">
   <dt><b>a</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='a' Line='a' -->
   <dd>Apply next (c)enter or (d)elete operation to (a)ll features
   </dd>
   </dl>
-  <dl>
+  <dl id="l_c">
   <dt><b>c</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='c' Line='c' -->
   <dd>(C)enter the feature nearest the cursor.  Used when changing the position
@@ -221,21 +219,21 @@ ecidentify: Identify features in spectrum for dispersion solution
   May be used in combination with the (a)ll key.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_d">
   <dt><b>d</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='d' Line='d' -->
   <dd>(D)elete the feature nearest the cursor.  (D)elete all features when preceded
   by the (a)ll key.  This does not affect the dispersion function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_f">
   <dt><b>f</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='f' Line='f' -->
   <dd>(F)it a function of the pixel coordinates and aperture numbers to the user
   coordinates.  This enters an interactive function fitting package.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_g">
   <dt><b>g</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='g' Line='g' -->
   <dd>Fit a zero point shift to the user coordinates by minimizing the difference
@@ -243,27 +241,27 @@ ecidentify: Identify features in spectrum for dispersion solution
   is not changed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i">
   <dt><b>i</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='i' Line='i' -->
   <dd>(I)nitialize (delete features and dispersion function fit).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_j">
   <dt><b>j</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='j' Line='j' -->
   <dd>Go to the next aperture in decreasing line number in the echelle format image.
   Wrap around to the last line from the first line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_k">
   <dt><b>k</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='k' Line='k' -->
   <dd>Go to the next aperture in increasing line number in the echelle format image.
   Wrap around to the first line from the last line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_l">
   <dt><b>l</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='l' Line='l' -->
   <dd>(L)ocate features in the coordinate list.  A coordinate function must be
@@ -272,45 +270,45 @@ ecidentify: Identify features in spectrum for dispersion solution
   initial automatic function fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_m">
   <dt><b>m</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='m' Line='m' -->
   <dd>(M)ark a new feature using the cursor position as the initial position
   estimate.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_n">
   <dt><b>n</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='n' Line='n' -->
   <dd>Move the cursor or zoom to the (n)ext feature (same as +).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='o' Line='o' -->
   <dd>Go to a specific aperture (related to an echelle (o)rder).  The user
   is queried for the aperture number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p">
   <dt><b>p</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='p' Line='p' -->
   <dd>(P)an to the original window after (z)ooming on a feature.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_q">
   <dt><b>q</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='q' Line='q' -->
   <dd>(Q)uit and continue with next image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_r">
   <dt><b>r</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='r' Line='r' -->
   <dd>(R)edraw the graph.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_s">
   <dt><b>s</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='s' Line='s' -->
   <dd>(S)hift the fit coordinates relative to the pixel coordinates.  The
@@ -322,21 +320,21 @@ ecidentify: Identify features in spectrum for dispersion solution
   is then given by this shift divided by the order number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_t">
   <dt><b>t</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='t' Line='t' -->
   <dd>Reset the current feature to the position of the cursor.  The feature
   is <i>not</i> recentered.  This is used to mark an arbitrary position.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_u">
   <dt><b>u</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='u' Line='u' -->
   <dd>Enter a new (u)ser coordinate for the current feature.
   When (m)arking a new feature the user coordinate is also requested.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_w">
   <dt><b>w</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='w' Line='w' -->
   <dd>(W)indow the graph.  A window prompt is given and a number of windowing
@@ -344,7 +342,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   see help under <i>gtools</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x">
   <dt><b>x</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='x' Line='x' -->
   <dd>Crosscorrelate features with the data peaks and reregister.  This is
@@ -354,7 +352,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   fundamental order.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_y">
   <dt><b>y</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='y' Line='y' -->
   <dd>Up to <i>maxfeatures</i> emission peaks are found automatically (in order of
@@ -362,7 +360,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   identified from the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z">
   <dt><b>z</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='z' Line='z' -->
   <dd>(Z)oom on the feature nearest the cursor.  The width of the zoom window
@@ -389,7 +387,7 @@ ecidentify: Identify features in spectrum for dispersion solution
   This does not automatically move to the next aperture.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_I">
   <dt><b>I</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='I' Line='I' -->
   <dd>Interrupt the task immediately.  The database is not updated.
@@ -515,25 +513,25 @@ ecidentify: Identify features in spectrum for dispersion solution
   <dd>Page help information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_c">
   <dt><b>c</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='c' Line='c' -->
   <dd>Print input and fitted coordinates of point nearest the cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_d">
   <dt><b>d</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='d' Line='d' -->
   <dd>Delete the nearest undeleted point to the cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_f">
   <dt><b>f</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='f' Line='f' -->
   <dd>Fit a dispersion function including determining the order offset.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='o' Line='o' -->
   <dd>Fit a dispersion function with the order offset fixed.  The user is queried
@@ -541,44 +539,44 @@ ecidentify: Identify features in spectrum for dispersion solution
   determine the order.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_q">
   <dt><b>q</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='q' Line='q' -->
   <dd>Quit and return to the spectrum display.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_r">
   <dt><b>r</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='r' Line='r' -->
   <dd>Redraw the graph.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_u">
   <dt><b>u</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='u' Line='u' -->
   <dd>Undelete the nearest deleted point to the cursor (which may be outside the
   graph window).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_w">
   <dt><b>w</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='w' Line='w' -->
   <dd>Window the graph (type ? to the window prompt for more help).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x">
   <dt><b>x</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='x' Line='x' -->
   <dd>Set the quantity plotted along the ordinate (x axis).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_y">
   <dt><b>y</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='y' Line='y' -->
   <dd>Set the quantity plotted along the abscissa (y axis).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_I">
   <dt><b>I</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='I' Line='I' -->
   <dd>Interrupt the task immediately.  No information is saved in the database.
@@ -614,9 +612,9 @@ ecidentify: Identify features in spectrum for dispersion solution
   <dd>Print or set the order for the echelle order dependence.
   </dd>
   </dl>
-  <!-- EndSection:   'CURSOR KEYS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Emission and absorption features in echelle format spectra (see <i>apsum</i>)
   are identified interactively and from a line list and a dispersion
@@ -802,9 +800,9 @@ ecidentify: Identify features in spectrum for dispersion solution
   exit the <span style="font-family: monospace;">'I'</span> interrupt key may be used.  This does not save the feature
   information.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_echelle_dispersion_function_fitting">
   <h3>Echelle dispersion function fitting</h3>
-  <!-- BeginSection: 'ECHELLE DISPERSION FUNCTION FITTING' -->
   <p>
   If a minimum of four features over at least two orders, depending on
   the default function orders, have been identified a dispersion function
@@ -836,11 +834,11 @@ ecidentify: Identify features in spectrum for dispersion solution
   unknown offset and possible a reversed direction of increasing order.
   The fitted function is then represented as:
   </p>
-  <pre>
-  		y = offset +/- aperture
+  <div class="highlight-default-notranslate"><pre>
+  y = offset +/- aperture
   
-  		wavelength = f (x, y) / y
-  </pre>
+  wavelength = f (x, y) / y
+  </pre></div>
   <p>
   where y is the order number and x is the extracted pixel coordinate along the
   dispersion.
@@ -864,9 +862,9 @@ ecidentify: Identify features in spectrum for dispersion solution
   between plotting verses x positions and order number until the residuals
   have been reduced to remove all systematic trends.
   </p>
-  <!-- EndSection:   'ECHELLE DISPERSION FUNCTION FITTING' -->
+  </section>
+  <section id="s_database_records">
   <h3>Database records</h3>
-  <!-- BeginSection: 'DATABASE RECORDS' -->
   <p>
   The database specified by the parameter <i>database</i> is a directory of
   simple text files.  The text files have names beginning with 'ec' followed
@@ -879,17 +877,17 @@ ecidentify: Identify features in spectrum for dispersion solution
   is used.  The lines following the record identifier contain
   the feature information and dispersion function coefficients.
   </p>
-  <!-- EndSection:   'DATABASE RECORDS' -->
+  </section>
+  <section id="s_echelle_dispersion_functions">
   <h3>Echelle dispersion functions</h3>
-  <!-- BeginSection: 'ECHELLE DISPERSION FUNCTIONS' -->
   <p>
   The fitted echelle dispersion functions are evaluated as described in
   this section.  The basic equations are
   </p>
-  <pre>
-      (1)  w = (f(x,o) + shift) / o
-      (2)  o = ap * slope + offset
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (1)  w = (f(x,o) + shift) / o
+  (2)  o = ap * slope + offset
+  </pre></div>
   <p>
   where w is the wavelength, x is the pixel coordinate along the order, o is
   the order, and ap is the aperture number.  The database parameter <span style="font-family: monospace;">"shift"</span>
@@ -910,65 +908,65 @@ ecidentify: Identify features in spectrum for dispersion solution
   The numerical values following the <span style="font-family: monospace;">"coefficients"</span> parameter, shown in
   the order in which they appear, have the following meaning.
   </p>
-  <pre>
-      type	Function type: 1=chebychev, 2=legendre
-      xpow	Highest power of x
-      opow	Highest power of o
-      xterms	Type of cross terms: Always 1 for echelle functions
-      xmin	Minimum x for normalization
-      xmax	Maximum x for normalization
-      omin	Minimum o for normalization
-      omax	Maximum o for normalization
-      Cmn		Coefficients: m=0-xpow, n=0-opow, m varies first
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  type        Function type: 1=chebychev, 2=legendre
+  xpow        Highest power of x
+  opow        Highest power of o
+  xterms      Type of cross terms: Always 1 for echelle functions
+  xmin        Minimum x for normalization
+  xmax        Maximum x for normalization
+  omin        Minimum o for normalization
+  omax        Maximum o for normalization
+  Cmn         Coefficients: m=0-xpow, n=0-opow, m varies first
+  </pre></div>
   <p>
   The functions are evaluated by a sum over m and n up to the specified
   highest powers.
   </p>
-  <pre>
-      (3)  f(x,o) = sum {Cmn * Pm * Pn}	m=0-xpow, n=0-opow
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (3)  f(x,o) = sum {Cmn * Pm * Pn}   m=0-xpow, n=0-opow
+  </pre></div>
   <p>
   The Cmn are the coefficients of the polynomial terms Pm and Pn which
   are defined as follows.
   </p>
-  <pre>
-      Chebyshev:
-  	xnorm = (2 * x - (xmax + xmin)) / (xmax - xmin)
-  	P0 = 1.0
-  	P1 = xnorm
-  	Pm+1 = 2.0 * xnorm * Pm - Pm-1 
+  <div class="highlight-default-notranslate"><pre>
+  Chebyshev:
+      xnorm = (2 * x - (xmax + xmin)) / (xmax - xmin)
+      P0 = 1.0
+      P1 = xnorm
+      Pm+1 = 2.0 * xnorm * Pm - Pm-1
   
-  	onorm = (2 * o - (omax + omin)) / (omax - omin)
-  	P0 = 1.0
-  	P1 = onorm
-  	Pn+1 = 2.0 * onorm * Pn - Pn-1 
+      onorm = (2 * o - (omax + omin)) / (omax - omin)
+      P0 = 1.0
+      P1 = onorm
+      Pn+1 = 2.0 * onorm * Pn - Pn-1
   
-      Legendre:
-  	xnorm = (2 * x - (xmax + xmin)) / (xmax - xmin)
-  	P0 = 1.0
-  	P1 = xnorm
-  	Pm+1 = ((2m + 1) * xnorm * Pm - m * Pm-1)/ (m + 1)   
+  Legendre:
+      xnorm = (2 * x - (xmax + xmin)) / (xmax - xmin)
+      P0 = 1.0
+      P1 = xnorm
+      Pm+1 = ((2m + 1) * xnorm * Pm - m * Pm-1)/ (m + 1)
   
-  	onorm = (2 * o - (omax + omin)) / (omax - omin)
-  	P0 = 1.0
-  	P1 = onorm
-  	Pn+1 = ((2n + 1) * onorm * Pn - n * Pn-1)/ (n + 1)   
-  </pre>
+      onorm = (2 * o - (omax + omin)) / (omax - omin)
+      P0 = 1.0
+      P1 = onorm
+      Pn+1 = ((2n + 1) * onorm * Pn - n * Pn-1)/ (n + 1)
+  </pre></div>
   <p>
   Note that the polynomial terms are obtained by first normalizing the x and
   o values to the range -1 to 1 and then iteratively evaluating them.
   </p>
-  <!-- EndSection:   'ECHELLE DISPERSION FUNCTIONS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Because this task is interactive it is difficult to provide an actual
   example.  The following describes a typical usage on arc spectra.
   </p>
-  <p>
-  	cl&gt; ecidentify arc1.ec,arc2.ec
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ecidentify arc1.ec,arc2.ec
+  </pre></div>
   <dl>
   <dt><b>(1)</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='' Line='(1)' -->
@@ -1069,24 +1067,24 @@ ecidentify: Identify features in spectrum for dispersion solution
   command.
   </dd>
   </dl>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_ECIDENTIFY">
   <dt><b>ECIDENTIFY V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='ECIDENTIFY' Line='ECIDENTIFY V2.11' -->
   <dd>The dispersion units are now determined from a user parameter,
   the coordinate list, or the database entry.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apsum, center1d, gtools, ecreidentify, identify
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'ECHELLE DISPERSION FUNCTION FITTING' 'DATABASE RECORDS' 'ECHELLE DISPERSION FUNCTIONS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

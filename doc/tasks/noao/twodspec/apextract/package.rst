@@ -7,15 +7,15 @@ package: Package parameters and general description of package
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   apextract
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_dispaxis">
   <dt><b>dispaxis = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2' -->
   <dd>Image axis along which the spectra dispersion run.  The dispersion axis
@@ -26,7 +26,7 @@ package: Package parameters and general description of package
   the image header by the parameter DISPAXIS.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database for storing aperture definitions.  Currently the database is
@@ -34,14 +34,14 @@ package: Package parameters and general description of package
   usually the image name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print detailed processing and log information?  The output is to the
   standard output stream which is the user's terminal unless redirected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Text logfile of operations performed.  If a file name is specified
@@ -49,7 +49,7 @@ package: Package parameters and general description of package
   is appended to the file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>Binary plot metacode file of aperture locations, traces, rejected points,
@@ -63,15 +63,15 @@ package: Package parameters and general description of package
   points during cleaned extraction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_version">
   <dt><b>version = <span style="font-family: monospace;">"APEXTRACT V3.0: August 1990"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "APEXTRACT V3.0: August 1990"' -->
   <dd>Version of the package.  This is the third major version of the package.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The primary function of the <b>apextract</b> package is the extraction of
   spectra from two dimensional formats to one dimensional formats.  In
@@ -114,7 +114,7 @@ package: Package parameters and general description of package
   <p style="text-align:center">Elements of an Aperture Definition
   
   </p>
-  <dl>
+  <dl id="l_aperture">
   <dt><b>aperture</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='aperture' Line='aperture' -->
   <dd>An integer aperture identification number.  The aperture number
@@ -126,7 +126,7 @@ package: Package parameters and general description of package
   with 1.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_beam">
   <dt><b>beam</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='beam' Line='beam' -->
   <dd>An integer beam number.  The beam number need not be unique; i.e.
@@ -136,7 +136,7 @@ package: Package parameters and general description of package
   sky, arc, etc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_center">
   <dt><b>center</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='center' Line='center' -->
   <dd>A pair of numbers specifying the center of the aperture along the spatial
@@ -146,7 +146,7 @@ package: Package parameters and general description of package
   center making it easy to move apertures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low">
   <dt><b>low, high</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='low' Line='low, high' -->
   <dd>Pairs of numbers specifying the lower and upper limits of the
@@ -159,7 +159,7 @@ package: Package parameters and general description of package
   easily used for objective prism spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_curve">
   <dt><b>curve, axis</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='curve' Line='curve, axis' -->
   <dd>An IRAF <span style="font-family: monospace;">"curfit"</span> function specifying a shift to be added to the center
@@ -170,7 +170,7 @@ package: Package parameters and general description of package
   polynomial, a linear spline, or a cubic spline.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='background' Line='background' -->
   <dd>Background definition parameters.  For the <span style="font-family: monospace;">"average"</span> background subtraction
@@ -190,40 +190,40 @@ package: Package parameters and general description of package
   <p style="text-align:center">Sample Aperture Database Entry
   
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # Fri 17:43:41 03-Aug-90
-  begin	aperture last 1 70.74564 256.
-  	image	last
-  	aperture	1
-  	beam	1
-  	center	70.74564 256.
-  	low	-5. -255.
-  	high	5. 256.
-  	background
-  		xmin -100.
-  		xmax 100.
-  		function chebyshev
-  		order 1
-  		sample -10:-6,6:10
-  		naverage -3
-  		niterate 0
-  		low_reject 3.
-  		high_reject 3.
-  		grow 0.
-  	axis	1
-  	curve	5
-  		2.
-  		1.
-  		1.
-  		512.
-  		0.
-  </pre>
+  begin   aperture last 1 70.74564 256.
+          image   last
+          aperture        1
+          beam    1
+          center  70.74564 256.
+          low     -5. -255.
+          high    5. 256.
+          background
+                  xmin -100.
+                  xmax 100.
+                  function chebyshev
+                  order 1
+                  sample -10:-6,6:10
+                  naverage -3
+                  niterate 0
+                  low_reject 3.
+                  high_reject 3.
+                  grow 0.
+          axis    1
+          curve   5
+                  2.
+                  1.
+                  1.
+                  512.
+                  0.
+  </pre></div>
   <p>
   There are a number of logical functions which may be performed to
   create, modify, and use the aperture definitions.  These functions
   are:
   </p>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='o' Line='o' -->
   <dd>Automatically find a specified number of spectra and assign default
@@ -232,19 +232,19 @@ package: Package parameters and general description of package
   editor</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='o' Line='o' -->
   <dd>Recenter apertures on the image spectrum profiles.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='o' Line='o' -->
   <dd>Resize apertures based on spectrum profile width.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='o' Line='o' -->
   <dd>Interactively define or adjust aperture definitions using a graphical
@@ -253,7 +253,7 @@ package: Package parameters and general description of package
   method of processing and extracting spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='o' Line='o' -->
   <dd>Trace the positions of spectra profiles from a starting image line
@@ -262,7 +262,7 @@ package: Package parameters and general description of package
   at each dispersion point in the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='o' Line='o' -->
   <dd>Extract the flux in the apertures into one dimensional spectra in various
@@ -309,37 +309,37 @@ package: Package parameters and general description of package
   <p style="text-align:center">The APEXTRACT Package Tasks
   
   </p>
-  <pre>
-       apall        apedit       apflatten    aprecenter   apsum
-       apdefault    apfind       apmask       apresize     aptrace
-       apdemos      apfit        apnormalize  apscatter
+  <div class="highlight-default-notranslate"><pre>
+    apall        apedit       apflatten    aprecenter   apsum
+    apdefault    apfind       apmask       apresize     aptrace
+    apdemos      apfit        apnormalize  apscatter
   
-            apall - Extract 1D spectra (all parameters in one task)
-        apdefault - Set the default aperture parameters and apidtable
-          apdemos - Various tutorial demonstrations
-           apedit - Edit apertures interactively
-  	 apfind - Automatically find spectra and define apertures
-  	  apfit - Fit 2D spectra and output the fit, difference,
-  		  or ratio
-        apflatten - Remove overall spectral and profile shapes from
-  		  flat fields
-           apmask - Create and IRAF pixel list mask of the apertures
-      apnormalize - Normalize 2D apertures by 1D functions
-       aprecenter - Recenter apertures
-         apresize - Resize apertures
-        apscatter - Fit and subtract scattered light
-            apsum - Extract 1D spectra
-  	aptrace - Trace positions of spectra
+         apall - Extract 1D spectra (all parameters in one task)
+     apdefault - Set the default aperture parameters and apidtable
+       apdemos - Various tutorial demonstrations
+        apedit - Edit apertures interactively
+        apfind - Automatically find spectra and define apertures
+         apfit - Fit 2D spectra and output the fit, difference,
+                 or ratio
+     apflatten - Remove overall spectral and profile shapes from
+                 flat fields
+        apmask - Create and IRAF pixel list mask of the apertures
+   apnormalize - Normalize 2D apertures by 1D functions
+    aprecenter - Recenter apertures
+      apresize - Resize apertures
+     apscatter - Fit and subtract scattered light
+         apsum - Extract 1D spectra
+       aptrace - Trace positions of spectra
   
-  		Additional topics
+               Additional topics
   
-     apbackground - Background subtraction algorithms
-        apextract - Package parameters and general description of
-  		  package
-       approfiles - Profile determination algorithms
-       apvariance - Extractions, variance weighting, cleaning, and
-  		  noise model
-  </pre>
+  apbackground - Background subtraction algorithms
+     apextract - Package parameters and general description of
+                 package
+    approfiles - Profile determination algorithms
+    apvariance - Extractions, variance weighting, cleaning, and
+                 noise model
+  </pre></div>
   <p>
   The extracted spectra are recorded in one, two, or three dimensional
   images depending on the <i>format</i> and <i>extras</i> parameters.  If
@@ -372,34 +372,34 @@ package: Package parameters and general description of package
   <p style="text-align:center">MULTISPEC/ECHELLE Format Image Header Keywords
   
   </p>
-  <pre>
-      ap&gt; imhead test.ms
-      test.ms[512,2,4][real]: Title
-  	BANDID1 = 'spectrum - background fit, weights variance, clean yes'
-  	BANDID2 = 'spectrum - background fit, weights none, clean no'
-  	BANDID3 = 'background - background fit'
-  	BANDID4 = 'sigma - background fit, weights variance, clean yes'
-  	APNUM1  = '1 1 87.11 94.79'
-  	APNUM2  = '2 1 107.11 114.79'
-  	APID1   = 'Galaxy center'
-  	APID2   = 'Galaxy edge'
-  	WCSDIM  =                    3
-  	CTYPE1  = 'PIXEL   '
-  	CTYPE2  = 'LINEAR  '
-  	CTYPE3  = 'LINEAR  '
-  	CRVAL1  =                   1.
-  	CRPIX1  =                   1.
-  	CD1_1   =                   1.
-  	CD2_2   =                   1.
-  	CD3_3   =                   1.
-  	LTM1_1  =                   1.
-  	LTM2_2  =                   1.
-  	LTM3_3  =                   1.
-  	WAT0_001= 'system=equispec
-  	WAT1_001= 'wtype=linear label=Pixel
-  	WAT2_001= 'wtype=linear
-  	WAT3_001= 'wtype=linear
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; imhead test.ms
+  test.ms[512,2,4][real]: Title
+      BANDID1 = 'spectrum - background fit, weights variance, clean yes'
+      BANDID2 = 'spectrum - background fit, weights none, clean no'
+      BANDID3 = 'background - background fit'
+      BANDID4 = 'sigma - background fit, weights variance, clean yes'
+      APNUM1  = '1 1 87.11 94.79'
+      APNUM2  = '2 1 107.11 114.79'
+      APID1   = 'Galaxy center'
+      APID2   = 'Galaxy edge'
+      WCSDIM  =                    3
+      CTYPE1  = 'PIXEL   '
+      CTYPE2  = 'LINEAR  '
+      CTYPE3  = 'LINEAR  '
+      CRVAL1  =                   1.
+      CRPIX1  =                   1.
+      CD1_1   =                   1.
+      CD2_2   =                   1.
+      CD3_3   =                   1.
+      LTM1_1  =                   1.
+      LTM2_2  =                   1.
+      LTM3_3  =                   1.
+      WAT0_001= 'system=equispec
+      WAT1_001= 'wtype=linear label=Pixel
+      WAT2_001= 'wtype=linear
+      WAT3_001= 'wtype=linear
+  </pre></div>
   <p>
   The BANDIDn keywords describe the various elements of the 3rd dimension.
   Except for the first one the other bands only occur when <i>extras</i> is
@@ -435,7 +435,7 @@ package: Package parameters and general description of package
   special case.
   </p>
   
-  <!-- EndSection:    'DESCRIPTION' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION'  -->
   

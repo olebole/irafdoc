@@ -7,21 +7,21 @@ mkskycor: Make sky illumination correction images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkskycor input output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images for making sky iillumination correction images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output flat field iillumination correction images.  If none is
@@ -29,14 +29,14 @@ mkskycor: Make sky illumination correction images
   image replaces the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdtype">
   <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to select from the input images.  If none is specified
   then all types are used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xboxmin">
   <dt><b>xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xboxmin' Line='xboxmin = 5, xboxmax = 0.25, yboxmin = 5, yboxmax = 0.25' -->
   <dd>Minimum and maximum smoothing box size along the x and y axes.  The
@@ -49,28 +49,28 @@ mkskycor: Make sky illumination correction images
   image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clip">
   <dt><b>clip = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clip' Line='clip = yes' -->
   <dd>Clean the input images of objects?  If yes then a clipping algorithm is
   used to detect and exclude objects from the smoothing.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lowsigma">
   <dt><b>lowsigma = 2.5, highsigma = 2.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lowsigma' Line='lowsigma = 2.5, highsigma = 2.5' -->
   <dd>Sigma clipping thresholds above and below the smoothed iillumination.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdproc">
   <dt><b>ccdproc (parameter set)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdproc' Line='ccdproc (parameter set)' -->
   <dd>CCD processing parameters.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The large scale iillumination pattern of the input images, generally
   blank sky calibration images, is determined by heavily smoothing
@@ -123,26 +123,26 @@ mkskycor: Make sky illumination correction images
   before each image line is added to the moving average, except for the
   first few lines where an iterative process is used.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The two examples below make an iillumination image from a blank sky image,
   <span style="font-family: monospace;">"sky017"</span>.  In the first example a separate iillumination image is created
   and in the second the iillumination image replaces the sky image.
   </p>
-  <pre>
-      cl&gt; mkskycor sky017 Illum
-      cl&gt; mkskycor sky017 sky017
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkskycor sky017 Illum
+  cl&gt; mkskycor sky017 sky017
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccdproc, flatfields, mkillumcor, mkillumflat, mkskyflat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

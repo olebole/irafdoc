@@ -7,28 +7,28 @@ ccdhedit: CCD image header editor
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccdhedit images parameter value
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of CCD images to be edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_parameter">
   <dt><b>parameter</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='parameter' Line='parameter' -->
   <dd>Image header parameter.  The image header parameter will be translated by
   the header translation file for the images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_value">
   <dt><b>value</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
   <dd>The parameter value.  If the null string (<span style="font-family: monospace;">""</span>) is specified then the
@@ -38,15 +38,15 @@ ccdhedit: CCD image header editor
   instrument specific string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_type">
   <dt><b>type = <span style="font-family: monospace;">"string"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='type' Line='type = "string"' -->
   <dd>The parameter type.  The parameter types are <span style="font-family: monospace;">"string"</span>, <span style="font-family: monospace;">"real"</span>, or <span style="font-family: monospace;">"integer"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The image headers of the specified CCD images are edited to add, modify,
   or delete a parameter.  The parameters may be those used by the <b>ccdred</b>
@@ -65,9 +65,9 @@ ccdhedit: CCD image header editor
   as a string, real, or integer parameter.  The numeric types convert the
   value string to a number.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The <b>ccdred</b> package is usable even with little image header information.
   However, if desired the header information can be added to images which
@@ -75,7 +75,7 @@ ccdhedit: CCD image header editor
   and apply equally well to any image header format provided there is an
   instrument translation file.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1.   cl&gt; ccdhedit obj* imagetyp object
   2.   cl&gt; ccdhedit flat* imagetyp flat
   3.   cl&gt; ccdhedit zero* imagetyp zero
@@ -83,61 +83,61 @@ ccdhedit: CCD image header editor
   5.   cl&gt; ccdhedit obj0![45]* subset "R filter"
   6.   cl&gt; ccdhedit flat001 subset "R filter"
   7.   cl&gt; ccdhedit obj* exptime 500 type=integer
-  </pre>
+  </pre></div>
   <p>
   8. The following is an example of a CL script which sets the CCD image type,
   the subset, and the exposure time simultaneously.  The user may expand
   on this example to include other parameters or other initialization
   operations.
   </p>
-  <pre>
-      cl&gt; edit ccdheader.cl
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; edit ccdheader.cl
   
-      ----------------------------------------------------------------
-      # Program to set CCD header parameters.
+  ----------------------------------------------------------------
+  # Program to set CCD header parameters.
   
-      procedure ccdheader (images)
+  procedure ccdheader (images)
   
-      string	images			{prompt="CCD images"}
-      string	imagetyp		{prompt="CCD image type"}
-      string	subset			{prompt="CCD subset"}
-      string	exptime			{prompt="CCD exposure time"}
+  string      images                  {prompt="CCD images"}
+  string      imagetyp                {prompt="CCD image type"}
+  string      subset                  {prompt="CCD subset"}
+  string      exptime                 {prompt="CCD exposure time"}
   
-      begin
-  	    string	ims
+  begin
+          string      ims
   
-  	    ims = images
-  	    ccdhedit (ims, "imagetyp", imagetyp, type="string")
-  	    ccdhedit (ims, "subset", subset, type="string")
-  	    ccdhedit (ims, "exptime", exptime, type="real")
-      end
-      ----------------------------------------------------------------
+          ims = images
+          ccdhedit (ims, "imagetyp", imagetyp, type="string")
+          ccdhedit (ims, "subset", subset, type="string")
+          ccdhedit (ims, "exptime", exptime, type="real")
+  end
+  ----------------------------------------------------------------
   
-      cl&gt; task ccdheader=ccdheader.cl
-      cl&gt; ccdheader obj* imagetyp=object subset="V" exptime=500
-  </pre>
+  cl&gt; task ccdheader=ccdheader.cl
+  cl&gt; ccdheader obj* imagetyp=object subset="V" exptime=500
+  </pre></div>
   <p>
   9. The image header may be changed to force processing a calibration image
   as an object.  For example to flatten a flat field:
   </p>
-  <pre>
-      cl&gt; ccdhedit testflat imagetyp other
-      cl&gt; ccdproc testflat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdhedit testflat imagetyp other
+  cl&gt; ccdproc testflat
+  </pre></div>
   <p>
   10. To delete processing flags:
   </p>
-  <p>
-      cl&gt; ccdhedit obj042 flatcor <span style="font-family: monospace;">""</span>
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdhedit obj042 flatcor ""
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   hedit, instruments, ccdtypes, subsets
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

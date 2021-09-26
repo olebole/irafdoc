@@ -7,50 +7,50 @@ setinstrument: Set instrument parameters
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   setinstrument instrument
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_instrument">
   <dt><b>instrument</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='instrument' Line='instrument' -->
   <dd>Instrument identification for instrument parameters to be set.  If <span style="font-family: monospace;">'?'</span>
   then a list of the instrument identifiers is printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_site">
   <dt><b>site = <span style="font-family: monospace;">"kpno"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='site' Line='site = "kpno"' -->
   <dd>Site ID.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_directory">
   <dt><b>directory = <span style="font-family: monospace;">"ccddb$"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='directory' Line='directory = "ccddb$"' -->
   <dd>Instrument directory containing instrument files.  The instrument files
   are found in the subdirectory given by the site ID. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_review">
   <dt><b>review = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='review' Line='review = yes' -->
   <dd>Review the instrument parameters?  If yes then <b>eparam</b> is run for
   the parameters of <b>ccdred</b> and <b>ccdproc</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_query">
   <dt><b>query</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='query' Line='query' -->
   <dd>Parameter query if initial instrument is not found.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The purpose of the task is to allow the user to easily set default
   parameters for a new instrument.  The default parameters are generally
@@ -97,46 +97,46 @@ setinstrument: Set instrument parameters
   <b>ccdproc</b>.
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To get a list of the instruments;
   </p>
-  <pre>
-  	cl&gt; setinstrument ?
-  	[List of instruments]
+  <div class="highlight-default-notranslate"><pre>
+          cl&gt; setinstrument ?
+          [List of instruments]
   
   2. To set the instrument and edit the processing parameters:
   
-  	cl&gt; setinstrument ccdlink
-  	[Edit CCDRED parameters]
-  	[Edit CCDPROC parameters]
+          cl&gt; setinstrument ccdlink
+          [Edit CCDRED parameters]
+          [Edit CCDPROC parameters]
   
   3. To use your own instrument translation file and/or setup script in
   your working directory.
   
-  	cl&gt; setinst.site=""
-  	cl&gt; setinst.dir=""
-  	cl&gt; setinst myinstrument
+          cl&gt; setinst.site=""
+          cl&gt; setinst.dir=""
+          cl&gt; setinst myinstrument
   
   To make these files see help under <b>instruments</b>.  Copying and modifying
   system files is also straightforward.
   
-  	cl&gt; copy ccddb$kpno/fits.dat .
-  	cl&gt; edit fits.dat
-  	cl&gt; setinst.site=""
-  	cl&gt; setinst.dir=""
-  	cl&gt; setinst fits
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+          cl&gt; copy ccddb$kpno/fits.dat .
+          cl&gt; edit fits.dat
+          cl&gt; setinst.site=""
+          cl&gt; setinst.dir=""
+          cl&gt; setinst fits
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   instruments, ccdred, ccdproc
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

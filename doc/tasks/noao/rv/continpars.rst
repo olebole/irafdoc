@@ -7,15 +7,15 @@ continpars: Edit continuum subtraction parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   continpars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_c_sample">
   <dt><b>c_sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='c_sample' Line='c_sample = "*"' -->
   <dd>Lines or columns to be used in the fits.  The default value (<span style="font-family: monospace;">"*"</span>) selects
@@ -23,7 +23,7 @@ continpars: Edit continuum subtraction parameters
   syntax.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_c_function">
   <dt><b>c_function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='c_function' Line='c_function = "spline3"' -->
   <dd>Continuum function to be fit to the image lines or columns.  The functions are
@@ -32,7 +32,7 @@ continpars: Edit continuum subtraction parameters
   may be abbreviated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_c_interactive">
   <dt><b>c_interactive = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='c_interactive' Line='c_interactive = "no"' -->
   <dd>Interactively fit the continuum? If set to yes, each spectrum will be fit
@@ -41,7 +41,7 @@ continpars: Edit continuum subtraction parameters
   automatically fit the continuum interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Number of sample points to combined to create a fitting point.
@@ -49,13 +49,13 @@ continpars: Edit continuum subtraction parameters
   a median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>The order of the polynomials or the number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_replace">
   <dt><b>replace = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='replace' Line='replace = no' -->
   <dd>Replace rejected data points with continuum fit points prior to the
@@ -68,28 +68,28 @@ continpars: Edit continuum subtraction parameters
   a good result. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 2.,  high_reject = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 2.,  high_reject = 2.' -->
   <dd>Rejection limits below and above the fit in units of the residual sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 1.' -->
   <dd>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>continpars</i> pset is used to control the continuum subtraction from 
   the data.  When the <i>fxcor</i> task is run in a batch mode, 
@@ -112,9 +112,9 @@ continpars: Edit continuum subtraction parameters
   continuum subtraction in the <i>rv</i> package tasks.  More functionality is
   planned for this pset in the future.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_task_colon_commands">
   <h3>Task colon commands</h3>
-  <!-- BeginSection: 'TASK COLON COMMANDS' -->
   <p>
   The values of the <i>continpars</i> pset may be changed, displayed, or updated
   from within tasks that use them by means of various colon commands.  Simply 
@@ -149,39 +149,39 @@ continpars: Edit continuum subtraction parameters
   The following parameters will be displayed if it's name it typed, and a new 
   value accepted if an argument is given.
   </p>
-  <pre>
-  :c_sample	[range_string]
-  :naverage	[int_value]
-  :c_function	[spline3|legendre|chebyshev|spline1]
-  :order		[int_value]
-  :low_reject	[int_value]
-  :high_reject	[int_value]
-  :niterate	[int_value]
-  :grow		[int_value]
-  </pre>
-  <!-- EndSection:   'TASK COLON COMMANDS' -->
+  <div class="highlight-default-notranslate"><pre>
+  :c_sample       [range_string]
+  :naverage       [int_value]
+  :c_function     [spline3|legendre|chebyshev|spline1]
+  :order          [int_value]
+  :low_reject     [int_value]
+  :high_reject    [int_value]
+  :niterate       [int_value]
+  :grow           [int_value]
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the continuum parameters.
   </p>
-  <pre>
-  	rv&gt; lpar continpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  rv&gt; lpar continpars
+  </pre></div>
   <p>
   2. Edit the continuum parameters
   </p>
-  <pre>
-  	rv&gt; continpars
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  rv&gt; continpars
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   fxcor, onedspec.continuum, icfit, sfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'TASK COLON COMMANDS' 'EXAMPLES' 'SEE ALSO'  -->
   

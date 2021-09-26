@@ -7,42 +7,42 @@ mkcatalog: Type in a standard star catalog or observations file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkcatalog catalog
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_catalog">
   <dt><b>catalog</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalog' Line='catalog' -->
   <dd>The name of the new output catalog to be created or a previously existing
   catalog to be edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_review">
   <dt><b>review = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='review' Line='review = no' -->
   <dd>Review any pre-existing entries?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no' -->
   <dd>Verify each new entry?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Enter edit mode after entering all the values?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   MKCATALOG is a script task which permits the user to create or edit
   the catalog <i>catalog</i>, usually but not necessarily, a standard star
@@ -155,9 +155,9 @@ mkcatalog: Type in a standard star catalog or observations file
   visual inspection by the user. The column widths are not used by the 
   PHOTCAL catalog reading code.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a new standard star catalog containing the 3 photometric indices
   V, B-V, and U-B and their respective errors. Note that MKCATALOG supplies
@@ -168,78 +168,76 @@ mkcatalog: Type in a standard star catalog or observations file
   error column entry can be skipped by typing &lt;-&gt; in response to the query
   for an error column name.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ph&gt; mkcatalog UBVcat
   
       and shown below, note that the end-of-file character &lt;EOF&gt; is
       actually ^Z in this case
   
-  Enter the id column name (name, &lt;CR&gt;=ID, &lt;EOF&gt;=quit entry): 
-      Enter width of id column (width, &lt;CR&gt;=15): 
+  Enter the id column name (name, &lt;CR&gt;=ID, &lt;EOF&gt;=quit entry):
+      Enter width of id column (width, &lt;CR&gt;=15):
   Enter a name for column 2 (name, &lt;CR&gt;=COL2, &lt;EOF&gt;=quit entry): V
-      Enter width of column 2 (width, &lt;CR&gt;=10): 
-  Enter a name for error column 3 (name, &lt;CR&gt;=error(V), &lt;-&gt;=skip): 
-      Enter width of column 3 (width, &lt;CR&gt;=10): 
+      Enter width of column 2 (width, &lt;CR&gt;=10):
+  Enter a name for error column 3 (name, &lt;CR&gt;=error(V), &lt;-&gt;=skip):
+      Enter width of column 3 (width, &lt;CR&gt;=10):
   Enter a name for column 4 (name, &lt;CR&gt;=COL4, &lt;EOF&gt;=quit entry): BV
-      Enter width of column 4 (width, &lt;CR&gt;=10): 
-  Enter a name for error column 5 (name, &lt;CR&gt;=error(BV), &lt;-&gt;=skip): 
-      Enter width of column 5 (width, &lt;CR&gt;=10): 
+      Enter width of column 4 (width, &lt;CR&gt;=10):
+  Enter a name for error column 5 (name, &lt;CR&gt;=error(BV), &lt;-&gt;=skip):
+      Enter width of column 5 (width, &lt;CR&gt;=10):
   Enter a name for column 6 (name, &lt;CR&gt;=COL6, &lt;EOF&gt;=quit entry): UB
-      Enter width of column 6 (width, &lt;CR&gt;=10): 
-  Enter a name for error column 7 (name, &lt;CR&gt;=error(UB), &lt;-&gt;=skip): 
-      Enter width of column 7 (width, &lt;CR&gt;=10): 
+      Enter width of column 6 (width, &lt;CR&gt;=10):
+  Enter a name for error column 7 (name, &lt;CR&gt;=error(UB), &lt;-&gt;=skip):
+      Enter width of column 7 (width, &lt;CR&gt;=10):
   Enter a name for column 8 (name, &lt;CR&gt;=COL8, &lt;EOF&gt;=quit entry): ^Z
   
-  
   Catalog UBVcat in file UBVcat has 7 columns
-  	Column 1:  ID             
-  	Column 2:  V         
-  	Column 3:  error(V)  
-  	Column 4:  BV        
-  	Column 5:  error(BV) 
-  	Column 6:  UB        
-  	Column 7:  error(UB) 
+          Column 1:  ID
+          Column 2:  V
+          Column 3:  error(V)
+          Column 4:  BV
+          Column 5:  error(BV)
+          Column 6:  UB
+          Column 7:  error(UB)
   
   
   
   
-  
-  </pre>
+  </pre></div>
   <p>
   2. Add new entries to the file created in example 1.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ph&gt; mkcatalog UBVcat
   
   
   
-  </pre>
+  </pre></div>
   <p>
   3. Edit an existing catalog created with a foreign program.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ph&gt; mkcatalog VRI.usr
   
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The longest line permitted by an editor varies from editor to
   editor. Users should be aware that it may not be possible to use
   edit mode on very long text lines.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   photcal$catalogs/README,mknobsfile,mkobsfile,mkconfig
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

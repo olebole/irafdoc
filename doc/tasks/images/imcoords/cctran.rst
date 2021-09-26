@@ -7,28 +7,28 @@ cctran: Transform coordinate lists using the ccmap plate solution
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   cctran input output database solutions
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The coordinate files to be transformed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The output coordinate files. The number of output files must
   be one or equal to the number of input files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>The text database file written by the ccmap task containing the
@@ -37,7 +37,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   ymag, xrotation, yrotation, lngref, latref, and projection parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_solutions">
   <dt><b>solutions</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions' -->
   <dd>The database record containing the desired plate solution. 
@@ -51,7 +51,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   xrotation, yrotation, lngref, latref, and projection.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_geometry">
   <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometric transformation. The geometry parameter is
@@ -70,7 +70,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_forward">
   <dt><b>forward = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='forward' Line='forward = yes' -->
   <dd>Transform from pixel to celestial coordinates ? If forward is <span style="font-family: monospace;">"no"</span> then
@@ -78,7 +78,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   to pixel coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xref">
   <dt><b>xref = INDEF, yref = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF' -->
   <dd>The x and y pixel coordinates of the reference point. If database is undefined
@@ -86,7 +86,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = INDEF, ymag = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF' -->
   <dd>The x and y scale factors in arcseconds per pixel. If database is undefined
@@ -94,7 +94,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   parameters are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xrotation">
   <dt><b>xrotation = INDEF, yrotation = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF' -->
   <dd>The x and y rotation angles in degrees measured counter-clockwise with
@@ -111,7 +111,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   xrotation and yrotation values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngref">
   <dt><b>lngref = INDEF, latref = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = INDEF, latref = INDEF' -->
   <dd>The celestial coordinates of the reference point, e.g. the ra and dec
@@ -121,7 +121,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngunits">
   <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the input or output ra / longitude and dec / latitude coordinates.
@@ -132,7 +132,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   <span style="font-family: monospace;">"degrees"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_projection">
   <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in
@@ -141,7 +141,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcolumn">
   <dt><b>xcolumn = 1, ycolumn = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2' -->
   <dd>The columns in the input coordinate file containing the x and y coordinates
@@ -149,7 +149,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   dec / latitude if the forward parameter is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngformat">
   <dt><b>lngformat = <span style="font-family: monospace;">""</span>, latformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""' -->
   <dd>The format of the output coordinates. The defaults are <span style="font-family: monospace;">"%10.3f"</span> for 
@@ -158,15 +158,15 @@ cctran: Transform coordinate lists using the ccmap plate solution
   and <span style="font-family: monospace;">"%13.7g"</span> for coordinates in radians.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_min_sigdigits">
   <dt><b>min_sigdigits = 7</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7' -->
   <dd>The minimum precision of the output coordinates.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   CCTRAN applies the plate solution to a list of pixel or celestial
   coordinates in the text file <i>input</i> and writes the transformed
@@ -202,10 +202,10 @@ cctran: Transform coordinate lists using the ccmap plate solution
   coordinates in arcseconds per pixel. The standard coordinates are computed
   by applying the appropriate sky projection to the celestial coordinates.
   </p>
-  <pre>
-  	 xi = f (x, y)
-  	eta = g (x, y)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = f (x, y)
+  eta = g (x, y)
+  </pre></div>
   <p>
   The functions f and g are either power series, Legendre, or Chebyshev
   polynomials whose order and region of validity were set by the user when
@@ -213,18 +213,18 @@ cctran: Transform coordinate lists using the ccmap plate solution
   any physically meaningful model. However the first order terms can be given
   the simple geometrical interpretation shown below.
   </p>
-  <pre>
-  	  xi = a + b * x + c * y
-  	 eta = d + e * x + f * y
-  	   b = xmag * cos (xrotation)
-  	   c = ymag * sin (yrotation)
-  	   e = -xmag * sin (xrotation)
-  	   f = ymag * cos (yrotation)
-  	   a = xi0 - b * xref - c * yref = xshift
-  	   d = eta0 - e * xref - f * yref = yshift
-  	   xi0 = 0.0
-  	   eta0 = 0.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+    b = xmag * cos (xrotation)
+    c = ymag * sin (yrotation)
+    e = -xmag * sin (xrotation)
+    f = ymag * cos (yrotation)
+    a = xi0 - b * xref - c * yref = xshift
+    d = eta0 - e * xref - f * yref = yshift
+    xi0 = 0.0
+    eta0 = 0.0
+  </pre></div>
   <p>
   xref, yref, xi0, and eta0 are the origins of the reference and output
   coordinate systems respectively. xi0 and eta0 are both 0.0 by default.
@@ -240,18 +240,18 @@ cctran: Transform coordinate lists using the ccmap plate solution
   that in this case xrotation and yrotation are interpreted as the rotation
   of the coordinates not the rotation of the coordinate axes.
   </p>
-  <pre>
-  	  xi = a + b * x + c * y
-  	 eta = d + e * x + f * y
-  	   b = xmag * cos (xrotation)
-  	   c = -ymag * sin (yrotation)
-  	   e = xmag * sin (xrotation)
-  	   f = ymag * cos (yrotation)
-  	   a = xi0 - b * xref - c * yref = xshift
-  	   d = eta0 - e * xref - f * yref = yshift
-  	   xi0 = 0.0
-  	   eta0 = 0.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+    b = xmag * cos (xrotation)
+    c = -ymag * sin (yrotation)
+    e = xmag * sin (xrotation)
+    f = ymag * cos (yrotation)
+    a = xi0 - b * xref - c * yref = xshift
+    d = eta0 - e * xref - f * yref = yshift
+    xi0 = 0.0
+    eta0 = 0.0
+  </pre></div>
   <p>
   Linear plate solutions are evaluated in the forward and reverse sense
   using the appropriate IRAF mwcs system routines. Higher order plate
@@ -259,9 +259,9 @@ cctran: Transform coordinate lists using the ccmap plate solution
   evaluation of the polynomial terms, in the reverse sense by applying
   Newton's method to the plate solution.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -270,7 +270,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   codes C are as follows:
      
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -287,17 +287,16 @@ cctran: Transform coordinate lists using the ccmap plate solution
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-     
-     
+  
   Conventions for w (field width) specification:
-     
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-     
+  
   Escape sequences (e.g. "\n" for newline):
-     
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -307,15 +306,15 @@ cctran: Transform coordinate lists using the ccmap plate solution
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-     
+  
   Examples
-     
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-     
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -328,7 +327,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-     
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
@@ -336,15 +335,15 @@ cctran: Transform coordinate lists using the ccmap plate solution
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the plate solution and evaluate the forward transformation for
   the following input coordinate list.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type coords
   13:29:47.297  47:13:37.52  327.50  410.38
   13:29:37.406  47:09:09.18  465.50   62.10
@@ -352,9 +351,8 @@ cctran: Transform coordinate lists using the ccmap plate solution
   13:29:55.424  47:10:05.15  224.35  131.20
   13:30:01.816  47:12:58.79  134.37  356.33
   
-  
   cl&gt; ccmap coords coords.db xcol=3 ycol=4 lngcol=1 latcol=2 inter-
-  Coords File: coords  Image: 
+  Coords File: coords  Image:
       Database: coords.db  Record: coords
   Refsystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
@@ -368,7 +366,6 @@ cctran: Transform coordinate lists using the ccmap plate solution
       Reference point: 318.735  273.900  (pixels  pixels)
       X and Y scale: 0.764  0.767  (arcsec/pixel  arcsec/pixel)
       X and Y axis rotation: 179.110  358.958  (degrees  degrees)
-  
   
   cl&gt; type coords.db
   # Mon 15:10:37 13-May-96
@@ -411,8 +408,6 @@ cctran: Transform coordinate lists using the ccmap plate solution
                           -0.01393966623835092    0.7665650170136847
           surface2        0
   
-  
-  
   cl&gt; cctran coords STDOUT coords.db coords xcol=3 ycol=4 lngformat=%0.3h \<br>
   latformat=%0.2h
   13:29:47.297  47:13:37.52 13:29:47.284 47:13:37.89
@@ -427,7 +422,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   441.951   410.017  442.01  409.65
   223.970   131.272  224.35  131.20
   134.717   356.454  134.37  356.33
-  </pre>
+  </pre></div>
   <p>
   Note that for the forward transformation the original ras and decs are in
   columns 1 and 2 and the computed ras and decs are in columns 3 and 4, but
@@ -438,7 +433,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
   2. Use the previous plate solution to transform x and y values to
   ra and dec values and vice versa but enter the plate solution by hand.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; cctran coords STDOUT "" xcol=3 ycol=4 lngformat=%0.3h latformat=%0.2h \<br>
   xref=318.735 yref=273.900 lngref=13:29:48.129 latref=47:11:53.37 \<br>
   xmag=.764 ymag=.767 xrot=180.890 yrot=1.042
@@ -456,25 +451,24 @@ cctran: Transform coordinate lists using the ccmap plate solution
   441.983   409.968  442.01  409.65
   223.954   131.334  224.35  131.20
   134.680   356.426  134.37  356.33
-  
-  </pre>
+  </pre></div>
   <p>
   Note that there are minor differences between examples 1 and 2 due to
   precision differences in the input, and that the angles input to cctran
   in example 2 are the coordinate rotation angles not the axes rotation angles
   as printed by ccmap. The different is exactly 180 degrees in both cases.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccmap, ccsetwcs, finder.tastrom, skyctran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

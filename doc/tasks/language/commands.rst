@@ -7,8 +7,8 @@ commands: A discussion of the syntax of IRAF commands
 
 .. raw:: html
 
+  <section id="s_syntax">
   <h3>Syntax</h3>
-  <!-- BeginSection: 'SYNTAX' -->
   <p>
   In <i>command</i> mode (normal interactive commands):
   </p>
@@ -21,16 +21,16 @@ commands: A discussion of the syntax of IRAF commands
   <p>
   	taskname (arg1, ... argN, par=val, ... par=val, redir)
   </p>
-  <!-- EndSection:   'SYNTAX' -->
+  </section>
+  <section id="s_elements">
   <h3>Elements</h3>
-  <!-- BeginSection: 'ELEMENTS' -->
-  <dl>
+  <dl id="l_taskname">
   <dt><b>taskname</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='taskname' Line='taskname' -->
   <dd>The name of the task to be executed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_argN">
   <dt><b>argN</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='argN' Line='argN' -->
   <dd>The positional arguments to the task.  An argument may be any expression;
@@ -38,7 +38,7 @@ commands: A discussion of the syntax of IRAF commands
   interpretation as a string constant (e.g., filename).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_param">
   <dt><b>param=value</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='param' Line='param=value' -->
   <dd>Keyword equals value assignment.  The value of the parameter named on the
@@ -48,24 +48,24 @@ commands: A discussion of the syntax of IRAF commands
   + or -, e.g., <span style="font-family: monospace;">"verbose+"</span> is the same as <span style="font-family: monospace;">"verbose=yes"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_redir">
   <dt><b>redir</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='redir' Line='redir' -->
   <dd>A file redirection argument, e.g.:
-  <pre>
-  &gt; file		spool output in a file
-  &lt; file		read input from a file (rather than the terminal)
-  &gt;&gt; file		append the output to a file
-  &gt;&amp; file		spool both error and regular output in a file
-  &gt;&gt;&amp; file	append both error and regular output to a file
-  &gt;[GIP]		redirect graphics output to a file, e.g, &gt;G file
-  &gt;&gt;[GIP]		append graphics output to a file, e.g, &gt;&gt;G file
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  &gt; file          spool output in a file
+  &lt; file          read input from a file (rather than the terminal)
+  &gt;&gt; file         append the output to a file
+  &gt;&amp; file         spool both error and regular output in a file
+  &gt;&gt;&amp; file        append both error and regular output to a file
+  &gt;[GIP]          redirect graphics output to a file, e.g, &gt;G file
+  &gt;&gt;[GIP]         append graphics output to a file, e.g, &gt;&gt;G file
+  </pre></div>
   </dd>
   </dl>
-  <!-- EndSection:   'ELEMENTS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A CL command is an invocation of a predefined CL task.
   A task may be one of the numerous builtin functions
@@ -96,14 +96,14 @@ commands: A discussion of the syntax of IRAF commands
   numeric or string constants, but general expressions are allowed.
   Some examples of arguments follow.
   </p>
-  <pre>
-  	"quoted string"
-  	(cos(.5)**2 + sin(.5)**2)
-  	"work" // 02
-  	k + 2			# valid only in compute mode
-  	i+3			# valid in both modes
-  	(i+3)			# same answer in both modes
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  "quoted string"
+  (cos(.5)**2 + sin(.5)**2)
+  "work" // 02
+  k + 2                   # valid only in compute mode
+  i+3                     # valid in both modes
+  (i+3)                   # same answer in both modes
+  </pre></div>
   <p>
   Within an argument the treatment of unquoted strings depends upon
   the current mode.  In command mode the string is assumed to be
@@ -147,10 +147,10 @@ commands: A discussion of the syntax of IRAF commands
   any legal CL expression.  If the parameter is boolean an alternative syntax
   called the <span style="font-family: monospace;">"switch"</span> syntax is available:
   </p>
-  <pre>
-  	param+		# same as param=yes
-  	param-		# same as param=no
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  param+          # same as param=yes
+  param-          # same as param=no
+  </pre></div>
   <p>
   A given parameter may only be assigned to once in a command line.
   </p>
@@ -174,11 +174,11 @@ commands: A discussion of the syntax of IRAF commands
   The output from one command may also be directed to the input of another
   using pipes.  The syntax is
   </p>
-  <pre>
-  	command1 | command2
-      or
-  	command1 |&amp; command2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+      command1 | command2
+  or
+      command1 |&amp; command2
+  </pre></div>
   <p>
   Here command1 and command2 are full commands, including the taskname
   and all arguments.
@@ -193,29 +193,29 @@ commands: A discussion of the syntax of IRAF commands
   as a unit, and may be submitted as a background job by following the
   command block with an <span style="font-family: monospace;">"&amp;"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Simple positional arguments only (command mode).
   </p>
-  <p>
-  	cl&gt; copy file1 file2
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; copy file1 file2
+  </pre></div>
   <p>
   2. Simple positional arguments only (compute mode).
   </p>
-  <p>
-  	cl&gt; copy (<span style="font-family: monospace;">"file1"</span>, <span style="font-family: monospace;">"file2"</span>)
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; copy ("file1", "file2")
+  </pre></div>
   <p>
   3. One positional argument, i.e., the string <span style="font-family: monospace;">"file1,file"</span>, and one keyword=value
   type argument.  Note that string need not be quoted even though it contains
   the comma, provided there are no spaces in the string.
   </p>
-  <p>
-  	cl&gt; lprint file1,file2 device=versatec
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; lprint file1,file2 device=versatec
+  </pre></div>
   <p>
   4. Syntax for i/o redirection in compute mode, as in a script.
   </p>
@@ -225,29 +225,29 @@ commands: A discussion of the syntax of IRAF commands
   <p>
   5. The same command in command mode.
   </p>
-  <p>
-  	cl&gt; type *.x &gt; spool
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type *.x &gt; spool
+  </pre></div>
   <p>
   6. Use of an arithmetic expression in command mode; the scalar value of the
   expression given as the third positional argument is added to the value
   of every pixel in image <span style="font-family: monospace;">"pix1"</span>, writing a new image <span style="font-family: monospace;">"pix2"</span> as output.
   </p>
-  <p>
-  	cl&gt; imarith pix1 + (log(4.2)+10) pix2
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith pix1 + (log(4.2)+10) pix2
+  </pre></div>
   <p>
   Many additional examples may be found in the EXAMPLES section of the
   manual pages throughout the system.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   procedure, parameters
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SYNTAX' 'ELEMENTS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

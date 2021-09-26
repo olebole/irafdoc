@@ -7,21 +7,21 @@ median: Median box filter a list of 1D or 2D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   median input output xwindow ywindow
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of filtered images. The number of input images must be the same as
@@ -29,7 +29,7 @@ median: Median box filter a list of 1D or 2D images
   output image name the original image is replaced by the filtered image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xwindow">
   <dt><b>xwindow, ywindow</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xwindow' Line='xwindow, ywindow' -->
   <dd>The size of the median filter. Xwindow and ywindow are assumed to be
@@ -37,14 +37,14 @@ median: Median box filter a list of 1D or 2D images
   up to the nearest odd integer.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zloreject">
   <dt><b>zloreject = INDEF, zhireject = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zloreject' Line='zloreject = INDEF, zhireject = INDEF' -->
   <dd>The minimum and maximum good pixel values. Zloreject and zhireject default to 
   -MAX_REAL and MAX_REAL respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The options are:
@@ -74,15 +74,15 @@ median: Median box filter a list of 1D or 2D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The value for constant value boundary extension.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   MEDIAN takes a list of input images <i>input</i> and produces a set of filtered
   output images <i>output</i>. The median filter consists of a sliding
@@ -101,40 +101,40 @@ median: Median box filter a list of 1D or 2D images
   if the majority of the pixels are less than zloreject, or to zhireject
   if the majority of pixels are greater than zhireject.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Median filter an image using a 5 by 5 window and nearest pixel boundary
   extension.
   </p>
-  <pre>
-     im&gt; median m74 m74.5by5 5 5
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; median m74 m74.5by5 5 5
+  </pre></div>
   <p>
   2. Median filter an image using a 3 by 3 window and constant boundary extension.
   </p>
-  <pre>
-     im&gt; median m74 m74.5by5 3 3 boun=const const=0.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; median m74 m74.5by5 3 3 boun=const const=0.
+  </pre></div>
   <p>
   3. Median filter the test image dev$pix, removing all pixels less than 5 or
   greater than 19935 from the filtering box.
   </p>
-  <pre>
-     im&gt; median dev$pix pix77 7 7 zlo=5 zhi=19935
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; median dev$pix pix77 7 7 zlo=5 zhi=19935
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   Median requires approximately 11 and 19 CPU seconds to filter a 512 by
   512 integer image using a 5 by 5 and 7 by 7 filter window respectively
   (SPARCStation2).
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The sort routine for the smaller kernels has been optimized. It may be
   desirable to optimize higher order kernels in future.
@@ -144,14 +144,14 @@ median: Median box filter a list of 1D or 2D images
   and should be used if the image is integer or can be quantized without
   significant loss of precision. 
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   fmedian, rmedian, frmedian
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

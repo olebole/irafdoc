@@ -7,14 +7,14 @@ tmerge: Either merge or append tables.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tmerge intable outtable option
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task is used to either merge or append tables,
   depending on the option selected by the 'option' parameter.
@@ -89,10 +89,10 @@ tmerge: Either merge or append tables.
   so the units in the output column definition would not be correct
   for those data.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>Names of the tables to be merged or appended.  This parameter will take
@@ -106,13 +106,13 @@ tmerge: Either merge or append tables.
   open both files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]' -->
   <dd>The name of the output table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_option">
   <dt><b>option = <span style="font-family: monospace;">"merge"</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "merge" [string]' -->
   <dd>allowed values:  merge | append
@@ -205,70 +205,70 @@ tmerge: Either merge or append tables.
   characters, or fraction thereof.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1. Suppose you have the following two tables.
   
   tbl1.tab:
-  	one	two	three
-  	---	---	-----
-  	1	-17	alpha
-  	2	-19	beta
-  	3	-23	gamma
+          one     two     three
+          ---     ---     -----
+          1       -17     alpha
+          2       -19     beta
+          3       -23     gamma
   
   tbl2.tab:
-  	one	three	four
-  	---	-----	----
-  	27	beta	3.14
-  	28	delta	2.72
+          one     three   four
+          ---     -----   ----
+          27      beta    3.14
+          28      delta   2.72
   
   then the statement
   
-  	cl&gt; tmerge tbl1,tbl2 mrg merge
+          cl&gt; tmerge tbl1,tbl2 mrg merge
   
   would create the following output table:
   
   mrg.tab:
-  	one	two	three	four
-  	---	---	-----	----
-  	27	-17	beta	3.14
-  	28	-19	delta	2.72
-  	3	-23	gamma	INDEF
+          one     two     three   four
+          ---     ---     -----   ----
+          27      -17     beta    3.14
+          28      -19     delta   2.72
+          3       -23     gamma   INDEF
   
   while the statement
   
-  	cl&gt; tmerge tbl1,tbl2 app append
+          cl&gt; tmerge tbl1,tbl2 app append
   
   would create the following table:
   
   app.tab:
-  	one	two	three	four
-  	---	---	-----	----
-  	1	-17	alpha	INDEF
-  	2	-19	beta	INDEF
-  	3	-23	gamma	INDEF
-  	27	INDEF	beta	3.14
-  	28	INDEF	delta	2.72
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+          one     two     three   four
+          ---     ---     -----   ----
+          1       -17     alpha   INDEF
+          2       -19     beta    INDEF
+          3       -23     gamma   INDEF
+          27      INDEF   beta    3.14
+          28      INDEF   delta   2.72
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tselect, tproject, and proto.joinlines for text files
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

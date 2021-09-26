@@ -7,15 +7,15 @@ observatory: Examine and define observatory parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   observatory command obsid [images]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_command">
   <dt><b>command = <span style="font-family: monospace;">"list"</span> (set|list|images)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='command' Line='command = "list" (set|list|images)' -->
   <dd>Command option which is one of <span style="font-family: monospace;">"set"</span>, <span style="font-family: monospace;">"list"</span>, or <span style="font-family: monospace;">"images"</span>.  The set command
@@ -27,7 +27,7 @@ observatory: Examine and define observatory parameters
   by other tasks using the observatory database facility.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obsid">
   <dt><b>obsid = <span style="font-family: monospace;">"?"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obsid' Line='obsid = "?"' -->
   <dd>Observatory identification to be set, listed, or used as the default for
@@ -38,7 +38,7 @@ observatory: Examine and define observatory parameters
   task, or <span style="font-family: monospace;">"?"</span> to list the observatories defined in the database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images to be examined with the <span style="font-family: monospace;">"images"</span> command.  The images are
@@ -46,7 +46,7 @@ observatory: Examine and define observatory parameters
   to be listed, otherwise the observatory given by <i>obsid</i> is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Verbose output?  Because there are a number of different ways in which
@@ -55,7 +55,7 @@ observatory: Examine and define observatory parameters
   ultimately selected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory' -->
   <dd>The default observatory used by tasks which use the special
@@ -65,32 +65,32 @@ observatory: Examine and define observatory parameters
   task.  There is no default to force users to set it at least once.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_name">
   <dt><b>name</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='name' Line='name' -->
   <dd>Observatory name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_longitude">
   <dt><b>longitude</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='longitude' Line='longitude' -->
   <dd>Observatory longitude given in degrees west.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_latitude">
   <dt><b>latitude</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='latitude' Line='latitude' -->
   <dd>Observatory latitude in degrees.  Positive latitudes are north and negative
   latitudes are south.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_altitude">
   <dt><b>altitude</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='altitude' Line='altitude' -->
   <dd>Observatory altitude in meters above sea level.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_timezone">
   <dt><b>timezone</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='timezone' Line='timezone' -->
   <dd>Observatory time zone.  The time zone is the number of hours west of
@@ -98,17 +98,17 @@ observatory: Examine and define observatory parameters
   Greenwich time.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_environment_variables">
   <h3>Environment variables</h3>
-  <!-- BeginSection: 'ENVIRONMENT VARIABLES' -->
-  <dl>
+  <dl id="l_obsdb">
   <dt><b>obsdb</b></dt>
   <!-- Sec='ENVIRONMENT VARIABLES' Level=0 Label='obsdb' Line='obsdb' -->
   <dd>This variable selects the observatory database.  If not defined it defaults
   to noao$lib/obsdb.dat.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory</b></dt>
   <!-- Sec='ENVIRONMENT VARIABLES' Level=0 Label='observatory' Line='observatory' -->
   <dd>This variable selects the observatory entry whenever a task uses the
@@ -116,17 +116,17 @@ observatory: Examine and define observatory parameters
   parameter <i>observatory.observatory</i> is used.
   </dd>
   </dl>
-  <!-- EndSection:   'ENVIRONMENT VARIABLES' -->
+  </section>
+  <section id="s_image_header_keywords">
   <h3>Image header keywords</h3>
-  <!-- BeginSection: 'IMAGE HEADER KEYWORDS' -->
   <p>
   The observatory identification for images is first sought under the
   image header keyword OBSERVAT.  This always takes precedence over any
   other means of defining the observatory.
   </p>
-  <!-- EndSection:   'IMAGE HEADER KEYWORDS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   OBSERVATORY PARAMETERS IN THE NOAO PACKAGE
   </p>
@@ -216,22 +216,22 @@ observatory: Examine and define observatory parameters
   for data from that observatory.  The default file noao$lib/obsdb.dat
   begins as follows:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # Observatory Parameters.  Taken from the Almanac.
   #
   # Observatories wishing to be added or make changes in the default
   # distributed database should send information to iraf@noao.edu.
   
   observatory = "kpno"
-  	name = "Kitt Peak National Observatory"
-  	longitude = 111:36.0
-  	latitude = 31:58.8
-  	altitude = 2120.
-  	timezone = 7
+          name = "Kitt Peak National Observatory"
+          longitude = 111:36.0
+          latitude = 31:58.8
+          altitude = 2120.
+          timezone = 7
   
   observatory = "ctio"
-  	&lt;etc&gt;
-  </pre>
+          &lt;etc&gt;
+  </pre></div>
   <p>
   In summary, access to observatory parameters is now done by referencing
   the image header keyword OBSERVAT and, if not defined, determine the
@@ -308,157 +308,156 @@ observatory: Examine and define observatory parameters
   local database and also send the observatory information to the
   IRAF group at NOAO for inclusion in the default database.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  List the observatory entries in the database:
   </p>
-  <pre>
-  	cl&gt; observatory list ? v+
-  	Using default observatory database: noao$lib/obsdb.dat
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; observatory list ? v+
+  Using default observatory database: noao$lib/obsdb.dat
   
-  	default: Kitt Peak National Observatory
-  	kpno: Kitt Peak National Observatory
-  	ctio: Cerro Tololo Interamerican Observatory
-  	eso: European Southern Observatory
-  	lick: Lick Observatory
-  	mmt: Whipple Observatory
-  	cfht: Canada-France-Hawaii Telescope
-  	lapalma: Roque de los Mucachos, La Palma
-  </pre>
+  default: Kitt Peak National Observatory
+  kpno: Kitt Peak National Observatory
+  ctio: Cerro Tololo Interamerican Observatory
+  eso: European Southern Observatory
+  lick: Lick Observatory
+  mmt: Whipple Observatory
+  cfht: Canada-France-Hawaii Telescope
+  lapalma: Roque de los Mucachos, La Palma
+  </pre></div>
   <p>
   2.  Set the observatory parameters for Cerro Tololo:
   </p>
-  <pre>
-  	cl&gt; observatory set ctio
-  	Observatory parameters for Cerro Tololo...
-  		observatory = ctio
-  		timezone = 5
-  		altitude = 2215.
-  		latitude = -30:09.9
-  		longitude = 70:48.9
-  	         name = 'Cerro Tololo Interamerican Observatory'
-  	cl&gt; lpar observatory
-  	      command = "set"		Command (set|list|images)
-  	     argument = ctio		Observatory or images
-  	 (observatory = "ctio")         Observatory identification
-  	        (name = "Cerro Tololo...") Observatory name
-  	   (longitude = 70.815)         Observatory longitude (degrees)
-  	    (latitude = -30.165)        Observatory latitude (degrees)
-  	    (altitude = 2215.)          Observatory altitude (meters)
-  	    (timezone = 4)              Observatory time zone
-  	     (verbose = no)             Verbose output?
-  	        (mode = "q")            
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; observatory set ctio
+  Observatory parameters for Cerro Tololo...
+          observatory = ctio
+          timezone = 5
+          altitude = 2215.
+          latitude = -30:09.9
+          longitude = 70:48.9
+           name = 'Cerro Tololo Interamerican Observatory'
+  cl&gt; lpar observatory
+        command = "set"           Command (set|list|images)
+       argument = ctio            Observatory or images
+   (observatory = "ctio")         Observatory identification
+          (name = "Cerro Tololo...") Observatory name
+     (longitude = 70.815)         Observatory longitude (degrees)
+      (latitude = -30.165)        Observatory latitude (degrees)
+      (altitude = 2215.)          Observatory altitude (meters)
+      (timezone = 4)              Observatory time zone
+       (verbose = no)             Verbose output?
+          (mode = "q")
+  </pre></div>
   <p>
   3.  Set the observatory parameters to use the environment variable
   <span style="font-family: monospace;">"observatory"</span> and verify it.
   </p>
-  <pre>
-  	cl&gt; set observatory=cfht
-  	cl&gt; observatory list observatory
-  	Observatory parameters for Canada-France-Hawaii Telescope
-  		observatory = cfht
-  		timezone = 10
-  		altitude = 4215
-  		latitude = 19:49.6
-  		longitude = 155:28.3
-  		name = 'Canada-France-Hawaii Telescope'
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; set observatory=cfht
+  cl&gt; observatory list observatory
+  Observatory parameters for Canada-France-Hawaii Telescope
+          observatory = cfht
+          timezone = 10
+          altitude = 4215
+          latitude = 19:49.6
+          longitude = 155:28.3
+          name = 'Canada-France-Hawaii Telescope'
+  </pre></div>
   <p>
   4.  Change the default observatory database and verify verbosely:
   </p>
-  <pre>
-  	cl&gt; set observatory="sco"
-  	cl&gt; set obsdb="/local/iraf/obsdb.dat"
-  	cl&gt; type obsdb$
-  	# Local Observatory Parameters.
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; set observatory="sco"
+  cl&gt; set obsdb="/local/iraf/obsdb.dat"
+  cl&gt; type obsdb$
+  # Local Observatory Parameters.
   
-  	observatory = "sco"
-  		name = "Small College Observatory"
-  		longitude = 100:20.0
-  		latitude = 35:58.8
-  		altitude = 212.
-  		timezone = 6
-  	cl&gt; observ set observatory v+
-  	Using database defined by 'obsdb' environment variable:
-  		/tmp/test/obsdb.dat
-  	Using obs... defined by 'obs...' environment variable: sco
-  	Using observatory parameters for database entry: sco
-  	Observatory parameters for Small College Observatory
-  		observatory = sco
-  		timezone = 6
-  		altitude = 212.
-  		latitude = 35:58.8
-  		longitude = 100:20.0
-  		name = 'Small College Observatory'
-  </pre>
+  observatory = "sco"
+          name = "Small College Observatory"
+          longitude = 100:20.0
+          latitude = 35:58.8
+          altitude = 212.
+          timezone = 6
+  cl&gt; observ set observatory v+
+  Using database defined by 'obsdb' environment variable:
+          /tmp/test/obsdb.dat
+  Using obs... defined by 'obs...' environment variable: sco
+  Using observatory parameters for database entry: sco
+  Observatory parameters for Small College Observatory
+          observatory = sco
+          timezone = 6
+          altitude = 212.
+          latitude = 35:58.8
+          longitude = 100:20.0
+          name = 'Small College Observatory'
+  </pre></div>
   <p>
   5.  List the observatory assigned to some images with a default observatory
   determined either by the <span style="font-family: monospace;">"observatory"</span> environment variable or that set
   in the observatory task.
   </p>
-  <pre>
-  	cl&gt; observ images observatory dev$pix,demoobj1
-  	Observatory parameters for Small College Observatory
-  		observatory = sco
-  		timezone = 6
-  		altitude = 212.
-  		latitude = 35:58.8
-  		longitude = 100:20.0
-  		name = 'Small College Observatory'
-  		Images: dev$pix (default observatory)
-  	Observatory parameters for Kitt Peak National Observatory
-  		observatory = kpno
-  		timezone = 7
-  		altitude = 2120.
-  		latitude = 31:58.8
-  		longitude = 111:36.0
-  		name = 'Kitt Peak National Observatory'
-  		Images: demoobj1 (OBSERVAT keyword)
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; observ images observatory dev$pix,demoobj1
+  Observatory parameters for Small College Observatory
+          observatory = sco
+          timezone = 6
+          altitude = 212.
+          latitude = 35:58.8
+          longitude = 100:20.0
+          name = 'Small College Observatory'
+          Images: dev$pix (default observatory)
+  Observatory parameters for Kitt Peak National Observatory
+          observatory = kpno
+          timezone = 7
+          altitude = 2120.
+          latitude = 31:58.8
+          longitude = 111:36.0
+          name = 'Kitt Peak National Observatory'
+          Images: demoobj1 (OBSERVAT keyword)
+  </pre></div>
   <p>
   6.  Set explicit observatory parameters:
   </p>
-  <pre>
-  	cl&gt; epar observatory
-  	&lt;set observatory parameters&gt;
-  	cl&gt; observ list obspars
-  	Observatory parameters for North Pole
-  		observatory = obspars
-  		timezone = 0
-  		altitude = 0.
-  		latitude = 90.
-  		longitude = 0.
-  		name = 'North Pole'
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; epar observatory
+  &lt;set observatory parameters&gt;
+  cl&gt; observ list obspars
+  Observatory parameters for North Pole
+          observatory = obspars
+          timezone = 0
+          altitude = 0.
+          latitude = 90.
+          longitude = 0.
+          name = 'North Pole'
+  </pre></div>
   <p>
   7.  Use observatory parameters in expressions:
   </p>
-  <pre>
-  	cl&gt; observ set kpno
-  	Observatory parameters for Kitt Peak National Observatory
-  		observatory = kpno
-  		timezone = 7
-  		altitude = 2120.
-  		latitude = 31:58.8
-  		longitude = 111:36.0
-  		name = 'Kitt Peak National Observatory'
-  	cl&gt; = observ.lat
-  	31.98
-  	cl&gt; = sin (3.14159/180 * observ.lat)
-  	0.52962280742153
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; observ set kpno
+  Observatory parameters for Kitt Peak National Observatory
+          observatory = kpno
+          timezone = 7
+          altitude = 2120.
+          latitude = 31:58.8
+          longitude = 111:36.0
+          name = 'Kitt Peak National Observatory'
+  cl&gt; = observ.lat
+  31.98
+  cl&gt; = sin (3.14159/180 * observ.lat)
+  0.52962280742153
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   Tasks in astutil, imred, onedspec, and twodspec.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ENVIRONMENT VARIABLES' 'IMAGE HEADER KEYWORDS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

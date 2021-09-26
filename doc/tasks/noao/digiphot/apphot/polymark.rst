@@ -7,21 +7,21 @@ polymark: Create polygon lists for polyphot
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   polymark image
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>The list of input images used to define the polygons.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "default"' -->
   <dd>The input / output center positions file. The center positions for each
@@ -35,7 +35,7 @@ polymark: Create polygon lists for polyphot
   the next available version of the file. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_polygons">
   <dt><b>polygons = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='polygons' Line='polygons = "default"' -->
   <dd>The name of the polygons file. The vertices of each polygon  are read from or
@@ -48,19 +48,19 @@ polymark: Create polygon lists for polyphot
   polygon files must be equal to the number of image files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image cursor or image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from or written
@@ -127,7 +127,7 @@ polymark: Create polygon lists for polyphot
   wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -135,13 +135,13 @@ polymark: Create polygon lists for polyphot
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The standard graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The default display device.  Display may be set to the apphot package
@@ -151,9 +151,9 @@ polymark: Create polygon lists for polyphot
   <span style="font-family: monospace;">"stdgraph"</span> enables POLYMARK to work interactively from a contour plot.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   POLYMARK creates and / or displays center position and polygons files
   suitable for input to POLYPHOT. For each image in the input list POLYMARK
@@ -205,257 +205,184 @@ polymark: Create polygon lists for polyphot
   effect of cacheing in interactive is can be quite noticeable if measurements
   of objects in the top and bottom halfs of the image are alternated.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The following interactive keystroke and colon commands are available.
   </p>
-  <pre>
-  	Interactive Keystroke Commands
+  <div class="highlight-default-notranslate"><pre>
+          Interactive Keystroke Commands
   
-  ?	Print help
-  :	Colon commands 
-  d	Plot radial profile of star near cursor
-  g	Define the current polygonal aperture
-  f	Draw the current polygon on the display
-  spbar	Draw the current polygon on the display, output the polygon
-  r	Rewind the polygon list
-  m	Draw the next polygon in the polygon list on the display
-  l	Draw all the remaining polygons in the list on the display
-  q	Exit
+  ?       Print help
+  :       Colon commands
+  d       Plot radial profile of star near cursor
+  g       Define the current polygonal aperture
+  f       Draw the current polygon on the display
+  spbar   Draw the current polygon on the display, output the polygon
+  r       Rewind the polygon list
+  m       Draw the next polygon in the polygon list on the display
+  l       Draw all the remaining polygons in the list on the display
+  q       Exit
   
-  	Colon commands
+          Colon commands
   
-  :m [n]	Draw the next [nth] polygon in the polygon list on the display
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  :m [n]  Draw the next [nth] polygon in the polygon list on the display
+  </pre></div>
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   A sample polygons file and accompanying coordinates file is listed below.
   </p>
-  <pre>
-  	# Sample Polygons File (2 polygons)
+  <div class="highlight-default-notranslate"><pre>
+  # Sample Polygons File (2 polygons)
   
-  	200.5  200.5
-  	300.5  200.5
-  	300.5  300.5
-  	200.5  300.5
-  	;
-  	100.4  100.4
-  	120.4  100.4
-  	120.4  120.4
-  	100.4  120.4
-  	;
-  </pre>
-  <pre>
-  	# Sample Coordinates File (2 groups, 1 for each polygon)
+  200.5  200.5
+  300.5  200.5
+  300.5  300.5
+  200.5  300.5
+  ;
+  100.4  100.4
+  120.4  100.4
+  120.4  120.4
+  100.4  120.4
+  ;
+  </pre></div>
+  <div class="highlight-default-notranslate"><pre>
+  # Sample Coordinates File (2 groups, 1 for each polygon)
   
-  	123.4  185.5
-  	110.4  130.4
-  	150.9  200.5
-  	;
-  	85.6   35.7
-  	400.5  300.5
-  	69.5   130.5
-  	;
-  </pre>
-  <!-- EndSection:   'OUTPUT' -->
+  123.4  185.5
+  110.4  130.4
+  150.9  200.5
+  ;
+  85.6   35.7
+  400.5  300.5
+  69.5   130.5
+  ;
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a coordinate list and polygon file using the image display and
   image display cursor. Use polymark to both create and display the 
   polygon and polygon center lists.
   </p>
-  <pre>
-  	ap&gt; display dev$ypix 1 fi+ 
-  
-  	... display the image
-  
-  	ap&gt; polymark dev$ypix display=imdg
-  
-  	... type ? for an optional help page 
-  
-  	... type g to enter the "define a polygon" menu
-  	... move the cursor to the first vertex, tap the space bar
-  	    to mark the vertex, and repeat for each vertex
-  	... type q to quit the "define a polygon" menu
-  	... mark each vertex only once, POLYPHOT will close the
-  	    polygon for you
-  
-  	... move the cursor to the desired polygon center and
-  	    tap the space bar to record the polygon
-  	... repeat for all desired polygon centers
-  
-  	... type g to define the next polygon
-  	... move the cursor to the first vertex, tap the space bar
-  	    to mark the vertex and repeat for each vertex
-  	... type q to quit the polygon menu
-  	... mark each vertex only once, POLYPHOT will close the
-  	    polygon for you
-  
-  	... move the cursor to the desired polygon center and
-  	    tap the space bar
-  	... repeat for all desired polygon centers
-  
-  	... type q to quit and q to confirm the quit
-  
-  	... output will appear in ypix.coo.1 and ypix.ver.1
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix 1 fi+
   
   
-  	ap&gt; display dev$ypix 2 fi+ 
-  
-  	... display the image
-  
-  	ap&gt; polymark dev$ypix coords=ypix.coo.1 polygons=ypix.ver.1 \<br>
-  	    display=imdg
-  
-  	... type m to mark the first polygon / polygon center on the display
-  
-  	... type m to mark the next polygon / polygon center on the display
-  
-  	... type l to mark the remaining polygons
-  
-  	... type q to quit and q to confirm the quit
+  ap&gt; polymark dev$ypix display=imdg
   
   
-  	ap&gt; display dev$ypix 2 fi+ 
+      to mark the vertex, and repeat for each vertex
+      polygon for you
   
-  	... redisplay the image
+      tap the space bar to record the polygon
   
-  	ap&gt; polymark dev$ypix coords="" polygons=ypix.ver.1 \<br>
-  	    display=imdg
+      to mark the vertex and repeat for each vertex
+      polygon for you
   
-  	... type l to mark the polygon list, note that since there is
-  	    no coords file the polygons are not shifted
+      tap the space bar
   
-  	... type q to quit and q to confirm the quit
-  </pre>
+  
+  
+  ap&gt; display dev$ypix 2 fi+
+  
+  
+  ap&gt; polymark dev$ypix coords=ypix.coo.1 polygons=ypix.ver.1 \<br>
+      display=imdg
+  
+  
+  
+  
+  
+  ap&gt; display dev$ypix 2 fi+
+  
+  
+  ap&gt; polymark dev$ypix coords="" polygons=ypix.ver.1 \<br>
+      display=imdg
+  
+      no coords file the polygons are not shifted
+  
+  </pre></div>
   <p>
   2. Repeat the previous example using an image section.
   </p>
-  <pre>
-  	ap&gt; display dev$ypix[150:450,150:450] 1 fi+ 
-  
-  	... display the image
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix[150:450,150:450] 1 fi+
   
   
-  	ap&gt; polymark dev$ypix[150:450,150:450]] display=imdg wcsout=tv
-  
-  	... type ? for an optional help page 
-  
-  	... type g to enter the "define a polygon" menu
-  	... move the cursor to the first vertex, tap the space bar
-  	    to mark the vertex, and repeat for each vertex
-  	... type q to quit the "define a polygon" menu
-  	... mark each vertex only once, POLYPHOT will close the
-  	    polygon for you
-  
-  	... move the cursor to the desired polygon center and
-  	    tap the space bar to record the polygon
-  	... repeat for all desired polygon centers
-  
-  	... type g to define the next polygon
-  	... move the cursor to the first vertex, tap the space bar
-  	    to mark the vertex and repeat for each vertex
-  	... type q to quit the polygon menu
-  	... mark each vertex only once, POLYPHOT will close the
-  	    polygon for you
-  
-  	... move the cursor to the desired polygon center and
-  	    tap the space bar
-  	... repeat for all desired polygon centers
-  
-  	... type q to quit and q to confirm the quit
-  
-  	... output will appear in ypix.coo.2 and ypix.ver.2
+  ap&gt; polymark dev$ypix[150:450,150:450]] display=imdg wcsout=tv
   
   
-  	ap&gt; display dev$ypix[150:450,150:450] 2 fi+ 
+      to mark the vertex, and repeat for each vertex
+      polygon for you
   
-  	... display the image
+      tap the space bar to record the polygon
+  
+      to mark the vertex and repeat for each vertex
+      polygon for you
+  
+      tap the space bar
   
   
-  	ap&gt; polymark dev$ypix[150:450,150:450] coords=ypix.coo.2 \<br>
-              polygons=ypix.ver.2 display=imdg wcsin=tv
   
-  	... type m to mark the first polygon / polygon center on the display
+  ap&gt; display dev$ypix[150:450,150:450] 2 fi+
   
-  	... type m to mark the next polygon / polygon center on the display
   
-  	... type l to mark the remaining polygons
+  ap&gt; polymark dev$ypix[150:450,150:450] coords=ypix.coo.2 \<br>
+      polygons=ypix.ver.2 display=imdg wcsin=tv
   
-  </pre>
+  
+  
+  </pre></div>
   <p>
   3. Repeat example 1 using a contour plot instead of the image display.
   </p>
-  <pre>
-  	ap&gt; show stdimcur
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; show stdimcur
   
-  	... record the default value of stdimcur
   
-  	ap&gt; set stdimcur = stdgraph
+  ap&gt; set stdimcur = stdgraph
   
-  	... define the image cursor to be the graphics cursor
   
-  	ap&gt; contour dev$ypix
+  ap&gt; contour dev$ypix
   
-  	... draw a contour plot on the screen
   
-  	ap&gt; contour dev$ypix &gt;G ypix.plot1
+  ap&gt; contour dev$ypix &gt;G ypix.plot1
   
-  	... store the contour plot of dev$ypix in the file ypix.plot1
   
-  	ap&gt; polymark dev$ypix display=stdgraph
+  ap&gt; polymark dev$ypix display=stdgraph
   
-  	... type g to enter the define a polygon menu
-  	... move the cursor to the first vertex, tap the space bar
-  	    to mark the vertex, and repeat for each vertex
-  	... type q to quit the define a polygon menu
-  	... mark each vertex only once, POLYPHOT will close the
-  	    polygon for you
+      to mark the vertex, and repeat for each vertex
+      polygon for you
   
-  	... move the cursor to the desired polygon center and
-  	    tap the space bar to record the polygon
-  	... repeat for all desired polygon centers
+      tap the space bar to record the polygon
   
-  	... type g to define the next polygon
-  	... move the cursor to the first vertex, tap the space bar
-  	    to mark the vertex and repeat for each vertex
-  	... type q to quit the define a polygon menu
-  	... mark each vertex only once, POLYPHOT will close the
-  	    polygon for you
+      to mark the vertex and repeat for each vertex
+      polygon for you
   
-  	... move the cursor to the desired polygon center and
-  	    tap the space bar
-  	... repeat for all desired polygon centers
+      tap the space bar
   
-  	... type r to rewind the coordinate and polygon lists
   
-  	... type :.read ypix.plot1 to reread the contour plot
   
-  	... type l to display all the polygons ...
   
-  	... type q to quit and q again to confirm the  quit
   
-  	... output will appear in ypix.ver.3 and ypix.coo.3
   
-  	ap&gt; contour dev$ypix
+  ap&gt; contour dev$ypix
   
-  	... redraw the contour plot
   
-  	ap&gt; polymark dev$ypix coords="ypix.coo.3" polygons=ypix.ver.3 \<br>
-  	    display=stdgraph
+  ap&gt; polymark dev$ypix coords="ypix.coo.3" polygons=ypix.ver.3 \<br>
+      display=stdgraph
   
-  	ap&gt; set stdimcur = &lt;default&gt;
+  ap&gt; set stdimcur = &lt;default&gt;
   
-  	... reset the value of the stdimcur parameter
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   It is the responsibility of the user to make sure that the image displayed
   in the image display is the same as the image specified by the image parameter.
@@ -476,14 +403,14 @@ polymark: Create polygon lists for polyphot
   It is not necessary to close the polygon when drawing on the display.
   POLYMARK will complete the polygon for you.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   polyphot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'OUTPUT' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,28 +7,28 @@ txselect: Select records from a list of apphot/daophot text databases
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   txselect textfiles outfiles expr
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_textfiles">
   <dt><b>textfiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles' -->
   <dd>The APPHOT/DAOPHOT text database(s) containing the records from which the
   selection is to be made.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outfiles">
   <dt><b>outfiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outfiles' Line='outfiles' -->
   <dd>The output APPHOT/DAOPHOT text database(s) containing the selected records.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_expr">
   <dt><b>expr</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
   <dd>The boolean expression to be evaluated once for each record.
@@ -37,9 +37,9 @@ txselect: Select records from a list of apphot/daophot text databases
   If <i>expr</i> = yes, a copy is made of the input file.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   TXSELECT selects a subset of the records
   from a set of  APPHOT/DAOPHOT text databases
@@ -64,14 +64,14 @@ txselect: Select records from a list of apphot/daophot text databases
   <p>
   The following logical operators can be used in the boolean expression. 
   </p>
-  <pre>
-  	equal		  ==	not equal		!=
-  	less than	  &lt;	less than or equal	&lt;=
-  	greater than	  &gt;	greater than or equal	&gt;=
-  	or		  ||	and			&amp;&amp;
-  	negation	  !	pattern match		?=
-  	concatenation	  //
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  equal             ==    not equal               !=
+  less than         &lt;     less than or equal      &lt;=
+  greater than      &gt;     greater than or equal   &gt;=
+  or                ||    and                     &amp;&amp;
+  negation          !     pattern match           ?=
+  concatenation     //
+  </pre></div>
   <p>
   The pattern match character ?=  takes a
   string expression as its first argument and a pattern as its second argument.
@@ -80,71 +80,71 @@ txselect: Select records from a list of apphot/daophot text databases
   The meta-characters themselves can be matched by preceeding them with the escape
   character.  The meta-characters listed below. 
   </p>
-  <pre>
-  	beginning of string	^	end of string		$
-  	one character		?	zero or more characters	*
-  	white space		#	escape character	\<br>
-  	ignore case		{	end ignore case		}
-  	begin character class	[	end character class	]
-  	not, in char class	^	range, in char class	-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  beginning of string     ^       end of string           $
+  one character           ?       zero or more characters *
+  white space             #       escape character        \<br>
+  ignore case             {       end ignore case         }
+  begin character class   [       end character class     ]
+  not, in char class      ^       range, in char class    -
+  </pre></div>
   <p>
   The boolean expression may also include arithmetic operators and functions.
   The following arithmetic operators and functions are supported.
   </p>
-  <pre>
-  addition		+		subtraction		-
-  multiplication		*		division		/
-  negation		-		exponentiation		**
-  absolute value		abs(x)		cosine			cos(x)
-  sine			sin(x)		tangent			tan(x)
-  arc cosine		acos(x)		arc sine		asin(x)
-  arc tangent		atan(x)		arc tangent		atan2(x,y)
-  exponential		exp(x)		square root		sqrt(x)
-  natural log		log(x)		common log		log10(x)
-  minimum			min(x,y)	maximum			max(x,y)
-  convert to integer	int(x)		convert to real		real(x)
-  nearest integer		nint(x)		modulo			mod(x)
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  addition                +               subtraction             -
+  multiplication          *               division                /
+  negation                -               exponentiation          **
+  absolute value          abs(x)          cosine                  cos(x)
+  sine                    sin(x)          tangent                 tan(x)
+  arc cosine              acos(x)         arc sine                asin(x)
+  arc tangent             atan(x)         arc tangent             atan2(x,y)
+  exponential             exp(x)          square root             sqrt(x)
+  natural log             log(x)          common log              log10(x)
+  minimum                 min(x,y)        maximum                 max(x,y)
+  convert to integer      int(x)          convert to real         real(x)
+  nearest integer         nint(x)         modulo                  mod(x)
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Select the records from the output of the APPHOT CENTER task for
   which 100. &lt;= XCENTER &lt;= 200. and 300. &lt;= YCENTER &lt;= 400.
   </p>
-  <pre>
-  	pt&gt; txselect m92.ctr.1 m92out \<br>
-  	    "XCE &gt;= 100. &amp;&amp; XCE &lt;= 200. &amp;&amp; YCE &gt;= 300. &amp;&amp; YCE &lt;= 400."
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; txselect m92.ctr.1 m92out \<br>
+      "XCE &gt;= 100. &amp;&amp; XCE &lt;= 200. &amp;&amp; YCE &gt;= 300. &amp;&amp; YCE &lt;= 400."
+  </pre></div>
   <p>
   2. Select the records from the output of the APPHOT PHOT task for which
   the first magnitude is not equal to INDEF.
   </p>
-  <pre>
-  	pt&gt; txselect n4147.mag.2 n4147out "MAG[1] != INDEF"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; txselect n4147.mag.2 n4147out "MAG[1] != INDEF"
+  </pre></div>
   <p>
   3. Select the records from the output of the DAOPHOT ALLSTAR task
      for which CHI &lt;= 5.0 and MERR &lt;= .10 magnitudes.
   </p>
-  <pre>
-  	pt&gt; txselect m92b.al.1 m92out "CHI &lt;= 5.0 &amp;&amp; MERR &lt;= 1.0"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; txselect m92b.al.1 m92out "CHI &lt;= 5.0 &amp;&amp; MERR &lt;= 1.0"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   TXSELECT does not allow arrays in the expression field.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   images.hselect,images.hedit,ptools.tbselect,tables.tselect,ptools.pselect
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

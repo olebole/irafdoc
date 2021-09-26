@@ -7,21 +7,21 @@ pdump: Print selected fields from a list of daophot databases
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   pdump infiles fields expr
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_infiles">
   <dt><b>infiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles' -->
   <dd>The APPHOT/DAOPHOT databases containing the fields to be dumped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fields">
   <dt><b>fields</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields' -->
   <dd>A template defining the fields to be dumped from each record.
@@ -40,7 +40,7 @@ pdump: Print selected fields from a list of daophot databases
   the order in which they are specified in the template.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_expr">
   <dt><b>expr</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
   <dd>The boolean expression to be evaluated once per record.
@@ -50,7 +50,7 @@ pdump: Print selected fields from a list of daophot databases
   printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_headers">
   <dt><b>headers = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='headers' Line='headers = no' -->
   <dd>Dump the APPHOT/DAOPHOT database field headers. The selected
@@ -59,16 +59,16 @@ pdump: Print selected fields from a list of daophot databases
   and format information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_parameters">
   <dt><b>parameters = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='parameters' Line='parameters = yes' -->
   <dd>Print the keyword parameters records on the
   standard output if <i>headers</i> = yes.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   PDUMP selects a subset of fields specified by the <i>fields</i>
   parameter from an APPHOT/DAOPHOT database or a list of databases
@@ -116,14 +116,14 @@ pdump: Print selected fields from a list of daophot databases
   <p>
   The following logical operators can be used in the boolean expression. 
   </p>
-  <pre>
-  	equal		  ==	not equal		!=
-  	less than	  &lt;	less than or equal	&lt;=
-  	greater than	  &gt;	greater than or equal	&gt;=
-  	or		  ||	and			&amp;&amp;
-  	negation	  !	pattern match		?=
-  	concatenation	  //
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  equal             ==    not equal               !=
+  less than         &lt;     less than or equal      &lt;=
+  greater than      &gt;     greater than or equal   &gt;=
+  or                ||    and                     &amp;&amp;
+  negation          !     pattern match           ?=
+  concatenation     //
+  </pre></div>
   <p>
   The pattern match character ?=  takes a
   string expression as its first argument and a pattern as its second argument.
@@ -132,84 +132,84 @@ pdump: Print selected fields from a list of daophot databases
   The meta-characters themselves can be matched by preceeding them with the escape
   character.  The meta-characters listed below. 
   </p>
-  <pre>
-  	beginning of string	^	end of string		$
-  	one character		?	zero or more characters	*
-  	white space		#	escape character	\<br>
-  	ignore case		{	end ignore case		}
-  	begin character class	[	end character class	]
-  	not, in char class	^	range, in char class	-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  beginning of string     ^       end of string           $
+  one character           ?       zero or more characters *
+  white space             #       escape character        \<br>
+  ignore case             {       end ignore case         }
+  begin character class   [       end character class     ]
+  not, in char class      ^       range, in char class    -
+  </pre></div>
   <p>
   The expression may also include arithmetic operators and functions.
   The following arithmetic operators and functions are supported.
   </p>
-  <pre>
-  addition		+		subtraction		-
-  multiplication		*		division		/
-  negation		-		exponentiation		**
-  absolute value		abs(x)		cosine			cos(x)
-  sine			sin(x)		tangent			tan(x)
-  arc cosine		acos(x)		arc sine		asin(x)
-  arc tangent		atan(x)		arc tangent		atan2(x,y)
-  exponential		exp(x)		square root		sqrt(x)
-  natural log		log(x)		common log		log10(x)
-  minimum			min(x,y)	maximum			max(x,y)
-  convert to integer	int(x)		convert to real		real(x)
-  nearest integer		nint(x)		modulo			mod(x)
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  addition                +               subtraction             -
+  multiplication          *               division                /
+  negation                -               exponentiation          **
+  absolute value          abs(x)          cosine                  cos(x)
+  sine                    sin(x)          tangent                 tan(x)
+  arc cosine              acos(x)         arc sine                asin(x)
+  arc tangent             atan(x)         arc tangent             atan2(x,y)
+  exponential             exp(x)          square root             sqrt(x)
+  natural log             log(x)          common log              log10(x)
+  minimum                 min(x,y)        maximum                 max(x,y)
+  convert to integer      int(x)          convert to real         real(x)
+  nearest integer         nint(x)         modulo                  mod(x)
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Select the fields XCENTER and YCENTER from the output of the APPHOT
   CENTER task.
   </p>
-  <pre>
-      pt&gt; pdump image.ctr.3 "XCENTER,YCENTER" yes
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; pdump image.ctr.3 "XCENTER,YCENTER" yes
+  </pre></div>
   <p>
   2. Select the fields XCENTER and YCENTER from the output of the APPHOT
   CENTER task for all records with YCENTER &gt; 100.0.
   </p>
-  <pre>
-      pt&gt; pdump image.ctr.3 "XCENTER,YCENTER" "YCENTER &gt; 100.0"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; pdump image.ctr.3 "XCENTER,YCENTER" "YCENTER &gt; 100.0"
+  </pre></div>
   <p>
   3. Select the fields ID, XCENTER, YCENTER and the first three magnitudes
   from the output of the APPHOT PHOT task. In the case of STSDAS table
   databases it may be necessary to escape the leading square bracket.
   </p>
-  <pre>
-      pt&gt; pdump image.mag.3 "ID,XCEN,YCEN,MAG[1],MAG[2],MAG[3]" yes
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; pdump image.mag.3 "ID,XCEN,YCEN,MAG[1],MAG[2],MAG[3]" yes
   
-  		   or
+                 or
   
-      pt&gt; pdump image.mag.3 "ID,XCEN,YCEN,MAG\[1],MAG\[2],MAG\[3]" yes
-  </pre>
+  pt&gt; pdump image.mag.3 "ID,XCEN,YCEN,MAG\[1],MAG\[2],MAG\[3]" yes
+  </pre></div>
   <p>
   4. Select the ID, XCENTER, YCENTER, MSKY and MAG fields from the output
   of the DAOPHOT NSTAR task. Print the headers and parameters as well.
   </p>
-  <pre>
-      pt&gt; pdump image.nst.3 "ID,XCENTER,YCENTER,MSKY,MAG"  \<br>
-  	yes headers+ parameters+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; pdump image.nst.3 "ID,XCENTER,YCENTER,MSKY,MAG"  \<br>
+      yes headers+ parameters+
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Users should not dump more fields than fill a 161 character textline
   as IRAF does not currently fully support longer text lines.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ptools.txdump,ptools.tbdump,tables.tdump
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

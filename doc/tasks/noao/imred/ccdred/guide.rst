@@ -7,8 +7,8 @@ guide: Introductory guide to using the CCDRED package
 
 .. raw:: html
 
+  <section id="s_1__introduction">
   <h3>1. introduction</h3>
-  <!-- BeginSection: '1. Introduction' -->
   <p>
        This guide provides a brief description of the IRAF CCD reduction
   package <b>ccdred</b> and examples of reducing simple CCD data.  It is a
@@ -110,9 +110,9 @@ guide: Introductory guide to using the CCDRED package
   documentation is indicated in the discussion and also in the
   <b>References</b> section.
   </p>
-  <!-- EndSection:   '1. Introduction' -->
+  </section>
+  <section id="s_2__getting_started">
   <h3>2. getting started</h3>
-  <!-- BeginSection: '2. Getting Started' -->
   <p>
        The first step is to load <b>ccdred</b>.  This is done by loading
   the <b>noao</b> package, followed by the image reduction package
@@ -124,20 +124,20 @@ guide: Introductory guide to using the CCDRED package
        When you load the <b>ccdred</b> package the menu of tasks or commands
   is listed.  This appears as follows:
   </p>
-  <pre>
-      cl&gt; ccdred
-        badpiximage       ccdtest           mkfringecor       setinstrument
-        ccdgroups         combine           mkillumcor        zerocombine
-        ccdhedit          cosmicrays        mkillumflat       
-        ccdlist           darkcombine       mkskycor          
-        ccdproc           flatcombine       mkskyflat         
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdred
+    badpiximage       ccdtest           mkfringecor       setinstrument
+    ccdgroups         combine           mkillumcor        zerocombine
+    ccdhedit          cosmicrays        mkillumflat
+    ccdlist           darkcombine       mkskycor
+    ccdproc           flatcombine       mkskyflat
+  </pre></div>
   <p>
   A summary of the tasks and additional help topics is obtained by typing:
   </p>
-  <p>
-      cl&gt; help
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help
+  </pre></div>
   <p>
   This list and how to get additional help on specific topics is described
   in the <b>References</b> section at the end of this guide.
@@ -148,12 +148,12 @@ guide: Introductory guide to using the CCDRED package
   should tell you the instrument identification, but if not a list
   of known instruments may be listed by using <span style="font-family: monospace;">'?'</span> for the instrument name.
   </p>
-  <pre>
-      cl&gt; setinstrument
-      Instrument ID (type ? for a list) <i>&lt;enter instrument id or ?&gt;</i>
-          &lt;Set ccdred package parameters using eparam&gt;
-          &lt;Set ccdproc task parameters using eparam&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; setinstrument
+  Instrument ID (type ? for a list) <i>&lt;enter instrument id or ?&gt;</i>
+      &lt;Set ccdred package parameters using eparam&gt;
+      &lt;Set ccdproc task parameters using eparam&gt;
+  </pre></div>
   <p>
   This task sets the default parameters and then allows you to modify the
   package parameters and the processing parameters using the parameter
@@ -304,9 +304,9 @@ guide: Introductory guide to using the CCDRED package
   sufficient memory the calibration images may be kept in memory during
   the task execution.
   </p>
-  <!-- EndSection:   '2. Getting Started' -->
+  </section>
+  <section id="s_3__processing_your_data">
   <h3>3. processing your data</h3>
-  <!-- BeginSection: '3. Processing Your Data' -->
   <p>
        The processing path depends on the type of data, the type of
   instrument, types of calibration images, and the observing
@@ -325,18 +325,18 @@ guide: Introductory guide to using the CCDRED package
   containing lists of images of a particular CCD image type).  To get a
   quick listing type:
   </p>
-  <pre>
-      cl&gt; ccdlist *.imh
-      ccd001.imh[544,512][short][unknown][V]:FOCUS L98-193
-      ccd007.imh[544,512][short][object][V]:N2968 V 600s
-      ccd015.imh[544,512][short][object][B]:N3098 B 500s
-      ccd024.imh[544,512][short][object][R]:N4036 R 600s
-      ccd045.imh[544,512][short][flat][V]:dflat 5s
-      ccd066.imh[544,512][short][flat][B]:dflat 5s
-      ccd103.imh[544,512][short][flat][R]:dflat 5s
-      ccd104.imh[544,512][short][zero][]:bias
-      ccd105.imh[544,512][short][dark][]:dark 3600s
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdlist *.imh
+  ccd001.imh[544,512][short][unknown][V]:FOCUS L98-193
+  ccd007.imh[544,512][short][object][V]:N2968 V 600s
+  ccd015.imh[544,512][short][object][B]:N3098 B 500s
+  ccd024.imh[544,512][short][object][R]:N4036 R 600s
+  ccd045.imh[544,512][short][flat][V]:dflat 5s
+  ccd066.imh[544,512][short][flat][B]:dflat 5s
+  ccd103.imh[544,512][short][flat][R]:dflat 5s
+  ccd104.imh[544,512][short][zero][]:bias
+  ccd105.imh[544,512][short][dark][]:dark 3600s
+  </pre></div>
   <p>
        The example shows only a sample of the images.  The short format
   listing tells you the name of the image, its size and pixel type, the
@@ -351,20 +351,20 @@ guide: Introductory guide to using the CCDRED package
   <i>ccdtype</i> which selects a particular type of image.  To list
   only the object images from the previous example:
   </p>
-  <pre>
-      cl&gt; ccdlist *.imh ccdtype=object
-      ccd007.imh[544,512][short][object][V]:N2968 V 600s
-      ccd015.imh[544,512][short][object][B]:N3098 B 500s
-      ccd024.imh[544,512][short][object][R]:N4036 R 600s
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdlist *.imh ccdtype=object
+  ccd007.imh[544,512][short][object][V]:N2968 V 600s
+  ccd015.imh[544,512][short][object][B]:N3098 B 500s
+  ccd024.imh[544,512][short][object][R]:N4036 R 600s
+  </pre></div>
   <p>
   If no CCD image type is specified (by using the null string <span style="font-family: monospace;">""</span>)
   then all image types are selected.  This may be
   necessary if your instrument data does not contain image type identifications.
   </p>
-  <!-- EndSection:   '3. Processing Your Data' -->
+  </section>
+  <section id="s_3_1_combining_calibration_images">
   <h3>3.1 combining calibration images</h3>
-  <!-- BeginSection: '3.1 Combining Calibration Images' -->
   <p>
        If you do not need to combine calibration images because you only
   have one image of each type, you can skip this section.  Calibration
@@ -381,17 +381,17 @@ guide: Introductory guide to using the CCDRED package
   <p>
        For example, to combine flat field images the command is:
   </p>
-  <pre>
-      cl&gt; flatcombine *.imh
-      Jun  1 14:26 combine: maxreject
-              Images      N    Exp   Mode  Scale Offset Weight
-          ccd045.imh      1    5.0  INDEF  1.000     0.  0.048
-          ccd046.imh      1    5.0  INDEF  1.000     0.  0.048
-          	&lt;... list of files ...&gt;
-          ccd065.imh      1    5.0  INDEF  1.000     0.  0.048
-          ----------- ------ ------
-           FlatV.imh     21    5.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flatcombine *.imh
+  Jun  1 14:26 combine: maxreject
+          Images      N    Exp   Mode  Scale Offset Weight
+      ccd045.imh      1    5.0  INDEF  1.000     0.  0.048
+      ccd046.imh      1    5.0  INDEF  1.000     0.  0.048
+              &lt;... list of files ...&gt;
+      ccd065.imh      1    5.0  INDEF  1.000     0.  0.048
+      ----------- ------ ------
+       FlatV.imh     21    5.0
+  </pre></div>
   <p>
   This output is printed when verbose mode is set.  The same information
   is recorded in the log file.  In this case the flat fields are combined
@@ -404,41 +404,41 @@ guide: Introductory guide to using the CCDRED package
   filter to produce the calibration images <span style="font-family: monospace;">"FlatV"</span>, <span style="font-family: monospace;">"FlatB"</span>, and
   <span style="font-family: monospace;">"FlatR"</span>.
   </p>
-  <!-- EndSection:   '3.1 Combining Calibration Images' -->
+  </section>
+  <section id="s_3_2_calibrations_and_corrections">
   <h3>3.2 calibrations and corrections</h3>
-  <!-- BeginSection: '3.2 Calibrations and Corrections' -->
   <p>
        Processing the CCD data is easy and largely automated.
   First, set the task parameters with the following command:
   </p>
-  <p>
-      cl&gt; eparam ccdproc
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; eparam ccdproc
+  </pre></div>
   <p>
   You may have already set the parameters when you ran
   <b>setinstrument</b>, though the calibration image parameters
   <i>zero</i>, <i>dark</i>, and <i>flat</i> may still need to be set or
   changed.  Once this is done simply give the command
   </p>
-  <pre>
-      cl&gt; ccdproc *.imh
-      ccd003: Jun  1 15:13 Overscan section is [520:540,*] with mean=485.0
-      ccd003: Jun  1 15:14 Trim data section is [3:510,3:510]
-      ccd003: Jun  1 15:14 Overscan section is [520:540,*] with mean=485.0
-      FlatV:  Jun  1 15:14 Trim data section is [3:510,3:510]
-      FlatV:  Jun  1 15:15 Overscan section is [520:540,*] with mean=486.4
-      ccd003: Jun  1 15:15 Flat field image is FlatV.imh with scale=138.2
-      ccd004: Jun  1 15:16 Trim data section is [3:510,3:510]
-      ccd004: Jun  1 15:16 Overscan section is [520:540,*] with mean=485.2
-      ccd004: Jun  1 15:16 Flat field image is FlatV.imh with scale=138.2
-                  &lt;... more ...&gt;
-      ccd013: Jun  1 15:22 Trim data section is [3:510,3:510]
-      ccd013: Jun  1 15:23 Overscan section is [520:540,*] with mean=482.4
-      FlatB:  Jun  1 15:23 Trim data section is [3:510,3:510]
-      FlatB:  Jun  1 15:23 Overscan section is [520:540,*] with mean=486.4
-      ccd013: Jun  1 15:24 Flat field image is FlatB.imh with scale=132.3
-                  &lt;... more ...&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdproc *.imh
+  ccd003: Jun  1 15:13 Overscan section is [520:540,*] with mean=485.0
+  ccd003: Jun  1 15:14 Trim data section is [3:510,3:510]
+  ccd003: Jun  1 15:14 Overscan section is [520:540,*] with mean=485.0
+  FlatV:  Jun  1 15:14 Trim data section is [3:510,3:510]
+  FlatV:  Jun  1 15:15 Overscan section is [520:540,*] with mean=486.4
+  ccd003: Jun  1 15:15 Flat field image is FlatV.imh with scale=138.2
+  ccd004: Jun  1 15:16 Trim data section is [3:510,3:510]
+  ccd004: Jun  1 15:16 Overscan section is [520:540,*] with mean=485.2
+  ccd004: Jun  1 15:16 Flat field image is FlatV.imh with scale=138.2
+              &lt;... more ...&gt;
+  ccd013: Jun  1 15:22 Trim data section is [3:510,3:510]
+  ccd013: Jun  1 15:23 Overscan section is [520:540,*] with mean=482.4
+  FlatB:  Jun  1 15:23 Trim data section is [3:510,3:510]
+  FlatB:  Jun  1 15:23 Overscan section is [520:540,*] with mean=486.4
+  ccd013: Jun  1 15:24 Flat field image is FlatB.imh with scale=132.3
+              &lt;... more ...&gt;
+  </pre></div>
   <p>
        The output shown is with verbose mode set.  It is the same as
   recorded in the log file.  It illustrates the principle of automatic
@@ -462,27 +462,27 @@ guide: Introductory guide to using the CCDRED package
        Commonly the processing is done with the verbose mode turned off
   and the task run as a background job.  This is done with the commands
   </p>
-  <pre>
-      cl&gt; ccdred.verbose=no
-      cl&gt; ccdproc *.imh &amp;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdred.verbose=no
+  cl&gt; ccdproc *.imh &amp;
+  </pre></div>
   <p>
   The already processed images in the input list are recognized as having been
   processed and are not affected.  To check the status of the processing we
   can look at the end of the log file with:
   </p>
-  <p>
-      cl&gt; tail logfile
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tail logfile
+  </pre></div>
   <p>
   After processing we can repeat the <b>ccdlist</b> command to find:
   </p>
-  <pre>
-      cl&gt; ccdlist *.imh ccdtype=object
-      ccd007.imh[508,508][real][object][V][OTF]:N2968 V 600s
-      ccd015.imh[508,508][real][object][B][OTF]:N3098 B 500s
-      ccd024.imh[544,512][short][object][R][OTF]:N4036 R 600s
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdlist *.imh ccdtype=object
+  ccd007.imh[508,508][real][object][V][OTF]:N2968 V 600s
+  ccd015.imh[508,508][real][object][B][OTF]:N3098 B 500s
+  ccd024.imh[544,512][short][object][R][OTF]:N4036 R 600s
+  </pre></div>
   <p>
   The processing flags indicate the images have been overscan corrected,
   trimmed, and flat fielded.
@@ -506,9 +506,9 @@ guide: Introductory guide to using the CCDRED package
   are subset (filter) dependent and so a calibration image for each filter
   must be specified.
   </p>
-  <!-- EndSection:   '3.2 Calibrations and Corrections' -->
+  </section>
+  <section id="s_4__special_processing_operations">
   <h3>4. special processing operations</h3>
-  <!-- BeginSection: '4. Special Processing Operations' -->
   <p>
        The special processing operations are mostly concerned with the
   flat field response correction.  There are also special processing
@@ -523,9 +523,9 @@ guide: Introductory guide to using the CCDRED package
   discussion about flat fields and iillumination corrections see the
   help topic <b>flatfields</b>.
   </p>
-  <!-- EndSection:   '4. Special Processing Operations' -->
+  </section>
+  <section id="s_4_1_spectroscopic_flat_fields">
   <h3>4.1 spectroscopic flat fields</h3>
-  <!-- BeginSection: '4.1 Spectroscopic Flat Fields' -->
   <p>
        For spectroscopic data the flat fields may have to be processed to
   remove the general shape of the lamp spectrum and to replace regions outside
@@ -539,9 +539,9 @@ guide: Introductory guide to using the CCDRED package
   <p>
      First you must process the flat field images explicitly with
   </p>
-  <p>
-      cl&gt; ccdproc *.imh ccdtype=flat
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdproc *.imh ccdtype=flat
+  </pre></div>
   <p>
   where <span style="font-family: monospace;">"*.imh"</span> may be replaced with any list containing the flat fields.
   If zero level and dark count corrections are required these calibration
@@ -567,9 +567,9 @@ guide: Introductory guide to using the CCDRED package
   using the package for extracting the spectra you may be interested
   in the document <i>The IRAF APEXTRACT Package</i>.
   </p>
-  <!-- EndSection:   '4.1 Spectroscopic Flat Fields' -->
+  </section>
+  <section id="s_4_2_iillumination_corrections">
   <h3>4.2 iillumination corrections</h3>
-  <!-- BeginSection: '4.2 Iillumination Corrections' -->
   <p>
        The flat field calibration images may not have the same iillumination
   pattern as the observations of the sky due to the way the lamp illuminates the
@@ -586,10 +586,10 @@ guide: Introductory guide to using the CCDRED package
   The task which makes iillumination correction images is <b>mkskycor</b>.
   Some examples are
   </p>
-  <pre>
-      cl&gt; mkskycor sky004 Illum004
-      cl&gt; mkskycor sky*.imh ""
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkskycor sky004 Illum004
+  cl&gt; mkskycor sky*.imh ""
+  </pre></div>
   <p>
   In the first example the sky image <span style="font-family: monospace;">"sky004"</span> is used to make the iillumination
   correction image <span style="font-family: monospace;">"Illum004"</span>.  In the second example the sky images are
@@ -600,17 +600,17 @@ guide: Introductory guide to using the CCDRED package
   <p>
   To apply the iillumination correction
   </p>
-  <pre>
-      cl&gt; ccdproc *.imh ccdtype=object illumcor+ illum=Illum004
-      cl&gt; ccdproc *.imh ccdtype=object illumcor+ illum=sky*.imh
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdproc *.imh ccdtype=object illumcor+ illum=Illum004
+  cl&gt; ccdproc *.imh ccdtype=object illumcor+ illum=sky*.imh
+  </pre></div>
   <p>
   The iillumination images could also be set using <b>eparam</b> or given
   on the command line.
   </p>
-  <!-- EndSection:   '4.2 Iillumination Corrections' -->
+  </section>
+  <section id="s_4_3_sky_flat_fields">
   <h3>4.3 sky flat fields</h3>
-  <!-- BeginSection: '4.3 Sky Flat Fields' -->
   <p>
       You will notice that when you process images with an iillumination
   correction you are dividing each image by a flat field calibration and
@@ -635,13 +635,13 @@ guide: Introductory guide to using the CCDRED package
        Two examples in which a new image is created and in which the
   input images are converted to sky flats are
   </p>
-  <pre>
-      cl&gt; mkskyflat sky004 Skyflat
-      cl&gt; mkskyflat sky*.imh ""
-  </pre>
-  <!-- EndSection:   '4.3 Sky Flat Fields' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkskyflat sky004 Skyflat
+  cl&gt; mkskyflat sky*.imh ""
+  </pre></div>
+  </section>
+  <section id="s_4_4_iillumination_corrected_flat_fields">
   <h3>4.4 iillumination corrected flat fields</h3>
-  <!-- BeginSection: '4.4 Iillumination Corrected Flat Fields' -->
   <p>
        A third method to account for iillumination problems in the flat fields
   is to remove the large scale pattern from the flat field itself.  This is
@@ -659,16 +659,16 @@ guide: Introductory guide to using the CCDRED package
   of an iillumination correction and removing the iillumination pattern
   from the flat field are
   </p>
-  <pre>
-      cl&gt; mkillumcor flat025 Illum025
-      cl&gt; mkillumflat flat*.imh ""
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkillumcor flat025 Illum025
+  cl&gt; mkillumflat flat*.imh ""
+  </pre></div>
   <p>
   As with the other tasks, the input images are processed if necessary.
   </p>
-  <!-- EndSection:   '4.4 Iillumination Corrected Flat Fields' -->
+  </section>
+  <section id="s_4_5_fringe_corrections">
   <h3>4.5 fringe corrections</h3>
-  <!-- BeginSection: '4.5 Fringe Corrections' -->
   <p>
       Some CCD detectors suffer from fringing effects due to the night
   sky emission lines which are not removed by the other calibration
@@ -695,21 +695,21 @@ guide: Introductory guide to using the CCDRED package
   or replaces the input image if no output image is specified.
   As examples,
   </p>
-  <pre>
-      cl&gt; mkfringecor sky004 Fringe
-      cl&gt; mkfringecor sky*.imh ""
-  </pre>
-  <!-- EndSection:   '4.5 Fringe Corrections' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkfringecor sky004 Fringe
+  cl&gt; mkfringecor sky*.imh ""
+  </pre></div>
+  </section>
+  <section id="s_5__demonstration">
   <h3>5. demonstration</h3>
-  <!-- BeginSection: '5. Demonstration' -->
   <p>
        A simple demonstration task is available.  To run this demonstration
   load the <b>ccdtest</b> package; this is a subpackage of the main
   <b>ccdred</b> package.  Then simply type
   </p>
-  <p>
-  	cl&gt; demo
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; demo
+  </pre></div>
   <p>
   The demonstration will then create some artificial CCD data and reduce
   them giving descriptive comments as it goes along.  This demonstration uses
@@ -724,9 +724,9 @@ guide: Introductory guide to using the CCDRED package
   setup parameters so be sure to run </i><b>setinstrument</b><i> again and check
   the setup parameters.</i>
   </p>
-  <!-- EndSection:   '5. Demonstration' -->
+  </section>
+  <section id="s_6__summary">
   <h3>6. summary</h3>
-  <!-- BeginSection: '6. Summary' -->
   <p>
        The <b>ccdred</b> package is very easy to use.  First load the package;
   it is in the <b>imred</b> package which is in the <b>noao</b> package.
@@ -738,12 +738,12 @@ guide: Introductory guide to using the CCDRED package
   need to be processed first in order to remove the lamp spectrum.
   Finally, just type
   </p>
-  <p>
-      cl&gt; ccdproc *.imh&amp;
-  </p>
-  <!-- EndSection:   '6. Summary' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdproc *.imh&amp;
+  </pre></div>
+  </section>
+  <section id="s_7__references">
   <h3>7. references</h3>
-  <!-- BeginSection: '7. References' -->
   <p>
        A general guide to using IRAF is <i>A User's Introduction to the IRAF
   Command Language</i>.  This document may be found in the IRAF documentation
@@ -765,13 +765,13 @@ guide: Introductory guide to using the CCDRED package
   containing documentation for just the <b>ccdred</b> package, and on-line
   through the help task by typing
   </p>
-  <p>
-      cl&gt; help <i>topic</i>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help <i>topic</i>
+  </pre></div>
   <p>
   where <i>topic</i> is one of the following.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
     badpiximage - Create a bad pixel mask image from a bad pixel file
       ccdgroups - Group CCD images into image lists
        ccdhedit - CCD image header editor
@@ -798,14 +798,14 @@ guide: Introductory guide to using the CCDRED package
           guide - Introductory guide to using the CCDRED package
     instruments - Instrument specific data files
         subsets - Description of CCD subsets
-  </pre>
+  </pre></div>
   <p>
   Printed copies of the on-line help documentation may be made with the
   command
   </p>
-  <p>
-      cl&gt; help topic | lprint
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help topic | lprint
+  </pre></div>
   <p>
        In addition to the package documentation for <b>ccdred</b>,
   <b>longslit</b>, and <b>apextract</b> there may be specific guides for
@@ -813,7 +813,7 @@ guide: Introductory guide to using the CCDRED package
   specific examples and parameter values for the CCD data.
   </p>
   
-  <!-- EndSection:    '7. References' -->
+  </section>
   
   <!-- Contents: '1. Introduction' '2. Getting Started' '3. Processing Your Data' '3.1 Combining Calibration Images' '3.2 Calibrations and Corrections' '4. Special Processing Operations' '4.1 Spectroscopic Flat Fields' '4.2 Iillumination Corrections' '4.3 Sky Flat Fields' '4.4 Iillumination Corrected Flat Fields' '4.5 Fringe Corrections' '5. Demonstration' '6. Summary' '7. References'  -->
   

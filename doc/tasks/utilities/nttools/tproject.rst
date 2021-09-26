@@ -7,14 +7,14 @@ tproject: Create new table from selected columns in a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tproject intable outtable columns
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task will create a new table containing a subset of the columns in an
   old table. The column names are given as a column name template. There is an
@@ -25,10 +25,10 @@ tproject: Create new table from selected columns in a table.
   If you do not need to eliminate duplicate rows, you can also use tcopy 
   with a column selector on the input table name.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>The table(s) from which the columns are to be copied. If input is
@@ -36,14 +36,14 @@ tproject: Create new table from selected columns in a table.
   STDIN instead.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>The new table(s) containing the copied columns.
   The number of output tables must equal the number of input tables.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_columns">
   <dt><b>columns [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns [string]' -->
   <dd>This is the column template describing those columns that should be
@@ -70,46 +70,46 @@ tproject: Create new table from selected columns in a table.
   large tables, as it significantly increases the running time.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Extract the star names, magnitudes, and colors from a catalog:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tproject starcat.tab starmag.tab "name,mag,color"
-  </pre>
+  </pre></div>
   <p>
   2. Exclude the measurement error from a set of spectra.  Change the file name
   extensions from <span style="font-family: monospace;">".tab"</span> to <span style="font-family: monospace;">".tbl"</span>:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tproject  *.tab  *.%tab%tbl%  "!error"
-  </pre>
+  </pre></div>
   <p>
   3. Create a new table of engineering parameters using a column template stored
   in the file 'columns.dat'.  Eliminate duplicate rows:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tproject datalog.tab sublog.tab @columns.dat uniq+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tselect, tjoin, tproduct,tcopy
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

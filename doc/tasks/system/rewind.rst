@@ -7,21 +7,21 @@ rewind: Rewind a device (magtape)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rewind device
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_device">
   <dt><b>device</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device' -->
   <dd>The device to be rewound.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_initcache">
   <dt><b>initcache = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='initcache' Line='initcache = yes' -->
   <dd>Initialize the magtape device position cache for the device.  This causes
@@ -29,9 +29,9 @@ rewind: Rewind a device (magtape)
   like the number of files on the tape, the amount of tape used, and so on.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Rewind</i> rewinds the specified device, which is most likely
   a magnetic tape, and which has been previously allocated to the user.
@@ -42,23 +42,23 @@ rewind: Rewind a device (magtape)
   the device, to force the magtape system to recompute the number of files
   on the tape and to ensure that the tape is left in a defined position.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Rewind logical tape drive a.
   </p>
-  <p>
-  	cl&gt; rewind mta
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rewind mta
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   allocate, deallocate, devstatus
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

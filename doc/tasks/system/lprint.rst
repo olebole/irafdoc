@@ -7,21 +7,21 @@ lprint: Print a file on the line printer device
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   lprint files
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_files">
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
   <dd>A filename template specifying the files to be printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"printer"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "printer"' -->
   <dd>The output device.  If the value of <i>device</i> is the reserved string
@@ -29,14 +29,14 @@ lprint: Print a file on the line printer device
   of the environment variable <span style="font-family: monospace;">"printer"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_map_cc">
   <dt><b>map_cc = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='map_cc' Line='map_cc = yes' -->
   <dd>If set to <span style="font-family: monospace;">"yes"</span>, any unprintable characters embedded in the text are printed
   in the form <span style="font-family: monospace;">"^X"</span>, where ^A is &lt;ctrl/A&gt; (ASCII 1), and so on.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_paginate">
   <dt><b>paginate = <span style="font-family: monospace;">"auto"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='paginate' Line='paginate = "auto"' -->
   <dd>If <i>paginate</i> is set to <span style="font-family: monospace;">"auto"</span> and the standard input is not redirected,
@@ -48,16 +48,16 @@ lprint: Print a file on the line printer device
   is being read from STDIN.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_label">
   <dt><b>label = <span style="font-family: monospace;">"STDIN"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='label' Line='label = "STDIN"' -->
   <dd>If displaying a header with input from the standard input, use the
   <span style="font-family: monospace;">"label"</span> string where the filename would appear in a normal header.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The named files, or the standard input, are printed on the standard
   line printer device.  Each file is printed starting at the top of a new
@@ -65,36 +65,36 @@ lprint: Print a file on the line printer device
   for the file.  Pagination and headers are normally suppressed when reading
   input from the standard input, but may be enabled if desired.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Print all files with an extension of either <span style="font-family: monospace;">".x"</span> or <span style="font-family: monospace;">".h"</span>, followed by
   all files with the extension <span style="font-family: monospace;">".com"</span>.  Note that filename sorting occurs only
   within a comma delimited field of the filename template, hence the <span style="font-family: monospace;">"*.[xh]"</span>
   files are printed in sort order, followed by the <span style="font-family: monospace;">".com"</span> files.
   </p>
-  <p>
-  	cl&gt; lprint *.[xh],*.com
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; lprint *.[xh],*.com
+  </pre></div>
   <p>
   2. Print the output of the <i>imstat</i> task on the versatec printer,
   paginating the output with the given label on each page.  Note that the
   command may be broken after the <span style="font-family: monospace;">"pipe"</span> character without need for
   explicit backslash continuation.
   </p>
-  <pre>
-  	cl&gt; imstat nite1.* |
-  	&gt;&gt;&gt; lprint pag+ label="Image Statistics" device=versatec
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imstat nite1.* |
+  &gt;&gt;&gt; lprint pag+ label="Image Statistics" device=versatec
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   type
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

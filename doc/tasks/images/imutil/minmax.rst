@@ -7,41 +7,41 @@ minmax: Compute the minimum and maximum pixel values in an image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   minmax images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>Image template specifying the images to be examined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_force">
   <dt><b>force = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='force' Line='force = no' -->
   <dd>Force recomputation of the minimum and maximum pixel and pixel values even if
   they are noted as up to date in the image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
   <dd>Update the image header with the new values (requires write permission).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print the image name, minimum value, and maximum value of each image
   processed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minval">
   <dt><b>minval = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minval' Line='minval = INDEF' -->
   <dd>Set to the minimum pixel value of the last image processed.
@@ -49,7 +49,7 @@ minmax: Compute the minimum and maximum pixel values in an image
   part of the minimum value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxval">
   <dt><b>maxval = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxval' Line='maxval = INDEF' -->
   <dd>Set to the maximum pixel value of the last image processed.
@@ -57,35 +57,35 @@ minmax: Compute the minimum and maximum pixel values in an image
   part of the maximum value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_iminval">
   <dt><b>iminval = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='iminval' Line='iminval = INDEF' -->
   <dd>Set to the minimum imaginary part of the pixel value of the last image
   processed. Only used if the pixel type of the last input image was complex.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imaxval">
   <dt><b>imaxval = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imaxval' Line='imaxval = INDEF' -->
   <dd>Set to the maximum imaginary part of the pixel value of the last image
   processed. Only used if the pixel type of the last input image was complex.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minpix">
   <dt><b>minpix = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minpix' Line='minpix = ""' -->
   <dd>Set to the minimum pixel specification of the last image processed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxpix">
   <dt><b>maxpix = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxpix' Line='maxpix = ""' -->
   <dd>Set to the maximum pixel specification of the last image processed.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
       The <i>minmax</i> task computes the minimum and maximum pixel and pixel
   values of
@@ -99,40 +99,40 @@ minmax: Compute the minimum and maximum pixel values in an image
   newly computed values.  Updating is not allowed when a section is used to
   compute the new values.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute and print the minimum and maximum values of the images <i>image1</i>
   and <i>image2</i>, updating the image header with the new values when done.
   </p>
-  <pre>
-  	cl&gt; minmax image1,image2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; minmax image1,image2
+  </pre></div>
   <p>
   2. Force update the minimum and maximum values in the image headers of all
   images matching the template in the background, without printing the computed
   values on the terminal.
   </p>
-  <p>
-  	cl&gt; minmax nite1.* force+ verbose- &amp;
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; minmax nite1.* force+ verbose- &amp;
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The minimum and maximum pixel values are stored in the image header as values
   of type real, hence some precision may be lost for images of type long integer
   or double precision floating.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imheader, hedit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

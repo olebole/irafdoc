@@ -7,28 +7,28 @@ transform: Transform longslit images to user coordinates
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   transform input output fitnames
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images to be transformed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images.  The number of output images in the list must
   match the number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minput">
   <dt><b>minput = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minput' Line='minput = ""' -->
   <dd>List of input masks or references.  This mask is used to create an output
@@ -45,7 +45,7 @@ transform: Transform longslit images to user coordinates
   pixels ignored and missing pixels assumed to be zero valued.  The mask
   </dd>
   </dl>
-  <dl>
+  <dl id="l_moutput">
   <dt><b>moutput = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='moutput' Line='moutput = ""' -->
   <dd>List of output masks to be created.  The list may be empty or must match
@@ -56,7 +56,7 @@ transform: Transform longslit images to user coordinates
   created unless the environment variable <span style="font-family: monospace;">"masktype"</span> is set to <span style="font-family: monospace;">"pl"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitnames">
   <dt><b>fitnames  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitnames' Line='fitnames  ' -->
   <dd>Names of the user coordinate maps in the database to be used in the transform.
@@ -66,13 +66,13 @@ transform: Transform longslit images to user coordinates
   or sampling.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the coordinate map to be used in transforming the images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interptype">
   <dt><b>interptype = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interptype' Line='interptype = "spline3"' -->
   <dd>Image interpolation type.  The allowed types are <span style="font-family: monospace;">"nearest"</span> (nearest neighbor),
@@ -80,7 +80,7 @@ transform: Transform longslit images to user coordinates
   polynomial), and <span style="font-family: monospace;">"spline3"</span> (bicubic polynomial).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flux">
   <dt><b>flux = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes' -->
   <dd>Conserve flux per pixel?  If <span style="font-family: monospace;">"no"</span> then each output pixel is simply interpolated
@@ -89,7 +89,7 @@ transform: Transform longslit images to user coordinates
   pixel areas between the output and input images).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x1">
   <dt><b>x1 = INDEF, y1 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x1' Line='x1 = INDEF, y1 = INDEF' -->
   <dd>User coordinates of the first output column and line.  If INDEF then the
@@ -98,7 +98,7 @@ transform: Transform longslit images to user coordinates
   logarithmic intervals are specified or not.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x2">
   <dt><b>x2 = INDEF, y2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x2' Line='x2 = INDEF, y2 = INDEF' -->
   <dd>User coordinates of the last output column and line.  If INDEF then the
@@ -107,7 +107,7 @@ transform: Transform longslit images to user coordinates
   logarithmic intervals are specified or not.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dx">
   <dt><b>dx = INDEF, dy = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dx' Line='dx = INDEF, dy = INDEF' -->
   <dd>Output pixel intervals.  If INDEF then the interval is set to yield the
@@ -116,21 +116,21 @@ transform: Transform longslit images to user coordinates
   user units.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nx">
   <dt><b>nx = INDEF, ny = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nx' Line='nx = INDEF, ny = INDEF' -->
   <dd>Number of output pixels.  If INDEF and if the pixel interval is also INDEF then
   the number of output pixels is equal to the number of input pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xlog">
   <dt><b>xlog = no, ylog = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlog' Line='xlog = no, ylog = no' -->
   <dd>Convert to logarithmic intervals?  If <span style="font-family: monospace;">"yes"</span> the output pixel intervals
   are logarithmic.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blank">
   <dt><b>blank = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blank' Line='blank = INDEF' -->
   <dd>Value to put in the output transformed image when it transforms to regions
@@ -141,15 +141,15 @@ transform: Transform longslit images to user coordinates
   out of input pixels in pixel masks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfiles">
   <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT,logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"' -->
   <dd>List of files in which to keep a log.  If null, <span style="font-family: monospace;">""</span>, then no log is kept.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The coordinate maps U(X,Y) and V(X,Y), created by the task <b>fitcoords</b>,
   are read from the specified database coordinate fits or from the
@@ -223,9 +223,9 @@ transform: Transform longslit images to user coordinates
   zero and
   is created with values of 100
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Arc calibration images were used to determine a two dimensional dispersion
   map called dispmap.  Stellar spectra were used to determine a two dimensional
@@ -234,21 +234,21 @@ transform: Transform longslit images to user coordinates
   between 3800 and 6400 Angstroms (the user coordinate units) with a dispersion
   of 3 Angstroms per pixel:
   </p>
-  <pre>
-  	cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<br>
-  	&gt;&gt;&gt; y1=3800 y2=6400 dy=3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<br>
+  &gt;&gt;&gt; y1=3800 y2=6400 dy=3
+  </pre></div>
   <p>
   To use logarithmic intervals in the wavelength to yield the same number of
   pixels in the output images as in the input images:
   </p>
-  <pre>
-  	cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<br>
-  	&gt;&gt;&gt; y1=3800 y2=6400 ylog=yes
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<br>
+  &gt;&gt;&gt; y1=3800 y2=6400 ylog=yes
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   The following timings were obtained for transforming a 511x512 real
   image to another 511x512 real image using two Chebyshev transformation
@@ -256,7 +256,7 @@ transform: Transform longslit images to user coordinates
   spatial axis, <span style="font-family: monospace;">"object"</span>) of order 6 in both dimensions created with the
   task <b>fitcoords</b>.  The times are for a UNIX/VAX 11/750.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; $transform input output henear,object interp=linear
   TIME (transform)  173.73  5:13  55%
   cl&gt; $transform input output henear,object interp=poly3
@@ -271,22 +271,22 @@ transform: Transform longslit images to user coordinates
   TIME (transform)  303.40  12:17  41%
   cl&gt; $transform input output henear,object interp=spline3 flux=no
   TIME (transform)  262.42  10:42  40%
-  </pre>
+  </pre></div>
   <p>
   The majority of the time is due to the image interpolation and not evaluating
   the transformation functions as indicated by the last three examples.
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_notes">
   <h3>Notes</h3>
-  <!-- BeginSection: 'NOTES' -->
-  <dl>
+  <dl id="l_TRANSFORM">
   <dt><b>TRANSFORM: V2.12.2</b></dt>
   <!-- Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.12.2' -->
   <dd>The use of bad pixel masks, a specified <span style="font-family: monospace;">"blank"</span> value, and use of a WCS
   to resample a WCS calibrated image was added.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_TRANSFORM">
   <dt><b>TRANSFORM: V2.6</b></dt>
   <!-- Sec='NOTES' Level=0 Label='TRANSFORM' Line='TRANSFORM: V2.6' -->
   <dd>With Version 2.6 of IRAF the algorithm used to invert the user
@@ -306,14 +306,14 @@ transform: Transform longslit images to user coordinates
   as major a factor as the image interpolation itself.
   </dd>
   </dl>
-  <!-- EndSection:   'NOTES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   fitcoords
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'NOTES' 'SEE ALSO'  -->
   

@@ -7,22 +7,22 @@ stty: Set/show terminal characteristics
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   stty [terminal]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_terminal">
   <dt><b>terminal</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='terminal' Line='terminal' -->
   <dd>The logical name of the terminal to be used, i.e., the name of the device
   given in the <i>dev$termcap</i> file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_baud">
   <dt><b>baud = 9600</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='baud' Line='baud = 9600' -->
   <dd>Set to some nonzero value to inform the VOS of the baud rate; the software
@@ -30,7 +30,7 @@ stty: Set/show terminal characteristics
   accurately generate delays.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = 80</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 80' -->
   <dd>The logical width of the screen in characters; may be set to some value less
@@ -38,27 +38,27 @@ stty: Set/show terminal characteristics
   terminals.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlines">
   <dt><b>nlines = 24</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines = 24' -->
   <dd>The logical height of the screen in characters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_show">
   <dt><b>show = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='show' Line='show = no' -->
   <dd>Show the current terminal driver settings.  The <i>show</i> function is
   automatically enabled if <i>stty</i> is called with no arguments.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_all">
   <dt><b>all = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='all' Line='all = no' -->
   <dd>Show all terminal driver settings, including those which are not currently
   in use.  Setting <i>all</i> automatically sets <i>show</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reset">
   <dt><b>reset = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reset' Line='reset = no' -->
   <dd>Reset the terminal driver settings to their default (login time) values.
@@ -66,7 +66,7 @@ stty: Set/show terminal characteristics
   active, and once a parameter is set the new value is retained indefinitely.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_resize">
   <dt><b>resize = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no' -->
   <dd>Recompute the terminal screen size parameters, <b>ttyncols</b> and
@@ -76,46 +76,46 @@ stty: Set/show terminal characteristics
   otherwise the values from the termcap entry for the terminal will be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clear">
   <dt><b>clear = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clear' Line='clear = no' -->
   <dd>Clear the function(s) which follow on the command line, e.g.,
   <span style="font-family: monospace;">"clear ucasein ucaseout"</span> is equivalent to <span style="font-family: monospace;">"ucasein=no ucaseout=no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ucasein">
   <dt><b>ucasein = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ucasein' Line='ucasein = no' -->
   <dd>Map terminal input to lower case, e.g., when working on an old monocase
   terminal, or on a modern terminal with the shiftlock key on.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ucaseout">
   <dt><b>ucaseout = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ucaseout' Line='ucaseout = no' -->
   <dd>Map terminal output to upper case.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_login">
   <dt><b>login = <span style="font-family: monospace;">"home$ttyin.log"</span> [off]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='login' Line='login = "home$ttyin.log" [off]' -->
   <dd>Log all input from the terminal to the named text file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logio">
   <dt><b>logio = <span style="font-family: monospace;">"home$ttyio.log"</span> [off]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logio' Line='logio = "home$ttyio.log" [off]' -->
   <dd>Log all terminal i/o to the named text file.  May not be used if either
   <i>login</i> or <i>logout</i> mode is in effect, and vice versa.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logout">
   <dt><b>logout = <span style="font-family: monospace;">"home$ttyout.log"</span> [off]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logout' Line='logout = "home$ttyout.log" [off]' -->
   <dd>Log all output to the terminal to the named text file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_playback">
   <dt><b>playback = <span style="font-family: monospace;">"home$ttyin.log"</span> [off]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='playback' Line='playback = "home$ttyin.log" [off]' -->
   <dd>Divert terminal driver input to the named <span style="font-family: monospace;">"stty login"</span> style text file,
@@ -124,7 +124,7 @@ stty: Set/show terminal characteristics
   mode in effect, e.g., to test or demo software.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no' -->
   <dd>If <i>verify</i> is enabled during <i>playback</i> mode the terminal driver
@@ -134,16 +134,16 @@ stty: Set/show terminal characteristics
   disabled.  Typing any other key causes a help line to be printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delay">
   <dt><b>delay = 500 (msec)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='delay' Line='delay = 500 (msec)' -->
   <dd>If <i>verify</i> is disabled during <i>playback</i> mode the terminal driver
   will pause for <i>delay</i> milliseconds before executing each logfile command.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>stty</i> task is used to set or display the terminal device
   characteristics and VOS terminal driver options.
@@ -156,9 +156,9 @@ stty: Set/show terminal characteristics
   The most common use of <i>stty</i> is to inform IRAF of the type of terminal
   being used, e.g.,
   </p>
-  <p>
-  	cl&gt; stty vt100
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty vt100
+  </pre></div>
   <p>
   would set the terminal type to <span style="font-family: monospace;">"vt100"</span>.  An error message will be printed
   unless an entry for the named terminal is present in the <b>termcap</b> file;
@@ -168,11 +168,15 @@ stty: Set/show terminal characteristics
   <p>
   To find out about the current terminal settings, type
   </p>
-  <pre>
-  	cl&gt; stty
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty
+  </pre></div>
+  <p>
   or
-  	cl&gt; stty all
-  </pre>
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty all
+  </pre></div>
   <p>
   A limited number of terminal driver options may also be set.  In particular,
   the VOS terminal driver (not to be confused with the host operating system
@@ -180,9 +184,9 @@ stty: Set/show terminal characteristics
   conversion upon input or output, and for logging all i/o to the terminal
   and playing back a terminal session logged in a file.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_case_conversions">
   <h3>Case conversions</h3>
-  <!-- BeginSection: 'Case Conversions' -->
   <p>
   The <b>ucasein</b> option, if set,
   will cause all upper case terminal input to be mapped to lower
@@ -193,12 +197,12 @@ stty: Set/show terminal characteristics
   terminal output to be mapped to upper case.  Preceding either or both of
   these option keywords by <b>clear</b> causes the options to be cleared.
   </p>
-  <pre>
-  	^	shift next character to upper case
-  	^+	shift lock (caps lock)
-  	^-	clear shift lock
-  	^^	the character ^
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ^       shift next character to upper case
+  ^+      shift lock (caps lock)
+  ^-      clear shift lock
+  ^^      the character ^
+  </pre></div>
   <p>
   Case shifting is disabled in raw mode, e.g., while in cursor mode, and in
   <b>eparam</b>.  All standard IRAF software, however, will sense that ucase
@@ -214,9 +218,9 @@ stty: Set/show terminal characteristics
   cursor mode if <i>ucasein</i> mode is in effect, terminating cursor mode and
   returning a lowercase key to the applications program.
   </p>
-  <!-- EndSection:   'Case Conversions' -->
+  </section>
+  <section id="s_recording_terminal_i_o">
   <h3>Recording terminal i/o</h3>
-  <!-- BeginSection: 'Recording Terminal I/O' -->
   <p>
   The terminal driver options <b>logio</b>, <b>logout</b>, and <b>login</b>
   may be used to log, respectively, all terminal i/o, all output to the terminal,
@@ -253,31 +257,31 @@ stty: Set/show terminal characteristics
   sent to or received from the terminal.  In addition to the standard escape
   sequences \n, \t, \r, etc., the following special escape sequences are used:
   </p>
-  <pre>
-  	\\		\<br>
-  	\^		^
-  	^@		NUL (ascii 000)
-  	^[A-Z]		ctrl/a - ctrl/z (ascii 001 - 032)
-  	^[		ESC (ascii 033)
-  	^\		FS  (ascii 034)
-  	^]		GS  (ascii 035)
-  	^^		RS  (ascii 036)
-  	^_		US  (ascii 037)
-  	\s		blank (ascii 040)
-  	\&lt;newline&gt;	long i/o record continued on next line
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  \\              \<br>
+  \^              ^
+  ^@              NUL (ascii 000)
+  ^[A-Z]          ctrl/a - ctrl/z (ascii 001 - 032)
+  ^[              ESC (ascii 033)
+  ^\              FS  (ascii 034)
+  ^]              GS  (ascii 035)
+  ^^              RS  (ascii 036)
+  ^_              US  (ascii 037)
+  \s              blank (ascii 040)
+  \&lt;newline&gt;      long i/o record continued on next line
+  </pre></div>
   <p>
   These special escape sequences, plus any ordinary characters, constitute the
   <i>data</i> recorded in the logfile.  The following additional escape
   sequences are used to record information about the logging session itself in
   the logfile.
   </p>
-  <pre>
-  	\#		rest of line is a comment
-  	\T		terminal device name at log time
-  	\G		stdgraph device name at log time
-  	\O		timestamp written at start of log session
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  \#              rest of line is a comment
+  \T              terminal device name at log time
+  \G              stdgraph device name at log time
+  \O              timestamp written at start of log session
+  </pre></div>
   <p>
   Any whitespace (unescaped blanks, tabs, or newlines) appearing
   in the logfile is put there only to make the file more readable, and is not
@@ -285,9 +289,9 @@ stty: Set/show terminal characteristics
   escaped curly brackets, i.e., <span style="font-family: monospace;">"\{ ... \}"</span>.  This is used for the <b>playback</b>
   facility described in the next section.  
   </p>
-  <!-- EndSection:   'Recording Terminal I/O' -->
+  </section>
+  <section id="s_playback_of_terminal_sessions">
   <h3>Playback of terminal sessions</h3>
-  <!-- BeginSection: 'Playback of Terminal Sessions' -->
   <p>
   The terminal driver has the capability not only of recording terminal i/o
   in a file, but of taking input from a logfile to repeat a sequence of commands
@@ -307,12 +311,12 @@ stty: Set/show terminal characteristics
   The basic sequence used to record and later playback a terminal session is as
   follows:
   </p>
-  <pre>
-  	cl&gt; stty login [= logfilename]
-  		&lt;execute an arbitrary sequence of commands&gt;
-  	cl&gt; stty clear login			# or stty reset
-  	cl&gt; stty playback [= logfilename]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty login [= logfilename]
+          &lt;execute an arbitrary sequence of commands&gt;
+  cl&gt; stty clear login                    # or stty reset
+  cl&gt; stty playback [= logfilename]
+  </pre></div>
   <p>
   Naturally, the playback script must be executed in the same context as when
   the script was generated, i.e., one must ensure that all necessary packages
@@ -343,9 +347,9 @@ stty: Set/show terminal characteristics
   to read the command.  Aside from this programmed delay, execution is fully
   automated.  For example,
   </p>
-  <p>
-  	cl&gt; stty play=filename delay=2000
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty play=filename delay=2000
+  </pre></div>
   <p>
   would playback the file <span style="font-family: monospace;">"filename"</span>, with a delay of 2 seconds following echo
   of each line of recorded input text.
@@ -357,11 +361,11 @@ stty: Set/show terminal characteristics
   <b>verify</b> option.  In verify mode, the following keystrokes may be
   entered to continue execution:
   </p>
-  <pre>
-  	space, return		continue execution
-  	<span style="font-family: monospace;">'g'</span>			go: turn verify mode off and continue
-  	<span style="font-family: monospace;">'q'</span>			quit: terminate playback mode
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  space, return           continue execution
+  <span style="font-family: monospace;">'g'</span>                     go: turn verify mode off and continue
+  <span style="font-family: monospace;">'q'</span>                     quit: terminate playback mode
+  </pre></div>
   <p>
   Verify mode is automatically disabled during raw mode input since the input
   consists of single characters and an inordinate number of verification
@@ -369,9 +373,9 @@ stty: Set/show terminal characteristics
   <b>delay</b> options may be overridden by control directives embedded in the
   playback text, as we shall see in the next section.
   </p>
-  <!-- EndSection:   'Playback of Terminal Sessions' -->
+  </section>
+  <section id="s_customizing_playback_scripts">
   <h3>Customizing playback scripts</h3>
-  <!-- BeginSection: 'Customizing Playback Scripts' -->
   <p>
   Although playback scripts may be and often are generated and played back
   without ever looking at or modifying the actual playback script, there are
@@ -392,27 +396,27 @@ stty: Set/show terminal characteristics
   <p>
   where <b>control_directive</b> refers to one of the following:
   </p>
-  <pre>
-  	%V+		turn verify on
-  	%V-		turn verify off
-  	%NNN		set <b>delay</b> to NNN milliseconds
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  %V+             turn verify on
+  %V-             turn verify off
+  %NNN            set <b>delay</b> to NNN milliseconds
+  </pre></div>
   <p>
   For example,
   </p>
-  <pre>
-  	dir\{%5000
-  	[list the current directory]\}\n
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  dir\{%5000
+  [list the current directory]\}\n
+  </pre></div>
   <p>
   would cause the following to be output, followed after a 5 second delay by a 
   listing of the current directory (the <span style="font-family: monospace;">"&lt;&gt;"</span> is not printed, but shows where
   the cursor will be during the 5 second pause):
   </p>
-  <pre>
-  	cl&gt; dir
-  	[list the current directory]&lt;&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dir
+  [list the current directory]&lt;&gt;
+  </pre></div>
   <p>
   Note that the newline following the <span style="font-family: monospace;">"\{%5000"</span> in the above example is textual
   data, and will be output to the terminal along with whatever follows, up until
@@ -448,9 +452,9 @@ stty: Set/show terminal characteristics
   input text, when both are echoed to the terminal.  Any programmed delay or
   pause will always occur after echoing the full record on the terminal.
   </p>
-  <!-- EndSection:   'Customizing Playback Scripts' -->
+  </section>
+  <section id="s_raw_mode_playback">
   <h3>Raw mode playback</h3>
-  <!-- BeginSection: 'Raw Mode Playback' -->
   <p>
   When a program is executing which reads from the terminal in raw mode,
   each character is read from the terminal as soon as it is typed, and
@@ -469,21 +473,21 @@ stty: Set/show terminal characteristics
   echo text read from the playback file in raw mode, since the text would not
   have been echoed if playback were not in effect.
   </p>
-  <!-- EndSection:   'Raw Mode Playback' -->
+  </section>
+  <section id="s_cursor_reads_in_playback_mode">
   <h3>Cursor reads in playback mode</h3>
-  <!-- BeginSection: 'Cursor Reads in Playback Mode' -->
   <p>
   A typical Tektronix style cursor read will look something like the following,
   as recorded in an <b>stty login</b> script file following a recording session:
   </p>
-  <pre>
-  	K
-  	3
-  	)
-  	'
-  	*
-  	\r
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  K
+  3
+  )
+  '
+  *
+  \r
+  </pre></div>
   <p>
   This six character sequence consists of the key value of the cursor read (K),
   followed by the [x,y] cursor coordinate encoded as four ascii characters
@@ -500,16 +504,16 @@ stty: Set/show terminal characteristics
   script (the extra whitespace in the second example is ignored, since if a
   space were data it would appear as \s).
   </p>
-  <pre>
-  	K3)'*\r
+  <div class="highlight-default-notranslate"><pre>
+          K3)'*\r
   or
-  	K 3 ) ' * \r
+          K 3 ) ' * \r
   or
-  	K
-  	3)'*
-  	\r
+          K
+          3)'*
+          \r
   etc.
-  </pre>
+  </pre></div>
   <p>
   To set the values of the <i>verify</i> or <i>delay</i> parameters for a cursor
   read one may insert the \{...\} sequence anywhere before the \r delimiter
@@ -537,12 +541,12 @@ stty: Set/show terminal characteristics
   advantage of the : command sequence, which can be used to put the terminal
   temporarily into status line output mode.
   </p>
-  <pre>
-  	:####\r
-  	\{%5000
-  	This is a status line comment\}
-  	^U\177
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  :####\r
+  \{%5000
+  This is a status line comment\}
+  ^U\177
+  </pre></div>
   <p>
   For example, insertion of the above sequence between any two cursor reads
   in a recorded interactive graphics session would cause the text
@@ -561,102 +565,103 @@ stty: Set/show terminal characteristics
   cursor, to indicate where the cursor crosshairs would have been in an actual
   interactive session.
   </p>
-  <!-- EndSection:   'Cursor Reads in Playback Mode' -->
+  </section>
+  <section id="s_sample_playback_script">
   <h3>Sample playback script</h3>
-  <!-- BeginSection: 'Sample Playback Script' -->
   <p>
   We conclude with an example of a complete playback script which can be
   entered into a file and played back to demonstrate some of the features of
   the <i>implot</i> task in the PLOT package (the PLOT package must already
   be loaded).
   </p>
-  <pre>
-  	\O=NOAO/IRAF V2.6 iraf@pavo Fri 20:09:21 01-Jan-88
-  	\T=gterm40
-  	\G=gterm
-  	\n
-  	imheader\sdev$pix\slo+\suser-\n\{%3000
-  	[Print image header]\}
-  	\n
-  	implot\sdev$pix\n
-  	J3..8\r J3-,)\r J3+)9\r K3)'*\r J3((0\r l3&amp;';\r
-  	:####\r
-  	\{%5000
-  	[use key <span style="font-family: monospace;">`o'</span> to overplot]\}
-  	^U\177
-  	o3&amp;';\r
-  	K3&amp;';\r K3%*(\r K3#,3\r l3!.?\r
-  	:####\r
-  	\{%5000
-  	[key <span style="font-family: monospace;">`X'</span> expands the plot in x]\}
-  	^U\177
-  	X3!.?\r
-  	qXXXX\r
-  	stty\sreset\n
-  </pre>
-  <!-- EndSection:   'Sample Playback Script' -->
+  <div class="highlight-default-notranslate"><pre>
+  \O=NOAO/IRAF V2.6 iraf@pavo Fri 20:09:21 01-Jan-88
+  \T=gterm40
+  \G=gterm
+  \n
+  imheader\sdev$pix\slo+\suser-\n\{%3000
+  [Print image header]\}
+  \n
+  implot\sdev$pix\n
+  J3..8\r J3-,)\r J3+)9\r K3)'*\r J3((0\r l3&amp;';\r
+  :####\r
+  \{%5000
+  [use key <span style="font-family: monospace;">`o'</span> to overplot]\}
+  ^U\177
+  o3&amp;';\r
+  K3&amp;';\r K3%*(\r K3#,3\r l3!.?\r
+  :####\r
+  \{%5000
+  [key <span style="font-family: monospace;">`X'</span> expands the plot in x]\}
+  ^U\177
+  X3!.?\r
+  qXXXX\r
+  stty\sreset\n
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Show the current terminal type and attributes.
   </p>
-  <pre>
-  	cl&gt; stty
-  	Terminal=vt640, ncols=80, nlines=24, 9600 baud
-  	ucasein=no, ucaseout=no, logio=off
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty
+  Terminal=vt640, ncols=80, nlines=24, 9600 baud
+  ucasein=no, ucaseout=no, logio=off
+  </pre></div>
   <p>
   2. Tell the system that the terminal is a vt100.
   </p>
-  <p>
-  	cl&gt; stty vt100
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty vt100
+  </pre></div>
   <p>
   3. Set the baud rate of the current terminal to 9600 baud.
   </p>
-  <p>
-  	cl&gt; stty baud=9600
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty baud=9600
+  </pre></div>
   <p>
   4. Set the width of the screen to 80 columns, e.g., to get short menus on a
   workstation where the physical number of columns may be much greater than 80.
   </p>
-  <p>
-  	cl&gt; stty ncols=80
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty ncols=80
+  </pre></div>
   <p>
   5. Set the terminal type to 4012 and set ucasein and ucaseout modes.
   </p>
-  <p>
-  	cl&gt; stty 4012 ucasein ucaseout
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty 4012 ucasein ucaseout
+  </pre></div>
   <p>
   6. Clear the ucasein and ucaseout modes.
   </p>
-  <p>
-  	cl&gt; stty clear ucasein ucaseout
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty clear ucasein ucaseout
+  </pre></div>
   <p>
   7. Record a terminal session in the default logfile (home$ttyio.log).
   </p>
-  <p>
-  	cl&gt; stty logio
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty logio
+  </pre></div>
   <p>
   8. Record input from the terminal in the file <span style="font-family: monospace;">"demo"</span>.
-  	
-  	cl&gt; stty login=demo
   </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty login=demo
+  </pre></div>
   <p>
   9. Terminate logging and playback the terminal session recorded in this file.
   </p>
-  <pre>
-  	cl&gt; stty reset
-  	cl&gt; stty playback=demo
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stty reset
+  cl&gt; stty playback=demo
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   1. Note that, when working with a terminal which supports runtime querying
   of the screen size, the screen size is queried when the <b>stty resize</b>
@@ -676,14 +681,14 @@ stty: Set/show terminal characteristics
   support the query function, then <b>stty</b> will hang.  Typing a carriage
   return causes execution to resume, after which the error should be corrected.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   language.logging, fio$zfiott.x, etc$sttyco.x
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'Case Conversions' 'Recording Terminal I/O' 'Playback of Terminal Sessions' 'Customizing Playback Scripts' 'Raw Mode Playback' 'Cursor Reads in Playback Mode' 'Sample Playback Script' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

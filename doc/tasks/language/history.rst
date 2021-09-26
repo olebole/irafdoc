@@ -7,23 +7,23 @@ history: Display  commands previously executed
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   history [[-]ncommands]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_ncommands">
   <dt><b>ncommands</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncommands' Line='ncommands' -->
   <dd>The number of commands to be displayed.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>history</i> task prints a list of the last few commands executed.
   Only commands which terminated normally are included.
@@ -32,41 +32,42 @@ history: Display  commands previously executed
   number of lines is not changed, otherwise <i>history</i> will take the
   value given as the new default number of commands to be printed.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Print the last few commands.
-  	
-  	cl&gt; history
   </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; history
+  </pre></div>
   <p>
   2. Print the entire history list.
   </p>
-  <p>
-  	cl&gt; history -999
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; history -999
+  </pre></div>
   <p>
   3. Change the default number of history lines to be printed to 5 (and print
   the last five commands).
   </p>
-  <p>
-  	cl&gt; history 5
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; history 5
+  </pre></div>
   <p>
   4. Save the history in the file <span style="font-family: monospace;">"commands"</span>.
   </p>
-  <p>
-  	cl&gt; history -999 &gt; commands
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; history -999 &gt; commands
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ehistory
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

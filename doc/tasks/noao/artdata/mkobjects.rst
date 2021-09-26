@@ -7,21 +7,21 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkobjects input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Images to create or modify.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output images when modifying input images.  If no output images are
@@ -33,19 +33,19 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   <p>
   WHEN CREATING NEW IMAGES
   </p>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the images.  Maximum of 79 characters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = 512, nlines = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512, nlines = 512' -->
   <dd>Number of columns and lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
@@ -58,7 +58,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   for further information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = 1000.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = 1000.' -->
   <dd>Default background and poisson noise background.  This is in data numbers
@@ -68,7 +68,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   <p>
   OBJECT PARAMETERS
   </p>
-  <dl>
+  <dl id="l_objects">
   <dt><b>objects = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects = ""' -->
   <dd>List of object files.  The number of object files must match the number of
@@ -76,13 +76,13 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   magnitudes, and shape parameters (see the DESCRIPTION section).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xoffset">
   <dt><b>xoffset = 0.,  yoffset = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xoffset' Line='xoffset = 0.,  yoffset = 0.' -->
   <dd>X and Y coordinate offset to be added to the object list coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_star">
   <dt><b>star = <span style="font-family: monospace;">"moffat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='star' Line='star = "moffat"' -->
   <dd>Type of star and point spread function.  The choices are:
@@ -129,7 +129,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radius">
   <dt><b>radius = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 1.' -->
   <dd>Seeing radius/scale in pixels along the major axis.  For the <span style="font-family: monospace;">"gaussian"</span>
@@ -139,27 +139,27 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   this is the radius to the last profile point.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_beta">
   <dt><b>beta = 2.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='beta' Line='beta = 2.5' -->
   <dd>Moffat model parameter.  See the DESCRIPTION for a definition of the
   Moffat profile.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ar">
   <dt><b>ar = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ar' Line='ar = 1.' -->
   <dd>Minor to major axial ratio for the star/psf.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pa">
   <dt><b>pa = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pa' Line='pa = 0.' -->
   <dd>Position angle in degrees measured counterclockwise from the X axis
   for the star/psf.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_distance">
   <dt><b>distance = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='distance' Line='distance = 1.' -->
   <dd>Relative distance to be applied to the object list coordinates,
@@ -171,7 +171,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   at a given seeing and sampling with one value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exptime">
   <dt><b>exptime = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exptime' Line='exptime = 1.' -->
   <dd>Relative exposure time.  The object magnitudes and background
@@ -179,7 +179,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   magnitude zero point except that it includes changing the background.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_magzero">
   <dt><b>magzero = 7.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='magzero' Line='magzero = 7.' -->
   <dd>Magnitude zero point defining the conversion from magnitudes in the
@@ -189,21 +189,21 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   <p>
   NOISE PARAMETERS
   </p>
-  <dl>
+  <dl id="l_gain">
   <dt><b>gain = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = 1.' -->
   <dd>Gain in electrons per data number.  The gain is used for scaling the
   read noise parameter, the background, and in computing poisson noise.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rdnoise">
   <dt><b>rdnoise = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = 0.' -->
   <dd>Gaussian read noise in electrons.  For new images this applies to the
   entire image while for existing images this is added only to the objects.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_poisson">
   <dt><b>poisson = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='poisson' Line='poisson = no' -->
   <dd>Add poisson photon noise?  For new images this applies to the entire image
@@ -212,7 +212,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   computing the new value and then subtracted again.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_seed">
   <dt><b>seed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1' -->
   <dd>Random number seed.  If a value of <span style="font-family: monospace;">"INDEF"</span> is given then the clock
@@ -220,7 +220,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   different random numbers for each execution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_comments">
   <dt><b>comments = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes' -->
   <dd>Include comments recording task parameters in the image header?
@@ -233,7 +233,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   These parameters define certain computational shortcuts which greatly
   affect the computational speed.  They should be adjusted with care.
   </p>
-  <dl>
+  <dl id="l_nxc">
   <dt><b>nxc = 5, nyc = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxc' Line='nxc = 5, nyc = 5' -->
   <dd>Number of star and psf centers per pixel in X and Y.  Rather than evaluate
@@ -243,7 +243,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   The larger the number the more memory and startup time required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxsub">
   <dt><b>nxsub = 10, nysub = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub = 10, nysub = 10' -->
   <dd>Number of pixel subsamples in X and Y used in computing the star and
@@ -253,7 +253,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   convolution templates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxgsub">
   <dt><b>nxgsub = 5, nygsub = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxgsub' Line='nxgsub = 5, nygsub = 5' -->
   <dd>Number of pixel subsamples in X and Y used in computing galaxy images.
@@ -265,7 +265,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   The larger the numbers the longer the execution time.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dynrange">
   <dt><b>dynrange = 100000., psfrange = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dynrange' Line='dynrange = 100000., psfrange = 10.' -->
   <dd>The intensity profiles of the analytic functions extend to infinity so
@@ -285,7 +285,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   specified dynamic range.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ranbuf">
   <dt><b>ranbuf = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ranbuf' Line='ranbuf = 0' -->
   <dd>Random number buffer size.  When generating readout and poisson noise,
@@ -297,9 +297,9 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   value of this parameter to zero.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task creates or modifies images by adding models of astronomical
   objects, stars and galaxies, as specified in object lists.  New images are
@@ -378,7 +378,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   The functional form of the analytic profiles the user profiles, and
   image template are given below.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
         gaussian:  I = exp (-ln (2) * (R/radius)**2)
           moffat:  I = (1 + (2**(1/beta)-1) * (R/radius)**2) ** -beta
        sersic&lt;n&gt;:  I = exp (-b * (R/radius)**1/n)
@@ -387,7 +387,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
     flux profile:  I = intensity (nprofile * R/radius)
     flux profile:  F = flux (nprofile * R/radius)
   image template:  I = image (nc/2+nc/2*dX/radius, nl/2+nc/2*dY/radius)
-  </pre>
+  </pre></div>
   <p>
   where R, dX, and dY are defined below, <i>radius</i> is the scale parameter
   and <i>beta</i> is the Moffat parameter specified by the user,
@@ -411,13 +411,13 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   coordinates are given by (xc, yc) then the transformation is defined
   as shown below.
   </p>
-  <pre>
-  	dx = x - xc
-  	dy = y - yc
-  	dX = dx * cos(pa) + dy * sin(pa)
-  	dY = (-dx * sin(pa) + dy * cos(pa)) / ar
-  	R = sqrt (dX ** 2 + dY ** 2)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  dx = x - xc
+  dy = y - yc
+  dX = dx * cos(pa) + dy * sin(pa)
+  dY = (-dx * sin(pa) + dy * cos(pa)) / ar
+  R = sqrt (dX ** 2 + dY ** 2)
+  </pre></div>
   <p>
   where dx and dy are the object coordinates relative to the object
   center,  dX and dY are the object coordinates in the transformed
@@ -553,30 +553,30 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   are defined by three numbers and galaxies by seven or eight as
   represented symbolically below.
   </p>
-  <pre>
-             stars:  xc yc magnitude
-          galaxies:  xc yc magnitude model radius ar pa &lt;save&gt;
-  </pre>
-  <dl>
+  <div class="highlight-default-notranslate"><pre>
+     stars:  xc yc magnitude
+  galaxies:  xc yc magnitude model radius ar pa &lt;save&gt;
+  </pre></div>
+  <dl id="l_xc">
   <dt><b>xc, yc:</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='xc' Line='xc, yc:' -->
   <dd>Object center coordinates.  These coordinates are transformed to image
   coordinates as follows.
-  <pre>
-  	xc in image = xoffset + xc / distance
-  	yc in image = yoffset + yc / distance
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  xc in image = xoffset + xc / distance
+  yc in image = yoffset + yc / distance
+  </pre></div>
   where <i>xoffset</i> and <i>yoffset</i> are the task offset parameters.
   Objects whose image centers fall outside the image dimensions are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_magnitude">
   <dt><b>magnitude:</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='magnitude' Line='magnitude:' -->
   <dd>Object magnitude.  This is converted to instrumental fluxes as follows.
-  <pre>
-  	flux = exptime/distance**2 * 10**(-0.4*(magnitude-magzero))
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  flux = exptime/distance**2 * 10**(-0.4*(magnitude-magzero))
+  </pre></div>
   where <i>exptime</i>, <i>distance</i>, and <i>magzero</i> are task parameters.
   For the analytic star and galaxy models a correction
   is made for lost light due to the finite extent of the image in the
@@ -584,7 +584,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   requested.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_model">
   <dt><b>model:</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='model' Line='model:' -->
   <dd>The types of galaxy models are as follows:
@@ -595,24 +595,24 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   to the nearest multiple of 0.5 or, equivalently, two times the index value will
   be rounded to an integer.  The index must be between 0.5 and 10.  The Sersic
   model defined as
-  <pre>
-  	I = exp (-b * (R/radius)**1/n)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  I = exp (-b * (R/radius)**1/n)
+  </pre></div>
   where radius is the major axis scale length corresponding to half of the
   total flux.  The value of b is computed using the formula of Ciotti and
   Bertin (AA v352, p447, 1999);
-  <pre>
-  	b = 2n - 1/3 + 4/(405n) + 46 / (25515n^2)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  b = 2n - 1/3 + 4/(405n) + 46 / (25515n^2)
+  </pre></div>
   </dd>
   </dl>
   <dl>
   <dt><b>expdisk</b></dt>
   <!-- Sec='DESCRIPTION' Level=1 Label='expdisk' Line='expdisk' -->
   <dd>An exponential disk model defined as
-  <pre>
-  	I = exp (-b * R/radius)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  I = exp (-b * R/radius)
+  </pre></div>
   where radius is the major axis scale length corresponding to half of the total
   flux and b is computed as with the Sersic model for n=1.  In fact, the
   algorithm is identical with that for the Sersic model using n=1.  Note that
@@ -623,9 +623,9 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   <dt><b>devauc</b></dt>
   <!-- Sec='DESCRIPTION' Level=1 Label='devauc' Line='devauc' -->
   <dd>A De Vaucouleurs profile defined as
-  <pre>
-  	I = exp (-b * (R/radius)**1/4)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  I = exp (-b * (R/radius)**1/4)
+  </pre></div>
   where radius is the major axis scale length corresponding to half of the total
   flux and b is computed as with the Sersic model for n=4.  In fact, the
   algorithm is identical with that for the Sersic model using n=4.  Note that
@@ -652,7 +652,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radius">
   <dt><b>radius:</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='radius' Line='radius:' -->
   <dd>Major axis scale radius parameter in pixels as defined above for the different
@@ -660,19 +660,19 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   	radius in image = radius / distance
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ar">
   <dt><b>ar:</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='ar' Line='ar:' -->
   <dd>Minor to major axis axial ratio.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pa">
   <dt><b>pa:</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='pa' Line='pa:' -->
   <dd>Major axis position angle in degrees measured counterclockwise from the X axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_save">
   <dt><b>save:</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='save' Line='save:' -->
   <dd>If a large number of identically shaped galaxies (size, axial ratio,
@@ -683,61 +683,61 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   There may certain algorithm testing situations where this might be useful. 
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a galaxy cluster with a power law distribution of field galaxies
   and stars as background/foreground.
   </p>
-  <pre>
-      ar&gt; gallist galaxies.dat 100 spatial=hubble lum=schecter egal=.8
-      ar&gt; gallist galaxies.dat 500
-      ar&gt; starlist galaxies.dat 100
-      ar&gt; mkobjects galaxies obj=galaxies.dat gain=3 rdnoise=10 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; gallist galaxies.dat 100 spatial=hubble lum=schecter egal=.8
+  ar&gt; gallist galaxies.dat 500
+  ar&gt; starlist galaxies.dat 100
+  ar&gt; mkobjects galaxies obj=galaxies.dat gain=3 rdnoise=10 poisson+
+  </pre></div>
   <p>
   Making the image takes about 5 minutes (2.5 min cpu) on a SPARCstation 1.
   </p>
   <p>
   2. Create a uniform artificial starfield of 5000 stars for a 512 square image.
   </p>
-  <pre>
-      ar&gt; starlist starfield.dat 5000
-      ar&gt; mkobjects starfield obj=starfield.dat gain=2 rdnoise=10 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; starlist starfield.dat 5000
+  ar&gt; mkobjects starfield obj=starfield.dat gain=2 rdnoise=10 poisson+
+  </pre></div>
   <p>
   This example takes about a minute on a SPARCstation 1.
   </p>
   <p>
   3. Create a globular cluster field of 5000 stars for a 512 square image.
   </p>
-  <pre>
-      ar&gt; starlist gc.dat 5000 spat=hubble lum=bands
-      ar&gt; mkobjects gc obj=gc.dat gain=2 rdnoise=10 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; starlist gc.dat 5000 spat=hubble lum=bands
+  ar&gt; mkobjects gc obj=gc.dat gain=2 rdnoise=10 poisson+
+  </pre></div>
   <p>
   This example takes about a minute on a SPARCstation 1.
   </p>
   <p>
   4. Add stars to an existing image for test purposes.
   </p>
-  <pre>
-      ar&gt; mkobjects starfield obj=STDIN gain=2 pois+ magzero=30
-      100 100 20
-      100 200 21
-      200 100 22
-      200 200 23
-      [EOF]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; mkobjects starfield obj=STDIN gain=2 pois+ magzero=30
+  100 100 20
+  100 200 21
+  200 100 22
+  200 200 23
+  [EOF]
+  </pre></div>
   <p>
   5. Look at the center of the globular cluster with no noise and very
   good seeing.
   </p>
-  <pre>
-  	cl&gt; mkobjects gc1 obj=gc.dat nc=400 nl=400 distance=.5 \<br>
-  	&gt;&gt;&gt; xo=-313 yo=-313 radius=.1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkobjects gc1 obj=gc.dat nc=400 nl=400 distance=.5 \<br>
+  &gt;&gt;&gt; xo=-313 yo=-313 radius=.1
+  </pre></div>
   <p>
   The offset parameters are used to recenter the cluster from
   (256,256) in the data file to (200,200) in the expanded field.
@@ -745,55 +745,55 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   and contract about a fixed point define the object list to have an
   origin at zero.
   </p>
-  <pre>
-      ar&gt; starlist gc.dat 5000 spat=hubble lum=bands xmin=-256 xmax=256 \<br>
-      &gt;&gt;&gt; ymin=-256 ymax=256
-      ar&gt; mkobjects gc obj=gc.dat xo=257 yo=257 gain=2 rdnoise=10 poisson+
-      ar&gt; mkobjects gc1 obj=gc.dat xo=257 yo=257 gain=2 \<br>
-      &gt;&gt;&gt; distance=.5 rdnoise=10 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; starlist gc.dat 5000 spat=hubble lum=bands xmin=-256 xmax=256 \<br>
+  &gt;&gt;&gt; ymin=-256 ymax=256
+  ar&gt; mkobjects gc obj=gc.dat xo=257 yo=257 gain=2 rdnoise=10 poisson+
+  ar&gt; mkobjects gc1 obj=gc.dat xo=257 yo=257 gain=2 \<br>
+  &gt;&gt;&gt; distance=.5 rdnoise=10 poisson+
+  </pre></div>
   <p>
   6. Make an image of dev$pix at various distances and orientation.  First we
   must subtract the background.
   </p>
-  <pre>
-  	cl&gt; imarith dev$pix - 38 pix
-  	cl&gt; mkobjects pix1 obj=STDIN nc=200 nl=200 back=1000 \<br>
-  	&gt;&gt;&gt; magzero=30 rd=10 poi+
-  	50 50 15.0 pix 40 1 0
-  	150 50 15.6 pix 30 .8 45
-  	50 150 16.5 pix 20 .6 90
-  	150 150 17.1 pix 15 .4 135
-  	[EOF]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith dev$pix - 38 pix
+  cl&gt; mkobjects pix1 obj=STDIN nc=200 nl=200 back=1000 \<br>
+  &gt;&gt;&gt; magzero=30 rd=10 poi+
+  50 50 15.0 pix 40 1 0
+  150 50 15.6 pix 30 .8 45
+  50 150 16.5 pix 20 .6 90
+  150 150 17.1 pix 15 .4 135
+  [EOF]
+  </pre></div>
   <p>
   It would be somewhat more efficient to first block average the
   template since the oversampling in this case is very large.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_MKOBJECTS">
   <dt><b>MKOBJECTS V2.11+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKOBJECTS' Line='MKOBJECTS V2.11+' -->
   <dd>The random number seed can be set from the clock time by using the value
   <span style="font-family: monospace;">"INDEF"</span> to yield different random numbers for each execution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_MKOBJECTS">
   <dt><b>MKOBJECTS V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKOBJECTS' Line='MKOBJECTS V2.11' -->
   <dd>The default value of <span style="font-family: monospace;">"ranbuf"</span> was changed to zero.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   gallist, starlist, mknoise, mkheader
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

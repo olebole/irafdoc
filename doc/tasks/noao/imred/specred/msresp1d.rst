@@ -7,15 +7,15 @@ msresp1d: Create 1D response spectra from flat field and sky spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   msresp1d flat throughput apreference response
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_flat">
   <dt><b>flat</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat' -->
   <dd>Flat field image to extract and normalize to create a one dimensional
@@ -27,7 +27,7 @@ msresp1d: Create 1D response spectra from flat field and sky spectra
   be present.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_throughput">
   <dt><b>throughput</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='throughput' Line='throughput' -->
   <dd>Throughput file or image.  If an image is specified, typically a blank sky
@@ -42,7 +42,7 @@ msresp1d: Create 1D response spectra from flat field and sky spectra
   be present.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apreference">
   <dt><b>apreference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apreference' Line='apreference' -->
   <dd>Aperture reference spectrum.  If not specified the apertures are defined
@@ -51,49 +51,49 @@ msresp1d: Create 1D response spectra from flat field and sky spectra
   the apertures and dimensions of the final response image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_response">
   <dt><b>response</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='response' Line='response' -->
   <dd>Response spectrum to be created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no' -->
   <dd>Recenter throughput image apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit and review apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trace">
   <dt><b>trace = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = no' -->
   <dd>Trace spectra?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clean">
   <dt><b>clean = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no' -->
   <dd>Detect and replace bad pixels?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitflat">
   <dt><b>fitflat = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitflat' Line='fitflat = yes' -->
   <dd>Fit and ratio flat field spectrum?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Interactive flat field fit?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"spline3"</span>, order = 20</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3", order = 20' -->
   <dd>Flat field fitting function and order.  The functions may be one of
@@ -102,9 +102,9 @@ msresp1d: Create 1D response spectra from flat field and sky spectra
   pieces.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_other_parameters">
   <h3>Other parameters</h3>
-  <!-- BeginSection: 'OTHER PARAMETERS' -->
   <p>
   The package parameters control logging of the operations performed and
   the verbose option allows printing of some progress information.  The
@@ -116,9 +116,9 @@ msresp1d: Create 1D response spectra from flat field and sky spectra
   not overridden by task parameters will be used; for example the detector
   noise parameters.
   </p>
-  <!-- EndSection:   'OTHER PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   For multiaperture or multifiber spectra a throughput aperture correction 
   must be applied to extracted object spectra.  Also it is often better to
@@ -195,43 +195,43 @@ msresp1d: Create 1D response spectra from flat field and sky spectra
   specified the apertures will be defined as the task is run.
   The aperture reference, if defined, is often the same as the flat field.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To make a flat field response and apply it to an extracted object:
   </p>
-  <pre>
-      ms&gt; msred.verbose=yes
-      ms&gt; msresp1d flat005 "" "" resp005.ms
-      Extract flat field flat005
-      Searching aperture database ...
-      Sep  7 14:36: DATABASE  - 44 apertures read for flat005.
-      Resize apertures for flat005?  (yes): n
-      Edit apertures for flat005?  (yes): n
-      Extract aperture spectra for flat005?  (yes): 
-      Review extracted spectra from flat005?  (yes): n
-      Extracting apertures ...
-      Sep  7 14:37: EXTRACT - Aperture 1 from flat005 --&gt; flat005.ms
-      Sep  7 14:37: EXTRACT - Aperture 2 from flat005 --&gt; flat005.ms
-      Sep  7 14:37: EXTRACT - Aperture 3 from flat005 --&gt; flat005.ms
-      Sep  7 14:37: EXTRACT - Aperture 4 from flat005 --&gt; flat005.ms
-      Sep  7 14:37: EXTRACT - Aperture 5 from flat005 --&gt; flat005.ms
-      &lt;etc&gt;
-      Fit and ratio flat field flat005
-      &lt;Interactive fitting of average extracted flat field&gt;
-      Create the normalized response resp005.ms
-      Sep  7 14:38 BSCALE: image = resp005.ms
-        bzero=0.  bscale=1.0  mean=1.0  median=1.02386  mode=1.07141
-      Average fiber response:
-        1  0.8049859
-        2  0.6428247
-        3  0.9014022
-        4  0.7955039
-        5  0.9898984
-        &lt;etc&gt;
-      ms&gt; imarith obj006.ms / resp005.ms obj006.ms
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ms&gt; msred.verbose=yes
+  ms&gt; msresp1d flat005 "" "" resp005.ms
+  Extract flat field flat005
+  Searching aperture database ...
+  Sep  7 14:36: DATABASE  - 44 apertures read for flat005.
+  Resize apertures for flat005?  (yes): n
+  Edit apertures for flat005?  (yes): n
+  Extract aperture spectra for flat005?  (yes):
+  Review extracted spectra from flat005?  (yes): n
+  Extracting apertures ...
+  Sep  7 14:37: EXTRACT - Aperture 1 from flat005 --&gt; flat005.ms
+  Sep  7 14:37: EXTRACT - Aperture 2 from flat005 --&gt; flat005.ms
+  Sep  7 14:37: EXTRACT - Aperture 3 from flat005 --&gt; flat005.ms
+  Sep  7 14:37: EXTRACT - Aperture 4 from flat005 --&gt; flat005.ms
+  Sep  7 14:37: EXTRACT - Aperture 5 from flat005 --&gt; flat005.ms
+  &lt;etc&gt;
+  Fit and ratio flat field flat005
+  &lt;Interactive fitting of average extracted flat field&gt;
+  Create the normalized response resp005.ms
+  Sep  7 14:38 BSCALE: image = resp005.ms
+    bzero=0.  bscale=1.0  mean=1.0  median=1.02386  mode=1.07141
+  Average fiber response:
+    1  0.8049859
+    2  0.6428247
+    3  0.9014022
+    4  0.7955039
+    5  0.9898984
+    &lt;etc&gt;
+  ms&gt; imarith obj006.ms / resp005.ms obj006.ms
+  </pre></div>
   <p>
   Of course the extracted object spectra must be the same in terms of apertures,
   wavelength coverage, etc.
@@ -239,17 +239,17 @@ msresp1d: Create 1D response spectra from flat field and sky spectra
   <p>
   2.  To make only a throughput correction:
   </p>
-  <pre>
-      ms&gt; msresp1d "" obj005 "" resp005
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  ms&gt; msresp1d "" obj005 "" resp005
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   icfit, fit1d, apflatten, apnormalize, dofibers
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'OTHER PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

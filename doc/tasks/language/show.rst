@@ -7,51 +7,52 @@ show: Show an environment variable
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   show [varname]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_varname">
   <dt><b>varname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='varname' Line='varname' -->
   <dd>The name of the environment variable to be displayed.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>show</i> command shows the current values of all defined environment
   variables if called with no arguments, or the value of a specific variable
   if an argument is given.  Unlike <i>set</i>, only current values are shown,
   not the entire history of the definitions of environment variables.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Show the current default printer device.
-  	
-  	cl&gt; show printer
   </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; show printer
+  </pre></div>
   <p>
   2. Show all <span style="font-family: monospace;">"std"</span> (standard i/o stream) related variables.
   </p>
-  <p>
-  	cl&gt; show | match std
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; show | match std
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   set
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

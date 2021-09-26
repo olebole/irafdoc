@@ -7,21 +7,21 @@ psf: Compute the point spread function
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   psf image photfile pstfile psfimage opstfile groupfile
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The images for which the PSF model is to be built.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_photfile">
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of input photometry files. The number of photometry files must
@@ -33,7 +33,7 @@ psf: Compute the point spread function
   or an STSDAS binary table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pstfile">
   <dt><b>pstfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pstfile' Line='pstfile' -->
   <dd>The list of input psf star photometry files. The ids of the psf stars in these
@@ -47,7 +47,7 @@ psf: Compute the point spread function
   text database or an STSDAS table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psfimage">
   <dt><b>psfimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The output PSF model image names or directory. The must be one PSF image name
@@ -56,7 +56,7 @@ psf: Compute the point spread function
   available version number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_opstfile">
   <dt><b>opstfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='opstfile' Line='opstfile' -->
   <dd>The output psf star files containing lists of the stars actually used to
@@ -68,7 +68,7 @@ psf: Compute the point spread function
   written.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_groupfile">
   <dt><b>groupfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='groupfile' Line='groupfile' -->
   <dd>The output psf star group files listing the PSF stars and their neighbors that
@@ -80,7 +80,7 @@ psf: Compute the point spread function
   table database is written.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>The name of the output file containing mesh, contour, or profile plots of the
@@ -89,7 +89,7 @@ psf: Compute the point spread function
   star selected. Plotfile is opened in append mode and may become very large.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameters
@@ -97,7 +97,7 @@ psf: Compute the point spread function
   is undefined then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_daopars">
   <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
@@ -105,7 +105,7 @@ psf: Compute the point spread function
   then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_matchbyid">
   <dt><b>matchbyid = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='matchbyid' Line='matchbyid = yes' -->
   <dd>Match the stars in the psf star list(s) if any to the stars in the input
@@ -113,7 +113,7 @@ psf: Compute the point spread function
   (matchbyid = no).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Fit the PSF interactively ? If interactive = yes and <i>icommands</i> is
@@ -125,13 +125,13 @@ psf: Compute the point spread function
   the image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mkstars">
   <dt><b>mkstars = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mkstars' Line='mkstars = no' -->
   <dd>Mark the selected or deleted psf stars on the image display ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_showplots">
   <dt><b>showplots = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='showplots' Line='showplots = yes' -->
   <dd>Show plots of the selected PSF stars? After each star is selected
@@ -141,26 +141,26 @@ psf: Compute the point spread function
   to <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"no"</span>.  In non-interactive mode showplots is always <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plottype">
   <dt><b>plottype = <span style="font-family: monospace;">"mesh"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plottype' Line='plottype = "mesh"' -->
   <dd>The default type of plot displayed when selecting PSF stars. The choices
   are <span style="font-family: monospace;">"mesh"</span>, <span style="font-family: monospace;">"contour"</span>, or <span style="font-family: monospace;">"radial"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or the name of the image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or the name of the graphics cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i> and
@@ -228,7 +228,7 @@ psf: Compute the point spread function
   wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -236,35 +236,35 @@ psf: Compute the point spread function
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical PSF task parameters? Verify can be set to the DAOPHOT
   package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the PSF task parameters if <i>verify</i> is <span style="font-family: monospace;">"yes"</span>? Update can be
   set to the default daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task ? Verbose can be set to the
   DAOPHOT package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The default graphics device. Graphics can be set to the default DAOPHOT package
   parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The  default  image  display  device.  Display can be set to the DAOPHOT
@@ -273,9 +273,9 @@ psf: Compute the point spread function
   <span style="font-family: monospace;">"imdy"</span> enables graphics overlay with the IMD graphics kernel. 
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The PSF task builds the point spread function for the IRAF image <i>image</i>
   using stars selected, from the input photometry file <i>photfile</i> with the
@@ -394,87 +394,85 @@ psf: Compute the point spread function
   radius parameters in the DAOPARS task. <i>Scale</i> is the scale factor defined
   in the DATAPARS task.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The following cursor commands are available once the image cursor has
   been activated.
   </p>
-  <pre>
-  	Keystroke Commands 
+  <div class="highlight-default-notranslate"><pre>
+          Keystroke Commands
   
-  ?	Print help
-  p	Print photometry for star nearest the cursor
-  l	List the current psf stars
-  a	Add star nearest cursor to psf star list
-  f	Fit the psf
-  r	Review the fit for all the psf stars
-  s	Subtract fitted psf from psf star nearest cursor
-  d	Delete psf star nearest cursor from psf star list
-  w	Write the psf to the psf image
-  z	Rebuild the psf from scratch
-  q	Quit task
+  ?       Print help
+  p       Print photometry for star nearest the cursor
+  l       List the current psf stars
+  a       Add star nearest cursor to psf star list
+  f       Fit the psf
+  r       Review the fit for all the psf stars
+  s       Subtract fitted psf from psf star nearest cursor
+  d       Delete psf star nearest cursor from psf star list
+  w       Write the psf to the psf image
+  z       Rebuild the psf from scratch
+  q       Quit task
   
-  	Colon Commands
+          Colon Commands
   
-  :p [n]	Print photometry for star n
-  :a [n]	Add star n to psf star list
-  :d [n]	Delete star n from psf star list
-  :s [n]  Subtract fitted psf from psf star n   
+  :p [n]  Print photometry for star n
+  :a [n]  Add star n to psf star list
+  :d [n]  Delete star n from psf star list
+  :s [n]  Subtract fitted psf from psf star n
   
-  	Colon Parameter Editing Commands
+          Colon Parameter Editing Commands
   
-  # Data dependent parameters which affect the psf computation 
+  # Data dependent parameters which affect the psf computation
   
-  :scale	   [value]	Show/set the image scale (units / pixel)
-  :fwhmpsf   [value]	Show/set the fwhm of psf (scale units)
-  :datamin   [value]	Show/set the minimum good data value (counts)
-  :datamax   [value]	Show/set the maximum good data value (counts)
-  :matchrad  [value]	Show/set matching radius (scale units)
+  :scale     [value]      Show/set the image scale (units / pixel)
+  :fwhmpsf   [value]      Show/set the fwhm of psf (scale units)
+  :datamin   [value]      Show/set the minimum good data value (counts)
+  :datamax   [value]      Show/set the maximum good data value (counts)
+  :matchrad  [value]      Show/set matching radius (scale units)
   
   # Psf computation parameters
   
-  :psfimage   [name,name]	Show/set the psf image and groupfile
-  :function   [string]	Show/set the analytic psf function
-  :varorder   [integer]	Show/set order of psf function variability
-  :nclean	    [integer]	Show/set number of cleaning iterations
-  :saturated  [y/n]	Show/set the use saturated star flag
-  :psfrad	    [value]	Show/set the psf radius (scale units)
-  :fitrad	    [value]	Show/set the fitting radius (scale units)
+  :psfimage   [name,name] Show/set the psf image and groupfile
+  :function   [string]    Show/set the analytic psf function
+  :varorder   [integer]   Show/set order of psf function variability
+  :nclean     [integer]   Show/set number of cleaning iterations
+  :saturated  [y/n]       Show/set the use saturated star flag
+  :psfrad     [value]     Show/set the psf radius (scale units)
+  :fitrad     [value]     Show/set the fitting radius (scale units)
   
-  
-  The following cursor commands are available once a star has been selected 
+  The following cursor commands are available once a star has been selected
   and the graphics cursor has been activated.
   
-  	Interactive Graphics Keystroke Commands
+          Interactive Graphics Keystroke Commands
   
-  ?    	Print help
-  p	Print the photometry for this star
-  t	Print the plot parameters and data minimum and maximum
-  a	Accept star and proceed
-  d	Reject star and select another with image cursor
-  m	Plot the default mesh plot for this star
-  n	Increase vertical angle by 15 degrees (mesh plot only)
-  s	Decrease vertical angle by 15 degrees (mesh plot only)
-  w	Decrease horizontal angle by 15 degrees (mesh plot only)
-  e	Increase horizontal angle by 15 degrees (mesh plot only)
-  c	Plot the default contour plot for this star
-  r	Plot the radial profile for this star
+  ?       Print help
+  p       Print the photometry for this star
+  t       Print the plot parameters and data minimum and maximum
+  a       Accept star and proceed
+  d       Reject star and select another with image cursor
+  m       Plot the default mesh plot for this star
+  n       Increase vertical angle by 15 degrees (mesh plot only)
+  s       Decrease vertical angle by 15 degrees (mesh plot only)
+  w       Decrease horizontal angle by 15 degrees (mesh plot only)
+  e       Increase horizontal angle by 15 degrees (mesh plot only)
+  c       Plot the default contour plot for this star
+  r       Plot the radial profile for this star
   
+          Colon Graphics Commands
   
-  	Colon Graphics Commands
-  
-  :m [val] [val]	Set the mesh plot vertical and horizontal viewing angles
+  :m [val] [val]  Set the mesh plot vertical and horizontal viewing angles
   :v [val]        Set the mesh plot vertical viewing angle
   :h [val]        Set the mesh plot horizontal viewing angle
   :c [val] [val]  Set the contour plot floor and ceiling levels
-  :l [value]	Set the contour plot floor level
-  :u [value]	Set the contour plot ceiling level
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  :l [value]      Set the contour plot floor level
+  :u [value]      Set the contour plot ceiling level
+  </pre></div>
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   The PSF is determined from the actual observed brightness values as a function
   of x and y 
@@ -533,9 +531,9 @@ psf: Compute the point spread function
   have been if one  had tried to interpolate directly within the original
   data.
   </p>
-  <!-- EndSection:   'ALGORITHMS' -->
+  </section>
+  <section id="s_guide_to_computing_a_psf_in_a_crowded_field">
   <h3>Guide to computing a psf in a crowded field</h3>
-  <!-- BeginSection: 'GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' -->
   <p>
   The following is a rough guide to the methodology of computing the
   PSF in a crowded field. The procedure outlined below assumes
@@ -719,183 +717,158 @@ psf: Compute the point spread function
   picture with all the stars still in it.
   </dd>
   </dl>
-  <!-- EndSection:   'GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the PSF for the image dev$ypix. Select stars using the display and
   the image cursor and show plots of the data and the residuals from the fit
   for each star. Good stars for making the PSF model can be found at (442,410),
   (348,189), and (379,67).
   </p>
-  <pre>
-      da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
   
-          ... answer verify prompts
+      ... answer verify prompts
   
-          ... find stars in the image
+      ... find stars in the image
   
-          ... answer will appear in ypix.coo.1
+      ... answer will appear in ypix.coo.1
   
-      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
-          apertures = 5.0
+  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+      apertures = 5.0
   
-          ... answer verify prompts
+      ... answer verify prompts
   
-          ... do aperture photometry on the detected stars
+      ... do aperture photometry on the detected stars
   
-          ... answer will appear in ypix.mag.1
+      ... answer will appear in ypix.mag.1
   
-      da&gt; display dev$ypix 1
+  da&gt; display dev$ypix 1
   
-  	... display the image
+      ... display the image
   
-      da&gt; psf dev$ypix default "" default default default psfrad=9.0 \<br>
-          fitrad=3.0 mkstars=yes display=imdr
+  da&gt; psf dev$ypix default "" default default default psfrad=9.0 \<br>
+      fitrad=3.0 mkstars=yes display=imdr
   
-  	... verify the critical parameters
+      ... verify the critical parameters
   
-  	... move the image cursor to a candidate star and hit the a key,
-  	    a plot of the stellar data appears
+      ... move the image cursor to a candidate star and hit the a key,
+          a plot of the stellar data appears
   
-  	... type ? for a listing of the graphics cursor menu
+      ... type ? for a listing of the graphics cursor menu
   
-  	... type a to accept the star, d to reject it
+      ... type a to accept the star, d to reject it
   
-  	... move to the next candidate stars and repeat the previous
-              steps
+      ... move to the next candidate stars and repeat the previous
+          steps
   
-  	... type l to list all the psf stars
+      ... type l to list all the psf stars
   
-  	... type f to fit the psf
+      ... type f to fit the psf
   
-  	... move cursor to first psf star and type s to see residuals,
-              repeat for all the psf stars
+      ... move cursor to first psf star and type s to see residuals,
+          repeat for all the psf stars
   
-  	... type w to save the PSF model
+      ... type w to save the PSF model
   
-  	... type q to quit, and q again to confirm
+      ... type q to quit, and q again to confirm
   
-  	... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
-              ypix.psg.1
-  </pre>
+      ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
+          ypix.psg.1
+  </pre></div>
   <p>
   2. Run PSF non-interactively using the photometry file and psf star file
   created in the previous example.
   </p>
-  <pre>
-  	da&gt; psf dev$ypix default default default default default \<br>
-              psfrad=9.0 fitrad=3.0 interactive- plotfile=psf.plots
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; psf dev$ypix default default default default default \<br>
+      psfrad=9.0 fitrad=3.0 interactive- plotfile=psf.plots
   
-          ... the output will appear in ypix.psf.2, ypix.psg.2, and
-  	    ypix.pst.2
+      ypix.pst.2
   
-          da&gt; gkidir psf.plots
+  da&gt; gkidir psf.plots
   
-          ... list the plots created by psf 
   
-          da&gt; gkiextract psf.plots 1 | stdgraph
+  da&gt; gkiextract psf.plots 1 | stdgraph
   
-          ... display the surface plots of the first psf star
   
-  	da&gt; seepsf ypix.psf.2 ypixpsf
+  da&gt; seepsf ypix.psf.2 ypixpsf
   
-  	... convert the sampled PSF look-up table to a PSF image
-  </pre>
+  </pre></div>
   <p>
   3. Setup and run PSF interactively without using the image display cursor.
   Use the photometry file created in example 1. Before running PSF in this
   manner the user should have a list of the candidate PSF star ids.
   </p>
-  <pre>
-  	da&gt; show stdimcur
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; show stdimcur
   
-  	... store the default value
   
-  	da&gt; set stdimcur = text
+  da&gt; set stdimcur = text
   
-  	... define the image cursor to be the standard input
   
-  	da&gt; epar psf
+  da&gt; epar psf
   
-  	... edit the psf parameters
   
-  	... move to the datapars line and type :e edit the data dependent
-  	    parameters, type :q to quit the datapars menu
+      parameters, type :q to quit the datapars menu
   
-  	... move to the daopars line and type :e edit the daophot fitting
-    	    parameters, type :q to quit the daopars menu
+      parameters, type :q to quit the daopars menu
   
-  	... finish editing the psf parameters
   
-  	da&gt; psf dev$ypix default "" default default default \<br>
-  	    plottype=radial
+  da&gt; psf dev$ypix default "" default default default \<br>
+      plottype=radial
   
-  	... verify critical parameters
   
-  	... type :a # where # stands for the id number of the star,
-  	    a plot of the stellar data appears
+      a plot of the stellar data appears
   
-  	... type a to accept the star, d to reject it
   
-  	... repeat for all the PSF stars
   
-  	... type l to list the psf stars
   
-  	... type f to fit the PSF
   
-  	... type :s # where # stands for the id of the psf star, a plot
-  	    of the model residuals appears
+      of the model residuals appears
   
-  	... type w to save the PSF
   
-  	... type q to quit PSF and q again to confirm the quit
   
-  	... the output will appear in ypix.psf.3, ypix.pst.3, ypix.psg.3
   
-  	da&gt; set stdimcur = stdimage
+  da&gt; set stdimcur = stdimage
   
-  	... reset the image cursor
-  </pre>
+  </pre></div>
   <p>
   4. Run PSF in non-interactive mode using an image cursor  command file of
   instructions called icmds.
   </p>
-  <pre>
-  	da&gt; type icmds 
-  	    :a 106
-  	    :a 24
-  	    :a 16
-  	    :a 68
-  	    f
-  	    w
-  	    q
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; type icmds
+      :a 106
+      :a 24
+      :a 16
+      :a 68
+      f
+      w
+      q
   
-  	da&gt; psf dev$ypix default "" default default default  \<br>
-  	    icommands=icmds
+  da&gt; psf dev$ypix default "" default default default  \<br>
+      icommands=icmds
   
-  	... verify the critical parameters
   
-  	... the PSF will be constructed from stars 106, 24, 16, 68
-  	    in the input photometry file
+      in the input photometry file
   
-  	... the output will appear in ypix.psf.4, ypix.pst.4, ypix.psg.4
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars,daopars,pstselect,seepsf
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'GUIDE TO COMPUTING A PSF IN A CROWDED FIELD' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

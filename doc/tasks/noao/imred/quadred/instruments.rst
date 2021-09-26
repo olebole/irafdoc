@@ -7,8 +7,8 @@ instruments: Instrument specific data files
 
 .. raw:: html
 
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <b>ccdred</b> package has been designed to accommodate many different
   instruments, detectors, and observatories.  This is done by having
@@ -33,9 +33,9 @@ instruments: Instrument specific data files
   directory <span style="font-family: monospace;">"ccddb$"</span>.  Each file has a root name which identifies the
   instrument.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_1__instrument_translation_file">
   <h3>1. instrument translation file</h3>
-  <!-- BeginSection: '1. Instrument Translation File' -->
   <p>
   The instrument translation file translates the parameter names used by
   the <b>ccdred</b> pacakge into instrument specific parameters and also
@@ -73,22 +73,22 @@ instruments: Instrument specific data files
   are separated by whitespace (blanks and tabs).  String  default values
   containing blanks must be quoted.  An example is given below.
   </p>
-  <pre>
-      # Sample translation file.
-      exptime     itime
-      darktime    itime
-      imagetyp    data-typ
-      subset      f1pos
-      biassec     biassec    [411:431,2:573]
-      datasec     datasec    [14:385,2:573]
+  <div class="highlight-default-notranslate"><pre>
+  # Sample translation file.
+  exptime     itime
+  darktime    itime
+  imagetyp    data-typ
+  subset      f1pos
+  biassec     biassec    [411:431,2:573]
+  datasec     datasec    [14:385,2:573]
   
-      fixpix      bp-flag    0
-      overscan    bt-flag    0
-      zerocor     bi-flag    0
-      darkcor     dk-flag    0
-      flatcor     ff-flag    0
-      fringcor    fr-flag    0 
-  </pre>
+  fixpix      bp-flag    0
+  overscan    bt-flag    0
+  zerocor     bi-flag    0
+  darkcor     dk-flag    0
+  flatcor     ff-flag    0
+  fringcor    fr-flag    0
+  </pre></div>
   <p>
   The first comment line is ignored as are blank lines.
   The first two lines translate the CCD image type, and the subset parameter
@@ -120,15 +120,15 @@ instruments: Instrument specific data files
   if there are blanks) and the image type as recognized by the package.  The
   following example will make this clearer.
   </p>
-  <pre>
-  	'OBJECT (0)'		object
-  	'DARK (1)'		dark
-  	'PROJECTOR FLAT (2)'	flat
-  	'SKY FLAT (3)'		other
-  	'COMPARISON LAMP (4)'	other
-  	'BIAS (5)'		zero
-  	'DOME FLAT (6)'		flat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  'OBJECT (0)'            object
+  'DARK (1)'              dark
+  'PROJECTOR FLAT (2)'    flat
+  'SKY FLAT (3)'          other
+  'COMPARISON LAMP (4)'   other
+  'BIAS (5)'              zero
+  'DOME FLAT (6)'         flat
+  </pre></div>
   <p>
   The values of the image type strings in the header contain blanks so they
   are quoted.  Also the case of the strings is important.  Note that there
@@ -137,14 +137,14 @@ instruments: Instrument specific data files
   <p>
   The CCD image types recognized by the package are:
   </p>
-  <pre>
-  	zero   - zero level image such as a bias or preflash
-  	dark   - dark count image
-  	flat   - flat field image
-  	illum  - iillumination image such as a sky image
-  	fringe - fringe correction image
-  	object - object image
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  zero   - zero level image such as a bias or preflash
+  dark   - dark count image
+  flat   - flat field image
+  illum  - iillumination image such as a sky image
+  fringe - fringe correction image
+  object - object image
+  </pre></div>
   <p>
   There may be more than one image type that maps to the same package
   type.  In particular other standard CCD image types, such as comparison
@@ -158,30 +158,30 @@ instruments: Instrument specific data files
   The package parameter names are generally the same as the
   standard image header keywords being adopted by NOAO.
   </p>
-  <pre>
-  	General Image Header and Default Parameters
-      ccdmean		darktime	exptime		fixfile
-      imagetyp		ncombine	biassec		subset
-      title		datasec         nscanrow
+  <div class="highlight-default-notranslate"><pre>
+      General Image Header and Default Parameters
+  ccdmean             darktime        exptime         fixfile
+  imagetyp            ncombine        biassec         subset
+  title               datasec         nscanrow
   
-  	       CCDRED Processing Flags
-      ccdproc		darkcor		fixpix		flatcor
-      fringcor		illumcor	overscan	trim
-      zerocor
+             CCDRED Processing Flags
+  ccdproc             darkcor         fixpix          flatcor
+  fringcor            illumcor        overscan        trim
+  zerocor
   
-  	       CCDRED CCD Image Types
-      dark		flat		fringe		illum
-      none		object		unknown		zero
-  </pre>
+             CCDRED CCD Image Types
+  dark                flat            fringe          illum
+  none                object          unknown         zero
+  </pre></div>
   <p>
   The translation mechanism described here may become more
   sophisticated in the future and a general IRAF system facility may be
   implemented eventually.  For the present the translation mechanism is
   quite simple.
   </p>
-  <!-- EndSection:   '1. Instrument Translation File' -->
+  </section>
+  <section id="s_2__instrument_setup_script">
   <h3>2. instrument setup script</h3>
-  <!-- BeginSection: '2. Instrument Setup Script' -->
   <p>
   The task <b>setinstrument</b> translates an instrument ID into a
   CL script in the instrument directory.  This script is then executed.
@@ -190,18 +190,18 @@ instruments: Instrument specific data files
   staff desires.  Below are the first few lines of a typical instrument setup
   script.
   </p>
-  <pre>
-  	ccdred.instrument = "ccddb$kpno/example.dat"
-  	ccdred.pixeltype = "real"
-  	ccdproc.fixpix = yes
-  	ccdproc.overscan = yes
-  	ccdproc.trim = yes
-  	ccdproc.zerocor = no
-  	ccdproc.darkcor = no
-  	ccdproc.flatcor = yes
-  	ccdproc.biassec = "[411:431,2:573]"
-  	ccdproc.datasec = "[14:385,2:573]"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ccdred.instrument = "ccddb$kpno/example.dat"
+  ccdred.pixeltype = "real"
+  ccdproc.fixpix = yes
+  ccdproc.overscan = yes
+  ccdproc.trim = yes
+  ccdproc.zerocor = no
+  ccdproc.darkcor = no
+  ccdproc.flatcor = yes
+  ccdproc.biassec = "[411:431,2:573]"
+  ccdproc.datasec = "[14:385,2:573]"
+  </pre></div>
   <p>
   The instrument parameter should always be set unless there is no
   translation file for the instrument.  The <b>ccdproc</b> parameters
@@ -223,16 +223,16 @@ instruments: Instrument specific data files
   using the task <b>dparam</b>.  The final step is editing this script to
   delete unimportant and query parameters.  For example,
   </p>
-  <pre>
-  	cl&gt; dparam ccdred &gt;&gt; file.cl
-  	cl&gt; dparam ccdproc &gt;&gt; file.cl
-  	cl&gt; dparam combine &gt;&gt; file.cl
-  		...
-  	cl&gt; ed file.cl
-  </pre>
-  <!-- EndSection:   '2. Instrument Setup Script' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dparam ccdred &gt;&gt; file.cl
+  cl&gt; dparam ccdproc &gt;&gt; file.cl
+  cl&gt; dparam combine &gt;&gt; file.cl
+          ...
+  cl&gt; ed file.cl
+  </pre></div>
+  </section>
+  <section id="s_3__instrument_bad_pixel_file">
   <h3>3. instrument bad pixel file</h3>
-  <!-- BeginSection: '3. Instrument Bad Pixel File' -->
   <p>
   The bad pixel file describes the bad pixels, columns, and lines in the
   detector which are to be replaced by interpolation when processing the
@@ -243,14 +243,14 @@ instruments: Instrument specific data files
   ending points may be the same to specify a single column or line.  The
   example below illustrates a bad pixel file.
   </p>
-  <pre>
-  	# RCA1 CCD untrimmed
-  	25 25 1 512
-  	108 108 1 512
-  	302 302 403 512
-  	1 512 70 70
-  	245 246 312 315
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  # RCA1 CCD untrimmed
+  25 25 1 512
+  108 108 1 512
+  302 302 403 512
+  1 512 70 70
+  245 246 312 315
+  </pre></div>
   <p>
   If there is a comment line in the file containing the word <span style="font-family: monospace;">"untrimmed"</span>
   then the coordinates of the bad pixel regions apply to the original CCD
@@ -274,14 +274,14 @@ instruments: Instrument specific data files
   easy to create, provided you have a good image to work from and a way
   to measure the positions with an image or graphics display.
   </p>
-  <!-- EndSection:   '3. Instrument Bad Pixel File' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccdtypes, subsets, setinstrument
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DESCRIPTION' '1. Instrument Translation File' '2. Instrument Setup Script' '3. Instrument Bad Pixel File' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ bitcount: Accumulate the bit statistics for a list of images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   bitcount images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>A list of image names whose bit statistics will be counted.  The
@@ -23,7 +23,7 @@ bitcount: Accumulate the bit statistics for a list of images
   default) or as a grand total over all the images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grandtotal">
   <dt><b>grandtotal = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grandtotal' Line='grandtotal = no' -->
   <dd>If <i>grandtotal</i> = yes, accumulate a grand total over all the
@@ -31,7 +31,7 @@ bitcount: Accumulate the bit statistics for a list of images
   individually for each image in turn.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_leftzeroes">
   <dt><b>leftzeroes = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='leftzeroes' Line='leftzeroes = yes' -->
   <dd>If <i>leftzeroes</i> = yes, leftmost zeroes are counted into the
@@ -40,15 +40,15 @@ bitcount: Accumulate the bit statistics for a list of images
   are omitted from the statistics.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>If <i>verbose</i> = no, only the raw bit counts will be reported.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Bitcount</i> will report the absolute and relative proportions
   of zeroes and ones populating each bit plane of a list of images.
@@ -78,24 +78,24 @@ bitcount: Accumulate the bit statistics for a list of images
   The <i>verbose</i> parameter may be set to <span style="font-family: monospace;">"no"</span> in order to pass
   the raw bit counts on to some other task.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   To report the bit statistics for a test exposure ramp:
   </p>
-  <pre>
-      nl&gt; bitcount testramp
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nl&gt; bitcount testramp
+  </pre></div>
   <p>
   To accumulate a grand total over a list of images:
   </p>
-  <pre>
-      nl&gt; bitcount a001*.imh grandtotal+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  nl&gt; bitcount a001*.imh grandtotal+
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   A warning will be issued when accumulating a grand total over a list
   of images whose datatypes vary.  In this case, the totals for each bit
@@ -105,14 +105,14 @@ bitcount: Accumulate the bit statistics for a list of images
   of the most significant bit as a sign bit will also depend on the
   datatype of this final image.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imstatistics, ctio.bitstat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

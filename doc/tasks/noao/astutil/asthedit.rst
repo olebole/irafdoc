@@ -7,15 +7,15 @@ asthedit: Astronomical header editor
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   asthedit images commands
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images to be used.  The image header keywords are used in this task
@@ -25,7 +25,7 @@ asthedit: Astronomical header editor
   task can be used as a calculator (though see <b>astcalc</b>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_commands">
   <dt><b>commands</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='commands' Line='commands' -->
   <dd>A file of commands using the simple syntax given in the DESCRIPTION.  If no
@@ -37,7 +37,7 @@ asthedit: Astronomical header editor
   escaped newlines are allowed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_table">
   <dt><b>table = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table = ""' -->
   <dd>Optional text file containing columns of values.  The table consists of
@@ -47,7 +47,7 @@ asthedit: Astronomical header editor
   defined by the column names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_colnames">
   <dt><b>colnames = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colnames' Line='colnames = ""' -->
   <dd>List of whitespace separated column names.  These are the names referenced
@@ -57,7 +57,7 @@ asthedit: Astronomical header editor
   before a column to be referenced.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_prompt">
   <dt><b>prompt = <span style="font-family: monospace;">"asthedit&gt; "</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "asthedit&gt; "' -->
   <dd>When no command file is specified the input commands are read from the
@@ -67,7 +67,7 @@ asthedit: Astronomical header editor
   the standard input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
   <dd>Update the image headers?  If no then any new, modified, or deleted
@@ -76,13 +76,13 @@ asthedit: Astronomical header editor
   accessing read-only images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print each keyword added or modified?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_oldstyle">
   <dt><b>oldstyle = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='oldstyle' Line='oldstyle = no' -->
   <dd>Use the old style syntax of this task from versions prior to V2.11.  This
@@ -90,9 +90,9 @@ asthedit: Astronomical header editor
   developed.  Some aspects of the new syntax are still available.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Asthedit</b> evaluates expressions using image header keywords, column
   names from a text table, CL parameters, internal variables, constants, and
@@ -193,21 +193,21 @@ asthedit: Astronomical header editor
   The following gives a more formal description of the statement syntax
   and the special words <span style="font-family: monospace;">"if"</span>, <span style="font-family: monospace;">"else"</span>, <span style="font-family: monospace;">"endif"</span>, and <span style="font-family: monospace;">"quit"</span>.
   </p>
-  <pre>
-  	&lt;keyword&gt;
-          &lt;keyword&gt; = &lt;expression&gt;
-  	$&lt;variable&gt; = &lt;expression&gt; 
-          &lt;expression&gt;
-          if (&lt;expression&gt;)
-              &lt;statements&gt;
-          endif
-          if (&lt;expression&gt;)
-              &lt;statements&gt;
-          else
-              &lt;statements&gt;
-          endif
-          quit
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  &lt;keyword&gt;
+  &lt;keyword&gt; = &lt;expression&gt;
+  $&lt;variable&gt; = &lt;expression&gt;
+  &lt;expression&gt;
+  if (&lt;expression&gt;)
+      &lt;statements&gt;
+  endif
+  if (&lt;expression&gt;)
+      &lt;statements&gt;
+  else
+      &lt;statements&gt;
+  endif
+  quit
+  </pre></div>
   <p>
   The result of the expression in the <span style="font-family: monospace;">"if"</span> statement is normally a logical
   value.  However, a numeric value of 0 is false while any other value is
@@ -217,24 +217,24 @@ asthedit: Astronomical header editor
   <p>
   The old style syntax allows the following statements.
   </p>
-  <pre>
-  	&lt;keyword&gt;
-          &lt;keyword&gt;     &lt;expression&gt;
-  	$&lt;variable&gt;   &lt;expression&gt; 
-          &lt;keyword&gt; = &lt;expression&gt;
-  	$&lt;variable&gt; = &lt;expression&gt; 
-          print (...)
-          printf (...)
-          if (&lt;expression&gt;)
-              &lt;statements&gt;
-          endif
-          if (&lt;expression&gt;)
-              &lt;statements&gt;
-          else
-              &lt;statements&gt;
-          endif
-          quit
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  &lt;keyword&gt;
+  &lt;keyword&gt;     &lt;expression&gt;
+  $&lt;variable&gt;   &lt;expression&gt;
+  &lt;keyword&gt; = &lt;expression&gt;
+  $&lt;variable&gt; = &lt;expression&gt;
+  print (...)
+  printf (...)
+  if (&lt;expression&gt;)
+      &lt;statements&gt;
+  endif
+  if (&lt;expression&gt;)
+      &lt;statements&gt;
+  else
+      &lt;statements&gt;
+  endif
+  quit
+  </pre></div>
   <p>
   Old style command files would only use the first two statements.
   </p>
@@ -244,9 +244,9 @@ asthedit: Astronomical header editor
   <p>
   Keyword names and variables may formally be defined as:
   </p>
-  <pre>
-          [$]{a-zA-Z}[{a-zA-Z0-9._$}]*
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  [$]{a-zA-Z}[{a-zA-Z0-9._$}]*
+  </pre></div>
   <p>
   where [] indicate optional, {} indicates a class, - indicates an ASCII
   range of characters, and * indicates zero or more occurrences.  In words, a
@@ -259,11 +259,11 @@ asthedit: Astronomical header editor
   There are a few predefined variables which may be referenced in
   expressions.
   </p>
-  <pre>
-          $I      The name of the current image (if used)
-          $D      The current date in the DD/MM/YY format
-          $T      The current (local) time as a sexagesimal string
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  $I      The name of the current image (if used)
+  $D      The current date in the DD/MM/YY format
+  $T      The current (local) time as a sexagesimal string
+  </pre></div>
   <p>
   The date and time are set once at the beginning of execution.
   </p>
@@ -301,17 +301,17 @@ asthedit: Astronomical header editor
   of the operators <span style="font-family: monospace;">"?"</span>, <span style="font-family: monospace;">"?="</span>, and <span style="font-family: monospace;">"@"</span>, the operator set is equivalent to that
   available in the CL and SPP languages.
   </p>
-  <pre>
-          +  -  *  /              arithmetic operators
-          **                      exponentiation
-          //                      string concatenation
-          !  -                    boolean not, unary negation
-          &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
-          == != &amp;&amp; ||             equals, not equals, and, or
-          ?=                      string equals pattern
-          ? :                     conditional expression
-          @                       reference a variable
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  +  -  *  /              arithmetic operators
+  **                      exponentiation
+  //                      string concatenation
+  !  -                    boolean not, unary negation
+  &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
+  == != &amp;&amp; ||             equals, not equals, and, or
+  ?=                      string equals pattern
+  ? :                     conditional expression
+  @                       reference a variable
+  </pre></div>
   <p>
   The operators <span style="font-family: monospace;">"=="</span>, <span style="font-family: monospace;">"&amp;&amp;"</span>, and <span style="font-family: monospace;">"||"</span> may be abbreviated as <span style="font-family: monospace;">"="</span>, <span style="font-family: monospace;">"&amp;"</span>, and <span style="font-family: monospace;">"|"</span>
   if desired.  The ?= operator performs pattern matching upon strings.
@@ -335,12 +335,12 @@ asthedit: Astronomical header editor
   A number of standard intrinsic functions are recognized within expressions.
   The set of functions currently supported is shown below.
   </p>
-  <pre>
-  	abs     atan2   deg     log     min     real    sqrt
-  	acos    bool    double  log10   mod     short   str
-  	asin    cos     exp     long    nint    sin     tan
-  	atan    cosh    int     max     rad     sinh    tanh
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  abs     atan2   deg     log     min     real    sqrt
+  acos    bool    double  log10   mod     short   str
+  asin    cos     exp     long    nint    sin     tan
+  atan    cosh    int     max     rad     sinh    tanh
+  </pre></div>
   <p>
   The trigonometric functions operate in units of radians.
   The <i>min</i> and <i>max</i> functions may have any number of arguments up
@@ -350,11 +350,11 @@ asthedit: Astronomical header editor
   <p>
   A function call may take either of the following forms:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
           &lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   or
           &lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
-  </pre>
+  </pre></div>
   <p>
   The first form is the conventional form found in all programming languages.
   The second permits the generation of function names by string valued
@@ -367,7 +367,7 @@ asthedit: Astronomical header editor
   In addition to the above intrinsic functions there are a number of
   astronomical functions. More will be added in time.  These are:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
        sexstr - convert a number to a sexagesimal string (xx:mm:ss.ss)
         epoch - compute an epoch given a date and time
        julday - compute a Julian day given a date and time
@@ -376,10 +376,10 @@ asthedit: Astronomical header editor
   dec_precess - precess dec from one epoch to another
       airmass - compute airmass given ra, dec, sidereal time, and latitude
      eairmass - compute effective airmass given
-  		ra, dec, sidereal time, exposure time, and latitude
+                  ra, dec, sidereal time, exposure time, and latitude
         obsdb - get parameters from the observatory database
-  </pre>
-  <dl>
+  </pre></div>
+  <dl id="l_sexstr">
   <dt><b>sexstr (number), sexstr (number, digits)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='sexstr' Line='sexstr (number), sexstr (number, digits)' -->
   <dd>Convert a number to a sexagesimal string in the format X:MM:SS.SS.  There
@@ -387,7 +387,7 @@ asthedit: Astronomical header editor
   decimal digits in the seconds field.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_epoch">
   <dt><b>epoch (date[, ut])</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='epoch' Line='epoch (date[, ut])' -->
   <dd>Compute an epoch given a date and time.  The date is a string in the
@@ -399,14 +399,14 @@ asthedit: Astronomical header editor
   string will be used and if absent a time of 0h is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_julday">
   <dt><b>julday (date[, ut])</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='julday' Line='julday (date[, ut])' -->
   <dd>Compute a Julian day given a date and time.  The date and time are
   specified as described previously.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mst">
   <dt><b>mst (date[, ut], longitude)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='mst' Line='mst (date[, ut], longitude)' -->
   <dd>Compute a mean sidereal time given a date, time, and longitude in degrees.  The
@@ -416,7 +416,7 @@ asthedit: Astronomical header editor
   string with two decimals in the seconds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_precess">
   <dt><b>precess (ra, dec, epoch1, epoch2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='precess' Line='precess (ra, dec, epoch1, epoch2)' -->
   <dd>Precess coordinates from one epoch to another.  The ra is the
@@ -427,7 +427,7 @@ asthedit: Astronomical header editor
   functions ra_precess and dec_precess.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ra_precess">
   <dt><b>ra_precess (ra, dec, epoch1, epoch2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='ra_precess' Line='ra_precess (ra, dec, epoch1, epoch2)' -->
   <dd>Precess a right ascension from one epoch to another.  The ra is the
@@ -437,7 +437,7 @@ asthedit: Astronomical header editor
   The returned value is a sexagesimal string with two decimals in the seconds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dec_precess">
   <dt><b>dec_precess (ra1, dec1, epoch1, epoch2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='dec_precess' Line='dec_precess (ra1, dec1, epoch1, epoch2)' -->
   <dd>Precess a declination from one epoch to another.  The ra is the
@@ -447,7 +447,7 @@ asthedit: Astronomical header editor
   The returned value is a sexagesimal string with two decimals in the seconds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_arcsep">
   <dt><b>arcsep (ra1, dec1, ra2, dec2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='arcsep' Line='arcsep (ra1, dec1, ra2, dec2)' -->
   <dd>Compute the separation between two spherical coordinates.  The parameters
@@ -456,7 +456,7 @@ asthedit: Astronomical header editor
   latitude, etc.).  The computed value is returned in seconds of arc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_airmass">
   <dt><b>airmass (ra, dec, st, latitude)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='airmass' Line='airmass (ra, dec, st, latitude)' -->
   <dd>Compute an airmass given right ascension in hours, declination in
@@ -465,7 +465,7 @@ asthedit: Astronomical header editor
   in the examples.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_eairmass">
   <dt><b>eairmass (ra, dec, st, exptime, latitude)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)' -->
   <dd>Compute an <span style="font-family: monospace;">"effective"</span> airmass given right ascension in hours, declination
@@ -475,12 +475,12 @@ asthedit: Astronomical header editor
   airmass is based on a Simpson's rule weighting of the beginning, middle,
   and ending airmass (with no provision for paused exposure).  The weights
   are:
-  <pre>
-      effective = beginning + 4 * middle + ending
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  effective = beginning + 4 * middle + ending
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obsdb">
   <dt><b>obsdb (observatory, parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='obsdb' Line='obsdb (observatory, parameter)' -->
   <dd>Return a value from the observatory database.  The observatory parameter is
@@ -504,20 +504,20 @@ asthedit: Astronomical header editor
   writes to the image header and one line of the text file is scanned
   automatically for each image.
   </p>
-  <pre>
-       print  - print a set of arguments with default format
-       printf - print a set arguments with specified format
-       format - format a string
-       error  - print an error message and abort
-       clget  - get a value from a CL parameter
-       clput  - put a value to a CL parameter
-       scan   - scan a string and parse into keywords or variables
-       fscan  - scan a line of a text file
-       imget  - get the value of an image header keyword
-       imput  - put (add or modify) the value of an image header keyword
-       imdel  - delete an image header keyword
-  </pre>
-  <dl>
+  <div class="highlight-default-notranslate"><pre>
+  print  - print a set of arguments with default format
+  printf - print a set arguments with specified format
+  format - format a string
+  error  - print an error message and abort
+  clget  - get a value from a CL parameter
+  clput  - put a value to a CL parameter
+  scan   - scan a string and parse into keywords or variables
+  fscan  - scan a line of a text file
+  imget  - get the value of an image header keyword
+  imput  - put (add or modify) the value of an image header keyword
+  imdel  - delete an image header keyword
+  </pre></div>
+  <dl id="l_print">
   <dt><b>print ([argument, ...])</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='print' Line='print ([argument, ...])' -->
   <dd>Print the arguments with default formats based on the type of value ending
@@ -525,7 +525,7 @@ asthedit: Astronomical header editor
   only a newline will be printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_printf">
   <dt><b>printf (fmt [, argument, ...])</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='printf' Line='printf (fmt [, argument, ...])' -->
   <dd>Print a list of arguments using the formatting syntax described later.
@@ -535,7 +535,7 @@ asthedit: Astronomical header editor
   produce newlines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_error">
   <dt><b>error (message)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)' -->
   <dd>Print the <span style="font-family: monospace;">"message"</span>, which can be any string variable such as might
@@ -544,14 +544,14 @@ asthedit: Astronomical header editor
   takes an inappropriate value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clget">
   <dt><b>clget (parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='clget' Line='clget (parameter)' -->
   <dd>Get the value of a CL parameter.  The argument must be a string.  The
   function value is the value of the parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clput">
   <dt><b>clput (parameter, value)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)' -->
   <dd>Put a value into a CL parameter.  The parameter argument must be a
@@ -560,7 +560,7 @@ asthedit: Astronomical header editor
   the actual values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scan">
   <dt><b>scan (string, var, ...)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='scan' Line='scan (string, var, ...)' -->
   <dd>Parse a string of whitespace separated words into a list of
@@ -568,7 +568,7 @@ asthedit: Astronomical header editor
   the returned value of the function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fscan">
   <dt><b>fscan (var, ...)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='fscan' Line='fscan (var, ...)' -->
   <dd>Scan a line of a text file into a list of keywords or variables.  The arguments
@@ -577,14 +577,14 @@ asthedit: Astronomical header editor
   is the returned value of the function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imget">
   <dt><b>imget (parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='imget' Line='imget (parameter)' -->
   <dd>Get the value of an image header keyword from the current image.  The
   argument must be a string.  The function value is the value of the keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imput">
   <dt><b>imput (parameter, value)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='imput' Line='imput (parameter, value)' -->
   <dd>Put a value into an image header keyword for the current image.  The
@@ -595,7 +595,7 @@ asthedit: Astronomical header editor
   modified keywords where parameter and value are the actual values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imdel">
   <dt><b>imdel (parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)' -->
   <dd>Delete an image header keyword.  The parameter argument must be a string.
@@ -604,9 +604,9 @@ asthedit: Astronomical header editor
   name and value is the old value.
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -615,7 +615,7 @@ asthedit: Astronomical header editor
   codes C are as follows:
       
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -628,22 +628,20 @@ asthedit: Astronomical header editor
   rN      convert integer in any radix N
   s       string (D field specifies max chars to print)
   t       advance To column given as field W
-  u       unsigned decimal integer 
+  u       unsigned decimal integer
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-      
-      
+  
   Conventions for w (field width) specification:
-      
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-      
-      
+  
   Escape sequences (e.g. "\n" for newline):
-      
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -653,15 +651,15 @@ asthedit: Astronomical header editor
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-      
+  
   Examples
-      
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-      
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -669,64 +667,64 @@ asthedit: Astronomical header editor
   %12.5g      print a real number right justified in general format
   %-12.5g     same as above but left justified
   
-  %h	    format as nn:nn:nn.n
-  %15h	    right justify nn:nn:nn.n in field of 15 characters
-  %-15h	    left justify nn:nn:nn.n in a field of 15 characters
-  %12.2h	    right justify nn:nn:nn.nn
-  %-12.2h	    left justify nn:nn:nn.nn
-      
-  %H	    / by 15 and format as nn:nn:nn.n
-  %15H	    / by 15 and right justify nn:nn:nn.n in field of 15 characters
-  %-15H	    / by 15 and left justify nn:nn:nn.n in field of 15 characters
-  %12.2H	    / by 15 and right justify nn:nn:nn.nn
-  %-12.2H	    / by 15 and left justify nn:nn:nn.nn
+  %h          format as nn:nn:nn.n
+  %15h        right justify nn:nn:nn.n in field of 15 characters
+  %-15h       left justify nn:nn:nn.n in a field of 15 characters
+  %12.2h      right justify nn:nn:nn.nn
+  %-12.2h     left justify nn:nn:nn.nn
+  
+  %H          / by 15 and format as nn:nn:nn.n
+  %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
+  %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
+  %12.2H      / by 15 and right justify nn:nn:nn.nn
+  %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following command file exercises the astronomical functions:
   </p>
-  <pre>
-      cl&gt; type cmds
-      observat = "kpno"
-      time = sexstr (1.2345)
-      epoch = epoch (@'date-obs', ut)
-      jd = julday (@'date-obs', ut)
-      mst = mst (@'date-obs', ut, obsdb (observat, "longitude"))
-      rap = ra_precess (ra, dec, epoch, 1950)
-      dap = dec_precess (ra, dec, epoch, 1950)
-      airmass =  airmass (ra, dec, mst, obsdb (observat, "latitude"))
-      airmass
-      airmass = " "
-      airmass = eairmass (ra, dec, mst, itime, obsdb (observat, "latitude"))
-      cl&gt; imhead obj001 l+
-          ...
-  	DATE-OBS= '05/04/87'            /  DATE DD/MM/YY
-  	RA      = '13:29:24.00'         /  RIGHT ASCENSION
-  	DEC     = '47:15:34.00'         /  DECLINATION
-  	UT      = ' 9:27:27.00'         /  UNIVERSAL TIME
-  	ITIME   =                  600  /  REQUESTED INTEGRATION TIME (SECS)
-          ...
-      cl&gt; asthedit obj001 cmds table="" verbose+
-      obj001:
-        $I = pix
-        $D = 22/01/96
-        $T = 19:14:41
-        observat = kpno
-        time = 1:14:04
-        epoch = 1987.257752395672
-        jd = 2446890.894062519
-        mst = 14:53:39.81
-        rap = 13:27:49.84
-        dap = 47:27:05.72
-        airmass = 1.079684154511483
-        airmass = 1.07968415451148 -&gt; DELETED
-        airmass =  
-        airmass =  -&gt; 1.08519059292424
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type cmds
+  observat = "kpno"
+  time = sexstr (1.2345)
+  epoch = epoch (@'date-obs', ut)
+  jd = julday (@'date-obs', ut)
+  mst = mst (@'date-obs', ut, obsdb (observat, "longitude"))
+  rap = ra_precess (ra, dec, epoch, 1950)
+  dap = dec_precess (ra, dec, epoch, 1950)
+  airmass =  airmass (ra, dec, mst, obsdb (observat, "latitude"))
+  airmass
+  airmass = " "
+  airmass = eairmass (ra, dec, mst, itime, obsdb (observat, "latitude"))
+  cl&gt; imhead obj001 l+
+      ...
+      DATE-OBS= '05/04/87'            /  DATE DD/MM/YY
+      RA      = '13:29:24.00'         /  RIGHT ASCENSION
+      DEC     = '47:15:34.00'         /  DECLINATION
+      UT      = ' 9:27:27.00'         /  UNIVERSAL TIME
+      ITIME   =                  600  /  REQUESTED INTEGRATION TIME (SECS)
+      ...
+  cl&gt; asthedit obj001 cmds table="" verbose+
+  obj001:
+    $I = pix
+    $D = 22/01/96
+    $T = 19:14:41
+    observat = kpno
+    time = 1:14:04
+    epoch = 1987.257752395672
+    jd = 2446890.894062519
+    mst = 14:53:39.81
+    rap = 13:27:49.84
+    dap = 47:27:05.72
+    airmass = 1.079684154511483
+    airmass = 1.07968415451148 -&gt; DELETED
+    airmass =
+    airmass =  -&gt; 1.08519059292424
+  </pre></div>
   <p>
   Note the use of the keyword deletion and syntax for adding an empty
   value.
@@ -735,93 +733,92 @@ asthedit: Astronomical header editor
   2.  The following command file shows computing a mid-ut and using a table
   of values.
   </p>
-  <pre>
-      cl&gt; type cmds
-      midut = sexstr ($ut + $itime/3600./2.)
-      imagetyp = $imagetyp
-      cl&gt; type table
-      object	9:27:27		600
-      comp	9:48:00		10
-      object	9:49:00		600
-      flat	12:00:00	2
-      cl&gt; asthedit obj* cmds table=table colnames="imagetyp ut itime" verbose+
-      obj001.imh:
-        $I = obj001.imh
-        $D = 22/01/96
-        $T = 20:38:39
-        midut = 9:32:27
-        imagetyp = object
-      obj002.imh:
-        $I = obj002.imh
-        midut = 9:48:05
-        imagetyp = comp
-      ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type cmds
+  midut = sexstr ($ut + $itime/3600./2.)
+  imagetyp = $imagetyp
+  cl&gt; type table
+  object      9:27:27         600
+  comp        9:48:00         10
+  object      9:49:00         600
+  flat        12:00:00        2
+  cl&gt; asthedit obj* cmds table=table colnames="imagetyp ut itime" verbose+
+  obj001.imh:
+    $I = obj001.imh
+    $D = 22/01/96
+    $T = 20:38:39
+    midut = 9:32:27
+    imagetyp = object
+  obj002.imh:
+    $I = obj002.imh
+    midut = 9:48:05
+    imagetyp = comp
+  </pre></div>
   <p>
   3.  The following example computes quantities used by some NOAO tasks from
   a minimal ESO/IHAP header.
   </p>
-  <pre>
-      cl&gt; type eso.dat
-      observat = "eso"
-      ut = sexstr ((@'tm-start'+0.1) / 3600.)
-      utend = sexstr ((@'tm-end'+0.1) / 3600.)
-      epoch = epoch (@'date-obs', ut)
-      st = mst (@'date-obs', ut, obsdb (observat, "longitude"))
-      exptime = (utend&gt;ut)?(utend-ut)*3600.:(utend+24-ut)*3600.
-      ra = sexstr (@'postn-ra' / 15)
-      dec = sexstr (@'postn-dec')
-      airmass = airmass (ra, dec, st, obsdb (observat, "latitude"))
-      imagetyp =  $imagetyp
-      filter = $filter
-      cl&gt; type table.dat
-      object	V
-      as&gt; imhead eso
-          ....
-  	DATE-OBS= '12/12/92'            / Date this data created dd/mm/yy
-  	TM-START=             84854.    / '23:34:14' measurement start time
-  	TM-END  =             84974.    / '23:36:14' measurement end time (U
-  	TIME-SID=                 1.    / '00:00:01' sidereal start time
-  	POSTN-RA=           354.0709    / '23:36:17' tel. position right-asc
-  	POSTN-DE=           6.556945    /'+06:33:25' tel. position declinati
-          ....
-      as&gt; asthedit eso eso.dat table=table.dat col="imagetyp filter" verbose+
-      eso:
-        $I = eso
-        $D = 23/01/96
-        $T = 09:02:55
-        observat = eso
-        ut = 23:34:14
-        utend = 23:36:14
-        epoch = 1992.948616307863
-        st = 0:18:56.76
-        exptime = 120.000000000006
-        ra = 23:36:17
-        dec = 6:33:25
-        airmass = 1.255875187126549
-        imagetyp = object
-        filter = V
-      as&gt; imhead eso
-  	...
-  	DATE-OBS= '12/12/92'            / Date this data created dd/mm/yy
-  	TM-START=             84854.    / '23:34:14' measurement start time
-  	TM-END  =             84974.    / '23:36:14' measurement end time (U
-  	TIME-SID=                 1.    / '00:00:01' sidereal start time
-  	POSTN-RA=           354.0709    / '23:36:17' tel. position right-asc
-  	POSTN-DE=           6.556945    /'+06:33:25' tel. position declinati
-  	OBSERVAT= 'eso     '
-  	UT      = '23:34:14'
-  	UTEND   = '23:36:14'
-  	EPOCH   =     1992.94861630786
-  	ST      = '0:18:56.76'
-  	EXPTIME =     120.000000000006
-  	RA      = '23:36:17'
-  	DEC     = '6:33:25 '
-  	AIRMASS =     1.25587518712655
-  	IMAGETYP= 'object  '
-  	FILTER  = 'V       '
-  	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type eso.dat
+  observat = "eso"
+  ut = sexstr ((@'tm-start'+0.1) / 3600.)
+  utend = sexstr ((@'tm-end'+0.1) / 3600.)
+  epoch = epoch (@'date-obs', ut)
+  st = mst (@'date-obs', ut, obsdb (observat, "longitude"))
+  exptime = (utend&gt;ut)?(utend-ut)*3600.:(utend+24-ut)*3600.
+  ra = sexstr (@'postn-ra' / 15)
+  dec = sexstr (@'postn-dec')
+  airmass = airmass (ra, dec, st, obsdb (observat, "latitude"))
+  imagetyp =  $imagetyp
+  filter = $filter
+  cl&gt; type table.dat
+  object      V
+  as&gt; imhead eso
+      ....
+      DATE-OBS= '12/12/92'            / Date this data created dd/mm/yy
+      TM-START=             84854.    / '23:34:14' measurement start time
+      TM-END  =             84974.    / '23:36:14' measurement end time (U
+      TIME-SID=                 1.    / '00:00:01' sidereal start time
+      POSTN-RA=           354.0709    / '23:36:17' tel. position right-asc
+      POSTN-DE=           6.556945    /'+06:33:25' tel. position declinati
+      ....
+  as&gt; asthedit eso eso.dat table=table.dat col="imagetyp filter" verbose+
+  eso:
+    $I = eso
+    $D = 23/01/96
+    $T = 09:02:55
+    observat = eso
+    ut = 23:34:14
+    utend = 23:36:14
+    epoch = 1992.948616307863
+    st = 0:18:56.76
+    exptime = 120.000000000006
+    ra = 23:36:17
+    dec = 6:33:25
+    airmass = 1.255875187126549
+    imagetyp = object
+    filter = V
+  as&gt; imhead eso
+      ...
+      DATE-OBS= '12/12/92'            / Date this data created dd/mm/yy
+      TM-START=             84854.    / '23:34:14' measurement start time
+      TM-END  =             84974.    / '23:36:14' measurement end time (U
+      TIME-SID=                 1.    / '00:00:01' sidereal start time
+      POSTN-RA=           354.0709    / '23:36:17' tel. position right-asc
+      POSTN-DE=           6.556945    /'+06:33:25' tel. position declinati
+      OBSERVAT= 'eso     '
+      UT      = '23:34:14'
+      UTEND   = '23:36:14'
+      EPOCH   =     1992.94861630786
+      ST      = '0:18:56.76'
+      EXPTIME =     120.000000000006
+      RA      = '23:36:17'
+      DEC     = '6:33:25 '
+      AIRMASS =     1.25587518712655
+      IMAGETYP= 'object  '
+      FILTER  = 'V       '
+      ...
+  </pre></div>
   <p>
   The 0.1 in the UT calculation are to account for round-off.
   Note the use of the conditional expression for the exposure time.
@@ -834,37 +831,37 @@ asthedit: Astronomical header editor
   and all other information is derived from the date, ut, and observatory
   database. 
   </p>
-  <pre>
-      cl&gt; type table.dat
-      12:45:32  +49:34:12   1950
-      13:12:02  -01:12:05   1950
-      cl&gt; type cmds.hast
-      epoch   = epoch (@'date-obs', ut)
-      ra      = ra_precess ($ra, $dec, $epoch, epoch)
-      dec     = dec_precess ($ra, $dec, $epoch, epoch)
-      st      = mst (@'date-obs', ut, obsdb (observat, "longitude"))
-      airmass = eairmass (ra, dec, st, exptime, obsdb (observat, "latitude"))
-      midut   = sexstr (ut + exptime/3600./2.)
-      cl&gt; asthedit *.imh cmds.hast table=table.dat colnames="ra dec epoch" ver+
-      sbs0119.imh:
-        $I = sbs0119.imh
-        $D = 23/01/96
-        $T = 10:38:32
-        epoch = 1987.257752395672
-        ra = 12:47:14.84
-        dec = 49:22:00.39
-        st = 14:53:39.81
-        airmass = 1.154765212092646
-        midut = 9:32:27
-      sbs0120.imh:
-        $I = sbs0120.imh
-        epoch = 1987.257752395672
-        ra = 13:13:56.90
-        dec = -1:23:54.30
-        st = 14:53:39.81
-        airmass = 1.336016291162518
-        midut = 9:32:27
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type table.dat
+  12:45:32  +49:34:12   1950
+  13:12:02  -01:12:05   1950
+  cl&gt; type cmds.hast
+  epoch   = epoch (@'date-obs', ut)
+  ra      = ra_precess ($ra, $dec, $epoch, epoch)
+  dec     = dec_precess ($ra, $dec, $epoch, epoch)
+  st      = mst (@'date-obs', ut, obsdb (observat, "longitude"))
+  airmass = eairmass (ra, dec, st, exptime, obsdb (observat, "latitude"))
+  midut   = sexstr (ut + exptime/3600./2.)
+  cl&gt; asthedit *.imh cmds.hast table=table.dat colnames="ra dec epoch" ver+
+  sbs0119.imh:
+    $I = sbs0119.imh
+    $D = 23/01/96
+    $T = 10:38:32
+    epoch = 1987.257752395672
+    ra = 12:47:14.84
+    dec = 49:22:00.39
+    st = 14:53:39.81
+    airmass = 1.154765212092646
+    midut = 9:32:27
+  sbs0120.imh:
+    $I = sbs0120.imh
+    epoch = 1987.257752395672
+    ra = 13:13:56.90
+    dec = -1:23:54.30
+    st = 14:53:39.81
+    airmass = 1.336016291162518
+    midut = 9:32:27
+  </pre></div>
   <p>
   Note the use of the table and image header epochs in the precession.
   </p>
@@ -872,20 +869,20 @@ asthedit: Astronomical header editor
   5.  The following example shows the use of the printf function,
   and a null image name, and interactive command input.
   </p>
-  <pre>
-      cl&gt; asthedit "" ""
-      astcalc&gt; ra = 12:20:30
-      astcalc&gt; dec = 45:00:10
-      astcalc&gt; ep1 = 1950
-      astcalc&gt; ep2 = 2000
-      astcalc&gt; ra1 = ra_precess (ra, dec, ep1, ep2)
-      astcalc&gt; printf ("ra=%h dec=%h\n", ra1, dec_precess (ra, dec, ep1, ep2))
-      ra=12:22:57.4 dec=44:43:32.25
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; asthedit "" ""
+  astcalc&gt; ra = 12:20:30
+  astcalc&gt; dec = 45:00:10
+  astcalc&gt; ep1 = 1950
+  astcalc&gt; ep2 = 2000
+  astcalc&gt; ra1 = ra_precess (ra, dec, ep1, ep2)
+  astcalc&gt; printf ("ra=%h dec=%h\n", ra1, dec_precess (ra, dec, ep1, ep2))
+  ra=12:22:57.4 dec=44:43:32.25
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_ASTHEDIT">
   <dt><b>ASTHEDIT V2.11.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11.2' -->
   <dd>Y2K update:  The epoch, julday, and mst functions now take either the old
@@ -895,7 +892,7 @@ asthedit: Astronomical header editor
   $GMT, and $GMDT for the current time Greenwich time are defined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ASTHEDIT">
   <dt><b>ASTHEDIT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='ASTHEDIT' Line='ASTHEDIT V2.11' -->
   <dd>There are new astronomical functions and input/output functions.
@@ -908,15 +905,15 @@ asthedit: Astronomical header editor
   task can be used purely as a calculator (but see <b>astcalc</b>).
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   astcalc, hedit, hfix, mkheader, setairmass, setjd, asttimes, precess,
   observatory
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

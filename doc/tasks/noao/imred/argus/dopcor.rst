@@ -7,21 +7,21 @@ dopcor: Doppler correct spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   dopcor input output redshift
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input spectra to be doppler corrected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of doppler corrected spectra.  If no output list is specified then
@@ -30,7 +30,7 @@ dopcor: Doppler correct spectra
   calibrated spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_redshift">
   <dt><b>redshift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='redshift' Line='redshift' -->
   <dd>Redshift or radial velocity (km/s) to be removed?  The spectra are corrected so
@@ -43,7 +43,7 @@ dopcor: Doppler correct spectra
   made with the <i>isvelocity</i> parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_isvelocity">
   <dt><b>isvelocity = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='isvelocity' Line='isvelocity = no' -->
   <dd>Is the value specified by the <i>redshift</i> parameter a velocity?  If
@@ -53,31 +53,31 @@ dopcor: Doppler correct spectra
   velocities users should specify a redshift (z = v_cosmological / c).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_add">
   <dt><b>add = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='add' Line='add = no' -->
   <dd>Add doppler correction to existing correction in <span style="font-family: monospace;">"multispec"</span> spectra?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispersion">
   <dt><b>dispersion = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispersion' Line='dispersion = yes' -->
   <dd>Apply a correction to the dispersion function?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flux">
   <dt><b>flux = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = no' -->
   <dd>Apply a flux correction?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_factor">
   <dt><b>factor = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='factor' Line='factor = 3' -->
   <dd>Flux correction factor as a power of 1+z when applying a flux correction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be corrected.  If none are specified then all apertures
@@ -88,16 +88,16 @@ dopcor: Doppler correct spectra
   long slit and Fabry-Perot spectra this parameter is ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print corrections performed?  The information includes the output image
   name, the apertures, the redshift, and the flux correction factor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The input spectra (as specified by the input image list and apertures) are
   corrected by removing a specified doppler shift and written to the
@@ -187,37 +187,37 @@ dopcor: Doppler correct spectra
   the keywords gives the redshift applied, the flux factor if used, and
   the apertures which were corrected.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To dispersion and flux correct a quasar spectrum with redshift of
   3.2 to a rest frame:
   </p>
-  <pre>
-  	cl&gt; dopcor qso001.ms qso001rest.ms 3.2 flux+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dopcor qso001.ms qso001rest.ms 3.2 flux+
+  </pre></div>
   <p>
   2.  To correct a set of spectra (in place) to heliocentric rest the task
   <b>rvcorrect</b> is used to set the VHELIO keyword using an observed
   velocity of 0.  Then:
   </p>
-  <pre>
-  	cl&gt; dopcor *.imh "" -vhelio isvel+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dopcor *.imh "" -vhelio isvel+
+  </pre></div>
   <p>
   3.  To artificially add a redshift of 3.2 to a spectrum the complementary
   redshift is computed:
   </p>
-  <pre>
-  	cl&gt; = 1/(1+3.2)-1
-  	-0.76190476190476
-  	cl&gt; dopcor artspec "" -0.762 flux+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; = 1/(1+3.2)-1
+  -0.76190476190476
+  cl&gt; dopcor artspec "" -0.762 flux+
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_DOPCOR">
   <dt><b>DOPCOR V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DOPCOR' Line='DOPCOR V2.10.3' -->
   <dd>This task was extended to work on two and three dimensional spatial spectra
@@ -225,13 +225,13 @@ dopcor: Doppler correct spectra
   The <i>add</i> parameter was added.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_DOPCOR">
   <dt><b>DOPCOR V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DOPCOR' Line='DOPCOR V2.10.3' -->
   <dd>A keyword is added to log the correction applied.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_DOPCOR">
   <dt><b>DOPCOR V2.10.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DOPCOR' Line='DOPCOR V2.10.2' -->
   <dd>A sign error in converting velocity to redshift was fixed.  A validity
@@ -239,20 +239,20 @@ dopcor: Doppler correct spectra
   was corrected and improved.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_DOPCOR">
   <dt><b>DOPCOR V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DOPCOR' Line='DOPCOR V2.10' -->
   <dd>This task is new.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ranges, rvcorrect
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

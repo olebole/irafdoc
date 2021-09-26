@@ -7,15 +7,15 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   irmatch2d input output database coords
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The mosaiced image to be aligned. This image must have been produced by
@@ -23,19 +23,19 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
   <i>database</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The aligned and matched image produced by IRMATCH2D.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>The database file from the IRMOSAIC task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords' -->
   <dd>If <i>alignment</i> = <span style="font-family: monospace;">"coords"</span>, then <b>coords</b> is
@@ -53,19 +53,19 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
   IRMATCH2D with the new shifts.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xshift">
   <dt><b>xshift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift' -->
   <dd>The x shift in pixel units if <i>alignment</i> = <span style="font-family: monospace;">"shifts"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_yshift">
   <dt><b>yshift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='yshift' Line='yshift' -->
   <dd>The x shift in pixel units if <i>alignment</i> = <span style="font-family: monospace;">"shifts"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_alignment">
   <dt><b>alignment = <span style="font-family: monospace;">"coords"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='alignment' Line='alignment = "coords"' -->
   <dd>The method of aligning the subraster.
@@ -92,7 +92,7 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = "*"' -->
   <dd>Match intensities using the overlap region between adjacent subrasters. The
@@ -107,14 +107,14 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
   To match all the subrasters set match = <span style="font-family: monospace;">"1-999"</span> or match=<span style="font-family: monospace;">"*"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxrsub">
   <dt><b>nxrsub = INDEF, nyrsub = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxrsub' Line='nxrsub = INDEF, nyrsub = INDEF' -->
   <dd>The column and row index of the reference subraster. This will default
   to the central subraster.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xref">
   <dt><b>xref = 0, yref = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = 0, yref = 0' -->
   <dd>The x and y offset of the reference subraster in the output image. By default
@@ -122,7 +122,7 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
   that it occupied in the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trimlimits">
   <dt><b>trimlimits = <span style="font-family: monospace;">"[1:1,1:1]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trimlimits' Line='trimlimits = "[1:1,1:1]"' -->
   <dd>The number of rows and columns to be trimmed off each input subraster
@@ -131,21 +131,21 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
   subraster.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nimcols">
   <dt><b>nimcols = INDEF, nimlines = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nimcols' Line='nimcols = INDEF, nimlines = INDEF' -->
   <dd>The number of columns and lines in the output image. The default is the
   number of lines and columns in the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_oval">
   <dt><b>oval = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='oval' Line='oval = INDEF' -->
   <dd>The value of undefined pixels in the output image. The default is the value
   in the database file from IRMOSAIC.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolant">
   <dt><b>interpolant = linear</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = linear' -->
   <dd>The type of interpolant used to shift the subrasters. The options are:
@@ -181,15 +181,15 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages on the terminal describing the progress of the task.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IRMATCH2D takes the mosaiced image <i>input</i>, the database file <i>database</i>
   generated by IRMOSAIC and a list of coordinates <i>coords</i> and computes
@@ -238,66 +238,66 @@ irmatch2d: Align and intensity match image produced by irmosaic (2D)
   each row starting with the lower-left hand corner and then along
   each column beginning again in the lower-left corner.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Align an 8 by 8 mosaic with respect to subraster 6, 5.
   </p>
-  <pre>
-      pr&gt; irmatch2d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
-  	nyrsub=5
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; irmatch2d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+      nyrsub=5
+  </pre></div>
   <p>
   2. Align an 8 by 8 mosaic as 1 above but shift the position of the
   reference subraster in the output image by 2 pixels in x and 3 pixels
   in y.
   </p>
-  <pre>
-      pr&gt; irmatch2d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
-  	nyrsub=5 xref=2 yref=3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; irmatch2d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+      nyrsub=5 xref=2 yref=3
+  </pre></div>
   <p>
   3. Align an 8 by 8 mosaic as 1 above but trim 2 rows and columns off
   of each input image before inserting into the output image.
   </p>
-  <pre>
-      pr&gt; irmatch2d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
-  	nyrsub=5 trimlimits="[2:2,2:2]"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; irmatch2d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+      nyrsub=5 trimlimits="[2:2,2:2]"
+  </pre></div>
   <p>
   4. Rerun the above example saving the verbose output in a file. Use the 
   PROTO package fields task to select the xshift, yshift and intensity
   shift fields, edit the shifts slightly and rerun irmatch2d with the
   new shifts.
   </p>
-  <pre>
-      pr&gt; irmatch2d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
-  	nyrsub=5 trimlimits="[2:2,2:2]" &gt; shifts1
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; irmatch2d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+      nyrsub=5 trimlimits="[2:2,2:2]" &gt; shifts1
   
-      pr&gt; fields shifts1 3,4,6 &gt; shifts2
+  pr&gt; fields shifts1 3,4,6 &gt; shifts2
   
-      pr&gt; edit shifts2
+  pr&gt; edit shifts2
   
-  	... make whatever changes are desired
+      ... make whatever changes are desired
   
-      pr&gt; irmatch2d mosaic mosaic.al mosaic.db shifts2 align=file \<br>
-  	nxrsub=6 nyrsub=5 trimlimits="[2:2,2:2]"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  pr&gt; irmatch2d mosaic mosaic.al mosaic.db shifts2 align=file \<br>
+      nxrsub=6 nyrsub=5 trimlimits="[2:2,2:2]"
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   irmosaic, iralign, irmatch1d, apphot.center, apphot.apselect
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

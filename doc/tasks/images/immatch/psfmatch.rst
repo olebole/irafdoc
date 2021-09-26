@@ -7,21 +7,21 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   psfmatch input reference psfdata kernel 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input images to be matched.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>The list of reference images to which the input images are to be matched if
@@ -32,7 +32,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psfdata">
   <dt><b>psfdata</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfdata' Line='psfdata' -->
   <dd>The list of objects used to compute the psf matching function if
@@ -45,7 +45,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   the number of input psf images must equal the number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_kernel">
   <dt><b>kernel</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='kernel' Line='kernel' -->
   <dd>The list of input/output psf matching function images to be convolved with the
@@ -53,7 +53,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   must equal the number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>The list of output matched images. If <i>output</i> is the NULL string
@@ -62,7 +62,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   then the number of output images must equal the number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_convolution">
   <dt><b>convolution = <span style="font-family: monospace;">"image"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='convolution' Line='convolution = "image"' -->
   <dd>The algorithm used to compute the psf matching function. The options are:
@@ -91,7 +91,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dnx">
   <dt><b>dnx = 31, ls dny = 31</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dnx' Line='dnx = 31, ls dny = 31' -->
   <dd>The x and y width of the data region to be extracted around each object. The
@@ -100,7 +100,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pnx">
   <dt><b>pnx = 15, pny = 15</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pnx' Line='pnx = 15, pny = 15' -->
   <dd>The x and y width of the psf matching function to be computed which must be
@@ -111,7 +111,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_center">
   <dt><b>center = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='center' Line='center = yes' -->
   <dd>Center the objects in <i>psfdata</i> before extracting the data from the
@@ -121,7 +121,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = median</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = median' -->
   <dd>The default background function to be subtracted from the input
@@ -168,14 +168,14 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_loreject">
   <dt><b>loreject = INDEF, ls hireject = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='loreject' Line='loreject = INDEF, ls hireject = INDEF' -->
   <dd>The k-sigma rejection limits for removing the effects of bad data from the
   background fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apodize">
   <dt><b>apodize = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apodize' Line='apodize = 0.0' -->
   <dd>The fraction of the input and reference image data endpoints in x and y
@@ -185,7 +185,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fluxratio">
   <dt><b>fluxratio = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fluxratio' Line='fluxratio = INDEF' -->
   <dd>The ratio of the integrated flux of the reference objects to the integrated
@@ -193,7 +193,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   By default <i>fluxratio</i> is computed directly from the input data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_filter">
   <dt><b>filter = <span style="font-family: monospace;">"replace"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "replace"' -->
   <dd>The filter used to remove high frequency noise from the psf
@@ -222,7 +222,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sx1">
   <dt><b>sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sx1' Line='sx1 = INDEF, sx2 = INDEF, sy1 = INDEF, sy2 = INDEF' -->
   <dd>The limits of the cosine bell taper in frequency space. Frequency components
@@ -231,20 +231,20 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   and sx2 and sy2 are set to the largest frequency present in the data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radsym">
   <dt><b>radsym = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radsym' Line='radsym = no' -->
   <dd>Compute a radially symmetric cosine bell function ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 0.2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.2' -->
   <dd>The low frequency cutoff in fraction of the total input image spectrum
   power for the filtering options <span style="font-family: monospace;">"replace"</span> and <span style="font-family: monospace;">"model"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_normfactor">
   <dt><b>normfactor = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='normfactor' Line='normfactor = 1.0' -->
   <dd>The total power in the computed psf matching function <i>kernel</i>. By default
@@ -253,7 +253,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   <i>Normfactor</i> is not used if <i>convolution</i> is set <span style="font-family: monospace;">"kernel"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary_type">
   <dt><b>boundary_type = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
   <dd>The boundary extension algorithm used to compute the output matched
@@ -284,52 +284,52 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0' -->
   <dd>The default constant for constant boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Compute the psf matching function for each image
   interactively using graphics cursor and, optionally, image cursor input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose' -->
   <dd>Print messages about the progress of the task in non-interactive mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">"stdimage"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = "stdimage"' -->
   <dd>The default image display device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The default graphics cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The default image display cursor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   PSFMATCH computes the convolution kernel required to match the
   point-spread functions
@@ -499,69 +499,64 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   function and its accompanying fourier spectrum, and experiment with the
   various filtering and modeling options.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The following graphics cursor commands are currently available in
   PSFMATCH.
   </p>
-  <pre>
-  	Interactive Keystroke Commands
+  <div class="highlight-default-notranslate"><pre>
+          Interactive Keystroke Commands
   
+  ?       Print help
+  :       Colon commands
+  k       Draw a contour plot of the psf matching kernel
+  p       Draw a contour plot of the psf matching kernel fourier spectrum
+  x       Draw a column plot of the psf matching kernel / fourier spectrum
+  y       Draw a line plot of the psf matching kernel / fourier spectrum
+  r       Redraw the current plot
+  f       Recompute the psf matching kernel
+  w       Update the task parameters
+  q       Exit
   
-  ?	Print help 
-  :	Colon commands
-  k	Draw a contour plot of the psf matching kernel
-  p	Draw a contour plot of the psf matching kernel fourier spectrum
-  x	Draw a column plot of the psf matching kernel / fourier spectrum
-  y	Draw a line plot of the psf matching kernel / fourier spectrum
-  r	Redraw the current plot
-  f	Recompute the psf matching kernel
-  w	Update the task parameters
-  q	Exit
+          Colon Commands
   
+  :mark   [file]          Mark objects on the display
+  :show                   Show current values of the parameters
   
-  	Colon Commands
+          Show/Set Parameters
   
+  :input      [string]        Show/set the current input image name
+  :reference  [string]        Show/set the current reference image/psf name
+  :psf        [file/string]   Show/set the objects/input psf list
+  :psfimage   [string]        Show/set the current input psf name
+  :kernel     [string]        Show/set the current psf matching kernel name
+  :output     [string]        Show/set the current output image name
   
-  :mark	[file]		Mark objects on the display
-  :show			Show current values of the parameters
-  
-  
-  	Show/Set Parameters
-  
-  
-  :input	    [string]	    Show/set the current input image name
-  :reference  [string]	    Show/set the current reference image/psf name
-  :psf	    [file/string]   Show/set the objects/input psf list
-  :psfimage   [string]	    Show/set the current input psf name
-  :kernel	    [string]	    Show/set the current psf matching kernel name
-  :output     [string]	    Show/set the current output image name
-  
-  :dnx	    [value]	    Show/set x width of data region(s) to extract
-  :dny	    [value]	    Show/set y width of data region(s) to extract
-  :pnx	    [value]	    Show/set x width of psf matching kernel
-  :pny	    [value]	    Show/set y width of psf matching kernel
-  :center	    [yes/no]	    Show/set the centering switch
+  :dnx        [value]         Show/set x width of data region(s) to extract
+  :dny        [value]         Show/set y width of data region(s) to extract
+  :pnx        [value]         Show/set x width of psf matching kernel
+  :pny        [value]         Show/set y width of psf matching kernel
+  :center     [yes/no]        Show/set the centering switch
   :background [string]        Show/set the background fitting function
-  :loreject   [value]	    Show/set low side k-sigma rejection parameter
-  :hireject   [value]	    Show/set high side k-sigma rejection parameter
-  :apodize    [value]	    Show/set percent of endpoints to apodize
+  :loreject   [value]         Show/set low side k-sigma rejection parameter
+  :hireject   [value]         Show/set high side k-sigma rejection parameter
+  :apodize    [value]         Show/set percent of endpoints to apodize
   
-  :filter	    [string]	    Show/set the filtering algorithm
-  :fluxratio  [value]	    Show/set the reference/input psf flux ratio
-  :sx1	    [value]	    Show/set inner x frequency for cosbell filter
-  :sx2	    [value]	    Show/set outer x frequency for cosbell filter
-  :sy1	    [value]	    Show/set inner y frequency for cosbell filter
-  :sy2	    [value]	    Show/set outer y frequency for cosbell filter
-  :radsym	    [yes/no]        Show/set radial symmetry for cosbell filter
-  :threshold  [value]	    Show/set %threshold for replace/modeling filter
-  :normfactor [value]	    Show/set the kernel normalization factor
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  :filter     [string]        Show/set the filtering algorithm
+  :fluxratio  [value]         Show/set the reference/input psf flux ratio
+  :sx1        [value]         Show/set inner x frequency for cosbell filter
+  :sx2        [value]         Show/set outer x frequency for cosbell filter
+  :sy1        [value]         Show/set inner y frequency for cosbell filter
+  :sy2        [value]         Show/set outer y frequency for cosbell filter
+  :radsym     [yes/no]        Show/set radial symmetry for cosbell filter
+  :threshold  [value]         Show/set %threshold for replace/modeling filter
+  :normfactor [value]         Show/set the kernel normalization factor
+  </pre></div>
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   The problem of computing the psf matching function can expressed
   via the convolution theorem as shown below.
@@ -573,13 +568,13 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   power in the reference data or psf to the total power in the input data or
   psf, * is the convolution operator, and FT is the fourier transform operator.
   </p>
-  <pre>
-  	r = ak * d
-  	R = FT (r)
-  	I = FT (i)
-  	aK = R / I
-  	ak = FT (aK)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  r = ak * d
+  R = FT (r)
+  I = FT (i)
+  aK = R / I
+  ak = FT (aK)
+  </pre></div>
   <p>
   The quantity ak is the desired psf matching function and aK is its fourier
   transform.
@@ -589,9 +584,9 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   psf matching function was computed, the quantity a is simply the central
   frequency component of the computed psf matching function aK as shown below.
   </p>
-  <pre>
-  	aK[0,0] = a = sum(r) / sum(i)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  aK[0,0] = a = sum(r) / sum(i)
+  </pre></div>
   <p>
   If the background was not removed from the image or psf data before the
   psf matching function was computed the previous expression is not valid.
@@ -602,11 +597,11 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   amplitudes, and set aK[0,0] to the ratio of the resulting fitted amplitudes
   as shown below.
   </p>
-  <pre>
-  	      a = amplitude (R) / amplitude (I)
-  	        = (sum(r) - sum(skyr)) / (sum(i) - sum(skyi))  
-  	      aK[0,0] = a
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  a = amplitude (R) / amplitude (I)
+    = (sum(r) - sum(skyr)) / (sum(i) - sum(skyi))
+  aK[0,0] = a
+  </pre></div>
   <p>
   This approach will work well as long as the image data or psf is reasonably
   gaussian but may not work well in arbitrary image regions. If the user is
@@ -617,15 +612,15 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   If a filter is applied to the computed psf matching function in frequency
   space then instead of computing
   </p>
-  <pre>
-  	       ak = FT (aK)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ak = FT (aK)
+  </pre></div>
   <p>
   PSFMATCH actually computes
   </p>
-  <pre>
-  	       ak' = FT (aKF) = ak * f
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ak' = FT (aKF) = ak * f
+  </pre></div>
   <p>
   where F is the applied filter in frequency space and f is its
   fourier transform. Care should be taken in applying any filter.
@@ -639,7 +634,7 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   matching function with a best guess, PSFMATCH performs the following
   steps:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1) fits an elliptical gaussian to those frequency components of the fourier
   spectrum of aK for which for which the amplitude of I is greater
   than threshold * I[0,0] to determine the geometry of the ellipse
@@ -650,13 +645,13 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   3) replace those frequency components of aK for which the fourier spectrum
   of I is less than threshold * I[0,0] with the model values
   
-  		or alternatively
+                  or alternatively
   
   replace all of aK with the model values
-  </pre>
-  <!-- EndSection:   'ALGORITHMS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Psf match a list of input images taken at different epochs with variable
   seeing conditions to a reference image with the poorest seeing by marking
@@ -665,30 +660,30 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   image data. User makes two runs with psfmatch one to compute and check the
   kernel images and one to match the images.
   </p>
-  <pre>
-  	cl&gt; display refimage 1 fi+
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; display refimage 1 fi+
   
-  	cl&gt; rimcursor &gt; objects
+  cl&gt; rimcursor &gt; objects
   
-  	cl&gt; psfmatch @inimlist refimage objects @kernels dnx=31 \<br>
-  	    dny=31 pnx=15 pny=15
+  cl&gt; psfmatch @inimlist refimage objects @kernels dnx=31 \<br>
+      dny=31 pnx=15 pny=15
   
-  	cl&gt; imstat @kernels
+  cl&gt; imstat @kernels
   
-  	cl&gt; psfmatch @inlist refimage objects @kernels          \<br>
-  	    output=@outlist convolution="kernel"
-  </pre>
+  cl&gt; psfmatch @inlist refimage objects @kernels          \<br>
+      output=@outlist convolution="kernel"
+  </pre></div>
   <p>
   2. Psf match two spectra using a high signal-to-noise portion of the
   data in the middle of the spectrum. Since the spectra are registered
   spatially and there is little data available for background fitting the
   user chooses to turn centering off and set the backgrounds manually.
   </p>
-  <pre>
-  	cl&gt; psfmatch inspec refspec "303.0 1.0" kernel         \<br>
-  	    output=outspec dnx=31 dny=31 pnx=15 pny=15 center- \<br>
-  	    back="403.6 452.0"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; psfmatch inspec refspec "303.0 1.0" kernel         \<br>
+      output=outspec dnx=31 dny=31 pnx=15 pny=15 center- \<br>
+      back="403.6 452.0"
+  </pre></div>
   <p>
   3. Psf match two images using psf functions inpsf and refpsf computed with
   the daophot package phot/psf/seepsf tasks. Since the kernel is fairly
@@ -697,57 +692,57 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   to setting the psfmatch boundary extension parameters boundary and
   constant to <span style="font-family: monospace;">"constant"</span> and <span style="font-family: monospace;">"0.0"</span> respectively.
   </p>
-  <pre>
-  	cl&gt; psfmatch inimage refpsf inpsf kernel convolution=psf
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; psfmatch inimage refpsf inpsf kernel convolution=psf
   
-  	cl&gt; fconvolve inimage kernel outimage
-  </pre>
+  cl&gt; fconvolve inimage kernel outimage
+  </pre></div>
   <p>
   4. Psf match two images interactively using the image data itself to
   compute the psf matching function.
   </p>
-  <pre>
-  	cl&gt; psfmatch inimage refimage objects kernel interactive+
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; psfmatch inimage refimage objects kernel interactive+
   
-  	    ... a contour plot of the psf matching function appears
-  		with the graphics cursor ready to accept commands
+      ... a contour plot of the psf matching function appears
+          with the graphics cursor ready to accept commands
   
-              ... type x and y to get line and column plots of the psf
-                  matching function at various points and k to return
-                  to the default contour plot
+      ... type x and y to get line and column plots of the psf
+          matching function at various points and k to return
+          to the default contour plot
   
-  	    ... type ? to get a list of the available commands
+      ... type ? to get a list of the available commands
   
-  	    ... type :mark to define a new set of objects
+      ... type :mark to define a new set of objects
   
-  	    ... type f to recompute the psf matching function using
-                  the new objects
+      ... type f to recompute the psf matching function using
+          the new objects
   
-   	    ... increase the data window to 63 pixels in x and y
-                  with the :dnx 63 and :dny 63 commands, at the
-                  same time increase the psf function size to 31 with
-  		the colon commands :pnx 31 and :pny 31
+      ... increase the data window to 63 pixels in x and y
+          with the :dnx 63 and :dny 63 commands, at the
+          same time increase the psf function size to 31 with
+          the colon commands :pnx 31 and :pny 31
   
-  	    ... type f to recompute the psf matching function using
-                  the new data and kernel windows
+      ... type f to recompute the psf matching function using
+          the new data and kernel windows
   
-  	    ... type q to quit the task, and q again to verify the previous
-                  q command
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type q to quit the task, and q again to verify the previous
+          q command
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   convolve, gauss, stsdas.fconvolve, digiphot.daophot.psf
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

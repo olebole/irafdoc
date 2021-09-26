@@ -7,22 +7,22 @@ fit1d: Fit a function to image lines or columns
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   fit1d input output type
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Images to be fit.  The images may contain image sections.  Only the region
   covered by the section will be modified in the output image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output images to be created or modified.  The number of output images
@@ -31,7 +31,7 @@ fit1d: Fit a function to image lines or columns
   <span style="font-family: monospace;">"difference"</span> and to one for fit type <span style="font-family: monospace;">"ratio"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_type">
   <dt><b>type</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='type' Line='type' -->
   <dd>Type of output.  The choices are:
@@ -55,7 +55,7 @@ fit1d: Fit a function to image lines or columns
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bpm">
   <dt><b>bpm = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bpm' Line='bpm = ""' -->
   <dd>List of bad pixel masks.  This may be a null string to not use a
@@ -64,27 +64,27 @@ fit1d: Fit a function to image lines or columns
   value is the mask to use.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_axis">
   <dt><b>axis = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='axis' Line='axis = 1' -->
   <dd>Axis along which the one dimensional fitting is done.  Axis 1 corresponds
   to fitting the image lines and axis 2 corresponds to fitting the columns.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>If <b>interactive</b> is set to yes, a plot of the fit is drawn and the
   cursor is available for interactively examining and adjusting the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Lines or columns to be used in the fits.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Number of sample points to combined to create a fitting point.
@@ -92,7 +92,7 @@ fit1d: Fit a function to image lines or columns
   a median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = spline3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
   <dd>Function to be fit to the image lines or columns.  The functions are
@@ -101,46 +101,46 @@ fit1d: Fit a function to image lines or columns
   may be abbreviated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>The order of the polynomials or the number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 0., high_reject = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0., high_reject = 0.' -->
   <dd>Rejection limits below and above the fit in units of the residual sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.' -->
   <dd>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for interactive graphics.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>Graphics cursor input.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A one dimensional function is fit to each line or column of the input images.
   The function may be a legendre polynomial, chebyshev polynomial,
@@ -200,22 +200,22 @@ fit1d: Fit a function to image lines or columns
   are used on each line or column of the image.  This step is repeated for
   each image in the input list.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To create a smoothed version of an image by fitting the image lines:
   </p>
-  <p>
-      cl&gt; fit1d image fitimage fit
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fit1d image fitimage fit
+  </pre></div>
   <p>
   If the interactive flag is set and the image is two dimensional then a prompt
   for an image line is printed:
   </p>
-  <p>
-      image: Fit line = 100 200
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  image: Fit line = 100 200
+  </pre></div>
   <p>
   The selected lines are averaged, graphed, and the interactive options for
   setting and fitting the line are used.  Exiting with <span style="font-family: monospace;">'q'</span> or return prompts for
@@ -228,10 +228,10 @@ fit1d: Fit a function to image lines or columns
   columns 10 to 100 and to subtract another linear function fit to lines
   110 to 120 and 180 to 200 from columns 110 to 200:
   </p>
-  <pre>
-      cl&gt; fit1d image1[10:100,*] output diff axis=2 sample="1:11,71:91"
-      cl&gt; fit1d image1[110:200,*] output diff axis=2 sample="1:11,71:91"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fit1d image1[10:100,*] output diff axis=2 sample="1:11,71:91"
+  cl&gt; fit1d image1[110:200,*] output diff axis=2 sample="1:11,71:91"
+  </pre></div>
   <p>
   Pixels outside columns 10 to 100 and 110 to 200 are not affected.  Note that the
   sample points are specified relative to the image sections.  The script
@@ -241,23 +241,23 @@ fit1d: Fit a function to image lines or columns
   <p>
   3.  To determine a small scale response image:
   </p>
-  <p>
-      cl&gt; fit1d image1 flat ratio
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fit1d image1 flat ratio
+  </pre></div>
   <p>
   The task <b>imred.generic.flat1d</b> is available for making flat field images
   by this method with the addition of an extra parameter to limit the data values
   for which the ratio is computed.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imred.generic.background, imred.generic.flat1d
   xtools.icfit, lineclean, imsurfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

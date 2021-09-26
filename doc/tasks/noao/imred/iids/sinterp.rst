@@ -7,15 +7,15 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   sinterp tbl_file
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_tbl_file">
   <dt><b>tbl_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tbl_file' Line='tbl_file' -->
   <dd>The name of a file which contains the x,y pairs to be used as
@@ -27,7 +27,7 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   The following parameters may or may not be necessary, depending
   on the options selected.
   </p>
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>If a few single elements are desired, rather than a full
@@ -36,13 +36,13 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   the x,y table (parameter curve_gen=no).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>If parameter make_image=yes, then an image file name is needed
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 5' -->
   <dd>If the interpolator is a polynomial fit or spline (interp_mode=
@@ -50,7 +50,7 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   is required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x1">
   <dt><b>x1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x1' Line='x1' -->
   <dd>If parameter curve_gen=yes, this is the starting x value to
@@ -61,26 +61,26 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   Of the following three parameters, two must be specified, and the
   third will be derived.
   </p>
-  <dl>
+  <dl id="l_x2">
   <dt><b>x2 = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x2' Line='x2 = 0.0' -->
   <dd>As above, but x2 determines the endpoint of the curve.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dx">
   <dt><b>dx = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dx' Line='dx = 0.0' -->
   <dd>As above, but dx determines the pixel-to-pixel increment
   to be used during the curves generation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_npts">
   <dt><b>npts = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='npts' Line='npts = 0' -->
   <dd>As above, but this determines the number of pixels to be generated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_curve_gen">
   <dt><b>curve_gen = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='curve_gen' Line='curve_gen = no' -->
   <dd>If this parameter is set to yes, then parameters x1, and two of
@@ -92,21 +92,21 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   a set of x values and interpolation is performed on those values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_make_image">
   <dt><b>make_image = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = no' -->
   <dd>If set to yes, then curve_gen=yes is implied and an image file name
   is requied. A one dimensional IRAF image is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tbl_size">
   <dt><b>tbl_size = 1024</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tbl_size' Line='tbl_size = 1024' -->
   <dd>This parameter defines the maximum size to be set aside for
   memory storage of the input x,y pairs.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp_mode">
   <dt><b>interp_mode = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_mode' Line='interp_mode = "chebyshev"' -->
   <dd>This parameter controls the method of interpolation. The linear
@@ -114,9 +114,9 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   legendre, spline3, and splin1 are fits to the data.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The specified file is read assuming it is a text file containing
   pairs of x,y values in the form: xxx yyy. The table is used
@@ -174,49 +174,49 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   should be set to 4096. This provides for sufficient memory to
   contain the table.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following shows how a text file may be used to generate a spectrum:
   </p>
-  <pre>
-  	cl&gt; sinterp textfile make+ x1=4000 x2=5000 npts=1024 \<br>
-  	&gt;&gt;&gt; image=testimage interp_mode=curve
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sinterp textfile make+ x1=4000 x2=5000 npts=1024 \<br>
+  &gt;&gt;&gt; image=testimage interp_mode=curve
+  </pre></div>
   <p>
   The following sequence shows how to generate a spectrum of an IRS
   standard star using the calibration file data as the source.
   </p>
-  <pre>
-  	cl&gt; lcalib flam feige34 caldir=onedstds$irscal/ &gt;textfile
-  	cl&gt; sinterp textfile make+ x1=3550 dx=1.242 npts=1024 \<br>
-  	&gt;&gt;&gt; interp_mode=linear image=feige34
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; lcalib flam feige34 caldir=onedstds$irscal/ &gt;textfile
+  cl&gt; sinterp textfile make+ x1=3550 dx=1.242 npts=1024 \<br>
+  &gt;&gt;&gt; interp_mode=linear image=feige34
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SINTERP">
   <dt><b>SINTERP V2.10.3+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SINTERP' Line='SINTERP V2.10.3+' -->
   <dd>The image header dispersion coordinate system has been updated to the
   current system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SINTERP">
   <dt><b>SINTERP V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SINTERP' Line='SINTERP V2.10' -->
   <dd>This task is unchanged.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   lcalib
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

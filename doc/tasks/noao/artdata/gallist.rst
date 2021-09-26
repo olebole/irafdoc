@@ -7,21 +7,21 @@ gallist: Make an artificial galaxies list
 
 .. raw:: html
 
+  <section id="s_task">
   <h3>Task</h3>
-  <!-- BeginSection: 'TASK' -->
   <p>
   gallist -- make an artificial galaxies list
   </p>
-  <!-- EndSection:   'TASK' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   gallist gallist ngals
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_gallist">
   <dt><b>gallist</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gallist' Line='gallist' -->
   <dd>The name of the output text file for the x and y coordinates,
@@ -30,13 +30,13 @@ gallist: Make an artificial galaxies list
   file if it exists.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ngals">
   <dt><b>ngals = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ngals' Line='ngals = 100' -->
   <dd>The number of galaxies in the output galaxies list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Examine plots and change the parameters of the spatial, luminosity, and
@@ -46,7 +46,7 @@ gallist: Make an artificial galaxies list
   <p>
   			SPATIAL DISTRIBUTION
   </p>
-  <dl>
+  <dl id="l_spatial">
   <dt><b>spatial = <span style="font-family: monospace;">"uniform"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spatial' Line='spatial = "uniform"' -->
   <dd>Type of spatial distribution for the galaxies.  The types are:
@@ -73,13 +73,13 @@ gallist: Make an artificial galaxies list
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmin">
   <dt><b>xmin = 1., xmax = 512., ymin = 1., ymax = 512.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = 1., xmax = 512., ymin = 1., ymax = 512.' -->
   <dd>The range of the output coordinates in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcenter">
   <dt><b>xcenter = INDEF, ycenter = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = INDEF, ycenter = INDEF' -->
   <dd>The coordinate of the center of symmetry for the <span style="font-family: monospace;">"hubble"</span>
@@ -87,20 +87,20 @@ gallist: Make an artificial galaxies list
   midpoint of the coordinate limits.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_core_radius">
   <dt><b>core_radius = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='core_radius' Line='core_radius = 50' -->
   <dd>The core radius of the Hubble density distribution in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_base">
   <dt><b>base = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='base' Line='base = 0.0' -->
   <dd>The background density relative to the central density of the Hubble
   density distribution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sseed">
   <dt><b>sseed = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sseed' Line='sseed = 2' -->
   <dd>The initial value supplied to the random number generator used to
@@ -113,7 +113,7 @@ gallist: Make an artificial galaxies list
   <p>
   			MAGNITUDE DISTRIBUTION
   </p>
-  <dl>
+  <dl id="l_luminosity">
   <dt><b>luminosity = <span style="font-family: monospace;">"powlaw"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='luminosity' Line='luminosity = "powlaw"' -->
   <dd>Type of luminosity distribution for the galaxies.  The types are:
@@ -147,39 +147,39 @@ gallist: Make an artificial galaxies list
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minmag">
   <dt><b>minmag = -7., maxmag = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minmag' Line='minmag = -7., maxmag = 0.' -->
   <dd>The range of output relative magnitudes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mzero">
   <dt><b>mzero = 15.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mzero' Line='mzero = 15.' -->
   <dd>Magnitude zero point for Schecter luminosity function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_power">
   <dt><b>power = 0.6</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='power' Line='power = 0.6' -->
   <dd>Coefficient for the power law magnitude distribution The default value
   of 0.6 is the Euclidean value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_alpha">
   <dt><b>alpha = -1.24</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='alpha' Line='alpha = -1.24' -->
   <dd>The power law exponent of the Schecter luminosity function.
   The default value is that determined by Schecter from nearby galaxies.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mstar">
   <dt><b>mstar = -21.41</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mstar' Line='mstar = -21.41' -->
   <dd>The characteristic magnitude of the Schecter luminosity function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lseed">
   <dt><b>lseed = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lseed' Line='lseed = 2' -->
   <dd>The initial value supplied to the random number generator used to
@@ -192,7 +192,7 @@ gallist: Make an artificial galaxies list
   <p>
   			MORPHOLOGY DISTRIBUTION
   </p>
-  <dl>
+  <dl id="l_egalmix">
   <dt><b>egalmix = 0.4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='egalmix' Line='egalmix = 0.4' -->
   <dd>The fraction of the galaxies that are <span style="font-family: monospace;">"ellipticals"</span> represented
@@ -200,13 +200,13 @@ gallist: Make an artificial galaxies list
   represented by an exponential disk surface brightness law.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ar">
   <dt><b>ar = 0.3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ar' Line='ar = 0.3' -->
   <dd>Minimum elliptical galaxy axial ratio (major/minor ratio).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_eradius">
   <dt><b>eradius = 20.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='eradius' Line='eradius = 20.0' -->
   <dd>The maximum elliptical galaxy half-flux semi-major scale radius.  This is
@@ -215,7 +215,7 @@ gallist: Make an artificial galaxies list
   are scaled from this value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sradius">
   <dt><b>sradius = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sradius' Line='sradius = 1.0' -->
   <dd>Ratio between half-flux scale radii of spiral and elliptical models at the
@@ -224,13 +224,13 @@ gallist: Make an artificial galaxies list
   of the same magnitude with have radius <i>sradius</i> * <i>eradius</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_absorption">
   <dt><b>absorption = 1.2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='absorption' Line='absorption = 1.2' -->
   <dd>Absorption correction for edge on spirals in magnitudes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z">
   <dt><b>z = 0.05</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='z' Line='z = 0.05' -->
   <dd>Minimum redshift for power law distributed galaxies.  This is the
@@ -244,7 +244,7 @@ gallist: Make an artificial galaxies list
   <p>
   			USER FUNCTIONS
   </p>
-  <dl>
+  <dl id="l_sfile">
   <dt><b>sfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sfile' Line='sfile = ""' -->
   <dd>The name of the input text file containing the sampled spatial radial
@@ -254,7 +254,7 @@ gallist: Make an artificial galaxies list
   uniformly spaced or normalized.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nssample">
   <dt><b>nssample = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nssample' Line='nssample = 100' -->
   <dd>The number of points at which the spatial density function is 
@@ -264,14 +264,14 @@ gallist: Make an artificial galaxies list
   initial smoothing step is performed before sampling.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sorder">
   <dt><b>sorder = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sorder' Line='sorder = 10' -->
   <dd>The order of the spline fits used to evaluate the integrated spatial
   density function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lfile">
   <dt><b>lfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lfile' Line='lfile = ""' -->
   <dd>The name of the input text file containing the sampled luminosity
@@ -280,7 +280,7 @@ gallist: Make an artificial galaxies list
   not be uniformly spaced or normalized.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlsample">
   <dt><b>nlsample = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlsample' Line='nlsample = 100' -->
   <dd>The number of points at which the luminosity function is 
@@ -290,7 +290,7 @@ gallist: Make an artificial galaxies list
   (the <span style="font-family: monospace;">"file"</span> option) an initial smoothing step is performed before sampling.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lorder">
   <dt><b>lorder = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lorder' Line='lorder = 10' -->
   <dd>The order of the spline fits used to evaluate the integrated
@@ -300,54 +300,54 @@ gallist: Make an artificial galaxies list
   <p>
   			INTERACTIVE PARAMETERS
   </p>
-  <dl>
+  <dl id="l_rbinsize">
   <dt><b>rbinsize = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rbinsize' Line='rbinsize = 10.' -->
   <dd>The bin size in pixels of the plotted histogram of the radial density
   distribution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mbinsize">
   <dt><b>mbinsize = 0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mbinsize' Line='mbinsize = 0.5' -->
   <dd>The bin size in magnitudes of the plotted histogram of the luminosity function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dbinsize">
   <dt><b>dbinsize = 0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dbinsize' Line='dbinsize = 0.5' -->
   <dd>The bin size in pixels of the plotted histogram of the half-power semi-major
   axis distribution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ebinsize">
   <dt><b>ebinsize = 0.1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ebinsize' Line='ebinsize = 0.1' -->
   <dd>The bin size of the plotted histogram of the axial ratio distribution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pbinsize">
   <dt><b>pbinsize = 20.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pbinsize' Line='pbinsize = 20.' -->
   <dd>The bin size in degrees of the plotted histogram of the position angle
   distribution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = stdgraph</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = stdgraph' -->
   <dd>The default graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The graphics cursor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Gallist</b> generates a list of x and y coordinates, magnitudes,
   morphological types, half-power radii, axial ratios, and position
@@ -371,11 +371,11 @@ gallist: Make an artificial galaxies list
   density function R(user), P(user) supplied by the user in the text file
   <i>sfile</i>.
   </p>
-  <pre>
-    uniform:  P = C
-    hubble:   P = 1.0 / (1 + R / core_radius) ** 2 + base
-    file:     P = f (R(user), P(user))
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  uniform:  P = C
+  hubble:   P = 1.0 / (1 + R / core_radius) ** 2 + base
+  file:     P = f (R(user), P(user))
+  </pre></div>
   <p>
   The Hubble and user spatial density functions are sampled at
   <i>nssample</i> equally spaced points, and integrated to give the
@@ -395,14 +395,14 @@ gallist: Make an artificial galaxies list
   is the best fitting cubic spline function to the luminosity function
   M(user), P(user) supplied by the user in the text file <i>lfile</i>.
   </p>
-  <pre>
-    uniform:   P = C
-    powlaw:    P = C * 10. ** (power * M)
-    schecter:  P = C * 10. ** (alpha * dM) * exp (-10. ** dM)
-    file:      P = f (M(user), P(user))
+  <div class="highlight-default-notranslate"><pre>
+  uniform:   P = C
+  powlaw:    P = C * 10. ** (power * M)
+  schecter:  P = C * 10. ** (alpha * dM) * exp (-10. ** dM)
+  file:      P = f (M(user), P(user))
   
-    where      dM = 0.4 * (mstar - M + mzero)
-  </pre>
+  where      dM = 0.4 * (mstar - M + mzero)
+  </pre></div>
   <p>
   The uniform distribution is not very physical but may be useful for
   testing.  The power law distribution is that expected for a homogeneous
@@ -480,12 +480,12 @@ gallist: Make an artificial galaxies list
   proportional to the luminosity distance (the square root of the
   apparent luminosity).  Thus,
   </p>
-  <pre>
-                  Z = z * 10. ** (0.2 * (M - minmag))
-                  Zfactor = ((1+Z)**2 / Z) / ((1+z)**2 / z)
-    ellipticals:  r = eradisus * Zfactor
-    spirals:      r = sradius * eradius * Zfactor
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+                Z = z * 10. ** (0.2 * (M - minmag))
+                Zfactor = ((1+Z)**2 / Z) / ((1+z)**2 / z)
+  ellipticals:  r = eradisus * Zfactor
+  spirals:      r = sradius * eradius * Zfactor
+  </pre></div>
   <p>
   where z is the reference redshift at the minimum magnitude, and Z is the
   redshift at magnitude M.  For very small z the size varies as the
@@ -499,10 +499,10 @@ gallist: Make an artificial galaxies list
   in particular where all galaxies are at the same distance, the scale radius
   obeys the following relation.
   </p>
-  <pre>
-    ellipticals:  r = eradius * 10. ** ((minmag - M) / 6)
-    spirals:      r = sradius * eradius * 10. ** ((minmag - M) / 6)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ellipticals:  r = eradius * 10. ** ((minmag - M) / 6)
+  spirals:      r = sradius * eradius * 10. ** ((minmag - M) / 6)
+  </pre></div>
   <p>
   This relation gives the size decreasing slightly less rapidly than that
   giving a constant surface brightness.  This relation is taken from
@@ -517,62 +517,62 @@ gallist: Make an artificial galaxies list
   galaxy type (circles are de Vaucouleurs profiles and other types are
   diamonds), and rough size.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursors">
   <h3>Cursors</h3>
-  <!-- BeginSection: 'CURSORS' -->
   <p>
   The following interactive keystroke commands are available from within the
   GALLIST task.
   </p>
-  <pre>
-  	Gallist Keystroke Commands
+  <div class="highlight-default-notranslate"><pre>
+          Gallist Keystroke Commands
   
-  ?	Print options
-  f	Fit one or more of following 
-  	    Spatial density function (SDF)
+  ?       Print options
+  f       Fit one or more of following
+              Spatial density function (SDF)
               Luminosity  function (LF)
-  	    Distribution of morphological type
-  	    Diameter distribution
-  	    Roundness distribution
-  	    Position angle distribution 
-  x	Plot the x-y spatial density function
-  r	Plot the histogram of the radial density function
-  m	Plot the histogram of the luminosity function
-  d	Plot the histogram of the diameter values
-  e	Plot the histogram of the roundness values 
-  p	Plot the histogram of the position angle values
-  :	Colon escape commands (see below)
-  q	Exit program
-  </pre>
+              Distribution of morphological type
+              Diameter distribution
+              Roundness distribution
+              Position angle distribution
+  x       Plot the x-y spatial density function
+  r       Plot the histogram of the radial density function
+  m       Plot the histogram of the luminosity function
+  d       Plot the histogram of the diameter values
+  e       Plot the histogram of the roundness values
+  p       Plot the histogram of the position angle values
+  :       Colon escape commands (see below)
+  q       Exit program
+  </pre></div>
   <p>
   The following parameters can be shown or set from within the GALLIST task.
   </p>
-  <pre>
-  		Gallist Colon Commands
+  <div class="highlight-default-notranslate"><pre>
+                  Gallist Colon Commands
   
-  :show			Show gallist parameters
-  :ngal       [value]	Number of galaxies
+  :show                   Show gallist parameters
+  :ngal       [value]     Number of galaxies
   
-  :spatial    [string]	Spatial density function (SDF) (uniform|hubble|file) 
-  :xmin       [value]	Minimum X value
-  :xmax       [value]	Maximum X value
-  :ymin       [value]	Minimum Y value
-  :ymax       [value]	Maximum Y value
-  :xcenter    [value]	X center for SDF
-  :ycenter    [value]	Y center for SDF
-  :core       [value]	Core radius for Hubble density function
-  :base       [value]	Background density for Hubble density function
+  :spatial    [string]    Spatial density function (SDF) (uniform|hubble|file)
+  :xmin       [value]     Minimum X value
+  :xmax       [value]     Maximum X value
+  :ymin       [value]     Minimum Y value
+  :ymax       [value]     Maximum Y value
+  :xcenter    [value]     X center for SDF
+  :ycenter    [value]     Y center for SDF
+  :core       [value]     Core radius for Hubble density function
+  :base       [value]     Background density for Hubble density function
   
-  :luminosity [string]	Luminosity function (LF)
-  			(uniform|powlaw|schecter|file)
-  :minmag     [value]	Minimum magnitude
-  :maxmag     [value]	Maximum magnitude
-  :mzero      [value]	Magnitude zero-point of schecter LF
+  :luminosity [string]    Luminosity function (LF)
+                          (uniform|powlaw|schecter|file)
+  :minmag     [value]     Minimum magnitude
+  :maxmag     [value]     Maximum magnitude
+  :mzero      [value]     Magnitude zero-point of schecter LF
   :power      [value]     Power law coefficient for powlaw LF
-  :alpha      [value]	Schecter parameter
-  :mstar      [value]	Characteristic mag for Schecter LF
+  :alpha      [value]     Schecter parameter
+  :mstar      [value]     Characteristic mag for Schecter LF
   
-  :egalmix    [value]	Elliptical/Spiral galaxy ratio
+  :egalmix    [value]     Elliptical/Spiral galaxy ratio
   :ar         [value]     Minimum elliptical galaxy axial ratio
   :eradius    [value]     Maximum elliptical half flux radius
   :sradius    [value]     Spiral/elliptical radius at same magnitude
@@ -580,31 +580,31 @@ gallist: Make an artificial galaxies list
   :absorption [value]     Absorption correction for spirals
   
   :lfile      [string]    Name of the LF file
-  :sfile	    [string]    Name of the SDF file
-  :nlsample   [value]	Number of LF sample points 
-  :lorder	    [value]	Order of spline approximation to the integrated LF
-  :nssample   [value]	Number of SDF sample points
-  :sorder	    [value]	Order of spline approximation to the integrated SDF
+  :sfile      [string]    Name of the SDF file
+  :nlsample   [value]     Number of LF sample points
+  :lorder     [value]     Order of spline approximation to the integrated LF
+  :nssample   [value]     Number of SDF sample points
+  :sorder     [value]     Order of spline approximation to the integrated SDF
   
-  :rbinsize   [value]	Resolution of radial SDF histogram in pixels
-  :mbinsize   [value]	Resolution of magnitude histogram in magnitudes
-  :dbinsize   [value]	Resolution of diameter histogram in pixels
-  :ebinsize   [value]	Resolution of roundness histogram in pixels
+  :rbinsize   [value]     Resolution of radial SDF histogram in pixels
+  :mbinsize   [value]     Resolution of magnitude histogram in magnitudes
+  :dbinsize   [value]     Resolution of diameter histogram in pixels
+  :ebinsize   [value]     Resolution of roundness histogram in pixels
   :pbinsize   [value]     Resolution of position angle histogram in degrees
-  </pre>
-  <!-- EndSection:   'CURSORS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a galaxy cluster with a power law distribution of field galaxies
   and stars as background/foreground.
   </p>
-  <pre>
-      ar&gt; gallist galaxies.dat 100 spatial=hubble lum=schecter egal=.8
-      ar&gt; gallist galaxies.dat 500
-      ar&gt; starlist galaxies.dat 100
-      ar&gt; mkobjects galaxies obj=galaxies.dat gain=3 rdnoise=10 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; gallist galaxies.dat 100 spatial=hubble lum=schecter egal=.8
+  ar&gt; gallist galaxies.dat 500
+  ar&gt; starlist galaxies.dat 100
+  ar&gt; mkobjects galaxies obj=galaxies.dat gain=3 rdnoise=10 poisson+
+  </pre></div>
   <p>
   Note that the objects are appended to the same file.  Actually making
   the image with <b>mkobjects</b> takes about 5 minutes (2.5 min cpu) on a
@@ -615,36 +615,36 @@ gallist: Make an artificial galaxies list
   and power law magnitude distribution using 1000 galaxies without
   creating a data file.
   </p>
-  <pre>
-      ar&gt; gallist dev$null 1000 inter+
-  	    ... an x-y plot will appear on the screen
-  	    ... type r to examine the radial density function
-  	    ... type m to examine the luminosity function
-  	    ... type d to examine the half-flux radii distribution
-  	    ... type e to examine the axial ratio distribution
-  	    ... type = to make a copy of any of the plots
-  	    ... type q to quit
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; gallist dev$null 1000 inter+
+          ... an x-y plot will appear on the screen
+          ... type r to examine the radial density function
+          ... type m to examine the luminosity function
+          ... type d to examine the half-flux radii distribution
+          ... type e to examine the axial ratio distribution
+          ... type = to make a copy of any of the plots
+          ... type q to quit
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_GALLIST">
   <dt><b>GALLIST V2.11+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='GALLIST' Line='GALLIST V2.11+' -->
   <dd>The random number seeds can be set from the clock time by using the value
   <span style="font-family: monospace;">"INDEF"</span> to yield different random numbers for each execution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_GALLIST">
   <dt><b>GALLIST V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='GALLIST' Line='GALLIST V2.11' -->
   <dd>The default value for the minimum elliptical galaxy axial ratio was
   change to 0.3 to cover the range E0-E7 uniformly.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   This is a first version and is not intended to produce a full model
   of galaxy fields.  Some of the relations used are empirical and
@@ -659,14 +659,14 @@ gallist: Make an artificial galaxies list
   of 10 sample points per spline piece is generally satisfactory for the
   spatial density and luminosity functions supplied here.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   starlist mkobjects
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'TASK' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSORS' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ phistogram: Plot or print the histogram of an image or list
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   phistogram input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The name of the image, image subsection, or the text file containing the
@@ -23,14 +23,14 @@ phistogram: Plot or print the histogram of an image or list
   the standard input <span style="font-family: monospace;">"STDIN"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z1">
   <dt><b>z1 = INDEF, z2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = INDEF, z2 = INDEF' -->
   <dd>The minimum and maximum values included in the histogram. The image or data
   minimum and maximum values are used by default.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_binwidth">
   <dt><b>binwidth = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='binwidth' Line='binwidth = INDEF' -->
   <dd>The resolution of the histogram in data units. If <i>binwidth</i> is not defined,
@@ -38,21 +38,21 @@ phistogram: Plot or print the histogram of an image or list
   the histogram.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nbins">
   <dt><b>nbins = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins = 512' -->
   <dd>The number of bins in, or resolution of, the histogram. 
   The <i>nbins</i> parameter is overridden if <i>binwidth</i> is defined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_autoscale">
   <dt><b>autoscale = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autoscale' Line='autoscale = yes' -->
   <dd>In the case of integer image data, automatically adjust <i>nbins</i> and
   <i>z2</i> to avoid aliasing effects. Data in text files is not autoscaled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_top_closed">
   <dt><b>top_closed = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='top_closed' Line='top_closed = no' -->
   <dd>Include z2 in the top bin?  Each bin of the histogram is a subinterval
@@ -61,7 +61,7 @@ phistogram: Plot or print the histogram of an image or list
   <b>top_closed</b> is yes, the top bin will be larger than the other bins.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_hist_type">
   <dt><b>hist_type = <span style="font-family: monospace;">"normal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hist_type' Line='hist_type = "normal"' -->
   <dd>The type of histogram to plot or list.  The choices are <span style="font-family: monospace;">"normal"</span>,
@@ -70,13 +70,13 @@ phistogram: Plot or print the histogram of an image or list
   diff[n] = hist[n+1] - hist[n].
   </dd>
   </dl>
-  <dl>
+  <dl id="l_listout">
   <dt><b>listout = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='listout' Line='listout = no' -->
   <dd>List instead of plot the histogram?  The list is never log scaled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>The plot title. If title = <span style="font-family: monospace;">"imtitle"</span>, the image name and title or the
@@ -84,13 +84,13 @@ phistogram: Plot or print the histogram of an image or list
   characteristics of the histogram are included in the title.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xlabel">
   <dt><b>xlabel = <span style="font-family: monospace;">"Data values"</span>, ylabel = <span style="font-family: monospace;">"Counts"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "Data values", ylabel = "Counts"' -->
   <dd>The labels for the X and Y axes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wx1">
   <dt><b>wx1 = INDEF, wx2 = INDEF, wy1 = 0.0, wy2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wx1' Line='wx1 = INDEF, wx2 = INDEF, wy1 = 0.0, wy2 = INDEF' -->
   <dd>The range of user coordinates spanned by the plot. If either of the x axis
@@ -99,19 +99,19 @@ phistogram: Plot or print the histogram of an image or list
   minimum or maximum counts in the histogram is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logx">
   <dt><b>logx = no, logy = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = yes' -->
   <dd>Use log scaling on the x or y axes of the plot?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_round">
   <dt><b>round = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='round' Line='round = no' -->
   <dd>Round the axes minimum and maximum values up to <span style="font-family: monospace;">"nice"</span> values?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plot_type">
   <dt><b>plot_type = <span style="font-family: monospace;">"line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plot_type' Line='plot_type = "line"' -->
   <dd>The style of histogram to plot. The options are <span style="font-family: monospace;">"line"</span>, <span style="font-family: monospace;">"box"</span> and <span style="font-family: monospace;">"fullbox"</span>.
@@ -120,19 +120,19 @@ phistogram: Plot or print the histogram of an image or list
   the histogram lines are drawn to the base of the plot.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_box">
   <dt><b>box = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='box' Line='box = yes' -->
   <dd>Draw axes at the perimeter of the plotting window?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ticklabels">
   <dt><b>ticklabels = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ticklabels' Line='ticklabels = yes' -->
   <dd>Label the tick marks?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_majrx">
   <dt><b>majrx = 5, minrx = 5, majry = 5, minry = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='majrx' Line='majrx = 5, minrx = 5, majry = 5, minry = 5' -->
   <dd>Number of major tick marks on each axis and number of minor tick marks between
@@ -140,25 +140,25 @@ phistogram: Plot or print the histogram of an image or list
   for an axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fill">
   <dt><b>fill = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes' -->
   <dd>Fill the output viewport regardless of the device aspect ratio?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vx1">
   <dt><b>vx1 = 0.0, vx2 = 1.0, vy1 = 0.0, vy2 = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1 = 0.0, vx2 = 1.0, vy1 = 0.0, vy2 = 1.0' -->
   <dd>The NDC coordinates (0.0:1.0) of the device plotting viewport.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
   <dd>Append to an existing plot?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pattern">
   <dt><b>pattern = <span style="font-family: monospace;">"solid"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "solid"' -->
   <dd>The type of line used to draw the histogram. The options are <span style="font-family: monospace;">"solid"</span>,
@@ -166,15 +166,15 @@ phistogram: Plot or print the histogram of an image or list
   appending to an existing plot.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output graphics device.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Phistogram</i> computes the histogram of the IRAF image or stream
   of values in the text file specified by
@@ -219,44 +219,44 @@ phistogram: Plot or print the histogram of an image or list
   square full device viewports (e.g., the vt640), a plot drawn by
   PHISTOGRAM appears extended in the x direction unless <b>fill</b> = no.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Output the histogram of an image to a file.
   </p>
-  <p>
-      cl&gt; phist M51.imh li+ nbins=100 &gt; fits1.hst
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; phist M51.imh li+ nbins=100 &gt; fits1.hst
+  </pre></div>
   <p>
   2. Plot the histogram of an image using only values from 0 to 2000.
   </p>
-  <p>
-      cl&gt; phist M31.imh nbins=100 z1=0. z2=2000.
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; phist M31.imh nbins=100 z1=0. z2=2000.
+  </pre></div>
   <p>
   3. Ditto, but set the histogram resolution explicitly to avoid
   smoothing the histogram.
   </p>
-  <p>
-      cl&gt; phist M31.imh z1=0 z2=2000 nbins=2001
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; phist M31.imh z1=0 z2=2000 nbins=2001
+  </pre></div>
   <p>
   4. Plot the cumulative histogram.  This is most useful for images with
   fairly flat <span style="font-family: monospace;">"normal"</span> histograms.
   </p>
-  <p>
-      cl&gt; phist R50.imh hist=cum
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; phist R50.imh hist=cum
+  </pre></div>
   <p>
   5. Plot the histogram of a stream of values in the textfile <span style="font-family: monospace;">"list"</span>.
   </p>
-  <p>
-      cl&gt; phist list
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; phist list
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   If the resolution of the histogram (number of bins) is a non-integral multiple
   of the intensity resolution of the data (number of possible intensity values),
@@ -270,14 +270,14 @@ phistogram: Plot or print the histogram of an image or list
   the histogram will occur whenever the data range exceeds the histogram
   resolution.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   listpixels, plot.graph, proto.mkhistogram
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

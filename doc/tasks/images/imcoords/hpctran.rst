@@ -7,17 +7,17 @@ hpctran: Convert between HEALPix row and spherical coordinate
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   hpctran lng=xxx lat=xxx
   <br>
   hpctran row=xxx
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_row">
   <dt><b>row     </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='row' Line='row     ' -->
   <dd>HEALPix table row (1 indexed).
@@ -26,7 +26,7 @@ hpctran: Convert between HEALPix row and spherical coordinate
   <span style="font-family: monospace;">"ang2row"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lng">
   <dt><b>lng, lat</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lng' Line='lng, lat' -->
   <dd>Spherical coordinate consisting of a longitude and latitude.
@@ -37,26 +37,26 @@ hpctran: Convert between HEALPix row and spherical coordinate
   is defined by the map provider.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nside">
   <dt><b>nside = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nside' Line='nside = 512' -->
   <dd>The number of pixels per face side.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cunits">
   <dt><b>cunits = <span style="font-family: monospace;">"degrees"</span> (degrees|hourdegree|radians)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cunits' Line='cunits = "degrees" (degrees|hourdegree|radians)' -->
   <dd>The units of the longitude and latitude.  The <span style="font-family: monospace;">"hourdegree"</span> is for
   longitude in hours and latitude in degrees.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maptype">
   <dt><b>maptype = <span style="font-family: monospace;">"nest"</span> (nest|ring)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maptype' Line='maptype = "nest" (nest|ring)' -->
   <dd>The map pixelization type which may be <span style="font-family: monospace;">"nest"</span> or <span style="font-family: monospace;">"ring"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_direction">
   <dt><b>direction = <span style="font-family: monospace;">"ang2row"</span> (ang2row|row2ang)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='direction' Line='direction = "ang2row" (ang2row|row2ang)' -->
   <dd>The conversion direction.  <span style="font-family: monospace;">"ang2row"</span> converts a spherical coordinate
@@ -64,9 +64,9 @@ hpctran: Convert between HEALPix row and spherical coordinate
   number to a spherical coordinate.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   HEALPix is an acronym for Hierarchical Equal Area isoLatitude Pixelization
   of a sphere.  See the reference section for a technical description of the
@@ -110,15 +110,15 @@ hpctran: Convert between HEALPix row and spherical coordinate
   Regardless of the direction of conversion the printed output is in the same
   order of row number, longitude, and latitude.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   A CMB WMAP file is obtained and one wants the temperature at a particular
   point on the sky.  Note that the WMAP format is <span style="font-family: monospace;">"nested"</span> and
   coordinate system is galactic.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; hpctran lng=50.12 lat=-33.45
   2298092 50.12 -33.45000000000001
   cl&gt; = hpctran.row
@@ -126,31 +126,31 @@ hpctran: Convert between HEALPix row and spherical coordinate
   cl&gt; tdump wmap_iqusmap_r9_5yr_K1_v3.fits col=TEMPERATURE row=2298092
   cl&gt; tdump ("wmap_iqusmap_r9_5yr_K1_v3.fits", col="TEMPERATURE",
   &gt;&gt;&gt; row=hpctran.row)
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_reference">
   <h3>Reference</h3>
-  <!-- BeginSection: 'REFERENCE' -->
   <p>
   <i>HEALPIX - a Framework for High Resolution Discretization, and Fast
   Analysis of Data Distributed on the Sphere</i>,
   by K.M. Gorski, Eric Hivon, A.J. Banday, B.D. Wandelt, F.K. Hansen, M.
   Reinecke, M. Bartelmann, 2005, ApJ 622, 759.
   </p>
-  <!-- EndSection:   'REFERENCE' -->
+  </section>
+  <section id="s_credit">
   <h3>Credit</h3>
-  <!-- BeginSection: 'CREDIT' -->
   <p>
   Some code from the HEALPix distribution at http://healpix.jpl.nasa.gov
   was translated to SPP for use in this routine.
   </p>
-  <!-- EndSection:   'CREDIT' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ttools
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REFERENCE' 'CREDIT' 'SEE ALSO'  -->
   

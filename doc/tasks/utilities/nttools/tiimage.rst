@@ -7,14 +7,14 @@ tiimage: Insert images into rows of a 3-D table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tiimage input outtable
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task performs the inverse operation of task tximage: it inserts one or 
   more images into rows of a 3-D table  The input may be a filename template, 
@@ -83,16 +83,16 @@ tiimage: Insert images into rows of a 3-D table.
   pixels, insertion begins by the first pixel up to the maximum allowable size, 
   the remaining pixels being ignored.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input [image name list/template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input [image name list/template]' -->
   <dd>A list of one or more images to be inserted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [table name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [table name]' -->
   <dd>Name of 3-D output table, including extension. No support exists for 
@@ -118,18 +118,18 @@ tiimage: Insert images into rows of a 3-D table.
   <dd>Display names as files are processed ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Insert images into a 3-D table at column named FLUX:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; tiimage flux*.hhh "otable.tab[c:FLUX]"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The output and template table names must be supplied in full, including 
   the extension (e.g. <span style="font-family: monospace;">".tab"</span>). If the output table name is not typed in full, 
@@ -137,20 +137,20 @@ tiimage: Insert images into rows of a 3-D table.
   the rows actually inserted. This behavior relates to the way the underlying 
   <span style="font-family: monospace;">"access"</span> routine in IRAF's fio library works.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by I. Busko.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tximage, selectors
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

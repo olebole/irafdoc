@@ -7,14 +7,14 @@ tquery: Create a new table from selected rows and columns in a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tquery intable outtable expr columns sort
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task combines the functions of the tasks 'tselect', 'tproject', and
   'tsort' to create a more powerful task that can produce a sorted table of
@@ -35,24 +35,24 @@ tquery: Create a new table from selected rows and columns in a table.
   'ascend' sorts the table in ascending order, and the parameter 'casesens'
   specifies whether sort conditions are to be case sensitive.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>Table(s) from which rows are copied. If input is redirected, this
   parameter will ignored and input will be read from STDIN instead.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>The new table(s) containing the copied rows.
   The number of output tables must equal the number of input tables.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_expr">
   <dt><b>expr [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr [string]' -->
   <dd>The boolean expression which determines which rows are copied to the new
@@ -63,7 +63,7 @@ tquery: Create a new table from selected rows and columns in a table.
   'tselect' task (type <span style="font-family: monospace;">"help tselect"</span> for more information).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_columns">
   <dt><b>columns [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns [string]' -->
   <dd>Column template describing the columns that are to be selected
@@ -79,7 +79,7 @@ tquery: Create a new table from selected rows and columns in a table.
   is null or blank, all columns will be selected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sort">
   <dt><b>sort [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort [string]' -->
   <dd>Column template describing the columns to be sorted.  The
@@ -117,46 +117,46 @@ tquery: Create a new table from selected rows and columns in a table.
   sensitive.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Extract all binary stars from a catalog; write their names, magnitudes,
   and colors to a new table, sorted on magnitude:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tquery starcat.tab binary.tab binary name,mag,color mag
-  </pre>
+  </pre></div>
   <p>
   2. Remove duplicate rows from a set of tables. Otherwise, leave the tables
   unchanged. Using file name editing (i.e., the <span style="font-family: monospace;">"%"</span> characters to delineate
   old strings and new strings), change the file name extensions from <span style="font-family: monospace;">".tab"</span>
   to <span style="font-family: monospace;">".tbl"</span>.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tquery *.tab *.%tab%tbl% "" "" "" uniq+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Column names must be set off from operators by blanks in the expression so
   that they can be correctly parsed by the expression evaluator.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tsort, tselect, tproject
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

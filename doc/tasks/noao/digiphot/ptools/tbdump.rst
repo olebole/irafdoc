@@ -7,21 +7,21 @@ tbdump: Print selected columns of a list of tables databases
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tbdump tables columns expr
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_tables">
   <dt><b>tables</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tables' Line='tables' -->
   <dd>The name of the APPHOT/DAOPHOT table database(s) to be dumped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_columns">
   <dt><b>columns</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns' -->
   <dd>The template specifying the names of the columns to be dumped.
@@ -37,7 +37,7 @@ tbdump: Print selected columns of a list of tables databases
   NOT named in the remainder of the column template.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_expr">
   <dt><b>expr</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
   <dd>The boolean expression to be evaluated once per record.
@@ -47,7 +47,7 @@ tbdump: Print selected columns of a list of tables databases
   printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datafile">
   <dt><b>datafile = STDOUT</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datafile' Line='datafile = STDOUT' -->
   <dd>If <i>Datafile</i> is not null (<span style="font-family: monospace;">""</span>) then the table data will be written
@@ -56,7 +56,7 @@ tbdump: Print selected columns of a list of tables databases
   <i>Datafile</i> will not be created if the table is empty.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cdfile">
   <dt><b>cdfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cdfile' Line='cdfile = ""' -->
   <dd>If <i>Cdfile</i> is not null (<span style="font-family: monospace;">""</span>) then the column definitions will be written
@@ -65,7 +65,7 @@ tbdump: Print selected columns of a list of tables databases
   or C), print format, and units.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pfile">
   <dt><b>pfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfile' Line='pfile = ""' -->
   <dd>If <i>Pfile</i> is not null (<span style="font-family: monospace;">""</span>) then the header parameters will be written
@@ -73,7 +73,7 @@ tbdump: Print selected columns of a list of tables databases
   <i>Pfile</i> will not be created if there are no header parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rows">
   <dt><b>rows = <span style="font-family: monospace;">"-"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rows' Line='rows = "-"' -->
   <dd><i>Rows</i> is a string which may be used to specify ranges of rows which are
@@ -86,7 +86,7 @@ tbdump: Print selected columns of a list of tables databases
   See the help for RANGES in XTOOLS for further information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pagwidth">
   <dt><b>pagwidth = 158</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pagwidth' Line='pagwidth = 158' -->
   <dd>The width of the output for printing the table data.  If any of the columns
@@ -95,9 +95,9 @@ tbdump: Print selected columns of a list of tables databases
   increased by two to include a pair of enclosing quotes.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task converts selected records from an APPHOT/DAOPHOT STSDAS table
   database to ASCII format
@@ -161,14 +161,14 @@ tbdump: Print selected columns of a list of tables databases
   <p>
   The following logical operators can be used in the boolean expression. 
   </p>
-  <pre>
-  	equal		  ==	not equal		!=
-  	less than	  &lt;	less than or equal	&lt;=
-  	greater than	  &gt;	greater than or equal	&gt;=
-  	or		  ||	and			&amp;&amp;
-  	negation	  !	pattern match		?=
-  	concatenation	  //
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  equal             ==    not equal               !=
+  less than         &lt;     less than or equal      &lt;=
+  greater than      &gt;     greater than or equal   &gt;=
+  or                ||    and                     &amp;&amp;
+  negation          !     pattern match           ?=
+  concatenation     //
+  </pre></div>
   <p>
   The pattern match character ?=  takes a
   string expression as its first argument and a pattern as its second argument.
@@ -177,36 +177,36 @@ tbdump: Print selected columns of a list of tables databases
   The meta-characters themselves can be matched by preceeding them with the escape
   character.  The meta-characters listed below. 
   </p>
-  <pre>
-  	beginning of string	^	end of string		$
-  	one character		?	zero or more characters	*
-  	white space		#	escape character	\<br>
-  	ignore case		{	end ignore case		}
-  	begin character class	[	end character class	]
-  	not, in char class	^	range, in char class	-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  beginning of string     ^       end of string           $
+  one character           ?       zero or more characters *
+  white space             #       escape character        \<br>
+  ignore case             {       end ignore case         }
+  begin character class   [       end character class     ]
+  not, in char class      ^       range, in char class    -
+  </pre></div>
   <p>
   The expression may also include arithmetic operators and functions.
   The following arithmetic operators and functions are supported.
   </p>
-  <pre>
-  addition		+		subtraction		-
-  multiplication		*		division		/
-  negation		-		exponentiation		**
-  absolute value		abs(x)		cosine			cos(x)
-  sine			sin(x)		tangent			tan(x)
-  arc cosine		acos(x)		arc sine		asin(x)
-  arc tangent		atan(x)		arc tangent		atan2(x,y)
-  exponential		exp(x)		square root		sqrt(x)
-  natural log		log(x)		common log		log10(x)
-  minimum			min(x,y)	maximum			max(x,y)
-  convert to integer	int(x)		convert to real		real(x)
-  nearest integer		nint(x)		modulo			mod(x)
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  addition                +               subtraction             -
+  multiplication          *               division                /
+  negation                -               exponentiation          **
+  absolute value          abs(x)          cosine                  cos(x)
+  sine                    sin(x)          tangent                 tan(x)
+  arc cosine              acos(x)         arc sine                asin(x)
+  arc tangent             atan(x)         arc tangent             atan2(x,y)
+  exponential             exp(x)          square root             sqrt(x)
+  natural log             log(x)          common log              log10(x)
+  minimum                 min(x,y)        maximum                 max(x,y)
+  convert to integer      int(x)          convert to real         real(x)
+  nearest integer         nint(x)         modulo                  mod(x)
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1. Dump the "ID", "MAG" and "MAGERR" columns of the DAOPHOT package NSTAR
   output to the standard output.
   
@@ -225,18 +225,18 @@ tbdump: Print selected columns of a list of tables databases
   4.  Dump all the columns in the first 100 rows of the above file.
   
       pt&gt; tbdump n4147.nst.1 "" yes rows="1-100"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tables.tdump,tables.tprint,tables.tlcol,tables.tcreate,ptools.txdump,ptools.pdump
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

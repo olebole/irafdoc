@@ -7,46 +7,46 @@ pvector: Plot an arbitrary vector in a 2D image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   pvector image x1 y1 x2 y2
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>Input image containing data to be plotted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x1">
   <dt><b>x1, y1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x1' Line='x1, y1' -->
   <dd>Starting coordinates of the vector to be plotted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x2">
   <dt><b>x2, y2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x2' Line='x2, y2' -->
   <dd>Ending coordinates of the vector to be plotted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xc">
   <dt><b>xc, yc</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xc' Line='xc, yc' -->
   <dd>The center coordinates of the vector to be plotted if the position
   angle <i>theta</i> is defined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_width">
   <dt><b>width = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='width' Line='width = 1' -->
   <dd>Number of pixels perpendicular to the vector to average.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_theta">
   <dt><b>theta = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='theta' Line='theta = INDEF' -->
   <dd>The postion angle of the vector to be plotted measured counter-clockwise
@@ -56,14 +56,14 @@ pvector: Plot an arbitrary vector in a 2D image
   as in examples 3 and 4.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_length">
   <dt><b>length = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='length' Line='length = INDEF' -->
   <dd>The length of the vector to be plotted if <i>theta</i> is defined. The
   default is to plot the vector from one edge of the frame to another.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = constant</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = constant' -->
   <dd>The type of boundary extension. The boundary extension options are:
@@ -93,13 +93,13 @@ pvector: Plot an arbitrary vector in a 2D image
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The constant for constant valued boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vec_output">
   <dt><b>vec_output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vec_output' Line='vec_output = ""' -->
   <dd>File or image name if output vector is desired.  If this parameter is
@@ -109,7 +109,7 @@ pvector: Plot an arbitrary vector in a 2D image
   either of these streams.  Plotting is disabled if vector output is selected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_out_type">
   <dt><b>out_type = <span style="font-family: monospace;">"text"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='out_type' Line='out_type = "text"' -->
   <dd>Type of output format (image|text). If an image is created, then a new
@@ -118,7 +118,7 @@ pvector: Plot an arbitrary vector in a 2D image
   parent image header will be copied to the new image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wx1">
   <dt><b>wx1 = 0., wx2 = 0., wy1 = 0., wy2 = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wx1' Line='wx1 = 0., wx2 = 0., wy1 = 0., wy2 = 0.' -->
   <dd>The range of world coordinates to be included in the plot.  If the
@@ -126,20 +126,20 @@ pvector: Plot an arbitrary vector in a 2D image
   minimum to maximum data values along the degenerate axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vx1">
   <dt><b>vx1 = 0., vx2 = 0., vy1 = 0., vy2 = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1 = 0., vx2 = 0., vy1 = 0., vy2 = 0.' -->
   <dd>NDC coordinates (0-1) of the device plotting window.  If not set by user,
   a suitable viewport which allows sufficient room for all labels is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pointmode">
   <dt><b>pointmode = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pointmode' Line='pointmode = no' -->
   <dd>Plot individual points instead of a continuous line?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_marker">
   <dt><b>marker = <span style="font-family: monospace;">"box"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "box"' -->
   <dd>Marker or line type to be drawn.  If <b>pointmode</b> = yes the markers are
@@ -152,64 +152,64 @@ pvector: Plot an arbitrary vector in a 2D image
   at the ends).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_szmarker">
   <dt><b>szmarker = 0.005</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='szmarker' Line='szmarker = 0.005' -->
   <dd>The size of the marker drawn when <b>pointmode</b> = yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logx">
   <dt><b>logx = no, logy = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = no' -->
   <dd>Draw the x or y axis in log units, versus linear?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xlabel">
   <dt><b>xlabel = <span style="font-family: monospace;">""</span>, ylabel = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "", ylabel = ""' -->
   <dd>The x-axis and y-axis labels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>Title for plot.  If not changed from the default, the title string from the
   image header, appended with the vector endpoints, is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_majrx">
   <dt><b>majrx = 5, minrx = 5, majry = 5, minry = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='majrx' Line='majrx = 5, minrx = 5, majry = 5, minry = 5' -->
   <dd>The number of major and minor divisions along the x or y axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_round">
   <dt><b>round = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='round' Line='round = no' -->
   <dd>Round axes up to nice values?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fill">
   <dt><b>fill = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes' -->
   <dd>Fill the output viewport regardless of the device aspect ratio?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
   <dd>Append to an existing plot?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Output device.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Plot an arbitrary vector of data from an image.  The vector can be
   specified by either defining the two endpoints of the vector or 
@@ -253,56 +253,64 @@ pvector: Plot an arbitrary vector in a 2D image
   square full device viewports (e.g., the vt640), a plot drawn by <i>pvector</i>
   appears extended in the x direction unless <b>fill</b> = no.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Plot from the lower left to upper right of 512 square image crab.5009.
   </p>
-  <p>
-      cl&gt; pvector crab.5009 1. 1. 512. 512.
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pvector crab.5009 1. 1. 512. 512.
+  </pre></div>
   <p>
   2. Plot the same vector but with the sampling width = 3.
   </p>
-  <p>
-      cl&gt; pvector crab.5009 1. 1. 512. 512. width=3
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pvector crab.5009 1. 1. 512. 512. width=3
+  </pre></div>
   <p>
   3. Plot a vector in same image with center position 256, 256, and a position
   angle of 45 degrees which extends from one edge of the frame to the other.
   </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pvector crab.5009 0. 0. 0. 0. 256. 256. theta=45.
+  </pre></div>
   <p>
-      cl&gt; pvector crab.5009 0. 0. 0. 0. 256. 256. theta=45.
-  			or
-      cl&gt; pvector crab.5009 xc=256. xc=256. theta=45.
+  or
   </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pvector crab.5009 xc=256. xc=256. theta=45.
+  </pre></div>
   <p>
   4. Plot the above vector with a length of 100 pixels.
   </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pvector crab.5009 0. 0. 0. 0. 256. 256. theta=45. length=100.
+  </pre></div>
   <p>
-      cl&gt; pvector crab.5009 0. 0. 0. 0. 256. 256. theta=45. length=100.
-  			or
-      cl&gt; pvector crab.5009 xc=256. xc=256. theta=45. length=100.
+  or
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pvector crab.5009 xc=256. xc=256. theta=45. length=100.
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   It takes approximately 6.7 cpu seconds to compute and plot the twenty
   pixel wide diagonal of a 512 square real image. (VAX/VMS 750 with fpa).
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   prow, pcol, prow, pcols
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

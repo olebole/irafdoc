@@ -7,35 +7,35 @@ astradius: Find images within a circle on the sky
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   astradius images racenter deccenter epcenter radius
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images for which the radius to a point on the sky is to be
   determined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_racenter">
   <dt><b>racenter, deccenter, epcenter</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='racenter' Line='racenter, deccenter, epcenter' -->
   <dd>Right ascension in hours, declination in degrees, and epoch of a position
   on the sky to use as the center of a circle.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radius">
   <dt><b>radius</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius' -->
   <dd>Search radius in arc seconds about the center position.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_keywpars">
   <dt><b>keywpars = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = "" (pset)' -->
   <dd>Parameter set defining the image header keywords.  This task requires
@@ -45,7 +45,7 @@ astradius: Find images within a circle on the sky
   set (specified by the empty string) is <b>keywpars</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_commands">
   <dt><b>commands = <span style="font-family: monospace;">"astutil$astradius.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='commands' Line='commands = "astutil$astradius.dat"' -->
   <dd>Command file used to compute the distance from the coordinate center
@@ -54,9 +54,9 @@ astradius: Find images within a circle on the sky
   Users may copy and modify this file if desired.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Astradius</b> computes the spherical distance from a specified point on
   the sky for each image in a list of images (<i>images</i>).  The point on
@@ -90,63 +90,63 @@ astradius: Find images within a circle on the sky
   Users may copy the default command file and modify it.  The
   command syntax is described in the help for <b>astcalc</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Page the script task and the command file.
   </p>
-  <pre>
-      cl&gt; page astutil$astradius.cl,astutil$astradius.dat
-      # ASTRADIUS -- Find images within a radius.
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; page astutil$astradius.cl,astutil$astradius.dat
+  # ASTRADIUS -- Find images within a radius.
   
-      procedure astradius (images, racenter, deccenter, epcenter, radius)
+  procedure astradius (images, racenter, deccenter, epcenter, radius)
   
-      string  images = ""             {prompt="List of images"}
-      string  racenter = ""           {prompt="RA center (hours)"}
-      string  deccenter = ""          {prompt="DEC center (degrees)"}
-      real    epcenter = 2000.        {prompt="Epoch of center"}
-      real    radius = 60.            {prompt="Radius in arc seconds"}
-      pset    keywpars = ""           {prompt="Keywords for RA, DEC, EPOCH\n"}
+  string  images = ""             {prompt="List of images"}
+  string  racenter = ""           {prompt="RA center (hours)"}
+  string  deccenter = ""          {prompt="DEC center (degrees)"}
+  real    epcenter = 2000.        {prompt="Epoch of center"}
+  real    radius = 60.            {prompt="Radius in arc seconds"}
+  pset    keywpars = ""           {prompt="Keywords for RA, DEC, EPOCH\n"}
   
-      file    commands = "astutil$astradius.dat"      {prompt="ASTCALC file"}
+  file    commands = "astutil$astradius.dat"      {prompt="ASTCALC file"}
   
-      begin
-  	    astcalc (commands=commands, images=images, table="", verbose=no)
-      end
+  begin
+          astcalc (commands=commands, images=images, table="", verbose=no)
+  end
   
-       Print images which are within a given radius in the sky.
+   Print images which are within a given radius in the sky.
   
-      # Get parameters.
-      racenter = clget ("astradius.racenter")
-      deccenter = clget ("astradius.deccenter")
-      epcenter = clget ("astradius.epcenter")
-      radius = clget ("astradius.radius")
-      ra = imget(clget("keywpars.ra"))
-      dec = imget(clget("keywpars.dec"))
+  # Get parameters.
+  racenter = clget ("astradius.racenter")
+  deccenter = clget ("astradius.deccenter")
+  epcenter = clget ("astradius.epcenter")
+  radius = clget ("astradius.radius")
+  ra = imget(clget("keywpars.ra"))
+  dec = imget(clget("keywpars.dec"))
   
-      epoch = imget(clget("keywpars.epoch"))
-      if (str(epoch) == "" || real(epoch) == 0.)
-  	date = imget(clget("keywpars.date_obs"))
-  	ut = imget(clget("keywpars.ut"))
-  	epoch = epoch (date, ut)
-      endif
+  epoch = imget(clget("keywpars.epoch"))
+  if (str(epoch) == "" || real(epoch) == 0.)
+      date = imget(clget("keywpars.date_obs"))
+      ut = imget(clget("keywpars.ut"))
+      epoch = epoch (date, ut)
+  endif
   
-      # Precess image coordinates to center epoch and compute separation.
-      radec = precess (ra, dec, epoch, epcenter)
-      ra1 = ra_precess (ra, dec, epoch, epcenter)
-      dec1 = dec_precess (ra, dec, epoch, epcenter)
-      sep = arcsep (racenter, deccenter, ra1, dec1)
+  # Precess image coordinates to center epoch and compute separation.
+  radec = precess (ra, dec, epoch, epcenter)
+  ra1 = ra_precess (ra, dec, epoch, epcenter)
+  dec1 = dec_precess (ra, dec, epoch, epcenter)
+  sep = arcsep (racenter, deccenter, ra1, dec1)
   
-      # Print result if within radius.
-      if (sep &lt; real (radius))
-  	printf ("%-15s %s\n", $I, imget ("title"))
-      endif
-  </pre>
+  # Print result if within radius.
+  if (sep &lt; real (radius))
+      printf ("%-15s %s\n", $I, imget ("title"))
+  endif
+  </pre></div>
   <p>
   2. Find images within an arc minute of a particular position.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; astradius
   List of images: *.imh
   RA center (hours): 13:31
@@ -156,24 +156,24 @@ astradius: Find images within a circle on the sky
   obj0020.imh         m51 B 600s
   obj0021.imh         m51 V 600s
   obj0022.imh         m51 R 600s
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_ASTRADIUS">
   <dt><b>ASTRADIUS V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='ASTRADIUS' Line='ASTRADIUS V2.11' -->
   <dd>This task is new in this release.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   astcalc, hselect
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

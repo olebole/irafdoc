@@ -7,21 +7,21 @@ daofind: Find stars in an image using the dao algorithm
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   daofind image 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images in which objects are to be detected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output  = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output  = "default"' -->
   <dd>The name of the results file or the results directory. If output is
@@ -33,7 +33,7 @@ daofind: Find stars in an image using the dao algorithm
   file is created for every input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_starmap">
   <dt><b>starmap = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='starmap' Line='starmap = ""' -->
   <dd>The name of the image prefix and/or directory where the density enhancement
@@ -44,7 +44,7 @@ daofind: Find stars in an image using the dao algorithm
   run of DAOFIND.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skymap">
   <dt><b>skymap = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skymap' Line='skymap = ""' -->
   <dd>The name of the image prefix and/or directory where the mean density
@@ -56,7 +56,7 @@ daofind: Find stars in an image using the dao algorithm
   image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The critical
@@ -65,7 +65,7 @@ daofind: Find stars in an image using the dao algorithm
   used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_findpars">
   <dt><b>findpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='findpars' Line='findpars = ""' -->
   <dd>The name of the file containing the object detection parameters. The 
@@ -73,7 +73,7 @@ daofind: Find stars in an image using the dao algorithm
   the default parameter set in the user's uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The choices are:
@@ -103,31 +103,31 @@ daofind: Find stars in an image using the dao algorithm
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0' -->
   <dd>The constant for constant boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Interactive or batch mode?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsout">
   <dt><b>wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsout' Line='wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the output coordinates written to <i>output</i>. The
@@ -180,7 +180,7 @@ daofind: Find stars in an image using the dao algorithm
   <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -188,7 +188,7 @@ daofind: Find stars in an image using the dao algorithm
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Automatically confirm the critical parameters when running in non-interactive
@@ -196,7 +196,7 @@ daofind: Find stars in an image using the dao algorithm
   <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Automatically update the algorithm parameters in non-interactive mode if
@@ -204,7 +204,7 @@ daofind: Find stars in an image using the dao algorithm
   (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print out information about the progress of the task in non-interactive mode.
@@ -212,14 +212,14 @@ daofind: Find stars in an image using the dao algorithm
   or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The standard graphics device. Graphics may be set to the apphot package
   parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The standard image display device.  Display may be set to the apphot package
@@ -229,9 +229,9 @@ daofind: Find stars in an image using the dao algorithm
   enables DAOFIND to work interactively from a contour plot.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   DAOFIND searches the IRAF images <i>image</i> for local density maxima,
   which have a full-width half-maximum of <i>datapars.fwhmpsf</i> and a peak
@@ -275,94 +275,90 @@ daofind: Find stars in an image using the dao algorithm
   <i>datapars.fwhmpsf</i> and <i>datapars.sigma</i> when running in
   non-interactive mode.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+               Interactive Keystroke Commands
   
-  	     Interactive Keystroke Commands
+  ?       Print help
+  :       Colon commands
+  v       Verify the critical parameters
+  w       Save the current parameters
+  d       Plot radial profile of star near cursor
+  i       Interactively set parameters using star near cursor
+  f       Find stars in the image
+  spbar   Find stars in the image, output results
+  q       Exit task
   
-  ?	Print help
-  :	Colon commands 
-  v	Verify the critical parameters
-  w	Save the current parameters
-  d	Plot radial profile of star near cursor
-  i	Interactively set parameters using star near cursor
-  f	Find stars in the image
-  spbar	Find stars in the image, output results
-  q	Exit task
+                  Colon Commands
   
+  :show           [data/find]     List the parameters
   
-  		Colon Commands
-  
-  :show		[data/find]	List the parameters
-  
-  		Colon Parameter Editing Commands
+                  Colon Parameter Editing Commands
   
   # Image and file name parameters
   
-  :image		[string]	Image name
-  :output		[string]	Output file name
+  :image          [string]        Image name
+  :output         [string]        Output file name
   
   # Data dependent parameters
   
-  :scale		[value]		Image scale (units per pixel)
-  :fwhmpsf	[value]		Full width half maximum of psf (scale units)
-  :emission	[y/n]		Emission feature (y), absorption (n)
-  :sigma		[value]		Standard deviation of sky (counts)
-  :datamin	[value]		Minimum good data value (counts)
-  :datamax	[value]		Maximum good data value (counts)
+  :scale          [value]         Image scale (units per pixel)
+  :fwhmpsf        [value]         Full width half maximum of psf (scale units)
+  :emission       [y/n]           Emission feature (y), absorption (n)
+  :sigma          [value]         Standard deviation of sky (counts)
+  :datamin        [value]         Minimum good data value (counts)
+  :datamax        [value]         Maximum good data value (counts)
   
   # Noise description parameters
   
-  :noise 		[string]	Noise model (constant|poisson)
-  :gain		[string]	Gain image header keyword
-  :ccdread	[string]	Readout noise image header keyword
-  :epadu		[value]		Gain (electrons per adu)
-  :readnoise	[value]		Readout noise (electrons)
+  :noise          [string]        Noise model (constant|poisson)
+  :gain           [string]        Gain image header keyword
+  :ccdread        [string]        Readout noise image header keyword
+  :epadu          [value]         Gain (electrons per adu)
+  :readnoise      [value]         Readout noise (electrons)
   
   # Observation parameters
   
-  :exposure	[string]	Exposure time image header keyword
-  :airmass	[string]	Airmass image header keyword
-  :filter		[string]	Filter image header keyword
-  :obstime	[string]	Time of observation image header keyword
-  :itime		[value]		Exposure time (time units)
-  :xairmass	[value]		Airmass value (number)
-  :ifilter	[string]	Filter id string
-  :otime		[string]	Time of observation (time units)
+  :exposure       [string]        Exposure time image header keyword
+  :airmass        [string]        Airmass image header keyword
+  :filter         [string]        Filter image header keyword
+  :obstime        [string]        Time of observation image header keyword
+  :itime          [value]         Exposure time (time units)
+  :xairmass       [value]         Airmass value (number)
+  :ifilter        [string]        Filter id string
+  :otime          [string]        Time of observation (time units)
   
   # Object detection parameters
   
-  :nsigma		[value]		Size of Gaussian kernel (sigma) 
-  :threshold	[value]		Detection intensity threshold (counts)
-  :ratio		[value]		Sigmay / sigmax of Gaussian kernel
-  :theta		[value]		Position angle of Gaussian kernel
-  :sharplo	[value]		Lower bound on sharpness
-  :sharphi	[value]		Upper bound on sharpness
-  :roundlo	[value]		Lower bound on roundness
-  :roundhi	[value]		Upper bound on roundness
+  :nsigma         [value]         Size of Gaussian kernel (sigma)
+  :threshold      [value]         Detection intensity threshold (counts)
+  :ratio          [value]         Sigmay / sigmax of Gaussian kernel
+  :theta          [value]         Position angle of Gaussian kernel
+  :sharplo        [value]         Lower bound on sharpness
+  :sharphi        [value]         Upper bound on sharpness
+  :roundlo        [value]         Lower bound on roundness
+  :roundhi        [value]         Upper bound on roundness
   
   # Plotting and marking commands
   
-  :mkdetections	[y/n]		Mark detections on the image display
-  
+  :mkdetections   [y/n]           Mark detections on the image display
   
   The following commands are available inside the interactive setup menu.
   
-   
                       Interactive Daofind Setup Menu
   
-  	v	Mark and verify critical daofind parameters (f,s)
+          v       Mark and verify critical daofind parameters (f,s)
   
-  	f	Mark and verify the full-width half-maximum of the psf
-  	s	Mark and verify the standard deviation of the background
-  	l	Mark and verify the minimum good data value
-  	u	Mark and verify the maximum good data value
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+          f       Mark and verify the full-width half-maximum of the psf
+          s       Mark and verify the standard deviation of the background
+          l       Mark and verify the minimum good data value
+          u       Mark and verify the maximum good data value
+  </pre></div>
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   DAOFIND approximates the stellar point spread function with an elliptical
   Gaussian function, whose sigma along the semi-major axis is 0.42466 *
@@ -408,21 +404,21 @@ daofind: Find stars in an image using the dao algorithm
   <i>findpars.threshold</i> * <i>datapars.sigma</i>, and the object is added to
   the output coordinate file.
   </p>
-  <!-- EndSection:   'ALGORITHMS' -->
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   In interactive mode or in non-interactive with the verbose switch turned on
   the following quantities are written to the terminal as each object is
   detected.
   </p>
-  <pre>
-  	xcenter  ycenter  mag  sharpness  sround  ground id
+  <div class="highlight-default-notranslate"><pre>
+  xcenter  ycenter  mag  sharpness  sround  ground id
   
-  		    where
+              where
   
-  	mag = -2.5 * log10 (peak density / detection threshold)
-  </pre>
+  mag = -2.5 * log10 (peak density / detection threshold)
+  </pre></div>
   <p>
   The object centers are in pixels and the magnitude estimate measures the
   ratio of the maximum density enhancement to the detection threshold. 
@@ -436,47 +432,32 @@ daofind: Find stars in an image using the dao algorithm
   the current values of the parameters when the first stellar record was
   written. The parameters can subsequently be altered. 
   </p>
-  <!-- EndSection:   'OUTPUT' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Run daofind interactively on dev$ypix using the image display
   and image display cursor. Set the fwhmpsf and sigma parameters
   with the graphics cursor,  radial profile plot, and the interactive
   setup key i.
   </p>
-  <pre>
-  	ap&gt; display dev$ypix 1 fi+
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix 1 fi+
   
-  	... display the image
   
-  	ap&gt; daofind dev$ypix interactive+
+  ap&gt; daofind dev$ypix interactive+
   
-  	... type ? to see help screen
   
-  	... move display cursor to a star
-  	... type i to enter the interactive setup menu
-  	... enter maximum radius in pixels of the radial profile or
-              accept default with a CR
-  	... set the fwhmpsf and sigma using the graphics cursor and the
-  	    radial profile plot
-  	... typing &lt;CR&gt; leaves the parameters at their default values
-          ... type q to quit setup menu
+      accept default with a CR
+      radial profile plot
   
-  	... type the v key to verify the critical parameters
   
-  	... type the w key to save the parameters in the parameter files
   
-  	... type the space bar to detect stars in the image
   
-  	... a 1 line summary of the answers will appear on the standard
-  	    output for each star measured
+      output for each star measured
   
-  	... type q to quit and q again to confirm the quit
   
-  	... full output will appear in the text file ypix.coo.1
-  
-  </pre>
+  </pre></div>
   <p>
   2. Run daofind interactively on a single image using a contour plot in place
   of the image and the graphics cursor in place of the image cursor.
@@ -485,166 +466,126 @@ daofind: Find stars in an image using the dao algorithm
   sigma parameters with the graphics cursor and radial profile plot and the
   interactive setup key i.
   </p>
-  <pre>
-          ap&gt; show stdimcur
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; show stdimcur
   
-          ... record the default value of stdimcur
   
-  	ap&gt; set stdimcur = stdgraph
+  ap&gt; set stdimcur = stdgraph
   
-  	... define the image cursor to be the graphics cursor
   
-          ap&gt; contour dev$ypix
+  ap&gt; contour dev$ypix
   
-          ... make a contour plot of dev$ypix
   
-  	ap&gt; contour dev$ypix &gt;G ypix.plot1
+  ap&gt; contour dev$ypix &gt;G ypix.plot1
   
-          ... store the contour plot of ypix in the file ypix.plot
   
-  	ap&gt; daofind dev$ypix display=stdgraph interactive+
+  ap&gt; daofind dev$ypix display=stdgraph interactive+
   
-          ... type ? to see the help screen
   
-  	... move graphics cursor to a setup star
-  	... type i to enter the interactive setup menu
-  	... enter maximum radius in pixels of the radial profile or
-              accept the default with a CR
-  	... set the fwhmpsf and sigma using the graphics cursor and the
-  	    radial profile plot
-  	... typing &lt;CR&gt; leaves the parameters at their default values
-          ... type q to quit the setup menu
+      accept the default with a CR
+      radial profile plot
   
-  	... type the v key to confirm the critical parameters
   
-  	... type the w key to save the parameters in the parameter files
   
-          ... retype :.read ypix.plot1 to reload the contour plot
   
-  	... type the space bar to detect stars in the image
   
-  	... a 1 line summary of the answers will appear on the standard
-  	    output for each star measured
+      output for each star measured
   
-  	... full output will appear in the text file ypix.coo.2
   
-  	ap&gt; set stdimcur = &lt;default&gt;
+  ap&gt; set stdimcur = &lt;default&gt;
   
-          ... reset the image cursor to its default value
-  
-  </pre>
+  </pre></div>
   <p>
   3. Run DAOFIND interactively without using the image display cursor.
   </p>
-  <pre>
-          ap&gt; show stdimcur
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; show stdimcur
   
-          ... record the default value of stdimcur
   
-  	ap&gt; set stdimcur = text
+  ap&gt; set stdimcur = text
   
-  	... set the image cursor to the standard input
   
-  	ap&gt; display dev$ypix 1
+  ap&gt; display dev$ypix 1
   
-  	... display the image
   
-  	ap&gt; daofind dev$ypix interactive+
+  ap&gt; daofind dev$ypix interactive+
   
-          ... type ? for help
   
-  	... type "442 409 101 i" in response to the image cursor query where
-  	    x and y are the coordinates of the star to be used as setup,
-  	    101 is the default world coordinate system, and i enters the
-  	    interactive setup menu.
-  	... enter maximum radius in pixels of the radial profile or
-              type CR to accept the default
-  	... set the fwhmpsf and sigma using the graphics cursor and the
-  	    radial profile plot
-  	... typing &lt;CR&gt; leaves the parameters at their default values
-          ... type q to quit the setup menu
+      x and y are the coordinates of the star to be used as setup,
+      101 is the default world coordinate system, and i enters the
+      interactive setup menu.
+      type CR to accept the default
+      radial profile plot
   
-  	... type the v key to verify the parameters
   
-  	... type the w key to save the parameters in the parameter files
   
-  	... type the space bar to detect stars in the image
   
-  	... a 1 line summary of the answers will appear on the standard
-  	    output for each star measured
+      output for each star measured
   
-  	... type q to quit and q again to confirm
   
-  	... full output will appear in the text file ypix.coo.3
   
-  	ap&gt; set stdimcur = &lt;default&gt;
+  ap&gt; set stdimcur = &lt;default&gt;
   
-          ... reset the image cursor to its default value
-  </pre>
+  </pre></div>
   <p>
   4. Run daofind on a list of 3 images contained in the file imlist in batch mode.
   The program will ask the user to verify that the fwhmpsf and the threshold are
   correct before beginning execution.
   </p>
-  <pre>
-  	ap&gt; type imlist
-  	dev$ypix
-  	dev$wpix
-  	dev$pix
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; type imlist
+  dev$ypix
+  dev$wpix
+  dev$pix
   
-  	ap&gt; daofind @imlist
+  ap&gt; daofind @imlist
   
-          ... the output will appear in ypix.coo.4, wpix.coo.1, pix.coo.1
-  </pre>
+  </pre></div>
   <p>
   5. Display and find stars in an image section. Write the output coordinates
   in the coordinate system of the parent image. Mark the detected stars on
   the displayed image.
   </p>
-  <pre>
-          ap&gt; display dev$ypix[150:450,150:450]
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix[150:450,150:450]
   
-          ... display the image section
   
-          ap&gt; daofind dev$ypix[150:450,150:450] wcsout=tv
+  ap&gt; daofind dev$ypix[150:450,150:450] wcsout=tv
   
-          ... output will appear in ypix.coo.5
   
-          ap&gt; tvmark 1 ypix.coo.5 col=204
-  </pre>
+  ap&gt; tvmark 1 ypix.coo.5 col=204
+  </pre></div>
   <p>
   6. Repeat example 4 but submit the job to the background  and turn off the
   verify switch.
   </p>
-  <pre>
-  	ap&gt; daofind @imlist verify- &amp;
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; daofind @imlist verify- &amp;
   
-  	... the output will appear in ypix.coo.6, wpix.coo.2, pix.coo.2
-  </pre>
+  </pre></div>
   <p>
   7. Use an image cursor command file to drive the daofind task. The cursor
   command file shown below sets the fwhmpsf, sigma, and threshold parameters,
   located stars in the image, updates the parameter files, and quits the task.
   </p>
-  <pre>
-          ap&gt; type cmdfile
-          : fwhmpsf 2.5
-          : sigma 5.0
-          : threshold 10.0
-          \040
-          w
-          q
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; type cmdfile
+  : fwhmpsf 2.5
+  : sigma 5.0
+  : threshold 10.0
+  \040
+  w
+  q
   
-          ap&gt; daofind dev$ypix icommands=cmdfile verify-
+  ap&gt; daofind dev$ypix icommands=cmdfile verify-
   
-          ... full output will appear in ypix.coo.7
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   It is currently the responsibility of the user to make sure that the
   image displayed in the frame is the same as that specified by the image
@@ -658,14 +599,14 @@ daofind: Find stars in an image using the dao algorithm
   <span style="font-family: monospace;">"yes"</span>. It may be necessary to run gflush and to redisplay the image
   to get the overlays position correctly.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars, findpars
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'OUTPUT' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

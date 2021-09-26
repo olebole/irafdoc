@@ -7,14 +7,14 @@ taextract: Copy an array entry to a column of scalars in another table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   taextract intable outtable row column
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task extracts one entry (presumably an array of values)
   at a specified row and column
@@ -38,17 +38,17 @@ taextract: Copy an array entry to a column of scalars in another table.
   using keyword ORIG_ROW.
   This allows 'tainsert' to put the data back where 'taextract' got them from.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name]' -->
   <dd>Name of the input table containing a column with array entries.
   It is not an error for the array length to be one.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]' -->
   <dd>Name of the output table.
@@ -58,7 +58,7 @@ taextract: Copy an array entry to a column of scalars in another table.
   and they may not be in the same file if FITS format is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_row">
   <dt><b>row [integer, min=1, max=INDEF]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='row' Line='row [integer, min=1, max=INDEF]' -->
   <dd>This is the row number in the input table.
@@ -66,7 +66,7 @@ taextract: Copy an array entry to a column of scalars in another table.
   as there are elements in the input table entry for 'column'.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_column">
   <dt><b>column [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
   <dd>Column name.
@@ -77,7 +77,7 @@ taextract: Copy an array entry to a column of scalars in another table.
   See the description for 'outcolumn'.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outcolumn">
   <dt><b>outcolumn = <span style="font-family: monospace;">""</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outcolumn' Line='outcolumn = "" [string]' -->
   <dd>If 'outcolumn' is specified,
@@ -122,28 +122,28 @@ taextract: Copy an array entry to a column of scalars in another table.
   otherwise, the print format will be copied from the column in the input table.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Extract the array from row 5, column <span style="font-family: monospace;">"polar"</span>, from table <span style="font-family: monospace;">"array.tab"</span>,
   putting the values in column <span style="font-family: monospace;">"polar"</span> of table <span style="font-family: monospace;">"scalar.tab"</span>.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   at&gt; taextract array.tab scalar.tab 5 polar
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tainsert
   </p>
@@ -152,7 +152,7 @@ taextract: Copy an array entry to a column of scalars in another table.
   package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

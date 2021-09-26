@@ -7,34 +7,34 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   curfit input 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The data to be fit.  May be an image section, STDIN or a list of file names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = legendre</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = legendre' -->
   <dd>The type of function with which to fit the data.  Choices are 
   legendre, chebyshev, spline1 (linear spline) or spline3 (cubic spline).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 4' -->
   <dd>The order of the fit or number of spline pieces. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weighting">
   <dt><b>weighting = uniform</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = uniform' -->
   <dd>The type of weighting for the fit. The options are:
@@ -67,21 +67,21 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>If <b>interactive</b> is set to yes, a plot of the fit is drawn and the
   cursor is available for interactively examining and adjusting the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_axis">
   <dt><b>axis = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='axis' Line='axis = 1' -->
   <dd>If <b>input</b> names an image or image section, this parameter specifies
   the axis along which the image is projected for fitting.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_listdata">
   <dt><b>listdata = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='listdata' Line='listdata = no' -->
   <dd>If <b>listdata</b> is set to yes, the only printed output will be the calculated 
@@ -89,7 +89,7 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
   other list oriented program.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>If <b>verbose</b> is set to yes, the fitted (X,Y) pairs are listed in addition 
@@ -97,35 +97,35 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
   coefficients and their errors.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_power">
   <dt><b>power = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='power' Line='power = no' -->
   <dd>If <b>power</b> is set to yes, the coefficients of the legendre or
   chebyshev polynomials will be converted to power series coefficients.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_calctype">
   <dt><b>calctype = <span style="font-family: monospace;">"double"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "double"' -->
   <dd>Calculation datatype.  The two datatypes are <span style="font-family: monospace;">"real"</span> (single precision) and
   <span style="font-family: monospace;">"double"</span> (double precision).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output device for interactive graphics.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>The source of graphics cursor input.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A curve is fit to data read from either an image section or a list.
   The type of curve is set by the <b>function</b> parameter as either
@@ -184,65 +184,60 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
   which do many fits.  This task provides a test tool to compare the
   results between the two levels of precision.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The x,y pairs in file test.data are interactively fit with a fourth 
   order legendre polynomial.  The printed output is shown.
   </p>
-  <p>
-  	cl&gt; curfit test.data 
-  </p>
-  <pre>
-  	NOAO/IRAF V2.0 Hammond@lyra Fri 11:45:41 13-Dec-85
-  	file = test.data
-  	function = legendre
-  	grow = 0.
-  	naverage = 1
-  	order = 4
-  	low_reject = 0., high_reject = 0.
-  	niterate = 1
-  	sample = *
-  	total points = 8
-  	sample points = 8
-  	nrejected = 0
-  	deleted = 0
-  	square root of reduced chi square = 3.008706E-6
-  		coefficient	  error
-   	1	   2.633E1	  1.098E-6
-   	2	   3.150E1	  1.820E-6
-   	3	   8.167E0	  1.896E-6
-   	4	 -1.621E-6	  2.117E-6
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; curfit test.data
+  NOAO/IRAF V2.0 Hammond@lyra Fri 11:45:41 13-Dec-85
+  file = test.data
+  function = legendre
+  grow = 0.
+  naverage = 1
+  order = 4
+  low_reject = 0., high_reject = 0.
+  niterate = 1
+  sample = *
+  total points = 8
+  sample points = 8
+  nrejected = 0
+  deleted = 0
+  square root of reduced chi square = 3.008706E-6
+          coefficient       error
+  1          2.633E1        1.098E-6
+  2          3.150E1        1.820E-6
+  3          8.167E0        1.896E-6
+  4        -1.621E-6        2.117E-6
+  </pre></div>
   <p>
   2.  Fit a cubic spline to the last 12 columns of image <span style="font-family: monospace;">"m74"</span>.
   </p>
-  <p>
-     cl&gt; curfit m74[501:512,1:512] axis=2 func=spline3 order=5
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; curfit m74[501:512,1:512] axis=2 func=spline3 order=5
+  </pre></div>
   <p>
   3. Use <i>curfit</i> as a filter to overplot a smoothed curve to an existing
   plot of the data points.  The command line for <b>graph</b> is shown as
   well as the <b>curfit</b> command.  Note the interactive flag for 
   <b>curfit</b> is turned off.
   </p>
-  <p>
-     cl&gt; graph points.list point+ mark=box wx1=.13 xlab=<span style="font-family: monospace;">"X VALUES"</span>\<br>
-     &gt;&gt;&gt; ylab=<span style="font-family: monospace;">"Y VALUES"</span> title=<span style="font-family: monospace;">"Legendre fit to points.list"</span>
-  </p>
-  <p>
-     cl&gt; type points.list | curfit list+ inter- | graph append+
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; graph points.list point+ mark=box wx1=.13 xlab="X VALUES"\<br>
+  &gt;&gt;&gt; ylab="Y VALUES" title="Legendre fit to points.list"
+  cl&gt; type points.list | curfit list+ inter- | graph append+
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   icfit,  polyfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

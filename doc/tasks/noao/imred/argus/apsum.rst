@@ -7,21 +7,21 @@ apsum: Extract 1D spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   apsum input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images containing apertures to be extracted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>List of output rootnames for the extracted spectra.  If the null
@@ -32,7 +32,7 @@ apsum: Extract 1D spectra
   format, or the extension <span style="font-family: monospace;">".ec"</span> for echelle format.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and extract.  This only applies
@@ -44,7 +44,7 @@ apsum: Extract 1D spectra
   for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_format">
   <dt><b>format = <span style="font-family: monospace;">"multispec"</span> (onedspec|multispec|echelle|strip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "multispec" (onedspec|multispec|echelle|strip)' -->
   <dd>Format for output extracted spectra.  <span style="font-family: monospace;">"Onedspec"</span> format extracts each
@@ -56,7 +56,7 @@ apsum: Extract 1D spectra
   exactly align the aperture based on the trace information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_references">
   <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
@@ -69,7 +69,7 @@ apsum: Extract 1D spectra
   and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_profiles">
   <dt><b>profiles = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='profiles' Line='profiles = ""' -->
   <dd>List of profile images for variance weighting or cleanning.   If variance
@@ -83,7 +83,7 @@ apsum: Extract 1D spectra
   to use it.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Run this task interactively?  If the task is not run interactively then
@@ -91,7 +91,7 @@ apsum: Extract 1D spectra
   fitting, and extraction review are disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = yes' -->
   <dd>Find the spectra and define apertures automatically?  In order for
@@ -99,44 +99,44 @@ apsum: Extract 1D spectra
   input image or reference image defined in the database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no' -->
   <dd>Recenter the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_resize">
   <dt><b>resize = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no' -->
   <dd>Resize the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trace">
   <dt><b>trace = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes' -->
   <dd>Trace the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fittrace">
   <dt><b>fittrace = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes' -->
   <dd>Interactively fit the traced positions by a function?  The <i>interactive</i>
   parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extract">
   <dt><b>extract = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extract' Line='extract = yes' -->
   <dd>Extract the one dimensional aperture sums?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extras">
   <dt><b>extras = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extras' Line='extras = no' -->
   <dd>Extract the raw spectrum (if variance weighting is used), the sky spectrum
@@ -145,14 +145,14 @@ apsum: Extract 1D spectra
   of the output image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_review">
   <dt><b>review = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='review' Line='review = yes' -->
   <dd>Review the extracted spectra?  The <i>interactive</i> parameter must also be
   yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF, nsum = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 10' -->
   <dd>The dispersion line (line or column perpendicular to the dispersion
@@ -165,7 +165,7 @@ apsum: Extract 1D spectra
   except that tracing always uses a sum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = <span style="font-family: monospace;">"none"</span> (none|average|median|minimum|fit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = "none" (none|average|median|minimum|fit)' -->
   <dd>Type of background subtraction.  The choices are <span style="font-family: monospace;">"none"</span> for no background
@@ -178,7 +178,7 @@ apsum: Extract 1D spectra
   other options and requires additional fitting parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weights">
   <dt><b>weights = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none"' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
@@ -201,7 +201,7 @@ apsum: Extract 1D spectra
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pfit">
   <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm to use with variance weighting or cleaning.
@@ -213,13 +213,13 @@ apsum: Extract 1D spectra
   function, <span style="font-family: monospace;">"fit2d"</span>, described by Marsh (see <b>approfile</b>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clean">
   <dt><b>clean = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no' -->
   <dd>Detect and replace deviant pixels?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skybox">
   <dt><b>skybox = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skybox' Line='skybox = 1' -->
   <dd>Box car smoothing length for sky background when using background
@@ -230,7 +230,7 @@ apsum: Extract 1D spectra
   the sky regions are limited due to a small slit length.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_saturation">
   <dt><b>saturation = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation = INDEF' -->
   <dd>Saturation or nonlinearity level in data units.  During variance weighted
@@ -240,7 +240,7 @@ apsum: Extract 1D spectra
   saturated pixels with a negative sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_readnoise">
   <dt><b>readnoise = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0.' -->
   <dd>Read out noise in photons.  This parameter defines the minimum noise
@@ -249,7 +249,7 @@ apsum: Extract 1D spectra
   (case insensitive) may be specified to get the value from the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gain">
   <dt><b>gain = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = 1' -->
   <dd>Detector gain or conversion factor between photons/electrons and
@@ -258,14 +258,14 @@ apsum: Extract 1D spectra
   from the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 4., usigma = 4.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 4., usigma = 4.' -->
   <dd>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsubaps">
   <dt><b>nsubaps = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsubaps' Line='nsubaps = 1' -->
   <dd>During extraction it is possible to equally divide the apertures into
@@ -279,9 +279,9 @@ apsum: Extract 1D spectra
   aperture numbers as in the multispec format.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_additional_parameters">
   <h3>Additional parameters</h3>
-  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
   <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters from
@@ -295,9 +295,9 @@ apsum: Extract 1D spectra
   When this operation is performed from the task <b>apall</b> all
   parameters except the package parameters are included in that task.
   </p>
-  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   For each image in the input image list, the two dimensional spectra are
   extracted to one dimensional spectra by summing the pixels across the
@@ -469,15 +469,15 @@ apsum: Extract 1D spectra
   variance weighting, cleaning, the noise model, and profile function
   determination see <b>apvariance</b> and <b>approfiles</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To simply extract the spectra from a multislit observation:
   </p>
-  <p>
-  	cl&gt; apsum multislit1
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apsum multislit1
+  </pre></div>
   <p>
   The positions of the slits are defined using either automatic finding
   or with the aperture editor.  The positions of the slits are traced if
@@ -486,10 +486,10 @@ apsum: Extract 1D spectra
   can be done as part of this command or previously using the other tasks
   in the <b>apextract</b> package.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_APSUM">
   <dt><b>APSUM V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APSUM' Line='APSUM V2.11' -->
   <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
@@ -514,15 +514,15 @@ apsum: Extract 1D spectra
   In the previous version a negative (inverted) spectrum would result.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apbackground, apvariance, approfile,
   apdefault, apfind, aprecenter, apresize, apedit, aptrace, apall
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

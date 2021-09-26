@@ -7,22 +7,22 @@ graph: Graph one or more image sections or lists
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   graph input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of operands to be graphed.  May be STDIN, or one or more image sections 
   or lists.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wx1">
   <dt><b>wx1=0., wx2=0., wy1=0., wy2=0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wx1' Line='wx1=0., wx2=0., wy1=0., wy2=0.' -->
   <dd>The range of user coordinates spanned by the plot.  If the range of values
@@ -30,7 +30,7 @@ graph: Graph one or more image sections or lists
   maximum data value along the degenerate dimension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcs">
   <dt><b>wcs = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
   <dd>The world coordinate system (<i>wcs</i>) to be used for axis labeling when
@@ -71,7 +71,7 @@ graph: Graph one or more image sections or lists
   may be any linear or nonlinear world system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_vx1">
   <dt><b>vx1=0., vx2=0., vy1=0., vy2=0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vx1' Line='vx1=0., vx2=0., vy1=0., vy2=0.' -->
   <dd>NDC coordinates (0-1) of the device plotting viewport.  If not set by 
@@ -79,14 +79,14 @@ graph: Graph one or more image sections or lists
   is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pointmode">
   <dt><b>pointmode = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pointmode' Line='pointmode = no' -->
   <dd>If <b>pointmode</b> = yes, plot points or markers at data values, rather than 
   connected lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_marker">
   <dt><b>marker = <span style="font-family: monospace;">"box"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='marker' Line='marker = "box"' -->
   <dd>Marker or line type to be drawn.  If <b>pointmode</b> = yes the markers are
@@ -99,7 +99,7 @@ graph: Graph one or more image sections or lists
   at the ends).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_szmarker">
   <dt><b>szmarker = 0.005</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='szmarker' Line='szmarker = 0.005' -->
   <dd>The size of a marker in NDC coordinates (0 to 1 spans the screen).
@@ -110,7 +110,7 @@ graph: Graph one or more image sections or lists
   absolute value of <b>szmarker</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ltypes">
   <dt><b>ltypes = <span style="font-family: monospace;">""</span>, colors = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ltypes' Line='ltypes = "", colors = ""' -->
   <dd>List of line types and colors to use when graphing multiple data sets.
@@ -120,18 +120,18 @@ graph: Graph one or more image sections or lists
   the list is exhausted before the data the last value is used for all
   remaining data sets.
   The line types have values between 1 and 4:
-  <pre>
-      1 - solid line
-      2 - dashed line
-      3 - dotted line
-      4 - dot-dash line
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  1 - solid line
+  2 - dashed line
+  3 - dotted line
+  4 - dot-dash line
+  </pre></div>
   The colors have values between 1 and 9.  The colors associated with each
   number depend on the graphics device.  For example <span style="font-family: monospace;">"xgterm"</span> colors are
   assigned by X resources.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xlabel">
   <dt><b>xlabel = <span style="font-family: monospace;">"wcslabel"</span>, ylabel = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlabel' Line='xlabel = "wcslabel", ylabel = ""' -->
   <dd>Label for the X-axis or Y-axis.  if <b>xlabel</b> = <span style="font-family: monospace;">"wcslabel"</span> and the first
@@ -139,7 +139,7 @@ graph: Graph one or more image sections or lists
   if defined is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">"imtitle"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "imtitle"' -->
   <dd>Plot title.  If <b>title</b>  = <span style="font-family: monospace;">"imtitle"</span>
@@ -147,7 +147,7 @@ graph: Graph one or more image sections or lists
   as the plot title.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xformat">
   <dt><b>xformat = <span style="font-family: monospace;">"wcsformat"</span>, yformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "wcsformat", yformat = ""' -->
   <dd>The numerical format for the coordinate labels.  The values may be <span style="font-family: monospace;">""</span>
@@ -158,19 +158,19 @@ graph: Graph one or more image sections or lists
   format will be used.  Any other value will override the image attribute.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_box">
   <dt><b>box = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='box' Line='box = yes' -->
   <dd>Draw axes at the perimeter of the plotting window.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fill">
   <dt><b>fill = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fill' Line='fill = yes' -->
   <dd>Fill the output viewport regardless of the device aspect ratio?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_axis">
   <dt><b>axis = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='axis' Line='axis = 1' -->
   <dd>Axis along which the projection is to be computed, if an input operand is
@@ -178,41 +178,41 @@ graph: Graph one or more image sections or lists
   2 is Y (column average), and so on.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_transpose">
   <dt><b>transpose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transpose' Line='transpose = no' -->
   <dd>Swap the X and Y axes of the plot.  If enabled, the axes are transposed 
   after the optional linear transformation of the X-axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logx">
   <dt><b>logx = no, logy = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logx' Line='logx = no, logy = no' -->
   <dd>Log scale the X or Y axis.  Zero or negative values are indefinite and
   will not be plotted, but are tolerated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ticklabels">
   <dt><b>ticklabels = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ticklabels' Line='ticklabels = yes' -->
   <dd>Label the tick marks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_majrx">
   <dt><b>majrx=5, minrx=5, majry=5, minry=5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='majrx' Line='majrx=5, minrx=5, majry=5, minry=5' -->
   <dd>Number of major tick marks on each axis; number of minor tick marks between
   major tick marks.  Ignored if log scaling is in effect for an axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lintran">
   <dt><b>lintran = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lintran' Line='lintran = no' -->
   <dd>Perform a linear transformation of the X-axis upon input.  Used to assign
   logical coordinates to the indices of pixel data arrays (image sections).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p1">
   <dt><b>p1=0, p2=0, q1=0, q2=1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='p1' Line='p1=0, p2=0, q1=0, q2=1' -->
   <dd>If <b>lintran</b> is enabled, pixel index P1 is mapped to Q1, and P2 to Q2.
@@ -220,35 +220,35 @@ graph: Graph one or more image sections or lists
   the input array.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_round">
   <dt><b>round = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='round' Line='round = no' -->
   <dd>Extend the axes up to <span style="font-family: monospace;">"nice"</span> values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_overplot">
   <dt><b>overplot = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='overplot' Line='overplot = no' -->
   <dd>Overplot on an existing plot.  All axis scaling and labeling parameters
   apply.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
   <dd>Append to an existing plot.  The previous axis is used and the axis
   scaling and labeling parameters are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output device.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Graph</b> graphs one or more lists or image sections; lists and image
   sections may be mixed in the input list at will.  If the curves are not
@@ -292,72 +292,72 @@ graph: Graph one or more image sections or lists
   square full device viewports (e.g., the vt640), a plot drawn by <i>graph</i>
   appears extended in the x direction unless <b>fill</b> = no.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Plot the output of a list processing filter:
   </p>
-  <p>
-      cl&gt; ... list_filter | graph
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ... list_filter | graph
+  </pre></div>
   <p>
   2. Plot a graph entered interactively from the terminal:
   </p>
-  <p>
-      cl&gt; graph STDIN
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; graph STDIN
+  </pre></div>
   <p>
   3. Overplot two lists:
   </p>
-  <p>
-      cl&gt; graph list1,list2
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; graph list1,list2
+  </pre></div>
   <p>
   4. Graph line 128 of image <span style="font-family: monospace;">"pix"</span>:
   </p>
-  <p>
-      cl&gt; graph pix[*,128]
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; graph pix[*,128]
+  </pre></div>
   <p>
   5. Graph the average of columns 50 through 100:
   </p>
-  <p>
-      cl&gt; graph pix[50:100,*] axis=2
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; graph pix[50:100,*] axis=2
+  </pre></div>
   <p>
   6. Graph a list in point plot mode:
   </p>
-  <p>
-      cl&gt; graph list po+
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; graph list po+
+  </pre></div>
   <p>
   7. Annotate a graph:
   </p>
-  <pre>
-      cl&gt; graph pix[*,10],pix[*,20] xlabel=column\<br>
-      &gt;&gt;&gt; ylabel=intensity title="lines 10 and 20 of pix"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; graph pix[*,10],pix[*,20] xlabel=column\<br>
+  &gt;&gt;&gt; ylabel=intensity title="lines 10 and 20 of pix"
+  </pre></div>
   <p>
   8. Direct the graph to the standard plotter device:
   </p>
-  <p>
-      cl&gt; graph list device=stdplot
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; graph list device=stdplot
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Indefinites are not recognized when computing image projections.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   pcol, pcols, prow, prows
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

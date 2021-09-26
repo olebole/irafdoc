@@ -7,42 +7,42 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   pdm infile
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_infiles">
   <dt><b>infiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles' -->
   <dd>Input file template.  If more than one file matches the template, data
   from all the files will be concatenated to produce the working data set.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_metafile">
   <dt><b>metafile = <span style="font-family: monospace;">"pdmmeta"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='metafile' Line='metafile = "pdmmeta"' -->
   <dd>File in which to store metacode when running in batch mode.  All of the
   plots saved will be put here with formfeeds between them.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_batchfile">
   <dt><b>batchfile = <span style="font-family: monospace;">"pdmbatch"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='batchfile' Line='batchfile = "pdmbatch"' -->
   <dd>File in which to store information about the period, amplitude, epoch
   and fit function when running in batch mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The output device for interactive graphics.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Interactive flag.  If set to no, the analysis is done in batch mode with output
@@ -51,14 +51,14 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   plots can be made on the user's terminal and cursor commands are available.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flip">
   <dt><b>flip = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flip' Line='flip = no' -->
   <dd>Flag to tell the program to flip the y-axis.  This is useful when the y-scale
   is in magnitudes (decreasing numbers mean increasing brightness).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minp">
   <dt><b>minp = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minp' Line='minp = 0' -->
   <dd>Minimum period to be searched.  This parameter, if set, tells the program
@@ -71,7 +71,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   program 'remembers' the last value used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxp">
   <dt><b>maxp = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxp' Line='maxp = 0' -->
   <dd>Maximum period to be searched.  This parameter, if set, tells the program
@@ -80,7 +80,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   point.  This parameter is remembered as minp is.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ntheta">
   <dt><b>ntheta = 200</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ntheta' Line='ntheta = 200' -->
   <dd>Resolution of the theta plot.  This parameter tells how many points in
@@ -88,14 +88,14 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   are spaced equidistant from one another in frequency space.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pluspoint">
   <dt><b>pluspoint = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pluspoint' Line='pluspoint = 50' -->
   <dd>Maximum number of data points for which to use plus symbols.  If there
   are more data points then points are plotted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_autoranges">
   <dt><b>autoranges = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autoranges' Line='autoranges = no' -->
   <dd>This flag, when set, instructs the program to look for gaps in
@@ -104,7 +104,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   helps remove side lobes from the spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsigma">
   <dt><b>nsigma = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 3' -->
   <dd>Number of standard deviations for autorange break.  If ranges are to 
@@ -116,15 +116,15 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   standard deviations is found, a new range is started.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>The source of graphics cursor input.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Pdm applies a phase dispersion minimization algorithm (R. F. Stellingwerf,
   <span style="font-family: monospace;">"Period Determination by Phase Dispersion Minimization"</span>, ApJ 224, 1978,
@@ -193,7 +193,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   <dd>Print out the menu.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_h">
   <dt><b>h -- graph data</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='h' Line='h -- graph data' -->
   <dd>Make a plot on the screen, using marks, of observation time vs observed
@@ -203,7 +203,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   the ranges.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_e">
   <dt><b>e -- toggle error bars on or off</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='e' Line='e -- toggle error bars on or off' -->
   <dd>When the phase plot is on the screen and error data has been supplied,
@@ -212,7 +212,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   including this error information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i">
   <dt><b>i,k -- graph frequency or period respectively versus theta</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='i' Line='i,k -- graph frequency or period respectively versus theta' -->
   <dd>Calculate the theta statistic in the period/frequency range specified
@@ -228,7 +228,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   the cursor x position at that minimum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p">
   <dt><b>p -- graph phase curve for period/frequency at cursor position</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='p' Line='p -- graph phase curve for period/frequency at cursor position' -->
   <dd>Calculate the phase curve for the period/frequency under the
@@ -240,14 +240,14 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   and the phases are plotted relative to this epoch.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_d">
   <dt><b>d,u -- delete/undelete respectively point nearest the cursor</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='d' Line='d,u -- delete/undelete respectively point nearest the cursor' -->
   <dd>Points deleted will have an x drawn through them.  The x will be
   erased when the point is undeleted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_f">
   <dt><b>f -- call ICFIT on displayed data</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='f' Line='f -- call ICFIT on displayed data' -->
   <dd>ICFIT is used for interactive curve fitting.
@@ -261,7 +261,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   back into PDM.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_j">
   <dt><b>j -- subtract fit from data, use residuals</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='j' Line='j -- subtract fit from data, use residuals' -->
   <dd>Just as it says. The original data is retained and can be reinstated
@@ -269,7 +269,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   The user cannot subtract a fit from the phase plot.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_s">
   <dt><b>s -- set sample range for calculations</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='s' Line='s -- set sample range for calculations' -->
   <dd>This command is used to set ranges of data to be used.  The cursor is
@@ -297,7 +297,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   to set the maximum period (frequency) to the current cursor position.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_g">
   <dt><b>g -- significance of theta at cursor x position</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='g' Line='g -- significance of theta at cursor x position' -->
   <dd>The statistical significance of the period/frequency under the
@@ -306,7 +306,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   This assumes that a theta plot is on the screen.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_a">
   <dt><b>a -- amplitude and epoch at cursor x position</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='a' Line='a -- amplitude and epoch at cursor x position' -->
   <dd>For the period/frequency under the cursor or of the plot, the amplitude
@@ -314,7 +314,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   This assumes that a theta plot is on the screen.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_m">
   <dt><b>m -- mark range and find minimum in this range</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='m' Line='m -- mark range and find minimum in this range' -->
   <dd>This command is used exactly like the s command but has a different
@@ -323,20 +323,20 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   in this range and its associated period/frequency is returned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_r">
   <dt><b>r -- replot</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='r' Line='r -- replot' -->
   <dd>Redraw the plot on the screen.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x">
   <dt><b>x -- remove a trend from the data by removing a bestfit line</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='x' Line='x -- remove a trend from the data by removing a bestfit line' -->
   <dd>This command calls the curfit package to fit a straight line to the
   data and then subtracts it point by point from the data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z">
   <dt><b>z -- flip the y-axis scale</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='z' Line='z -- flip the y-axis scale' -->
   <dd>This command toggles a y-axis flip for the plots.  This is useful when
@@ -344,7 +344,7 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   larger the intensity.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_q">
   <dt><b>q -- quit</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='q' Line='q -- quit' -->
   <dd>Exit PDM.
@@ -374,11 +374,10 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   file is specified, the output will go there.
   </dd>
   </dl>
-  <pre>
-  
-  :minp :maxp [period]		set min/max search period
-  :minf :maxf [frequency]		set min/max search frequency
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  :minp :maxp [period]            set min/max search period
+  :minf :maxf [frequency]         set min/max search frequency
+  </pre></div>
   <dl>
   <dt><b></b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='' Line=' ' -->
@@ -450,28 +449,28 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   <dd>Copy the original data vector into the working data vector.
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To find the main period in the data contained in the file 'vstar645',
   whose period is within the bounds (200., 800.) interactively
   the command might be:
   </p>
-  <p>
-  	cl&gt; pdm vstar645 minp=200. maxp=800.
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pdm vstar645 minp=200. maxp=800.
+  </pre></div>
   <p>
   2. To do the same thing in batch mode, allowing the program to guess the 
   period window, with no lightcurve analysis, and saving the metacode
   in vstar645.m, the command might be:
   </p>
-  <p>
-  	cl&gt; pdm vstar645 inter=no meta=<span style="font-family: monospace;">"vstar645.m"</span>
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pdm vstar645 inter=no meta="vstar645.m"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Pdm has some problems with data sets containing a small number (&lt;20)
   points.  Generally, it will do fairly well but the theta curve may look
@@ -482,14 +481,14 @@ pdm: Find periods in light curves by Phase Dispersion Minimization
   to the phase curve near the minimum and near the maximum and using points
   on these parabolas for the min and max points instead of actual data points.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   icfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

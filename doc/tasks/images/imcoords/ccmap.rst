@@ -7,15 +7,15 @@ ccmap: Compute image plate solutions using matched coordinate lists
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccmap input database
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The input text files containing the pixel and celestial coordinates of
@@ -27,13 +27,13 @@ ccmap: Compute image plate solutions using matched coordinate lists
   matching list of output <i>solutions</i> names or <i>results</i> files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>The text database file where the computed plate solutions are stored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_solutions">
   <dt><b>solutions = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions = ""' -->
   <dd>An optional list of plate solution names. If there are multiple input
@@ -45,7 +45,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   In the case of multiple coordinate files the first image or input is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_images">
   <dt><b>images = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images = ""' -->
   <dd>The images associated with the input coordinate files. The number of images
@@ -55,7 +55,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   and written to the image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_results">
   <dt><b>results = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='results' Line='results = ""' -->
   <dd>Optional output files containing a summary of the results including a
@@ -67,14 +67,14 @@ ccmap: Compute image plate solutions using matched coordinate lists
   specified then the input coordinates are combined to produce a single solution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcolumn">
   <dt><b>xcolumn = 1, ycolumn = 2, lngcolumn = 3, latcolumn = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2, lngcolumn = 3, latcolumn = 4' -->
   <dd>The input coordinate file columns containing the x, y, ra / longitude and
   dec / latitude values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmin">
   <dt><b>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>The range of x and y pixel coordinates over which the computed coordinate
@@ -85,7 +85,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   pixels values in <i>input</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngunits">
   <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the input ra / longitude and dec / latitude coordinates. The
@@ -97,7 +97,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   supergalactic systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_insystem">
   <dt><b>insystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem = "j2000"' -->
   <dd>The input celestial coordinate system. The <i>insystem</i> parameter
@@ -243,7 +243,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   not required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refpoint">
   <dt><b>refpoint = <span style="font-family: monospace;">"coords"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refpoint' Line='refpoint = "coords"' -->
   <dd>The definition of the sky projection reference point in celestial coordinates,
@@ -269,7 +269,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xref">
   <dt><b>xref = <span style="font-family: monospace;">"INDEF"</span>, yref = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = "INDEF", yref = "INDEF"' -->
   <dd>The reference pixel may be specified as a value or image header keyword.
@@ -278,7 +278,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   reference coordinate at that point.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngref">
   <dt><b>lngref = <span style="font-family: monospace;">"INDEF"</span>, latref = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = "INDEF", latref = "INDEF"' -->
   <dd>The ra / longitude and dec / latitude of the reference point(s).  Lngref
@@ -290,7 +290,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refsystem">
   <dt><b>refsystem = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refsystem' Line='refsystem = "INDEF"' -->
   <dd>The celestial coordinate system of the reference point. Refsystem may
@@ -302,7 +302,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   celestial coordinate system of the input coordinates <i>insystem</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngrefunits">
   <dt><b>lngrefunits = <span style="font-family: monospace;">""</span>, latrefunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngrefunits' Line='lngrefunits = "", latrefunits = ""' -->
   <dd>The units of the reference point celestial  coordinates. The options
@@ -312,7 +312,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   input coordinate system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_projection">
   <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in astronomy
@@ -322,7 +322,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   tangent plate projection and polynomials, is also available.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitgeometry">
   <dt><b>fitgeometry = <span style="font-family: monospace;">"general"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"' -->
   <dd>The plate solution geometry to be used. The options are the following, where
@@ -378,7 +378,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   and <i>yxterms</i> parameters set by the user.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"polynomial"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"' -->
   <dd>The type of analytic coordinate surface to be fit. The options are the
@@ -403,7 +403,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xxorder">
   <dt><b>xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xxorder' Line='xxorder = 2, xyorder = 2,  yxorder = 2, yyorder = 2' -->
   <dd>The order of the polynomials in x and y for the xi and eta fits respectively.
@@ -417,7 +417,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   residuals from the linear portion of the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xxterms">
   <dt><b>xxterms = <span style="font-family: monospace;">"half"</span>, yxterms = <span style="font-family: monospace;">"half"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"' -->
   <dd>The options are:
@@ -453,19 +453,19 @@ ccmap: Compute image plate solutions using matched coordinate lists
   residuals from the linear portion of the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxiter">
   <dt><b>maxiter = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 0' -->
   <dd>The maximum number of rejection iterations. The default is no rejection.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reject">
   <dt><b>reject = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = INDEF' -->
   <dd>The rejection limit in units of sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = no' -->
   <dd>Update the world coordinate system in the input image headers ?
@@ -480,7 +480,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   image wcs represented by the above keywords is overwritten during the update.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixsystem">
   <dt><b>pixsystem = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixsystem' Line='pixsystem = "logical"' -->
   <dd>The input pixel coordinate system. The options are:
@@ -504,13 +504,13 @@ ccmap: Compute image plate solutions using matched coordinate lists
   determine how the image header wcs is updated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print detailed messages about the progress of the task on the standard output ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Compute the plate solution interactively ?
@@ -518,21 +518,21 @@ ccmap: Compute image plate solutions using matched coordinate lists
   change the order of the fit, reject points, display the data and refit, etc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The graphics cursor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   CCMAP computes the plate solution for an image or set of images using lists
   of matched pixel and celestial coordinates. The celestial coordinates
@@ -568,10 +568,10 @@ ccmap: Compute image plate solutions using matched coordinate lists
   are the pixel coordinates of points in the input image and xi and eta are the
   corresponding standard coordinates in units of arcsec / pixel.
   </p>
-  <pre>
-       xi = f (x, y)
-      eta = g (x, y)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = f (x, y)
+  eta = g (x, y)
+  </pre></div>
   <p>
   The standard coordinates xi and eta are computed from the input celestial
   coordinates using the sky projection geometry <i>projection</i> and
@@ -641,7 +641,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   <span style="font-family: monospace;">"half"</span>, and <span style="font-family: monospace;">"full"</span> are illustrated below for a quadratic polynomial in
   x and y.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   xxterms = "none", xyterms = "none"
   xxorder = 3, xyorder = 3, yxorder = 3, yyorder = 3
   
@@ -667,7 +667,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
      eta = a11' + a21' * x + a31' * x ** 2 +
            a12' * y + a22' * x * y +  a32' * x ** 2 * y +
            a13' * y ** 2 + a23' * x *  y ** 2 + a33' * x ** 2 * y ** 2
-  </pre>
+  </pre></div>
   <p>
   If <i>refpoint</i> is <span style="font-family: monospace;">"coords"</span>, then the sky projection reference point is set
   to the mean of the input celestial coordinates. For images where the true
@@ -720,8 +720,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   data and fit graphically until a satisfactory fit has been achieved. The
   keystroke commands are listed below.
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   ?       Print options
   f       Fit data and graph fit with the current graph type (g,x,r,y,s)
   g       Graph the data and the current fit
@@ -733,14 +732,14 @@ ccmap: Compute image plate solutions using matched coordinate lists
   t       Plot a line of constant x and y through nearest data point
   l       Print xishift, etashift, xscale, yscale, xrotate, yrotate
   q       Exit the interactive fitting code
-  </pre>
+  </pre></div>
   <p>
   The parameters listed below can be changed interactively with simple colon
   commands. Typing the parameter name along will list the current value.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   :show                List parameters
-  :projection          Sky projection 
+  :projection          Sky projection
   :refpoint            Sky projection reference point
   :fit      [value]    Fit type (shift,xyscale,rotate,rscale,rxyscale,general)
   :function [value]    Fitting function (chebyshev,legendre,polynomial)
@@ -752,7 +751,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   :yxterms  [n/h/f]    The eta fit cross terms type
   :maxiter  [value]    Maximum number of rejection iterations
   :reject   [value]    K-sigma rejection threshold
-  </pre>
+  </pre></div>
   <p>
   The final fit is stored in the text database file <i>database</i> file in a
   format suitable for use by the CCSETWCS and CCTRAN tasks. Each fit is
@@ -812,36 +811,36 @@ ccmap: Compute image plate solutions using matched coordinate lists
   coefficients for the linear term can be given a simple geometrical 
   interpretation for all the fitting geometries as shown below.
   </p>
-  <pre>
-  	fitting geometry = general (linear term)
-  	     xi = a + b * x + c * y
-  	    eta = d + e * x + f * y
+  <div class="highlight-default-notranslate"><pre>
+  fitting geometry = general (linear term)
+       xi = a + b * x + c * y
+      eta = d + e * x + f * y
   
-  	fitting geometry = shift
-  	     xi = a + x
-  	    eta = d + y
+  fitting geometry = shift
+       xi = a + x
+      eta = d + y
   
-  	fitting geometry = xyscale
-  	     xi = a + b * x
-  	    eta = d + f * y
+  fitting geometry = xyscale
+       xi = a + b * x
+      eta = d + f * y
   
-  	fitting geometry = rotate
-  	     xi = a + b * x + c * y
-  	    eta = d + e * x + f * y
-  	    b * f - c * e = +/-1
-  	    b = f, c = -e or b = -f, c = e
+  fitting geometry = rotate
+       xi = a + b * x + c * y
+      eta = d + e * x + f * y
+      b * f - c * e = +/-1
+      b = f, c = -e or b = -f, c = e
   
-  	fitting geometry = rscale
-  	     xi = a + b * x + c * y
-  	    eta = d + e * x + f * y
-  	    b * f - c * e = +/- const
-  	    b = f, c = -e or b = -f, c = e
+  fitting geometry = rscale
+       xi = a + b * x + c * y
+      eta = d + e * x + f * y
+      b * f - c * e = +/- const
+      b = f, c = -e or b = -f, c = e
   
-  	fitting geometry = rxyscale
-  	     xi = a + b * x + c * y
-  	    eta = d + e * x + f * y
-  	    b * f - c * e = +/- const
-  </pre>
+  fitting geometry = rxyscale
+       xi = a + b * x + c * y
+      eta = d + e * x + f * y
+      b * f - c * e = +/- const
+  </pre></div>
   <p>
   The coefficients can be interpreted as follows. X0, y0, xi0, eta0
   are the origins in the reference and input frames respectively. By definition
@@ -850,60 +849,60 @@ ccmap: Compute image plate solutions using matched coordinate lists
   Xmag and ymag are the scaling factors in x and y in arcsec / pixel and are assumed
   to be positive by definition.
   </p>
-  <pre>
-  	general (linear term)
-  	    xrotation = rotation - skew / 2
-  	    yrotation = rotation + skew / 2
-  	    b = xmag * cos (xrotation)
-  	    c = ymag * sin (yrotation)
-  	    e = -xmag * sin (xrotation)
-  	    f = ymag * cos (yrotation)
-  	    a = xi0 - b * x0 - c * y0 = xshift
-  	    d = eta0 - e * x0 - f * y0 = yshift
+  <div class="highlight-default-notranslate"><pre>
+  general (linear term)
+      xrotation = rotation - skew / 2
+      yrotation = rotation + skew / 2
+      b = xmag * cos (xrotation)
+      c = ymag * sin (yrotation)
+      e = -xmag * sin (xrotation)
+      f = ymag * cos (yrotation)
+      a = xi0 - b * x0 - c * y0 = xshift
+      d = eta0 - e * x0 - f * y0 = yshift
   
-  	shift
-  	    xrotation = 0.0,  yrotation = 0.0
-  	    xmag = ymag = 1.0
-  	    b = 1.0
-  	    c = 0.0
-  	    e = 0.0
-  	    f = 1.0
-  	    a = xi0 - x0 = xshift
-  	    d = eta0 - y0 = yshift
+  shift
+      xrotation = 0.0,  yrotation = 0.0
+      xmag = ymag = 1.0
+      b = 1.0
+      c = 0.0
+      e = 0.0
+      f = 1.0
+      a = xi0 - x0 = xshift
+      d = eta0 - y0 = yshift
   
-  	xyscale
-  	    xrotation 0.0 / 180.0 yrotation = 0.0
-  	    b = + /- xmag
-  	    c = 0.0
-  	    e = 0.0
-  	    f = ymag
-  	    a = xi0 - b * x0 = xshift
-  	    d = eta0 - f * y0 = yshift
+  xyscale
+      xrotation 0.0 / 180.0 yrotation = 0.0
+      b = + /- xmag
+      c = 0.0
+      e = 0.0
+      f = ymag
+      a = xi0 - b * x0 = xshift
+      d = eta0 - f * y0 = yshift
   
-  	rscale
-  	    xrotation = rotation + 0 / 180, yrotation = rotation
-  	    mag = xmag = ymag
-  	    const = mag * mag
-  	    b = mag * cos (xrotation)
-  	    c = mag * sin (yrotation)
-  	    e = -mag * sin (xrotation)
-  	    f = mag * cos (yrotation)
-  	    a = xi0 - b * x0 - c * y0 = xshift
-  	    d = eta0 - e * x0 - f * y0 = yshift
+  rscale
+      xrotation = rotation + 0 / 180, yrotation = rotation
+      mag = xmag = ymag
+      const = mag * mag
+      b = mag * cos (xrotation)
+      c = mag * sin (yrotation)
+      e = -mag * sin (xrotation)
+      f = mag * cos (yrotation)
+      a = xi0 - b * x0 - c * y0 = xshift
+      d = eta0 - e * x0 - f * y0 = yshift
   
-  	rxyscale
-  	    xrotation = rotation + 0 / 180, yrotation = rotation
-  	    const = xmag * ymag
-  	    b = xmag * cos (xrotation)
-  	    c = ymag * sin (yrotation)
-  	    e = -xmag * sin (xrotation)
-  	    f = ymag * cos (yrotation)
-  	    a = xi0 - b * x0 - c * y0 = xshift
-  	    d = eta0 - e * x0 - f * y0 = yshift
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  rxyscale
+      xrotation = rotation + 0 / 180, yrotation = rotation
+      const = xmag * ymag
+      b = xmag * cos (xrotation)
+      c = ymag * sin (yrotation)
+      e = -xmag * sin (xrotation)
+      f = ymag * cos (yrotation)
+      a = xi0 - b * x0 - c * y0 = xshift
+      d = eta0 - e * x0 - f * y0 = yshift
+  </pre></div>
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
@@ -932,15 +931,15 @@ ccmap: Compute image plate solutions using matched coordinate lists
   paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the plate scale for the test image dev$pix given the following
   coordinate list. Set the tangent point to the mean of the input celestial
   coordinates. Compute the plate scale interactively.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type coords
   
   13:29:47.297  47:13:37.52  327.50  410.38
@@ -951,7 +950,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   
   cl&gt; imcopy dev$pix pix
   
-  cl&gt; hedit pix epoch 1987.26 
+  cl&gt; hedit pix epoch 1987.26
   
   cl&gt; ccmap coords coords.db image=pix xcol=3 ycol=4 lngcol=1 latcol=2
   
@@ -964,15 +963,15 @@ ccmap: Compute image plate solutions using matched coordinate lists
       ... type g to return to the default plot
       ... type l to see the computed x and y scales in arcsec / pixel
       ... type q to quit and save fit
-  </pre>
+  </pre></div>
   <p>
   2. Repeat example 2 but compute the fit non-interactively and list the
   fitted values of the ra and dec and their residuals on the standard
   output.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4 \<br>
-  lngcol=1 latcol=2 inter- 
+  lngcol=1 latcol=2 inter-
   
   # Coords File: coords  Image: pix
   #     Database: coords.db  Record: pix
@@ -991,24 +990,24 @@ ccmap: Compute image plate solutions using matched coordinate lists
   #     X and Y axis rotation: 179.110  358.958  (degrees  degrees)
   # Wcs mapping status
   #     Ra/Dec or Long/Lat wcs rms: 0.229  0.241   (arcsec  arcsec)
-  # 
+  #
   #                     Input Coordinate Listing
   # X      Y       Ra          Dec        Ra(fit)      Dec(fit)    Dra    Ddec
-  # 
+  #
   327.5  410.4  13:29:47.30  47:13:37.5  13:29:47.28  47:13:37.9  0.128 -0.370
   465.5   62.1  13:29:37.41  47:09:09.2  13:29:37.42  47:09:09.2 -0.191 -0.062
   442.0  409.6  13:29:38.70  47:13:36.2  13:29:38.70  47:13:35.9  0.040  0.282
   224.3  131.2  13:29:55.42  47:10:05.2  13:29:55.40  47:10:05.1  0.289  0.059
   134.4  356.3  13:30:01.82  47:12:58.8  13:30:01.84  47:12:58.7 -0.267  0.091
-  </pre>
+  </pre></div>
   <p>
   3. Repeat the previous example but in this case input the position of the
   tangent point in fk4 1950.0 coordinates.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4 lngcol=1 \<br>
   latcol=2 refpoint=user lngref=13:27:46.9 latref=47:27:16 refsystem=b1950.0 \<br>
-  inter- 
+  inter-
   
   # Coords File: coords  Image: pix
   #     Database: coords.db  Record: pix
@@ -1036,7 +1035,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   442.0  409.6  13:29:38.70  47:13:36.2  13:29:38.70  47:13:35.9  0.040  0.282
   224.3  131.2  13:29:55.42  47:10:05.2  13:29:55.40  47:10:05.1  0.289  0.059
   134.4  356.3  13:30:01.82  47:12:58.8  13:30:01.84  47:12:58.7 -0.267  0.091
-  </pre>
+  </pre></div>
   <p>
   Note the computed image scales are identical in examples 2 and 3 but that
   the assumed position of the tangent point is different (the second estimate
@@ -1047,8 +1046,8 @@ ccmap: Compute image plate solutions using matched coordinate lists
   4. Repeat the previous example but in this case extract the position of the
   tangent point in from the image header keywords RA, DEC, and EPOCH. 
   </p>
-  <pre>
-  cl&gt; imheader pix l+ 
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imheader pix l+
   
   DATE-OBS= '05/04/87'            /  DATE DD/MM/YY
   RA      = '13:29:24.00'         /  RIGHT ASCENSION
@@ -1076,7 +1075,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   #     X and Y axis rotation: 179.135  358.983  (degrees  degrees)
   # Wcs mapping status
   #     Ra/Dec or Long/Lat wcs rms: 0.229  0.241   (arcsec  arcsec)
-  # 
+  #
   #                     Input Coordinate Listing
   #  X      Y       Ra         Dec        Ra(fit)      Dec(fit)    Dra    Ddec
   
@@ -1085,8 +1084,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   442.0  409.6  13:29:38.70  47:13:36.2  13:29:38.70  47:13:35.9  0.040  0.282
   224.3  131.2  13:29:55.42  47:10:05.2  13:29:55.40  47:10:05.1  0.289  0.059
   134.4  356.3  13:30:01.82  47:12:58.8  13:30:01.84  47:12:58.7 -0.267  0.091
-  
-  </pre>
+  </pre></div>
   <p>
   Note that the position of the tangent point is slightly different again but
   that this does not have much affect on the fitted coordinates for this image.
@@ -1096,8 +1094,8 @@ ccmap: Compute image plate solutions using matched coordinate lists
   system in the image header and check the header update with the imheader and
   skyctran tasks.
   </p>
-  <pre>
-  cl&gt; imheader pix l+ 
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imheader pix l+
   DATE-OBS= '05/04/87'            /  DATE DD/MM/YY
   RA      = '13:29:24.00'         /  RIGHT ASCENSION
   DEC     = '47:15:34.00'         /  DECLINATION
@@ -1126,8 +1124,8 @@ ccmap: Compute image plate solutions using matched coordinate lists
   # Wcs mapping status
   #     Ra/Dec or Long/Lat wcs rms: 0.229  0.241   (arcsec  arcsec)
   # Updating image header wcs
-  # 
-  # 
+  #
+  #
   #                     Input Coordinate Listing
   #  X      Y       Ra          Dec        Ra(fit)     Dec(fit)    Dra    Ddec
   
@@ -1137,7 +1135,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   224.3  131.2  13:29:55.42  47:10:05.2  13:29:55.40  47:10:05.1  0.289  0.059
   134.4  356.3  13:30:01.82  47:12:58.8  13:30:01.84  47:12:58.7 -0.267  0.091
   
-  cl&gt; imheader pix l+ 
+  cl&gt; imheader pix l+
   DATE-OBS= '05/04/87'            /  DATE DD/MM/YY
   RA      = '13:29:24.00'         /  RIGHT ASCENSION
   DEC     = '47:15:34.00'         /  DECLINATION
@@ -1178,8 +1176,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   13:29:38.700  47:13:36.23 13:29:38.696 47:13:35.95
   13:29:55.424  47:10:05.15 13:29:55.396 47:10:05.09
   13:30:01.816  47:12:58.79 13:30:01.842 47:12:58.70
-  
-  </pre>
+  </pre></div>
   <p>
   Note that two versions of the rms values are printed, one for the fit
   and one for the wcs fit. For the default fitting parameters these
@@ -1188,17 +1185,17 @@ ccmap: Compute image plate solutions using matched coordinate lists
   than the than the full plate solution, because only the linear component
   of the plate solution is preserved in the wcs.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   cctran,ccsetwcs,skyctran,imctran,finder.tfinder,finder.tastrom
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

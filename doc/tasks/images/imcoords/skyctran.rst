@@ -7,15 +7,15 @@ skyctran: Transform coordinates from one celestial wcs to another
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   skyctran input output insystem outsystem
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The source of the input coordinates. The options are:
@@ -49,7 +49,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The list of output coordinate files. The number of output files must be
@@ -57,7 +57,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   terminal by setting output to <span style="font-family: monospace;">"STDOUT"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_insystem">
   <dt><b>insystem, outsystem</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='insystem' Line='insystem, outsystem' -->
   <dd>The input and output celestial coordinate systems. The options are
@@ -207,7 +207,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   equatorial fk4, noefk4, fk5, or icrs systems and proper motions are defined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_transform">
   <dt><b>transform = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transform' Line='transform = no' -->
   <dd>If transform = no the computed output coordinates are appended to the
@@ -218,7 +218,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   is from the unredirected standard input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngcolumn">
   <dt><b>lngcolumn = 1, latcolumn = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 1, latcolumn = 2' -->
   <dd>The columns in the input file containing the x/ra/longitude and
@@ -226,7 +226,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   2 if the input is from the unredirected standard input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plngcolumn">
   <dt><b>plngcolumn = INDEF, platcolumn = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plngcolumn' Line='plngcolumn = INDEF, platcolumn = INDEF' -->
   <dd>The columns in the input file containing the ra and dec proper motions
@@ -237,7 +237,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   the unredirected standard input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pxcolumn">
   <dt><b>pxcolumn = INDEF, rvcolumn = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pxcolumn' Line='pxcolumn = INDEF, rvcolumn = INDEF' -->
   <dd>The columns in the input file containing the parallax and radial velocity in
@@ -248,7 +248,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   unredirected standard input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ilngmin">
   <dt><b>ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ilngmin' Line='ilngmin = INDEF, ilngmax = INDEF, ilatmin = INDEF, ilatmax = INDEF ' -->
   <dd>The lower and upper limits of the coordinate grid if <i>input</i> =
@@ -260,13 +260,13 @@ skyctran: Transform coordinates from one celestial wcs to another
   for units of INDEF, pixels, degrees, degrees, and radians respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nilng">
   <dt><b>nilng = 10, nilat = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nilng' Line='nilng = 10, nilat = 10' -->
   <dd>The size of the computed coordinate grid if <i>input</i> = <span style="font-family: monospace;">"grid"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ilngunits">
   <dt><b>ilngunits = <span style="font-family: monospace;">""</span>, ilatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ilngunits' Line='ilngunits = "", ilatunits = ""' -->
   <dd>The units of the input ra/longitude and dec/latitude coordinates.
@@ -297,7 +297,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   degrees for the remaining sky coordinate systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ilngformat">
   <dt><b>ilngformat = <span style="font-family: monospace;">""</span>, ilatformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ilngformat' Line='ilngformat = "", ilatformat = ""' -->
   <dd>The output format of the input x/ra/longitude and y/dec/latitude coordinates
@@ -312,7 +312,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   formats.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_olngunits">
   <dt><b>olngunits = <span style="font-family: monospace;">""</span>, olatunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='olngunits' Line='olngunits = "", olatunits = ""' -->
   <dd>The units of the output ra/longitude and dec/latitude coordinates.
@@ -343,7 +343,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   degrees for the remaining sky coordinate systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_olngformat">
   <dt><b>olngformat = <span style="font-family: monospace;">""</span>, olatformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='olngformat' Line='olngformat = "", olatformat = ""' -->
   <dd>The format of the computed x/ra/longitude and y/dec/latitude coordinates.
@@ -355,21 +355,21 @@ skyctran: Transform coordinates from one celestial wcs to another
   <span style="font-family: monospace;">"degrees"</span>, and <span style="font-family: monospace;">"radians"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The default image display cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about actions taken by the task on the standard output?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   SKYCTRAN converts coordinates in the input files
   <i>input</i> from the input celestial coordinate system <i>insystem</i>
@@ -567,43 +567,42 @@ skyctran: Transform coordinates from one celestial wcs to another
   of %12.3h, %12.2h, and %g are assumed for output units of <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>,
   and <span style="font-family: monospace;">"radians"</span> respectively.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_user_commands">
   <h3>User commands</h3>
-  <!-- BeginSection: 'USER COMMANDS' -->
   <p>
   If the input file is STDIN the user can type in the input data by hand and
   set the input and output coordinate systems, the input and output coordinate
   units, and the output coordinate format interactively. The available commands
   are listed below.
   </p>
-  <pre>
-  	INTERACTIVE KEYSTROKE COMMANDS
+  <div class="highlight-default-notranslate"><pre>
+          INTERACTIVE KEYSTROKE COMMANDS
   
   The following commands must be followed by a carriage return.
   
-  ?	Print help
-  :	Execute colon command
-  data	Measure object
-  q	Exit task
+  ?       Print help
+  :       Execute colon command
+  data    Measure object
+  q       Exit task
   
-  
-  	VALID DATA STRING
+          VALID DATA STRING
   
   x/ra/long y/dec/lat [pmra pmdec [parallax radial velocity]]
   
   
-  	COLON COMMANDS
+          COLON COMMANDS
   
   The following commands must be followed by a carriage return.
   
-  :show				Show the input and output coordinate systems
-  :isystem	[string]	Show / set the input coordinate system
-  :osystem	[string]	Show / set the output coordinate system
-  :iunits		[string string]	Show / set the input coordinate units
-  :ounits		[string string]	Show / set the output coordinate units
-  :oformat	[string string]	Show / set the output coordinate format
+  :show                           Show the input and output coordinate systems
+  :isystem        [string]        Show / set the input coordinate system
+  :osystem        [string]        Show / set the output coordinate system
+  :iunits         [string string] Show / set the input coordinate units
+  :ounits         [string string] Show / set the output coordinate units
+  :oformat        [string string] Show / set the output coordinate format
   
-  	VALID INPUT AND OUTPUT COORDINATE SYSTEMS
+          VALID INPUT AND OUTPUT COORDINATE SYSTEMS
   
   image [logical/tv/physical/world]
   equinox [epoch]
@@ -616,43 +615,42 @@ skyctran: Transform coordinates from one celestial wcs to another
   galactic [epoch]
   supergalactic [epoch]
   
-  	VALID INPUT AND OUTPUT CELESTIAL COORDINATE UNITS
-  	          AND THEIR DEFAULT FORMATS
+          VALID INPUT AND OUTPUT CELESTIAL COORDINATE UNITS
+                    AND THEIR DEFAULT FORMATS
   
-  hours		%12.3h
-  degrees		%12.2h
-  radians		%13.7h
-  </pre>
-  <!-- EndSection:   'USER COMMANDS' -->
+  hours           %12.3h
+  degrees         %12.2h
+  radians         %13.7h
+  </pre></div>
+  </section>
+  <section id="s_image_cursor_commands">
   <h3>Image cursor commands</h3>
-  <!-- BeginSection: 'IMAGE CURSOR COMMANDS' -->
   <p>
   In interactive image cursor mode the user can set the input and output
   coordinate systems, the output coordinate units, and the output coordinate
   formats. The available commands are listed below.
   </p>
-  <pre>
-  	INTERACTIVE KEYSTROKE COMMANDS
+  <div class="highlight-default-notranslate"><pre>
+          INTERACTIVE KEYSTROKE COMMANDS
   
-  ?	Print help
-  :	Execute colon command
-  spbar	Measure object
-  q	Exit task
+  ?       Print help
+  :       Execute colon command
+  spbar   Measure object
+  q       Exit task
   
+          COLON COMMANDS
   
-  	COLON COMMANDS
+  :show                           Show the input and output coordinate systems
+  :isystem        [string]        Show / set the input coordinate system
+  :osystem        [string]        Show / set the output coordinate system
+  :ounits         [string string] Show / set the output coordinate units
+  :oformat        [string string] Show / set the output coordinate format
   
-  :show				Show the input and output coordinate systems
-  :isystem	[string]	Show / set the input coordinate system
-  :osystem	[string]	Show / set the output coordinate system
-  :ounits		[string string]	Show / set the output coordinate units
-  :oformat	[string string]	Show / set the output coordinate format
-  
-  	VALID INPUT COORDINATE SYSTEMS
+          VALID INPUT COORDINATE SYSTEMS
   
   image [tv]
   
-  	VALID OUTPUT COORDINATE SYSTEMS
+          VALID OUTPUT COORDINATE SYSTEMS
   
   image [logical/tv/physical/world]
   equinox [epoch]
@@ -665,15 +663,15 @@ skyctran: Transform coordinates from one celestial wcs to another
   galactic [epoch]
   supergalactic [epoch]
   
-  	VALID OUTPUT COORDINATE UNITS AND THEIR DEFAULT FORMATS
+          VALID OUTPUT COORDINATE UNITS AND THEIR DEFAULT FORMATS
   
-  hours		%12.3h
-  degrees		%12.2h
-  radians		%13.7g
-  </pre>
-  <!-- EndSection:   'IMAGE CURSOR COMMANDS' -->
+  hours           %12.3h
+  degrees         %12.2h
+  radians         %13.7g
+  </pre></div>
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -682,7 +680,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   codes C are as follows:
    
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -699,17 +697,16 @@ skyctran: Transform coordinates from one celestial wcs to another
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-   
   
   Conventions for w (field width) specification:
-   
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
   
   Escape sequences (e.g. "\n" for newline):
-   
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -719,15 +716,15 @@ skyctran: Transform coordinates from one celestial wcs to another
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-   
+  
   Examples
-   
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-   
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -740,7 +737,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-   
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
@@ -748,10 +745,10 @@ skyctran: Transform coordinates from one celestial wcs to another
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
@@ -780,63 +777,59 @@ skyctran: Transform coordinates from one celestial wcs to another
   paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Precess the fk4 coordinates typed in by the user to the fk5 system with
   and without the proper motion values.
   </p>
-  <pre>
-  	cl&gt; skyctran STDIN STDOUT fk4 fk5
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran STDIN STDOUT fk4 fk5
   
-  	# Insystem: fk4  Coordinates: equatorial FK4
-  	#     Equinox: B1950.000 Epoch: B1950.00000000 MJD: 33281.92346
-  	# Outsystem: fk5  Coordinates: equatorial FK5
-  	#     Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
+  # Insystem: fk4  Coordinates: equatorial FK4
+  #     Equinox: B1950.000 Epoch: B1950.00000000 MJD: 33281.92346
+  # Outsystem: fk5  Coordinates: equatorial FK5
+  #     Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
   
-  	# Input file: STDIN  Output file: STDOUT
+  # Input file: STDIN  Output file: STDOUT
   
-  	... not including proper motion
-  	13:28:43.2 27:18:01.1
-  	13:28:43.2 27:18:01.1 13:31:03.855  27:02:35.13
+  13:28:43.2 27:18:01.1
+  13:28:43.2 27:18:01.1 13:31:03.855  27:02:35.13
   
-  	... including proper motion
-  	13:28:43.2 27:18:01.1 .36 -0.16
-  	13:28:43.2 27:18:01.1 .36 -0.16 13:31:05.215  27:02:27.37
+  13:28:43.2 27:18:01.1 .36 -0.16
+  13:28:43.2 27:18:01.1 .36 -0.16 13:31:05.215  27:02:27.37
   
-  	... change the output coordinate system to fk5 1975.0 and repeat
-  	:os fk5 1975.0
-  	:os
+  :os fk5 1975.0
+  :os
   
-  	# Outsystem:  fk5 1975.0  Coordinates: equatorial FK5
-  	#     Equinox: J1975.000 Epoch: J1975.00000000 MJD: 42413.25000
+  # Outsystem:  fk5 1975.0  Coordinates: equatorial FK5
+  #     Equinox: J1975.000 Epoch: J1975.00000000 MJD: 42413.25000
   
-  	13:28:43.2 27:18:01.1
-  	13:28:43.2 27:18:01.1 13:29:53.564  27:10:17.69
+  13:28:43.2 27:18:01.1
+  13:28:43.2 27:18:01.1 13:29:53.564  27:10:17.69
   
-  	13:28:43.2 27:18:01.1 .36 -0.16
-  	13:28:43.2 27:18:01.1 .36 -0.16 13:29:54.244  27:10:13.80
+  13:28:43.2 27:18:01.1 .36 -0.16
+  13:28:43.2 27:18:01.1 .36 -0.16 13:29:54.244  27:10:13.80
   
-  	... type EOF to quit
-  	&lt;EOF&gt;
-  </pre>
+  &lt;EOF&gt;
+  </pre></div>
   <p>
   2. Precess a list of RAS in hours and DECS in degrees in the FK5 system
   equinox 1980.0 to equinox 2000.0 and write both the input coordinates and
   the output coordinates in hours and degrees to the output file. 
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist j1980.0 j2000.0 
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist j1980.0 j2000.0
   
-  		... or equivalently ...
+          ... or equivalently ...
   
-  	cl&gt; skyctran inlist outlist j1980.0 2000.0
+  cl&gt; skyctran inlist outlist j1980.0 2000.0
   
-  		... or equivalently ...
+          ... or equivalently ...
   
-  	cl&gt; skyctran inlist outlist "fk5 1980.0" fk5
-  </pre>
+  cl&gt; skyctran inlist outlist "fk5 1980.0" fk5
+  </pre></div>
   <p>
   Note that if the coordinate system, e.g. fk5, is not specified explicitly
   then equinoxes &lt; 1984 must be prefixed by J, or a Besselian rather than
@@ -846,9 +839,9 @@ skyctran: Transform coordinates from one celestial wcs to another
   3. Repeat the previous example but replace the input coordinates with
   the precessed coordinates in the output file.
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist j1980.0 j2000.0 transform+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist j1980.0 j2000.0 transform+
+  </pre></div>
   <p>
   4. Precess a list of RAS in hours and DECS in degrees in the FK4 system
   equinox 1950.0 to equinox 1975.0 and write both the input coordinates and
@@ -856,21 +849,21 @@ skyctran: Transform coordinates from one celestial wcs to another
   and output epochs of observation default to the respective equinox
   values.
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist 1950.0 1975.0 
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist 1950.0 1975.0
   
-  		... or equivalently ...
+          ... or equivalently ...
   
-  	cl&gt; skyctran inlist outlist b1950.0 b1975.0 
+  cl&gt; skyctran inlist outlist b1950.0 b1975.0
   
-  		... or equivalently ...
+          ... or equivalently ...
   
-  	cl&gt; skyctran inlist outlist fk4 b1975.0 
+  cl&gt; skyctran inlist outlist fk4 b1975.0
   
-  		... or equivalently ...
+          ... or equivalently ...
   
-  	cl&gt; skyctran inlist outlist fk4 "fk4 1975.0" 
-  </pre>
+  cl&gt; skyctran inlist outlist fk4 "fk4 1975.0"
+  </pre></div>
   <p>
   5. Convert a list of RAS in hours and DECS in degrees in the FK4 system
   equinox 1950.0 to RAS in hours and DECS in degrees in the FK5 system
@@ -878,39 +871,39 @@ skyctran: Transform coordinates from one celestial wcs to another
   output coordinates in the output file. The Besselian epoch of the
   observation is 1987.25.
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0 \<br>
-  	    transform+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0 \<br>
+      transform+
+  </pre></div>
   <p>
   6. Convert a list of RAS in hours and DECS in degrees to RAS in degrees
   and DECS in degrees, and replace the input coordinates with the output
   coordinates in the output file. As the input and output coordinate systems
   and equinoxes are the same no precession is performed.
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist 2000.0 2000.0 olngunits=degrees \<br>
-  	    transform+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist 2000.0 2000.0 olngunits=degrees \<br>
+      transform+
+  </pre></div>
   <p>
   7. Convert a list of RAS in hours and DECS in degrees in the FK4
   system, equinox 1950.0, epoch of observation 1987.24, to galactic
   coordinates, and write both the input and output coordinate to the
   output file.
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist "b1950.0 1987.25" galactic
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist "b1950.0 1987.25" galactic
+  </pre></div>
   <p>
   8. Convert a list of RAS in hours and DECS in degrees in the FK5
   system, equinox 2000.0, to ecliptic coordinates on Julian date
   2449879.5, replacing the input coordinates with the converted
   coordinates in the output file.
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist j2000 "ecliptic 2449879.5" \<br>
-  	    transform+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist j2000 "ecliptic 2449879.5" \<br>
+      transform+
+  </pre></div>
   <p>
   9. Display an image and use the cursor and image header coordinate
   system, equatorial FK4, equinox 1950.0, epoch 1987.25  to print the pixel
@@ -918,23 +911,23 @@ skyctran: Transform coordinates from one celestial wcs to another
   Note that the test image dev$wpix has an incorrect value of EPOCH (0.0) that
   would have confused skyctran and need to be changed.
   </p>
-  <pre>
-  	cl&gt; imcopy dev$wpix wpix
-  	cl&gt; hedit wpix epoch 1950.0
-  	cl&gt; display wpix 1 fi+
-  	cl&gt; skyctran imcursor STDOUT wpix galactic
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy dev$wpix wpix
+  cl&gt; hedit wpix epoch 1950.0
+  cl&gt; display wpix 1 fi+
+  cl&gt; skyctran imcursor STDOUT wpix galactic
+  </pre></div>
   <p>
   10. Convert a list of RAS in hours and DECS in degrees measured in the
   image created in example 9 to the FK5 equinox 2000.0 coordinate system.
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist "wpix world" j2000.0
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist "wpix world" j2000.0
   
-  		   ... or equivalently ...
+             ... or equivalently ...
   
-  	cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0
-  </pre>
+  cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0
+  </pre></div>
   <p>
   11. Using an image whose header coordinate system is equatorial FK5
   equinox 2000.0 and a different image of the same region whose coordinate
@@ -946,47 +939,47 @@ skyctran: Transform coordinates from one celestial wcs to another
   however on two images which have equatorial coordinates systems
   which are precessed with respect to each other.
   </p>
-  <pre>
-  	cl&gt; display image1
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; display image1
   
-  	    ... this is the reference image
+      ... this is the reference image
   
-  	cl&gt; skyctran imcursor outlist image1 "image2 logical"
+  cl&gt; skyctran imcursor outlist image1 "image2 logical"
   
-  	    ... mark many widely scattered points on the displayed
-  		image image1 terminating the input list with 
-  		&lt;EOF&gt; which is usually &lt;ctrl/z&gt; or &lt;ctrl/d&gt;
-  </pre>
+      ... mark many widely scattered points on the displayed
+          image image1 terminating the input list with
+          &lt;EOF&gt; which is usually &lt;ctrl/z&gt; or &lt;ctrl/d&gt;
+  </pre></div>
   <p>
   12. Repeat example 11 but use a previously prepared list of image1
   logical pixel coordinates as input to the task.
   </p>
-  <pre>
-  	cl&gt; skyctran inlist outlist "image1 logical"\<br>
-  	    "image2 logical"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran inlist outlist "image1 logical"\<br>
+      "image2 logical"
+  </pre></div>
   <p>
   13. Repeat example 11 but have skyctran automatically generate a grid
   of 100 tie points.
   </p>
-  <pre>
-  	cl&gt; skyctran grid outlist "image1 logical"\<br>
-  	    "image2 logical"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skyctran grid outlist "image1 logical"\<br>
+      "image2 logical"
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   setjd,precess,galactic,xray.xspatial.skypix,stsdas.toolbox.tools.tprecess
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'USER COMMANDS' 'IMAGE CURSOR COMMANDS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

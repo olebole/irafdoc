@@ -7,14 +7,14 @@ keypar: Copy an image or table header keyword to an IRAF parameter.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   keypar input keyword
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task reads a header keyword from an image or table file. The
   keyword is written to the IRAF parameter 'value' as a character
@@ -24,16 +24,16 @@ keypar: Copy an image or table header keyword to an IRAF parameter.
   be converted to numeric data types with the built in functions real()
   and int().
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input [file name]' -->
   <dd>Name of the file containing the header keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_keyword">
   <dt><b>keyword [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keyword' Line='keyword [string]' -->
   <dd>Name of the header keyword to be retrieved. (The keyword 
@@ -62,57 +62,57 @@ keypar: Copy an image or table header keyword to an IRAF parameter.
   the header and no if it is not.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Print the number of groups (i.e., the 'GCOUNT' keyword)
   in the image file 'image.hhh':
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; keypar image.hhh gcount
   tt&gt; print(keypar.value)
-  </pre>
+  </pre></div>
   <p>
   2. Print the range of the data in the second group of the same image by 
   reading the values of the 'DATAMIN' and 'DATAMAX' keywords:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; keypar image.hhh[2] datamin
   tt&gt; x = real(keypar.value)
   tt&gt; keypar image.hhh[2] datamax
   tt&gt; y = real(keypar.value)
   tt&gt; print(y-x)
-  </pre>
+  </pre></div>
   <p>
   3. Print the component name (i.e., the 'COMPNAME' header keyword)
   for the table 'thruput.tab':
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; keypar thruput.tab compname
   tt&gt; print(keypar.value)
-  </pre>
+  </pre></div>
   <p>
   4. Check for the existence of the exposure time in an image header:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; keypar image.hhh exptime silent+
   tt&gt; if (keypar.found) {
   &gt;&gt;&gt; print keypar.value
   &gt;&gt;&gt; } else {
   &gt;&gt;&gt; print INDEF
   &gt;&gt;&gt; }
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon.
   SEE ALSO
   keytab, parkey, partab, tabkey, tabpar
   </p>
   
-  <!-- EndSection:    'REFERENCES' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'REFERENCES'  -->
   

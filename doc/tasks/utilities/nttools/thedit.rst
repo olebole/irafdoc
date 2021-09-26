@@ -7,14 +7,14 @@ thedit: Edit or print table header keywords.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   thedit table keywords value
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This table header editor can be used to add, delete, edit,
   or just print the values of table header keywords.
@@ -40,15 +40,15 @@ thedit: Edit or print table header keywords.
   These may be used in the 'keywords' parameter when value=<span style="font-family: monospace;">"."</span>,
   or they can be used in the 'value' parameter as part of an expression.
   </p>
-  <pre>
-      i_table   string    table name (may include extension ID)
-      i_file    string    name of the file containing the table
-      i_ctime   string    file modification (or creation) time
-      i_nrows   int       number of rows in the table
-      i_ncols   int       number of columns in the table
-      i_npar    int       number of keywords in the table header
-      i_type    string    table type
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  i_table   string    table name (may include extension ID)
+  i_file    string    name of the file containing the table
+  i_ctime   string    file modification (or creation) time
+  i_nrows   int       number of rows in the table
+  i_ncols   int       number of columns in the table
+  i_npar    int       number of keywords in the table header
+  i_type    string    table type
+  </pre></div>
   <p>
   'thedit' supports two of the special operands
   that are available in 'hedit':  <span style="font-family: monospace;">"$"</span> and <span style="font-family: monospace;">"$I"</span>.
@@ -58,10 +58,10 @@ thedit: Edit or print table header keywords.
   the name of the current table.
   <span style="font-family: monospace;">"$I"</span> can be used as a keyword or as part of an expression.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
   <dd>A list of tables for which keywords are to be edited or printed.
@@ -69,7 +69,7 @@ thedit: Edit or print table header keywords.
   otherwise, each table will be opened read-write.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_keywords">
   <dt><b>keywords [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywords' Line='keywords [string]' -->
   <dd>One or more keywords, separated by commas and/or blanks,
@@ -83,7 +83,7 @@ thedit: Edit or print table header keywords.
   if a keyword is to be added to the header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_value">
   <dt><b>value = <span style="font-family: monospace;">"."</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value = "." [string]' -->
   <dd>This is the value to be assigned to each keyword in 'keywords'.
@@ -120,63 +120,63 @@ thedit: Edit or print table header keywords.
   <dd>Print a record of each edit operation?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Display all the header keywords (except blank) in <span style="font-family: monospace;">"example.tab"</span>.
   </p>
-  <pre>
-      tt&gt; thedit example.tab * .
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit example.tab * .
+  </pre></div>
   <p>
   2.  Display only the special keywords for <span style="font-family: monospace;">"timetag.fits[events]"</span>.
   </p>
-  <pre>
-      tt&gt; thedit timetag.fits[events] i_* .
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit timetag.fits[events] i_* .
   
-      timetag.fits[events],i_table = timetag.fits[events]
-      timetag.fits[events],i_file = timetag.fits
-      timetag.fits[events],i_ctime = "Wed 12:07:58 31-May-2000"
-      timetag.fits[events],i_nrows = 337824
-      timetag.fits[events],i_ncols = 6
-      timetag.fits[events],i_npar = 58
-      timetag.fits[events],i_type = "fits, binary"
-  </pre>
+  timetag.fits[events],i_table = timetag.fits[events]
+  timetag.fits[events],i_file = timetag.fits
+  timetag.fits[events],i_ctime = "Wed 12:07:58 31-May-2000"
+  timetag.fits[events],i_nrows = 337824
+  timetag.fits[events],i_ncols = 6
+  timetag.fits[events],i_npar = 58
+  timetag.fits[events],i_type = "fits, binary"
+  </pre></div>
   <p>
   3.  Print all HISTORY keywords in <span style="font-family: monospace;">"example.txt"</span>.
   </p>
-  <pre>
-      tt&gt; thedit example.txt history .
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit example.txt history .
+  </pre></div>
   <p>
   4.  Add a new HISTORY keyword to <span style="font-family: monospace;">"example.tab"</span>.
   </p>
-  <pre>
-      tt&gt; thedit example.tab history \<br>
-      "('file name is ' // i_file) // '; number of rows = ' // str (i_nrows)"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit example.tab history \<br>
+  "('file name is ' // i_file) // '; number of rows = ' // str (i_nrows)"
+  </pre></div>
   <p>
   5.  Increment the value of COUNT.
   </p>
-  <pre>
-      tt&gt; thedit example.tab count "($ + 1)"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit example.tab count "($ + 1)"
+  </pre></div>
   <p>
   6.  Delete all HISTORY and COMMENT keywords in <span style="font-family: monospace;">"example.fits[1]"</span>.
   </p>
-  <pre>
-      tt&gt; thedit example.fits history,comment delete+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit example.fits history,comment delete+
+  </pre></div>
   <p>
   7.  Evaluate a simple expression
   and assign the result to keyword WAVELEN.
   Keywords TCRVL1, TCDLT1, and NELEM
   are assumed to be already present in the header.
   </p>
-  <pre>
-      tt&gt; thedit example.fits wavelen "(tcrvl1 + tcdlt1 * nelem/2.)"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit example.fits wavelen "(tcrvl1 + tcdlt1 * nelem/2.)"
+  </pre></div>
   <p>
   8.  A keyword can be renamed by using a two-step process,
   first creating a new keyword with the old value, and then
@@ -185,29 +185,29 @@ thedit: Edit or print table header keywords.
   the comment will be lost.
   (The <span style="font-family: monospace;">"k"</span> instruction in 'tupar' can also be used to rename a keyword.)
   </p>
-  <pre>
-      tt&gt; thedit example.tab newkey "(oldkey)"
-      tt&gt; thedit example.tab oldkey delete+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit example.tab newkey "(oldkey)"
+  tt&gt; thedit example.tab oldkey delete+
+  </pre></div>
   <p>
   9.  The primary header or an image extension of a FITS file
   can also be opened as a table in order to access the keywords.
   </p>
-  <pre>
-      tt&gt; thedit o47s01kdm_raw.fits[0] rootname .
-      tt&gt; thedit o47s01kdm_flt.fits[1] bunit "COUNTS/S"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit o47s01kdm_raw.fits[0] rootname .
+  tt&gt; thedit o47s01kdm_flt.fits[1] bunit "COUNTS/S"
+  </pre></div>
   <p>
   10.  This could have been a big mistake.
   </p>
-  <pre>
-      tt&gt; thedit abc.fits[1] * ,
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; thedit abc.fits[1] * ,
   
-      ERROR: In order to set a keyword value to <span style="font-family: monospace;">','</span> you must use value='\,'
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  ERROR: In order to set a keyword value to <span style="font-family: monospace;">','</span> you must use value='\,'
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Expressions are evaluated using EVEXPR,
   which does not support double precision.
@@ -228,21 +228,21 @@ thedit: Edit or print table header keywords.
   A workaround for this case is to use 'tupar' instead of 'thedit';
   use the <span style="font-family: monospace;">"pt"</span> instruction, meaning put a keyword of type text.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge,
   based on the 'hedit' task.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   hedit, tupar
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

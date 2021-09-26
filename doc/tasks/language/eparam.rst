@@ -7,23 +7,23 @@ eparam: Edit parameters of a task
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   eparam task [task ...]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_task">
   <dt><b>task</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='task' Line='task' -->
   <dd>The name of the task whose parameter set is to be edited.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>eparam</i> command calls up an interactive screen editor
   to edit the parameters of the named task or tasks.  The syntax of the
@@ -53,23 +53,23 @@ eparam: Edit parameters of a task
   The presence or absence of a <b>.par</b> filename extension is used to
   determine whether an operand is a taskname or a filename.  For example,
   </p>
-  <p>
-  	cl&gt; eparam skypars.par
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; eparam skypars.par
+  </pre></div>
   <p>
   will edit the parameter <i>file</i> <b>skypars.par</b> in the current directory,
   whereas
   </p>
-  <p>
-  	cl&gt; eparam skypars
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; eparam skypars
+  </pre></div>
   <p>
   will edit the parameter set for the pset-task <i>skypars</i>.
   Lastly, since <i>spypars</i> is a pset-task, we could just type
   </p>
-  <p>
-  	cl&gt; skypars
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skypars
+  </pre></div>
   <p>
   to edit or review the contents of the pset.
   </p>
@@ -168,30 +168,30 @@ eparam: Edit parameters of a task
   until the colon prompt is deleted and the cursor returns to the parameter
   it was positioned to when colon command entry mode was entered.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Set standout mode and disable the editing of hidden parameters (leaving
   only the positional parameters).
   </p>
-  <p>
-  	cl&gt; epinit = <span style="font-family: monospace;">"standout noshowall"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; epinit = "standout noshowall"
+  </pre></div>
   <p>
   2. Edit the parameters for the <i>delete</i> task.
   </p>
-  <p>
-  	cl&gt; ep delete
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ep delete
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   lparam, ehistory
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

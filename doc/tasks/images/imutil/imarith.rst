@@ -7,56 +7,56 @@ imarith: Simple image arithmetic
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   imarith operand1 op operand2 result
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_operand1">
   <dt><b>operand1, operand2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='operand1' Line='operand1, operand2' -->
   <dd>Lists of images and constants to be used as operands.
   Image templates and image sections are allowed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_op">
   <dt><b>op    </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='op' Line='op    ' -->
   <dd>Operator to be applied to the operands.  The allowed operators
   are <span style="font-family: monospace;">"+"</span>, <span style="font-family: monospace;">"-"</span>, <span style="font-family: monospace;">"*"</span>, <span style="font-family: monospace;">"/"</span>, <span style="font-family: monospace;">"min"</span>, and <span style="font-family: monospace;">"max"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_result">
   <dt><b>result</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='result' Line='result' -->
   <dd>List of resultant images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Title for the resultant images.  If null (<span style="font-family: monospace;">""</span>) then the title is taken
   from operand1 if operand1 is an image or from operand2 otherwise.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_divzero">
   <dt><b>divzero = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='divzero' Line='divzero = 0.' -->
   <dd>Replacement value for division by zero.  When the denominator is zero
   or nearly zero the result is replaced by this value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_hparams">
   <dt><b>hparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hparams' Line='hparams = ""' -->
   <dd>List of header parameters to be operated upon.  This is primarily
   used for adding exposure times when adding images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixtype">
   <dt><b>pixtype = <span style="font-family: monospace;">""</span>, calctype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "", calctype = ""' -->
   <dd>Pixel datatype for the resultant image and the internal calculation datatype.
@@ -87,22 +87,22 @@ imarith: Simple image arithmetic
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print the operator, operands, calculation datatype, and the resultant image
   name, title, and pixel datatype.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_noact">
   <dt><b>noact = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='noact' Line='noact = no' -->
   <dd>Like the verbose option but the operations are not actually performed.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Binary image arithmetic is performed of the form:
   </p>
@@ -179,23 +179,23 @@ imarith: Simple image arithmetic
   consists of the operator, the operand image names, the resultant image
   name and pixel datatype, and the calculation datatype.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To add two images and the exposure times:
   </p>
-  <pre>
-  	cl&gt; imarith ccd1 + ccd2 sum
-  	&gt;&gt;&gt; hparams="itime,otime,ttime,exposure"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith ccd1 + ccd2 sum
+  &gt;&gt;&gt; hparams="itime,otime,ttime,exposure"
+  </pre></div>
   <p>
   2. To subtract a constant from an image and replace input image by the
   subtracted image:
   </p>
-  <p>
-  	cl&gt; imarith m31 - 223.2 m31
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith m31 - 223.2 m31
+  </pre></div>
   <p>
   Note that the final pixel datatype and the calculation datatype will be at
   least of type real because the constant operand is real.
@@ -204,12 +204,12 @@ imarith: Simple image arithmetic
   3. To scale two exposures, divide one by the other, and extract the central
   portion:
   </p>
-  <pre>
-  	cl&gt; imarith exp1[10:90,10:90] * 1.2 temp1
-  	cl&gt; imarith exp2[10:90,10:90] * 0.9 temp2
-  	cl&gt; imarith temp1 / temp2 final title='Ratio of exp1 and exp 2'
-  	cl&gt; imdelete temp1,temp2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith exp1[10:90,10:90] * 1.2 temp1
+  cl&gt; imarith exp2[10:90,10:90] * 0.9 temp2
+  cl&gt; imarith temp1 / temp2 final title='Ratio of exp1 and exp 2'
+  cl&gt; imdelete temp1,temp2
+  </pre></div>
   <p>
   Note that in this example the images temp1, temp2, and final will be
   of real pixel datatype (or double if either exp1 or exp2 are of pixel
@@ -219,73 +219,73 @@ imarith: Simple image arithmetic
   4. To divide two images of arbitrary pixel datatype using real arithmetic
   and create a short pixel datatype resultant image:
   </p>
-  <pre>
-  	cl&gt; imarith image1 / image2 image3 pixtype=short  \<br>
-  	&gt;&gt;&gt; calctype=real title="Ratio of image1 and image2"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith image1 / image2 image3 pixtype=short  \<br>
+  &gt;&gt;&gt; calctype=real title="Ratio of image1 and image2"
+  </pre></div>
   <p>
   5. To divide several images by calibration image using the image pixel type of
   the numerator images to determine the pixel type of the calibrated images
   and the calculation arithmetic type:
   </p>
-  <pre>
-  	cl&gt; imarith image1,image2,image3 / calibration \<br>
-  	&gt;&gt;&gt; image1a,image2a,image3a pixtype=1 calctype=1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith image1,image2,image3 / calibration \<br>
+  &gt;&gt;&gt; image1a,image2a,image3a pixtype=1 calctype=1
+  </pre></div>
   <p>
   The same operation can be done in place with image template expansion by:
   </p>
-  <pre>
-  	cl&gt; imarith image* / calibration image* pixtype=1 calctype=1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith image* / calibration image* pixtype=1 calctype=1
+  </pre></div>
   <p>
   6. To subtract a two dimensional bias from stacked observations (multiple
   two dimensional observations stacked to form a three dimensional image):
   </p>
-  <p>
-  	cl&gt; imarith obs* - bias obs*//b
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith obs* - bias obs*//b
+  </pre></div>
   <p>
   Note that the output observations obs101b, ..., will be three dimensional.
   </p>
   <p>
   7. To divide a 50 x 50 image by the average column:
   </p>
-  <pre>
-  	cl&gt; blkavg img avcol 50 1
-  	cl&gt; blkrep avcol avcol 50 1
-  	cl&gt; imarith img / avcol flat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; blkavg img avcol 50 1
+  cl&gt; blkrep avcol avcol 50 1
+  cl&gt; imarith img / avcol flat
+  </pre></div>
   <p>
   8. To subtract a one dimensional image from the lines of a two dimensional
   image:
   </p>
-  <p>
-  	cl&gt; imarith im2d - im1d diff
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith im2d - im1d diff
+  </pre></div>
   <p>
   9. To subtract a one dimensional image from the columns of a two dimensional
   image:
   </p>
-  <pre>
-  	cl&gt; imstack im1d imcol
-  	cl&gt; imtranspose imcol imcol
-  	cl&gt; blkrep imcol imcol 100 1
-  	cl&gt; imarith im2d - imcol diff
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imstack im1d imcol
+  cl&gt; imtranspose imcol imcol
+  cl&gt; blkrep imcol imcol 100 1
+  cl&gt; imarith im2d - imcol diff
+  </pre></div>
   <p>
   Note the need to make a two dimensional image with each column
   replicated since a one dimensional image will operate on the lines
   of a two dimensional image.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   blkrep, imdivide, imfunction, imstack, imtranspose
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

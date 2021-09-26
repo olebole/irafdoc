@@ -7,22 +7,22 @@ findpars: Edit the star detection parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   findpars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 4.0 (sigma)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 4.0 (sigma)' -->
   <dd>The object detection threshold above local background in units of
   <i>datapars.sigma</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsigma">
   <dt><b>nsigma = 1.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsigma' Line='nsigma = 1.5' -->
   <dd>The semi-major axis of the Gaussian convolution kernel used to computed the
@@ -31,7 +31,7 @@ findpars: Edit the star detection parameters
   <i>datapars.fwhmpsf</i> / <i>datapars.scale</i>) pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ratio">
   <dt><b>ratio = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.0' -->
   <dd>The ratio of the sigma of the Gaussian convolution kernel along the minor axis
@@ -39,14 +39,14 @@ findpars: Edit the star detection parameters
   to 1.0 in which case the image is convolved with a circular Gaussian.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_theta">
   <dt><b>theta = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.0' -->
   <dd>The position of the major axis of the elliptical Gaussian. <i>Theta</i> is
   measured counter-clockwise from the x axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sharplo">
   <dt><b>sharplo = .2, sharphi = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sharplo' Line='sharplo = .2, sharphi = 1.0' -->
   <dd><i>Sharplo</i> and <i>sharphi</i> are numerical cutoffs on the image sharpness
@@ -54,7 +54,7 @@ findpars: Edit the star detection parameters
   rather than to astronomical objects.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_roundlo">
   <dt><b>roundlo = -1.0 roundhi = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='roundlo' Line='roundlo = -1.0 roundhi = 1.0' -->
   <dd><i>Roundlo</i> and <i>roundhi</i> are numerical cutoffs on the image roundness
@@ -62,15 +62,15 @@ findpars: Edit the star detection parameters
   columns rather than to astronomical objects.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mkdetections">
   <dt><b>mkdetections = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mkdetections' Line='mkdetections = no' -->
   <dd>Mark the positions of the detected objects on the displayed image ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   DAOFIND approximates the stellar point spread function with an elliptical
   Gaussian function, whose sigma along the semi-major axis is 0.42466 *
@@ -115,61 +115,61 @@ findpars: Edit the star detection parameters
   the object position to <i>findpars.threshold</i> * <i>datapars.sigma</i>,
   and the object is added to the output coordinate file.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the object detection parameters.
   </p>
-  <pre>
-  	da&gt; lpar findpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; lpar findpars
+  </pre></div>
   <p>
   2. Edit the object detection parameters.
   </p>
-  <pre>
-  	da&gt; findpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; findpars
+  </pre></div>
   <p>
   3. Edit the FINDPARS parameters from within the DAOFIND task.
   </p>
-  <pre>
-  	da&gt; epar daofind
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; epar daofind
   
-  	    ... edit a few daofind parameters
+      ... edit a few daofind parameters
   
-  	    ... move to the findpars parameter and type :e
+      ... move to the findpars parameter and type :e
   
-  	    ... edit the findpars parameter and type :wq
+      ... edit the findpars parameter and type :wq
   
-  	    ... finish editing the daofind parameters and type :wq
-  </pre>
+      ... finish editing the daofind parameters and type :wq
+  </pre></div>
   <p>
   4. Save the current FINDPARS parameter set in a text file fndnite1.par.
   This can also be done from inside a higher level task as in the previous
   example.
   </p>
-  <pre>
-  	da&gt; findpars
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; findpars
   
-  	    ... edit the parameters
+      ... edit the parameters
   
-  	    ... type ":w fndnite1.par" from within epar
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type ":w fndnite1.par" from within epar
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   daofind
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   epar,lpar,daofind,datapars
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

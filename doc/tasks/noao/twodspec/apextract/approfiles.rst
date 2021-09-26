@@ -7,13 +7,13 @@ approfiles: Profile determination algorithms
 
 .. raw:: html
 
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apbackground apvariance apall apsum apfit apflatten
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'SEE ALSO'  -->
   

@@ -7,33 +7,33 @@ iralign: Align the image produced by irmosaic
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   iralign input output database coords
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The mosaiced image written by IRMOSAIC.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The output aligned image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>The database file written by IRMOSAIC.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords' -->
   <dd>If <i>alignment</i> = <span style="font-family: monospace;">"coords"</span>, then <b>coords</b> is
@@ -55,19 +55,19 @@ iralign: Align the image produced by irmosaic
   IRALIGN with the new shifts.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xshift">
   <dt><b>xshift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift' -->
   <dd>The x shift in pixels used if <i>alignment</i> = <span style="font-family: monospace;">"shifts"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_yshift">
   <dt><b>yshift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='yshift' Line='yshift' -->
   <dd>The y shift in pixels used if <i>alignment</i> = <span style="font-family: monospace;">"shifts"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_alignment">
   <dt><b>alignment = <span style="font-family: monospace;">"coords"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='alignment' Line='alignment = "coords"' -->
   <dd>The method of aligning the subraster.
@@ -96,14 +96,14 @@ iralign: Align the image produced by irmosaic
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxrsub">
   <dt><b>nxrsub = INDEF, ls nyrsub = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxrsub' Line='nxrsub = INDEF, ls nyrsub = INDEF' -->
   <dd>The column and row index of the reference subraster.
   The default reference subraster is the central subraster.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xref">
   <dt><b>xref = 0, yref = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = 0, yref = 0' -->
   <dd>The x and y offset of the reference
@@ -112,7 +112,7 @@ iralign: Align the image produced by irmosaic
   the output image that it does in the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trimlimits">
   <dt><b>trimlimits = <span style="font-family: monospace;">"[1:1,1:1]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trimlimits' Line='trimlimits = "[1:1,1:1]"' -->
   <dd>The number of columns or rows to trim off each edge of each input subraster
@@ -120,21 +120,21 @@ iralign: Align the image produced by irmosaic
   The default action is to trim 1 column or line at each edge of the subraster.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nimcols">
   <dt><b>nimcols = INDEF, nimlines = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nimcols' Line='nimcols = INDEF, nimlines = INDEF' -->
   <dd>The number of columns and lines in the output image. The defaults are  the
   number of columns and lines in the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_oval">
   <dt><b>oval = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='oval' Line='oval = INDEF' -->
   <dd>The value of undefined pixels in the output image. The default is the value
   stored in the database file written by IRMOSAIC.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolant">
   <dt><b>interpolant = linear</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = linear' -->
   <dd>The type of interpolant used to shift the subrasters. The options are:
@@ -170,15 +170,15 @@ iralign: Align the image produced by irmosaic
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages on the terminal describing the progress of the task?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IRALIGN takes the mosaiced image <i>input</i> and database
   <i>database</i> files
@@ -210,16 +210,16 @@ iralign: Align the image produced by irmosaic
   4 by 4 mosaic of 51 by 51 pixel square images containing a single
   reference object common to all the subrasters might look like the following.
   </p>
-  <pre>
-  41.3   42.6     1 \40 	# coordinates of ref object in subraster 1
-  62.0   38.5	1 \40   # coordinates of ref object in subraster 2
+  <div class="highlight-default-notranslate"><pre>
+  41.3   42.6     1 \40   # coordinates of ref object in subraster 1
+  62.0   38.5     1 \40   # coordinates of ref object in subraster 2
   41.3   42.6     1 \40   # coordinates of ref object in subraster 1
   38.1   95.8     1 \40   # coordinates of ref object in subraster 3
   62.0   38.5     1 \40   # coordinates of ref object in subraster 2
   70.3   89.0     1 \40   # coordinates of ref object in subraster 4
   38.1   95.8     1 \40   # coordinates of ref object in subraster 3
   70.3   89.0     1 \40   # coordinates of ref object in subraster 4
-  </pre>
+  </pre></div>
   <p>
   In this example subrasters 1 and 2 are in the lower-left and
   lower-right hand corners of
@@ -243,66 +243,66 @@ iralign: Align the image produced by irmosaic
   before insertion into the output image by setting the <i>trimlimits</i>
   parameter.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Align an 8 by 8 mosaic with respect to subraster 6, 5.
   </p>
-  <pre>
-      pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
-  	nyrsub=5
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+      nyrsub=5
+  </pre></div>
   <p>
   2. Align an 8 by 8 mosaic as in example 1 above but shift the position of the
   reference subraster in the output image by 2 pixels in x and 3 pixels
   in y.
   </p>
-  <pre>
-      pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
-  	nyrsub=5 xref=2 yref=3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+      nyrsub=5 xref=2 yref=3
+  </pre></div>
   <p>
   3. Align an 8 by 8 mosaic as 1 above but trim 2 rows and columns off
   of each input subraster before inserting it into the output image.
   </p>
-  <pre>
-      pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
-  	nyrsub=5 trimlimits="[2:2,2:2]"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+      nyrsub=5 trimlimits="[2:2,2:2]"
+  </pre></div>
   <p>
   4. Rerun the above example saving the verbose output in a file. Use the 
   PROTO package FIELDS task to select the xshift, yshift and intensity
   shift fields, edit the shifts manually and rerun IRALIGN with the
   new shifts.
   </p>
-  <pre>
-      pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
-  	nyrsub=5 trimlimits="[2:2,2:2]" &gt; shifts1
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+      nyrsub=5 trimlimits="[2:2,2:2]" &gt; shifts1
   
-      pr&gt; fields shifts1 3,4,6 &gt; shifts2
+  pr&gt; fields shifts1 3,4,6 &gt; shifts2
   
-      pr&gt; edit shifts2
+  pr&gt; edit shifts2
   
-  	... make whatever changes are desired
+      ... make whatever changes are desired
   
-      pr&gt; iralign mosaic mosaic.al.2 mosaic.db shifts2 align=file \<br>
-  	nxrsub=6 nyrsub=5 trimlimits="[2:2,2:2]"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  pr&gt; iralign mosaic mosaic.al.2 mosaic.db shifts2 align=file \<br>
+      nxrsub=6 nyrsub=5 trimlimits="[2:2,2:2]"
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   irmosaic, apphot.center, apphot.apselect, irmatch1d, irmatch2d
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,48 +7,48 @@ dematch: Match a list of density values to exposure values
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   dematch database 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>Database containing density list, probably from <i>spotlist</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wedge">
   <dt><b>wedge = <span style="font-family: monospace;">""</span>, filter = <span style="font-family: monospace;">""</span>, emulsion = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wedge' Line='wedge = "", filter = "", emulsion = ""' -->
   <dd>Information used to retrieve log exposure values from <b>wedgefile</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wedgefile">
   <dt><b>wedgefile = <span style="font-family: monospace;">"noao$lib/hdwedge.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wedgefile' Line='wedgefile = "noao$lib/hdwedge.dat"' -->
   <dd>Name of file containing wedge intensity information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nskip">
   <dt><b>nskip = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nskip' Line='nskip = 0' -->
   <dd>Number of faint spots skipped, used as an offset into the list of
   log exposure values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print the log exposure information to STDOUT as well as to <b>database</b>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>dematch</i> matches density values to log exposure values.  A database
   of density values is input, as well as information needed to 
@@ -64,25 +64,24 @@ dematch: Match a list of density values to exposure values
   order, as long as no spots were omitted between the first and last
   measured.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Match densities in db1 to log exposure values for wedge#117
   with a IIIAJ emulsion and a GG385 filter.
   </p>
-  <pre>
-  
-  	cl&gt; dematch db1 wedge=117 filt=gg385 emulsion=IIIAJ
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dematch db1 wedge=117 filt=gg385 emulsion=IIIAJ
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   spotlist, hdfit, hdtoi
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

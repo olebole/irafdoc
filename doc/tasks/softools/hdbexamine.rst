@@ -7,15 +7,15 @@ hdbexamine: Examine a help database
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   hdbexamine
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_helpdb">
   <dt><b>helpdb = <span style="font-family: monospace;">"helpdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdb' Line='helpdb = "helpdb"' -->
   <dd>The filename of the help database to be examined.  The reserved name <span style="font-family: monospace;">"helpdb"</span>
@@ -23,7 +23,7 @@ hdbexamine: Examine a help database
   the same name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>If this switch is enabled, <i>hdbexamine</i> will print a detailed description
@@ -33,9 +33,9 @@ hdbexamine: Examine a help database
   package is printed by default.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>hdbexamine</i> task is used to examine the contents of a help
   database.  By default the standard IRAF help database is examined.
@@ -44,14 +44,14 @@ hdbexamine: Examine a help database
   that an invalid help directory file (<span style="font-family: monospace;">".hd"</span>) somewhere in the help
   directory tree, causes the database to be compiled incorrectly.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Print a concise summary of the contents and structure of the standard
   help database.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; hdbexamine
   Help database dev$help.db created Feb 14 21:34 by tody
   Database contains 794 modules in 43 packages, file size 105460 bytes
@@ -68,15 +68,15 @@ hdbexamine: Examine a help database
   coude        Dec 31 14:38 valdes   pkg$imred/coude/coude.hd
   vtel         Jan 22  8:36 lytle    pkg$imred/vtel/vtel.hd
   plot         Jan 28 14:04 hammond  pkg$plot/plot.hd
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   mkhelpdb, help
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

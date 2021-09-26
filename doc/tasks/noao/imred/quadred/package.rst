@@ -7,24 +7,24 @@ package: Package parameters and overview
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   package	pkgname
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_pkgname">
   <dt><b>pkgname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pkgname' Line='pkgname' -->
   <dd>The name of the new package to be created.  If called with no arguments,
   <i>package</i> lists the currently defined packages in task search order.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>package</i> task creates a new package.
   The newly defined package becomes the current package, and the prompt
@@ -44,58 +44,58 @@ package: Package parameters and overview
   package script task terminates, discarding the package and any associated
   definitions.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The use of <i>package</i> in a package script task.
   </p>
-  <pre>
-  	package lists
+  <div class="highlight-default-notranslate"><pre>
+  package lists
   
-  	set	lists		= "pkg$lists/"
+  set     lists           = "pkg$lists/"
   
-  	task	table,
-  		tokens,
-  		unique,
-  		lintran,
-  		columns,
-  		words		= "lists$x_lists.e"
+  task    table,
+          tokens,
+          unique,
+          lintran,
+          columns,
+          words           = "lists$x_lists.e"
   
-  	task	$gcursor	= "lists$gcursor.cl"
-  	task	$imcursor	= "lists$imcursor.cl"
-  	task	average		= "lists$average.cl"
+  task    $gcursor        = "lists$gcursor.cl"
+  task    $imcursor       = "lists$imcursor.cl"
+  task    average         = "lists$average.cl"
   
-  	clbye()
-  </pre>
+  clbye()
+  </pre></div>
   <p>
   2. List the currently defined packages in the order in which they will
   be searched for tasks.
   </p>
-  <pre>
-  	cl&gt; pack
-  	clpackage
-  	language
-  	user
-  	system
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pack
+  clpackage
+  language
+  user
+  system
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   All active packages must have unique names.  To eliminate the possibility
   of parameter file name collisions in UPARM, the three character string
   formed by concatenating the first two and final characters of the package
   name should be unique.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   task, redefine
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

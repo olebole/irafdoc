@@ -7,14 +7,14 @@ mkapropos: Make the apropos database (from STSDAS).
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkapropos pkglist aproposdb
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The 'mkapropos' task descends a tree of help directory ('.hd') files
   and compiles a text database from the information found there, specifically
@@ -39,10 +39,10 @@ mkapropos: Make the apropos database (from STSDAS).
   This is the mkapropos from stsdas.toolbox.tools, copied into Ureka/AstroConda
   IRAF's softools to facilitate building IRAF packages before stsdas is installed.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_pkglist">
   <dt><b>pkglist = <span style="font-family: monospace;">"iraf, noao"</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pkglist' Line='pkglist = "iraf, noao" [string]' -->
   <dd>The names of the packages to examine when building the apropos database.
@@ -51,7 +51,7 @@ mkapropos: Make the apropos database (from STSDAS).
   included.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_helpdir">
   <dt><b>helpdir = <span style="font-family: monospace;">"lib/root.hd"</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='helpdir' Line='helpdir = "lib/root.hd" [string]' -->
   <dd>The filename of the root help directory file ('.hd' file)
@@ -59,13 +59,13 @@ mkapropos: Make the apropos database (from STSDAS).
   packages listed in the 'pkglist' parameter above. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aproposdb">
   <dt><b>aproposdb = <span style="font-family: monospace;">"lib$apropos.db"</span> [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aproposdb' Line='aproposdb = "lib$apropos.db" [string]' -->
   <dd>The filename of the apropos database to be written. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no [boolean]' -->
   <dd>Print a detailed description of the help database as it is compiled?
@@ -73,29 +73,29 @@ mkapropos: Make the apropos database (from STSDAS).
   of help modules in each package is printed by default.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Update the stsdas package apropos database.
   </p>
-  <pre>
-    cl&gt; mkapropos stsdas lib/root.hd stsdas$lib/apropos.db
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkapropos stsdas lib/root.hd stsdas$lib/apropos.db
+  </pre></div>
   <p>
   2. Update a user apropos database.
   </p>
-  <pre>
-    cl&gt; mkap pkglist=home helpdir=myroot.hd aproposdb=my.db
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkap pkglist=home helpdir=myroot.hd aproposdb=my.db
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apropos, mkhelpdb
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'SEE ALSO'  -->
   

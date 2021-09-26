@@ -7,23 +7,23 @@ service: Service a query from a background job
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   service [job]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_job">
   <dt><b>job</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='job' Line='job' -->
   <dd>A background job number (defaults to 1).
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   When a background job requires input from the terminal (e.g. if it queries
   for a parameter), the job enters a stopped state, and a message is
@@ -39,18 +39,18 @@ service: Service a query from a background job
   any order, regardless of how the requests from the background jobs were
   received.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_example">
   <h3>Example</h3>
-  <!-- BeginSection: 'EXAMPLE' -->
   <p>
   1. Respond to a parameter request from job 3.
   </p>
-  <p>
-  	cl&gt; service 3
-  </p>
-  <!-- EndSection:   'EXAMPLE' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; service 3
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   If one never responds to a request for service from a background job, the job
   will eventually time out and abort.  In principle it is possible to service
@@ -59,14 +59,14 @@ service: Service a query from a background job
   the user), hence all parameters should be specified before submitting a job
   to execute in a queue.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   jobs, kill
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'BUGS' 'SEE ALSO'  -->
   

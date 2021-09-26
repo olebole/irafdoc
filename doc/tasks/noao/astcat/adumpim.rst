@@ -7,15 +7,15 @@ adumpim: Image survey access debugging task
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   adumpim imsurvey output ra dec size
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_imsurvey">
   <dt><b>imsurvey</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imsurvey' Line='imsurvey' -->
   <dd>The name of the image survey to be queried. Image survey names have the form
@@ -23,7 +23,7 @@ adumpim: Image survey access debugging task
   stored in a record called imsurvey in the image survey configuration file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The name of the output query results file. The query results are written
@@ -33,7 +33,7 @@ adumpim: Image survey access debugging task
   as a FITS image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ra">
   <dt><b>ra  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ra' Line='ra  ' -->
   <dd>The right ascension of the field center in the units expected by the image
@@ -41,7 +41,7 @@ adumpim: Image survey access debugging task
   parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dec">
   <dt><b>dec  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dec' Line='dec  ' -->
   <dd>The declination of the field center in the units expected by the image
@@ -50,7 +50,7 @@ adumpim: Image survey access debugging task
   in order to make the query function correctly.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_size">
   <dt><b>size</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='size' Line='size' -->
   <dd>The field size in units expected by the image survey query. The value of size
@@ -59,7 +59,7 @@ adumpim: Image survey access debugging task
   parameters as appropriate.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imdb">
   <dt><b>imdb = <span style="font-family: monospace;">")_.imdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imdb' Line='imdb = ")_.imdb"' -->
   <dd>The image survey configuration file. The name of the image survey configuration
@@ -67,9 +67,9 @@ adumpim: Image survey access debugging task
   configuration file is <span style="font-family: monospace;">"astcat$lib/imdb.dat"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Adumpim is a simple image survey access debugging task which queries the
   image survey <i>imsurvey</i>, captures the results, and writes them
@@ -94,9 +94,9 @@ adumpim: Image survey access debugging task
   The output of adumpim can be used to refine the image survey record in the
   image survey configuration file.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the supported image surveys, select an image survey to query, make
   the query and capture the results. The aslist task is used  to list
@@ -105,7 +105,7 @@ adumpim: Image survey access debugging task
   ra and dec must be in sexagesimal hours and degrees and in the J2000
   coordinate system that the size parameter is a radius in minutes.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; aslist *
   dss2@cadc
   
@@ -128,7 +128,7 @@ adumpim: Image survey access debugging task
   nkeys 13
       observat INDEF Palomar c INDEF
       esitelng INDEF +116:51:46.80 d degrees
-      esitelat INDEF +33:21:21.6 d degrees 
+      esitelat INDEF +33:21:21.6 d degrees
       esitealt INDEF 1706 r meters
        esitetz INDEF 8 r INDEF
        emjdobs INDEF INDEF c INDEF
@@ -143,22 +143,21 @@ adumpim: Image survey access debugging task
   cl&gt; adumpim dss2@cadc m51.fits 13:29:53.27 +47:11:48.4 10.0
   
   cl&gt; imheader m51.fits
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   aslist, agetim
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

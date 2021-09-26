@@ -7,34 +7,34 @@ shiftlines: Shift the lines of a list of N-D images
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   shiftlines input output shift
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be shifted.  Image sections are allowed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output image names.  If the output image name is the same as the input
   image name then the shifted image replaces the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shift">
   <dt><b>shift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift' -->
   <dd>Shift in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp_type">
   <dt><b>interp_type = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "linear"' -->
   <dd>The interpolant type use to computed the output shifted image.
@@ -91,7 +91,7 @@ shiftlines: Shift the lines of a list of N-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary_type">
   <dt><b>boundary_type = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
   <dd>Boundary condition for shifts outside the input image.
@@ -122,15 +122,15 @@ shiftlines: Shift the lines of a list of N-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = <span style="font-family: monospace;">"0.0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = "0.0"' -->
   <dd>The constant for constant boundary extension.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The list of images in <i>input</i> is shifted by the amount <i>shift</i>
   and copied to the list of output images <i>output</i>.
@@ -157,41 +157,41 @@ shiftlines: Shift the lines of a list of N-D images
   outside the boundaries of the image is determined by the parameter
   <i>boundary_type</i>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Shift the lines of an image by 0.25 pixels to the right.
   </p>
-  <p>
-  	cl&gt; shiftlines imagein imageout 0.25
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; shiftlines imagein imageout 0.25
+  </pre></div>
   <p>
   2. Shift the lines of an image by -.3 pixels using cubic spline interpolation
   and replace the input image by the output image.
   </p>
-  <p>
-  	cl&gt; shiftlines image image -.3 interp=spline3
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; shiftlines image image -.3 interp=spline3
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   It requires approximately 28 and 59 seconds to shift a 512 square image
   using linear and cubic spline interpolation respectively
   (Vax 11/750 with fpa).
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imshift, magnify, rotate, imlintran, blkrep, blkav, geotran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

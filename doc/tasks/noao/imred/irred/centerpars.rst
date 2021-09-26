@@ -7,15 +7,15 @@ centerpars: Edit the centering parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   centerpars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_calgorithm">
   <dt><b>calgorithm = <span style="font-family: monospace;">"centroid"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calgorithm' Line='calgorithm = "centroid"' -->
   <dd>The centering algorithm. The <span style="font-family: monospace;">"gauss"</span> and <span style="font-family: monospace;">"ofilter"</span> options depend critically
@@ -56,7 +56,7 @@ centerpars: Edit the centering parameters
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cbox">
   <dt><b>cbox = 5.0  (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cbox' Line='cbox = 5.0  (scale units)' -->
   <dd>The width of the subraster used for object centering in units of the
@@ -66,7 +66,7 @@ centerpars: Edit the centering parameters
   value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cthreshold">
   <dt><b>cthreshold = 0.0 (sigma units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cthreshold' Line='cthreshold = 0.0 (sigma units)' -->
   <dd>Pixels cthreshold * sigma above (emission features) or below (absorption
@@ -77,7 +77,7 @@ centerpars: Edit the centering parameters
   to INDEF turns off thresholding altogether for all the centering algorithms.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minsnratio">
   <dt><b>minsnratio = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minsnratio' Line='minsnratio = 1.0' -->
   <dd>The minimum signal to noise ratio for object centering. If the estimated signal
@@ -85,14 +85,14 @@ centerpars: Edit the centering parameters
   with an error flag.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cmaxiter">
   <dt><b>cmaxiter = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cmaxiter' Line='cmaxiter = 10' -->
   <dd>The maximum number of iterations performed by the centering algorithm.
   All the centering algorithms use this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxshift">
   <dt><b>maxshift = 1.0  (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxshift' Line='maxshift = 1.0  (scale units)' -->
   <dd>The maximum permissible shift of the center with respect to the initial
@@ -101,43 +101,43 @@ centerpars: Edit the centering parameters
   with an error flag.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clean">
   <dt><b>clean = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no' -->
   <dd>Symmetry-clean the centering subrater before centering? APPHOT users should
   leave clean set to <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rclean">
   <dt><b>rclean = 1.0  (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rclean' Line='rclean = 1.0  (scale units)' -->
   <dd>The cleaning radius for the symmetry-clean algorithm in units of the scale
   parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rclip">
   <dt><b>rclip = 2.0  (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rclip' Line='rclip = 2.0  (scale units)' -->
   <dd>The clipping radius for the symmetry-clean algorithm in units of the scale
   parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_kclean">
   <dt><b>kclean = 3.0  (sigma)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='kclean' Line='kclean = 3.0  (sigma)' -->
   <dd>The number of sky background standard deviations for the symmetry-clean
   algorithm where sigma is the value of the DATAPARS parameter sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mkcenter">
   <dt><b>mkcenter = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mkcenter' Line='mkcenter = no' -->
   <dd>Mark the fitted object centers on the displayed image ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The centering algorithm parameters control the action of the centering
   algorithms. The default parameters values have been proven to produce
@@ -221,58 +221,58 @@ centerpars: Edit the centering parameters
   If the computed shift in either coordinate &gt; <i>maxshift</i> / <i>scale</i>,
   the new center is returned but an error flag is set.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the centering parameters.
   </p>
-  <pre>
-  	ap&gt; lpar centerpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; lpar centerpars
+  </pre></div>
   <p>
   2. Edit the centering parameters
   </p>
-  <pre>
-  	ap&gt; centerpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; centerpars
+  </pre></div>
   <p>
   3. Edit the CENTERPARS parameters from with the PHOT task.
   </p>
-  <pre>
-      da&gt; epar phot
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; epar phot
   
-  	... edit a few phot parameters
+      ... edit a few phot parameters
   
-  	... move to the centerpars parameter and type :e
+      ... move to the centerpars parameter and type :e
   
-  	... edit the centerpars parameters and type :wq
+      ... edit the centerpars parameters and type :wq
   
-  	... finish editing the phot parameters and type :wq
-  </pre>
+      ... finish editing the phot parameters and type :wq
+  </pre></div>
   <p>
   4. Save the current CENTERPARS parameter set in a text file ctrnite1.par.
   This can also be done from inside a higher level task as in the
   previous example.
   </p>
-  <pre>
-      da&gt; centerpars
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; centerpars
   
-  	... edit the parameters
+      ... edit the parameters
   
-  	... type ":w ctrnite1.par"  from within epar
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type ":w ctrnite1.par"  from within epar
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   center,phot,wphot,polyphot,radprof
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

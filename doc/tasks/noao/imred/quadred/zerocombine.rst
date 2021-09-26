@@ -7,15 +7,15 @@ zerocombine: Combine and process zero level images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   zerocombine input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of zero level images to combine.  The <i>ccdtype</i> parameter
@@ -23,13 +23,13 @@ zerocombine: Combine and process zero level images
   types of data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">"Zero"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "Zero"' -->
   <dd>Output zero level root image name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_combine">
   <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median)' -->
   <dd>Type of combining operation performed on the final set of pixels (after
@@ -38,38 +38,38 @@ zerocombine: Combine and process zero level images
   values when the number of pixels is even.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reject">
   <dt><b>reject = <span style="font-family: monospace;">"minmax"</span> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "minmax" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)' -->
   <dd>Type of rejection operation.  See <b>combine</b> for details.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdtype">
   <dt><b>ccdtype = <span style="font-family: monospace;">"zero"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = "zero"' -->
   <dd>CCD image type to combine.  If no image type is given then all input images
   are combined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_process">
   <dt><b>process = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='process' Line='process = no' -->
   <dd>Process the input images before combining?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delete">
   <dt><b>delete = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no' -->
   <dd>Delete input images after combining?  Only those images combined are deleted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clobber">
   <dt><b>clobber = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber = no' -->
   <dd>Clobber existing output images?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure)' -->
   <dd>Multiplicative image scaling to be applied.  The choices are none, scale
@@ -77,7 +77,7 @@ zerocombine: Combine and process zero level images
   by the exposure time given in the image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_statsec">
   <dt><b>statsec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""' -->
   <dd>Section of images to use in computing image statistics for scaling.
@@ -88,13 +88,13 @@ zerocombine: Combine and process zero level images
   <p style="text-align:center">Algorithm Parameters
   
   </p>
-  <dl>
+  <dl id="l_nlow">
   <dt><b>nlow = 0,  nhigh = 1 (minmax)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 0,  nhigh = 1 (minmax)' -->
   <dd>The number of low and high pixels to be rejected by the <span style="font-family: monospace;">"minmax"</span> algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nkeep">
   <dt><b>nkeep = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nkeep' Line='nkeep = 1' -->
   <dd>The minimum number of pixels to retain or the maximum number to reject
@@ -105,7 +105,7 @@ zerocombine: Combine and process zero level images
   to keep by adding it to the number of images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mclip">
   <dt><b>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)' -->
   <dd>Use the median as the estimate for the true intensity rather than the
@@ -115,7 +115,7 @@ zerocombine: Combine and process zero level images
   However, computing the median is slower than the average.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)' -->
   <dd>Low and high sigma clipping factors for the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>, <span style="font-family: monospace;">"sigclip"</span>,
@@ -125,7 +125,7 @@ zerocombine: Combine and process zero level images
   <span style="font-family: monospace;">"crreject"</span> algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rdnoise">
   <dt><b>rdnoise = <span style="font-family: monospace;">"0."</span>, gain = <span style="font-family: monospace;">"1."</span>, snoise = <span style="font-family: monospace;">"0."</span> (ccdclip, crreject)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)' -->
   <dd>CCD readout noise in electrons, gain in electrons/DN, and sensitivity noise
@@ -134,7 +134,7 @@ zerocombine: Combine and process zero level images
   which contains the value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pclip">
   <dt><b>pclip = -0.5 (pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pclip' Line='pclip = -0.5 (pclip)' -->
   <dd>Percentile clipping algorithm parameter.  If greater than
@@ -147,15 +147,15 @@ zerocombine: Combine and process zero level images
   See <b>combine</b> for further details.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blank">
   <dt><b>blank = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0.' -->
   <dd>Output value to be used when there are no pixels.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The zero level images in the input image list are combined.
   The input images may be processed first if desired.
@@ -171,25 +171,25 @@ zerocombine: Combine and process zero level images
   features, such as thresholding, offseting, masking, and projecting, use
   <b>combine</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The image data contains four zero level images.
   To automatically select them and combine them as a background job
   using the default combining algorithm:
   </p>
-  <p>
-      cl&gt; zerocombine ccd*.imh&amp;
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; zerocombine ccd*.imh&amp;
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccdproc, combine
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

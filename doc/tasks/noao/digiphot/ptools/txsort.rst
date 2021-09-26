@@ -7,22 +7,22 @@ txsort: Sort a list of apphot/daophot text databases
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   txsort textfile field
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_textfiles">
   <dt><b>textfiles </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='textfiles' Line='textfiles ' -->
   <dd>The input APPHOT/DAOPHOT text database(s) to be sorted.
   The sort is performed in place.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_field">
   <dt><b>field</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='field' Line='field' -->
   <dd>The field to be sorted on. <i>Field</i> may be any quantity defined by
@@ -32,15 +32,15 @@ txsort: Sort a list of apphot/daophot text databases
   than <span style="font-family: monospace;">"yes"</span>, or character in which case an alphabetic sort is performed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ascend">
   <dt><b>ascend = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ascend' Line='ascend = yes' -->
   <dd>Sort in increasing value order.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   TXSORT is a simple task which accepts a list of APPHOT/DAOPHOT text
   database files
@@ -55,37 +55,37 @@ txsort: Sort a list of apphot/daophot text databases
   the boolean constant <span style="font-family: monospace;">"no"</span> is assumed to have a smaller value than <span style="font-family: monospace;">"yes"</span>; if
   character the sort is alphabetic.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Sort the output of the APPHOT task PHOT in increasing order of
   the y position.
   </p>
-  <pre>
-      pt&gt; txsort m92.mag.1 YCENTER
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; txsort m92.mag.1 YCENTER
+  </pre></div>
   <p>
   2. Sort the output of the DAOPHOT task ALLSTAR in increasing order of
      magnitude.
   </p>
-  <pre>
-      pt&gt; txsort m92.al.1 MAG
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; txsort m92.al.1 MAG
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ptools.tbsort,tables.tsort,ptools.psort,sort
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

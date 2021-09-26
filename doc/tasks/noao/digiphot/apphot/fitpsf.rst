@@ -7,27 +7,27 @@ fitpsf: Model the stellar psf with an analytic function
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   fitpsf image box
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images containing the objects to be measured.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_box">
   <dt><b>box    </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='box' Line='box    ' -->
   <dd>The width of the fitting box in scale units.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""' -->
   <dd>The list of text files containing initial coordinates for the objects to
@@ -41,7 +41,7 @@ fitpsf: Model the stellar psf with an analytic function
   file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "default"' -->
   <dd>The name of the results file or results directory. If output is
@@ -54,7 +54,7 @@ fitpsf: Model the stellar psf with an analytic function
   an output summary is also written to the standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters.
@@ -63,7 +63,7 @@ fitpsf: Model the stellar psf with an analytic function
   uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"radgauss"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "radgauss"' -->
   <dd>The function to be fit. The options are:
@@ -94,51 +94,51 @@ fitpsf: Model the stellar psf with an analytic function
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxiter">
   <dt><b>maxiter = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxiter' Line='maxiter = 50' -->
   <dd>The maximum number of iterations that the non-linear fitting routines will
   perform in an attempt to find a satisfactory fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nreject">
   <dt><b>nreject = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nreject' Line='nreject = 0' -->
   <dd>The maximum number of rejection cycles performed after the fit.
   The default is no rejection.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_kreject">
   <dt><b>kreject = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='kreject' Line='kreject = 3.0' -->
   <dd>The k-sigma rejection limit in units of sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mkbox">
   <dt><b>mkbox = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mkbox' Line='mkbox = no' -->
   <dd>Draw the fitting box on the image display?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Run the task interactively ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image cursor or image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from <i>coords</i> and
@@ -206,7 +206,7 @@ fitpsf: Model the stellar psf with an analytic function
   wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -214,14 +214,14 @@ fitpsf: Model the stellar psf with an analytic function
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical parameters in non-interactive mode ? Verify may be set to
   the apphot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the critical parameters in non-interactive mode if verify is set of
@@ -229,21 +229,21 @@ fitpsf: Model the stellar psf with an analytic function
   <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages on the terminal in non-interactive mode ? Verbose may be set
   to the apphot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The default graphics device.  Graphics may be set to the apphot package
   parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The default display device.  Display may be set to the apphot package
@@ -253,9 +253,9 @@ fitpsf: Model the stellar psf with an analytic function
   <span style="font-family: monospace;">"stdgraph"</span> enables FITPSF to work interactively from a contour plot.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   FITPSF models the stellar brightness distribution of objects in the IRAF image
   <i>image</i> using non-linear least squares techniques and writes the
@@ -310,105 +310,100 @@ fitpsf: Model the stellar psf with an analytic function
   parameter <i>icommands</i> can be redirected to a text file containing
   a list of cursor commands.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The currently available cursor commands are listed below.
   </p>
-  <pre>
-  	       Interactive Keystroke Commands
+  <div class="highlight-default-notranslate"><pre>
+                 Interactive Keystroke Commands
   
-  ?	Print help
-  :	Colon commands
-  v	Verify the critical parameters
-  w	Save the current parameters
-  d	Plot radial profile of current star 
-  i	Interactively set parameters using current star
-  f	Fit current star
-  spbar	Fit current star, output results
-  m	Move to next star in coordinate list
-  n	Fit next star in coordinate list, output results
-  l	Fit remaining stars in coordinate list, output results
-  e	Print error messages
-  r	Rewind the coordinate list
-  q	Exit task 
-  
-  
+  ?       Print help
+  :       Colon commands
+  v       Verify the critical parameters
+  w       Save the current parameters
+  d       Plot radial profile of current star
+  i       Interactively set parameters using current star
+  f       Fit current star
+  spbar   Fit current star, output results
+  m       Move to next star in coordinate list
+  n       Fit next star in coordinate list, output results
+  l       Fit remaining stars in coordinate list, output results
+  e       Print error messages
+  r       Rewind the coordinate list
+  q       Exit task
   
                    Colon Commands
   
-  :show	[data/fit]	List the parameters
-  :m [n]	Move to next [nth] star in coordinate list
-  :n [n]	Fit next [nth] star in coordinate list, output results
+  :show   [data/fit]      List the parameters
+  :m [n]  Move to next [nth] star in coordinate list
+  :n [n]  Fit next [nth] star in coordinate list, output results
   
-  
-  		Colon Parameter Editing Commands
+                  Colon Parameter Editing Commands
   
   # Image and file name parameters
   
-  :image		[string]	Image name
-  :coords		[string]	Coordinate file name
-  :output		[string]	Output file name
+  :image          [string]        Image name
+  :coords         [string]        Coordinate file name
+  :output         [string]        Output file name
   
   # Data dependent parameters
   
-  :scale		[value]		Image scale (units per pixel)
-  :fwhmpsf	[value]		Scale factor (scale units)		
-  :emission	[y/n]		Emission feature (y), absorption (n)
-  :sigma		[value]		Standard deviation of sky (counts)
-  :datamin	[value]		Minimum good data value (counts)
-  :datamax	[value]		Maximum good data value (counts)
+  :scale          [value]         Image scale (units per pixel)
+  :fwhmpsf        [value]         Scale factor (scale units)
+  :emission       [y/n]           Emission feature (y), absorption (n)
+  :sigma          [value]         Standard deviation of sky (counts)
+  :datamin        [value]         Minimum good data value (counts)
+  :datamax        [value]         Maximum good data value (counts)
   
   # Noise description parameters
   
-  :noise		[string]	Noise model (constant|poisson)
-  :gain		[string]	Gain image header keyword
-  :ccdread	[string]	Readout noise image header keyword
-  :epadu		[value]		Gain (electrons  per adu)
-  :readnoise	[value]		Readnoise (electrons)
+  :noise          [string]        Noise model (constant|poisson)
+  :gain           [string]        Gain image header keyword
+  :ccdread        [string]        Readout noise image header keyword
+  :epadu          [value]         Gain (electrons  per adu)
+  :readnoise      [value]         Readnoise (electrons)
   
   # Observation parameters
   
-  :exposure	[string]	Exposure time image header keyword
-  :airmass	[string]	Airmass image header keyword
-  :filter		[string]	Filter image header keyword
-  :obstime	[string]        Time of observation image header keyword
-  :itime		[value]		Exposure time (time units)
-  :xairmass	[value]		Airmass value (number)
-  :ifilter	[string]	Filter id string
-  :otime		[string]	Time of observation (time units)
+  :exposure       [string]        Exposure time image header keyword
+  :airmass        [string]        Airmass image header keyword
+  :filter         [string]        Filter image header keyword
+  :obstime        [string]        Time of observation image header keyword
+  :itime          [value]         Exposure time (time units)
+  :xairmass       [value]         Airmass value (number)
+  :ifilter        [string]        Filter id string
+  :otime          [string]        Time of observation (time units)
   
   # Fitting parameters
   
-  :function	[string]	PSF model (radgauss|elgauss|moments)
-  :box		[value]		Width of the fitting box (scale units)
-  :maxiter	[value]		Maximum number of iterations
-  :nreject	[value]		Maximum number of rejection cycles
-  :kreject	[value]		Rejection limit (sigma)
+  :function       [string]        PSF model (radgauss|elgauss|moments)
+  :box            [value]         Width of the fitting box (scale units)
+  :maxiter        [value]         Maximum number of iterations
+  :nreject        [value]         Maximum number of rejection cycles
+  :kreject        [value]         Rejection limit (sigma)
   
   # Plotting and marking functions
   
-  :mkbox		[y/n]		Mark the fitting box on the display
-  
+  :mkbox          [y/n]           Mark the fitting box on the display
   
   The following command are available from within the interactive setup menu.
   
-  
                       Interactive Fitpsf Setup Menu
   
-  	v	Mark and verify the critical fitpsf parameters (f,s,b)
+          v       Mark and verify the critical fitpsf parameters (f,s,b)
   
-  	f	Mark and verify the full-width half-maximum of the psf
-  	s	Mark and verify the standard deviation of the background
-  	l	Mark and verify the minimum good data value
-  	u	Mark and verify the maximum good data value
+          f       Mark and verify the full-width half-maximum of the psf
+          s       Mark and verify the standard deviation of the background
+          l       Mark and verify the minimum good data value
+          u       Mark and verify the maximum good data value
   
-  	b	Mark and verify the half-width of the fitting box
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+          b       Mark and verify the half-width of the fitting box
+  </pre></div>
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   The fitting parameters are <i>function</i>, the functional form of the model
   to be fit, <i>maxiter</i>, the maximum number of iterations per fit,
@@ -429,22 +424,21 @@ fitpsf: Model the stellar psf with an analytic function
   Gaussian sigma.  The datapars parameter <i>threshold</i> determines the
   intensity threshold above which the moment analysis is performed.
   </p>
-  <!-- EndSection:   'ALGORITHMS' -->
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   In interactive mode the following quantities are printed on the
   terminal as shown below, for the radial Gaussian, elliptical Gaussian and
   moments functions respectively.
   </p>
-  <pre>
-      image  xcenter  ycenter  rsigma  amplitude  sky  err
+  <div class="highlight-default-notranslate"><pre>
+  image  xcenter  ycenter  rsigma  amplitude  sky  err
   
-      image  xcenter  ycenter  xsigma  ysigma rot  amplitude  sky  err
+  image  xcenter  ycenter  xsigma  ysigma rot  amplitude  sky  err
   
-      image  xcenter  ycenter  rgyrat  ellip  pa amplitude  sky  err
-  
-  </pre>
+  image  xcenter  ycenter  rgyrat  ellip  pa amplitude  sky  err
+  </pre></div>
   <p>
   In both interactive and batch mode the full output is written to the
   text file <i>output</i>. At the beginning of each file is a header
@@ -453,21 +447,21 @@ fitpsf: Model the stellar psf with an analytic function
   For each star measured the following record is written for the radial
   Gaussian, elliptical Gaussian, and moments functions respectively.
   </p>
-  <pre>
-          image  xinit  yinit  id  coords  lid
-      	    xcenter  ycenter  rsigma  amplitude  sky
-  	    excenter eycenter ersigma eamplitude esky  ier  error
+  <div class="highlight-default-notranslate"><pre>
+  image  xinit  yinit  id  coords  lid
+      xcenter  ycenter  rsigma  amplitude  sky
+      excenter eycenter ersigma eamplitude esky  ier  error
   
-          image  xinit  yinit  id  coords  lid
-      	    xcenter  ycenter  xsigma  ysigma  rot  amplitude  sky
-  	    excenter eycenter exsigma eysigma erot eamplitude esky  ier\<br>
-  	    error
+  image  xinit  yinit  id  coords  lid
+      xcenter  ycenter  xsigma  ysigma  rot  amplitude  sky
+      excenter eycenter exsigma eysigma erot eamplitude esky  ier\<br>
+      error
   
-          image  xinit  yinit  id  coords  lid
-  	    xcenter  ycenter  rgyrat  ellip  pa amplitude  sky
-  	    excenter eycenter ergyrat eellip epa eamplitude esky  ier\<br>
-  	    error
-  </pre>
+  image  xinit  yinit  id  coords  lid
+      xcenter  ycenter  rgyrat  ellip  pa amplitude  sky
+      excenter eycenter ergyrat eellip epa eamplitude esky  ier\<br>
+      error
+  </pre></div>
   <p>
   Image and coords are the name of the image and coordinate files respectively.
   Id and lid are the sequence numbers of stars in the output and coordinate
@@ -487,266 +481,199 @@ fitpsf: Model the stellar psf with an analytic function
   Quantities prefixed by an e represent the errors in the corresponding
   fitted parameters.
   </p>
-  <!-- EndSection:   'OUTPUT' -->
+  </section>
+  <section id="s_errors">
   <h3>Errors</h3>
-  <!-- BeginSection: 'ERRORS' -->
   <p>
   If all went well in the fitting process the error code stored in the ier
   field described above is 0. Non-zero values of ier flag the following error
   conditions.
   </p>
-  <pre>
-            0     # No error
-  	401     # The fitting box is off the image
-  	402     # The fitting box is partially off the image
-  	403     # There are too few points to fit the function
-  	404     # The fit is singular
-  	405     # The fit did not converge
-  </pre>
-  <!-- EndSection:   'ERRORS' -->
+  <div class="highlight-default-notranslate"><pre>
+    0     # No error
+  401     # The fitting box is off the image
+  402     # The fitting box is partially off the image
+  403     # There are too few points to fit the function
+  404     # The fit is singular
+  405     # The fit did not converge
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the radial Gaussian function parameters for a few  stars in dev$ypix
   using the display and the image cursor. Setup the task parameters using
   the interactive setup menu defined by the i key command. Use uniform
   weighting.
   </p>
-  <pre>
-  	ap&gt; display dev$ypix 1 fi+
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix 1 fi+
   
-  	... display the image
   
-  	ap&gt; fitpsf dev$ypix 11 noise=constant
+  ap&gt; fitpsf dev$ypix 11 noise=constant
   
-  	... type ? to see the help screen
   
-  	... move the image cursor to a star
-  	... type i to enter the interactive setup menu
-  	... enter maximum radius in pixels of the radial profile or type
-  	    CR to accept the default value
-  	... set the fitting box width, fwhmpsf, and sigma using the graphics
-  	    cursor and the stellar radial profile plot
-  	... typing &lt;CR&gt; leaves everything at the default value
-  	... type q to quit the setup menu
+      CR to accept the default value
+      cursor and the stellar radial profile plot
   
-  	... type the v key to verify the parameters
   
-  	... type the w key to save the parameters in the parameter files
   
-  	... move the image cursor to the stars of interest and tap
-  	    the space bar
+      the space bar
   
-  	... a one line summary of the fitted parameters will appear on the
-  	    standard output for each star measured
+      standard output for each star measured
   
-  	... type q to quit and another q to confirm the quit
   
-  	... the full output will appear in ypix.psf.1
-  </pre>
+  </pre></div>
   <p>
   2. Compute the radial Gaussian function  parameters for a few  stars in 
   dev$ypix using the contour plot and the graphics cursor. Setup the task
   parameters using the interactive setup menu defined by the i key command.
   Use uniform weighting.
   </p>
-  <pre>
-  	ap&gt; show stdimcur
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; show stdimcur
   
-  	... save the current value of stdimcur
   
-  	ap&gt; set stdimcur = stdgraph
+  ap&gt; set stdimcur = stdgraph
   
-  	... define the image cursor to be the graphics cursor
   
-  	ap&gt; contour dev$ypix &gt;G ypix.plot1
+  ap&gt; contour dev$ypix &gt;G ypix.plot1
   
-  	... store the contour plot of dev$ypix in the file ypix.plot1
   
-  	ap&gt; fitpsf dev$ypix 11.0 noise=constant display=stdgraph
+  ap&gt; fitpsf dev$ypix 11.0 noise=constant display=stdgraph
   
-  	... type ? to get a short help page on the screen
   
-  	... move the graphics cursor to a star
-  	... type i to enter the interactive setup menu
-  	... enter the maximum radius in pixels of the radial profile or
-  	    type CR to accept the default value
-  	... set the fitting box width, fwhmpsf, and sigma using the graphics
-  	    cursor and the stellar radial profile plot
-  	... typing &lt;CR&gt; leaves everything at the default value
-  	... type q to quit the setup menu
+      type CR to accept the default value
+      cursor and the stellar radial profile plot
   
-  	... type the v key to verify critical parameters
   
-  	... type the w key to save the parameters in the parameter files
   
-  	... retype :.read ypix.plot1 to reload the contour plot
   
-  	... move the graphics cursor to the stars of interest and tap
-  	    the space bar
+      the space bar
   
-  	... a one line summary of the fitted parameters will appear on the
-  	    standard output for each star measured
+      standard output for each star measured
   
-  	... type q to quit and q again to confirm the quit
   
-  	... full output will appear in the text file ypix.psf.2 
-  </pre>
+  </pre></div>
   <p>
   3. Setup and run FITPSF interactively on a list of objects temporarily
   overriding the fwhmpsf and sigma parameters determined in examples 1 or 2.
   Use uniform weighting.
   </p>
-  <pre>
-          ap&gt; daofind dev$ypix fwhmpsf=2.6 sigma=25.0 verify-
-  
-          ... make a coordinate list
-  
-          ... the output will appear in the text file ypix.coo.1
-  
-          ap&gt; fitpsf dev$ypix 11.0 fwhmpsf=2.6 noise=constant coords=ypix.coo.1
-  
-          ... type ? for optional help
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; daofind dev$ypix fwhmpsf=2.6 sigma=25.0 verify-
   
   
-          ... move the graphics cursor to the stars and tap space bar
   
-                                  or
+  ap&gt; fitpsf dev$ypix 11.0 fwhmpsf=2.6 noise=constant coords=ypix.coo.1
   
-          ... select stars from the input coordinate list with m / :m #
-              and measure with spbar
   
-          ... measure stars selected from the input coordinate list
-              with n / n #
   
-          ... a one line summary of results will appear on the standard output
-              for each star measured
+                          or
   
-          ... type q to quit and q again to confirm the quit
+      and measure with spbar
   
-          ... the output will appear in ypix.psf.3 ...
-  </pre>
+      with n / n #
+  
+      for each star measured
+  
+  
+  </pre></div>
   <p>
   4. Display and fit some stars in an image section and write the output
   coordinates in the coordinate system of the parent image. Use uniform 
   weighting.
   </p>
-  <pre>
-          ap&gt; display dev$ypix[150:450,150:450] 1
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix[150:450,150:450] 1
   
-          ... display the image section
   
-          ap&gt; fitpsf dev$ypix[150:450,150:450] 11.0 noise=constant wcsout=tv
+  ap&gt; fitpsf dev$ypix[150:450,150:450] 11.0 noise=constant wcsout=tv
   
-          ... move cursor to stars and type spbar
   
-          ... type q to quit and q again to confirm quit
   
-          ... output will appear in ypix.psf.4
   
-          ap&gt; pdump ypix.psf.4 xc,yc yes | tvmark 1 STDIN col=204
-  </pre>
+  ap&gt; pdump ypix.psf.4 xc,yc yes | tvmark 1 STDIN col=204
+  </pre></div>
   <p>
   5. Run FITPSF in batch mode using the coordinate file and the previously
   saved parameters. Use uniform weighting. Verify the critical parameters.
   </p>
-  <pre>
-          ap&gt; fitpsf dev$ypix 11.0 coords=ypix.coo.1 noise=constant verify+ \<br>
-              inter-
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; fitpsf dev$ypix 11.0 coords=ypix.coo.1 noise=constant verify+ \<br>
+      inter-
   
-          ... output will appear in ypix.psf.5 ...
-  </pre>
+  </pre></div>
   <p>
   6. Repeat example 5 but assume that the input coordinate are ra and dec
   in degrees and degrees, turn off verification, and submit the task to to
   the background. Use uniform weighting.
   </p>
-  <pre>
-          ap&gt; display dev$ypix 1
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix 1
   
-          ap&gt; rimcursor wcs=world &gt; radec.coo
+  ap&gt; rimcursor wcs=world &gt; radec.coo
   
-          ... move to selected stars and type any key
   
-          ... type ^Z to quit
   
-          ap&gt; fitpsf dev$ypix 11.0 coords=radec.coo noise=constant \<br>
-              wcsin=world verify- inter- &amp;
+  ap&gt; fitpsf dev$ypix 11.0 coords=radec.coo noise=constant \<br>
+      wcsin=world verify- inter- &amp;
   
-          ... output will appear in ypix.psf.6
   
-          ap&gt; pdump ypix.psf.6 xc,yc yes | tvmark 1 STDIN col=204
+  ap&gt; pdump ypix.psf.6 xc,yc yes | tvmark 1 STDIN col=204
   
-          ... mark the stars on the display
-  </pre>
+  </pre></div>
   <p>
   7. Run FITPSF interactively without using the image display.
   </p>
-  <pre>
-          ap&gt; show stdimcur
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; show stdimcur
   
-          ... record the default value of stdimcur
   
-          ap&gt; set stdimcur = text
+  ap&gt; set stdimcur = text
   
-          ... set the image cursor to the standard input
   
-          ap&gt; fitpsf dev$ypix 11.0 coords=ypix.coo.1 noise=constant
+  ap&gt; fitpsf dev$ypix 11.0 coords=ypix.coo.1 noise=constant
   
-          ... type ? for optional help
   
-          ... type :m 3 to set the initial coordinates to those of the
-              third star in the list
+      third star in the list
   
-          ... type i to enter the interactive setup menu
-          ... enter the maximum radius in pixels for the radial profile or
-              accept the default with a CR
-          ... type v to enter the default menu
-          ... set the fwhmpsf, sigma, and fitting box size  using the
-              graphics cursor and the stellar radial profile plot
-          ... typing &lt;CR&gt; after the prompt leaves the parameter at its default
-              value
-          ... type q to quit the setup menu
+      accept the default with a CR
+      graphics cursor and the stellar radial profile plot
+      value
   
-          ... type r to rewind the coordinate list
   
-          ... type l to measure all the stars in the coordinate list
   
-          ... a one line summary of the answers will appear on the standard
-              output for each star measured
+      output for each star measured
   
-          ... type q to quit followed by q to confirm the quit
   
-          ... full output will appear in the text file ypix.psf.7
   
-          ap&gt; set stdimcur = &lt;default&gt;
+  ap&gt; set stdimcur = &lt;default&gt;
   
-          ... reset the value of stdimcur
-  </pre>
+  </pre></div>
   <p>
   8. Use an image cursor command file to drive the FITPSF task. The cursor command
   file shown below sets the fwhmpsf, sigma, and noise, computes the model
   fit parameter values for 3 stars, updates the parameter files, and quits
   the task.
   </p>
-  <pre>
-          ap&gt; type cmdfile
-          : fwhmpsf 2.6
-          : sigma 5.0
-          : noise constant
-          442 410 101 \040
-          349 188 101 \040
-          225 131 101 \040
-          w
-          q
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; type cmdfile
+  : fwhmpsf 2.6
+  : sigma 5.0
+  : noise constant
+  442 410 101 \040
+  349 188 101 \040
+  225 131 101 \040
+  w
+  q
   
-          ap&gt; fitpsf dev$ypix 11.0 icommands=cmdfile verify-
+  ap&gt; fitpsf dev$ypix 11.0 icommands=cmdfile verify-
   
-          ... full output will appear in ypix.psf.8
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   In interactive mode the user should not change the type function to be fit
   after the first record is written to the output file. In this case the file
@@ -765,14 +692,14 @@ fitpsf: Model the stellar psf with an analytic function
   It may be necessary to run gflush and to redisplay the image
   to get the overlays position correctly.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars, radprof
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

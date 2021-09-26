@@ -7,29 +7,29 @@ implot: Plot lines and columns of images using cursors
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   implot image [line]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>List of images to be plotted.  If more than one image is in the list then
   the <span style="font-family: monospace;">'m'</span> and <span style="font-family: monospace;">'n'</span> keys are used proceed to the previous and next image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line' -->
   <dd>If given, the number of the image line to be plotted, otherwise the central
   line is plotted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcs">
   <dt><b>wcs = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical"' -->
   <dd>The world coordinate system (<i>wcs</i>) to be used for axis labeling.
@@ -69,7 +69,7 @@ implot: Plot lines and columns of images using cursors
   may be any linear or nonlinear world system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_step">
   <dt><b>step = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step = 0' -->
   <dd>Step size for stepping through lines or columns in an image with the
@@ -78,9 +78,9 @@ implot: Plot lines and columns of images using cursors
   a colon command.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Implot is an interactive, cursor driven task for examining images by plotting
   the lines and columns or the averages of lines and columns.  An image
@@ -97,24 +97,24 @@ implot: Plot lines and columns of images using cursors
   batch plotter or metafile, and plot annotation facilities.  Cursor mode is
   documented elsewhere.
   </p>
-  <pre>
-  	?		print help and other info
-  	a		plot the average of a range of lines or columns
-  	c		plot a column
-  	e		expand plot by marking corners of viewport
-  	j		move down within image (moving section)
-  	k		move up within image (moving section)
-  	l		plot a line
-  	m		proceed to the previous image in the list
-  	n		proceed to the next image in the list
-  	o		overplot next vector
-  	p		measure profile (mark region and bkg with 2 pos)
-  	q		quit
-  	s		print statistics on a region
-  	w		change world coordinate system
-  	/		scroll status line
-  	&lt;space&gt;		print coordinates and pixel value
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ?               print help and other info
+  a               plot the average of a range of lines or columns
+  c               plot a column
+  e               expand plot by marking corners of viewport
+  j               move down within image (moving section)
+  k               move up within image (moving section)
+  l               plot a line
+  m               proceed to the previous image in the list
+  n               proceed to the next image in the list
+  o               overplot next vector
+  p               measure profile (mark region and bkg with 2 pos)
+  q               quit
+  s               print statistics on a region
+  w               change world coordinate system
+  /               scroll status line
+  &lt;space&gt;         print coordinates and pixel value
+  </pre></div>
   <p>
   The single character keystroke commands use the position to the cursor to
   determine what region of the image to plot.  If the plot is examined carefully
@@ -191,21 +191,21 @@ implot: Plot lines and columns of images using cursors
   In addition to the single keystroke commands, the following : escape
   commands are provided:
   </p>
-  <pre>
-  	:a N		set number of lines or columns to average
-  	:c N [M]	plot column N [average of columns N to M]
-  	:f format	set the x coordinate numerical format
-  	:i imagename	open a new image for input
-  	:l N [M]	plot line N [average of lines N to M]
-  	:o		overplot
-  	:log+		log scale in Y
-  	:log-		turn off log scale in Y
-  	:step N		set step size for j,k
-  	:solid		overplot with solid, not dashed, lines
-  	:w wcsname	change world coordinate systems
-  	:x x1 x2	fix range in X (call with no args to unfix)
-  	:y y1 y2	fix range in Y (call with no args to unfix)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  :a N            set number of lines or columns to average
+  :c N [M]        plot column N [average of columns N to M]
+  :f format       set the x coordinate numerical format
+  :i imagename    open a new image for input
+  :l N [M]        plot line N [average of lines N to M]
+  :o              overplot
+  :log+           log scale in Y
+  :log-           turn off log scale in Y
+  :step N         set step size for j,k
+  :solid          overplot with solid, not dashed, lines
+  :w wcsname      change world coordinate systems
+  :x x1 x2        fix range in X (call with no args to unfix)
+  :y y1 y2        fix range in Y (call with no args to unfix)
+  </pre></div>
   <p>
   The <span style="font-family: monospace;">'c'</span> and <span style="font-family: monospace;">'l'</span> commands are identical to the keystroke commands except
   that the column or line position is explicitly entered rather than taken
@@ -237,16 +237,16 @@ implot: Plot lines and columns of images using cursors
   (the default) the WCS attribute format will be used.  Any other value will
   override the image attribute.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Enter cursor mode, plotting line 240 of the 300x480 image 'crab':
   </p>
-  <pre>
-  	cl&gt; implot crab
-  	(plot appears)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; implot crab
+  (plot appears)
+  </pre></div>
   <p>
   Type <span style="font-family: monospace;">'?'</span> to get the list of recognized keystrokes.  Move the cursor and
   type <span style="font-family: monospace;">'l'</span> to plot the line at the Y position of the cursor.  Try typing <span style="font-family: monospace;">'c'</span>
@@ -256,22 +256,22 @@ implot: Plot lines and columns of images using cursors
   mode <span style="font-family: monospace;">'E'</span> to playback a movie of a small region, then type 0 (zero) to
   restore the original plot.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   It should be possible to use the image display cursor to mark the lines or
   columns to be plotted.  This capability will be added when the image display
   is interfaced to GIO (the IRAF graphics subsystem).
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imexamine, cursor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

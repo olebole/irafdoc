@@ -7,14 +7,14 @@ tlcol: List column information for a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tlcol table
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task is used to list column information for a table.  The output is
   written to STDOUT, which may be redirected to a file.  There will be one line
@@ -27,10 +27,10 @@ tlcol: List column information for a table.
   The output from this task may be used as input to various tasks such
   as 'tcreate', 'tprint', and 'tproject'.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
   <dd>A list of tables for which column info is to be printed.
@@ -56,50 +56,49 @@ tlcol: List column information for a table.
   the array size is shown in square brackets appended to the data type.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Display the names, data types, print formats, and units of all the
   columns in the table <span style="font-family: monospace;">"example.tab"</span>:
   </p>
-  <pre>
-  	tt&gt; tlcol example.tab
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tlcol example.tab
+  </pre></div>
   <p>
   2.  Print (using the 'tprint' task) specific columns:
   </p>
-  <pre>
-  
-  	tt&gt; tlcol example.tab nlist=1 &gt;colnames.lis
-  	tt&gt; edit colnames.lis
+  <div class="highlight-default-notranslate"><pre>
+          tt&gt; tlcol example.tab nlist=1 &gt;colnames.lis
+          tt&gt; edit colnames.lis
           (Rearrange the column names and perhaps delete some of them.)
-  	tt&gt; tprint example.tab columns=@colnames.lis
+          tt&gt; tprint example.tab columns=@colnames.lis
   
   3.  Create a new table based on the columns in "example.tab":
   
-  	tt&gt; tlcol example.tab nlist=4 &gt;colnames.lis
-  	tt&gt; edit colnames.lis
+          tt&gt; tlcol example.tab nlist=4 &gt;colnames.lis
+          tt&gt; edit colnames.lis
           (Delete or modify some column descriptions and/or add new ones.)
-  	tt&gt; tcreate ex2.tab cdfile=colnames.lis ...
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+          tt&gt; tcreate ex2.tab cdfile=colnames.lis ...
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tinfo, tcreate, tdump
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

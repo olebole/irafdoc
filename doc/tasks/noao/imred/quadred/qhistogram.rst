@@ -7,21 +7,21 @@ qhistogram: Make histogram of multi-amplifier CCD image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   qhistogram images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of image names in <b>quadformat</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_window">
   <dt><b>window = <span style="font-family: monospace;">"datasec"</span> (datasec|trimsec|biassec)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window = "datasec" (datasec|trimsec|biassec)' -->
   <dd>Type of section to use for histogram.  The choices are <span style="font-family: monospace;">"datasec"</span> for the
@@ -32,32 +32,32 @@ qhistogram: Make histogram of multi-amplifier CCD image
   <p>
   The remaining parameters come from the <b>imhistogram</b> task.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This script tasks uses the <b>quadsections</b> task to break the
   <b>quadformat</b> data into separate sections and runs the <b>imhistogram</b>
   task on the sections.  The graphics is collected onto a single page.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To graph the histograms (default behavior).
   </p>
-  <pre>
-      qu&gt; qhist quad0072
-      [graph appears]
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  qu&gt; qhist quad0072
+  [graph appears]
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   quadformat, quadsections, imhistogram
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

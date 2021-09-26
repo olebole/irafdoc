@@ -7,34 +7,33 @@ hdshift: Align related HD curves
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   hdshift database
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>Input list of databases containing density, exposure and fit information.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   For each file in <b>database</b>, procedure <b>hdshift</b> calculates and 
   subtracts a zero point shift to bring several related HD curves into
   alignment.  The individual shifts are calculated by elimination of the 
   first coefficient (Bevington, eqn 9-3):
   </p>
-  <pre>
-                  _      _      _               _
-             a0 = y - a1*X - a2*X**2 - ... - an*X**n
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+       _      _      _               _
+  a0 = y - a1*X - a2*X**2 - ... - an*X**n
+  </pre></div>
   <p>
   Here, the averages over y and X refer to individual <b>database</b> averages; 
   the coefficients a1, ... an were previously calculated using data from all 
@@ -49,18 +48,17 @@ hdshift: Align related HD curves
   to run task <i>hdfit</i> on the modified <b>database</b> list and
   determine the common solution.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  Shift the curves in four databases to a common zero point.
   
-  Shift the curves in four databases to a common zero point.  
-  
-  	cl&gt; hdshift db1,db2,db3,db4
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+          cl&gt; hdshift db1,db2,db3,db4
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   hdfit, hdtoi
   <br>
@@ -69,7 +67,7 @@ hdshift: Align related HD curves
   K.Kjar, p 69, (1980), an ESO Publication.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

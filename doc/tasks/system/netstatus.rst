@@ -7,20 +7,20 @@ netstatus: Print the status of the local network
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   netstatus
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <p>
   None.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Netstatus</i> prints the status of the local network as perceived by the
   system process x_system.e (the network status may differ for each subprocess).
@@ -30,10 +30,10 @@ netstatus: Print the status of the local network
   The local network is defined by the table files <span style="font-family: monospace;">"dev$hosts"</span>, <span style="font-family: monospace;">"dev$uhosts"</span>,
   and <span style="font-family: monospace;">"dev$hostlogin"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; netstatus
   Local node `draco' (5), default node `draco', 12 nodes in local network
   
@@ -50,12 +50,12 @@ netstatus: Print the status of the local network
         10      0     0  00000  octans sun3 o
         11      0     0  00000  pavo mvax1 p
         12      0     0  00000  volans lsi1
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

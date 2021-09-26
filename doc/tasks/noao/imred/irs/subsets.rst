@@ -7,21 +7,21 @@ subsets: Subtract pairs in strings of spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   subsets input records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The root file name for the input spectra in the string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra indicating the elements of the string.
@@ -29,23 +29,23 @@ subsets: Subtract pairs in strings of spectra
   elements to the input root name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>This is the root file name for the names of the spectra which will
   be created by the subtraction operation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_start_rec">
   <dt><b>start_rec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec' -->
   <dd>The starting record number to be appended to the root name of the
   created spectra.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Pairs of spectra are formed from the input string in the order that
   the record numbers would suggest. 
@@ -58,25 +58,25 @@ subsets: Subtract pairs in strings of spectra
   The header from the principle spectrum is assigned to the output
   spectrum.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following example forms 50 new spectra from nite1.2001-nite1.2002,
   nite1.2003-nite1.2004, ...
   </p>
-  <p>
-  	cl&gt; subsets nite1 2001-2100
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; subsets nite1 2001-2100
+  </pre></div>
   <p>
   The following example creates new spectra from the pairs nite2.2001-nite2.2002,
   nite2.2003-nite2.2004 in spite of the order of the record numbers entered.
   </p>
-  <p>
-  	cl&gt; subsets nite2 2001,2003,2002,2004
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; subsets nite2 2001,2003,2002,2004
+  </pre></div>
   
-  <!-- EndSection:    'EXAMPLES' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

@@ -7,27 +7,27 @@ i2sun: Convert IRAF images to Sun rasterfiles
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   i2sun input output z1 z2
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input image template, @file, n-dimensional image, or combination.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Root template for output images, e.g. <span style="font-family: monospace;">"home$ras/frame.%d"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clutfile">
   <dt><b>clutfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clutfile' Line='clutfile' -->
   <dd>Previously saved Sun rasterfile (e.g. output from IMTOOL), containing the
@@ -36,7 +36,7 @@ i2sun: Convert IRAF images to Sun rasterfiles
   <span style="font-family: monospace;">"pseudo.ras"</span>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z1">
   <dt><b>z1 = INDEF, z2 = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = INDEF, z2 = INDEF' -->
   <dd>Minimum and maximum pixel/voxel intensities to scale to full output
@@ -44,14 +44,14 @@ i2sun: Convert IRAF images to Sun rasterfiles
   images in the sequence.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ztrans">
   <dt><b>ztrans = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "linear"' -->
   <dd>Intensity transformation on input data (linear|log|none|user).
   If <span style="font-family: monospace;">"user"</span>, you must also specify <i>ulutfile</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ulutfile">
   <dt><b>ulutfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ulutfile' Line='ulutfile' -->
   <dd>Name of text file containing the look up table when <i>ztrans</i> = user.
@@ -59,7 +59,7 @@ i2sun: Convert IRAF images to Sun rasterfiles
   intensity, column 2 the desired greyscale output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xsize">
   <dt><b>xsize = INDEF, ysize = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xsize' Line='xsize = INDEF, ysize = INDEF' -->
   <dd>If specified, these will be the dimensions of all output Sun rasterfiles
@@ -67,14 +67,14 @@ i2sun: Convert IRAF images to Sun rasterfiles
   could vary, though this would create a jittery movie).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = 1.0, ymag = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1.0, ymag = 1.0' -->
   <dd>Another way to specify output rasterfile dimensions.  These are the 
   magnification factors to apply to the input image dimensions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>Order of the interpolator to be used for spatially interpolating the image.
@@ -82,7 +82,7 @@ i2sun: Convert IRAF images to Sun rasterfiles
   interpolation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sliceaxis">
   <dt><b>sliceaxis = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sliceaxis' Line='sliceaxis = 3' -->
   <dd>Image axis from which to cut multiple slices when input image dimension is
@@ -90,7 +90,7 @@ i2sun: Convert IRAF images to Sun rasterfiles
   be 3 or greater.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_swap">
   <dt><b>swap = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='swap' Line='swap = no' -->
   <dd>Swap rasterfile bytes on output?  Used when rasterfiles are being written
@@ -98,9 +98,9 @@ i2sun: Convert IRAF images to Sun rasterfiles
   (e.g. between VAX and Sun).
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Given a series of IRAF images, an intensity transformation, and a file
   containing color/greyscale lookup table information, produces one 2d image
@@ -153,35 +153,34 @@ i2sun: Convert IRAF images to Sun rasterfiles
   byte-swapping characteristics, set <i>swap</i> = yes (e.g., when running
   I2SUN on a VAX, with output to a Sun).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1.  Produce a series of Sun rasterfiles in tmp$mydir/movie/,
       using a pseudocolor color table file saved earlier, with
       input greylevels scaled between 10 and 100.
   
       cl&gt; i2sun nzoom*.imh tmp$mydir/movie/frame.%d \<br>
-  	home$colors/pseudo.ras 10 100
+          home$colors/pseudo.ras 10 100
   
   2.  Make a movie through the z, or band, axis of a datacube.
   
-      cl&gt; i2sun cube tmp$cubemovie/frame.%d 1 256 
+      cl&gt; i2sun cube tmp$cubemovie/frame.%d 1 256
   
   3.  Make a movie through the 4th, or hyper-axis of a datacube,
       holding image band 10 constant.
   
       cl&gt; i2sun hypercube[*,*,10,*] tmp$movie/frame.%d 1 256 \<br>
-  	sliceaxis=4
+          sliceaxis=4
   
   4.  Run I2SUN on a VAX, with output to a Sun.
   
       cl&gt; i2sun @imlist sunnode!home$ras/frame.%d 1 256 swap+
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   49 seconds (1 sec/frame) to produce 50 100*100 rasterfiles from a
   100*100*50 datacube with no magnification, on a diskless Sun-3/110
@@ -191,17 +190,17 @@ i2sun: Convert IRAF images to Sun rasterfiles
   bilinear interpolation.
   20 minutes for the same with a magnification factor of 5 in both x and y.
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   display, imtool, volumes.pvol
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

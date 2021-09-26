@@ -7,35 +7,35 @@ imgets: Return the value of an image header parameter as a string
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imgets image param
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>Name of the image to be accessed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_param">
   <dt><b>param</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='param' Line='param' -->
   <dd>Name of the parameter whose value is to be returned.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_value">
   <dt><b>value = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value = ""' -->
   <dd>The value of the parameter, returned as a string.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The value of the parameter <i>param</i> of the image <i>image</i> is returned
   as a string in the output parameter <i>value</i>.  The CL type coercion
@@ -49,48 +49,48 @@ imgets: Return the value of an image header parameter as a string
   The following standard image header parameters may be accessed with
   <b>imgets</b>:
   </p>
-  <pre>
-  	i_pixtype			pixel type (short, real, etc.)
-  	i_naxis				number of dimensions
-  	i_naxis[1-7]			length of the axes (x=1,y=2)
-  	i_minpixval			minimum pixel value or INDEF
-  	i_maxpixval			maximum pixel value or INDEF
-  	i_title				image title string
-  	i_pixfile			pixel storage file name
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  i_pixtype                       pixel type (short, real, etc.)
+  i_naxis                         number of dimensions
+  i_naxis[1-7]                    length of the axes (x=1,y=2)
+  i_minpixval                     minimum pixel value or INDEF
+  i_maxpixval                     maximum pixel value or INDEF
+  i_title                         image title string
+  i_pixfile                       pixel storage file name
+  </pre></div>
   <p>
   This task is most useful for image parameter access from within CL scripts.
   The task <b>imheader</b> is more useful for just looking at the image header
   parameters.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Fetch the instrument parameter <span style="font-family: monospace;">"HA"</span> (hour angle) from the image header of
   the image <span style="font-family: monospace;">"nite1.1001"</span>, and compute and print the hour angle in degrees:
   </p>
-  <pre>
-  	cl&gt; imgets nite1.1001 HA
-  	cl&gt; = real(imgets.value) * 15.0
-  	42.79335
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imgets nite1.1001 HA
+  cl&gt; = real(imgets.value) * 15.0
+  42.79335
+  </pre></div>
   <p>
   2. Print the number of pixels per line in the same image.
   </p>
-  <pre>
-  	cl&gt; imgets nite1.1001 i_naxis1
-  	cl&gt; = int(imgets.value)
-  	1024
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imgets nite1.1001 i_naxis1
+  cl&gt; = int(imgets.value)
+  1024
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imheader, hedit, hselect
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

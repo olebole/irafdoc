@@ -7,15 +7,15 @@ afiltpars: Default astrometry file filtering parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   afiltpars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_fsort">
   <dt><b>fsort = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fsort' Line='fsort = ""' -->
   <dd>The field or field expression on which to sort the catalog / file records.
@@ -25,13 +25,13 @@ afiltpars: Default astrometry file filtering parameters
   are not sorted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_freverse">
   <dt><b>freverse = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='freverse' Line='freverse = no' -->
   <dd>Sort in descending order ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fexpr">
   <dt><b>fexpr = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fexpr' Line='fexpr = yes' -->
   <dd>The boolean record selection expression. By default all catalog / file records
@@ -40,7 +40,7 @@ afiltpars: Default astrometry file filtering parameters
   and field expressions, e.g. <span style="font-family: monospace;">"mag1 &lt; 16.0"</span>, or <span style="font-family: monospace;">"(f4 - f3) &lt; 1.5"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fields">
   <dt><b>fields = <span style="font-family: monospace;">"f[*]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields = "f[*]"' -->
   <dd>The list of output fields and field expressions. By default the sorted and
@@ -50,7 +50,7 @@ afiltpars: Default astrometry file filtering parameters
   or <span style="font-family: monospace;">"f4 - f3"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fnames">
   <dt><b>fnames = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnames' Line='fnames = ""' -->
   <dd>The list of new field names separated by commas. By default new fields, e.g.
@@ -59,7 +59,7 @@ afiltpars: Default astrometry file filtering parameters
   i.e. they cannot be expressions or contain embedded blanks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fntypes">
   <dt><b>fntypes = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fntypes' Line='fntypes = ""' -->
   <dd>The list of new field types separated by commas. By default new fields are
@@ -67,21 +67,21 @@ afiltpars: Default astrometry file filtering parameters
   integer, <span style="font-family: monospace;">"r"</span> for real, or <span style="font-family: monospace;">"d"</span> for double.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fnunits">
   <dt><b>fnunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnunits' Line='fnunits = ""' -->
   <dd>The list of new field units separated by commas. By default new fields are
   assigned units of INDEF. Units specifications may not contain embedded blanks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fnformats">
   <dt><b>fnformats = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnformats' Line='fnformats = ""' -->
   <dd>The list of new field formats. By default string, integer, and floating
   point fields are assigned formats of <span style="font-family: monospace;">"%10s"</span>, <span style="font-family: monospace;">"%10d"</span>, and <span style="font-family: monospace;">"%10g"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fosystem">
   <dt><b>fosystem = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fosystem' Line='fosystem = ""' -->
   <dd>The output celestial coordinate system. If fosystem is undefined
@@ -90,7 +90,7 @@ afiltpars: Default astrometry file filtering parameters
   by typing <span style="font-family: monospace;">"help ccsystems"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fira">
   <dt><b>fira = <span style="font-family: monospace;">"ra"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fira' Line='fira = "ra"' -->
   <dd>The name of the catalog field containing the right ascension / longitude
@@ -99,7 +99,7 @@ afiltpars: Default astrometry file filtering parameters
   <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f1"</span> can be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fidec">
   <dt><b>fidec = <span style="font-family: monospace;">"dec"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fidec' Line='fidec = "dec"' -->
   <dd>The name of the catalog field containing the declination / latitude
@@ -108,7 +108,7 @@ afiltpars: Default astrometry file filtering parameters
   e.g. <span style="font-family: monospace;">"f2"</span> can be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_foraunits">
   <dt><b>foraunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='foraunits' Line='foraunits = ""' -->
   <dd>The units of fira. Permitted values are <span style="font-family: monospace;">"hours"</span>, <span style="font-family: monospace;">"degrees"</span>, and <span style="font-family: monospace;">"radians"</span>. If
@@ -118,7 +118,7 @@ afiltpars: Default astrometry file filtering parameters
   coordinate systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fodecunits">
   <dt><b>fodecunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fodecunits' Line='fodecunits = ""' -->
   <dd>The units of fidec. Permitted values are <span style="font-family: monospace;">"degrees"</span> and <span style="font-family: monospace;">"radians"</span>. If 
@@ -126,21 +126,21 @@ afiltpars: Default astrometry file filtering parameters
   output celestial coordinate system fosystem, e.g. degrees for all systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_foraformat">
   <dt><b>foraformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='foraformat' Line='foraformat = ""' -->
   <dd>The format of fira. If undefined foraformat defaults to the equivalent catalog
   format.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fodecformat">
   <dt><b>fodecformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fodecformat' Line='fodecformat = ""' -->
   <dd>The format of fidec. If undefined fodecformat defaults to the equivalent
   catalog format.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fixp">
   <dt><b>fixp = <span style="font-family: monospace;">"xp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixp' Line='fixp = "xp"' -->
   <dd>The name of the catalog field containing the predicted x coordinate
@@ -149,7 +149,7 @@ afiltpars: Default astrometry file filtering parameters
   <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f1"</span> can be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fiyp">
   <dt><b>fiyp = <span style="font-family: monospace;">"yp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fiyp' Line='fiyp = "yp"' -->
   <dd>The name of the catalog field containing the predicted y coordinate
@@ -158,7 +158,7 @@ afiltpars: Default astrometry file filtering parameters
   <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f2"</span> can be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fixc">
   <dt><b>fixc = <span style="font-family: monospace;">"xc"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixc' Line='fixc = "xc"' -->
   <dd>The name of the catalog field containing the centered x coordinate
@@ -167,7 +167,7 @@ afiltpars: Default astrometry file filtering parameters
   <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f1"</span> can be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fiyc">
   <dt><b>fiyc = <span style="font-family: monospace;">"yc"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fiyc' Line='fiyc = "yc"' -->
   <dd>The name of the catalog field containing the centered y coordinate
@@ -176,21 +176,21 @@ afiltpars: Default astrometry file filtering parameters
   <span style="font-family: monospace;">"f#"</span>, e.g. <span style="font-family: monospace;">"f2"</span> can be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_foxformat">
   <dt><b>foxformat = <span style="font-family: monospace;">"%10.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='foxformat' Line='foxformat = "%10.3f"' -->
   <dd>The format of fixp and fixc. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_foyformat">
   <dt><b>foyformat = <span style="font-family: monospace;">"%10.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='foyformat' Line='foyformat = "%10.3f"' -->
   <dd>The format of fiyp and fiyc.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The catalog / file filtering parameters  are used to filter the results
   of a catalog query before writing the results to disk. Catalog / file filtering
@@ -250,9 +250,9 @@ afiltpars: Default astrometry file filtering parameters
   in fields called <span style="font-family: monospace;">"xp"</span>, <span style="font-family: monospace;">"yp"</span>, <span style="font-family: monospace;">"xc"</span>, and <span style="font-family: monospace;">"yc"</span>. If these fields do not have
   standard names then generic field names of the form <span style="font-family: monospace;">"f#"</span> can be substituted.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_expressions">
   <h3>Expressions</h3>
-  <!-- BeginSection: 'EXPRESSIONS' -->
   <p>
   The output records are selected on the basis of the input boolean
   expression <i>fexpr</i> whose variables are the field names specified
@@ -271,14 +271,14 @@ afiltpars: Default astrometry file filtering parameters
   <p>
   The following logical operators can be used in the boolean expression. 
   </p>
-  <pre>
-          equal             ==    not equal               !=
-          less than         &lt;     less than or equal      &lt;=
-          greater than      &gt;     greater than or equal   &gt;=
-          or                ||    and                     &amp;&amp;
-          negation          !     pattern match           ?=
-          concatenation     //
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  equal             ==    not equal               !=
+  less than         &lt;     less than or equal      &lt;=
+  greater than      &gt;     greater than or equal   &gt;=
+  or                ||    and                     &amp;&amp;
+  negation          !     pattern match           ?=
+  concatenation     //
+  </pre></div>
   <p>
   The pattern match character ?=  takes a
   string expression as its first argument and a pattern as its second argument.
@@ -287,19 +287,19 @@ afiltpars: Default astrometry file filtering parameters
   The meta-characters themselves can be matched by preceding them with the escape
   character.  The meta-characters listed below. 
   </p>
-  <pre>
-          beginning of string     ^       end of string           $
-          one character           ?       zero or more characters *
-          white space             #       escape character        \<br>
-          ignore case             {       end ignore case         }
-          begin character class   [       end character class     ]
-          not, in char class      ^       range, in char class    -
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  beginning of string     ^       end of string           $
+  one character           ?       zero or more characters *
+  white space             #       escape character        \<br>
+  ignore case             {       end ignore case         }
+  begin character class   [       end character class     ]
+  not, in char class      ^       range, in char class    -
+  </pre></div>
   <p>
   The expression may also include arithmetic operators and functions.
   The following arithmetic operators and functions are supported.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   addition                +               subtraction             -
   multiplication          *               division                /
   negation                -               exponentiation          **
@@ -312,10 +312,10 @@ afiltpars: Default astrometry file filtering parameters
   minimum                 min(x,y)        maximum                 max(x,y)
   convert to integer      int(x)          convert to real         real(x)
   nearest integer         nint(x)         modulo                  mod(x)
-  </pre>
-  <!-- EndSection:   'EXPRESSIONS' -->
+  </pre></div>
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -323,7 +323,7 @@ afiltpars: Default astrometry file filtering parameters
   format code <span style="font-family: monospace;">"r"</span> only.  The w and d fields are optional.  The  format
   codes C are as follows:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -344,8 +344,8 @@ afiltpars: Default astrometry file filtering parameters
   Conventions for w (field width) specification:
   
       W =  n      right justify in field of N characters, blank fill
-  	-n      left justify in field of N characters, blank fill
-  	0n      zero fill at left (only if right justified)
+          -n      left justify in field of N characters, blank fill
+          0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
   
   Escape sequences (e.g. "\n" for newline):
@@ -388,51 +388,51 @@ afiltpars: Default astrometry file filtering parameters
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the catalog / file filtering parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; lpar afiltpars
-  </pre>
+  </pre></div>
   <p>
   2. Edit the catalog / file filtering parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; afiltpars
-  </pre>
+  </pre></div>
   <p>
   3. Edit the catalog filtering parameters from the agetcat task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; epar agetcat
-  </pre>
+  </pre></div>
   <p>
   4. Save the current afiltpars parameter values in a text file called
   afilt1.par.  Use the saved parameter set in the next call to the agetcat 
   task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; epar afiltpars
   cl&gt; agetcat ... afiltpars=afilt1.par ...
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   agetcat, afiltcat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXPRESSIONS' 'FORMATS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

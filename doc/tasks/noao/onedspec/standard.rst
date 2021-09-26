@@ -7,15 +7,15 @@ standard: Identify standard stars to be used in sensitivity calc
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   standard input [records] output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input standard star spectra or root names if using the record number
@@ -27,7 +27,7 @@ standard: Identify standard stars to be used in sensitivity calc
   file should be used with <b>sensfunc</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records (imred.irs and imred.iids only)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)' -->
   <dd>List of records or ranges of records to be appended to the input spectra
@@ -39,7 +39,7 @@ standard: Identify standard stars to be used in sensitivity calc
   format is specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The name of a text file which will contain the output from <b>standard</b>.
@@ -49,7 +49,7 @@ standard: Identify standard stars to be used in sensitivity calc
   deleted by the user if the filename is to be reused.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_samestar">
   <dt><b>samestar = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='samestar' Line='samestar = yes' -->
   <dd>Is the same star in all apertures?  If set to no then each aperture may
@@ -61,7 +61,7 @@ standard: Identify standard stars to be used in sensitivity calc
   all apertures must contain the same star.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_beam_switch">
   <dt><b>beam_switch = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='beam_switch' Line='beam_switch = no' -->
   <dd>Beam switch the spectra?  If yes then a beam switch mode is used for the spectra
@@ -71,7 +71,7 @@ standard: Identify standard stars to be used in sensitivity calc
   of the same standard star and the <i>samestar</i> parameter is ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected from the input list of spectra.  If no list
@@ -79,7 +79,7 @@ standard: Identify standard stars to be used in sensitivity calc
   record number extensions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bandwidth">
   <dt><b>bandwidth = INDEF, bandsep = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bandwidth' Line='bandwidth = INDEF, bandsep = INDEF' -->
   <dd>Bandpass widths and separations in wavelength units.  If INDEF then the
@@ -90,14 +90,14 @@ standard: Identify standard stars to be used in sensitivity calc
   changed interactively if desired.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fnuzero">
   <dt><b>fnuzero = 3.68e-20</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnuzero' Line='fnuzero = 3.68e-20' -->
   <dd>The absolute flux per unit frequency at an AB magnitude of zero.  This is used
   to convert the calibration  AB magnitudes to absolute flux by the formula
-  <pre>
-      f_nu = fnuzero * 10. ** (-0.4 * m_AB)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  f_nu = fnuzero * 10. ** (-0.4 * m_AB)
+  </pre></div>
   The flux units are also determined by this parameter.  However, the
   frequency to wavelength interval conversion assumes frequency in hertz.
   The default value is based on a calibration of Vega at 5556 Angstroms of
@@ -106,7 +106,7 @@ standard: Identify standard stars to be used in sensitivity calc
   user to change this calibration.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extinction">
   <dt><b>extinction = &lt;no default&gt;</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = &lt;no default&gt;' -->
   <dd>Extinction file used to make second order extinction corrections across
@@ -118,23 +118,23 @@ standard: Identify standard stars to be used in sensitivity calc
   Note that one can choose to use a null extinction file in both.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_caldir">
   <dt><b>caldir = <span style="font-family: monospace;">")_.caldir"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir = ")_.caldir"' -->
   <dd>Calibration directory containing standard star data.  The
   default value of <span style="font-family: monospace;">")_.caldir"</span> means to use the package parameter <span style="font-family: monospace;">"caldir"</span>.
   A list of standard calibration directories may be obtained by listing the
   file <span style="font-family: monospace;">"onedstds$README"</span>; for example:
-  <pre>
-      cl&gt; page onedstds$README
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; page onedstds$README
+  </pre></div>
   The user may copy or create their own calibration files and specify the
   directory.  The directory <span style="font-family: monospace;">""</span> refers to the current working directory.  The
   standard calibration directory for blackbody curves is
   <span style="font-family: monospace;">"onedstds$blackbody/"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
@@ -147,7 +147,7 @@ standard: Identify standard stars to be used in sensitivity calc
   <b>observatory</b> for additional information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interact">
   <dt><b>interact = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interact' Line='interact = no' -->
   <dd>If set to no, then the default wavelength set (either that from the star
@@ -157,21 +157,21 @@ standard: Identify standard stars to be used in sensitivity calc
   and the bandpasses adjusted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for use with the interactive mode.  Normally this is
   the user's graphics terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input for use with the interactive mode.  When null the
   standard graphics cursor is used otherwise the specified file is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_star_name">
   <dt><b>star_name</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='star_name' Line='star_name' -->
   <dd>The name of the star observed in the current series of spectra.  Calibration
@@ -184,7 +184,7 @@ standard: Identify standard stars to be used in sensitivity calc
   The following three queried parameters apply if the selected calibration
   file is for a blackbody.
   </p>
-  <dl>
+  <dl id="l_mag">
   <dt><b>mag</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mag' Line='mag' -->
   <dd>The magnitude of the observed star in the band given by the
@@ -194,7 +194,7 @@ standard: Identify standard stars to be used in sensitivity calc
   magnitudes between the two bands is in the calibration directory
   </dd>
   </dl>
-  <dl>
+  <dl id="l_magband">
   <dt><b>magband</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='magband' Line='magband' -->
   <dd>The standard band name for the input magnitude.  This should generally
@@ -202,7 +202,7 @@ standard: Identify standard stars to be used in sensitivity calc
   not the magnitude will be converted to the calibration band.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_teff">
   <dt><b>teff</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='teff' Line='teff' -->
   <dd>The effective temperature (deg K) or the spectral type of the star being
@@ -219,7 +219,7 @@ standard: Identify standard stars to be used in sensitivity calc
   The following two parameters are queried if the image does not contain
   the information.
   </p>
-  <dl>
+  <dl id="l_airmass">
   <dt><b>airmass, exptime</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass, exptime' -->
   <dd>If the airmass and exposure time are not in the header nor can they be
@@ -231,16 +231,16 @@ standard: Identify standard stars to be used in sensitivity calc
   <p>
   The following parameter is for the task to make queries.
   </p>
-  <dl>
+  <dl id="l_answer">
   <dt><b>answer</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='answer' Line='answer' -->
   <dd>Interactive query parameter.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_cursor_keys">
   <h3>Cursor keys</h3>
-  <!-- BeginSection: 'CURSOR KEYS' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?  Display help page
   a  Add a new band by marking the endpoints
   d  Delete band nearest the cursor in wavelength
@@ -249,11 +249,11 @@ standard: Identify standard stars to be used in sensitivity calc
   w  Window plot  (follow with <span style="font-family: monospace;">'?'</span> for help)
   I  Interrupt task immediately
   
-  :show	Show current bandpass data
-  </pre>
-  <!-- EndSection:   'CURSOR KEYS' -->
+  :show   Show current bandpass data
+  </pre></div>
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Observations of standard stars are integrated over calibration bandpasses
   and written to an output file along with the associated calibration
@@ -320,7 +320,7 @@ standard: Identify standard stars to be used in sensitivity calc
   There are two types of standard star calibration files as described
   below.
   </p>
-  <dl>
+  <dl id="l_STANDARD">
   <dt><b>STANDARD STAR CALIBRATION FILES</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='STANDARD' Line='STANDARD STAR CALIBRATION FILES' -->
   <dd>This type of file is any file that does not contain the parameter <span style="font-family: monospace;">"type"</span>
@@ -332,15 +332,15 @@ standard: Identify standard stars to be used in sensitivity calc
   Angstroms.
   The calibration files consist of lines with wavelengths, calibration
   magnitudes, and bandpass widths.  The magnitudes are m_AB defined as
-  <pre>
-      m_AB(star) = -2.5 * log10 (f_nu) - 48.60
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  m_AB(star) = -2.5 * log10 (f_nu) - 48.60
+  </pre></div>
   where f_nu is in erg/cm^2/s/Hz.  The m_AB calibration magnitudes
   are converted to absolute flux per unit frequency using the
   parameter <i>fnuzero</i> defined by
-  <pre>
-      f_nu = fnuzero * 10. ** (-0.4 * m_AB)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  f_nu = fnuzero * 10. ** (-0.4 * m_AB)
+  </pre></div>
   Thus, <i>fnuzero</i> is the flux at m_AB of zero.  The flux units are
   determined by this number.  The default value was chosen such that Vega
   at 5556 Angstroms has an AB magnitude of 0.0336 and a flux of 3.52e-20
@@ -348,7 +348,7 @@ standard: Identify standard stars to be used in sensitivity calc
   versions of this task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_BLACKBODY">
   <dt><b>BLACKBODY CALIBRATION FILES</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='BLACKBODY' Line='BLACKBODY CALIBRATION FILES' -->
   <dd>This type of file has the comment parameter <span style="font-family: monospace;">"type"</span> with a value of
@@ -362,10 +362,10 @@ standard: Identify standard stars to be used in sensitivity calc
   departure from a pure blackbody flux distribution.
   The actual m_AB calibration magnitudes for the star are obtained by
   the relation
-  <pre>
-      m_AB(star) = mag + m_AB(m=0) -
-          2.5 * log10 (B(weff,teff)/B(w,teff))
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  m_AB(star) = mag + m_AB(m=0) -
+      2.5 * log10 (B(weff,teff)/B(w,teff))
+  </pre></div>
   where m is the magnitude of the star in the calibration band, m_AB(m=0) is
   the calibration value in the calibration file representing the magnitude of
   a m=0 star (basically the m_AB of Vega), weff is the effective wavelength
@@ -530,9 +530,9 @@ standard: Identify standard stars to be used in sensitivity calc
   for the calibration band, m_1, and the input magnitude band, m_2, are found
   and the calibration magnitude for the star is given by
   </p>
-  <pre>
-      m_calibration = m_input + m_1 - m_2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  m_calibration = m_input + m_1 - m_2
+  </pre></div>
   <p>
   If one of the magnitudes is missing,  given as <span style="font-family: monospace;">"INDEF"</span> because the
   transformation is not available for the spectral type, the last spectral
@@ -549,33 +549,33 @@ standard: Identify standard stars to be used in sensitivity calc
   separate the various fields in the comment and in the fields of the table.
   For example the file might have the comment
   </p>
-  <pre>
-      # Type    Teff     V      J      H      K      L   Lprime    M
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  # Type    Teff     V      J      H      K      L   Lprime    M
+  </pre></div>
   <p>
   identifying the third column of the file as the V magnitude and the
   ninth file as the M magnitude.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To compile observations of three standard stars using a beam
   switched instrument like the IIDS:
   </p>
-  <pre>
-      cl&gt; standard.recformat=yes
-      cl&gt; standard nite1 1001-1008 std beam_switch+ interact-
-      [nite1.1001][0]: HZ 44 - Night 1
-      [nite1.1004][0]: HZ 44 - Night 1
-      [nite1.1005][0]: HZ 44 - Night 1
-      [nite1.1008][0]: HZ 44 - Night 1
-      Star name in calibration list: hz 44
-      cl&gt; standard nite1 1009-1016 std beam_switch+ interact-
-      	...
-      cl&gt; standard nite1 1017-1024 std beam_switch+ interact-
-      	...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; standard.recformat=yes
+  cl&gt; standard nite1 1001-1008 std beam_switch+ interact-
+  [nite1.1001][0]: HZ 44 - Night 1
+  [nite1.1004][0]: HZ 44 - Night 1
+  [nite1.1005][0]: HZ 44 - Night 1
+  [nite1.1008][0]: HZ 44 - Night 1
+  Star name in calibration list: hz 44
+  cl&gt; standard nite1 1009-1016 std beam_switch+ interact-
+      ...
+  cl&gt; standard nite1 1017-1024 std beam_switch+ interact-
+      ...
+  </pre></div>
   <p>
   This will create a file <span style="font-family: monospace;">"std"</span> which will contain sensitivity measurements
   from the beam-switched observations of the three standard stars given.
@@ -592,51 +592,51 @@ standard: Identify standard stars to be used in sensitivity calc
   be interpolated from the calibration data.  Therefore the evenly spaced
   bandpasses are used.
   </p>
-  <pre>
-      cl&gt; standard.recformat=no
-      cl&gt; standard.samestar=yes
-      cl&gt; standard ech001.ec std bandwidth=10 bandsep=15
-      [ech001.ec][0]: Feige 110
-      Star name in calibration list: feige 110
-      [ech001.ec][0]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!): yes
-      [ech001.ec][1]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!): yes
-      [ech001.ec][2]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!): NO!
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; standard.recformat=no
+  cl&gt; standard.samestar=yes
+  cl&gt; standard ech001.ec std bandwidth=10 bandsep=15
+  [ech001.ec][0]: Feige 110
+  Star name in calibration list: feige 110
+  [ech001.ec][0]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!): yes
+  [ech001.ec][1]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!): yes
+  [ech001.ec][2]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!): NO!
+  </pre></div>
   <p>
   3. To use a blackbody infrared calibration where the V magnitude of
   the star is known.
   </p>
-  <pre>
-      cl&gt; standard std1.ms std caldir=onedstds$blackbody/
-      std1.ms(1): Standard Star
-      Star name in calibration list: J
-      Magnitude of star: 10.3
-      Magnitude type (|V|J|H|K|L|Lprime|M|): V
-      Effective temperature or spectral type: B3III
-      WARNING: Effective temperature for B3III not found - using B3V
-      Blackbody: V = 10.30, J = 10.32, Teff = 19000
-      std1[1]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!) (yes): 
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; standard std1.ms std caldir=onedstds$blackbody/
+  std1.ms(1): Standard Star
+  Star name in calibration list: J
+  Magnitude of star: 10.3
+  Magnitude type (|V|J|H|K|L|Lprime|M|): V
+  Effective temperature or spectral type: B3III
+  WARNING: Effective temperature for B3III not found - using B3V
+  Blackbody: V = 10.30, J = 10.32, Teff = 19000
+  std1[1]: Edit bandpasses? (no|yes|NO|YES|NO!|YES!) (yes):
+  </pre></div>
   <p>
   Note the warning message and the confirmation information.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_STANDARD">
   <dt><b>STANDARD V2.10.4</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='STANDARD' Line='STANDARD V2.10.4' -->
   <dd>The calibration files can be defined to compute blackbody values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_STANDARD">
   <dt><b>STANDARD V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='STANDARD' Line='STANDARD V2.10.3' -->
   <dd>A query for the airmass and exposure time is now made if the information
   is not in the header and cannot be computed from other header keywords.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_STANDARD">
   <dt><b>STANDARD V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='STANDARD' Line='STANDARD V2.10' -->
   <dd>Giving an unrecognized standard star name will page a list of standard
@@ -644,14 +644,14 @@ standard: Identify standard stars to be used in sensitivity calc
   query.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   observatory, lcalib, sensfunc
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

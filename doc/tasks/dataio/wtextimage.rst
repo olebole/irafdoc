@@ -7,21 +7,21 @@ wtextimage: Convert an IRAF image to a text file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   wtextimage input output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>An IRAF image file name or template of file names to be converted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Name or root_name of output text file.  If more than one IRAF image
@@ -29,7 +29,7 @@ wtextimage: Convert an IRAF image to a text file
   is appended to <i>output</i> to generate a unique output file name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = yes' -->
   <dd>This parameter determines whether or not a descriptive header precedes
@@ -38,14 +38,14 @@ wtextimage: Convert an IRAF image to a text file
   output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixels">
   <dt><b>pixels = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixels' Line='pixels = yes' -->
   <dd>This parameter determines whether or not to write the pixels to the
   text file.  This can be set to no to only write out the header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_format">
   <dt><b>format = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = ""' -->
   <dd>Output format for each pixel.  If not set by the user, the appropriate output 
@@ -58,7 +58,7 @@ wtextimage: Convert an IRAF image to a text file
   that the reader program be able to handle free format (list directed) input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxlinelen">
   <dt><b>maxlinelen = 80</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxlinelen' Line='maxlinelen = 80' -->
   <dd>The maximum number of characters output per line of text; <b>maxlinelen</b>
@@ -66,9 +66,9 @@ wtextimage: Convert an IRAF image to a text file
   <i>wcardimage</i> cannot read lines of text greater than 161 characters.)
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IRAF images are converted to text files with procedure <b>wtextimage</b>.
   The text file written consists of an optional header optionally followed by
@@ -76,9 +76,9 @@ wtextimage: Convert an IRAF image to a text file
   leftmost subscript varies most rapidly.  The image header is written in the
   <span style="font-family: monospace;">"keyword = value  / comment"</span> format of FITS.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Write a text file from an image section of dev$pix.  The default maximum
   linelength of 80 is used; an output format is specified.  The header portion 
@@ -96,9 +96,9 @@ wtextimage: Convert an IRAF image to a text file
   IRAF-MAX=               31431.  /  Max image pixel (out of date)
   IRAF-MIN=                  33.  /  Min image pixel (out of date)
   IRAF-B/P=                   16  /  Image bits per pixel
-  IRAFTYPE= 'SHORT INTEGER     '  /  Image datatype                       
-  OBJECT  = 'NGC 4147 B 1800   '  /                                       
-  FILENAME= 'DEV$PIX[1:10,1:10]'  /  IRAF filename                  
+  IRAFTYPE= 'SHORT INTEGER     '  /  Image datatype
+  OBJECT  = 'NGC 4147 B 1800   '  /
+  FILENAME= 'DEV$PIX[1:10,1:10]'  /  IRAF filename
   FORMAT  = '11I7              '  /  Text line format
   DATA-TYP= '    object (  0 )'   / object,dark,comp,etc.
   ITIME   =                 1800  / integration time secs
@@ -116,8 +116,8 @@ wtextimage: Convert an IRAF image to a text file
   COMMENT = 'ngc 4147 b 1800'
   F1POS   =                    2  / filter bolt I position
   F2POS   =                    0  / filter bolt II position
-  END     
-  </pre>
+  END
+  </pre></div>
   </dd>
   </dl>
   <p>
@@ -125,24 +125,24 @@ wtextimage: Convert an IRAF image to a text file
   2. Write a series of text files from the IRAF images having root name
   <span style="font-family: monospace;">"reduced"</span>.  One text file is written for each image. 
   </p>
-  <p>
-      cl&gt; wtext reduced.* txt 
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; wtext reduced.* txt
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   It takes almost 10 cpu minutes to convert a 512 square image of real pixels.
   A 512 square image of integer pixels takes about 3 cpu minutes.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   wcardimage, rtextimage, noao.onedspec.wspectext
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

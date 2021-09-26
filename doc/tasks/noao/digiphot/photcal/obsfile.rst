@@ -7,15 +7,15 @@ obsfile: Prepare an observations file from a text file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   obsfile photfiles incolumns idfilters imsets observations
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_photfiles">
   <dt><b>photfiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfiles' Line='photfiles' -->
   <dd>A list of text files containing the image names or an image id, x-y positions,
@@ -25,7 +25,7 @@ obsfile: Prepare an observations file from a text file
   list must have the format specified by <i>incolumns</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_incolumns">
   <dt><b>incolumns</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='incolumns' Line='incolumns' -->
   <dd>A list of ten numbers separated by commas or whitespace specifying which
@@ -35,7 +35,7 @@ obsfile: Prepare an observations file from a text file
   respectively.  
   </dd>
   </dl>
-  <dl>
+  <dl id="l_idfilters">
   <dt><b>idfilters</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='idfilters' Line='idfilters' -->
   <dd>The list of filter ids separated by whitespace or commas which define a
@@ -43,7 +43,7 @@ obsfile: Prepare an observations file from a text file
   <i>photfiles</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imsets">
   <dt><b>imsets</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imsets' Line='imsets' -->
   <dd>The name of the text file which lists the observations of each field, assigns a
@@ -56,14 +56,14 @@ obsfile: Prepare an observations file from a text file
   observation. The format of <i>imsets</i> is described in detail below.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observations">
   <dt><b>observations</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observations' Line='observations' -->
   <dd>The output observations file suitable for input to FITPARAMS or
   EVALFIT/INVERTFIT.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wrap">
   <dt><b>wrap = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wrap' Line='wrap = yes' -->
   <dd>Format the output observations file for easy reading ? If wrap = yes then the
@@ -73,7 +73,7 @@ obsfile: Prepare an observations file from a text file
   length of a line is SZ_LINE characters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obsparams">
   <dt><b>obsparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obsparams' Line='obsparams = ""' -->
   <dd>The name of an optional text file containing the correct filter ids, exposure
@@ -86,7 +86,7 @@ obsfile: Prepare an observations file from a text file
   <i>obsparams</i> are assigned the values stored in <i>photfiles</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obscolumns">
   <dt><b>obscolumns = <span style="font-family: monospace;">"2 3 4 5"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"' -->
   <dd>The list of numbers separated by commas or whitespace specifying which columns
@@ -99,14 +99,14 @@ obsfile: Prepare an observations file from a text file
   produced by MKIMSETS.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minmagerr">
   <dt><b>minmagerr = 0.001</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minmagerr' Line='minmagerr = 0.001' -->
   <dd>The error that will be assigned to a non-INDEF valued magnitude measurement
   whose recorded error is less than <i>minmagerr</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shifts">
   <dt><b>shifts = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""' -->
   <dd>The name of the text file specifying the x and y shifts to be ADDED to the x-y
@@ -117,7 +117,7 @@ obsfile: Prepare an observations file from a text file
   Images for which no shift is supplied are assigned x and y shifts of zero.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apercors">
   <dt><b>apercors = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apercors' Line='apercors = ""' -->
   <dd>The name of the text file specifying the aperture corrections to be ADDED to
@@ -128,14 +128,14 @@ obsfile: Prepare an observations file from a text file
   a default value of zero.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_normtime">
   <dt><b>normtime = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='normtime' Line='normtime = no' -->
   <dd>Normalize the magnitudes to an exposure time of one time unit using the
   exposure times in <i>photfiles</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tolerance">
   <dt><b>tolerance = 5.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 5.0' -->
   <dd>The tolerance in pixels for matching objects in the same observation, but
@@ -148,14 +148,14 @@ obsfile: Prepare an observations file from a text file
   with missing objects being assigned INDEF values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_allfilters">
   <dt><b>allfilters = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='allfilters' Line='allfilters = no' -->
   <dd>Output only objects which are successfully matched in all the filters specified
   by <i>idfilters</i>?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no' -->
   <dd>Verify interactive user input? This option is used only if any of <i>imsets</i>,
@@ -163,16 +163,16 @@ obsfile: Prepare an observations file from a text file
   <span style="font-family: monospace;">"STDIN"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about actions taken by the task or any warnings or errors
   encountered?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   OBSFILE takes a list of user generated text files <i>photfiles</i>, where each
   file contains  observations of one or more objects taken through one or more
@@ -337,17 +337,15 @@ obsfile: Prepare an observations file from a text file
   Standard stars <span style="font-family: monospace;">"STD1"</span> and <span style="font-family: monospace;">"STD2"</span> were observed twice in the same night
   at different airmasses.
   </p>
-  <pre>
-  	STD1 :	nite001   nite002  nite003
-  	STD1 :  nite045   nite046  nite047
-  	STD2 :	nite004   nite005  nite006
-  	STD2 :	nite048   nite049  nite050
-  	...
-  	STD7 :  INDEF     nite019  nite020
-  	...
-  	STD14 : nite039   nite040  nite041
-  	STD15 : nite042   nite043  nite044
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  STD1 :  nite001   nite002  nite003
+  STD1 :  nite045   nite046  nite047
+  STD2 :  nite004   nite005  nite006
+  STD2 :  nite048   nite049  nite050
+  STD7 :  INDEF     nite019  nite020
+  STD14 : nite039   nite040  nite041
+  STD15 : nite042   nite043  nite044
+  </pre></div>
   <p>
   THE OBSPARAMS FILE
   </p>
@@ -361,9 +359,9 @@ obsfile: Prepare an observations file from a text file
   The correct filter id, exposure time, airmass, and time of observation, is supplied
   in <i>obsparams</i>  and <i>obscolumns</i> is set to <span style="font-family: monospace;">"2 3 4 5"</span>
   </p>
-  <pre>
-  	nite006    3 8 1.256 14:30:02.3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nite006    3 8 1.256 14:30:02.3
+  </pre></div>
   <p>
   Zero can be used as a place holder in <i>obscolumns</i>,
   as in the following example where
@@ -371,9 +369,9 @@ obsfile: Prepare an observations file from a text file
   leave the filter id alone. In this case <i>obscolumns</i> is <span style="font-family: monospace;">"0 2 3 0"</span>
   and <i>obsparams</i> looks as follows.
   </p>
-  <pre>
-  	nite006    8 1.256
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nite006    8 1.256
+  </pre></div>
   <p>
   Only images listed in <i>imsets</i> can have their observing parameters
   modified by <i>obsparams</i>.
@@ -396,16 +394,16 @@ obsfile: Prepare an observations file from a text file
   added to the <span style="font-family: monospace;">"STD14"</span> B and V frame positions respectively before
   position matching.
   </p>
-  <pre>
-  	nite040   10.0   5.0
-  	nite041   10.0   5.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nite040   10.0   5.0
+  nite041   10.0   5.0
+  </pre></div>
   <p>
   An alternate way of listing the same observations would be the following.
   </p>
-  <pre>
-  	nite039   -10.0 -5.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nite039   -10.0 -5.0
+  </pre></div>
   <p>
   THE APERCORS FILE
   </p>
@@ -422,14 +420,14 @@ obsfile: Prepare an observations file from a text file
   The aperture corrections for all the standard stars are assumed to be
   zero except for <span style="font-family: monospace;">"STD14"</span>.
   </p>
-  <pre>
-  	nite039    -0.150
-  	nite040    -0.100
-  	nite041    -0.090
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  nite039    -0.150
+  nite040    -0.100
+  nite041    -0.090
+  </pre></div>
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   For the previous set of UBV observations the output file
   <i>observations</i> produced by OBSFILE will look like the following.
@@ -438,37 +436,37 @@ obsfile: Prepare an observations file from a text file
   prior to running OBSFILE or by OBSFILE itself,
   and so are not included in <i>observations</i>.
   </p>
-  <pre>
-  	# FIELD   FILTER   OTIME  AIRMASS  X     Y     MAG   MERR
+  <div class="highlight-default-notranslate"><pre>
+  # FIELD   FILTER   OTIME  AIRMASS  X     Y     MAG   MERR
   
-  	  STD1    1        .      .        .     .     .     .
-  	  *       2        .      .        .     .     .     .
-  	  *       3        .      .        .     .     .     .
-  	  STD1    1        .      .        .     .     .     .
-  	  *       2        .      .        .     .     .     .   
-  	  *       3        .      .        .     .     .     .
-  	  STD2    1        .      .        .     .     .     .
-  	  *       2        .      .        .     .     .     .
-  	  *       3        .      .        .     .     .     .
-  	  STD2    1        .      .        .     .     .     .
-  	  *       2        .      .        .     .     .     .
-  	  *       3        .      .        .     .     .     .
-  	  ........................................................
-  	  STD7    INDEF    INDEF  INDEF    INDEF INDEF INDEF INDEF
-  	  *       2        .      .        .     .     .     .
-  	  *       3        .      .        .     .     .     .
-  	  .......................................................
-  	  STD14   1        .      .        .     .     .     .
-  	  *       2        .      .        .     .     .     .
-  	  *       3        .      .        .     .     .     .
-  	  STD15   1        .      .        .     .     .     .
-  	  *       2        .      .        .     .     .     .
-  	  *       3        .      .        .     .     .     .
-  </pre>
+    STD1    1        .      .        .     .     .     .
+    *       2        .      .        .     .     .     .
+    *       3        .      .        .     .     .     .
+    STD1    1        .      .        .     .     .     .
+    *       2        .      .        .     .     .     .
+    *       3        .      .        .     .     .     .
+    STD2    1        .      .        .     .     .     .
+    *       2        .      .        .     .     .     .
+    *       3        .      .        .     .     .     .
+    STD2    1        .      .        .     .     .     .
+    *       2        .      .        .     .     .     .
+    *       3        .      .        .     .     .     .
+    ........................................................
+    STD7    INDEF    INDEF  INDEF    INDEF INDEF INDEF INDEF
+    *       2        .      .        .     .     .     .
+    *       3        .      .        .     .     .     .
+    .......................................................
+    STD14   1        .      .        .     .     .     .
+    *       2        .      .        .     .     .     .
+    *       3        .      .        .     .     .     .
+    STD15   1        .      .        .     .     .     .
+    *       2        .      .        .     .     .     .
+    *       3        .      .        .     .     .     .
+  </pre></div>
   <p>
   The accompanying format description file has the following form.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # Declare the observations file variables
   
   observations
@@ -493,10 +491,10 @@ obsfile: Prepare an observations file from a text file
   y3            19             # y coordinate in filter 3
   m3            20             # instrumental magnitude in filter 3
   error(m3)     21             # magnitude error in filter 3
-  </pre>
-  <!-- EndSection:   'OUTPUT' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Prepare an observations file, from a set of standard star observations
   in a file output by the user's own digital stellar photometry program,
@@ -508,39 +506,39 @@ obsfile: Prepare an observations file from a text file
   observing time column is missing and represented by a zero in the incolumns
   parameters.
   </p>
-  <pre>
-  	ph&gt; head magsfile
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; head magsfile
   
-  	    ... print out the first few lines of the photometry file
+      ... print out the first few lines of the photometry file
   
-  	    std1u   40.4   50.3   18.059   0.043   U   1.030   1.0
-  	    std1b   42.5   53.1   17.089   0.023   B   1.032   1.0
-  	    std1v   43.8   56.9   16.023   0.020   V   1.034   1.0
-  	    std2u   39.4   55.3   17.029   0.040   U   1.135   1.0
-  	    std2b   41.5   57.3   15.905   0.020   B   1.140   1.0
-  	    std2v   42.6   58.9   14.899   0.018   V   1.144   1.0
-  	    .....   ....   ....   ......   .....   .   .....   ...
-  	    .....   ....   ....   ......   .....   .   .....   ...
+      std1u   40.4   50.3   18.059   0.043   U   1.030   1.0
+      std1b   42.5   53.1   17.089   0.023   B   1.032   1.0
+      std1v   43.8   56.9   16.023   0.020   V   1.034   1.0
+      std2u   39.4   55.3   17.029   0.040   U   1.135   1.0
+      std2b   41.5   57.3   15.905   0.020   B   1.140   1.0
+      std2v   42.6   58.9   14.899   0.018   V   1.144   1.0
+      .....   ....   ....   ......   .....   .   .....   ...
+      .....   ....   ....   ......   .....   .   .....   ...
   
-  	ph&gt; type fields
+  ph&gt; type fields
   
-  	    ... print out the corresponding image set file
+      ... print out the corresponding image set file
   
-  	    std1 : std1u  std1b  std1v
-  	    std2 : std2u  std2b  std2v
-  	    ..... .....  .....  .....
-  	    ..... .....  .....  .....
+      std1 : std1u  std1b  std1v
+      std2 : std2u  std2b  std2v
+      ..... .....  .....  .....
+      ..... .....  .....  .....
   
-  	ph&gt; obsfile magsfile "1 2 3 6 8 7 0 4 5" "U,B,V" fields standards.obs\<br>
-  	    tol=0.0
+  ph&gt; obsfile magsfile "1 2 3 6 8 7 0 4 5" "U,B,V" fields standards.obs\<br>
+      tol=0.0
   
-  	    ... create the observations file
+      ... create the observations file
   
-  	ph&gt; edit standards.obs
+  ph&gt; edit standards.obs
   
-  	    ... edit the observations file so that the object names
-  		match those in the standard star catalog
-  </pre>
+      ... edit the observations file so that the object names
+          match those in the standard star catalog
+  </pre></div>
   <p>
   2. Prepare an observations file from a set of program star observations
   of a crowded field in the globular cluster M92 computed by the same
@@ -549,45 +547,44 @@ obsfile: Prepare an observations file from a text file
   measurements of over 2000 stars in the M92 field. Since the same stars
   were not measured in all filters position matching is necessary.
   </p>
-  <pre>
-  	ph&gt; head m92umags,m92bmags,m92vmags
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; head m92umags,m92bmags,m92vmags
   
-  	    ... print the first few lines of the input files on the
-  	        standard output
+      ... print the first few lines of the input files on the
+          standard output
   
-  	    m92u    80.4   42.3   17.046   0.046   U   1.056   1.0
-  	    m92u    ....   ....   ......   .....   U   1.056   1.0
+      m92u    80.4   42.3   17.046   0.046   U   1.056   1.0
+      m92u    ....   ....   ......   .....   U   1.056   1.0
   
-  	    m92b    62.6   81.1   18.071   0.041   B   1.030   1.0
-  	    m92b    ....   ....   ......   .....   B   1.030   1.0
+      m92b    62.6   81.1   18.071   0.041   B   1.030   1.0
+      m92b    ....   ....   ......   .....   B   1.030   1.0
   
-  	    m92v    33.8   26.9   16.023   0.022   V   1.034   1.0
-  	    m92v    ....   ....   ......   .....   V   1.034   1.0
+      m92v    33.8   26.9   16.023   0.022   V   1.034   1.0
+      m92v    ....   ....   ......   .....   V   1.034   1.0
   
-  	ph&gt; type fields
+  ph&gt; type fields
   
-  	    ... print out the image set file
+      ... print out the image set file
   
-  	    m92 : m92u  m92b  m92v
+      m92 : m92u  m92b  m92v
   
-  	ph&gt; obsfile m92umags,m92bmags,m92vmags "1 2 3 6 8 7 0 4 5" "U,B,V"\<br>
-  	    fields standards.obs tolerance=8.0
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  ph&gt; obsfile m92umags,m92bmags,m92vmags "1 2 3 6 8 7 0 4 5" "U,B,V"\<br>
+      fields standards.obs tolerance=8.0
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   mkimsets,mknobsfile,mkobsfile
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

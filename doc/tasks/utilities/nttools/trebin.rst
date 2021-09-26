@@ -7,14 +7,14 @@ trebin: Resample a table to uniform spacing.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   trebin intable outtable column start end step
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task resamples tables.
   The grid on which to interpolate an input table
@@ -78,16 +78,16 @@ trebin: Resample a table to uniform spacing.
   but it would not be correct for data in counts,
   or for count rate spectra.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>List of input tables to be resampled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>Output tables or directory.
@@ -95,7 +95,7 @@ trebin: Resample a table to uniform spacing.
   'outtable' is a directory name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_column">
   <dt><b>column [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
   <dd>Name of the independent variable column in the input table,
@@ -107,7 +107,7 @@ trebin: Resample a table to uniform spacing.
   The data type of the column is assumed to be a numeric type.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_start">
   <dt><b>start [real]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start' Line='start [real]' -->
   <dd>If the independent variable values at which to interpolate the input values
@@ -118,7 +118,7 @@ trebin: Resample a table to uniform spacing.
   'start', 'end', and 'step' will be ignored if 'xtable' was specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_end">
   <dt><b>end [real]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='end' Line='end [real]' -->
   <dd>Last value of the independent variable.
@@ -126,7 +126,7 @@ trebin: Resample a table to uniform spacing.
   range from 'start' to 'end' is included in the output table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_step">
   <dt><b>step [real]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step [real]' -->
   <dd>Increment in independent variable.
@@ -244,26 +244,26 @@ trebin: Resample a table to uniform spacing.
   <dd>This gives the date of installation of the current version.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Resample all the columns in all tables beginning with <span style="font-family: monospace;">"hr"</span> so the values
   in the <span style="font-family: monospace;">"Wavelength"</span> column range from 3000 to 8000 in steps of 10.
   The output tables will have the same names, but will be written in the
   directory <span style="font-family: monospace;">"home$spec"</span> (which should be different from the default directory).
   </p>
-  <pre>
-    tt&gt; trebin hr*.tab "home$spec/" Wavelength 3000. 8000. 10.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; trebin hr*.tab "home$spec/" Wavelength 3000. 8000. 10.
+  </pre></div>
   <p>
   2. Interpolate the text table <span style="font-family: monospace;">"in"</span> at a single point,
   where the value in column one is 5,
   and print the results on the standard output.
   </p>
-  <pre>
-    tt&gt; trebin in STDOUT c1 5. 5. 0.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; trebin in STDOUT c1 5. 5. 0.
+  </pre></div>
   <p>
   3. Interpolate the table from example 2
   onto the array of independent variable values
@@ -271,12 +271,12 @@ trebin: Resample a table to uniform spacing.
   As in example 2,
   the independent variable in <span style="font-family: monospace;">"in"</span> is the first column, <span style="font-family: monospace;">"c1"</span>.
   </p>
-  <pre>
-    tt&gt; trebin in STDOUT c1 xtable="x1d.fits[r:row=37][c:wavelength]"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; trebin in STDOUT c1 xtable="x1d.fits[r:row=37][c:wavelength]"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   A column which contains an integer bit mask
   will be interpolated as if it were an ordinary numeric column,
@@ -293,21 +293,21 @@ trebin: Resample a table to uniform spacing.
   'trebin' will update the allocated array size,
   but it will not modify any scalar column that gives the effective array size.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a higher-level description of the 'tables'
   package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

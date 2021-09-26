@@ -7,22 +7,22 @@ mskexpr: Create masks using an expression and reference images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mskexpr expr masks refimages
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_expr">
   <dt><b>expr</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='expr' Line='expr' -->
   <dd>The expression to be evaluated.  This may be the actual expression, or the
   string <span style="font-family: monospace;">"@file"</span> in which case the expression is taken from the named file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_masks">
   <dt><b>masks</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masks' Line='masks' -->
   <dd>The output masks. The size of the output masks defaults to the size of
@@ -30,7 +30,7 @@ mskexpr: Create masks using an expression and reference images
   value of the dims parameter, in that order.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refimages">
   <dt><b>refimages</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refimages' Line='refimages' -->
   <dd>The optional list of reference images. If the reference image list is defined
@@ -39,7 +39,7 @@ mskexpr: Create masks using an expression and reference images
   referred to as <span style="font-family: monospace;">"i.&lt;keyword&gt;"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refmasks">
   <dt><b>refmasks</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refmasks' Line='refmasks' -->
   <dd>The optional list of reference masks. If the reference mask list is defined
@@ -55,21 +55,21 @@ mskexpr: Create masks using an expression and reference images
   <span style="font-family: monospace;">"m"</span> may be used to create an output mask file from the internal matching.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dims">
   <dt><b>dims = <span style="font-family: monospace;">"512,512"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dims' Line='dims = "512,512"' -->
   <dd>The default output mask dimensions. The value of dims is a comma delimited
   list of dimensions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_depth">
   <dt><b>depth = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='depth' Line='depth = 0' -->
   <dd>The output mask depth in bits. The maximum depth and current default is
   27.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exprdb">
   <dt><b>exprdb = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exprdb' Line='exprdb = "none"' -->
   <dd>The file name of an optional expression database. An expression database
@@ -77,15 +77,15 @@ mskexpr: Create masks using an expression and reference images
   macros.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print task status messages ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Mskexpr evaluates a mask expression <i>expr</i> and writes the results to an
   output mask <i>masks</i> image. If expr is preceded by an <span style="font-family: monospace;">"@"</span> sign then
@@ -151,13 +151,13 @@ mskexpr: Create masks using an expression and reference images
   <p>
   The following operands are recognized:
   </p>
-  <pre>
-  	i		reference image 
-  	i.itime		reference image keyword
-  	m		reference mask 
-  	m.itime		reference mask keyword
-  	1.2345		numeric constant
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  i               reference image
+  i.itime         reference image keyword
+  m               reference mask
+  m.itime         reference mask keyword
+  1.2345          numeric constant
+  </pre></div>
   <p>
   Finally, there is a special builtin type of operand used to represent the
   mask pixel coordinates in a mask expression.  These operands have the
@@ -165,11 +165,11 @@ mskexpr: Create masks using an expression and reference images
   output image.  The names must be upper case to avoid confusion to with the
   input operands <span style="font-family: monospace;">"i"</span> and <span style="font-family: monospace;">"m"</span>.
   </p>
-  <pre>
-          I                x coordinate of pixel (column)
-          J                y coordinate of pixel (line)
-          K                z coordinate of pixel (band)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  I                x coordinate of pixel (column)
+  J                y coordinate of pixel (line)
+  K                z coordinate of pixel (band)
+  </pre></div>
   <p>
   <b>Operators</b>
   </p>
@@ -177,30 +177,30 @@ mskexpr: Create masks using an expression and reference images
   The expression syntax implemented by mskexpr provides the following
   set of operators:
   </p>
-  <pre>
-          ( expr )                grouping
-          + - * /                 arithmetic
-          **                      exponentiation
-          //                      concatenate
-          expr ? expr1 : expr2    conditional expression
-          @ "name"                get operand
+  <div class="highlight-default-notranslate"><pre>
+  ( expr )                grouping
+  + - * /                 arithmetic
+  **                      exponentiation
+  //                      concatenate
+  expr ? expr1 : expr2    conditional expression
+  @ "name"                get operand
   
-          &amp;&amp;                      logical and
-          ||                      logical or
-          !                       logical not
-          &lt;                       less than
-          &lt;=                      less than or equal
-          &gt;                       greater than
-          &gt;=                      greater than or equal
-          ==                      equals
-          !=                      not equals
-          ?=                      substring equals
+  &amp;&amp;                      logical and
+  ||                      logical or
+  !                       logical not
+  &lt;                       less than
+  &lt;=                      less than or equal
+  &gt;                       greater than
+  &gt;=                      greater than or equal
+  ==                      equals
+  !=                      not equals
+  ?=                      substring equals
   
-          &amp;                       bitwise and
-          |                       bitwise or
-          ^                       bitwise exclusive or
-          ~                       bitwise not
-  </pre>
+  &amp;                       bitwise and
+  |                       bitwise or
+  ^                       bitwise exclusive or
+  ~                       bitwise not
+  </pre></div>
   <p>
   The conditional expression has the value <i>expr1</i> if <i>expr</i> is true,
   and <i>expr2</i> otherwise.  Since the expression is evaluated at every pixel
@@ -236,46 +236,46 @@ mskexpr: Create masks using an expression and reference images
   dimensional. The second way assumes that they are multi-dimensional and
   specifies which dimensions the geometric operator applies to.
   </p>
-  <pre>
-        point (x1, y1)
-       circle (xc, yc, r)
-      ellipse (xc, yc, r, ratio, theta)
-          box (x1, y1, x2, y2) 
-    rectangle (xc, yc, r, ratio, theta)
-       vector (x1, y1, x2, y2, width)
-          pie (xc, yc, theta1, theta2)
-      polygon (x1, y1, ..., xn, yn)
-         cols (ranges)
-        lines (ranges)
-     cannulus (xc, yc, r1, r2)
-     eannulus (xc, yc, r1, r2, ratio, theta)
-     rannulus (xc, yc, r1, r2, ratio, theta)
-     pannulus (width, x1, y1, ..., xn, yn)
+  <div class="highlight-default-notranslate"><pre>
+      point (x1, y1)
+     circle (xc, yc, r)
+    ellipse (xc, yc, r, ratio, theta)
+        box (x1, y1, x2, y2)
+  rectangle (xc, yc, r, ratio, theta)
+     vector (x1, y1, x2, y2, width)
+        pie (xc, yc, theta1, theta2)
+    polygon (x1, y1, ..., xn, yn)
+       cols (ranges)
+      lines (ranges)
+   cannulus (xc, yc, r1, r2)
+   eannulus (xc, yc, r1, r2, ratio, theta)
+   rannulus (xc, yc, r1, r2, ratio, theta)
+   pannulus (width, x1, y1, ..., xn, yn)
   
-        point (I, J, x1, y1)
-       circle (I, J, xc, yc, r)
-      ellipse (I, J, xc, yc, r, ratio, theta)
-          box (I, J, x1, y1, x2, y2) 
-    rectangle (I, J, xc, yc, r, ratio, theta)
-       vector (I, J, x1, y1, x2, y2, width)
-          pie (I, J, xc, yc, theta1, theta2)
-      polygon (I, J, x1, y1, .., xn, yn)
-         cols (I, ranges)
-        lines (J, ranges)
-     cannulus (I, J, xc, yc, r1, r2)
-     eannulus (I, J, xc, yc, r1, r2, ratio, theta)
-     rannulus (I, J, xc, yc, r1, r2, ratio, theta)
-     pannulus (I, J, width, x1, y1, ..., xn, yn)
+      point (I, J, x1, y1)
+     circle (I, J, xc, yc, r)
+    ellipse (I, J, xc, yc, r, ratio, theta)
+        box (I, J, x1, y1, x2, y2)
+  rectangle (I, J, xc, yc, r, ratio, theta)
+     vector (I, J, x1, y1, x2, y2, width)
+        pie (I, J, xc, yc, theta1, theta2)
+    polygon (I, J, x1, y1, .., xn, yn)
+       cols (I, ranges)
+      lines (J, ranges)
+   cannulus (I, J, xc, yc, r1, r2)
+   eannulus (I, J, xc, yc, r1, r2, ratio, theta)
+   rannulus (I, J, xc, yc, r1, r2, ratio, theta)
+   pannulus (I, J, width, x1, y1, ..., xn, yn)
   
-        xc,yc - center coordinates in pixels
-        r1,r2 - semi-major axis lengths in pixels
-        ratio - ratio of semi-minor / semi-major axes
-     theta[n] - position angle in degrees
-        x1,y1 - starting coordinates in pixels
-        x2,y2 - ending coordinates in pixels
-    x[n],y[n] - vertices of a polygon
-       ranges - string defining a range, e.g. "100-200,300,400-500"
-  </pre>
+      xc,yc - center coordinates in pixels
+      r1,r2 - semi-major axis lengths in pixels
+      ratio - ratio of semi-minor / semi-major axes
+   theta[n] - position angle in degrees
+      x1,y1 - starting coordinates in pixels
+      x2,y2 - ending coordinates in pixels
+  x[n],y[n] - vertices of a polygon
+     ranges - string defining a range, e.g. "100-200,300,400-500"
+  </pre></div>
   <p>
   <b>Other Functions</b>
   </p>
@@ -297,31 +297,31 @@ mskexpr: Create masks using an expression and reference images
   <p>
   Standard Intrinsic Functions
   </p>
-  <pre>
-          abs (arg)                       absolute value
-          max (arg, 0.0, ...)             maximum value
-          min (arg1, arg2, ...)           minimum value
-          mod (arg1, arg2)                modulus
-         sqrt (arg)                       square root
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   abs (arg)                       absolute value
+   max (arg, 0.0, ...)             maximum value
+   min (arg1, arg2, ...)           minimum value
+   mod (arg1, arg2)                modulus
+  sqrt (arg)                       square root
+  </pre></div>
   <p>
   Mathematical or trigonometric functions
   </p>
-  <pre>
-         acos (arg)                         arc cosine
-         asin (arg)                         arc sine
-         atan (arg [,arg2])                 arc tangent
-        atan2 (arg [,arg2])                 arc tangent
-          cos (arg)                         cosine
-         cosh (arg)                         hyperbolic cosine
-          exp (arg)                         exponential
-          log (arg)                         natural logarithm
-        log10 (arg)                         logarithm base 10
-          sin (arg)                         sine
-         sinh (arg)                         hyperbolic sine
-          tan (arg)                         tangent
-         tanh (arg)                         hyperbolic tangent
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   acos (arg)                         arc cosine
+   asin (arg)                         arc sine
+   atan (arg [,arg2])                 arc tangent
+  atan2 (arg [,arg2])                 arc tangent
+    cos (arg)                         cosine
+   cosh (arg)                         hyperbolic cosine
+    exp (arg)                         exponential
+    log (arg)                         natural logarithm
+  log10 (arg)                         logarithm base 10
+    sin (arg)                         sine
+   sinh (arg)                         hyperbolic sine
+    tan (arg)                         tangent
+   tanh (arg)                         hyperbolic tangent
+  </pre></div>
   <p>
   The trigonometric functions operate in units of radians.  The <i>deg</i> and
   <i>rad</i> intrinsic functions (see below) can be used to convert to and from
@@ -330,16 +330,16 @@ mskexpr: Create masks using an expression and reference images
   <p>
   Type conversion functions
   </p>
-  <pre>
-         bool (arg)                         coerce to boolean
-        short (arg)                         coerce to short
-          int (arg)                         truncate to integer
-         nint (arg)                         nearest integer
-         long (arg)                         coerce to long (same as int)
-         real (arg)                         coerce to real
-       double (arg)                         coerce to double
-          str (arg)                         coerce to string
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+    bool (arg)                         coerce to boolean
+   short (arg)                         coerce to short
+     int (arg)                         truncate to integer
+    nint (arg)                         nearest integer
+    long (arg)                         coerce to long (same as int)
+    real (arg)                         coerce to real
+  double (arg)                         coerce to double
+     str (arg)                         coerce to string
+  </pre></div>
   <p>
   The numeric type conversion functions will convert a string to a number if
   called with a character argument.  The <i>str</i> function will convert any
@@ -348,15 +348,15 @@ mskexpr: Create masks using an expression and reference images
   <p>
   Projection functions
   </p>
-  <pre>
-          len (arg)                         length of a vector
-          hiv (arg)                         high value of a vector
-          lov (arg)                         low value of a vector
-         mean (arg [,ksigma])               mean of a vector
-       median (arg)                         median of a vector
-       stddev (arg [, ksigma])              standard deviation
-          sum (arg)                         sum of a vector
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+     len (arg)                         length of a vector
+     hiv (arg)                         high value of a vector
+     lov (arg)                         low value of a vector
+    mean (arg [,ksigma])               mean of a vector
+  median (arg)                         median of a vector
+  stddev (arg [, ksigma])              standard deviation
+     sum (arg)                         sum of a vector
+  </pre></div>
   <p>
   The projection functions take a vector as input and return a scalar value as
   output.  The functions <i>mean</i> and <i>stddev</i>, used to compute the mean
@@ -366,14 +366,14 @@ mskexpr: Create masks using an expression and reference images
   <p>
   Miscellaneous functions
   </p>
-  <pre>
-          deg (arg)                         radians to degrees
-          rad (arg)                         degrees to radians
-       median (arg1, arg2, arg3, ...)       vector median of 3-5 vectors
-         repl (arg, n)                      replicate
-         sort (arg)                         sort a vector
-        shift (arg, npix)                   shift a vector
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+     deg (arg)                         radians to degrees
+     rad (arg)                         degrees to radians
+  median (arg1, arg2, arg3, ...)       vector median of 3-5 vectors
+    repl (arg, n)                      replicate
+    sort (arg)                         sort a vector
+   shift (arg, npix)                   shift a vector
+  </pre></div>
   <p>
   The <i>median</i> function shown here computes the vector median of several
   input vectors, unlike the projection median which computes the median value
@@ -396,20 +396,20 @@ mskexpr: Create masks using an expression and reference images
   used to create custom libraries of functions for specific applications. A
   simple example follows.
   </p>
-  <pre>
-          # Sample MSKEXPR expression database file.
+  <div class="highlight-default-notranslate"><pre>
+  # Sample MSKEXPR expression database file.
   
-          # Constants.
-          SQRTOF2=        1.4142135623730950488
-          PI=             3.1415926535897932385
+  # Constants.
+  SQRTOF2=        1.4142135623730950488
+  PI=             3.1415926535897932385
   
-          # Simple bad data functions.
-  	bdata1		(i &lt; -100 || i &gt; 25000)
-  	bdata2		(i &lt; -100 || i &gt; 32000)
+  # Simple bad data functions.
+  bdata1          (i &lt; -100 || i &gt; 25000)
+  bdata2          (i &lt; -100 || i &gt; 32000)
   
-  	# New regions functions.
-  	cmpie(xc,yc,r,t1,t2) 	circle (xc, yc, r) &amp;&amp; (! pie (xc, yc, t1, t2))
-  </pre>
+  # New regions functions.
+  cmpie(xc,yc,r,t1,t2)    circle (xc, yc, r) &amp;&amp; (! pie (xc, yc, t1, t2))
+  </pre></div>
   <p>
   The complete syntax of a macro entry is as follows:
   </p>
@@ -424,53 +424,53 @@ mskexpr: Create masks using an expression and reference images
   nested.  Macro functions are indistinguishable from intrinsic functions in
   expressions.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a 0-valued 512 x 512 mask and set all the pixels inside a circular
   annulus to 1.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type expr.dat
-  cannulus (256., 256., 20., 40.) ? 1 : 0 
+  cannulus (256., 256., 20., 40.) ? 1 : 0
   cl&gt; mskexpr @expr.dat mask.pl ""
-  </pre>
+  </pre></div>
   <p>
   2. Repeat the previous example but set all the pixels outside the circular
   annulus to 1.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type expr.dat
-  ! cannulus (256., 256., 20., 40.) ? 1 : 0 
+  ! cannulus (256., 256., 20., 40.) ? 1 : 0
   cl&gt; mskexpr @expr.dat mask.pl ""
-  </pre>
+  </pre></div>
   <p>
   3. Create a 0-valued 512 x 512 mask and set all the pixels inside the
   intersection of 2 circles to 1.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type expr.dat
-  circle (220., 220., 50.) &amp;&amp; circle (240., 220., 50.) ? 1 : 0 
+  circle (220., 220., 50.) &amp;&amp; circle (240., 220., 50.) ? 1 : 0
   cl&gt; mskexpr @expr.dat mask.pl ""
-  </pre>
+  </pre></div>
   <p>
   4. Create a 0 valued mask and set all the pixels outside the good
   data range 0 &lt;= pixval &lt;= 10000 in the reference image and outside
   a circle to 1. Note that the i character defines the reference image
   operand.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type expr.dat
-  i &lt; 0 || i &gt; 10000 || circle (256., 256., 50.) ? 1 : 0 
+  i &lt; 0 || i &gt; 10000 || circle (256., 256., 50.) ? 1 : 0
   cl&gt; mskexpr @expr.dat mask.pl dev$pix
-  </pre>
+  </pre></div>
   <p>
   5. Create a 0 valued 512 x 512 mask and set all the pixels inside a circle
   excluding a wedge shaped region to 1. The expression cmpie is used defined
   and stored in the expression database <span style="font-family: monospace;">"myexpr.db"</span> 
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type myexpr.db
   # Sample MSKEXPR expression database file.
   
@@ -489,30 +489,30 @@ mskexpr: Create masks using an expression and reference images
   cmpie (256., 256., 50., 0., 30.) ? 1 : 0
   
   cl&gt; mskexpr @expr.dat mask.pl "" exprdb=myexpr.db
-  </pre>
+  </pre></div>
   <p>
   6.  A set of dithered images have been transformed to a common world
   coordinate system, stacked, and a mask created for the sources.  To
   create a boolean mask for one of the images from the deep source mask:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; set pmmatch="world"
   cl&gt; mskexpr "m" mask1.pl exp1 refmask=stackmask
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imexpr, mskregions, pmmatch
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

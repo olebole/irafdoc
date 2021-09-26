@@ -7,21 +7,21 @@ psfmeasure: Measure PSF sizes from stellar images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   psfmeasure images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords = <span style="font-family: monospace;">"mark1"</span> (center|mark1|markall)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = "mark1" (center|mark1|markall)' -->
   <dd>Method by which the coordinates of objects to be measured are specified.
@@ -34,7 +34,7 @@ psfmeasure: Measure PSF sizes from stellar images
   ending with a <span style="font-family: monospace;">'q'</span> key value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcs">
   <dt><b>wcs = <span style="font-family: monospace;">"logical"</span> (logical|physical|world)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "logical" (logical|physical|world)' -->
   <dd>Coordinate system for input coordinates.  When using image cursor input
@@ -42,7 +42,7 @@ psfmeasure: Measure PSF sizes from stellar images
   could be <span style="font-family: monospace;">"physical"</span> or <span style="font-family: monospace;">"world"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = yes, frame = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = yes, frame = 1' -->
   <dd>Display the image or images as needed?  If yes the image display is checked
@@ -55,7 +55,7 @@ psfmeasure: Measure PSF sizes from stellar images
   need not be active in that case.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_level">
   <dt><b>level = 0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='level' Line='level = 0.5' -->
   <dd>The parameter used to quantify an object image size is the radius from the
@@ -63,22 +63,22 @@ psfmeasure: Measure PSF sizes from stellar images
   parameter.  If the value is greater than 1 it is treated as a percentage.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_size">
   <dt><b>size = <span style="font-family: monospace;">"FWHM"</span> (Radius|FWHM|GFWHM|MFWHM)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='size' Line='size = "FWHM" (Radius|FWHM|GFWHM|MFWHM)' -->
   <dd>There are four ways the PSF size may be shown in graphs and given in
   the output.  These are:
-  <pre>
-      Radius - the radius enclosing the specified fraction of the flux
-      FWHM   - a direct FWHM from the measured radial profile
-      GFWHM  - the FWHM of the best fit Gaussian profile
-      MFWHM  - the FWHM of the best fit Moffat profile
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Radius - the radius enclosing the specified fraction of the flux
+  FWHM   - a direct FWHM from the measured radial profile
+  GFWHM  - the FWHM of the best fit Gaussian profile
+  MFWHM  - the FWHM of the best fit Moffat profile
+  </pre></div>
   The labels in the graphs and output will be the value of this parameter
   to distinguish the different types of size measurements.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_beta">
   <dt><b>beta = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='beta' Line='beta = INDEF' -->
   <dd>For the Moffat profile fit (size = MFWHM) the exponent parameter may
@@ -87,14 +87,14 @@ psfmeasure: Measure PSF sizes from stellar images
   task parameter is INDEF.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1.' -->
   <dd>Pixel scale in user units per pixel.  Usually the value is 1 to measure
   sizes in pixels or the image pixel scale in arc seconds per pixel.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radius">
   <dt><b>radius = 5., iterations = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 5., iterations = 3' -->
   <dd>Measurement radius in pixels and number of iterations on the radius.  The
@@ -108,7 +108,7 @@ psfmeasure: Measure PSF sizes from stellar images
   values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sbuffer">
   <dt><b>sbuffer = 5, swidth = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sbuffer' Line='sbuffer = 5, swidth = 5.' -->
   <dd>Sky buffer and sky width in pixels.  The buffer is added to the specified
@@ -116,7 +116,7 @@ psfmeasure: Measure PSF sizes from stellar images
   aperture.  The sky width is the width of the circular sky aperture.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_saturation">
   <dt><b>saturation=INDEF, ignore_sat=no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='saturation' Line='saturation=INDEF, ignore_sat=no' -->
   <dd>Data values (prior to sky subtraction) to be considered saturated within
@@ -128,7 +128,7 @@ psfmeasure: Measure PSF sizes from stellar images
   discarded as if it was not measured.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcenter">
   <dt><b>xcenter = INDEF, ycenter = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = INDEF, ycenter = INDEF' -->
   <dd>The optical field center of the image given in image pixel coordinates.
@@ -137,14 +137,14 @@ psfmeasure: Measure PSF sizes from stellar images
   the field center for studies of radial variations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>File in which to record the final results.  If no log file is desired a
   null string may be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imagecur">
   <dt><b>imagecur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imagecur' Line='imagecur = ""' -->
   <dd>Image cursor input for the <span style="font-family: monospace;">"mark1"</span> and <span style="font-family: monospace;">"markall"</span> options.  If null then the
@@ -155,21 +155,21 @@ psfmeasure: Measure PSF sizes from stellar images
   the list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphcur">
   <dt><b>graphcur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphcur' Line='graphcur = ""' -->
   <dd>Graphics cursor input.  If null then the standard graphics cursor
   is used otherwise a standard cursor format file may be specified.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   When selecting objects with the image cursor the following commands are
   available.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?  Page cursor command summary
   g  Measure object and graph the results.
   m  Measure object.
@@ -177,12 +177,12 @@ psfmeasure: Measure PSF sizes from stellar images
      At the end of all images go to analysis of all measurements.
   
   :show  Show current results.
-  </pre>
+  </pre></div>
   <p>
   When in the interactive graphics the following cursor commands are available.
   All plots may not be available depending on the number of stars.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?  Page cursor command summary
   a  Spatial plot
   d  Delete star nearest to cursor
@@ -202,18 +202,18 @@ psfmeasure: Measure PSF sizes from stellar images
   &lt;space&gt; Step through different stars in some plots
   
   :beta &lt;val&gt;     Set the beta parameter for the Moffat profile fit
-  :level &lt;val&gt;	Level at which the size parameter is evaluated
+  :level &lt;val&gt;    Level at which the size parameter is evaluated
   :overplot &lt;y|n&gt; Overplot the profiles from the narrowest profile?
   :radius &lt;val&gt;   Change profile radius
-  :show &lt;file&gt;	Page all information for the current set of objects
-  :size &lt;type&gt;	Size type (Radius|FWHM)
-  :scale &lt;val&gt;	Pixel scale for size values
-  :xcenter &lt;val&gt;	X field center for radius from field center plots
-  :ycenter &lt;val&gt;	Y field center for radius from field center plots
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  :show &lt;file&gt;    Page all information for the current set of objects
+  :size &lt;type&gt;    Size type (Radius|FWHM)
+  :scale &lt;val&gt;    Pixel scale for size values
+  :xcenter &lt;val&gt;  X field center for radius from field center plots
+  :ycenter &lt;val&gt;  Y field center for radius from field center plots
+  </pre></div>
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task measures the point-spread function (PSF) width of stars or other
   unresolved objects in digital images.  The width is measured from the
@@ -298,9 +298,9 @@ psfmeasure: Measure PSF sizes from stellar images
   size as either the enclosed flux radius or the various FWHM, the
   ellipticity, and the position angle.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   The PSF of an object is characterized using a radially symmetric
   enclosed flux profile.  First the center of the object is determined from
@@ -384,9 +384,9 @@ psfmeasure: Measure PSF sizes from stellar images
   symmetric intensity profile is computed from the enclosed flux profile.
   This is based on the equation
   </p>
-  <pre>
-      F(R) = integral from 0 to R { P(r) r dr }
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  F(R) = integral from 0 to R { P(r) r dr }
+  </pre></div>
   <p>
   where F(R) is the enclosed flux at radius R and P(r) is the intensity per
   unit area profile.  Thus the derivative of F(R) divided by R gives an
@@ -413,27 +413,27 @@ psfmeasure: Measure PSF sizes from stellar images
   <p>
   The intensity profile functions (with unit peak) are:
   </p>
-  <pre>
-      I(r) = exp (-0.5 * (r/sigma)**2)			Gaussian
-      I(r) = (1 + (r/alpha)**2)) ** (-beta)		Moffat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  I(r) = exp (-0.5 * (r/sigma)**2)                    Gaussian
+  I(r) = (1 + (r/alpha)**2)) ** (-beta)               Moffat
+  </pre></div>
   <p>
   with parameters sigma, alpha, and beta.  The normalized enclosed flux
   profiles, which is what is actually fit, are then:
   </p>
-  <pre>
-      F(r) = 1 - exp (-0.5 * (r/sigma)**2)		Gaussian
-      F(r) = 1 - (1 + (r/alpha)**2)) ** (1-beta)		Moffat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  F(r) = 1 - exp (-0.5 * (r/sigma)**2)                Gaussian
+  F(r) = 1 - (1 + (r/alpha)**2)) ** (1-beta)          Moffat
+  </pre></div>
   <p>
   The fits determine the parameters sigma or alpha and beta (if a
   beta value is not specified by the users).  The reported FWHM values
   are given by:
   </p>
-  <pre>
-      GFWHM = 2 * sigma * sqrt (2 * ln (2))		Gaussian
-      MFWHM = 2 * alpha * sqrt (2 ** (1/beta) - 1)	Moffat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  GFWHM = 2 * sigma * sqrt (2 * ln (2))               Gaussian
+  MFWHM = 2 * alpha * sqrt (2 ** (1/beta) - 1)        Moffat
+  </pre></div>
   <p>
   were the units are adjusted by the pixel scale factor.
   </p>
@@ -448,9 +448,9 @@ psfmeasure: Measure PSF sizes from stellar images
   initial determination.  The relative magnitude of an object is then
   computed as
   </p>
-  <pre>
-      rel. mag. = -2.5 * log (object flux / maximum star flux)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  rel. mag. = -2.5 * log (object flux / maximum star flux)
+  </pre></div>
   <p>
   The maximum star magnitude over all stars is used as the zero point for the
   relative magnitudes (hence it is possible for an individual object relative
@@ -460,11 +460,11 @@ psfmeasure: Measure PSF sizes from stellar images
   The ellipticity and positional angle of an object are derived from the
   second central intensity weighted moments.  The moments are:
   </p>
-  <pre>
-  	Mxx = sum { (I - B) * x * x } / sum { I - B }
-  	Myy = sum { (I - B) * y * y } / sum { I - B }
-  	Mxy = sum { (I - B) * x * y } / sum { I - B }
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Mxx = sum { (I - B) * x * x } / sum { I - B }
+  Myy = sum { (I - B) * y * y } / sum { I - B }
+  Mxy = sum { (I - B) * x * y } / sum { I - B }
+  </pre></div>
   <p>
   where x and y are the distances from the object center, I is
   the pixel intensity and B is the background intensity.  The sum is
@@ -473,12 +473,12 @@ psfmeasure: Measure PSF sizes from stellar images
   The ellipticity and position angles are derived from the moments
   by the equations:
   </p>
-  <pre>
-  	M1 = (Mxx - Myy) / (Mxx + Myy)
-  	M2 = 2 * Mxy / (Mxx + Myy)
-  	ellip = (M1**2 + M2**2) ** 1/2
-  	pa = atan (M2 / M1) / 2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  M1 = (Mxx - Myy) / (Mxx + Myy)
+  M2 = 2 * Mxy / (Mxx + Myy)
+  ellip = (M1**2 + M2**2) ** 1/2
+  pa = atan (M2 / M1) / 2
+  </pre></div>
   <p>
   where ** is the exponentiation operator and atan is the arc tangent
   operator.  The ellipticity is essentially (a - b) / (a + b) where a
@@ -498,12 +498,12 @@ psfmeasure: Measure PSF sizes from stellar images
   FWHM of a Gaussian or Moffat profile that encloses the same flux
   as the measured object as a function of the level.  The equation are:
   </p>
-  <pre>
-     FWHM = 2 * r(level) * sqrt (ln(2.) / ln (1/(1-level)))  Gaussian
+  <div class="highlight-default-notranslate"><pre>
+  FWHM = 2 * r(level) * sqrt (ln(2.) / ln (1/(1-level)))  Gaussian
   
-     FWHM = 2 * r(level) * sqrt (2**(1/beta)-1) /
-  	  sqrt ((1-level)**(1/(1-beta))-1)		   Moffat
-  </pre>
+  FWHM = 2 * r(level) * sqrt (2**(1/beta)-1) /
+         sqrt ((1-level)**(1/(1-beta))-1)                 Moffat
+  </pre></div>
   <p>
   where r(level) is the radius that encloses <span style="font-family: monospace;">"level"</span> fraction of the total
   flux.  ln is the natural logarithm and sqrt is the square root.  The beta
@@ -516,23 +516,23 @@ psfmeasure: Measure PSF sizes from stellar images
   the departures from the profile model.  The Moffat profile used in making
   the graphs except for the case where the <i>size</i> is GFWHM.
   </p>
-  <!-- EndSection:   'ALGORITHMS' -->
+  </section>
+  <section id="s_interactive_graphics_mode">
   <h3>Interactive graphics mode</h3>
-  <!-- BeginSection: 'INTERACTIVE GRAPHICS MODE' -->
   <p>
   The graphics part of <b>psfmeasure</b> consists of a number of different
   plots selected by cursor keys.  The available plots depend on the number of
   stars.  The various plots and the keys which select them are summarized
   below.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   a  Spatial plot
   e  Enclosed flux for all stars
   m  Size and ellipticity vs relative magnitude
   p  Radial profiles for all stars
   t  Size and ellipticity vs radius from field center
   z  Zoom to a single measurement
-  </pre>
+  </pre></div>
   <p>
   If there is only one object the only available plot is
   the <span style="font-family: monospace;">'z'</span> or zoom plot.  This has three graphs; a graph of the normalized
@@ -611,7 +611,7 @@ psfmeasure: Measure PSF sizes from stellar images
   In addition to the keys which select plots there are other keys which
   do various things.  These are summarized below.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?  Page cursor command summary
   d  Delete star nearest to cursor
   i  Information about point nearest the cursor
@@ -623,7 +623,7 @@ psfmeasure: Measure PSF sizes from stellar images
   u  Undelete all deleted points
   x  Delete nearest point or star (selected by query)
   &lt;space&gt; Step through different stars in current plot type
-  </pre>
+  </pre></div>
   <p>
   The help, redraw, and quit keys are provide the standard functions.
   The <span style="font-family: monospace;">'s'</span> and space keys were described previously.  The <span style="font-family: monospace;">'i'</span> key
@@ -669,17 +669,17 @@ psfmeasure: Measure PSF sizes from stellar images
   option and the contents of the results displayed by :show were described
   previously.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   :beta &lt;val&gt;     Beta value for Moffat profile fits
-  :level &lt;val&gt;	Level at which the size parameter is evaluated
+  :level &lt;val&gt;    Level at which the size parameter is evaluated
   :overplot &lt;y|n&gt; Overplot the profiles from the narrowest profile?
   :radius &lt;val&gt;   Change profile radius
-  :show &lt;file&gt;	Page all information for the current set of objects
-  :size &lt;type&gt;	Size type (Radius|FWHM)
-  :scale &lt;val&gt;	Pixel scale for size values
-  :xcenter &lt;val&gt;	X field center for radius from field center plots
-  :ycenter &lt;val&gt;	Y field center for radius from field center plots
-  </pre>
+  :show &lt;file&gt;    Page all information for the current set of objects
+  :size &lt;type&gt;    Size type (Radius|FWHM)
+  :scale &lt;val&gt;    Pixel scale for size values
+  :xcenter &lt;val&gt;  X field center for radius from field center plots
+  :ycenter &lt;val&gt;  Y field center for radius from field center plots
+  </pre></div>
   <p>
   The important values which one might want to change interactively are
   the measurement level and the profile radius.  The measurement level
@@ -693,13 +693,13 @@ psfmeasure: Measure PSF sizes from stellar images
   not be made larger than the radius defined by the task parameter though
   it may be decreased and then increased again.
   </p>
-  <!-- EndSection:   'INTERACTIVE GRAPHICS MODE' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  An image of a star field is studied with default values.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; psfmeasure field1
   &lt;The image is displayed and the image cursor activated&gt;
   &lt;A number of brighter stars are marked&gt;
@@ -712,28 +712,28 @@ psfmeasure: Measure PSF sizes from stellar images
   
          Image  Column    Line     Mag    FWHM   Ellip      PA SAT
         field1   68.96   37.87    0.75   5.636    0.03      15
-  	      488.41  116.78    1.61   5.376    0.03     -68
-  	       72.17  156.35    1.47   4.728    0.06     -14
-  	       33.72  211.86    2.74   4.840    0.05     -52
-  	      212.80  260.73    2.99   3.888    0.11      83
-  	      250.51  277.37    1.92   3.914    0.02     -14
-  	      411.81  292.83    1.93   5.032    0.04      34
-  	      131.85  301.12    2.67   4.028    0.06       4
-  	      168.37  413.70    2.20   4.408    0.05      75
-  	      256.02  255.99    0.00   3.940    0.00     -70
+                488.41  116.78    1.61   5.376    0.03     -68
+                 72.17  156.35    1.47   4.728    0.06     -14
+                 33.72  211.86    2.74   4.840    0.05     -52
+                212.80  260.73    2.99   3.888    0.11      83
+                250.51  277.37    1.92   3.914    0.02     -14
+                411.81  292.83    1.93   5.032    0.04      34
+                131.85  301.12    2.67   4.028    0.06       4
+                168.37  413.70    2.20   4.408    0.05      75
+                256.02  255.99    0.00   3.940    0.00     -70
   
   The estimated average FWHM is 4.5722.  The variation in size is real
   in this artificial image having a radial variation in PSF.
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imexamine, implot, pprofile, pradprof, radlist, radplt, radprof,
   specfocus, starfocus, splot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'ALGORITHMS' 'INTERACTIVE GRAPHICS MODE' 'EXAMPLES' 'SEE ALSO'  -->
   

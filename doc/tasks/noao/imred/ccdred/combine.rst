@@ -7,22 +7,22 @@ combine: Combine CCD images
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   combine input output
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of CCD images to combine.  Images of a particular CCD image type may be
   selected with the parameter <i>ccdtype</i> with the remaining images ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output combined image or list of images.  If the <i>project</i> parameter is
@@ -33,7 +33,7 @@ combine: Combine CCD images
   output images as given by the image list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plfile">
   <dt><b>plfile = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plfile' Line='plfile = "" (optional)' -->
   <dd>Output pixel list file or list of files.  If no name is given or the
@@ -44,7 +44,7 @@ combine: Combine CCD images
   keyword BPM.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigma">
   <dt><b>sigma = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = "" (optional)' -->
   <dd>Output sigma image or list of images.  If no name is given or the list ends
@@ -53,14 +53,14 @@ combine: Combine CCD images
   rejected pixels) about the output combined pixel values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdtype">
   <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to combine.  If specified only input images of the specified
   type are combined.  See <b>ccdtypes</b> for the possible image types.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_amps">
   <dt><b>amps = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='amps' Line='amps = yes' -->
   <dd>Combine images by amplifier?  If yes then the input images are grouped by
@@ -69,7 +69,7 @@ combine: Combine CCD images
   See <b>subsets</b> for more on the amplifier parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_subsets">
   <dt><b>subsets = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='subsets' Line='subsets = no' -->
   <dd>Combine images by subset parameter?  If yes then the input images are
@@ -78,13 +78,13 @@ combine: Combine CCD images
   name(s).  See <b>subsets</b> for more on the subset parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delete">
   <dt><b>delete = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no' -->
   <dd>Delete input images after combining?  Only those images combined are deleted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clobber">
   <dt><b>clobber = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber = no' -->
   <dd>Clobber existing output images?  THIS OPTION IS NO LONGER SUPPORTED BUT
@@ -92,7 +92,7 @@ combine: Combine CCD images
   yes AN ERROR ABORT WILL OCCUR.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_combine">
   <dt><b>combine = <span style="font-family: monospace;">"average"</span> (average|median)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='combine' Line='combine = "average" (average|median)' -->
   <dd>Type of combining operation performed on the final set of pixels (after
@@ -101,24 +101,24 @@ combine: Combine CCD images
   values when the number of pixels is even.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reject">
   <dt><b>reject = <span style="font-family: monospace;">"none"</span> (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = "none" (none|minmax|ccdclip|crreject|sigclip|avsigclip|pclip)' -->
   <dd>Type of rejection operation performed on the pixels remaining after offsetting,
   masking and thresholding.  The algorithms are discussed in the
   DESCRIPTION section.  The rejection choices are:
-  <pre>
-        none - No rejection
-      minmax - Reject the nlow and nhigh pixels
-     ccdclip - Reject pixels using CCD noise parameters
-    crreject - Reject only positive pixels using CCD noise parameters
-     sigclip - Reject pixels using a sigma clipping algorithm
-   avsigclip - Reject pixels using an averaged sigma clipping algorithm
-       pclip - Reject pixels using sigma based on percentiles
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+       none - No rejection
+     minmax - Reject the nlow and nhigh pixels
+    ccdclip - Reject pixels using CCD noise parameters
+   crreject - Reject only positive pixels using CCD noise parameters
+    sigclip - Reject pixels using a sigma clipping algorithm
+  avsigclip - Reject pixels using an averaged sigma clipping algorithm
+      pclip - Reject pixels using sigma based on percentiles
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_project">
   <dt><b>project = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='project' Line='project = no' -->
   <dd>Project (combine) across the highest dimension of the input images?  If
@@ -129,7 +129,7 @@ combine: Combine CCD images
   mask image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtype">
   <dt><b>outtype = <span style="font-family: monospace;">"real"</span> (short|ushort|integer|long|real|double)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = "real" (short|ushort|integer|long|real|double)' -->
   <dd>Output image pixel datatype.  The pixel datatypes are <span style="font-family: monospace;">"double"</span>, <span style="font-family: monospace;">"real"</span>,
@@ -141,7 +141,7 @@ combine: Combine CCD images
   a single character.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offsets">
   <dt><b>offsets = <span style="font-family: monospace;">"none"</span> (none|wcs|grid|&lt;filename&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offsets' Line='offsets = "none" (none|wcs|grid|&lt;filename&gt;)' -->
   <dd>Integer offsets to add to each image axes.  The options are:
@@ -163,9 +163,9 @@ combine: Combine CCD images
   <dt><b><span style="font-family: monospace;">"grid"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line='"grid"' -->
   <dd>A uniform grid of offsets is specified by a string of the form
-  <pre>
-  	grid [n1] [s1] [n2] [s2] ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  grid [n1] [s1] [n2] [s2] ...
+  </pre></div>
   where ni is the number of images in dimension i and si is the step
   in dimension i.  For example <span style="font-family: monospace;">"grid 5 100 5 100"</span> specifies a 5x5
   grid with origins offset by 100 pixels.
@@ -181,7 +181,7 @@ combine: Combine CCD images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_masktype">
   <dt><b>masktype = <span style="font-family: monospace;">"none"</span> (none|goodvalue|badvalue|goodbits|badbits)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='masktype' Line='masktype = "none" (none|goodvalue|badvalue|goodbits|badbits)' -->
   <dd>Type of pixel masking to use.  If <span style="font-family: monospace;">"none"</span> then no pixel masking is done
@@ -199,7 +199,7 @@ combine: Combine CCD images
   for all images.</b>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maskvalue">
   <dt><b>maskvalue = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maskvalue' Line='maskvalue = 0' -->
   <dd>Mask value used with the <i>masktype</i> parameter.  If the mask type
@@ -208,13 +208,13 @@ combine: Combine CCD images
   and 4.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blank">
   <dt><b>blank = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0.' -->
   <dd>Output value to be used when there are no pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Multiplicative image scaling to be applied.  The choices are none, scale
@@ -225,7 +225,7 @@ combine: Combine CCD images
   images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zero">
   <dt><b>zero = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = "none" (none|mode|median|mean|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Additive zero level image shifts to be applied.  The choices are none or
@@ -236,7 +236,7 @@ combine: Combine CCD images
   values do not allow a correction to the weights.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weight">
   <dt><b>weight = <span style="font-family: monospace;">"none"</span> (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weight' Line='weight = "none" (none|mode|median|mean|exposure|@&lt;file&gt;|!&lt;keyword&gt;)' -->
   <dd>Weights to be applied during the final averaging.  The choices are none,
@@ -249,7 +249,7 @@ combine: Combine CCD images
   of the variance in the scaled image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_statsec">
   <dt><b>statsec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='statsec' Line='statsec = ""' -->
   <dd>Section of images to use in computing image statistics for scaling and
@@ -266,7 +266,7 @@ combine: Combine CCD images
   <p style="text-align:center">Algorithm Parameters
   
   </p>
-  <dl>
+  <dl id="l_lthreshold">
   <dt><b>lthreshold = INDEF, hthreshold = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lthreshold' Line='lthreshold = INDEF, hthreshold = INDEF' -->
   <dd>Low and high thresholds to be applied to the input pixels.  This is done
@@ -274,7 +274,7 @@ combine: Combine CCD images
   are not used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlow">
   <dt><b>nlow = 1,  nhigh = 1 (minmax)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlow' Line='nlow = 1,  nhigh = 1 (minmax)' -->
   <dd>The number of low and high pixels to be rejected by the <span style="font-family: monospace;">"minmax"</span> algorithm.
@@ -285,7 +285,7 @@ combine: Combine CCD images
   to an integer, is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nkeep">
   <dt><b>nkeep = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nkeep' Line='nkeep = 1' -->
   <dd>The minimum number of pixels to retain or the maximum number to reject when
@@ -299,7 +299,7 @@ combine: Combine CCD images
   may be rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mclip">
   <dt><b>mclip = yes (ccdclip, crreject, sigclip, avsigcliip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mclip' Line='mclip = yes (ccdclip, crreject, sigclip, avsigcliip)' -->
   <dd>Use the median as the estimate for the true intensity rather than the
@@ -309,7 +309,7 @@ combine: Combine CCD images
   However, computing the median is slower than the average.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., hsigma = 3. (ccdclip, crreject, sigclip, avsigclip, pclip)' -->
   <dd>Low and high sigma clipping factors for the <span style="font-family: monospace;">"ccdclip"</span>, <span style="font-family: monospace;">"crreject"</span>, <span style="font-family: monospace;">"sigclip"</span>,
@@ -319,23 +319,23 @@ combine: Combine CCD images
   <span style="font-family: monospace;">"crreject"</span> algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rdnoise">
   <dt><b>rdnoise = <span style="font-family: monospace;">"0."</span>, gain = <span style="font-family: monospace;">"1."</span>, snoise = <span style="font-family: monospace;">"0."</span> (ccdclip, crreject)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = "0.", gain = "1.", snoise = "0." (ccdclip, crreject)' -->
   <dd>CCD readout noise in electrons, gain in electrons/DN, and sensitivity noise
   as a fraction.  These parameters are used with the <span style="font-family: monospace;">"ccdclip"</span> and <span style="font-family: monospace;">"crreject"</span>
   algorithms.  The values may be either numeric or an image header keyword
   which contains the value.  The noise model for a pixel is:
-  <pre>
-      variance in DN = (rdnoise/gain)^2 + DN/gain + (snoise*DN)^2
-      variance in e- = (rdnoise)^2 + (gain*DN) + (snoise*(gain*DN))^2
-  		   = rdnoise^2 + Ne + (snoise * Ne)^2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  variance in DN = (rdnoise/gain)^2 + DN/gain + (snoise*DN)^2
+  variance in e- = (rdnoise)^2 + (gain*DN) + (snoise*(gain*DN))^2
+                 = rdnoise^2 + Ne + (snoise * Ne)^2
+  </pre></div>
   where DN is the data number and Ne is the number of electrons.  Sensitivity
   noise typically comes from noise introduced during flat fielding.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigscale">
   <dt><b>sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigscale' Line='sigscale = 0.1 (ccdclip, crreject, sigclip, avsigclip)' -->
   <dd>This parameter determines when poisson corrections are made to the
@@ -350,7 +350,7 @@ combine: Combine CCD images
   zero level.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pclip">
   <dt><b>pclip = -0.5 (pclip)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pclip' Line='pclip = -0.5 (pclip)' -->
   <dd>Percentile clipping algorithm parameter.  If greater than
@@ -363,7 +363,7 @@ combine: Combine CCD images
   See the DESCRIPTION section for further details.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0' -->
   <dd>Number of pixels to either side of a rejected pixel along image lines
@@ -378,9 +378,9 @@ combine: Combine CCD images
   The package parameters are used to specify verbose and log output and the
   instrument and header definitions.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A set of CCD images are combined by weighted averaging or medianing.  Pixels
   may be rejected from the combining by using pixel masks, threshold levels,
@@ -449,15 +449,15 @@ combine: Combine CCD images
   An outline of the steps taken by the program is given below and the
   following sections elaborate on the steps.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   o   Set the input image offsets and the final output image size.
   o   Set the input image scales and weights
   o   Write the log file output
-  </pre>
+  </pre></div>
   <p>
   For each output image line:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   o   Get input image lines that overlap the output image line
   o   Reject masked pixels
   o   Reject pixels outside the threshold limits
@@ -466,7 +466,7 @@ combine: Combine CCD images
   o   Combine remaining pixels using the weighted average or median
   o   Compute sigmas of remaining pixels about the combined values
   o   Write the output image line, rejected pixel list, and sigmas
-  </pre>
+  </pre></div>
   <p>
   OFFSETS
   </p>
@@ -516,9 +516,9 @@ combine: Combine CCD images
   a grid then the special offset string  beginning with the word <span style="font-family: monospace;">"grid"</span>
   is used.  The format is
   </p>
-  <pre>
-  	grid [n1] [s1] [n2] [s2] ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  grid [n1] [s1] [n2] [s2] ...
+  </pre></div>
   <p>
   where ni is the number of images in dimension i and si is the step in
   dimension i.  For example <span style="font-family: monospace;">"grid 5 100 5 100"</span> specifies a 5x5 grid with
@@ -540,11 +540,11 @@ combine: Combine CCD images
   each dimension of the images.  In the first example cited above the
   offset file might contain:
   </p>
-  <pre>
-  	0 0
-  	10 0
-  	20 0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  0 0
+  10 0
+  20 0
+  </pre></div>
   <p>
   where we assume the second dimension has zero offsets.
   </p>
@@ -555,11 +555,11 @@ combine: Combine CCD images
   value in each dimension and subtract it from all the other offsets
   in that dimension.  The above example could also be specified as:
   </p>
-  <pre>
-  	225 15
-  	235 15
-  	245 15
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  225 15
+  235 15
+  245 15
+  </pre></div>
   <p>
   There may be cases where one doesn't want the minimum offsets reset
   to zero.  If all the offsets are positive and the comment <span style="font-family: monospace;">"# Absolute"</span>
@@ -567,12 +567,12 @@ combine: Combine CCD images
   blank values between the first output pixel and the first overlapping
   input pixel.  Continuing with the above example, the file
   </p>
-  <pre>
-  	# Absolute
-  	10 10
-  	20 10
-  	30 10
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  # Absolute
+  10 10
+  20 10
+  30 10
+  </pre></div>
   <p>
   will have the first pixel of the first image in the 11th pixel of the
   output image.  Note that there is no way to <span style="font-family: monospace;">"pad"</span> the other side of
@@ -600,13 +600,13 @@ combine: Combine CCD images
   <span style="font-family: monospace;">"myval"</span> is the name of an image header keyword and <span style="font-family: monospace;">"scales.dat"</span> is
   a text file containing a list of scale factors.
   </p>
-  <pre>
-  	scale = none		No scaling
-  	zero = mean		Intensity offset by the mean
-  	scale = exposure	Scale by the exposure time
-  	zero = !myval		Intensity offset by an image keyword
-  	scale = @scales.dat	Scales specified in a file
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  scale = none            No scaling
+  zero = mean             Intensity offset by the mean
+  scale = exposure        Scale by the exposure time
+  zero = !myval           Intensity offset by an image keyword
+  scale = @scales.dat     Scales specified in a file
+  </pre></div>
   <p>
   The image statistics factors are computed by sampling a uniform grid
   of points with the smallest grid step that yields less than 10000
@@ -615,9 +615,9 @@ combine: Combine CCD images
   <i>statsec</i> parameter is used.  This parameter has the following
   syntax:
   </p>
-  <pre>
-  	[input|output|overlap] [image section]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  [input|output|overlap] [image section]
+  </pre></div>
   <p>
   The initial modifier defaults to <span style="font-family: monospace;">"input"</span> if absent.  The modifiers are useful
   if the input images have offsets.  In that case <span style="font-family: monospace;">"input"</span> specifies
@@ -699,9 +699,9 @@ combine: Combine CCD images
   from the initial weights (the exposure time, image statistics, or input
   values) using the formula:
   </p>
-  <pre>
-  	weight_final = weight_initial / (scale * sky)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  weight_final = weight_initial / (scale * sky)
+  </pre></div>
   <p>
   where the sky values are those from the image statistics before conversion
   to zero level shifts and adjustment to zero mean over all images.  The
@@ -741,9 +741,9 @@ combine: Combine CCD images
   mask in V2.10.  First if a regular integer image can be created
   then it can be converted to pixel list format with <b>imcopy</b>:
   </p>
-  <pre>
-  	cl&gt; imcopy template plfile.pl
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcopy template plfile.pl
+  </pre></div>
   <p>
   by specifically using the .pl extension on output.  Other programs that
   can create integer images (such <b>mkpattern</b> or <b>ccdred.badpiximage</b>)
@@ -827,10 +827,10 @@ combine: Combine CCD images
   thresholding then a matching fraction of the remaining pixels, truncated
   to an integer, are used.  Thus,
   </p>
-  <pre>
-  	nl = n * nlow/nimages + 0.001 
-  	nh = n * nhigh/nimages + 0.001 
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nl = n * nlow/nimages + 0.001
+  nh = n * nhigh/nimages + 0.001
+  </pre></div>
   <p>
   where n is the number of pixels surviving offseting, masking, and
   thresholding, nimages is the number of input images, nlow and nhigh
@@ -843,11 +843,11 @@ combine: Combine CCD images
   pixels to be rejected the fractions to be rejected are nlow=0.1 and nhigh=0.2
   and the number rejected as a function of n is:
   </p>
-  <pre>
-  	 n   0  1  2  3  4  5  6  7  8  9 10
-  	 nl  0  0  0  0  0  0  0  0  0  0  1
-  	 nh  0  0  0  0  0  1  1  1  1  1  2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  n   0  1  2  3  4  5  6  7  8  9 10
+  nl  0  0  0  0  0  0  0  0  0  0  1
+  nh  0  0  0  0  0  1  1  1  1  1  2
+  </pre></div>
   <p>
   CCDCLIP
   If the images are obtained using a CCD with known read out noise, gain, and
@@ -857,9 +857,9 @@ combine: Combine CCD images
   data values at a pixel with true value &lt;I&gt;, as approximated by the median
   or average with the lowest and highest value excluded, is given by:
   </p>
-  <pre>
-  	sigma = ((rn / g) ** 2 + &lt;I&gt; / g + (s * &lt;I&gt;) ** 2) ** 1/2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sigma = ((rn / g) ** 2 + &lt;I&gt; / g + (s * &lt;I&gt;) ** 2) ** 1/2
+  </pre></div>
   <p>
   where rn is the read out noise in electrons, g is the gain in
   electrons per data value, s is a sensitivity noise given as a fraction,
@@ -970,9 +970,9 @@ combine: Combine CCD images
   to the square root of the median or mean at each point.  This is
   described by the equation:
   </p>
-  <pre>
-  	sigma(column,line) = sqrt (gain(line) * signal(column,line))
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sigma(column,line) = sqrt (gain(line) * signal(column,line))
+  </pre></div>
   <p>
   where the <i>estimated</i> signal is the mean or median (hopefully excluding
   any bad pixels) and the gain is the <i>estimated</i> proportionality
@@ -1124,72 +1124,71 @@ combine: Combine CCD images
   finite population by a factor of n/(n-1), of the unrejected input pixel
   values about the output combined pixel values.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To average and median images without any other features:
   </p>
-  <pre>
-  	cl&gt; combine obj* avg combine=average reject=none
-  	cl&gt; combine obj* med combine=median reject=none
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; combine obj* avg combine=average reject=none
+  cl&gt; combine obj* med combine=median reject=none
+  </pre></div>
   <p>
   2.  To reject cosmic rays:
   </p>
-  <pre>
-  	cl&gt; combine obs1,obs2 Obs reject=crreject rdnoise=5.1, gain=4.3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; combine obs1,obs2 Obs reject=crreject rdnoise=5.1, gain=4.3
+  </pre></div>
   <p>
   3.  To make a grid for display purposes with 21 64x64 images:
   </p>
-  <pre>
-  	cl&gt; combine @list grid offset="grid 5 65 5 65"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; combine @list grid offset="grid 5 65 5 65"
+  </pre></div>
   <p>
   4.  To apply a mask image with good pixels marked with a zero value and
       bad pixels marked with a value of one:
   </p>
-  <pre>
-  	cl&gt; hedit ims* bpm badpix.pl add+ ver-
-  	cl&gt; combine ims* final combine=median masktype=goodval
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit ims* bpm badpix.pl add+ ver-
+  cl&gt; combine ims* final combine=median masktype=goodval
+  </pre></div>
   <p>
   5.  To scale image by the exposure time and then adjust for varying
       sky brightness and make a weighted average:
   </p>
-  <pre>
-  	cl&gt; combine obj* avsig combine=average reject=avsig \<br>
-  	&gt;&gt;&gt; scale=exp zero=mode weight=exp  expname=exptime
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; combine obj* avsig combine=average reject=avsig \<br>
+  &gt;&gt;&gt; scale=exp zero=mode weight=exp  expname=exptime
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   The following times were obtain with a Sun 4/470.  The tests combine
   1000x200 images consisting of Poisson noise and cosmic rays generated
   with the <b>artdata</b> package.  The times, especially the total time,
   are approximate and depend on user loads.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   IMAGES:   Number of images (1000x200) and datatype (R=real, S=short)
   COMBINE:  Combine option
   REJECT:   Rejection option with grow = 0
-  	      minmax:    nlow = 1, nhigh = 1
-  	      ccdclip:   lsigma = 3., hsigma = 3, sigscale = 0.
-  	      sigclip:   lsigma = 3., hsigma = 3, sigscale = 0.
-  	      avsigclip: lsigma = 3., hsigma = 3, sigscale = 0.
-  	      pclip:     lsigma = 3., hsigma = 3, pclip = -0.5
-  	      /a:        mclip = no  (clip about the average)
-  	      /m:        mclip = yes (clip about the median)
+                minmax:    nlow = 1, nhigh = 1
+                ccdclip:   lsigma = 3., hsigma = 3, sigscale = 0.
+                sigclip:   lsigma = 3., hsigma = 3, sigscale = 0.
+                avsigclip: lsigma = 3., hsigma = 3, sigscale = 0.
+                pclip:     lsigma = 3., hsigma = 3, pclip = -0.5
+                /a:        mclip = no  (clip about the average)
+                /m:        mclip = yes (clip about the median)
   O M T S:  Features used (Y=yes, N=no)
   O:        offset = "grid 5 10 2 10"
   M:        masktype = goodval, maskval = 0
-  	      Pixel mask has 2 bad lines and 20 bad columns 
+                Pixel mask has 2 bad lines and 20 bad columns
   T:        lthreshold = INDEF, hthreshold = 1100.
   S:        scale = mode, zero = none, weight = mode
   TIME:     cpu time in seconds, total time in minutes and seconds
-  
   
   IMAGES  COMBINE  REJECT        O M T S     TIME
   
@@ -1244,11 +1243,11 @@ combine: Combine CCD images
     10S   average  none          N N N N    2.2 0:06
     10S   average  minmax        N N N N    4.6 0:12
     10S   average  pclip         N N N N   18.1 0:33
-  </pre>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_COMBINE">
   <dt><b>COMBINE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='COMBINE' Line='COMBINE V2.11' -->
   <dd>The limit of the number of images that may be combined has been removed.
@@ -1261,7 +1260,7 @@ combine: Combine CCD images
   Integer offsets may be determined from the image world coordinate system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_COMBINE">
   <dt><b>COMBINE V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='COMBINE' Line='COMBINE V2.10.3' -->
   <dd>The output pixel datatype parameter, <i>outtype</i> was previously ignored
@@ -1270,7 +1269,7 @@ combine: Combine CCD images
   The factors specified by an @file or keyword are not normalized.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_COMBINE">
   <dt><b>COMBINE V2.10.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='COMBINE' Line='COMBINE V2.10.2' -->
   <dd>The weighting was changed from using the square root of the exposure time
@@ -1284,43 +1283,43 @@ combine: Combine CCD images
   the output images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_COMBINE">
   <dt><b>COMBINE V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='COMBINE' Line='COMBINE V2.10' -->
   <dd>This task was greatly revised to provide many new features.  These features
   are:
-  <pre>
-      o Bad pixel masks
-      o Combining offset and different size images
-      o Blank value for missing data
-      o Combining across the highest dimension (the project option)
-      o Separating threshold rejection, the rejection algorithms,
-        and the final combining statistic
-      o New CCDCLIP, CRREJECT, and PCLIP algorithms
-      o Rejection now may reject more than one pixel per output pixel
-      o Choice of a central median or average for clipping
-      o Choice of final combining operation
-      o Simultaneous multiplicative and zero point scaling
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  o Bad pixel masks
+  o Combining offset and different size images
+  o Blank value for missing data
+  o Combining across the highest dimension (the project option)
+  o Separating threshold rejection, the rejection algorithms,
+    and the final combining statistic
+  o New CCDCLIP, CRREJECT, and PCLIP algorithms
+  o Rejection now may reject more than one pixel per output pixel
+  o Choice of a central median or average for clipping
+  o Choice of final combining operation
+  o Simultaneous multiplicative and zero point scaling
+  </pre></div>
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_limitations">
   <h3>Limitations</h3>
-  <!-- BeginSection: 'LIMITATIONS' -->
   <p>
   Though the previous limit on the number of images that can be combined
   was removed in V2.11 the method has the limitation that only a single
   bad pixel mask will be used for all images.
   </p>
-  <!-- EndSection:   'LIMITATIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   image.imcombine, instruments, ccdtypes, icfit, ccdred, guide, darkcombine,
   flatcombine, zerocombine, onedspec.scombine wfpc.noisemodel
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'REVISIONS' 'LIMITATIONS' 'SEE ALSO'  -->
   

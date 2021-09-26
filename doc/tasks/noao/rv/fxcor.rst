@@ -7,24 +7,24 @@ fxcor: Radial velocities via Fourier cross correlation
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   fxcor objects templates
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <p style="text-align:center">INPUT PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_objects">
   <dt><b>objects</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects' -->
   <dd>The list of image names for the input object spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_templates">
   <dt><b>templates</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='templates' Line='templates' -->
   <dd>The list of image names that will be used as templates for the cross
@@ -32,7 +32,7 @@ fxcor: Radial velocities via Fourier cross correlation
   between the two lists will be correlated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "*"' -->
   <dd>List of apertures to be correlated in echelle and multispec format spectra.  
@@ -47,7 +47,7 @@ fxcor: Radial velocities via Fourier cross correlation
   <i>osample</i> and <i>rsample</i> parameters will apply to all apertures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.
@@ -56,7 +56,7 @@ fxcor: Radial velocities via Fourier cross correlation
   <p style="text-align:center">DATA PREPARATION PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_continuum">
   <dt><b>continuum = <span style="font-family: monospace;">"both"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='continuum' Line='continuum = "both"' -->
   <dd>Continuum subtract the spectra prior to correlation?  Possible values for
@@ -67,7 +67,7 @@ fxcor: Radial velocities via Fourier cross correlation
   the continuum fitting parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_filter">
   <dt><b>filter = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = "none"' -->
   <dd>Fourier filter the spectra prior to correlation?  Possible values for
@@ -78,7 +78,7 @@ fxcor: Radial velocities via Fourier cross correlation
   for the filtering (filter type and width).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rebin">
   <dt><b>rebin = <span style="font-family: monospace;">"smallest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rebin' Line='rebin = "smallest"' -->
   <dd>Rebin to which spectrum dispersion?  If the input dispersions are not equal
@@ -92,7 +92,7 @@ fxcor: Radial velocities via Fourier cross correlation
   Support for non-linear input dispersions is not included in this release.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixcorr">
   <dt><b>pixcorr = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixcorr' Line='pixcorr = "no"' -->
   <dd>Do a pixel-only correlation, ignoring any dispersion information?  If this
@@ -102,7 +102,7 @@ fxcor: Radial velocities via Fourier cross correlation
   when pixel shifts, not velocities, are the desired output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_osample">
   <dt><b>osample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='osample' Line='osample = "*"' -->
   <dd>Sample regions of the object spectrum to be used in the correlation specified
@@ -117,7 +117,7 @@ fxcor: Radial velocities via Fourier cross correlation
   correlated if the whole range is out of bounds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rsample">
   <dt><b>rsample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rsample' Line='rsample = "*"' -->
   <dd>Sample regions of the template spectrum to be used in the correlation specified
@@ -132,7 +132,7 @@ fxcor: Radial velocities via Fourier cross correlation
   correlated if the whole range is out of bounds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apodize">
   <dt><b>apodize = 0.2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apodize' Line='apodize = 0.2' -->
   <dd>Fraction of endpoints to apodize with a cosine bell when preparing the data
@@ -142,7 +142,7 @@ fxcor: Radial velocities via Fourier cross correlation
   <p style="text-align:center">CORRELATION PEAK FITTING PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"gaussian"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "gaussian"' -->
   <dd>Function used to find the center and width of the correlation peak.
@@ -156,7 +156,7 @@ fxcor: Radial velocities via Fourier cross correlation
   all compute the FWHM from the fitted coefficients of the function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_width">
   <dt><b>width = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='width' Line='width = INDEF' -->
   <dd>Width of the fitting region in pixels.  The fitting weights are
@@ -166,7 +166,7 @@ fxcor: Radial velocities via Fourier cross correlation
   this parameter will override the <i>height</i> and <i>peak</i> parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_height">
   <dt><b>height = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='height' Line='height = 0.' -->
   <dd>The width of the fitting region is defined by where the correlation
@@ -176,7 +176,7 @@ fxcor: Radial velocities via Fourier cross correlation
   level is selected by the <i>peak</i> parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_peak">
   <dt><b>peak = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='peak' Line='peak = no' -->
   <dd>Measure the height parameter relative to the correlation peak value
@@ -184,29 +184,27 @@ fxcor: Radial velocities via Fourier cross correlation
   is a fraction of the peak height with an assumed base of zero.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minwidth">
   <dt><b>minwidth = 3., maxwidth = 21.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minwidth' Line='minwidth = 3., maxwidth = 21.' -->
   <dd>The minimum and maximum widths allowed when the width is determined
   from the height.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weights">
   <dt><b>weights = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = 1.' -->
   <dd>Power of distance defining the fitting weights.  The points used
   in fitting the correlation peak are weighted by a power of the
   distance from the center as given by the equation
-  <pre>
-  
-           weight = 1 - (distance / (width/2)) ** <i>weights</i>
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  weight = 1 - (distance / (width/2)) ** <i>weights</i>
+  </pre></div>
   Note that a weight parameter of zero is equivalent to uniform weights.
   The center1d fitting algorithm uses it's own weighting function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = 0.0' -->
   <dd>Background level, in normalized correlation units, for a Gaussian or 
@@ -214,7 +212,7 @@ fxcor: Radial velocities via Fourier cross correlation
   parameter in the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_window">
   <dt><b>window = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window = INDEF' -->
   <dd>Size of the window in the correlation plot.  The peak will be displayed
@@ -229,7 +227,7 @@ fxcor: Radial velocities via Fourier cross correlation
   review this fit or increase the window size.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wincenter">
   <dt><b>wincenter = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wincenter' Line='wincenter = INDEF' -->
   <dd>Center of the peak search window specified in pixel lags if no dispersion
@@ -244,7 +242,7 @@ fxcor: Radial velocities via Fourier cross correlation
   <p style="text-align:center">OUTPUT PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Name of the file to which output will be written.  If no file name is given
@@ -261,7 +259,7 @@ fxcor: Radial velocities via Fourier cross correlation
   velocities in Km/s.)
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">"long"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = "long"' -->
   <dd>Set level of verbosity and types of files to create.  The <i>verbose</i>
@@ -269,25 +267,23 @@ fxcor: Radial velocities via Fourier cross correlation
   of output files created.  Up to three files are created: the <span style="font-family: monospace;">".txt"</span>, <span style="font-family: monospace;">".log"</span>,
   and <span style="font-family: monospace;">".gki"</span> files (see the description for the <i>output</i> parameter).
   Possible values  for <i>verbose</i> and the files created are as follows:
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  Value:      Files Created:
   
-      Value:      Files Created:
-  
-      short       (an 80-char .txt file and a .gki file)
-      long        (a 125-char .txt file, a .log file, a .gki file)
-      nolog       (a 125-char .txt file and a .gki file)
-      nogki       (a 125-char .txt file and a .log file)
-      txtonly     (a 125-char .txt file)
-      stxtonly    (an 80-char .txt file)
-  
-  </pre>
+  short       (an 80-char .txt file and a .gki file)
+  long        (a 125-char .txt file, a .log file, a .gki file)
+  nolog       (a 125-char .txt file and a .gki file)
+  nogki       (a 125-char .txt file and a .log file)
+  txtonly     (a 125-char .txt file)
+  stxtonly    (an 80-char .txt file)
+  </pre></div>
   The <i>fields</i> task 
   may be used to strip out selected columns from the .txt files.  The 125-char
   may be printed without wrapping the lines either in landscape mode for
   a laser printer, or on a 132 column lineprinter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imupdate">
   <dt><b>imupdate = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imupdate' Line='imupdate = "no"' -->
   <dd>Update the image header with the computed velocities?  If set to yes, then
@@ -297,7 +293,7 @@ fxcor: Radial velocities via Fourier cross correlation
   defined in the <i>keywpars</i> pset will also be updated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Output graphics device.
@@ -306,13 +302,13 @@ fxcor: Radial velocities via Fourier cross correlation
   <p style="text-align:center">CONTROL PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = "yes"' -->
   <dd>Process the spectra interactively?  
   </dd>
   </dl>
-  <dl>
+  <dl id="l_autowrite">
   <dt><b>autowrite = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autowrite' Line='autowrite = "yes"' -->
   <dd>Automatically record the last fit to the log file when moving to the 
@@ -321,7 +317,7 @@ fxcor: Radial velocities via Fourier cross correlation
   possibly queried for a file name if <i>output</i> isn't set.  
   </dd>
   </dl>
-  <dl>
+  <dl id="l_autodraw">
   <dt><b>autodraw = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autodraw' Line='autodraw = "yes"' -->
   <dd>Automatically redraw the new fit after it changes.  If set to the default
@@ -330,7 +326,7 @@ fxcor: Radial velocities via Fourier cross correlation
   erased and the user must redraw the screen with an <span style="font-family: monospace;">'r'</span> keystroke.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccftype">
   <dt><b>ccftype = <span style="font-family: monospace;">"image"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccftype' Line='ccftype = "image"' -->
   <dd>Type of output to create when writing out the correlation function with
@@ -342,7 +338,7 @@ fxcor: Radial velocities via Fourier cross correlation
   <p style="text-align:center">ADDITIONAL PARAMETER SETS
   
   </p>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">"kpno"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "kpno"' -->
   <dd>The location of the observations, as defined by the <i>noao.observatory</i>
@@ -351,21 +347,21 @@ fxcor: Radial velocities via Fourier cross correlation
   corrected.  These values are used in the heliocentric correction routines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_continpars">
   <dt><b>continpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='continpars' Line='continpars = ""' -->
   <dd>The continuum subtraction parameters as described in the <i>continpars</i> 
   named pset.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_filtpars">
   <dt><b>filtpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filtpars' Line='filtpars = ""' -->
   <dd>The parameter set defining the parameters to be used in filtering the
   data prior to the correlation. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_keywpars">
   <dt><b>keywpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = ""' -->
   <dd>The image header keyword translation table as described in 
@@ -375,7 +371,7 @@ fxcor: Radial velocities via Fourier cross correlation
   <p style="text-align:center">RV PACKAGE PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_dispaxis">
   <dt><b>dispaxis = 1,  nsum = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 1,  nsum = 1' -->
   <dd>Parameters for defining vectors in 2D images.  The
@@ -384,27 +380,27 @@ fxcor: Radial velocities via Fourier cross correlation
   <i>dispaxis</i> parameter. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z_threshold">
   <dt><b>z_threshold = 0.2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='z_threshold' Line='z_threshold = 0.2' -->
   <dd>Redshift value at which the output logs switch from printing velocities in 
   units of Km/s to redshift z values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tolerance">
   <dt><b>tolerance = 1.0e-5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 1.0e-5' -->
   <dd>Fitting tolerance for Least Squares fitting.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxiters">
   <dt><b>maxiters = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxiters' Line='maxiters = 100' -->
   <dd>Maximum number of iterations for Least Squares fitting or any other iterative
   algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp">
   <dt><b>interp = <span style="font-family: monospace;">"poly5"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5"' -->
   <dd>Interpolator used when rebinning the data to a log-linear dispersion.   See 
@@ -412,21 +408,21 @@ fxcor: Radial velocities via Fourier cross correlation
   <span style="font-family: monospace;">"nearest"</span>, <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"poly3"</span>, <span style="font-family: monospace;">"poly5"</span>, <span style="font-family: monospace;">"spline3"</span>, and <span style="font-family: monospace;">"sinc"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line_color">
   <dt><b>line_color = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line_color' Line='line_color = 1' -->
   <dd>Color index of overlay plotting vectors.  This parameter has no effect on
   devices which do not support color vectors.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_text_color">
   <dt><b>text_color = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='text_color' Line='text_color = 1' -->
   <dd>Color index of plot text annotation.  This parameter has no effect on
   devices which do not support color vectors.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
@@ -440,9 +436,9 @@ fxcor: Radial velocities via Fourier cross correlation
   <b>observatory</b> for additional information.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Fxcor</i> performs a Fourier cross-correlation on the input list of object
   and template spectra.  Object spectra may be either one or two dimensional
@@ -630,9 +626,9 @@ fxcor: Radial velocities via Fourier cross correlation
   and Wyatt, W.F. 1985 in <i>IAU Coll. No 88, Stellar Radial Velocities</i>, 
   p 123).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_fourier_mode_description">
   <h3>Fourier mode description</h3>
-  <!-- BeginSection: 'FOURIER MODE DESCRIPTION' -->
   <p>
   Fourier mode is entered from the main task mode via the <span style="font-family: monospace;">'f'</span> keystroke.  By 
   default, the user is presented with a split plot of the power spectra of
@@ -665,9 +661,9 @@ fxcor: Radial velocities via Fourier cross correlation
   by simply typing a <span style="font-family: monospace;">':'</span> followed by the parameter name found in 
   the <i>filtpars</i> pset.
   </p>
-  <!-- EndSection:   'FOURIER MODE DESCRIPTION' -->
+  </section>
+  <section id="s_continuum_mode_description">
   <h3>Continuum mode description</h3>
-  <!-- BeginSection: 'CONTINUUM MODE DESCRIPTION' -->
   <p>
   Automatic continuum subtraction is controlled by the <i>continpars</i>
   pset.  These may be reset from the main
@@ -680,9 +676,9 @@ fxcor: Radial velocities via Fourier cross correlation
   entered with the <span style="font-family: monospace;">'s'</span> key.  Fitting parameters changed while doing the
   interactive continuum fitting are learned.
   </p>
-  <!-- EndSection:   'CONTINUUM MODE DESCRIPTION' -->
+  </section>
+  <section id="s_spectrum_mode_description">
   <h3>Spectrum mode description</h3>
-  <!-- BeginSection: 'SPECTRUM MODE DESCRIPTION' -->
   <p>
   Spectrum mode is entered from the main or fourier mode via the <span style="font-family: monospace;">'s'</span>
   keystroke.  The user may select plots of the original input spectra with the
@@ -718,21 +714,21 @@ fxcor: Radial velocities via Fourier cross correlation
   <p>
   (NOTE: More functionality is planned for this mode.)
   </p>
-  <!-- EndSection:   'SPECTRUM MODE DESCRIPTION' -->
+  </section>
+  <section id="s_interpolation">
   <h3>Interpolation</h3>
-  <!-- BeginSection: 'INTERPOLATION' -->
   <p>
   The interpolation type is set by the package parameter <i>interp</i>.
   The available interpolation types are:
   </p>
-  <pre>
-  	nearest - nearest neighbor
-  	 linear - linear
-  	  poly3 - 3rd order polynomial
-  	  poly5 - 5th order polynomial
-  	spline3 - cubic spline
-  	   sinc - sinc function
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nearest - nearest neighbor
+   linear - linear
+    poly3 - 3rd order polynomial
+    poly5 - 5th order polynomial
+  spline3 - cubic spline
+     sinc - sinc function
+  </pre></div>
   <p>
   The default interpolation type is a 5th order polynomial (poly5).
   </p>
@@ -767,9 +763,9 @@ fxcor: Radial velocities via Fourier cross correlation
   spectrum by ringing is much more severe than with other interpolation
   types.
   </p>
-  <!-- EndSection:   'INTERPOLATION' -->
+  </section>
+  <section id="s_deblending">
   <h3>Deblending</h3>
-  <!-- BeginSection: 'DEBLENDING' -->
   <p>
   When entering the deblending function, two cursor settings define the
   local background, which may be sloping, and the region to be fit.  Note
@@ -788,16 +784,16 @@ fxcor: Radial velocities via Fourier cross correlation
   In all cases the peak intensities are also determined for each line.
   The options are given below with the appropriate key and mnemonic.
   </p>
-  <pre>
-      a=0p1s	Fit intensities and one sigma with positions fixed
-      b=1p1s	Fit intensities, one position, and one sigma with
-  			separations fixed
-      c=np1s	Fit intensities, positions, and one sigma
-      d=0pns	Fit intensities and sigmas with positions fixed
-      e=1pns	Fit intensities, one position, and sigmas with
-  			separations fixed
-      f=npns	Fit intensities, positions, and sigmas
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  a=0p1s      Fit intensities and one sigma with positions fixed
+  b=1p1s      Fit intensities, one position, and one sigma with
+                      separations fixed
+  c=np1s      Fit intensities, positions, and one sigma
+  d=0pns      Fit intensities and sigmas with positions fixed
+  e=1pns      Fit intensities, one position, and sigmas with
+                      separations fixed
+  f=npns      Fit intensities, positions, and sigmas
+  </pre></div>
   <p>
   This list may also be printed with the <span style="font-family: monospace;">'?'</span> key when in the deblending
   function.
@@ -839,15 +835,15 @@ fxcor: Radial velocities via Fourier cross correlation
   gradient leads to the correct solution rather than an incorrect local
   minimum in the chi square.  The initial values are determined as follows:
   </p>
-  <pre>
-      1.  The initial line centers are those specified by the user
-  	either by marking with the cursor or entering the shifts.
-      2.  The initial peak intensities are the data values at the
-  	given line centers with the marked continuum subtracted.
-      3.  The initial sigmas are obtained by dividing the width of
-  	the marked fitting region by the number of lines and then
-  	dividing this width by 4.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  1.  The initial line centers are those specified by the user
+      either by marking with the cursor or entering the shifts.
+  2.  The initial peak intensities are the data values at the
+      given line centers with the marked continuum subtracted.
+  3.  The initial sigmas are obtained by dividing the width of
+      the marked fitting region by the number of lines and then
+      dividing this width by 4.
+  </pre></div>
   <p>
   Note that each time a new fitting options is specified the initial parameters
   are reset.  Thus the results do not depend on the history of previous fits.
@@ -863,14 +859,14 @@ fxcor: Radial velocities via Fourier cross correlation
   as the starting point for the less constrained options.  In particular,
   the following iterative constraints are used during each option:
   </p>
-  <pre>
-  	a: 0p1s
-  	b: 0p1s, 1p1s
-  	c: 0p1s, 1p1s, np1s
-  	d: 0p1s, 0pns
-  	e: 0p1s, 1p1s, 1pns
-  	f: 0p1s, 1p1s, np1s, npns
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  a: 0p1s
+  b: 0p1s, 1p1s
+  c: 0p1s, 1p1s, np1s
+  d: 0p1s, 0pns
+  e: 0p1s, 1p1s, 1pns
+  f: 0p1s, 1p1s, np1s, npns
+  </pre></div>
   <p>
   For example, the most general fit, <span style="font-family: monospace;">'f'</span>, first fits for only a single sigma
   and the peak intensities, then allows the lines to shift but keeping the
@@ -887,9 +883,9 @@ fxcor: Radial velocities via Fourier cross correlation
   algorithm works well when the lines are not severely blended and the
   shapes of the lines are close to Gaussian.
   </p>
-  <!-- EndSection:   'DEBLENDING' -->
+  </section>
+  <section id="s_peak_fitting_finding_algorithms">
   <h3>Peak fitting/finding algorithms</h3>
-  <!-- BeginSection: 'PEAK FITTING/FINDING ALGORITHMS' -->
   <p>
   Determining the center of the cross correlation peak is the key step in
   measuring a relative shift or velocity between the object and template.
@@ -988,9 +984,9 @@ fxcor: Radial velocities via Fourier cross correlation
   fit, and the user may type the <span style="font-family: monospace;">'v'</span> keystroke for a more detailed description
   of the fit and correlation. 
   </p>
-  <!-- EndSection:   'PEAK FITTING/FINDING ALGORITHMS' -->
+  </section>
+  <section id="s_velocity_computation_algorithm">
   <h3>Velocity computation algorithm</h3>
-  <!-- BeginSection: 'VELOCITY COMPUTATION ALGORITHM' -->
   <p>
   Up to three velocities are computed by the task depending on the completeness
   of the images headers and the presence of dispersion information.  If only
@@ -1002,14 +998,12 @@ fxcor: Radial velocities via Fourier cross correlation
   <p>
   In short form, here are the equations:
   </p>
-  <pre>
-  
-      ref_rvobs = catalogue_vel_of_template - H(temp)  # obs. vel. of temp.
-      VREL = C * (10 ** (wpc * shift) - 1.)	     # relative vel.
-      VOBS = ((1+ref_rvobs/C)*(10**(wpc*shift)-1)) * C # observed vel.
-      VHELIO = VOBS + H(object)			     # heliocentric vel.
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ref_rvobs = catalogue_vel_of_template - H(temp)  # obs. vel. of temp.
+  VREL = C * (10 ** (wpc * shift) - 1.)            # relative vel.
+  VOBS = ((1+ref_rvobs/C)*(10**(wpc*shift)-1)) * C # observed vel.
+  VHELIO = VOBS + H(object)                        # heliocentric vel.
+  </pre></div>
   <p>
   where H() is the heliocentric correction for that observation.  The
   equation used for the relative velocity is derived from the standard
@@ -1036,13 +1030,13 @@ fxcor: Radial velocities via Fourier cross correlation
   Adding the heliocentric correction of the object star then yields the true
   heliocentric velocity of the object.
   </p>
-  <!-- EndSection:   'VELOCITY COMPUTATION ALGORITHM' -->
+  </section>
+  <section id="s_cursor_keys_and_colon_commands_summary">
   <h3>Cursor keys and colon commands summary</h3>
-  <!-- BeginSection: 'CURSOR KEYS AND COLON COMMANDS SUMMARY' -->
   <p style="text-align:center">CORRELATION MODE COMMANDS
   
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?  Print list of cursor key and colon commands
   -  Subtract blended component from correlation peak
   +  Toggle status line output
@@ -1081,7 +1075,7 @@ fxcor: Radial velocities via Fourier cross correlation
   :continuum  [both|obj|temp|none] Set/Show which spectra to normalize
   :correction shift                Convert a pixel shift to a velocity
   :deltav                          Print the velocity per pixel dispersion
-  :disp				 Print dispersion info
+  :disp                            Print dispersion info
   :filter  [both|obj|temp|none]    Set/Show which spectra to filter
   :function [gaussian|lorentzian|  Set/Show CCF peak fitting function
                 center1d|parabola]
@@ -1098,7 +1092,7 @@ fxcor: Radial velocities via Fourier cross correlation
   :peak  [y|n]                     Set/Show peak height flag
   :pbang                           :Previous command without a write
   :previous [temp|aperture|object] Go to previous correlation pair
-  :printz [y|n]			 Toggle output of redshift z values
+  :printz [y|n]                    Toggle output of redshift z values
   :rebin [small|large|obj|temp]    Set/Show the rebin parameter
   :results [file]                  Page results
   :rsample  [range]                Set/Show template regions to correlate
@@ -1117,11 +1111,11 @@ fxcor: Radial velocities via Fourier cross correlation
   :window  [size]                  Set/Show size of window
   :ymin  [correlation height]      Set/Show lower ccf plot scaling
   :ymax  [correlation height]      Set/Show upper ccf plot scaling
-  </pre>
+  </pre></div>
   <p style="text-align:center">FOURIER MODE COMMANDS
   
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?  Print list of cursor key and colon commands
   b  Display power spectra before filtering
   f  Enter Fourier mode
@@ -1139,11 +1133,11 @@ fxcor: Radial velocities via Fourier cross correlation
   :one_image [object|template]  What plot on screen
   :overlay [y|n]                Overlay filt function?
   :&lt;parameter&gt; [value]          Set/Show the FILTERPARS parameter value
-  :plot [object|template]       What type of plot to draw on single plot? 
-  :split_plot [y|n]             Make a split-plot?               
-  :when [before|after]          Plot before/after filter?   
+  :plot [object|template]       What type of plot to draw on single plot?
+  :split_plot [y|n]             Make a split-plot?
+  :when [before|after]          Plot before/after filter?
   :zoom [factor]                FFT zoom parameter
-  </pre>
+  </pre></div>
   <p style="text-align:center">CONTINUUM MODE COMMANDS
   
   </p>
@@ -1153,7 +1147,7 @@ fxcor: Radial velocities via Fourier cross correlation
   <p style="text-align:center">SPECTRUM MODE COMMANDS
   
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?  Print list of cursor key and colon commands
   b  Select sample regions for both spectra
   d  Print velocity difference between two cursor positions
@@ -1171,163 +1165,163 @@ fxcor: Radial velocities via Fourier cross correlation
   :osample [list]         List of object sample regions
   :rsample [list]         List of template sample regions
   :show                   List current parameters
-  </pre>
-  <!-- EndSection:   'CURSOR KEYS AND COLON COMMANDS SUMMARY' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
-      1. Cross correlate a list of 1-dimensional object spectra against
-      three 1-dimensional template spectra, saving results automatically
-      and not continuum subtracting or filtering the data:
+  <div class="highlight-default-notranslate"><pre>
+  1. Cross correlate a list of 1-dimensional object spectra against
+  three 1-dimensional template spectra, saving results automatically
+  and not continuum subtracting or filtering the data:
   
-  	rv&gt; fxcor.interactive = no		# Do it in batch mode
-  	rv&gt; fxcor obj* temp1,temp2,temp3 autowrite+ continuum="no"
-  	&gt;&gt;&gt; filter="no" output="results"
+      rv&gt; fxcor.interactive = no              # Do it in batch mode
+      rv&gt; fxcor obj* temp1,temp2,temp3 autowrite+ continuum="no"
+      &gt;&gt;&gt; filter="no" output="results"
   
-      2. Compute a velocity for a list of apertures in a 2-dimensional 
-      multispec format object image, using only two apertures of a multispec
-      image as the templates:
+  2. Compute a velocity for a list of apertures in a 2-dimensional
+  multispec format object image, using only two apertures of a multispec
+  image as the templates:
   
-  	cl&gt; onedspec
-  	on&gt; scopy object.ms temp apert="8,9" inform="multi" outform="oned"
-  	on&gt; rv
-  	rv&gt; fxcor.interactive = no		# Do it in batch mode
-  	rv&gt; fxcor object.ms temp.0008,temp.0009 apertures="1-7,10,12-35"
+      cl&gt; onedspec
+      on&gt; scopy object.ms temp apert="8,9" inform="multi" outform="oned"
+      on&gt; rv
+      rv&gt; fxcor.interactive = no              # Do it in batch mode
+      rv&gt; fxcor object.ms temp.0008,temp.0009 apertures="1-7,10,12-35"
   
-      In this example, apertures 8 and 9 of the object image will be used 
-      as the template.  The <i>scopy</i> task is used to extract the aper-
-      tures to onedspec format, into two images named "temp.0008" and 
-      "temp.0009".  The task is then run with all of the apertures in the 
-      aperture list correlated against the onedspec templates.
+  In this example, apertures 8 and 9 of the object image will be used
+  as the template.  The <i>scopy</i> task is used to extract the aper-
+  tures to onedspec format, into two images named "temp.0008" and
+  "temp.0009".  The task is then run with all of the apertures in the
+  aperture list correlated against the onedspec templates.
   
-      3. Compute a velocity by fitting a fixed number of points on the peak,
-      using uniform weighting:
+  3. Compute a velocity by fitting a fixed number of points on the peak,
+  using uniform weighting:
   
-  	rv&gt; fxcor obj temp width=8 weights=0.
+      rv&gt; fxcor obj temp width=8 weights=0.
   
-      4. Compute a velocity by fitting a Gaussian to the points on the CCF
-      peak above the 0.1 correlation level.  Constrain the number of points
-      to be less than 15, and linearly decrease the weights:
+  4. Compute a velocity by fitting a Gaussian to the points on the CCF
+  peak above the 0.1 correlation level.  Constrain the number of points
+  to be less than 15, and linearly decrease the weights:
   
-  	rv&gt; fxcor obj temp func="gaussian" width=INDEF height=0.1 
-  	&gt;&gt;&gt; maxwidth=15 weights=1.
+      rv&gt; fxcor obj temp func="gaussian" width=INDEF height=0.1
+      &gt;&gt;&gt; maxwidth=15 weights=1.
   
-      5. Compute a velocity by fitting a Lorentzian to the peak, from the
-      peak maximum to it's half power point:
+  5. Compute a velocity by fitting a Lorentzian to the peak, from the
+  peak maximum to it's half power point:
   
-  	rv&gt; fxcor obj temp func-"lorentz" width=INDEF height=0.5 peak+
-  	&gt;&gt;&gt; maxwidth=15 weights=1.
+      rv&gt; fxcor obj temp func-"lorentz" width=INDEF height=0.5 peak+
+      &gt;&gt;&gt; maxwidth=15 weights=1.
   
-      6. Process a 1-dimensional object against a 1-dimensional template
-      interactively, examining the FFT, and input spectra to define a sample
-      region for the correlation:
+  6. Process a 1-dimensional object against a 1-dimensional template
+  interactively, examining the FFT, and input spectra to define a sample
+  region for the correlation:
   
-  	rv&gt; fxcor obj temp inter+ continuum="both" autowrite- output=""
-  	    Screen is cleared and CCF peak with fit displayed
+      rv&gt; fxcor obj temp inter+ continuum="both" autowrite- output=""
+          Screen is cleared and CCF peak with fit displayed
   
-  	... to refit peak, move cursor to left side of peak and type <span style="font-family: monospace;">'g'</span>
-  	... move cursor to right side of peak and hit any key
+      ... to refit peak, move cursor to left side of peak and type <span style="font-family: monospace;">'g'</span>
+      ... move cursor to right side of peak and hit any key
   
-  	    New fit is drawn and results displayed to the status line
+          New fit is drawn and results displayed to the status line
   
-  	... type the <span style="font-family: monospace;">'v'</span> key for a detailed description of the correlation
+      ... type the <span style="font-family: monospace;">'v'</span> key for a detailed description of the correlation
   
-  	    Graphics are suspended and the text screen shows various
-  	    parameters of the correlation and fit. 
+          Graphics are suspended and the text screen shows various
+          parameters of the correlation and fit.
   
-  	... type <span style="font-family: monospace;">'q'</span> to get back to graphics mode
+      ... type <span style="font-family: monospace;">'q'</span> to get back to graphics mode
   
-  	... to examine the FFT's of the spectra, type the <span style="font-family: monospace;">'f'</span> keystroke.
+      ... to examine the FFT's of the spectra, type the <span style="font-family: monospace;">'f'</span> keystroke.
   
-  	    The screen is cleared and a split plot of the two power spectra
-  	    after filtering is drawn with the requested filter (if any)
-  	    overlayed.
-  	... type the <span style="font-family: monospace;">'f'</span> keystroke
-  	    The screen is cleared and the absolute value of the two FFT's
-  	    after filtering is plotted, again with the filter overlayed.
-  	... type ":overlay no", followed by a <span style="font-family: monospace;">'g'</span> keystroke
-  	    The spectra are redrawn prior to filtering, with no filter over-
-  	    lay
-  	... type <span style="font-family: monospace;">'q'</span> to return to correlation mode
+          The screen is cleared and a split plot of the two power spectra
+          after filtering is drawn with the requested filter (if any)
+          overlayed.
+      ... type the <span style="font-family: monospace;">'f'</span> keystroke
+          The screen is cleared and the absolute value of the two FFT's
+          after filtering is plotted, again with the filter overlayed.
+      ... type ":overlay no", followed by a <span style="font-family: monospace;">'g'</span> keystroke
+          The spectra are redrawn prior to filtering, with no filter over-
+          lay
+      ... type <span style="font-family: monospace;">'q'</span> to return to correlation mode
   
-  	    The screen is redrawn with the CCF plot and peak fit
+          The screen is redrawn with the CCF plot and peak fit
   
-  	... type <span style="font-family: monospace;">'s'</span> to enter spectrum mode
+      ... type <span style="font-family: monospace;">'s'</span> to enter spectrum mode
   
-  	    The screen is cleared and the input spectra displayed
-  	... type <span style="font-family: monospace;">'s'</span> to mark the endpoints of sample regions for correl-
-  	... ation.  The user can mark either the top or bottom plot to
-  	... set sample regions for the object and template respectively.
-  	... Then type <span style="font-family: monospace;">'q'</span> to quit this mode
+          The screen is cleared and the input spectra displayed
+      ... type <span style="font-family: monospace;">'s'</span> to mark the endpoints of sample regions for correl-
+      ... ation.  The user can mark either the top or bottom plot to
+      ... set sample regions for the object and template respectively.
+      ... Then type <span style="font-family: monospace;">'q'</span> to quit this mode
   
-  	    A new correlation is computed and the peak refit automatically
+          A new correlation is computed and the peak refit automatically
   
-  	... type <span style="font-family: monospace;">'q'</span> to quit the task, satisfied with the results
-  	    The user is asked whether he wants to save results
-  	... type <span style="font-family: monospace;">'y'</span> or &lt;cr&gt; to save results
-  	    The user is prompted for an output file name since one wasn't
-  	    specified in the parameter set
-  	... type in a file name
-  	 
-  	    The task exits.
+      ... type <span style="font-family: monospace;">'q'</span> to quit the task, satisfied with the results
+          The user is asked whether he wants to save results
+      ... type <span style="font-family: monospace;">'y'</span> or &lt;cr&gt; to save results
+          The user is prompted for an output file name since one wasn't
+          specified in the parameter set
+      ... type in a file name
   
-      7. Save the correlation function of two galaxy spectra: 
+          The task exits.
   
-  	rv&gt; fxcor obj temp inter+ ccftype="text"
-  	    Screen is cleared and CCF peak with fit displayed
+  7. Save the correlation function of two galaxy spectra:
   
-  	... type ":wccf" to write the CCF
-  	... type in a filename for the text output
-  	... quit the task
+      rv&gt; fxcor obj temp inter+ ccftype="text"
+          Screen is cleared and CCF peak with fit displayed
   
-  	rv&gt; rspectext ccf.txt ccf.fits dtype=interp
-  	rv&gt; splot ccf.fits
+      ... type ":wccf" to write the CCF
+      ... type in a filename for the text output
+      ... quit the task
   
-         The velocity per-pixel-shift is non-linear and is an approximation
-         which works well for low-velocity shifts.  In the case of hi-velocity
-         correlations (or when there are many points) it is best to save the
-         CCF as a text file where the velocity at each shift is written to
-         the file,  then use RSPECTEXT to linearize and convert to an image
-         format.  This avoids the task interpolating a saved image CCF in
-         cases where it may not be required.
+      rv&gt; rspectext ccf.txt ccf.fits dtype=interp
+      rv&gt; splot ccf.fits
   
-      7. Compute a cross-correlation where the template has already been
-         corrected to the rest frame and no heliocentric correction is 
-         required:
+     The velocity per-pixel-shift is non-linear and is an approximation
+     which works well for low-velocity shifts.  In the case of hi-velocity
+     correlations (or when there are many points) it is best to save the
+     CCF as a text file where the velocity at each shift is written to
+     the file,  then use RSPECTEXT to linearize and convert to an image
+     format.  This avoids the task interpolating a saved image CCF in
+     cases where it may not be required.
   
-  	  Step 1)  Use the HEDIT or HFIX tasks to add the following
-  		   keywords to the template image:
+  7. Compute a cross-correlation where the template has already been
+     corrected to the rest frame and no heliocentric correction is
+     required:
   
-  		        DATE-OBS= '1993-03-17T04:56:38.0'
-  		        RA      = '12:00:00'
-  		        DEC     = '12:00:00'
-  		        EPOCH   = 1993.0
-  		        OBSERVAT= 'KPNO'
-  		        VHELIO  = 0.0
+        Step 1)  Use the HEDIT or HFIX tasks to add the following
+                 keywords to the template image:
   
-  		   These values produce a heliocentric correction of zero
-  		   to within 5 decimal places.  The VHELIO keyword will 
-  		   default to zero if not present.
+                      DATE-OBS= '1993-03-17T04:56:38.0'
+                      RA      = '12:00:00'
+                      DEC     = '12:00:00'
+                      EPOCH   = 1993.0
+                      OBSERVAT= 'KPNO'
+                      VHELIO  = 0.0
   
-  	  Step 2)  Use the HEDIT task to add an OBSERVAT keyword to each
-  		   of the object spectra.  The OBSERVATORY task can be used
-  		   get a list of recognized observatories.
+                 These values produce a heliocentric correction of zero
+                 to within 5 decimal places.  The VHELIO keyword will
+                 default to zero if not present.
   
-  	Because mixing observatories is not currently well supported, the
-  	use of the OBSERVAT keyword in <i> both</i> images is the only sure
-  	way to apply the proper observatory information to each image.  Users
-  	may wish to derive a zero-valued heliocentric correction for their
-  	local observatory and use those values instead.
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+        Step 2)  Use the HEDIT task to add an OBSERVAT keyword to each
+                 of the object spectra.  The OBSERVATORY task can be used
+                 get a list of recognized observatories.
+  
+      Because mixing observatories is not currently well supported, the
+      use of the OBSERVAT keyword in <i> both</i> images is the only sure
+      way to apply the proper observatory information to each image.  Users
+      may wish to derive a zero-valued heliocentric correction for their
+      local observatory and use those values instead.
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   continpars, filtpars, observatory, keywpars, onedspec.specwcs, center1d, 
   dispcor, stsdas.fourier
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FOURIER MODE DESCRIPTION' 'CONTINUUM MODE DESCRIPTION' 'SPECTRUM MODE DESCRIPTION' 'INTERPOLATION' 'DEBLENDING' 'PEAK FITTING/FINDING ALGORITHMS' 'VELOCITY COMPUTATION ALGORITHM' 'CURSOR KEYS AND COLON COMMANDS SUMMARY' 'EXAMPLES' 'SEE ALSO'  -->
   

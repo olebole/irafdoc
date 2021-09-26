@@ -7,56 +7,56 @@ sgikern: Simple graphics interface (SGI) graphics kernel
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   sgikern input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input metacode files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"sgimc"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "sgimc"' -->
   <dd>The name of the logical or physical graphics device for which SGI metacode
   is to be generated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_generic">
   <dt><b>generic = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
   <dd>The remaining parameters are ignored when <b>generic</b> = yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_debug">
   <dt><b>debug = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no' -->
   <dd>If <b>debug</b> = yes, the graphics instructions are decoded and printed
   during processing.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>If <b>verbose</b> = yes, the elements of polylines, cell arrays, etc. will
   be printed in debug mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gkiunits">
   <dt><b>gkiunits = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
   <dd>By default, coordinates are printed in NDC rather than GKI units.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>sgikern</i> translates GKI metacode into a much simpler format and
   then calls up a host system task to dispose of the intermediate file to a
@@ -71,14 +71,14 @@ sgikern: Simple graphics interface (SGI) graphics kernel
   first).  The SGI kernel reduces all IRAF plotting instructions to only four
   SGK metacode instructions, i.e.:
   </p>
-  <pre>
-  	opcode  arguments                description
+  <div class="highlight-default-notranslate"><pre>
+  opcode  arguments                description
   
-  	   1      0    0		start a new frame
-  	   2      X    Y                move to (x,y)
-  	   3      X    Y                draw to (x,y)
-  	   4      W    0                set line width (&gt;= 1)
-  </pre>
+     1      0    0                start a new frame
+     2      X    Y                move to (x,y)
+     3      X    Y                draw to (x,y)
+     4      W    0                set line width (&gt;= 1)
+  </pre></div>
   <p>
   All coordinates are specified in GKI NDC units in the range 0-32767.  Note that
   all metacode instructions are the same length.  All text generation, line type
@@ -99,31 +99,31 @@ sgikern: Simple graphics interface (SGI) graphics kernel
   <p>
   The following graphcap fields apply to both metacode and bitmap devices.
   </p>
-  <pre>
-  	DD	host command to dispose of metacode file ($F)
-  	DB	have the kernel print debug messages during execution
-  	RM	boolean; if present, SGK will delete metacode file
-  	MF	multiframe count (max frames per job)
-  	NF	store each frame in a new file (one frame/file)
-  	RO	rotate plot (swap x and y)
-  	YF	y-flip plot (flip y axis) (done after rotate)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  DD      host command to dispose of metacode file ($F)
+  DB      have the kernel print debug messages during execution
+  RM      boolean; if present, SGK will delete metacode file
+  MF      multiframe count (max frames per job)
+  NF      store each frame in a new file (one frame/file)
+  RO      rotate plot (swap x and y)
+  YF      y-flip plot (flip y axis) (done after rotate)
+  </pre></div>
   <p>
   The following additional fields are defined for bitmap devices.
   </p>
-  <pre>
-  	BI	boolean; presence indicates a bitmapped or raster device
-  	LO	width in device pixels of a line of size 1.0
-  	LS	difference in device pixels between line sizes
-  	PX	physical x size of bitmap as stored in memory, bits
-  	PY	physical y size of bitmap, i.e., number of lines in bitmap
-  	XO,YO	origin of plotting window in device pixels
-  	XW,YW	width of plotting window in device pixels
-  	NB	number of bits to be set in each 8 bit byte output
-  	BF	bit-flip each byte in bitmap (easier here than later)
-  	BS	byte swap the bitmap when output (swap every two bytes)
-  	WS	word swap the bitmap when output (swap every four bytes)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  BI      boolean; presence indicates a bitmapped or raster device
+  LO      width in device pixels of a line of size 1.0
+  LS      difference in device pixels between line sizes
+  PX      physical x size of bitmap as stored in memory, bits
+  PY      physical y size of bitmap, i.e., number of lines in bitmap
+  XO,YO   origin of plotting window in device pixels
+  XW,YW   width of plotting window in device pixels
+  NB      number of bits to be set in each 8 bit byte output
+  BF      bit-flip each byte in bitmap (easier here than later)
+  BS      byte swap the bitmap when output (swap every two bytes)
+  WS      word swap the bitmap when output (swap every four bytes)
+  </pre></div>
   <p>
   The multiframe count (MF) limits the number of frames per job, where a job
   refers to the dispose command submitted to the host to process the frames.
@@ -187,32 +187,32 @@ sgikern: Simple graphics interface (SGI) graphics kernel
   host system to dispose of the output metacode file or bitmap file to the
   plotter device.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Convert the GIO/GKI metacode file <span style="font-family: monospace;">"dev$mc"</span> into an SGI format metacode file.
   </p>
-  <p>
-      cl&gt; sgikern dev$mc device=sgimc
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sgikern dev$mc device=sgimc
+  </pre></div>
   <p>
   2. The same GIO/GKI metacode file read in the previous example (<span style="font-family: monospace;">"dev$mc"</span>) can
   be plotted on the SGI device <span style="font-family: monospace;">"qms_sgi"</span>.
   </p>
-  <p>
-      cl&gt; sgikern dev$mc device=qms_sgi
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sgikern dev$mc device=qms_sgi
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   <span style="font-family: monospace;">"The IRAF Simple Graphics Interface (SGI)"</span>, August 1986
   <br>
   sgidecode, stdgraph, stdplot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

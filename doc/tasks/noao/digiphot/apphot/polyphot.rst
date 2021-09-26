@@ -7,21 +7,21 @@ polyphot: Measure magnitudes inside a list of polygonal regions
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   polyphot image
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images containing the objects to be measured.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords = ""' -->
   <dd>The list of text files containing the center coordinates of the polygons
@@ -37,7 +37,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   and version is the next available version number for the file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_polygons">
   <dt><b>polygons = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='polygons' Line='polygons = ""' -->
   <dd>The list of text files containing the vertices of the polygons to be
@@ -51,7 +51,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   and version is the next available version number for the file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">"default"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "default"' -->
   <dd>The name of the results file or results directory. If output is
@@ -64,7 +64,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   an output summary is also written to the standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The critical
@@ -72,7 +72,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   is undefined then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_centerpars">
   <dt><b>centerpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='centerpars' Line='centerpars = ""' -->
   <dd>The name of the file containing the centering parameters. The critical
@@ -81,7 +81,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitskypars">
   <dt><b>fitskypars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitskypars' Line='fitskypars = ""' -->
   <dd>The name of the text file containing the sky fitting parameters. The critical
@@ -90,7 +90,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_polypars">
   <dt><b>polypars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='polypars' Line='polypars = ""' -->
   <dd>The name of the text file containing the polygon photometry parameters,
@@ -98,25 +98,25 @@ polyphot: Measure magnitudes inside a list of polygonal regions
    uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Run the task interactively ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image cursor or image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from <i>coords</i> and
@@ -184,7 +184,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -192,14 +192,14 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical parameters in non-interactive mode ? Verify may be set to
   the apphot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the critical parameters in non-interactive mode if verify is yes ?
@@ -207,14 +207,14 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages in non-interactive mode? Verbose may be set to the apphot
   package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">")_.graphics"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = ")_.graphics"' -->
   <dd>The default graphics device. Graphics may be set to the apphot package
@@ -222,7 +222,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The default display device. By default graphics overlay is disabled. Display
@@ -232,9 +232,9 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   POLYPHOT to work interactively from a contour plot.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   POLYPHOT computes the magnitude of objects in the IRAF image <i>image</i>
   inside a list of polygonal apertures whose vertices are listed in the text file
@@ -291,181 +291,176 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   a list of cursor commands. In batch mode the current set of algorithm
   parameters is used.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_the_polygon_and_polygon_centers_files">
   <h3>The polygon and polygon centers files</h3>
-  <!-- BeginSection: 'THE POLYGON and POLYGON CENTERS FILES' -->
   <p>
   A sample polygons file and accompanying coordinates file is listed below.
   </p>
-  <pre>
-          # Sample Polygons File (2 polygons)
+  <div class="highlight-default-notranslate"><pre>
+  # Sample Polygons File (2 polygons)
   
-          200.5  200.5
-          300.5  200.5
-          300.5  300.5
-          200.5  300.5
-          ;
-          100.4  100.4
-          120.4  100.4
-          120.4  120.4
-          100.4  120.4
-          ;
-  </pre>
-  <pre>
-          # Sample Coordinates File (2 groups, 1 for each polygon)
+  200.5  200.5
+  300.5  200.5
+  300.5  300.5
+  200.5  300.5
+  ;
+  100.4  100.4
+  120.4  100.4
+  120.4  120.4
+  100.4  120.4
+  ;
+  </pre></div>
+  <div class="highlight-default-notranslate"><pre>
+  # Sample Coordinates File (2 groups, 1 for each polygon)
   
-          123.4  185.5
-          110.4  130.4
-          150.9  200.5
-          ;
-          85.6   35.7
-          400.5  300.5
-          69.5   130.5
-          ;
-  </pre>
-  <!-- EndSection:   'THE POLYGON and POLYGON CENTERS FILES' -->
+  123.4  185.5
+  110.4  130.4
+  150.9  200.5
+  ;
+  85.6   35.7
+  400.5  300.5
+  69.5   130.5
+  ;
+  </pre></div>
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The following polyphot commands are currently available.
   </p>
-  <pre>
-  	Interactive Keystroke Commands
+  <div class="highlight-default-notranslate"><pre>
+          Interactive Keystroke Commands
   
-  ?	Print help
-  :	Colon commands
-  v	Verify the critical parameters
-  w	Store the current parameters
-  d	Plot radial profile of current object
-  i	Define current polygon, graphically set parameters using current object
-  g	Define current polygon 
-  c	Fit center for current object
-  t	Fit sky around cursor
+  ?       Print help
+  :       Colon commands
+  v       Verify the critical parameters
+  w       Store the current parameters
+  d       Plot radial profile of current object
+  i       Define current polygon, graphically set parameters using current object
+  g       Define current polygon
+  c       Fit center for current object
+  t       Fit sky around cursor
   a       Average sky values fit around several cursor positions
-  s	Fit sky around current object
-  h	Do photometry for current polygon
-  j	Do photometry for current polygon, output results
-  p	Do photometry for current object using current sky
-  o	Do photometry for current object using current sky, output results
-  f	Do photometry for current object
-  spbar	Do photometry for current object, output results
-  m	Move to next object in coordinate list
-  n	Do photometry for next object in coordinate list, output results
-  l	Do photometry for remaining objects in list, output results
-  r	Rewind the polygon list
-  e	Print error messages
-  q	Exit task
+  s       Fit sky around current object
+  h       Do photometry for current polygon
+  j       Do photometry for current polygon, output results
+  p       Do photometry for current object using current sky
+  o       Do photometry for current object using current sky, output results
+  f       Do photometry for current object
+  spbar   Do photometry for current object, output results
+  m       Move to next object in coordinate list
+  n       Do photometry for next object in coordinate list, output results
+  l       Do photometry for remaining objects in list, output results
+  r       Rewind the polygon list
+  e       Print error messages
+  q       Exit task
   
+          Colon Commands
   
-  	Colon Commands
+  :show   [data/center/sky/phot]  List the parameters
+  :m [n]  Move to next [nth] object in coordinate list
+  :n [n]  Do photometry for next [nth] object in coordinate list, output results
   
-  :show	[data/center/sky/phot]	List the parameters
-  :m [n]	Move to next [nth] object in coordinate list
-  :n [n]	Do photometry for next [nth] object in coordinate list, output results
-  
-  
-  	Colon Parameter Editing Commands
+          Colon Parameter Editing Commands
   
   # Image and file name parameters
   
-  :image		[string]	Image name
-  :polygon	[string]	Polygon file
-  :coords		[string]	Coordinate file
-  :output		[string]	Results file
+  :image          [string]        Image name
+  :polygon        [string]        Polygon file
+  :coords         [string]        Coordinate file
+  :output         [string]        Results file
   
   # Data dependent parameters
   
-  :scale		[value]		Image scale (units per pixel)
-  :fwhmpsf	[value]		Full-width half-maximum of PSF (scale units)
-  :emission	[y/n]		Emission feature (y), absorption (n)
-  :sigma		[value]		Standard deviation of sky (counts)
-  :datamin	[value]		Minimum good pixel value (counts)
-  :datamax	[value]		Maximum good pixel value (counts)
+  :scale          [value]         Image scale (units per pixel)
+  :fwhmpsf        [value]         Full-width half-maximum of PSF (scale units)
+  :emission       [y/n]           Emission feature (y), absorption (n)
+  :sigma          [value]         Standard deviation of sky (counts)
+  :datamin        [value]         Minimum good pixel value (counts)
+  :datamax        [value]         Maximum good pixel value (counts)
   
   # Noise parameters
   
-  :noise		[string]	Noise model (constant|poisson)
-  :gain		[string]	Gain image header keyword
-  :ccdread	[string]	Readout noise image header keyword
-  :epadu		[value]		Gain (electrons per count)
-  :epadu		[value]		Readout noise (electrons)
+  :noise          [string]        Noise model (constant|poisson)
+  :gain           [string]        Gain image header keyword
+  :ccdread        [string]        Readout noise image header keyword
+  :epadu          [value]         Gain (electrons per count)
+  :epadu          [value]         Readout noise (electrons)
   
   # Observing parameters
   
-  :exposure	[string]	Exposure time image header keyword
-  :airmass	[string]	Airmass image header keyword
-  :filter		[string]	Filter image header keyword
-  :obstime	[string]	Time of observation image header keyword
-  :itime		[value]		Integration time (time units)
-  :xairmass	[value]		Airmass value (number)
-  :ifilter	[string]	Filter id string
-  :otime		[string]	Time of observation (time units)
+  :exposure       [string]        Exposure time image header keyword
+  :airmass        [string]        Airmass image header keyword
+  :filter         [string]        Filter image header keyword
+  :obstime        [string]        Time of observation image header keyword
+  :itime          [value]         Integration time (time units)
+  :xairmass       [value]         Airmass value (number)
+  :ifilter        [string]        Filter id string
+  :otime          [string]        Time of observation (time units)
   
   # Centering algorithm parameters
   
-  :calgorithm	[string]	Centering algorithm
-  :cbox		[value]		Width of centering box (scale units)
-  :cthreshold	[value]		Centering intensity threshold (sigma)
-  :cmaxiter	[value]		Maximum number of iterations
-  :maxshift	[value]		Maximum center shift (scale units)
-  :minsnratio	[value]		Minimum S/N ratio for centering
-  :clean		[y/n]		Clean subraster before centering
-  :rclean		[value]		Cleaning radius (scale units)
-  :rclip		[value]		Clipping radius (scale units)
-  :kclean		[value]		Clean K-sigma rejection limit (sigma)
+  :calgorithm     [string]        Centering algorithm
+  :cbox           [value]         Width of centering box (scale units)
+  :cthreshold     [value]         Centering intensity threshold (sigma)
+  :cmaxiter       [value]         Maximum number of iterations
+  :maxshift       [value]         Maximum center shift (scale units)
+  :minsnratio     [value]         Minimum S/N ratio for centering
+  :clean          [y/n]           Clean subraster before centering
+  :rclean         [value]         Cleaning radius (scale units)
+  :rclip          [value]         Clipping radius (scale units)
+  :kclean         [value]         Clean K-sigma rejection limit (sigma)
   
   # Sky fitting algorithm parameters
   
-  :salgorithm	[string]	Sky fitting algorithm 
-  :skyvalue	[value]		User supplied sky value (counts)
-  :annulus	[value]		Inner radius of sky annulus (scale units)
-  :dannulus	[value]		Width of sky annulus (scale units)
-  :khist		[value]		Sky histogram extent (+/- sigma)
-  :binsize	[value]		Resolution of sky histogram (sigma)
-  :sloclip	[value]		Low-side clipping factor in percent
-  :shiclip	[value]		High-side clipping factor in percent
-  :smooth		[y/n]		Lucy smooth the sky histogram
-  :smaxiter	[value]		Maximum number of iterations
-  :snreject	[value]		Maximum number of rejection cycles
-  :sloreject	[value]		Low-side pixel rejection limits (sky sigma)
-  :shireject	[value]		High-side pixel rejection limits (sky sigma)
-  :rgrow		[value]		Region growing radius (scale units)
+  :salgorithm     [string]        Sky fitting algorithm
+  :skyvalue       [value]         User supplied sky value (counts)
+  :annulus        [value]         Inner radius of sky annulus (scale units)
+  :dannulus       [value]         Width of sky annulus (scale units)
+  :khist          [value]         Sky histogram extent (+/- sigma)
+  :binsize        [value]         Resolution of sky histogram (sigma)
+  :sloclip        [value]         Low-side clipping factor in percent
+  :shiclip        [value]         High-side clipping factor in percent
+  :smooth         [y/n]           Lucy smooth the sky histogram
+  :smaxiter       [value]         Maximum number of iterations
+  :snreject       [value]         Maximum number of rejection cycles
+  :sloreject      [value]         Low-side pixel rejection limits (sky sigma)
+  :shireject      [value]         High-side pixel rejection limits (sky sigma)
+  :rgrow          [value]         Region growing radius (scale units)
   
   # Photometry parameters
   
-  :zmag		[value]		Zero point of magnitude scale
+  :zmag           [value]         Zero point of magnitude scale
   
   # Plotting and marking parameters
   
-  :mkcenter	[y/n]		Mark computed centers on the display
-  :mksky		[y/n]		Mark the sky annuli on the display
-  :mkpolygon	[y/n]		Mark the polygon on the display
-  
-  
+  :mkcenter       [y/n]           Mark computed centers on the display
+  :mksky          [y/n]           Mark the sky annuli on the display
+  :mkpolygon      [y/n]           Mark the polygon on the display
   
   The following commands are available from inside the interactive setup menu.
   
-  
                       Interactive Photometry Setup Menu
   
-  	v	Mark and verify the critical parameters (f,c,s,a,d)
+          v       Mark and verify the critical parameters (f,c,s,a,d)
   
-  	f	Mark and verify the psf full-width half-maximum
-  	s	Mark and verify the standard deviation of the background
-  	l	Mark and verify the minimum good data value
-  	u	Mark and verify the maximum good data value
+          f       Mark and verify the psf full-width half-maximum
+          s       Mark and verify the standard deviation of the background
+          l       Mark and verify the minimum good data value
+          u       Mark and verify the maximum good data value
   
-  	c	Mark and verify the centering box width
-  	n	Mark and verify the cleaning radius
-  	p	Mark and verify the clipping radius
+          c       Mark and verify the centering box width
+          n       Mark and verify the cleaning radius
+          p       Mark and verify the clipping radius
   
-  	a	Mark and verify the inner radius of the sky annulus
-  	d	Mark and verify the width of the sky annulus
-  	g	Mark and verify the region growing radius
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+          a       Mark and verify the inner radius of the sky annulus
+          d       Mark and verify the width of the sky annulus
+          g       Mark and verify the region growing radius
+  </pre></div>
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   A brief description of the data dependent parameters, the centering
   algorithms and the sky fitting algorithms can be found in the online
@@ -483,9 +478,9 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   All the 1D summations are summed to give the total integral. The vertices of
   the polygon must be specified in order either clockwise or counterclockwise.
   </p>
-  <!-- EndSection:   'ALGORITHMS' -->
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   In interactive mode the following quantities are printed on the standard
   output as each object is measured. Error is a simple string which indicates
@@ -494,9 +489,9 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   the polygonal aperture and xcenter, ycenter and msky are the x and y centers
   and the sky value respectively.
   </p>
-  <pre>
-      image  xcenter  ycenter  msky  mag  merr error
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  image  xcenter  ycenter  msky  mag  merr error
+  </pre></div>
   <p>
   In both interactive and batch mode full output is written to the text file
   <i>output</i>. At the beginning of each file is a header listing the current
@@ -504,15 +499,15 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   parameters can be subsequently altered. For each star measured the following
   record is written
   </p>
-  <pre>
-  	image  xinit  yinit  id  coords  lid
-  	   xcenter  ycenter  xshift  yshift  xerr  yerr  cier error
-  	   msky  stdev  sskew  nsky  nsrej  sier  serror
-  	   itime  xairmass  ifilter  otime
-  	   sum  area  flux mag  merr  pier  perr
-  	   polygons  pid  oldxmean  oldymean  xmean  ymean  maxrad  nver
-  	   xvertex  yvertex
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  image  xinit  yinit  id  coords  lid
+     xcenter  ycenter  xshift  yshift  xerr  yerr  cier error
+     msky  stdev  sskew  nsky  nsrej  sier  serror
+     itime  xairmass  ifilter  otime
+     sum  area  flux mag  merr  pier  perr
+     polygons  pid  oldxmean  oldymean  xmean  ymean  maxrad  nver
+     xvertex  yvertex
+  </pre></div>
   <p>
   Image and coords are the name of the image and coordinate file respectively.
   Id and lid are the sequence numbers of objects in the output and coordinate
@@ -521,10 +516,10 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   xshift, yshift, and xerr, yerr are self explanatory and output in pixel units.
   The sense of the xshift and yshift definitions is the following.
   </p>
-  <pre>
-  	xshift = xcenter - xinit
-  	yshift = ycenter - yinit
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  xshift = xcenter - xinit
+  yshift = ycenter - yinit
+  </pre></div>
   <p>
   Sier and serror are the sky fitting error code and accompanying error
   message respectively.  Msky, stdev and sskew are the best estimate of the
@@ -544,13 +539,13 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   and error in the magnitude in the aperture after subtracting the sky value
   (see below).
   </p>
-  <pre>
-          flux = sum - area * msky
-           mag = zmag - 2.5 * log10 (flux) + 2.5 * log10 (itime)
-          merr = 1.0857 * error / flux
-         error = sqrt (flux / epadu + area * stdev**2 +
-                 area**2 * stdev**2 / nsky)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   flux = sum - area * msky
+    mag = zmag - 2.5 * log10 (flux) + 2.5 * log10 (itime)
+   merr = 1.0857 * error / flux
+  error = sqrt (flux / epadu + area * stdev**2 +
+          area**2 * stdev**2 / nsky)
+  </pre></div>
   <p>
   Pier and perror are photometry error code and accompanying error message.
   </p>
@@ -567,284 +562,213 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   and yvertex are the number of vertices and the coordinates of the vertices
   of the polygonal aperture.
   </p>
-  <!-- EndSection:   'OUTPUT' -->
+  </section>
+  <section id="s_errors">
   <h3>Errors</h3>
-  <!-- BeginSection: 'ERRORS' -->
   <p>
   If the object centering was error free then the field cier will be zero.
   Non-zero values of cier flag the following error conditions.
   </p>
-  <pre>
-  	0        # No error
-  	101      # The centering box is off image
-  	102      # The centering box is partially off the image
-  	103      # The S/N ratio is low in the centering box
-  	104      # There are two few points for a good fit
-  	105      # The x or y center fit is singular
-  	106      # The x or y center fit did not converge
-  	107      # The x or y center shift is greater than maxshift
-  	108      # There is bad data in the centering box
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  0        # No error
+  101      # The centering box is off image
+  102      # The centering box is partially off the image
+  103      # The S/N ratio is low in the centering box
+  104      # There are two few points for a good fit
+  105      # The x or y center fit is singular
+  106      # The x or y center fit did not converge
+  107      # The x or y center shift is greater than maxshift
+  108      # There is bad data in the centering box
+  </pre></div>
   <p>
   If all goes well during the sky fitting process then the error code sier
   will be 0. Non-zero values of sier flag the following error conditions.
   </p>
-  <pre>
-  	0         # No error
-  	201       # There are no sky pixels in the sky annulus
-  	202       # Sky annulus is partially off the image
-  	203       # The histogram of sky pixels has no width
-  	204       # The histogram of sky pixels is flat or concave
-  	205       # There are too few points for a good sky fit
-  	206       # The sky fit is singular
-  	207       # The sky fit did not converge
-  	208       # The graphics stream is undefined
-  	209       # The file of sky values does not exist
-  	210       # The sky file is at EOF
-  	211       # Cannot read the sky value correctly
-  	212       # The best fit parameter are non-physical
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  0         # No error
+  201       # There are no sky pixels in the sky annulus
+  202       # Sky annulus is partially off the image
+  203       # The histogram of sky pixels has no width
+  204       # The histogram of sky pixels is flat or concave
+  205       # There are too few points for a good sky fit
+  206       # The sky fit is singular
+  207       # The sky fit did not converge
+  208       # The graphics stream is undefined
+  209       # The file of sky values does not exist
+  210       # The sky file is at EOF
+  211       # Cannot read the sky value correctly
+  212       # The best fit parameter are non-physical
+  </pre></div>
   <p>
   If no error occurs during the measurement of the magnitudes then pier is
   0. Non-zero values of pier flag the following error conditions.
   </p>
-  <pre>
-  	0       # No error
-  	801	# The polygon is undefined
-  	802     # The polygon is partially off the image
-  	803     # The polygon is off the image
-  	804     # The sky value is undefined
-  	805     # There is bad data in the aperture
-  </pre>
-  <!-- EndSection:   'ERRORS' -->
+  <div class="highlight-default-notranslate"><pre>
+  0       # No error
+  801     # The polygon is undefined
+  802     # The polygon is partially off the image
+  803     # The polygon is off the image
+  804     # The sky value is undefined
+  805     # There is bad data in the aperture
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the magnitudes inside  2 polygonal aperture for a few  regions in
   dev$ypix using the display and the image cursor.  Turn off centering and set
   the sky background to 0.0.
   </p>
-  <pre>
-  	ap&gt; display dev$ypix 1 fi+
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix 1 fi+
   
-  	... display the image
   
-  	ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant \<br>
-              skyvalue=0.0 display=imdg mkpolygon+
+  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant \<br>
+      skyvalue=0.0 display=imdg mkpolygon+
   
-  	... type ? to print a help page
   
-  	... move image cursor to a region of interest
   
-  	... type g to enter the polygon definition menu
-  	... use the image cursor and spbar key to mark the vertices of
-              the polygonal aperture 
-  	... mark each vertex only once, POLYPHOT will close the polygon
-  	    for you
-          ... type q to quit the polygon definition menu
+      the polygonal aperture
+      for you
   
-  	... type the v key to verify the parameters
   
-  	... type the w key to save the parameters in the parameter files
   
-  	... move the image cursor to the objects of interest and tap
-  	    the space bar, the polygon will be marked on the image 
-              display
+      the space bar, the polygon will be marked on the image
+      display
   
-  	... type g to enter the polygon definition menu
-  	... use the image cursor and spbar key to mark the vertices of
-              the polygonal aperture 
-  	... mark each vertex only once, POLYPHOT will close the polygon
-  	    for you
-          ... type q to quit the polygon definition menu
+      the polygonal aperture
+      for you
   
-  	... move the image cursor to the objects of interest and tap
-  	    the space bar, the polygon will be marked on the image
-              display 
+      the space bar, the polygon will be marked on the image
+      display
   
-  	... a one line summary of the fitted parameters will appear on the
-  	    standard output for each star measured
+      standard output for each star measured
   
-  	... the output will appear in ypix.ply.1
-  </pre>
+  </pre></div>
   <p>
   2.  Repeat the previous example but use a contour plot and the graphics
   cursor in place of the image display and image cursor. This option is
   really only useful for users (very few these days) with access to a graphics
   terminal but not an image display server.
   </p>
-  <pre>
-  	ap&gt; show stdimcur
-  
-          ... determine the default value of stdimcur
-  
-  	ap&gt; set stdimcur = stdgraph
-  
-  	... define the image cursor to be the graphics cursor
-  
-          ap&gt; contour dev$ypix
-  
-          ... create a contour plot of dev$ypix
-  
-  	ap&gt; contour dev$ypix &gt;G ypix.plot1
-  
-  	... store the contour plot of dev$ypix in the file ypix.plot1
-  
-  	ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant \<br>
-              skyvalue=0.0 display=stdgraph mkpolygon+
-  
-  	... type ? to print a help page
-  
-  	... type the v key to verify the parameters
-  
-  	... type the w key to save the parameters in the parameter files
-  
-  	... move image cursor to a region of interest
-  	... type g to enter the polygon definition menu
-  	... use the image cursor and spbar key to mark the vertices of
-              the polygonal aperture 
-  	... mark each vertex only once, POLYPHOT will close the polygon
-  	    for you
-          ... type q to quit the polygon definition menu
-  
-  	... move the image cursor to the objects of interest and tap
-  	    the space bar, the polygon will be marked on the contour
-              plot
-  
-  	... move image cursor to a region of interest
-  	... type g to enter the polygon definition menu
-  	... use the image cursor and spbar key to mark the vertices of
-              the polygonal aperture 
-  	... mark each vertex only once, POLYPHOT will close the polygon
-  	    for you
-          ... type q to quit the polygon definition menu
-  
-  	... move the image cursor to the objects of interest and tap
-  	    the space bar, the polygon will be marked on the image 
-              display
-  
-  	... a one line summary of the fitted parameters will appear on the
-  	    standard output for each star measured and the polygons will
-  	    be drawn on the display
-  
-  	... full output will appear in the text file ypix.ply.2 
-  
-  	ap&gt; reset stdimcur = &lt;default&gt;
-  
-  	... reset stdimcur to its default value
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; show stdimcur
   
   
-  </pre>
+  ap&gt; set stdimcur = stdgraph
+  
+  
+  ap&gt; contour dev$ypix
+  
+  
+  ap&gt; contour dev$ypix &gt;G ypix.plot1
+  
+  
+  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant \<br>
+      skyvalue=0.0 display=stdgraph mkpolygon+
+  
+  
+  
+  
+      the polygonal aperture
+      for you
+  
+      the space bar, the polygon will be marked on the contour
+      plot
+  
+      the polygonal aperture
+      for you
+  
+      the space bar, the polygon will be marked on the image
+      display
+  
+      standard output for each star measured and the polygons will
+      be drawn on the display
+  
+  
+  ap&gt; reset stdimcur = &lt;default&gt;
+  
+  </pre></div>
   <p>
   3. Setup and run POLYPHOT interactively on a list of objects created with
   POLYMARK.
   </p>
-  <pre>
-  	ap&gt; display dev$ypix 1
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix 1
   
-          ... display the image
   
-  	ap&gt; polymark dev$ypix display=imdg
+  ap&gt; polymark dev$ypix display=imdg
   
-  	... type g to enter the polygon definition menu
-          ... mark each vertex with the spbar
-  	... mark each vertex only once, POLYPHOT will close the
-  	    polygon for you
-          ... type q to quit the polygon definition menu 
+      polygon for you
   
-  	... move the cursor to the regions of interest and tap
-  	    the space bar, the polygon will be marked on the image
-              display
+      the space bar, the polygon will be marked on the image
+      display
   
-  	... the polygon and polygon centers will be written to the text
-              files ypix.ver.1 and ypix.coo.1 respectively
+      files ypix.ver.1 and ypix.coo.1 respectively
   
-  	... type q to quit and q again to confirm the quit
   
-  	ap&gt; display dev$ypix 2
+  ap&gt; display dev$ypix 2
   
-          ... redisplay the image
   
-  	ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant skyvalue=0.0 \<br>
-              coords=default polygon=default display=imdg mkpolygon+
+  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant skyvalue=0.0 \<br>
+      coords=default polygon=default display=imdg mkpolygon+
   
-  	... type n to measure the first polygon in the list
   
-  	... if everything looks okay type l to measure the rest of the stars 
   
-  	... a one line summary of results will appear on the standard output
-  	    for each star measured and the aperture will be drawn on the
-              image display
+      for each star measured and the aperture will be drawn on the
+      image display
   
-          ... type q to quit and q again to confirm the quit
   
-  	... the output will appear in ypix.ply.3
-  </pre>
+  </pre></div>
   <p>
   4. Repeat example 3 but work on a section of the input image while
   preserving the coordinate system of the original image.
   </p>
-  <pre>
-  	ap&gt; display dev$ypix[150:450,150:450] 1
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; display dev$ypix[150:450,150:450] 1
   
-          ... display the image
   
-  	p&gt; polymark dev$ypix[150:450,150:450] wcsout=tv display=imdg
+  p&gt; polymark dev$ypix[150:450,150:450] wcsout=tv display=imdg
   
-  	... type g to enter the polygon definition menu
-          ... mark each vertex with the spbar
-  	... mark each vertex only once, POLYPHOT will close the
-  	    polygon for you
-          ... type q to quit the polygon definition menu 
+      polygon for you
   
-  	... move the cursor to the regions of interest and tap
-  	    the space bar, the polygon will be marked on the image
-              display
+      the space bar, the polygon will be marked on the image
+      display
   
-  	... the polygon and polygon centers will be written to the text
-              files ypix.ver.1 and ypix.coo.1 respectively
+      files ypix.ver.1 and ypix.coo.1 respectively
   
-  	... type q to quit and q again to confirm the quit
   
-  	ap&gt; display dev$ypix[150:450,150:450] 2
+  ap&gt; display dev$ypix[150:450,150:450] 2
   
-          ... redisplay the image
   
-  	ap&gt; polyphot dev$ypix[150:450,150:450] calgorithm=none \<br>
-  	    salgorithm=constant skyvalue=0.0 coords=default polygon=default \<br>
-  	    display=imdg mkpolygon+ wcsin=tv wcsout=tv
+  ap&gt; polyphot dev$ypix[150:450,150:450] calgorithm=none \<br>
+      salgorithm=constant skyvalue=0.0 coords=default polygon=default \<br>
+      display=imdg mkpolygon+ wcsin=tv wcsout=tv
   
-  	... type n to measure the first polygon in the list
   
-  	... if everything looks okay type l to measure the rest of the stars 
   
-  	... a one line summary of results will appear on the standard output
-  	    for each star measured and the aperture will be drawn on the
-              image display
+      for each star measured and the aperture will be drawn on the
+      image display
   
-          ... type q to quit and q again to confirm the quit
   
-  	... the output will appear in ypix.ply.4
   
-          ap&gt; pdump ypix.ply.4 xc,yc yes | tvmark 2 STDIN col=204
+  ap&gt; pdump ypix.ply.4 xc,yc yes | tvmark 2 STDIN col=204
   
-          ... mark the centers of the polygons on the display
-  </pre>
+  </pre></div>
   <p>
   5. Run POLYPHOT in batch mode using a polygon and coordinate file and the
   default parameters. Verify the critical parameters.
   </p>
-  <pre>
-  	ap&gt; polyphot dev$ypix coords=default polygon=default inter- verify+
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; polyphot dev$ypix coords=default polygon=default inter- verify+
   
-  	... output will appear in ypix.ply.5
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   There are no restrictions on the shape of the polygon but the vertices
   must be listed or marked in order.
@@ -868,14 +792,14 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   switch to <span style="font-family: monospace;">"yes"</span>. It may be necessary to run gflush and to redisplay the image
   to get the overlays position correctly.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars,centerpars,fitskypars,polypars,qphot,phot,wphot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'THE POLYGON and POLYGON CENTERS FILES' 'CURSOR COMMANDS' 'ALGORITHMS' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

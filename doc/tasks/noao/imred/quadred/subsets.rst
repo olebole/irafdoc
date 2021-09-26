@@ -7,8 +7,8 @@ subsets: Description of CCD subsets
 
 .. raw:: html
 
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <b>ccdred</b> package groups observation into subsets.
   The image header parameter used to identify the subsets is defined
@@ -74,31 +74,31 @@ subsets: Description of CCD subsets
   entry if necessary.
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. The subset file is <span style="font-family: monospace;">"subsets"</span> (the default).  The subset parameter is
   translated to <span style="font-family: monospace;">"f1pos"</span> in the image header (the old NOAO CCD parameter)
   which is an integer filter position.  After running a task, say
   <span style="font-family: monospace;">"ccdlist *.imh"</span> to cause all filters to be checked, the subset file contains:
   </p>
-  <pre>
-  	<span style="font-family: monospace;">'2'</span>	2
-  	<span style="font-family: monospace;">'5'</span>	5
-  	<span style="font-family: monospace;">'3'</span>	3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  <span style="font-family: monospace;">'2'</span>     2
+  <span style="font-family: monospace;">'5'</span>     5
+  <span style="font-family: monospace;">'3'</span>     3
+  </pre></div>
   <p>
   The order reflects the order in which the filters were encountered.
   Suppose the user wants to have more descriptive names then the subset
   file can be created or edited to the form:
   </p>
-  <pre>
-  	# Sample translation file.
-  	<span style="font-family: monospace;">'2'</span>	U
-  	<span style="font-family: monospace;">'3'</span>	B
-  	<span style="font-family: monospace;">'4'</span>	V
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  # Sample translation file.
+  <span style="font-family: monospace;">'2'</span>     U
+  <span style="font-family: monospace;">'3'</span>     B
+  <span style="font-family: monospace;">'4'</span>     V
+  </pre></div>
   <p>
   (This is only an example and does not mean these are standard filters.)
   </p>
@@ -106,25 +106,25 @@ subsets: Description of CCD subsets
   2. As another example suppose the image header parameter is <span style="font-family: monospace;">"filter"</span> and
   contains more descriptive strings.  The subset file might become:
   </p>
-  <pre>
-  	'GG 385 Filter'	GG
-  	'GG 495 Filter'	GG1
-  	'RG 610 Filter'	RG
-  	'H-ALPHA'	H_ALPHA
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  'GG 385 Filter' GG
+  'GG 495 Filter' GG1
+  'RG 610 Filter' RG
+  'H-ALPHA'       H_ALPHA
+  </pre></div>
   <p>
   In this case use of the first word was not very good but it is unique.
   It is better if the filters are encoded with the thought that the first
   word will be used by <b>ccdred</b>; it should be short and unique.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   instruments
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ datapars: Edit the data dependent parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   datapars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1.0' -->
   <dd>The scale of the image in user units, e.g arcseconds per pixel.
@@ -26,7 +26,7 @@ datapars: Edit the data dependent parameters
   in the literature.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fwhmpsf">
   <dt><b>fwhmpsf = 2.5 (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwhmpsf' Line='fwhmpsf = 2.5 (scale units)' -->
   <dd>The full-width at half-maximum of the point spread function in scale units.
@@ -36,7 +36,7 @@ datapars: Edit the data dependent parameters
   the interactive capabilities of the APPHOT tasks to set and store it.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_emission">
   <dt><b>emission = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='emission' Line='emission = yes' -->
   <dd>The features to be measured are above sky. By default the APPHOT package
@@ -44,7 +44,7 @@ datapars: Edit the data dependent parameters
   measure absorption features if emission is set to no.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigma">
   <dt><b>sigma = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = INDEF' -->
   <dd>The standard deviation of the sky pixels. The DAOFIND task and the <span style="font-family: monospace;">"constant"</span>
@@ -53,7 +53,7 @@ datapars: Edit the data dependent parameters
   in the sky background.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datamin">
   <dt><b>datamin = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datamin' Line='datamin = INDEF' -->
   <dd>The minimum good pixel value. Datamin defaults to -MAX_REAL, the minimum
@@ -63,7 +63,7 @@ datapars: Edit the data dependent parameters
   bad data in the centering and / or photometry apertures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datamax">
   <dt><b>datamax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datamax' Line='datamax = INDEF' -->
   <dd>The maximum good pixel value. Datamax defaults to MAX_REAL the maximum
@@ -73,7 +73,7 @@ datapars: Edit the data dependent parameters
   photometry apertures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_noise">
   <dt><b>noise = <span style="font-family: monospace;">"poisson"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='noise' Line='noise = "poisson"' -->
   <dd>The noise model used to estimate the uncertainties in the computed APPHOT
@@ -102,21 +102,21 @@ datapars: Edit the data dependent parameters
   errors correctly.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdread">
   <dt><b>ccdread = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdread' Line='ccdread = ""' -->
   <dd>The image header keyword defining the readout noise parameter whose units are
   assumed to be electrons.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gain">
   <dt><b>gain = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = ""' -->
   <dd>The image header keyword defining the gain parameter whose units are assumed
   to be electrons per adu.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_readnoise">
   <dt><b>readnoise = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = 0.0' -->
   <dd>The readout noise of the image in electrons.  APPHOT users should set this
@@ -124,7 +124,7 @@ datapars: Edit the data dependent parameters
   of the APPHOT tasks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_epadu">
   <dt><b>epadu = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='epadu' Line='epadu = 1.0' -->
   <dd>The gain in electrons per adu.  APPHOT users should set epadu or ain to its
@@ -132,7 +132,7 @@ datapars: Edit the data dependent parameters
   the magnitude error estimates are correct.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exposure">
   <dt><b>exposure = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='exposure' Line='exposure = ""' -->
   <dd>The image header exposure time keyword. The time units are arbitrary but
@@ -142,7 +142,7 @@ datapars: Edit the data dependent parameters
   is recorded in the APPHOT output file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_airmass">
   <dt><b>airmass = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass = ""' -->
   <dd>The image header airmass keyword.  The airmass parameter is not used
@@ -150,7 +150,7 @@ datapars: Edit the data dependent parameters
   and its presence there will simplify future calibration steps.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_filter">
   <dt><b>filter = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = ""' -->
   <dd>The image header filter id keyword.  The filter parameter is not used
@@ -158,7 +158,7 @@ datapars: Edit the data dependent parameters
   and its presence there will simplify future calibration steps.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obstime">
   <dt><b>obstime = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obstime' Line='obstime = ""' -->
   <dd>The image header time of observation keyword. The obstime parameter is not used
@@ -166,7 +166,7 @@ datapars: Edit the data dependent parameters
   and its presence there will simplify future calibration steps.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_itime">
   <dt><b>itime = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='itime' Line='itime = 1.0' -->
   <dd>The exposure time for the image in arbitrary units. The APPHOT magnitudes are
@@ -174,7 +174,7 @@ datapars: Edit the data dependent parameters
   if exposure is defined or the value of itime.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xairmass">
   <dt><b>xairmass = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xairmass' Line='xairmass = INDEF' -->
   <dd>The airmass value.  The airmass is read from the image header if airmass
@@ -182,7 +182,7 @@ datapars: Edit the data dependent parameters
   output files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ifilter">
   <dt><b>ifilter = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ifilter' Line='ifilter = "INDEF"' -->
   <dd>The filter id string. The filter id is read from the image header if filter
@@ -190,7 +190,7 @@ datapars: Edit the data dependent parameters
   output files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_otime">
   <dt><b>otime = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='otime' Line='otime = "INDEF"' -->
   <dd>The value of the time of observation. The time of observation is read from
@@ -198,9 +198,9 @@ datapars: Edit the data dependent parameters
   observation is stored in the APPHOT output files.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Datapars</i> sets the image data dependent parameters. These parameters are
   functions, of the instrument optics, the noise characteristics and range of
@@ -322,61 +322,61 @@ datapars: Edit the data dependent parameters
   computations, however their presence in the APPHOT output files can
   greatly simplify future reduction steps. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the data dependent parameters.
   </p>
-  <pre>
-  	ap&gt; lpar datapars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; lpar datapars
+  </pre></div>
   <p>
   2. Edit the data dependent parameters.
   </p>
-  <pre>
-  	ap&gt; datapars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ap&gt; datapars
+  </pre></div>
   <p>
   3. Edit the DATAPARS parameters from within the PHOT task.
   </p>
-  <pre>
-      da&gt; epar phot
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; epar phot
   
-  	... edit a few parameters
+      ... edit a few parameters
   
-  	... move to the datapars parameter and type :e
+      ... move to the datapars parameter and type :e
   
-  	... edit the datapars parameters and type :wq
+      ... edit the datapars parameters and type :wq
   
-  	... finish editing the phot parameters and type :wq
-  </pre>
+      ... finish editing the phot parameters and type :wq
+  </pre></div>
   <p>
   4. Save the current DATAPARS parameter set in a text file datnite1.par.
   This can also be done from inside a higher level task as in the
   previous example.
   </p>
-  <pre>
-      da&gt; datapars
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; datapars
   
-  	... edit a few parameters
+      ... edit a few parameters
   
-  	... type ":w datnite1.par"  from within epar
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type ":w datnite1.par"  from within epar
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   epar,lpar,daofind,center,fitsky,phot,wphot,polyphot,radprof,fitpsf
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

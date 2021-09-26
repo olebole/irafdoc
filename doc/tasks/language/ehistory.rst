@@ -7,20 +7,20 @@ ehistory: Edit history file to re-execute commands
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ehistory (or just <span style="font-family: monospace;">"e"</span>)
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <p>
   None.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>ehistory</i> command calls up a screen editor to edit previously
   executed commands, executing the edited command when return is typed.
@@ -50,13 +50,13 @@ ehistory: Edit history file to re-execute commands
   normal video.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_eol">
   <dt><b>eol</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='eol' Line='eol' -->
   <dd>The editor is entered with the cursor positioned to be end of the command line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bol">
   <dt><b>bol</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='bol' Line='bol' -->
   <dd>The editor is entered with the cursor positioned to be beginning of the command
@@ -72,39 +72,39 @@ ehistory: Edit history file to re-execute commands
   executed.
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Set no standout and verify modes. 
   </p>
-  <p>
-  	cl&gt; ehinit = <span style="font-family: monospace;">"nostandout verify"</span>.
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ehinit = "nostandout verify".
+  </pre></div>
   <p>
   2. Recall the last <span style="font-family: monospace;">"xc"</span> command from the history list and edit it.
   If <i>verify</i> were not enabled the command would simply be repeated.
   </p>
-  <p>
-  	cl&gt; ^xc
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ^xc
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The command editor really only works well for single line commands;
   multiline command blocks are not easily edited at present.
   VI is poorly emulated at present since only control code editor commands
   are possible.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   eparam
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

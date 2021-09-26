@@ -7,14 +7,14 @@ tchsize: Change allocated sizes of various sections of a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tchsize intable outtable maxpar maxcols rowlen allrows
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task changes the allocated sizes of various portions of a table
   or a list of tables.
@@ -51,22 +51,22 @@ tchsize: Change allocated sizes of various sections of a table.
   for example, then <span style="font-family: monospace;">"tchsize tab* test/"</span> would crash when trying to open
   'table.lis' as a table.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>A list of one or more tables whose sizes are to be changed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable = <span style="font-family: monospace;">""</span> [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = "" [file name template]' -->
   <dd>Either a null string, a directory name, or a list of output table names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxpar">
   <dt><b>maxpar = -1 [integer]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxpar' Line='maxpar = -1 [integer]' -->
   <dd>The number of records to allocate for header (i.e., user) parameters.
@@ -74,7 +74,7 @@ tchsize: Change allocated sizes of various sections of a table.
   truncate unused space.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxcols">
   <dt><b>maxcols = -1 [integer]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxcols' Line='maxcols = -1 [integer]' -->
   <dd>The amount of space to allocate for column descriptors.  There must be
@@ -89,7 +89,7 @@ tchsize: Change allocated sizes of various sections of a table.
   to truncate unused space.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rowlen">
   <dt><b>rowlen = -1 [integer]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rowlen' Line='rowlen = -1 [integer]' -->
   <dd>The row length; this is only relevant for a row-ordered table.
@@ -104,7 +104,7 @@ tchsize: Change allocated sizes of various sections of a table.
   to truncate unused space.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_allrows">
   <dt><b>allrows = -1 [integer]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='allrows' Line='allrows = -1 [integer]' -->
   <dd>The number of rows to allocate; this is only relevant for a column-ordered
@@ -120,34 +120,38 @@ tchsize: Change allocated sizes of various sections of a table.
   processed?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Truncate (in-place) all unused space in a single table:
   </p>
-  <pre>
-  	tt&gt; tchsize table "" 0 0 0 0
-  		or
-  	tt&gt; tchsize table table 0 0 0 0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tchsize table "" 0 0 0 0
+          or
+  tt&gt; tchsize table table 0 0 0 0
+  </pre></div>
   <p>
   2. Set the allocated space for user (header) parameters to 27 records
   without changing any other size parameter.  The result is to be put
   in a new file called 'table2.tab', leaving the input table unchanged.
   </p>
-  <p>
-  	tt&gt; tchsize table table2 27 -1 -1 -1
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tchsize table table2 27 -1 -1 -1
+  </pre></div>
   <p>
   3. Truncate unused space in three different tables, with the truncated tables
   named 'a.tab', 'b.tab', and 'c.tab':
   </p>
-  <pre>
-  	tt&gt; tchsize table1,table2,tab67 a,b,c 0 0 0 0
-  		or
-  	tt&gt; tchsize tab*.tab a,b,c 0 0 0 0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tchsize table1,table2,tab67 a,b,c 0 0 0 0
+  </pre></div>
+  <p>
+  or
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tchsize tab*.tab a,b,c 0 0 0 0
+  </pre></div>
   <p>
   In the latter case the extension is given explicitly in case there
   are other files beginning with 'tab' that are not tables; there must
@@ -161,13 +165,13 @@ tchsize: Change allocated sizes of various sections of a table.
   Suppose the following information about the table has been obtained
   by using the 'tinfo' task:
   </p>
-  <pre>
-    tinfo.ncols   = 7
-    tinfo.maxcols = 8
-    tinfo.rowlen  = 12
-    tinfo.rowused = 10
-    tinfo.tbltype = "row"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tinfo.ncols   = 7
+  tinfo.maxcols = 8
+  tinfo.rowlen  = 12
+  tinfo.rowused = 10
+  tinfo.tbltype = "row"
+  </pre></div>
   <p>
   Suppose we want to add 10 more columns:  five single-precision columns,
   two double-precision, and three character*12.  If the table were
@@ -178,30 +182,30 @@ tchsize: Change allocated sizes of various sections of a table.
   so we must set the new row length to at least 'tinfo.rowused' + 18 = 28.
   So we have
   </p>
-  <pre>
-  	tt&gt; tchsize table "" -1 17 28 -1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tchsize table "" -1 17 28 -1
+  </pre></div>
   <p>
   if the space for header parameters does not need to be changed, and
   the allocated number of rows is irrelevant for a row-ordered table.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tinfo
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

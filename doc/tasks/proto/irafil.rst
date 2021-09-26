@@ -7,39 +7,39 @@ irafil: Create an IRAF image from a binary data file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   irafil input nrows ncols
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>the input file names to be converted
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nrows">
   <dt><b>nrows</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nrows' Line='nrows' -->
   <dd>the number of rows of data in the image
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols' -->
   <dd>the number of columns of data in the image
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bits">
   <dt><b>bits = 16</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bits' Line='bits = 16' -->
   <dd>the number of data bits per pixel. This must be either 8 or 16
   </dd>
   </dl>
-  <dl>
+  <dl id="l_signed">
   <dt><b>signed = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='signed' Line='signed = yes' -->
   <dd>the pixels are assumed to be signed integers if the bits parameter is 16,
@@ -48,14 +48,14 @@ irafil: Create an IRAF image from a binary data file
   image will be of type long integers.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tb_flip">
   <dt><b>tb_flip = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tb_flip' Line='tb_flip = no' -->
   <dd>This parameter allows the image to be <span style="font-family: monospace;">"top-to-bottom"</span> flipped during
   conversion.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skip">
   <dt><b>skip = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skip' Line='skip = 0' -->
   <dd>the number of bytes to skip prior to reading pixel data. This allows
@@ -63,9 +63,9 @@ irafil: Create an IRAF image from a binary data file
   be confused with the pixel data.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The specified files are read as integers and converted to IRAF images.
   The specified number of header bytes will be skipped, and the specified
@@ -101,18 +101,18 @@ irafil: Create an IRAF image from a binary data file
   if necessary prior to using IRAFIL. This may be done with REBLOCK in the
   dataio package.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Say you've deleted your header file to an IRAF image. The pixel file
   is pix3034x. Assuming the pixels are short integers, the image is
   10 rows by 800 columns:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   lo&gt; irafil pix3034x 10 1024 skip=1024
   lo&gt; imcopy pix3034x.i[1:800,*] phoenix
-  </pre>
+  </pre></div>
   <p>
   The first line creates the IRAF image pix3034x.i which is readable
   by IRAF tasks, but has 1024 pixels per row. The real image only
@@ -123,30 +123,30 @@ irafil: Create an IRAF image from a binary data file
   <p>
   2. To read the <span style="font-family: monospace;">"snap"</span> format pictures from the Compaq station:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   lo&gt; irafil m82.snp 512 512 tb_flip+ bits=8
-  </pre>
+  </pre></div>
   <p>
   This will create the IRAF image m82.snp.i which can then be run
   through CRTPICT to make a Dicomed hardcopy.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   There is no way to explicitly specify the output image name.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   binfil,imcopy,reblock
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

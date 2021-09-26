@@ -7,42 +7,42 @@ imjoin: N-dimensional image join along arbitrary axis
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imjoin input output 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input images or @file
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output joined image
   </dd>
   </dl>
-  <dl>
+  <dl id="l_joindim">
   <dt><b>joindim = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='joindim' Line='joindim = 1' -->
   <dd>Image dimension along which the input images will be joined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtype">
   <dt><b>outtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""' -->
   <dd>Output image datatype.  If not specified, defaults to highest precedence
   input image datatype.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IMJOIN concatenates a set of input images into a single output image,
   in a specified dimension only.  For example, it can join a set of one
@@ -62,10 +62,10 @@ imjoin: N-dimensional image join along arbitrary axis
   Use IMJOIN primarily when joining a set of images along any dimension that
   is not the next higher one from that of the input images.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1.  Join a list of one dimensional spectra into a single long image.
   
       cl&gt; imjoin @inlist output 1
@@ -73,11 +73,10 @@ imjoin: N-dimensional image join along arbitrary axis
   2.  Join three datacubes along the z direction.
   
       cl&gt; imjoin c1,c2,c3 fullxcube 3
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   Join 10 5000 column type short spectra into one 50000 column image:
   6 seconds on a diskless Sun-3.  
@@ -86,21 +85,21 @@ imjoin: N-dimensional image join along arbitrary axis
   Join 2 512*512 images:  28 seconds on diskless Sun-3.  Join 2 50*50*50
   datacubes in x, y, or z:  15 seconds.
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   There may be limitations on the number of input images that can be handled
   in one execution on some systems.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   immosaic, imstack, imslice
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

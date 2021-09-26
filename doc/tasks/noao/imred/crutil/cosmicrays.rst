@@ -7,21 +7,21 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   cosmicrays input output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images in which to detect cosmic rays.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images in which the detected cosmic rays will be replaced
@@ -33,7 +33,7 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   the input image name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_crmasks">
   <dt><b>crmasks = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crmasks' Line='crmasks = ""' -->
   <dd>List of cosmic ray mask files to be created; one for each input image.  If no
@@ -41,7 +41,7 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   mask is specified the newly detected cosmic rays will be added.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 25.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 25.' -->
   <dd>Detection threshold above the mean of the surrounding pixels for cosmic
@@ -50,7 +50,7 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   is 5 or more times the sigma of the background.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fluxratio">
   <dt><b>fluxratio = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fluxratio' Line='fluxratio = 2.' -->
   <dd>The ratio (as a percent) of the mean neighboring pixel flux to the candidate
@@ -60,7 +60,7 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   or defined by identifying selected objects as stars or cosmic rays.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_npasses">
   <dt><b>npasses = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='npasses' Line='npasses = 5' -->
   <dd>Number of cosmic ray detection passes.  Since only the locally strongest
@@ -68,7 +68,7 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   detect and replace cosmic ray events with multiple neighboring pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_window">
   <dt><b>window = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window = 5' -->
   <dd>Size of cosmic ray detection window.  A square window of either 5 by 5 or
@@ -78,7 +78,7 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   faster.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Examine parameters interactively?  A plot of the mean flux within the
@@ -89,14 +89,14 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   task need not be used interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_train">
   <dt><b>train = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='train' Line='train = no' -->
   <dd>Define the flux ratio threshold by using a set of objects identified
   as stars (or other astronomical objects) or cosmic rays?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_objects">
   <dt><b>objects = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects = ""' -->
   <dd>Cursor list of coordinates of training objects.  If null (the null string <span style="font-family: monospace;">""</span>)
@@ -107,7 +107,7 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   and key may be <span style="font-family: monospace;">'s'</span> for star or <span style="font-family: monospace;">'c'</span> for cosmic ray.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_savefile">
   <dt><b>savefile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='savefile' Line='savefile = ""' -->
   <dd>File to save (by appending) the training object coordinates.  This is of
@@ -116,7 +116,7 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   execution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile' -->
   <dd>If a plot file is specified then the graph of the flux ratio (x100) vs
@@ -124,21 +124,21 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   later.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Interactive graphic output device for interactive examination of the
   detection parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Interactive graphics cursor input.  If null the graphics display cursor
   is used, otherwise a file containing cursor input may be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_answer">
   <dt><b>answer</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='answer' Line='answer' -->
   <dd>This parameter is used for interactive queries when processing a list of
@@ -151,40 +151,40 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   phase without prompting.</i>
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_image_cursor_commands">
   <h3>Image cursor commands</h3>
-  <!-- BeginSection: 'IMAGE CURSOR COMMANDS' -->
-  <pre>
-  ?	Help
-  c	Identify the object as a cosmic ray
-  s	Identify the object as a star
-  g	Switch to the graphics plot
-  q	Quit and continue with the cleaning
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ?       Help
+  c       Identify the object as a cosmic ray
+  s       Identify the object as a star
+  g       Switch to the graphics plot
+  q       Quit and continue with the cleaning
+  </pre></div>
   <p>
   GRAPHICS CURSOR COMMANDS
   </p>
-  <pre>
-  ?	Help
-  a	Toggle between showing all candidates and only the training points
-  d	Mark candidate for replacement (applys to <span style="font-family: monospace;">'+'</span> points)
-  e	Mark candidates in a region for replacement (applys to <span style="font-family: monospace;">'+'</span> points)
-  q	Quit and return to image cursor or replace the selected pixels
-  r	Redraw the graph
-  s	Make a surface plot for the candidate nearest the cursor
-  t	Set the flux ratio threshold at the y cursor position
-  u	Mark candidate to not be replaced (applys to <span style="font-family: monospace;">'x'</span> points)
-  v	Mark candidates in a region to not be replaced (applys to <span style="font-family: monospace;">'x'</span> points)
-  w	Adjust the graph window (see <b>gtools</b>)
-  &lt;space&gt;	Print the pixel coordinates
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ?       Help
+  a       Toggle between showing all candidates and only the training points
+  d       Mark candidate for replacement (applys to <span style="font-family: monospace;">'+'</span> points)
+  e       Mark candidates in a region for replacement (applys to <span style="font-family: monospace;">'+'</span> points)
+  q       Quit and return to image cursor or replace the selected pixels
+  r       Redraw the graph
+  s       Make a surface plot for the candidate nearest the cursor
+  t       Set the flux ratio threshold at the y cursor position
+  u       Mark candidate to not be replaced (applys to <span style="font-family: monospace;">'x'</span> points)
+  v       Mark candidates in a region to not be replaced (applys to <span style="font-family: monospace;">'x'</span> points)
+  w       Adjust the graph window (see <b>gtools</b>)
+  &lt;space&gt; Print the pixel coordinates
+  </pre></div>
   <p>
   There are no colon commands except those for the windowing options (type
   :\help or see <b>gtools</b>).
   </p>
-  <!-- EndSection:   'IMAGE CURSOR COMMANDS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Cosmic ray events in each input image are detected and replaced by the
   average of the four neighbors.  The replacement may be performed
@@ -324,21 +324,21 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   view all data one must rewindow the graph with the <span style="font-family: monospace;">'w'</span> key or <span style="font-family: monospace;">":/"</span>
   commands (see <b>gtools</b>).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To replace cosmic rays in a set of images ccd* without training:
   </p>
-  <pre>
-      cl&gt; cosmicrays ccd* new//ccd*
-      ccd001: Examine parameters interactively? (yes):
-      [A scatter plot graph is made.  One can adjust the threshold.]
-      [Looking at a few points using the <span style="font-family: monospace;">'s'</span> key can be instructive.]
-      [When done type <span style="font-family: monospace;">'q'</span>.]
-      ccd002: Examine parameters interactively? (yes): NO
-      [No further interactive examination is done.]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cosmicrays ccd* new//ccd*
+  ccd001: Examine parameters interactively? (yes):
+  [A scatter plot graph is made.  One can adjust the threshold.]
+  [Looking at a few points using the <span style="font-family: monospace;">'s'</span> key can be instructive.]
+  [When done type <span style="font-family: monospace;">'q'</span>.]
+  ccd002: Examine parameters interactively? (yes): NO
+  [No further interactive examination is done.]
+  </pre></div>
   <p>
   After cleaning one typically displays the images and  possibly blinks them.
   A difference image or mask image may also be created.
@@ -346,37 +346,37 @@ cosmicrays: Remove cosmic rays using flux ratio algorithm
   <p>
   2. To use the interactive training method for setting the flux ratio threshold:
   </p>
-  <pre>
-      # First display the image.
-      cl&gt; display ccd001 1
-      z1 = 123.45 z2= 543.21
-      cl&gt; cosmicrays ccd001 ccd001cr train+
-      [After the cosmic ray candidates are found the image display
-      [cursor will be activated.  Mark a cosmic ray with <span style="font-family: monospace;">'c'</span> and
-      [a star with <span style="font-family: monospace;">'s'</span>.  Type <span style="font-family: monospace;">'g'</span> to get a plot showing the two
-      [points with boxes.  Type <span style="font-family: monospace;">'q'</span> to go back to the image display.
-      [As each new object is marked a box will appear in the plot and
-      [the threshold may change.  To find the location of an object
-      [seen in the plot use <span style="font-family: monospace;">'g'</span> to go to the graph, space key to find
-      [the pixel coordinates, <span style="font-family: monospace;">'q'</span> to go back to the image display,
-      [and the image display coordinate box to find the object.
-      [When done with the training type <span style="font-family: monospace;">'q'</span>.
-      ccd001: Examine parameters interactively? (yes): no
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  # First display the image.
+  cl&gt; display ccd001 1
+  z1 = 123.45 z2= 543.21
+  cl&gt; cosmicrays ccd001 ccd001cr train+
+  [After the cosmic ray candidates are found the image display
+  [cursor will be activated.  Mark a cosmic ray with <span style="font-family: monospace;">'c'</span> and
+  [a star with <span style="font-family: monospace;">'s'</span>.  Type <span style="font-family: monospace;">'g'</span> to get a plot showing the two
+  [points with boxes.  Type <span style="font-family: monospace;">'q'</span> to go back to the image display.
+  [As each new object is marked a box will appear in the plot and
+  [the threshold may change.  To find the location of an object
+  [seen in the plot use <span style="font-family: monospace;">'g'</span> to go to the graph, space key to find
+  [the pixel coordinates, <span style="font-family: monospace;">'q'</span> to go back to the image display,
+  [and the image display coordinate box to find the object.
+  [When done with the training type <span style="font-family: monospace;">'q'</span>.
+  ccd001: Examine parameters interactively? (yes): no
+  </pre></div>
   <p>
   3.  To create a mask image a bad pixel file must be specified.
   </p>
-  <pre>
-      cl&gt; cosmicrays ccd001 ccd001 crmask=crccd001
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cosmicrays ccd001 ccd001 crmask=crccd001
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   crmedian, crnebula, crgrow, crfix, credit, gtools, imedit, rimcursor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'IMAGE CURSOR COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

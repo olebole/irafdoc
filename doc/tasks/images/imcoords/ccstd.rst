@@ -7,22 +7,22 @@ ccstd: Transform to and from standard astrometric coordinates
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccstd input output database solutions
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The input coordinate files. Coordinates may be entered by hand by setting input
   to <span style="font-family: monospace;">"STDIN"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The output coordinate files. The number of output files must be one or equal
@@ -30,7 +30,7 @@ ccstd: Transform to and from standard astrometric coordinates
   setting output to <span style="font-family: monospace;">"STDOUT"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>The text database file written by the ccmap task which contains the
@@ -40,7 +40,7 @@ ccstd: Transform to and from standard astrometric coordinates
   and projection parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_solutions">
   <dt><b>solutions</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions' -->
   <dd>The database record containing the desired plate solution. 
@@ -53,7 +53,7 @@ ccstd: Transform to and from standard astrometric coordinates
   and projection.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_geometry">
   <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometric transformation. The geometry parameter is
@@ -75,7 +75,7 @@ ccstd: Transform to and from standard astrometric coordinates
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_forward">
   <dt><b>forward = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='forward' Line='forward = yes' -->
   <dd>Transform from pixel and celestial coordinates to standard coordinates ? If
@@ -83,14 +83,14 @@ ccstd: Transform to and from standard astrometric coordinates
   are transformed to pixel and celestial coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_polar">
   <dt><b>polar = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='polar' Line='polar = no' -->
   <dd>Convert to and from polar standard coordinates instead of Cartesian standard
   coordinates?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xref">
   <dt><b>xref = INDEF, yref = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF' -->
   <dd>The pixel coordinates of the reference point. If database is undefined
@@ -98,7 +98,7 @@ ccstd: Transform to and from standard astrometric coordinates
   ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = INDEF, ymag = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF' -->
   <dd>The x and y scale factors in arcseconds per pixel. If database is undefined
@@ -106,7 +106,7 @@ ccstd: Transform to and from standard astrometric coordinates
   parameters are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xrotation">
   <dt><b>xrotation = INDEF, yrotation = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF' -->
   <dd>The x and y rotation angles in degrees measured counter-clockwise with
@@ -125,7 +125,7 @@ ccstd: Transform to and from standard astrometric coordinates
   -30.0 degrees in the database file not 30.0 and 30.0.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngref">
   <dt><b>lngref = INDEF, latref = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = INDEF, latref = INDEF' -->
   <dd>The celestial coordinates of the reference point, e.g. the ra and dec
@@ -135,7 +135,7 @@ ccstd: Transform to and from standard astrometric coordinates
   ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngunits">
   <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the input or output ra / longitude and dec / latitude coordinates.
@@ -146,7 +146,7 @@ ccstd: Transform to and from standard astrometric coordinates
   <span style="font-family: monospace;">"degrees"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_projection">
   <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The options are <span style="font-family: monospace;">"tan"</span>, <span style="font-family: monospace;">"sin"</span>, <span style="font-family: monospace;">"arc"</span> and
@@ -154,7 +154,7 @@ ccstd: Transform to and from standard astrometric coordinates
   is used, otherwise this parameter is ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcolumn">
   <dt><b>xcolumn = 1, ycolumn = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcolumn' Line='xcolumn = 1, ycolumn = 2' -->
   <dd>The columns in the input coordinate file containing the x and y coordinates
@@ -162,7 +162,7 @@ ccstd: Transform to and from standard astrometric coordinates
   coordinates xi and eta if the forward parameter is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngcolumn">
   <dt><b>lngcolumn = 3, latcolumn = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngcolumn' Line='lngcolumn = 3, latcolumn = 4' -->
   <dd>The columns in the input coordinate file containing the celestial coordinates
@@ -170,7 +170,7 @@ ccstd: Transform to and from standard astrometric coordinates
   coordinates xi and eta if the forward parameter is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngformat">
   <dt><b>lngformat = <span style="font-family: monospace;">""</span>, latformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngformat' Line='lngformat = "", latformat = ""' -->
   <dd>The default output format of the transformed coordinates in lngcolumn and 
@@ -180,22 +180,22 @@ ccstd: Transform to and from standard astrometric coordinates
   radians.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xformat">
   <dt><b>xformat = <span style="font-family: monospace;">""</span>, yformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "", yformat = ""' -->
   <dd>The default output format of the transformed coordinates in xcolumn and
   ycolumn. The default is <span style="font-family: monospace;">"%10.3f"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_min_sigdigits">
   <dt><b>min_sigdigits = 7</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='min_sigdigits' Line='min_sigdigits = 7' -->
   <dd>The minimum precision of the output coordinates.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   CCSTD transforms the list of input coordinates in the
   text file <i>input</i> and writes the transformed
@@ -245,10 +245,10 @@ ccstd: Transform to and from standard astrometric coordinates
   computed by applying the appropriate sky projection to the celestial
   coordinates.
   </p>
-  <pre>
-  	 xi = f (x, y)
-  	eta = g (x, y)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = f (x, y)
+  eta = g (x, y)
+  </pre></div>
   <p>
   The functions f and g are either power series, Legendre, or Chebyshev
   polynomials whose order and region of validity were set by the user when
@@ -256,18 +256,18 @@ ccstd: Transform to and from standard astrometric coordinates
   any physically meaningful model. However the first order terms can be given
   the simple geometrical interpretation shown below.
   </p>
-  <pre>
-  	  xi = a + b * x + c * y
-  	 eta = d + e * x + f * y
-  	   b = xmag * cos (xrotation)
-  	   c = ymag * sin (yrotation)
-  	   e = -xmag * sin (xrotation)
-  	   f = ymag * cos (yrotation)
-  	   a = xi0 - b * xref - c * yref = xshift
-  	   d = eta0 - e * xref - f * yref = yshift
-  	   xi0 = 0.0
-  	   eta0 = 0.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+    b = xmag * cos (xrotation)
+    c = ymag * sin (yrotation)
+    e = -xmag * sin (xrotation)
+    f = ymag * cos (yrotation)
+    a = xi0 - b * xref - c * yref = xshift
+    d = eta0 - e * xref - f * yref = yshift
+    xi0 = 0.0
+    eta0 = 0.0
+  </pre></div>
   <p>
   xref, yref, xi0, and eta0 are the origins of the reference and output
   coordinate systems respectively. xi0 and eta0 are both 0.0 by default.
@@ -283,18 +283,18 @@ ccstd: Transform to and from standard astrometric coordinates
   that in this case xrotation and yrotation are interpreted as the rotation
   of the coordinates not the rotation of the coordinate axes.
   </p>
-  <pre>
-  	  xi = a + b * x + c * y
-  	 eta = d + e * x + f * y
-  	   b = xmag * cos (xrotation)
-  	   c = -ymag * sin (yrotation)
-  	   e = xmag * sin (xrotation)
-  	   f = ymag * cos (yrotation)
-  	   a = xi0 - b * xref - c * yref = xshift
-  	   d = eta0 - e * xref - f * yref = yshift
-  	   xi0 = 0.0
-  	   eta0 = 0.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+    b = xmag * cos (xrotation)
+    c = -ymag * sin (yrotation)
+    e = xmag * sin (xrotation)
+    f = ymag * cos (yrotation)
+    a = xi0 - b * xref - c * yref = xshift
+    d = eta0 - e * xref - f * yref = yshift
+    xi0 = 0.0
+    eta0 = 0.0
+  </pre></div>
   <p>
   Linear plate solutions are evaluated in the forward and reverse sense
   using the appropriate IRAF mwcs system routines. Higher order plate
@@ -302,9 +302,9 @@ ccstd: Transform to and from standard astrometric coordinates
   evaluation of the polynomial terms, in the reverse sense by applying
   Newton's method to the plate solution.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -313,7 +313,7 @@ ccstd: Transform to and from standard astrometric coordinates
   codes C are as follows:
      
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -330,17 +330,16 @@ ccstd: Transform to and from standard astrometric coordinates
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-     
-     
+  
   Conventions for w (field width) specification:
-     
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-     
+  
   Escape sequences (e.g. "\n" for newline):
-     
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -350,15 +349,15 @@ ccstd: Transform to and from standard astrometric coordinates
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-     
+  
   Examples
-     
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-     
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -371,7 +370,7 @@ ccstd: Transform to and from standard astrometric coordinates
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-     
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
@@ -379,11 +378,11 @@ ccstd: Transform to and from standard astrometric coordinates
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1. Compute the standard coordinates in arcseconds per pixel given a list of
   pixel and equatorial coordinates and the position of the reference point in
   pixel and equatorial coordinates.
@@ -416,12 +415,11 @@ ccstd: Transform to and from standard astrometric coordinates
   131.504   304.608   129.359   255.609
   154.309    25.093   157.740   140.737
   
-  
   3. Compute the plate solution and use it to evaluate the Cartesian and
   polar standard coordinates for the input coordinate list used in example 1.
   
   cl&gt; ccmap coords coords.db xcol=3 ycol=4 lngcol=1 latcol=2 inter-
-  Coords File: coords  Image: 
+  Coords File: coords  Image:
       Database: coords.db  Record: coords
   Refsystem: j2000  Coordinates: equatorial FK5
       Equinox: J2000.000 Epoch: J2000.00000000 MJD: 51544.50000
@@ -435,7 +433,6 @@ ccstd: Transform to and from standard astrometric coordinates
       Reference point: 318.735  273.900  (pixels  pixels)
       X and Y scale: 0.764  0.767  (arcsec/pixel  arcsec/pixel)
       X and Y axis rotation: 179.110  358.958  (degrees  degrees)
-  
   
   cl&gt; type coords.db
   # Mon 10:29:13 24-Nov-97
@@ -477,7 +474,6 @@ ccstd: Transform to and from standard astrometric coordinates
                           -0.7640812161068504     -0.011868034832272
                           -0.01393966623835092    0.7665650170136847
           surface2        0
-  
   
   cl&gt; ccstd coords STDOUT coords.db coords xcol=3 ycol=4 lngcol=1 latcol=2
     -8.471   104.146    -8.599   104.517
@@ -539,18 +535,18 @@ ccstd: Transform to and from standard astrometric coordinates
   13:29:38.70 47:13:36.2   442.010   409.650
   13:29:55.42 47:10:05.1   224.350   131.200
   13:30:01.82 47:12:58.8   134.370   356.330
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccmap, ccsetwcs, cctran, finder.tastrom, skyctran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

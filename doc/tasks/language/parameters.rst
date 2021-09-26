@@ -7,8 +7,8 @@ parameters: Discussion of parameter attributes
 
 .. raw:: html
 
+  <section id="s_discussion">
   <h3>Discussion</h3>
-  <!-- BeginSection: 'DISCUSSION' -->
   <p>
   1. <i>Introduction</i>
   </p>
@@ -28,7 +28,7 @@ parameters: Discussion of parameter attributes
   string, integer, and floating point types, to the exotic struct and cursor
   types.  There is no complex type in the CL.
   </p>
-  <dl>
+  <dl id="l_char">
   <dt><b>char</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='char' Line='char' -->
   <dd>Character parameters are used to store strings of ASCII characters.
@@ -39,7 +39,7 @@ parameters: Discussion of parameter attributes
   of the character.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_int">
   <dt><b>int</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='int' Line='int' -->
   <dd>Integer parameters are used to store integer information.  Integer parameters
@@ -47,7 +47,7 @@ parameters: Discussion of parameter attributes
   precision.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_real">
   <dt><b>real</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='real' Line='real' -->
   <dd>Real parameters are stored internally as double's.
@@ -56,13 +56,13 @@ parameters: Discussion of parameter attributes
   entered using an E not a D.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bool">
   <dt><b>bool</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='bool' Line='bool' -->
   <dd>Boolean parameters may only have the values <i>yes</i> or <i>no</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_file">
   <dt><b>file</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='file' Line='file' -->
   <dd>File parameters are basically character parameters which are required
@@ -72,7 +72,7 @@ parameters: Discussion of parameter attributes
   is used at runtime.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_struct">
   <dt><b>struct</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='struct' Line='struct' -->
   <dd>Struct parameters are characters strings which are treated specially by
@@ -80,7 +80,7 @@ parameters: Discussion of parameter attributes
   remainder of the line being scanned without further parsing.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcur">
   <dt><b>gcur, imcur</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='gcur' Line='gcur, imcur' -->
   <dd>The cursor parameters have a character string value with a predefined cursor
@@ -106,28 +106,27 @@ parameters: Discussion of parameter attributes
   rewound using the p_filename attribute of the parameter.  Assigning the
   null string to a list parameter closes the associated list file.
   </p>
-  <pre>
-  	int	*list = "listfile.lis"
-  	int	cur_val
+  <div class="highlight-default-notranslate"><pre>
+  int     *list = "listfile.lis"
+  int     cur_val
   
-  	for (i=1;  i &lt; nlist;  i+=1) {
-  	    cur_val = list
-  	    analyze (cur_val)
-  	}
-  
-  </pre>
+  for (i=1;  i &lt; nlist;  i+=1) {
+      cur_val = list
+      analyze (cur_val)
+  }
+  </pre></div>
   <p>
   A common usage of struct list-directed parameters is to read files in
   conjunction with the <i>fscan</i> function.  The following example prints
   out a file.
   </p>
-  <pre>
-  	struct	*slist = "filer.lis"
-  	struct	line
+  <div class="highlight-default-notranslate"><pre>
+  struct  *slist = "filer.lis"
+  struct  line
   
-  	while (fscan (slist, line) != EOF)
-  	    print (line)
-  </pre>
+  while (fscan (slist, line) != EOF)
+      print (line)
+  </pre></div>
   <p>
   4. <i>Modes</i>
   </p>
@@ -178,48 +177,48 @@ parameters: Discussion of parameter attributes
   the parameter attributes.  For some parameters certain of the
   attributes will be meaningless or undefined.
   </p>
-  <dl>
+  <dl id="l_p_name">
   <dt><b>p_name</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_name' Line='p_name' -->
   <dd>The name of the parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p_type">
   <dt><b>p_type</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_type' Line='p_type' -->
   <dd>A string indicating the basic type of the parameter:
-  <pre>
-  	b	-- boolean
-  	i	-- int
-  	r	-- real
-  	s	-- string/char
-  	f	-- file
-  	struct	-- struct
-  	gcur	-- graphics cursor
-  	imcur	-- image cursor=
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  b       -- boolean
+  i       -- int
+  r       -- real
+  s       -- string/char
+  f       -- file
+  struct  -- struct
+  gcur    -- graphics cursor
+  imcur   -- image cursor=
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p_xtype">
   <dt><b>p_xtype</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_xtype' Line='p_xtype' -->
   <dd>This is the same as p_type except that the string is prefixed by <span style="font-family: monospace;">"*"</span>
   if the parameter is list directed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p_mode">
   <dt><b>p_mode</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_mode' Line='p_mode' -->
   <dd>A string indicating the mode of the parameter composed of the characters:
-  <pre>
-  	q  --  query
-  	a  --  automatic
-  	h  --  hidden
-  	l  --  learned
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  q  --  query
+  a  --  automatic
+  h  --  hidden
+  l  --  learned
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p_value">
   <dt><b>p_value</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_value' Line='p_value' -->
   <dd>The value of the parameter.  For a list-directed parameter this is a
@@ -227,27 +226,27 @@ parameters: Discussion of parameter attributes
   when the parameter attribute is not specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p_length">
   <dt><b>p_length</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_length' Line='p_length' -->
   <dd>For string type parameters (i.e. char, struct, file, gcur, imcur),
   the maximum length of the string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p_mimimum">
   <dt><b>p_mimimum</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_mimimum' Line='p_mimimum' -->
   <dd>The minimum value for a parameter.  Also for enumerated strings
   the enumeration list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p_maximum">
   <dt><b>p_maximum</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_maximum' Line='p_maximum' -->
   <dd>The maximum value for a parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p_filename">
   <dt><b>p_filename</b></dt>
   <!-- Sec='DISCUSSION' Level=0 Label='p_filename' Line='p_filename' -->
   <dd>For list-directed parameters the file name associated with the parameter.
@@ -256,13 +255,13 @@ parameters: Discussion of parameter attributes
   <p>
   Attributes may appear on either side of an equals sign, e.g.
   </p>
-  <pre>
-  	list.p_filename = "test.fil"
-  	= str.p_length
-  	range = integ.p_maximum - integ.p_minimum
-  	list.p_xtype =
-  	= system.page.first_page.p_minimum	# Fully qualified.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  list.p_filename = "test.fil"
+  = str.p_length
+  range = integ.p_maximum - integ.p_minimum
+  list.p_xtype =
+  = system.page.first_page.p_minimum      # Fully qualified.
+  </pre></div>
   <p>
   It is illegal to assign to the p_name, p_type and p_xtype fields.
   Most of the direct use of the parameter attributes is expected to be
@@ -291,13 +290,13 @@ parameters: Discussion of parameter attributes
   than one <span style="font-family: monospace;">"open"</span> array may appear in the expression but they
   agree on the limits of the loop.  For example,
   </p>
-  <pre>
-  	real x[20,20], y[20], z[10,20], t[20]
+  <div class="highlight-default-notranslate"><pre>
+  real x[20,20], y[20], z[10,20], t[20]
   
-  	y = x[1,*]
-  	t = log(y)
-  	z = x[1:10,*]
-  </pre>
+  y = x[1,*]
+  t = log(y)
+  z = x[1:10,*]
+  </pre></div>
   <p>
   8. <i>Scope</i>
   </p>
@@ -345,14 +344,14 @@ parameters: Discussion of parameter attributes
   are copied to disk when the CL exits, or when the update command
   is used.
   </p>
-  <!-- EndSection:   'DISCUSSION' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   lparam, eparam, cache, unlearn, update, cursor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DISCUSSION' 'SEE ALSO'  -->
   

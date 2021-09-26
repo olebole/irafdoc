@@ -7,14 +7,14 @@ texpand: Expand tables according to a set of rules.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   texpand input output rbase
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task uses a set of rules to convert each row in the input table
   into one or more rows in the output table. Except for these
@@ -41,22 +41,18 @@ texpand: Expand tables according to a set of rules.
   For example, suppose the following rules are contained in the rules
   file:
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   SEX = M &amp;&amp; NAME = ANY =&gt; NAME = Tom || NAME = Dick || NAME = Harry;
   SEX = F &amp;&amp; NAME = ANY =&gt; NAME = Mary || NAME = Jane;
   SEX = X =&gt; SEX = M || SEX = F;
-  
-  </pre>
+  </pre></div>
   <p>
   And suppose the input table contains the following information:
   </p>
-  <pre>
-  
-  NAME		SEX		TITLE
-  ANY		X		Astronomer
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  NAME            SEX             TITLE
+  ANY             X               Astronomer
+  </pre></div>
   <p>
   The first two rules impose two conditions, the first on the value of
   the 'SEX' column and the second on the value of the 'NAME' column. While
@@ -66,28 +62,24 @@ texpand: Expand tables according to a set of rules.
   rule of the rule file is applied to the input table and the following
   intermediate result is produced:
   </p>
-  <pre>
-  
-  NAME		SEX		TITLE
-  ANY		M		Astronomer
-  ANY		F		Astronomer
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  NAME            SEX             TITLE
+  ANY             M               Astronomer
+  ANY             F               Astronomer
+  </pre></div>
   <p>
   The rules file is searched again, and now the first rule matches the
   first row and the second rule matches the second row. So the following
   result is produced when these two rules are applied:
   </p>
-  <pre>
-  
-  NAME		SEX		TITLE
-  Tom		M		Astronomer
-  Dick		M		Astronomer
-  Harry		M		Astronomer
-  Mary		F		Astronomer
-  Jane		F		Astronomer
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  NAME            SEX             TITLE
+  Tom             M               Astronomer
+  Dick            M               Astronomer
+  Harry           M               Astronomer
+  Mary            F               Astronomer
+  Jane            F               Astronomer
+  </pre></div>
   <p>
   The rules file is searched again, and because no matches are found,
   the results are written to the output table.
@@ -111,13 +103,11 @@ texpand: Expand tables according to a set of rules.
   name/value pairs are separated by <span style="font-family: monospace;">"&amp;&amp;"</span> symbols. An example of a rule
   with all these syntax elements is:
   </p>
-  <pre>
-  
-  TARGET = ANY &amp;&amp; OBSERVER = ANY =&gt;		   # Two conditions
-  	TARGET=M31 &amp;&amp; OBSERVER = HUBBLE ||	   # First result
-  	TARGET='OMEGA CENT' &amp;&amp; OBSERVER = STRUVE ; # Second result
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  TARGET = ANY &amp;&amp; OBSERVER = ANY =&gt;                  # Two conditions
+          TARGET=M31 &amp;&amp; OBSERVER = HUBBLE ||         # First result
+          TARGET='OMEGA CENT' &amp;&amp; OBSERVER = STRUVE ; # Second result
+  </pre></div>
   <p>
   Notice that in the above example that an identifier containing a blank
   can be used if the identifier is enclosed in quotes. Double quotes
@@ -134,23 +124,23 @@ texpand: Expand tables according to a set of rules.
   parameter 'verbose' can be set to <span style="font-family: monospace;">"yes"</span> so that the name of each table
   will be displayed when it is processed.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input [file name template]' -->
   <dd>Name of a table, or list of tables, used as input to the task
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output [file name template]' -->
   <dd>Name of a table, or list of tables, to be produced as output to the task. The
   number of input and output tables must be equal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rbase">
   <dt><b>rbase [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rbase' Line='rbase [file name]' -->
   <dd>The file containing the rules used to expand the tables.
@@ -173,39 +163,39 @@ texpand: Expand tables according to a set of rules.
   STDOUT) after each file is processed?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Expand the table 'example' into 'example_2' using the rules in
   'xrules.txt':
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; texpand example.tab example_2.tab xrules.txt
-  </pre>
+  </pre></div>
   <p>
   2. Expand a set of fos tables using the rules in 'fosrules.txt':
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; texpand y*.tab y*%%_2%.tab fosrules.txt verbose+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The task cannot expand tables with boolean columns.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

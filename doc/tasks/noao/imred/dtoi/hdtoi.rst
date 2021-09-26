@@ -7,80 +7,80 @@ hdtoi: Apply DTOI transformation to density image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   hdtoi input output database
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be transformed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output image names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>Name of text database describing HD curve.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fog">
   <dt><b>fog = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fog' Line='fog = ""' -->
   <dd>Value of fog level, read from database if unspecified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_option">
   <dt><b>option = <span style="font-family: monospace;">"mean"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "mean"' -->
   <dd>Option for calculating fog density when <b>fog</b> is a file list, can be
   either <span style="font-family: monospace;">"mean"</span> or <span style="font-family: monospace;">"median"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigma">
   <dt><b>sigma = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 3.0' -->
   <dd>If <b>fog</b> is a file name, and <b>option</b> = <span style="font-family: monospace;">"mean"</span>, the mean fog density
   is iteratively calculated using this rejection criteria.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_floor">
   <dt><b>floor = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='floor' Line='floor = 0.0' -->
   <dd>Value assigned to levels below fog, can be either 0.0 or -1.0.  
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ceiling">
   <dt><b>ceiling = 30000.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ceiling' Line='ceiling = 30000.' -->
   <dd>The final intensities are scaled to this value, such that a saturated
   input density equals <b>ceiling</b> on output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datatype">
   <dt><b>datatype = <span style="font-family: monospace;">"r"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype = "r"' -->
   <dd>Datatype of output image pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print log of processing to STDOUT.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>hdtoi</i> transforms one image to another as described by the 
   <b>database</b>.  There is only one HD curve per run; the same 
@@ -117,30 +117,30 @@ hdtoi: Apply DTOI transformation to density image
   type is an integer.  The user is responsible for choosing
   a <b>ceiling</b> that avoids the truncation of significant digits.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Convert three density images to intensity images as described in database db1.
   </p>
-  <p>
-  	cl&gt; hdtoi denin* intim1,intim2,intim3 db1
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hdtoi denin* intim1,intim2,intim3 db1
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   Task <b>hdtoi</b> requires 20 cpu seconds to transform a 512 square image, with
   a 12 bit data range, on a VAX 750
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   spotlist, dematch, hdfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

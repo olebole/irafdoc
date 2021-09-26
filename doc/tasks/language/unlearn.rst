@@ -7,23 +7,23 @@ unlearn: Restore the default parameters for a task or package
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   unlearn name [name ...]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_name">
   <dt><b>name</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='name' Line='name' -->
   <dd>An IRAF task or package name.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Normally when a task terminates the values of the query mode task parameters
   used are stored in the parameter file on disk, appearing as the new defaults
@@ -35,32 +35,32 @@ unlearn: Restore the default parameters for a task or package
   <p>
   If a package name is specified all the tasks in the package are unlearned.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Unlearn the parameters for the delete and plot.graph tasks.
   </p>
-  <p>
-  	cl&gt; unlearn delete plot.graph
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; unlearn delete plot.graph
+  </pre></div>
   <p>
   2. Unlearn the parameters for all tasks in the <i>dataio</i> package.
   </p>
-  <p>
-  	cl&gt; unlearn dataio
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; unlearn dataio
+  </pre></div>
   <p>
   3. To unlearn the parameters for all tasks in the system, log out of the
   CL and run <i>mkiraf</i>, or enter the following:
   </p>
-  <pre>
-  	cl&gt; chdir uparm
-  	cl&gt; delete *.par
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; chdir uparm
+  cl&gt; delete *.par
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   It is possible for the parameter set for a task to become corrupted,
   e.g., if the CL is interrupted while it is updating the parameter file on
@@ -80,14 +80,14 @@ unlearn: Restore the default parameters for a task or package
   message to be printed when the task is later run.  Should this occur,
   the best solution is to unlearn all affected parameter sets.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   cache, update, lparam, eparam
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

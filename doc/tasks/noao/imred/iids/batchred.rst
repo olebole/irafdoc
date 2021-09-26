@@ -7,14 +7,14 @@ batchred: Batch processing of IIDS/IRS spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   batchred
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <p>
   This script task has many parameters, but most are used as
   variables internal to the task and are not user parameters.
@@ -24,58 +24,58 @@ batchred: Batch processing of IIDS/IRS spectra
   the commands necessary to invoke those tasks if the associated
   parameter is set to yes (the default in all cases).
   </p>
-  <dl>
+  <dl id="l_standard">
   <dt><b>standard = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='standard' Line='standard = yes' -->
   <dd></dd>
   </dl>
-  <dl>
+  <dl id="l_sensfunc">
   <dt><b>sensfunc = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sensfunc' Line='sensfunc = yes' -->
   <dd></dd>
   </dl>
-  <dl>
+  <dl id="l_bswitch">
   <dt><b>bswitch = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bswitch' Line='bswitch = yes' -->
   <dd></dd>
   </dl>
-  <dl>
+  <dl id="l_calibrate">
   <dt><b>calibrate = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calibrate' Line='calibrate = yes' -->
   <dd></dd>
   </dl>
-  <dl>
+  <dl id="l_addsets">
   <dt><b>addsets = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='addsets' Line='addsets = yes' -->
   <dd></dd>
   </dl>
-  <dl>
+  <dl id="l_fnu">
   <dt><b>fnu = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no' -->
   <dd>This parameter is identical to the fnu parameter for CALIBRATE.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wave1">
   <dt><b>wave1 = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wave1' Line='wave1 = 0.0' -->
   <dd>This parameter is identical to the wave1 parameter for BSWITCH.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wave2">
   <dt><b>wave2 = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wave2' Line='wave2 = 0.0' -->
   <dd>This parameter is identical to the wave2 parameter for BSWITCH.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_subset">
   <dt><b>subset = 32767</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='subset' Line='subset = 32767' -->
   <dd>This parameter is identical to the subset parameter for BSWITCH.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Through a question and answer session, a series of commands to
   ONEDSPEC is generated which are then processed as a batch job
@@ -176,25 +176,25 @@ batchred: Batch processing of IIDS/IRS spectra
   tolerant of incorrect entries although some preliminary checks
   are performed during the entry process.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following invokes the batch reductions using all task options;
   </p>
-  <p>
-  	cl&gt; batchred
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; batchred
+  </pre></div>
   <p>
   The following inhibits the STANDARD and SENSFUNC tasks which must have
   been run previously. This is equivalent to the IPPS <span style="font-family: monospace;">"autoreduce"</span>:
   </p>
-  <p>
-  	cl&gt; batchred standard- sensfunc-
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; batchred standard- sensfunc-
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   If you make an error while entering the requested information, there
   is no way to effect repairs other than to (1) start all over, or (2) edit
@@ -204,14 +204,14 @@ batchred: Batch processing of IIDS/IRS spectra
   If a task encounters an irrecoverable error, the background job
   hangs until you kill it using <span style="font-family: monospace;">"kill N"</span> where N is the job number.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   mkscript, standard, sensfunc, bswitch, calibrate, addsets
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

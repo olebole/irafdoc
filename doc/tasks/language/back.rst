@@ -7,48 +7,48 @@ back: Return to the previous directory (after a chdir)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   back
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <p>
   None.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Back</i> is used after a call to <i>chdir</i> or <i>cd</i> to return to the
   previous directory.  Repetitive calls to <i>back</i> may be used to toggle
   between two directories.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Go to the logical directory <span style="font-family: monospace;">"dataio"</span>.
   </p>
-  <p>
-  	cl&gt; cd dataio
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cd dataio
+  </pre></div>
   <p>
   2. Return to the previous directory, and then go back to the dataio directory.
   </p>
-  <p>
-  	cl&gt; back;back
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; back;back
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   chdir, pathnames
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

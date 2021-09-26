@@ -7,15 +7,15 @@ apdefault: Set the default aperture parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   apdefault
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_lower">
   <dt><b>lower = -5., upper = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lower' Line='lower = -5., upper = 5.' -->
   <dd>Default lower and upper aperture limits relative to the aperture center.
@@ -23,7 +23,7 @@ apdefault: Set the default aperture parameters
   defining the first aperture in <b>apedit</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apidtable">
   <dt><b>apidtable = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apidtable' Line='apidtable = ""' -->
   <dd>Aperture identification table.  This may be either a text file or an
@@ -38,7 +38,7 @@ apdefault: Set the default aperture parameters
   <p style="text-align:center">Default Background Subtraction Parameters
   
   </p>
-  <dl>
+  <dl id="l_b_function">
   <dt><b>b_function = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_function' Line='b_function = "chebyshev"' -->
   <dd>Default background fitting function.  The fitting function types are
@@ -46,7 +46,7 @@ apdefault: Set the default aperture parameters
   <span style="font-family: monospace;">"spline3"</span> cubic spline.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_order">
   <dt><b>b_order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_order' Line='b_order = 1' -->
   <dd>Default background function order.  The order refers to the number of
@@ -54,7 +54,7 @@ apdefault: Set the default aperture parameters
   functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_sample">
   <dt><b>b_sample = <span style="font-family: monospace;">"-10:-6,6:10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_sample' Line='b_sample = "-10:-6,6:10"' -->
   <dd>Default background sample.  The sample is given by a set of colon separated
@@ -64,7 +64,7 @@ apdefault: Set the default aperture parameters
   be integer.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_naverage">
   <dt><b>b_naverage = -3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_naverage' Line='b_naverage = -3' -->
   <dd>Default number of points to average or median.  Positive numbers
@@ -74,7 +74,7 @@ apdefault: Set the default aperture parameters
   fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_niterate">
   <dt><b>b_niterate = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_niterate' Line='b_niterate = 0' -->
   <dd>Default number of rejection iterations.  If greater than zero the fit is
@@ -82,7 +82,7 @@ apdefault: Set the default aperture parameters
   fit.  The number of iterations of this process is given by this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_low_reject">
   <dt><b>b_low_reject = 3., b_high_reject = 3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_low_reject' Line='b_low_reject = 3., b_high_reject = 3.' -->
   <dd>Default background lower and upper rejection sigmas.  If greater than zero
@@ -90,16 +90,16 @@ apdefault: Set the default aperture parameters
   number of times the sigma of the residuals are rejected before refitting.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b_grow">
   <dt><b>b_grow = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='b_grow' Line='b_grow = 0.' -->
   <dd>Default reject growing radius.  Points within a distance given by this
   parameter of any rejected point are also rejected.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task sets the values of the default aperture parameters for the
   tasks <b>apedit</b> and <b>apfind</b> which define new apertures.  For a
@@ -117,19 +117,19 @@ apdefault: Set the default aperture parameters
   with the <span style="font-family: monospace;">'b'</span> key in the task <b>apedit</b>.  For more on background fitting
   and subtracting see <b>apbackground</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   To review and modify the default aperture parameters:
   </p>
-  <p>
-  	cl&gt; apdefault
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apdefault
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_APDEFAULT">
   <dt><b>APDEFAULT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APDEFAULT' Line='APDEFAULT V2.11' -->
   <dd>The aperture ID table information may now be contained in the
@@ -141,7 +141,7 @@ apdefault: Set the default aperture parameters
   apbackground, apedit, apfind, icfit
   </p>
   
-  <!-- EndSection:    'REVISIONS' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS'  -->
   

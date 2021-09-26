@@ -7,15 +7,15 @@ fitskypars: Edit the sky fitting algorithm parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   fitskypars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_salgorithm">
   <dt><b>salgorithm = <span style="font-family: monospace;">"mode"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='salgorithm' Line='salgorithm = "mode"' -->
   <dd>The sky fitting algorithm.  The sky fitting options are:
@@ -107,34 +107,34 @@ fitskypars: Edit the sky fitting algorithm parameters
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_annulus">
   <dt><b>annulus = 10.0  (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='annulus' Line='annulus = 10.0  (scale units)' -->
   <dd>The inner radius of the annular sky fitting region in units of the DATAPARS
   scale parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dannulus">
   <dt><b>dannulus = 10.0  (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dannulus' Line='dannulus = 10.0  (scale units)' -->
   <dd>The width of the annular sky fitting region in units of the DATAPARS scale
   parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skyvalue">
   <dt><b>skyvalue = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='skyvalue' Line='skyvalue = 0.0' -->
   <dd>The constant for constant sky subtraction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_smaxiter">
   <dt><b>smaxiter = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='smaxiter' Line='smaxiter = 10' -->
   <dd>The maximum number of iterations performed by the sky fitting algorithm.
   Smaxiter is required by the <span style="font-family: monospace;">"gauss"</span> and <span style="font-family: monospace;">"ofilter"</span> sky fitting algorithms.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sloclip">
   <dt><b>sloclip = 0.0, shiclip = 0.0 (percent)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sloclip' Line='sloclip = 0.0, shiclip = 0.0 (percent)' -->
   <dd>The high and low side clipping parameters in percent of the total number
@@ -143,13 +143,13 @@ fitskypars: Edit the sky fitting algorithm parameters
   before any sky fitting is done.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_snreject">
   <dt><b>snreject = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='snreject' Line='snreject = 50' -->
   <dd>The maximum number of sky pixel rejection cycles.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sloreject">
   <dt><b>sloreject = 3.0, shireject = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sloreject' Line='sloreject = 3.0, shireject = 3.0' -->
   <dd>The k-sigma clipping factors for the pixel rejection  phase of the
@@ -157,7 +157,7 @@ fitskypars: Edit the sky fitting algorithm parameters
   computed sky sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_khist">
   <dt><b>khist = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='khist' Line='khist = 3.0' -->
   <dd>The k-sigma clipping factor for computing the sky pixels histogram. Khist is in
@@ -166,7 +166,7 @@ fitskypars: Edit the sky fitting algorithm parameters
   <span style="font-family: monospace;">"crosscor"</span>, <span style="font-family: monospace;">"ofilter"</span>, and <span style="font-family: monospace;">"histplot"</span> sky fitting algorithms.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_binsize">
   <dt><b>binsize = 0.10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='binsize' Line='binsize = 0.10' -->
   <dd>The width of a single bin of the sky pixel histogram.  Binsize is in units of
@@ -175,7 +175,7 @@ fitskypars: Edit the sky fitting algorithm parameters
   algorithms.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_smooth">
   <dt><b>smooth = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='smooth' Line='smooth = no' -->
   <dd>Boxcar smooth the sky pixel histogram before computing a sky value.
@@ -183,7 +183,7 @@ fitskypars: Edit the sky fitting algorithm parameters
   <span style="font-family: monospace;">"histplot"</span> sky fitting algorithms.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rgrow">
   <dt><b>rgrow = 0.0  (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rgrow' Line='rgrow = 0.0  (scale units)' -->
   <dd>The region growing radius for pixel rejection in the sky region in units
@@ -192,15 +192,15 @@ fitskypars: Edit the sky fitting algorithm parameters
   0.0 region growing is disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mksky">
   <dt><b>mksky = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mksky' Line='mksky = no' -->
   <dd>Mark the sky annuli on the displayed image ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The sky fitting algorithm parameters control the action of the sky fitting
   algorithms. The default parameter settings should give reasonable results in
@@ -251,59 +251,59 @@ fitskypars: Edit the sky fitting algorithm parameters
   all pixels are rejected, or the maximum number of rejection cycles
   <i>snreject</i> iterations is reached.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the sky fitting parameters.
   </p>
-  <pre>
-  	da&gt; lpar fitskypars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; lpar fitskypars
+  </pre></div>
   <p>
   2. Edit the sky fitting parameters.
   </p>
-  <pre>
-  	da&gt; fitskypars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; fitskypars
+  </pre></div>
   <p>
   3. Edit the FITSKYPARS parameters from with the PHOT task.
   </p>
-  <pre>
-      da&gt; epar phot
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; epar phot
   
-  	... edit a few phot parameters
+      ... edit a few phot parameters
   
-  	... move to the fitskypars parameter and type :e
+      ... move to the fitskypars parameter and type :e
   
-  	... edit the fitskypars parameters and type :wq
+      ... edit the fitskypars parameters and type :wq
   
-  	... finish editing the phot parameters and type :wq
-  </pre>
+      ... finish editing the phot parameters and type :wq
+  </pre></div>
   <p>
   4. Save the current FITSKYPARS parameter set in a text file skynite1.par.
   This can also be done from inside a higher level task as in the
   above example.
   </p>
-  <pre>
-      da&gt; epar fitskypars
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; epar fitskypars
   
-  	... type ":w skynite1.par"  from within epar
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type ":w skynite1.par"  from within epar
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   epar,lpar,datapars,phot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

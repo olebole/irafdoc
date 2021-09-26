@@ -7,27 +7,27 @@ im3dtran: 3d image transpose (used for rotates as well)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   im3dtran input output 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input 3d image (datacube).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Transposed datacube.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_len_blk">
   <dt><b>len_blk = 128</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='len_blk' Line='len_blk = 128' -->
   <dd>Size in pixels of linear internal subraster.  IM3DTRAN will try to transpose
@@ -35,27 +35,27 @@ im3dtran: 3d image transpose (used for rotates as well)
   larger <b>len_blk</b>, but the task may run out of memory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_new_x">
   <dt><b>new_x = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='new_x' Line='new_x = 3' -->
   <dd>New x axis = old axis (1=x, 2=y, 3=z).  Default (3) replaces new x with old z.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_new_y">
   <dt><b>new_y = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='new_y' Line='new_y = 2' -->
   <dd>New y axis = old axis.  Default (2) is identity.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_new_z">
   <dt><b>new_z = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='new_z' Line='new_z = 1' -->
   <dd>New z axis = old axis.  Default (1) replaces new z with old x.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IM3DTRAN is very similar to IMAGES.IMTRANSPOSE, except that it can accomplish
   3d image transposes.  In 3 dimensions, it is necessary to specify which old
@@ -84,38 +84,37 @@ im3dtran: 3d image transpose (used for rotates as well)
   depends on how much memory is available at the time IM3DTRAN is run,
   and the size and datatype of the image to be transposed.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1.  For an input datacube with columns = x = abscissa, lines = y = ordinate,
       and bands = z = depth increasing away from viewer, and with the image
       origin at the lower left front, rotate datacube 90 degrees clockwise
       around the y axis when viewed from +y (top):
   
       cl&gt; im3dtran input[-*,*,*] output 3 2 1
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   [Not available yet]
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   [Not available yet]
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   pvol i2sun
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

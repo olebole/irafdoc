@@ -7,21 +7,21 @@ powercor: Apply power law correction to mountain reduced spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   powercor input records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The root file name of the input spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra.
@@ -29,28 +29,28 @@ powercor: Apply power law correction to mountain reduced spectra
   elements to the input root name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>This is the root file name for the corrected spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_start_rec">
   <dt><b>start_rec = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec = 1' -->
   <dd>The starting record number to be appended to the root name of the
   created spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_power">
   <dt><b>power = )iids.power</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='power' Line='power = )iids.power' -->
   <dd>The power law coefficient.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A power law correction to the IIDS count rates is applied to the input
   spectra.  The mountain reduction software applies a coincidence correction
@@ -81,23 +81,23 @@ powercor: Apply power law correction to mountain reduced spectra
   <p>
   This task is a script calling <b>coincor</b> with <i>ccmode</i> = <span style="font-family: monospace;">"iids"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following example corrects a series of IIDS spectra:
   </p>
-  <p>
-  	cl&gt; powercor nite1 1-250 output=nite1cc start_rec=1
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; powercor nite1 1-250 output=nite1cc start_rec=1
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   coincor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -7,34 +7,34 @@ imshift: Shift a list of 1-D or 2-D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imshift input output xshift yshift
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be transformed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xshift">
   <dt><b>xshift, yshift</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xshift' Line='xshift, yshift' -->
   <dd>Fractional pixel shift in x and y such that xout = xin + xshift and
   yout = yin + yshift.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shifts_file">
   <dt><b>shifts_file = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts_file' Line='shifts_file = ""' -->
   <dd>The name of the text file containing the shifts for each input image. If no
@@ -44,7 +44,7 @@ imshift: Shift a list of 1-D or 2-D images
   shifts in the file must equal the number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp_type">
   <dt><b>interp_type = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp_type' Line='interp_type = "linear"' -->
   <dd>The interpolant type use to computed the output shifted image.
@@ -101,7 +101,7 @@ imshift: Shift a list of 1-D or 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary_type">
   <dt><b>boundary_type = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary_type' Line='boundary_type = "nearest"' -->
   <dd>The choices are:
@@ -131,73 +131,70 @@ imshift: Shift a list of 1-D or 2-D images
   </dl>
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IMSHIFT will shift an image in x and y such that:
   </p>
-  <pre>
-      xout = xin + xshift
-      yout = yin + yshift
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  xout = xin + xshift
+  yout = yin + yshift
+  </pre></div>
   <p>
   The output image gray levels are determined by interpolating in the input
   image at the positions of the shifted output pixels.
   IMSHIFT uses the routines in the 2-D interpolator package.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Shift an image by (+3.2, -4.5) using a biquintic interior polynomial
      interpolant and boundary extension.
   </p>
-  <p>
-     cl&gt; imshift vys70 vys70shift 3.2 -4.5 inter=poly5 bound=neare
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imshift vys70 vys70shift 3.2 -4.5 inter=poly5 bound=neare
+  </pre></div>
   <p>
   2. Shift an image by (-6., 1.2) using bilinear interpolation and
      boundary extension.
   </p>
-  <p>
-     cl&gt; imshift ugc1040 ugc1040shift -6.0 1.2 bound=neare
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imshift ugc1040 ugc1040shift -6.0 1.2 bound=neare
+  </pre></div>
   <p>
   3. Shift a set of images using shifts listed in the textfile <span style="font-family: monospace;">"shifts"</span>.
   </p>
-  <p>
-     cl&gt; page shifts
-  </p>
-  <p>
-         3.5  4.86
-         -2.  8.9
-         10.1 7.8
-  </p>
-  <p>
-     cl&gt; imshift im1,im2,im3 im1.s,im2.s,im3.s shifts_file=shifts
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; page shifts
+  
+      3.5  4.86
+      -2.  8.9
+      10.1 7.8
+  
+  cl&gt; imshift im1,im2,im3 im1.s,im2.s,im3.s shifts_file=shifts
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   The time required to shift a 512 by 512 real image by fractional pixel
   amounts in x and y is approximately 10, 20, 70, 120, and 120 cpu seconds for the
   nearest neighbor, bilinear, bicubic, biquintic and bicubic spline
   interpolants respectively (Vax 11/750 fpa).
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   shiftlines, magnify, rotate, geomap, geotran, imlintran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,23 +7,23 @@ protect: Protect a file from deletion
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   protect files
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_files">
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
   <dd>A template specifying the file or files to be protected.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Protect</i> asserts protection from deletion for the specified files.
   A protected file can be deleted only by first <span style="font-family: monospace;">"unprotecting"</span> it.
@@ -34,29 +34,29 @@ protect: Protect a file from deletion
   automatically protected to prevent accidental deletion of the header
   file, leaving a <span style="font-family: monospace;">"zombie"</span> pixel file somewhere on disk.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Protect the file <span style="font-family: monospace;">"paper.ms"</span> from deletion, accidental or otherwise.
   </p>
-  <p>
-  	cl&gt; protect paper.ms
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; protect paper.ms
+  </pre></div>
   <p>
   2. Protect all the <span style="font-family: monospace;">".ms"</span> files from deletion.
   </p>
-  <p>
-  	cl&gt; protect *.ms
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; protect *.ms
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   unprotect, delete
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

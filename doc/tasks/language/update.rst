@@ -7,23 +7,23 @@ update: Update a task's parameters (flush to disk)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   update task [task ...]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_task">
   <dt><b>task</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='task' Line='task' -->
   <dd>An IRAF task name.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Normally when a task terminates the values of the task parameters used
   are stored for the next invocation of the task in a disk file in the
@@ -33,30 +33,30 @@ update: Update a task's parameters (flush to disk)
   parameters is disabled.  The <i>update</i> command is used to force the
   parameters for a task to be updated on disk.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_example">
   <h3>Example</h3>
-  <!-- BeginSection: 'EXAMPLE' -->
   <p>
   1. Update the parameters for the <i>page</i> task.
   </p>
-  <p>
-  	cl&gt; update page
-  </p>
-  <!-- EndSection:   'EXAMPLE' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; update page
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The parameter set is only updated on disk if a parameter has been modified
   since the last update.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   cache, unlearn
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'BUGS' 'SEE ALSO'  -->
   

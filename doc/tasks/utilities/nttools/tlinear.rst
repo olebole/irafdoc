@@ -7,14 +7,14 @@ tlinear: Use linear regression to fit one or two table columns.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tlinear intable outtable xcol ycol
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task generates fitted Y values and their residuals in two columns.
   These columns may be written to an output table, but cannot be written
@@ -38,10 +38,10 @@ tlinear: Use linear regression to fit one or two table columns.
   these are unweighted averages
   except that rows with exactly zero weight will not be included.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>A list of input tables containing the columns to be fit.
@@ -50,7 +50,7 @@ tlinear: Use linear regression to fit one or two table columns.
   the files must use the same column names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable = STDOUT [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable = STDOUT [file name template]' -->
   <dd>File names for creating output files, or STDOUT to send output to the screen.
@@ -64,7 +64,7 @@ tlinear: Use linear regression to fit one or two table columns.
   be written to the table header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcol">
   <dt><b>xcol [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcol' Line='xcol [string]' -->
   <dd>Column name in the input tables to be fit.
@@ -74,7 +74,7 @@ tlinear: Use linear regression to fit one or two table columns.
   be copied to 'outtable' unless the output is being directed to STDOUT.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ycol">
   <dt><b>ycol [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ycol' Line='ycol [string]' -->
   <dd>Column name in the input tables containing value to be fit for the Y axis.
@@ -130,49 +130,49 @@ tlinear: Use linear regression to fit one or two table columns.
   This column will be of double data type.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Fit the values in the <span style="font-family: monospace;">"flux"</span> column in every table whose name begins with
   <span style="font-family: monospace;">"hr"</span>; put all parameters of the fits in the ASCII file <span style="font-family: monospace;">"fit.lis"</span>.
   </p>
-  <pre>
-    tt&gt; tlinear hr*.tab STDOUT "" flux &gt; fit.lis
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tlinear hr*.tab STDOUT "" flux &gt; fit.lis
+  </pre></div>
   <p>
   2. Generate the same fits as in the previous example, but put the
   results in tables, one output for each input table.  For example,
   the fitted Y values and
   residuals for an input table named <span style="font-family: monospace;">"hr465.tab"</span> would be put in <span style="font-family: monospace;">"hr465h.tab"</span>.
   </p>
-  <pre>
-    tt&gt; tlinear hr*.tab hr*%%h%.tab "" flux
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tlinear hr*.tab hr*%%h%.tab "" flux
+  </pre></div>
   <p>
   3. Fit the values in the <span style="font-family: monospace;">"flux"</span> column as a function of the values in the
   <span style="font-family: monospace;">"wavelength"</span> column and write all the parameters of the fit to STDOUT.
   </p>
-  <pre>
-    tt&gt; tlinear hr*.tab STDOUT wavelength flux
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tlinear hr*.tab STDOUT wavelength flux
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Betty Stobie.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ranges
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

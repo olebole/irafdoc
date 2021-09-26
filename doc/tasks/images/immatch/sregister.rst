@@ -7,21 +7,21 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   sregister input reference output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input images containing the input celestial coordinate wcs.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>The list of reference images containing the reference celestial coordinate wcs.
@@ -29,14 +29,14 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The list of output registered images. The number of output images must
   be equal to the number of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmin">
   <dt><b>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>The minimum and maximum logical x and logical y coordinates used to, generate
@@ -47,13 +47,13 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   image, 1, and the number of lines in the reference image, respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nx">
   <dt><b>nx = 10, ny = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10' -->
   <dd>The number of points in x and y used to generate the coordinate grid.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcs">
   <dt><b>wcs = <span style="font-family: monospace;">"world"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcs' Line='wcs = "world"' -->
   <dd>The world coordinate system of the coordinates.  The options are:
@@ -90,7 +90,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xformat">
   <dt><b>xformat = <span style="font-family: monospace;">"%10.3f"</span>, yformat = <span style="font-family: monospace;">"%10.3f"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xformat' Line='xformat = "%10.3f", yformat = "%10.3f"' -->
   <dd>The format of the output logical x and y reference and input pixel
@@ -99,7 +99,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   3 digits following the decimal point. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rwxformat">
   <dt><b>rwxformat = <span style="font-family: monospace;">""</span>, rwyformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rwxformat' Line='rwxformat = "", rwyformat = ""' -->
   <dd>The format of the output world x and y reference image coordinates
@@ -108,7 +108,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wxformat">
   <dt><b>wxformat = <span style="font-family: monospace;">""</span>, wyformat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxformat' Line='wxformat = "", wyformat = ""' -->
   <dd>The format of the output world x and y input image coordinates
@@ -117,7 +117,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   systems.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitgeometry">
   <dt><b>fitgeometry = <span style="font-family: monospace;">"general"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitgeometry' Line='fitgeometry = "general"' -->
   <dd>The fitting geometry to be used. The options are the following.
@@ -172,7 +172,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   parameters set by the user.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"polynomial"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial"' -->
   <dd>The type of analytic coordinate surfaces to be fit. The options are the
@@ -197,7 +197,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xxorder">
   <dt><b>xxorder = 2, xyorder = 2, yxorder = 2, yyorder = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xxorder' Line='xxorder = 2, xyorder = 2, yxorder = 2, yyorder = 2' -->
   <dd>The order of the polynomials in x and y for the x and y fits respectively.
@@ -211,7 +211,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   residuals from the linear portion of the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xxterms">
   <dt><b>xxterms = <span style="font-family: monospace;">"half"</span>, yxterms = <span style="font-family: monospace;">"half"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xxterms' Line='xxterms = "half", yxterms = "half"' -->
   <dd>The options are:
@@ -245,20 +245,20 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   surface is fit to the residuals from the linear portion of the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reject">
   <dt><b>reject = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reject' Line='reject = INDEF' -->
   <dd>The rejection limit in units of sigma. The default is no rejection.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_calctype">
   <dt><b>calctype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calctype' Line='calctype = "real"' -->
   <dd>The precision of coordinate transformation calculations. The options are <span style="font-family: monospace;">"real"</span>
   and <span style="font-family: monospace;">"double"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_geometry">
   <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometric transformation.  The options are:
@@ -276,7 +276,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xsample">
   <dt><b>xsample = 1.0, ysample = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xsample' Line='xsample = 1.0, ysample = 1.0' -->
   <dd>The coordinate surface subsampling factor. The coordinate surfaces are
@@ -287,7 +287,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   value is recommended.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolant">
   <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The interpolant used for rebinning the image.  The choices are the following.
@@ -359,7 +359,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The choices are:
@@ -389,20 +389,20 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.0' -->
   <dd>The value of the constant for boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fluxconserve">
   <dt><b>fluxconserve = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes' -->
   <dd>Preserve the total image flux? If flux conservation is turned on, the output
   pixel values are multiplied by the Jacobian of the coordinate transformation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxblock">
   <dt><b>nxblock = 512, nyblock = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512' -->
   <dd>If the size of the output image is less than nxblock by nyblock then
@@ -410,19 +410,19 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   is computed in blocks nxblock by nyblock pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsinherit">
   <dt><b>wcsinherit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsinherit' Line='wcsinherit = yes' -->
   <dd>Inherit the wcs of the reference image?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about the progress of the task?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Run the task interactively ?
@@ -430,21 +430,21 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   change the order of the fit, delete points, replot the data etc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   SREGISTER computes the spatial transformation function required to register
   the input image <i>input</i> to the reference image <i>reference</i>,
@@ -472,11 +472,11 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   stored in the input image header. The transformation sequence looks
   like the following for an equatorial celestial coordinate system:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
      (x,y) reference -&gt; (ra,dec) reference  (reference image wcs)
   (ra,dec) reference -&gt; (ra,dec) input      (reference and input image wcs)
       (ra,dec) input -&gt; (x,y) input         (input image wcs)
-  </pre>
+  </pre></div>
   <p>
   The computed reference and input logical coordinates and the
   celestial coordinates are written to a temporary output coordinates file
@@ -493,10 +493,10 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   <p>
   SREGISTER computes a spatial transformation of the following form.
   </p>
-  <pre>
-      xin = f (xref, yref)
-      yin = g (xref, yref)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  xin = f (xref, yref)
+  yin = g (xref, yref)
+  </pre></div>
   <p>
   The functions f and g are either a power series polynomial or a Legendre or
   Chebyshev polynomial surface of order
@@ -507,7 +507,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   <span style="font-family: monospace;">"half"</span>, and <span style="font-family: monospace;">"full"</span> are illustrated below for a quadratic polynomial in
   x and y.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   xxterms = "none", xyterms = "none"
   xxorder = 3, xyorder = 3, yxorder = 3, yyorder = 3
   
@@ -535,7 +535,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
            a12' * yref + a22' * xref * yref +  a32' * xref ** 2 * yref +
            a13' * yref ** 2 + a23' * xref *  yref ** 2 +
            a33' * xref ** 2 * yref ** 2
-  </pre>
+  </pre></div>
   <p>
   The computation can be done in either real or
   double precision by setting the <i>calctype</i> parameter.
@@ -548,36 +548,36 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   coefficients for the linear term can be given a simple geometrical geometric
   interpretation for all the fitting geometries as shown below.
   </p>
-  <pre>
-          fitting geometry = general (linear term)
-              xin = a + b * xref + c * yref
-              yin = d + e * xref + f * yref
+  <div class="highlight-default-notranslate"><pre>
+  fitting geometry = general (linear term)
+      xin = a + b * xref + c * yref
+      yin = d + e * xref + f * yref
   
-          fitting geometry = shift
-              xin = a + xref
-              yin = d + yref
+  fitting geometry = shift
+      xin = a + xref
+      yin = d + yref
   
-          fitting geometry = xyscale
-              xin = a + b * xref
-              yin = d + f * yref
+  fitting geometry = xyscale
+      xin = a + b * xref
+      yin = d + f * yref
   
-          fitting geometry = rotate
-              xin = a + b * xref + c * yref
-              yin = d + e * xref + f * yref
-              b * f - c * e = +/-1
-              b = f, c = -e or b = -f, c = e
+  fitting geometry = rotate
+      xin = a + b * xref + c * yref
+      yin = d + e * xref + f * yref
+      b * f - c * e = +/-1
+      b = f, c = -e or b = -f, c = e
   
-          fitting geometry = rscale
-              xin = a + b * xref + c * yref
-              yin = d + e * xref + f * yref
-              b * f - c * e = +/- const
-              b = f, c = -e or b = -f, c = e
+  fitting geometry = rscale
+      xin = a + b * xref + c * yref
+      yin = d + e * xref + f * yref
+      b * f - c * e = +/- const
+      b = f, c = -e or b = -f, c = e
   
-          fitting geometry = rxyscale
-              xin = a + b * xref + c * yref
-              yin = d + e * xref + f * yref
-              b * f - c * e = +/- const
-  </pre>
+  fitting geometry = rxyscale
+      xin = a + b * xref + c * yref
+      yin = d + e * xref + f * yref
+      b * f - c * e = +/- const
+  </pre></div>
   <p>
   The coefficients can be interpreted as follows. Xref0, yref0, xin0, yin0
   are the origins in the reference and input frames respectively. Orientation
@@ -585,57 +585,57 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   perpendicularity respectively. Xmag and ymag are the scaling factors in x and
   y and are assumed to be positive.
   </p>
-  <pre>
-          general (linear term)
-              xrotation = rotation - skew / 2
-              yrotation = rotation + skew / 2
-              b = xmag * cos (xrotation)
-              c = ymag * sin (yrotation)
-              e = -xmag * sin (xrotation)
-              f = ymag * cos (yrotation)
-              a = xin0 - b * xref0 - c * yref0 = xshift
-              d = yin0 - e * xref0 - f * yref0 = yshift
+  <div class="highlight-default-notranslate"><pre>
+  general (linear term)
+      xrotation = rotation - skew / 2
+      yrotation = rotation + skew / 2
+      b = xmag * cos (xrotation)
+      c = ymag * sin (yrotation)
+      e = -xmag * sin (xrotation)
+      f = ymag * cos (yrotation)
+      a = xin0 - b * xref0 - c * yref0 = xshift
+      d = yin0 - e * xref0 - f * yref0 = yshift
   
-          shift
-              xrotation = 0.0,  yrotation = 0.0
-              xmag = ymag = 1.0
-              b = 1.0
-              c = 0.0
-              e = 0.0
-              f = 1.0
-              a = xin0 - xref0 = xshift
-              d = yin0 - yref0 = yshift
+  shift
+      xrotation = 0.0,  yrotation = 0.0
+      xmag = ymag = 1.0
+      b = 1.0
+      c = 0.0
+      e = 0.0
+      f = 1.0
+      a = xin0 - xref0 = xshift
+      d = yin0 - yref0 = yshift
   
-          xyscale
-              xrotation 0.0 / 180.0 yrotation = 0.0
-              b = + /- xmag
-              c = 0.0
-              e = 0.0
-              f = ymag
-              a = xin0 - b * xref0 = xshift
-              d = yin0 - f * yref0 = yshift
+  xyscale
+      xrotation 0.0 / 180.0 yrotation = 0.0
+      b = + /- xmag
+      c = 0.0
+      e = 0.0
+      f = ymag
+      a = xin0 - b * xref0 = xshift
+      d = yin0 - f * yref0 = yshift
   
-          rscale
-              xrotation = rotation + 0 / 180, yrotation = rotation
-              mag = xmag = ymag
-              const = mag * mag
-              b = mag * cos (xrotation)
-              c = mag * sin (yrotation)
-              e = -mag * sin (xrotation)
-              f = mag * cos (yrotation)
-              a = xin0 - b * xref0 - c * yref0 = xshift
-              d = yin0 - e * xref0 - f * yref0 = yshift
+  rscale
+      xrotation = rotation + 0 / 180, yrotation = rotation
+      mag = xmag = ymag
+      const = mag * mag
+      b = mag * cos (xrotation)
+      c = mag * sin (yrotation)
+      e = -mag * sin (xrotation)
+      f = mag * cos (yrotation)
+      a = xin0 - b * xref0 - c * yref0 = xshift
+      d = yin0 - e * xref0 - f * yref0 = yshift
   
-          rxyscale
-              xrotation = rotation + 0 / 180, yrotation = rotation
-              const = xmag * ymag
-              b = xmag * cos (xrotation)
-              c = ymag * sin (yrotation)
-              e = -xmag * sin (xrotation)
-              f = ymag * cos (yrotation)
-              a = xin0 - b * xref0 - c * yref0 = xshift
-              d = yin0 - e * xref0 - f * yref0 = yshift
-  </pre>
+  rxyscale
+      xrotation = rotation + 0 / 180, yrotation = rotation
+      const = xmag * ymag
+      b = xmag * cos (xrotation)
+      c = ymag * sin (yrotation)
+      e = -xmag * sin (xrotation)
+      f = ymag * cos (yrotation)
+      a = xin0 - b * xref0 - c * yref0 = xshift
+      d = yin0 - e * xref0 - f * yref0 = yshift
+  </pre></div>
   <p>
   <i>Xmin</i>, <i>xmax</i>, <i>ymin</i> and <i>ymax</i> define the region of
   validity of the transformation as well as the limits of the grid
@@ -670,12 +670,12 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   by the <i>xmin</i>, <i>xmax</i>, <i>ymin</i>, and <i>ymax</i> parameters
   as shown below
   </p>
-  <pre>
-      xmin &lt;= x &lt;= xmax
-      ymin &lt;= x &lt;= ymax
-      ncols =  xmax - xmin + 1
-      nlines = xmax - xmin + 1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  xmin &lt;= x &lt;= xmax
+  ymin &lt;= x &lt;= ymax
+  ncols =  xmax - xmin + 1
+  nlines = xmax - xmin + 1
+  </pre></div>
   <p>
   SREGISTER samples the coordinate surfaces at every <i>xsample</i> and 
   <i>ysample</i> pixels in x and y.
@@ -729,13 +729,13 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   the data until a satisfactory
   fit has been achieved.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   In interactive mode the following cursor commands are currently available.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
           Interactive Keystroke Commands
   
   ?       Print options
@@ -749,13 +749,13 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   t       Plot a line of constant x, y through the nearest data point
   l       Print xshift, yshift, xmag, ymag, xrotate, yrotate
   q       Exit the interactive curve fitting
-  </pre>
+  </pre></div>
   <p>
   The parameters listed below can be changed interactively with simple colon
   commands. Typing the parameter name alone will list the current value.
   </p>
-  <pre>
-  	Colon Parameter Editing Commands
+  <div class="highlight-default-notranslate"><pre>
+          Colon Parameter Editing Commands
   
   :show                           List parameters
   :fitgeometry                    Fitting geometry (shift,xyscale,rotate,
@@ -766,10 +766,10 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   :yxorder :yyorder [value]       Y fitting function xorder, yorder
   :xxterms :yxterms [n/h/f]       X, Y fit cross term types
   :reject [value]                 Rejection threshold
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  </pre></div>
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -778,7 +778,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   codes C are as follows:
    
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -795,18 +795,16 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-   
-  
   
   Conventions for w (field width) specification:
-   
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-   
+  
   Escape sequences (e.g. "\n" for newline):
-   
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -816,15 +814,15 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-   
+  
   Examples
-   
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-   
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -837,7 +835,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-   
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
@@ -845,10 +843,10 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Additional  information  on  IRAF  world  coordinate  systems including
   more detailed descriptions of the <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span>, and <span style="font-family: monospace;">"world"</span>
@@ -878,9 +876,9 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Register a radio image to an X-ray image of the same field using
   a 100 point coordinate  grid and a simple linear transformation.  Both
@@ -888,38 +886,38 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   output world coordinates in the coords file in hh:mm:ss.ss and dd:mm:ss.s
   format. Display the input and output image and blink them.
   </p>
-  <pre>
-  	cl&gt; sregister radio xray radio.tran rwxformat=%12.2H \<br>
-  	    rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sregister radio xray radio.tran rwxformat=%12.2H \<br>
+      rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h
   
-  	cl&gt; display radio 1 fi+
+  cl&gt; display radio 1 fi+
   
-  	cl&gt; display radio.tran 2 fi+
-  </pre>
+  cl&gt; display radio.tran 2 fi+
+  </pre></div>
   <p>
   2. Repeat the previous command but begin with a higher order fit
   and run the task in interactive mode in order to examine the fit
   residuals.
   </p>
-  <pre>
-  	cl&gt; sregister radio xray radio.tran rwxformat=%12.2H \<br>
-  	    rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h xxo=4 \<br>
-  	    xyo=4 xxt=half yxo=4 yyo=4 yxt=half  inter+
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sregister radio xray radio.tran rwxformat=%12.2H \<br>
+      rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h xxo=4 \<br>
+      xyo=4 xxt=half yxo=4 yyo=4 yxt=half  inter+
   
-              ... a plot of the fit appears
+      ... a plot of the fit appears
   
-  	    ... type x and r to examine the residuals of the x
-                  surface fit versus x and y
+      ... type x and r to examine the residuals of the x
+          surface fit versus x and y
   
-  	    ... type y and s to examine the residuals of the y
-                  surface fit versus x and y
+      ... type y and s to examine the residuals of the y
+          surface fit versus x and y
   
-  	    ... delete 2 deviant points with the d key and
-                  recompute the fit with the f key
+      ... delete 2 deviant points with the d key and
+          recompute the fit with the f key
   
-              ... type q to quit, save the fit, and compute the registered
-  		image
-  </pre>
+      ... type q to quit, save the fit, and compute the registered
+          image
+  </pre></div>
   <p>
   3. Mosaic a set of 9 images covering a ~ 1 degree field into a single image
   centered at  12:32:53.1 +43:13:03. Set the output image scale to 0.5
@@ -927,43 +925,42 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   per pixel. Set the orientation to be north up and east to the left.
   The 9 images all have accurate world coordinate information in their headers.
   </p>
-  <pre>
-          # Create a dummy reference image big enough to cover 1 square degree
+  <div class="highlight-default-notranslate"><pre>
+  # Create a dummy reference image big enough to cover 1 square degree
   
-          cl&gt; mkpattern refimage ncols=7200 nlines=7200 ...
+  cl&gt; mkpattern refimage ncols=7200 nlines=7200 ...
   
-          # Give the dummy reference image the desired coordinate system
+  # Give the dummy reference image the desired coordinate system
   
-          cl&gt; ccsetwcs refimage "" xref=3600.5 yref=3600.5 xmag=-0.5 \ 
-          ymag=0.5 lngref=12:32:53.1 latref=43:13:03 ...
+  cl&gt; ccsetwcs refimage "" xref=3600.5 yref=3600.5 xmag=-0.5 \<br>
+  ymag=0.5 lngref=12:32:53.1 latref=43:13:03 ...
   
-          # Register the images using constant boundary extension and set
-  	# uservalue to some reasonable value outside the good data range.
-          # It may be possible to improve performance by increasing nxblock 
-          # and nyblock.
+  # Register the images using constant boundary extension and set
+  # uservalue to some reasonable value outside the good data range.
+  # It may be possible to improve performance by increasing nxblock
+  # and nyblock.
   
-          cl&gt; sregister @inlist refimage @outlist boundary=constant \<br>
-          constant=&lt;uservalue&gt; nxblock=7200 nyblock=1024 ...
+  cl&gt; sregister @inlist refimage @outlist boundary=constant \<br>
+  constant=&lt;uservalue&gt; nxblock=7200 nyblock=1024 ...
   
-          # Combine the images using imcombine
+  # Combine the images using imcombine
   
-          cl&gt; imcombine @outlist mosaic lthreshold=&lt;uservalue&gt; ...
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  cl&gt; imcombine @outlist mosaic lthreshold=&lt;uservalue&gt; ...
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imalign,xregister,register,geotran,wregister
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'FORMATS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

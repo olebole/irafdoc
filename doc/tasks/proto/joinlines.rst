@@ -7,15 +7,15 @@ joinlines: Join text files line by line
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   joinlines list1 [list2]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_list1">
   <dt><b>list1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='list1' Line='list1' -->
   <dd>List of input text files to be joined.  It is an error if a file does
@@ -23,7 +23,7 @@ joinlines: Join text files line by line
   terminal, redirected input, or a pipe.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_list2">
   <dt><b>list2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='list2' Line='list2' -->
   <dd>Optional second list of input text files to be combined with the
@@ -31,7 +31,7 @@ joinlines: Join text files line by line
   the command line otherwise this parameter is ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">"STDOUT"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "STDOUT"' -->
   <dd>Output filename.  The result of joining the input lines is appended
@@ -39,21 +39,21 @@ joinlines: Join text files line by line
   output stream, which is usually the terminal but which may be redirected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delim">
   <dt><b>delim = <span style="font-family: monospace;">" "</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='delim' Line='delim = " "' -->
   <dd>The delimiter placed between joined input lines.  The default is a space
   (note that this will not be visible when viewed with <b>eparam</b>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_missing">
   <dt><b>missing = <span style="font-family: monospace;">"Missing"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='missing' Line='missing = "Missing"' -->
   <dd>This string is substituted for missing lines when going beyond the end
   of shorter input files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxchars">
   <dt><b>maxchars = 161</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxchars' Line='maxchars = 161' -->
   <dd>Maximum number of characters in output lines.  Longer output lines will
@@ -61,7 +61,7 @@ joinlines: Join text files line by line
   includes the final newline character.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shortest">
   <dt><b>shortest = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shortest' Line='shortest = yes' -->
   <dd>Stop at the end of the shortest file?  If the input files are of unequal
@@ -71,7 +71,7 @@ joinlines: Join text files line by line
   from the shorter files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Warnings are printed to the standard error stream giving the number
@@ -81,9 +81,9 @@ joinlines: Join text files line by line
   then no warnings are printed.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The task <b>joinlines</b> reads lines from each of the input text files and
   joins them into one line separated by the specified delimiter.  This is useful
@@ -129,48 +129,48 @@ joinlines: Join text files line by line
   stream in the redirection syntax.  See the examples for how to do
   this.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Join the two files <span style="font-family: monospace;">"names"</span> and <span style="font-family: monospace;">"titles"</span>, redirecting the output into a third
   file <span style="font-family: monospace;">"personnel_file"</span>.
   </p>
-  <pre>
-  	cl&gt; joinlines names titles &gt; personnel_file
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; joinlines names titles &gt; personnel_file
+  </pre></div>
   <p>
   2. Join a set of magnitudes given in separate files and place the
   output in <span style="font-family: monospace;">"allmags"</span>.  Separate the columns by tabs.
   </p>
-  <pre>
-  	cl&gt; joinlines mags* out=allmags delim="	"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; joinlines mags* out=allmags delim=" "
+  </pre></div>
   <p>
   3. Join a set of files into long lines and redirect the error output
   to a log file.  Set missing lines to INDEF value.
   </p>
-  <pre>
-  	cl&gt; joinlines tables* out=jointbls miss=INDEF short- ver+ &gt;&amp; log
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; joinlines tables* out=jointbls miss=INDEF short- ver+ &gt;&amp; log
+  </pre></div>
   <p>
   4. Join the second column from the output of a program to the previous
   results.  This illustrates the use of pipes.
   </p>
-  <pre>
-  	cl&gt; myprog | fields STDIN 2 | joinlines last STDIN &gt; new
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; myprog | fields STDIN 2 | joinlines last STDIN &gt; new
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   fields
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ calibrate: Extinction and flux calibrate spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   calibrate input output [records]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input spectra to be calibrated.  When using record format
@@ -23,7 +23,7 @@ calibrate: Extinction and flux calibrate spectra
   are used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of calibrated spectra.  If no output list is specified or if the
@@ -35,7 +35,7 @@ calibrate: Extinction and flux calibrate spectra
   real datatype pixels regardless of the  pixel type.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records (imred.irs and imred.iids only)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)' -->
   <dd>The set of record number extensions to be applied to each input and output
@@ -45,7 +45,7 @@ calibrate: Extinction and flux calibrate spectra
   when record number formats are not used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extinct">
   <dt><b>extinct = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinct' Line='extinct = yes' -->
   <dd>Apply extinction correction if a spectrum has not been previously
@@ -53,21 +53,21 @@ calibrate: Extinction and flux calibrate spectra
   is required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flux">
   <dt><b>flux = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes' -->
   <dd>Apply a flux calibration if a spectrum has not been previously calibrated?
   When applying a flux calibration, sensitivity spectra are required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extinction">
   <dt><b>extinction = &lt;no default&gt;</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = &lt;no default&gt;' -->
   <dd>Extinction file for the observation.  Standard extinction files
   are available in the <span style="font-family: monospace;">"onedstds$"</span> directory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
@@ -80,7 +80,7 @@ calibrate: Extinction and flux calibrate spectra
   additional information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ignoreaps">
   <dt><b>ignoreaps = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no' -->
   <dd>Ignore aperture numbers and apply a single flux calibration to all
@@ -93,7 +93,7 @@ calibrate: Extinction and flux calibrate spectra
   extension and applied to all input apertures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sensitivity">
   <dt><b>sensitivity = <span style="font-family: monospace;">"sens"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sensitivity' Line='sensitivity = "sens"' -->
   <dd>The root name for the sensitivity spectra produced by <b>sensfunc</b>.
@@ -104,7 +104,7 @@ calibrate: Extinction and flux calibrate spectra
   appended automatically.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fnu">
   <dt><b>fnu = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnu' Line='fnu = no' -->
   <dd>The default calibration is into units of flux per unit wavelength (F-lambda).
@@ -112,7 +112,7 @@ calibrate: Extinction and flux calibrate spectra
   flux per unit frequency (F-nu).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_airmass">
   <dt><b>airmass, exptime</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='airmass' Line='airmass, exptime' -->
   <dd>If the airmass and exposure time are not in the header nor can they be
@@ -121,9 +121,9 @@ calibrate: Extinction and flux calibrate spectra
   in the input and output images.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The input spectra are corrected for extinction and calibrated to a flux
   scale using sensitivity spectra produced by the task <b>sensfunc</b>.
@@ -205,33 +205,33 @@ calibrate: Extinction and flux calibrate spectra
   number relation is ignored and the single sensitivity spectrum (without
   extension) is applied.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To flux calibrates a series of spectra replacing the input spectra by
   the calibrated spectra:
   </p>
-  <p>
-  	cl&gt; calibrate nite1 <span style="font-family: monospace;">""</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; calibrate nite1 ""
+  </pre></div>
   <p>
   2.  To only extinction correct echelle spectra:
   </p>
-  <p>
-  	cl&gt; calibrate ccd*.ec.imh new//ccd*.ec.imh flux-
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; calibrate ccd*.ec.imh new//ccd*.ec.imh flux-
+  </pre></div>
   <p>
   3. To flux calibrate a long slit spectrum:
   </p>
-  <pre>
-  	cl&gt; dispaxis = 2
-  	cl&gt; calibrate obj.imh fcobj.imh
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dispaxis = 2
+  cl&gt; calibrate obj.imh fcobj.imh
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_CALIBRATE">
   <dt><b>CALIBRATE V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='CALIBRATE' Line='CALIBRATE V2.10.3' -->
   <dd>This task was revised to operate on 2D and 3D spatial spectra; i.e. long
@@ -241,7 +241,7 @@ calibrate: Extinction and flux calibrate spectra
   is not in the header and cannot be computed from other header keywords.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_CALIBRATE">
   <dt><b>CALIBRATE V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='CALIBRATE' Line='CALIBRATE V2.10' -->
   <dd>This task was revised to operate on nonlinear dispersion corrected spectra
@@ -255,14 +255,14 @@ calibrate: Extinction and flux calibrate spectra
   packages.  The output spectra are coerced to have real pixel datatype.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   setairmass, standard, sensfunc, observatory, continuum
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

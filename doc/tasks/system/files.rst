@@ -7,29 +7,29 @@ files: Expand a file template into a list of files
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   files template
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_template">
   <dt><b>template</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='template' Line='template' -->
   <dd>A file name template specifying the set of files to be listed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sort">
   <dt><b>sort = <span style="font-family: monospace;">"yes"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "yes"' -->
   <dd>Sort the file list.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Files</i> lists all files matching the given template.  The existence of
   the listed files is checked only if pattern matching is used, hence <i>files</i>
@@ -57,53 +57,53 @@ files: Expand a file template into a list of files
   <span style="font-family: monospace;">"newchars"</span> to generate the final output filename.  Either string may be null
   length to insert into or delete characters from a filename.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Generate a single column list of files in the current directory,
   sorted in ASCII collating sequence.
   </p>
-  <p>
-  	cl&gt; files
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; files
+  </pre></div>
   <p>
   2. Generate an unsorted single column list of files in logical directory
   <span style="font-family: monospace;">"lib$"</span>.  Each entry in the output list is of the form <span style="font-family: monospace;">"lib$..."</span>.
   </p>
-  <p>
-  	cl&gt; files lib$ sort-
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; files lib$ sort-
+  </pre></div>
   <p>
   3. Generate a file list to be used to make a set of new files.  The new file
   names will be the old file names with <span style="font-family: monospace;">"_1"</span> concatenated to the root, e.g.,
   <span style="font-family: monospace;">"root.x"</span> would map to <span style="font-family: monospace;">"root_1.x"</span> and so on.
   </p>
-  <p>
-  	cl&gt; files root.*//_1
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; files root.*//_1
+  </pre></div>
   <p>
   4. Generate a file list similar to that in [3], adding a directory prefix
   to each filename.
   </p>
-  <p>
-  	cl&gt; files dir$//root.*
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; files dir$//root.*
+  </pre></div>
   <p>
   5. Use string substitution to change the filename extension of a set of files
   to <span style="font-family: monospace;">".y"</span>.
   </p>
-  <p>
-  	cl&gt; files root.%*%y%
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; files root.%*%y%
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   directory, pathnames, images.sections
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

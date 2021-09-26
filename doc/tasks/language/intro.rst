@@ -7,8 +7,8 @@ intro: A brief introduction to IRAF
 
 .. raw:: html
 
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   1. <b>General</b>
   </p>
@@ -39,16 +39,16 @@ intro: A brief introduction to IRAF
   <p>
   Within the CL a task is invoked by entering its name, e.g.
   </p>
-  <p>
-       cl&gt; reduce args
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; reduce args
+  </pre></div>
   <p>
   If two tasks in different packages have the same name, then the
   package name may be included:
   </p>
-  <p>
-       cl&gt; spectra.reduce args
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; spectra.reduce args
+  </pre></div>
   <p>
   The task name may be followed by a parameter list and tasks
   may be linked together by pipes (see parameters).  The task initiates
@@ -111,14 +111,14 @@ intro: A brief introduction to IRAF
   a script, the script is terminated and the CL returns to an interactive mode.
   The error message from the executable is relayed to the user.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   commands, mathfcns, strings
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DESCRIPTION' 'SEE ALSO'  -->
   

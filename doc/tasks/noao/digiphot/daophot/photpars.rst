@@ -7,15 +7,15 @@ photpars: Edit the aperture photometry parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   photpars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_weighting">
   <dt><b>weighting = <span style="font-family: monospace;">"constant"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "constant"' -->
   <dd>The type of weighting. The weighting is ignored by the PHOT task. The options
@@ -42,7 +42,7 @@ photpars: Edit the aperture photometry parameters
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">"3"</span> (scale units)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = "3" (scale units)' -->
   <dd>A list of aperture radii in units of the  scale parameter or the name of the
@@ -51,21 +51,21 @@ photpars: Edit the aperture photometry parameters
   supported. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zmag">
   <dt><b>zmag = 25.00</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zmag' Line='zmag = 25.00' -->
   <dd>The zero point offset for the magnitude scale. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mkapert">
   <dt><b>mkapert = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mkapert' Line='mkapert = no' -->
   <dd>Mark the photometry apertures on the displayed image?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The integral of the flux within the circular apertures specified by
   <i>apertures</i> is computed by summing pixels in the aperture with
@@ -80,59 +80,59 @@ photpars: Edit the aperture photometry parameters
   spread function the aperture per pixel  a single value of apertures
   will work well on images with differing psfs.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the PHOTPARS parameters.
   </p>
-  <pre>
-      da&gt; lpar photpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; lpar photpars
+  </pre></div>
   <p>
   2. Edit the PHOTPARS parameters.
   </p>
-  <pre>
-      da&gt; photpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; photpars
+  </pre></div>
   <p>
   3. Edit the PHOTPARS parameters from with the PHOT task.
   </p>
-  <pre>
-      da&gt; epar phot
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; epar phot
   
-  	... edit a few phot parameters
+      ... edit a few phot parameters
   
-  	... move to the photpars parameter and type :e
+      ... move to the photpars parameter and type :e
   
-  	... edit the photpars parameters and type :wq
+      ... edit the photpars parameters and type :wq
   
-  	... finish editing the phot parameters and type :wq
-  </pre>
+      ... finish editing the phot parameters and type :wq
+  </pre></div>
   <p>
   4. Save the current PHOTPARS parameter set in a text file photnite1.par.
      This can also be done from inside a higher level task as in the above
      example.
   </p>
-  <pre>
-      da&gt; photpars
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; photpars
   
-  	... type ":w photnite1.par"  from within epar
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type ":w photnite1.par"  from within epar
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   epar,datapars,centerpars,fitskypars,phot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

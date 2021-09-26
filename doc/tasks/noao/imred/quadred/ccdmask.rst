@@ -7,15 +7,15 @@ ccdmask: Make a bad pixel mask from CCD data
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ccdmask image mask
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>CCD image to use in defining bad pixels.  Typically this is
@@ -23,14 +23,14 @@ ccdmask: Make a bad pixel mask from CCD data
   images of different exposure levels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mask">
   <dt><b>mask</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mask' Line='mask' -->
   <dd>Pixel mask name to be created.  A pixel list image, .pl extension,
   is created so no extension is necessary.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncmed">
   <dt><b>ncmed = 7, nlmed = 7</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncmed' Line='ncmed = 7, nlmed = 7' -->
   <dd>The column and line size of a moving median rectangle used to estimate the
@@ -38,7 +38,7 @@ ccdmask: Make a bad pixel mask from CCD data
   pixels to span single bad columns.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncsig">
   <dt><b>ncsig = 15, nlsig = 15</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncsig' Line='ncsig = 15, nlsig = 15' -->
   <dd>The column and line size of regions used to estimate the uncontaminated
@@ -46,21 +46,21 @@ ccdmask: Make a bad pixel mask from CCD data
   of order 100 pixels or more.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 6, hsigma = 6</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 6, hsigma = 6' -->
   <dd>Positive sigma factors to use for selecting pixels below and above
   the median level based on the local percentile sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ngood">
   <dt><b>ngood = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ngood' Line='ngood = 5' -->
   <dd>Gaps of undetected pixels along the column direction of length less
   than this amount are also flagged as bad pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_linterp">
   <dt><b>linterp = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='linterp' Line='linterp = 2' -->
   <dd>Mask code for pixels having a bounding good pixel separation which is
@@ -68,7 +68,7 @@ ccdmask: Make a bad pixel mask from CCD data
   dimension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cinterp">
   <dt><b>cinterp = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cinterp' Line='cinterp = 3' -->
   <dd>Mask code for pixels having a bounding good pixel separation which is
@@ -76,16 +76,16 @@ ccdmask: Make a bad pixel mask from CCD data
   dimension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_eqinterp">
   <dt><b>eqinterp = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='eqinterp' Line='eqinterp = 2' -->
   <dd>Mask code for pixels having a bounding good pixel separation which is
   equal along lines and columns.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Ccdmask</b> makes a pixel mask from pixels deviating by a specified
   statistical amount from the local median level.  The input images may be of
@@ -159,35 +159,35 @@ ccdmask: Make a bad pixel mask from CCD data
   <b>mkpattern</b>.  If a new image is specified with an explicit <span style="font-family: monospace;">".pl"</span>
   extension then the pixel mask format is produced.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Two flat fields of exposures 1 second and 3 seconds are taken,
   overscan and zero corrected, and trimmed.  These are then used
   to generate a CCD mask.
   </p>
-  <pre>
-      cl&gt; imarith flat1 / flat2 ratio
-      cl&gt; ccdmask ratio mask
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imarith flat1 / flat2 ratio
+  cl&gt; ccdmask ratio mask
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_CCDMASK">
   <dt><b>CCDMASK V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='CCDMASK' Line='CCDMASK V2.11' -->
   <dd>This task is new.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imreplace, imexpr, imcopy, imedit, fixpix, text2mask
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

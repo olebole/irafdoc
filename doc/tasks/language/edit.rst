@@ -7,23 +7,23 @@ edit: Edit a text file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   edit files [files...]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_files">
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
   <dd>The file or files to be edited.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>edit</i> task invokes a host system editor to edit the named file or
   files.  The editor to be used is determined by the value of the CL environment
@@ -41,32 +41,32 @@ edit: Edit a text file
   same as the name of the editor.  Support for additional editors is easily added
   by adding new <i>edcap</i> files.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Edit the login.cl file.
   </p>
-  <p>
-  	cl&gt; edit home$login.cl
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; edit home$login.cl
+  </pre></div>
   <p>
   2. Edit the file <span style="font-family: monospace;">"temp"</span> in the current directory.
   </p>
-  <p>
-  	cl&gt; edit temp
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; edit temp
+  </pre></div>
   <p>
   3. On a UNIX system, edit all the <span style="font-family: monospace;">".x"</span> files in the current directory.
   Filename templates cannot be used with the editor unless the editor itself,
   or the host system, expands the filename template.
   </p>
-  <p>
-  	cl&gt; edit *.x
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; edit *.x
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The EOF control character is set in the edcap file for the editor language in
   use, e.g., <span style="font-family: monospace;">"dev$vi.ed"</span> for the VI editor.  The value in this file may differ
@@ -77,14 +77,14 @@ edit: Edit a text file
   The control sequences for the keyboard arrow keys are also defined in the
   <span style="font-family: monospace;">".ed"</span> edcap file; TERMCAP should be used instead.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ehistory, eparam
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

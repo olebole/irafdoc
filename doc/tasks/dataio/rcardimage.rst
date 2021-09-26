@@ -7,15 +7,15 @@ rcardimage: Convert a cardimage file into a text file
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rcardimage cardfile file_list textfile
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_cardfile">
   <dt><b>cardfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cardfile' Line='cardfile' -->
   <dd>The cardimage source file. Cardfile may be either a template specifying a
@@ -26,7 +26,7 @@ rcardimage: Convert a cardimage file into a text file
   file_list parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_file_list">
   <dt><b>file_list</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list' -->
   <dd>A list of tape file
@@ -38,7 +38,7 @@ rcardimage: Convert a cardimage file into a text file
   files on a tape.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_textfile">
   <dt><b>textfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='textfile' Line='textfile' -->
   <dd>Name of the output file.  If multiple input files, multiple output
@@ -46,7 +46,7 @@ rcardimage: Convert a cardimage file into a text file
   disk sequence number onto the textfile string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_card_length">
   <dt><b>card_length = 80</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='card_length' Line='card_length = 80' -->
   <dd>The number of columns per card in the input card image file.
@@ -55,7 +55,7 @@ rcardimage: Convert a cardimage file into a text file
   cards.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_max_line_length">
   <dt><b>max_line_length = 161</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='max_line_length' Line='max_line_length = 161' -->
   <dd>The maximum line length to be generated. Default is maximum size
@@ -63,50 +63,50 @@ rcardimage: Convert a cardimage file into a text file
   Useful for stripping columns 73-80 from Fortran card image files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_entab">
   <dt><b>entab = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='entab' Line='entab = yes' -->
   <dd>Replace blanks with tabs and blanks. Tabsize is 8.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_join">
   <dt><b>join = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='join' Line='join = no' -->
   <dd>Rejoin oversize lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_contn_string">
   <dt><b>contn_string = <span style="font-family: monospace;">"&gt;&gt;"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='contn_string' Line='contn_string = "&gt;&gt;"' -->
   <dd>Marker to enable program to recognize oversize lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trim">
   <dt><b>trim = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trim' Line='trim = yes' -->
   <dd>Trim trailing whitespace from each line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Output messages listing files created, number of cards
   processed, etc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ebcdic">
   <dt><b>ebcdic = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ebcdic' Line='ebcdic = no' -->
   <dd>Translate from ebcdic to ascii.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ibm">
   <dt><b>ibm = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ibm' Line='ibm = no' -->
   <dd>Translate from ibm ebcdic to ascii.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offset">
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Integer parameter specifying the tape file number offset. For example if
@@ -115,9 +115,9 @@ rcardimage: Convert a cardimage file into a text file
   <span style="font-family: monospace;">"card001"</span>, <span style="font-family: monospace;">"card002"</span> and <span style="font-family: monospace;">"card003"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Multiple cardimage files are read from disk or tape.
   If only the magtape device is specified,
@@ -125,46 +125,44 @@ rcardimage: Convert a cardimage file into a text file
   have the form root_filename // tape(disk)_file_number.  By default, trailing
   whitespace is trimmed from each line.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Convert a set of ASCII cardimage files on magnetic tape to IRAF text files,
   replacing blanks with tabs and blanks, and trimming whitespace from
   the ends of lines.
   </p>
-  <p>
-  	cl&gt; rcardimage mtb1600 1-999 textfiles
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rcardimage mtb1600 1-999 textfiles
+  </pre></div>
   <p>
   2. Convert a set of ASCII cardimage files on disk to IRAF test files.
   </p>
-  <p>
-  	cl&gt; rcard card* 1 textfiles
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rcard card* 1 textfiles
+  </pre></div>
   <p>
   3. Convert a set of EBCDIC cardimage files on magnetic tape to IRAF text files,
   trimming whitespace from the ends of lines but leaving embedded blanks
   unchanged.
   </p>
-  <p>
-  	cl&gt; rcardimage mtb1600 1-999 textfile en- ebc+
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rcardimage mtb1600 1-999 textfile en- ebc+
+  </pre></div>
   <p>
   4. Convert  an odd-blocked (81 bytes per card) rcardimage file on tape to an
   IRAF text file by using reblock to write the file to disk and pad the cards
   with blanks, followed by rcardimage to convert the file to an IRAF textfile.
   </p>
-  <p>
-  	cl&gt; reblock mta[1] cardimage inrecord=81 outrecord=82 \<br>
-  	    padchar=<span style="font-family: monospace;">" "</span>
-  </p>
-  <p>
-  	cl&gt; rcardimage cardimage 1 textfile card_length=82
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; reblock mta[1] cardimage inrecord=81 outrecord=82 \<br>
+      padchar=" "
+  cl&gt; rcardimage cardimage 1 textfile card_length=82
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Due to portability considerations The card length in bytes must fill an
   integral number of IRAF characters.  On most machines this means that the
@@ -176,14 +174,14 @@ rcardimage: Convert a cardimage file into a text file
   The size of the output text file lines is currently restricted to 161
   or fewer characters.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   wcardimage
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

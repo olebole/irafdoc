@@ -7,21 +7,21 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccsetwcs image database solutions
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>The input images for which the wcs is to be created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>The text database file written by the ccmap task containing the
@@ -30,7 +30,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   lngref, latref, lngrefunits, latrefunits, and projection parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_solutions">
   <dt><b>solutions</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='solutions' Line='solutions' -->
   <dd>The list of plate solutions. The number of plate solutions must be one
@@ -43,7 +43,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   lnrefunits, latrefunits, and projection parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xref">
   <dt><b>xref = INDEF, yref = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xref' Line='xref = INDEF, yref = INDEF' -->
   <dd>The x and y pixel coordinates of the sky projection reference point.
@@ -51,7 +51,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   image in pixel coordinates, otherwise these parameters are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = INDEF, ymag = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = INDEF, ymag = INDEF' -->
   <dd>The x and y scale factors in arcseconds per pixel. If database is undefined
@@ -59,7 +59,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xrotation">
   <dt><b>xrotation = INDEF, yrotation = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation = INDEF, yrotation = INDEF' -->
   <dd>The x and y rotation angles in degrees measured counter-clockwise with
@@ -76,7 +76,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   xrotation and yrotation values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngref">
   <dt><b>lngref = INDEF, latref = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngref' Line='lngref = INDEF, latref = INDEF' -->
   <dd>The celestial coordinates of the sky projection reference point, e.g.
@@ -85,7 +85,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lngunits">
   <dt><b>lngunits = <span style="font-family: monospace;">""</span>, latunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lngunits' Line='lngunits = "", latunits = ""' -->
   <dd>The units of the lngref and latref parameters.
@@ -96,13 +96,13 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   parameter, otherwise these parameters are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_transpose">
   <dt><b>transpose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transpose' Line='transpose = no' -->
   <dd>Transpose the newly created image wcs ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_projection">
   <dt><b>projection = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='projection' Line='projection = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections in
@@ -111,7 +111,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coosystem">
   <dt><b>coosystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coosystem' Line='coosystem = "j2000"' -->
   <dd>The celestial coordinate system. The systems of most interest to users
@@ -254,7 +254,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   equatorial fk4, noefk4, fk5, or icrs systems and proper motions are defined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
   <dd>Update the world coordinate system in the input image headers ?
@@ -269,7 +269,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   overwritten during the update.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixsystem">
   <dt><b>pixsystem = <span style="font-family: monospace;">"logical"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixsystem' Line='pixsystem = "logical"' -->
   <dd>The pixel coordinate system. The options are:
@@ -293,15 +293,15 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   Otherwise pixsystem is read from the database file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print detailed messages about the progress of the task on the standard output ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   CCSETWCS creates an image world coordinate system from the plate solution
   computed by the CCMAP task or supplied by the user, and writes it to the
@@ -321,10 +321,10 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   coordinates in arcseconds per pixel. The standard coordinates are computed
   by applying the appropriate sky projection to the celestial coordinates.
   </p>
-  <pre>
-  	 xi = f (x, y)
-  	eta = g (x, y)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = f (x, y)
+  eta = g (x, y)
+  </pre></div>
   <p>
   The functions f and g are either power series, Legendre, or Chebyshev
   polynomials whose order and region of validity were set by the user when
@@ -333,18 +333,18 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   component of the plate solution can be given the simple geometrical
   interpretation shown below.
   </p>
-  <pre>
-  	  xi = a + b * x + c * y
-  	 eta = d + e * x + f * y
-  	   b = xmag * cos (xrotation)
-  	   c = ymag * sin (yrotation)
-  	   e = -xmag * sin (xrotation)
-  	   f = ymag * cos (yrotation)
-  	   a = xi0 - b * xref - c * yref = xshift
-  	   d = eta0 - e * xref - f * yref = yshift
-  	   xi0 = 0.0
-  	   eta0 = 0.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+    b = xmag * cos (xrotation)
+    c = ymag * sin (yrotation)
+    e = -xmag * sin (xrotation)
+    f = ymag * cos (yrotation)
+    a = xi0 - b * xref - c * yref = xshift
+    d = eta0 - e * xref - f * yref = yshift
+    xi0 = 0.0
+    eta0 = 0.0
+  </pre></div>
   <p>
   xref, yref, xi0, and eta0 are the origins of the pixel and standard
   coordinate systems respectively. xmag and ymag are the x and y scale factors
@@ -360,18 +360,18 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   xrotation and yrotation are interpreted as the rotation of the coordinates
   themselves not the coordinate axes. 
   </p>
-  <pre>
-  	  xi = a + b * x + c * y
-  	 eta = d + e * x + f * y
-  	   b = xmag * cos (xrotation)
-  	   c = -ymag * sin (yrotation)
-  	   e = xmag * sin (xrotation)
-  	   f = ymag * cos (yrotation)
-  	   a = xi0 - b * xref - c * yref = xshift
-  	   d = eta0 - e * xref - f * yref = yshift
-  	   xi0 = 0.0
-  	   eta0 = 0.0
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   xi = a + b * x + c * y
+  eta = d + e * x + f * y
+    b = xmag * cos (xrotation)
+    c = -ymag * sin (yrotation)
+    e = xmag * sin (xrotation)
+    f = ymag * cos (yrotation)
+    a = xi0 - b * xref - c * yref = xshift
+    d = eta0 - e * xref - f * yref = yshift
+    xi0 = 0.0
+    eta0 = 0.0
+  </pre></div>
   <p>
   The <i>transpose</i> parameter can be used to transpose the newly created
   image wcs.
@@ -420,9 +420,9 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   If <i>verbose</i> is <span style="font-family: monospace;">"yes"</span>, various pieces of useful information are
   printed to the terminal as the task proceeds.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
@@ -451,22 +451,21 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Compute the plate solution for an image with the ccmap task and then
   use the ccsetwcs task to create the image wcs. Check the results with the
   imheader and skyctran tasks.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type coords
   13:29:47.297  47:13:37.52  327.50  410.38
   13:29:37.406  47:09:09.18  465.50   62.10
   13:29:38.700  47:13:36.23  442.01  409.65
   13:29:55.424  47:10:05.15  224.35  131.20
   13:30:01.816  47:12:58.79  134.37  356.33
-  
   
   cl&gt; ccmap coords coords.db image=pix xcol=3 ycol=4 lngcol=1 latcol=2 \<br>
   inter-
@@ -528,16 +527,13 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
                           -0.01393966623835092    0.7665650170136847
           surface2        0
   
-  
-  
   cl&gt; imheader pix l+
   DATE-OBS= '05/04/87'            /  DATE DD/MM/YY
   RA      = '13:29:24.00'         /  RIGHT ASCENSION
   DEC     = '47:15:34.00'         /  DECLINATION
   EPOCH   =              1987.26  /  EPOCH OF RA AND DEC
   
-  
-  cl&gt; ccsetwcs pix coords.db pix 
+  cl&gt; ccsetwcs pix coords.db pix
   Image: pix  Database: coords.db  Record: pix
   Coordinate mapping parameters
       Sky projection geometry: tan
@@ -589,7 +585,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   13:29:38.700  47:13:36.23 13:29:38.696 47:13:35.95
   13:29:55.424  47:10:05.15 13:29:55.396 47:10:05.09
   13:30:01.816  47:12:58.79 13:30:01.842 47:12:58.70
-  </pre>
+  </pre></div>
   <p>
   The skyctran task is used to test that the input image wcs is indeed correct.
   Columns 1 and 2 contain the original ra and dec values and columns 3 and 4
@@ -600,7 +596,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   2. Repeat the previous example but enter the plate solution parameters by
   hand.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; ccsetwcs pix "" xref=318.735 yref=273.900 lngref=13:29:48.129 \<br>
   latref=47:11:53.37 xmag=.764 ymag=.767 xrot=180.890 yrot=1.042
   Image: pix
@@ -612,7 +608,6 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
       X and Y scale: 0.764  0.767  (arcsec/pixel  arcsec/pixel)
       X and Y coordinate rotation: 180.890  1.042  (degrees  degrees)
   Updating image header wcs
-  
   
   cl&gt; skyctran coords STDOUT "pix log" "pix world" lngcol=3 latcol=4 trans+
   
@@ -630,7 +625,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   13:29:38.700  47:13:36.23 13:29:38.698 47:13:35.99
   13:29:55.424  47:10:05.15 13:29:55.395 47:10:05.04
   13:30:01.816  47:12:58.79 13:30:01.839 47:12:58.72
-  </pre>
+  </pre></div>
   <p>
   Note that there are minor differences between the results of examples 1
   and 2 due to precision differences in the input. Note also the difference
@@ -638,17 +633,17 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   1 and 2. In example 2 the rotations are defined as coordinate rotations,
   whereas in example one they are described as axis rotations.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccmap, cctran, skyctran, imctran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

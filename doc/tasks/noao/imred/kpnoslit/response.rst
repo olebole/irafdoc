@@ -7,15 +7,15 @@ response: Determine response calibration
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   response calibration normalization response
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_calibration">
   <dt><b>calibration</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='calibration' Line='calibration' -->
   <dd>Images to use in determining response calibrations.  These are
@@ -23,7 +23,7 @@ response: Determine response calibration
   only a portion of the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_normalization">
   <dt><b>normalization</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='normalization' Line='normalization' -->
   <dd>Images to use determining the normalization spectrum.  In almost all cases
@@ -31,7 +31,7 @@ response: Determine response calibration
   subsection of the calibration images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_responses">
   <dt><b>responses</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='responses' Line='responses' -->
   <dd>Response calibration images to be created.  Each response image is paired
@@ -39,28 +39,28 @@ response: Determine response calibration
   otherwise it is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Graph the average calibration spectrum and fit the normalization spectrum
   interactively?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = INDEF' -->
   <dd>Set the response to 1 when the normalization spectrum or input image data
   fall below this value.  If INDEF then no threshold is applied.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample of points to use in fitting the average calibration spectrum.
   The sample is selected with a range string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Number of sample points to average or median before fitting the function.
@@ -70,49 +70,49 @@ response: Determine response calibration
   used in fitting the normalization spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>Function to fit to the average image spectrum to form the normalization
   spectrum.  The options are <span style="font-family: monospace;">"spline1"</span>, <span style="font-family: monospace;">"spline3"</span>, <span style="font-family: monospace;">"legendre"</span>, and <span style="font-family: monospace;">"chebyshev"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>Order of the fitting function or the number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 0., high_reject = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0., high_reject = 0.' -->
   <dd>Rejection limits below and above the fit in units of the residual sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0' -->
   <dd>Reject additional points within this distance of points exceeding the
   rejection threshold.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_cursor_keys">
   <h3>Cursor keys</h3>
-  <!-- BeginSection: 'CURSOR KEYS' -->
   <p>
   The interactive curve fitting package <b>icfit</b> is used to fit a function
   to the average calibration spectrum.  Help for this package is found
   under the name <span style="font-family: monospace;">"icfit"</span>.
   </p>
-  <!-- EndSection:   'CURSOR KEYS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A response calibration, in the form of an image, is created for each input
   image, normally a quartz spectrum.  The response calibration is formed by
@@ -200,46 +200,46 @@ response: Determine response calibration
   When the task finishes creating a response image the fitting parameters
   are updated in the parameter file.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To create a response image non-interactively:
   </p>
-  <p>
-  	cl&gt; response quartz quartz response order=20 interactive=no
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; response quartz quartz response order=20 interactive=no
+  </pre></div>
   <p>
   2. To determine independent responses for a multislit image determine the
   image sections defining each slit.  Then the responses are computed as
   follows:
   </p>
-  <pre>
-  	cl&gt; response quartz[10:20,*],quartz[35:45,*] \<br>
-  	&gt;&gt;&gt; quartz[12:18,*],quartz[12:18,*] resp,resp
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; response quartz[10:20,*],quartz[35:45,*] \<br>
+  &gt;&gt;&gt; quartz[12:18,*],quartz[12:18,*] resp,resp
+  </pre></div>
   <p>
   Generally the slit image sections are prepared in a file which is then
   used to define the lists of input images and response.
   </p>
-  <pre>
-  	cl&gt; response @slits @slits @responses
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; response @slits @slits @responses
+  </pre></div>
   <p>
   3.  If the DISPAXIS keyword is missing and the dispersion is running
   vertically (varying with the image lines):
   </p>
-  <pre>
-  	cl&gt; hedit *.imh dispaxis 2 add+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit *.imh dispaxis 2 add+
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   icfit, iillumination
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

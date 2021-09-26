@@ -7,28 +7,28 @@ ccdgroups: Group CCD images into image lists
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ccdgroups images output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of CCD images to be grouped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output root group filename.  The image group lists will be put in files
   with this root name followed by a number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_group">
   <dt><b>group = <span style="font-family: monospace;">"ccdtype"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "ccdtype"' -->
   <dd>Group type.  There are currently four grouping types:
@@ -65,22 +65,22 @@ ccdgroups: Group CCD images into image lists
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radius">
   <dt><b>radius = 60.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 60.' -->
   <dd>Grouping radius when grouping by positions.  This is given in arc seconds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdtype">
   <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image types to select from the input image list.  If null (<span style="font-family: monospace;">""</span>) then
   all image types are used.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The input images, possible restricted to a particular CCD image type,
   are grouped into image lists.  The <span style="font-family: monospace;">"ccdtype"</span> or <span style="font-family: monospace;">"subset"</span> groups
@@ -116,42 +116,42 @@ ccdgroups: Group CCD images into image lists
   translation file.  The standard names used are <span style="font-family: monospace;">"date-obs"</span>, <span style="font-family: monospace;">"title"</span>, <span style="font-family: monospace;">"ra"</span>,
   and <span style="font-family: monospace;">"dec"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. For each object 5 exposures were taken to be combined in order to remove
   cosmic rays.  If the titles are the same then (with ccdred.verbose=yes):
   </p>
-  <pre>
-      cl&gt; ccdgroups *.imh group group=title ccdtype=object
-      ccd005.imh  --&gt; group1
-      ccd006.imh  --&gt; group1
-      ccd007.imh  --&gt; group1
-      ccd008.imh  --&gt; group1
-      ccd009.imh  --&gt; group1
-      ccd012.imh  --&gt; group2
-      ccd013.imh  --&gt; group2
-      ccd014.imh  --&gt; group2
-      ccd015.imh  --&gt; group2
-      ccd016.imh  --&gt; group2
-      [... etc ...]
-      cl&gt; combine @group1 obj1 proc+
-      cl&gt; combine @group2 obj2 proc+
-      [... etc ...]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdgroups *.imh group group=title ccdtype=object
+  ccd005.imh  --&gt; group1
+  ccd006.imh  --&gt; group1
+  ccd007.imh  --&gt; group1
+  ccd008.imh  --&gt; group1
+  ccd009.imh  --&gt; group1
+  ccd012.imh  --&gt; group2
+  ccd013.imh  --&gt; group2
+  ccd014.imh  --&gt; group2
+  ccd015.imh  --&gt; group2
+  ccd016.imh  --&gt; group2
+  [... etc ...]
+  cl&gt; combine @group1 obj1 proc+
+  cl&gt; combine @group2 obj2 proc+
+  [... etc ...]
+  </pre></div>
   <p>
   Note the numeric suffixes to the output root name <span style="font-family: monospace;">"group"</span>.
    
   2. CCD observations were made in groups with a flat field, the object, and
   a comparison spectrum at each position.  To group and process this data:
   </p>
-  <pre>
-      cl&gt; ccdgroups *.imh obs group=position &gt;&gt; logfile
-      cl&gt; ccdproc @obs1
-      cl&gt; ccdproc @obs2
-      cl&gt; ccdproc @obs3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdgroups *.imh obs group=position &gt;&gt; logfile
+  cl&gt; ccdproc @obs1
+  cl&gt; ccdproc @obs2
+  cl&gt; ccdproc @obs3
+  </pre></div>
   <p>
   Since no flat field is specified for the parameter <i>ccdproc.flat</i>
   the flat field is taken from the input image list.
@@ -160,30 +160,30 @@ ccdgroups: Group CCD images into image lists
   3. If for some reason you want to group by date and position it is possible
   to use two steps.
   </p>
-  <pre>
-      cl&gt; ccdgroups *.imh date group=date
-      cl&gt; ccdgroups @data1 pos1
-      cl&gt; ccdgroups @data2 pos2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdgroups *.imh date group=date
+  cl&gt; ccdgroups @data1 pos1
+  cl&gt; ccdgroups @data2 pos2
+  </pre></div>
   <p>
    
   4. To get groups by CCD image type:
    
   </p>
-  <pre>
-      cl&gt; ccdgroups *.imh "" group=ccdtype
-      ccd005.imh  --&gt; zero
-      ccd006.imh  --&gt; zero
-      ccd007.imh  --&gt; zero
-      ccd008.imh  --&gt; dark
-      ccd009.imh  --&gt; flat
-      ccd012.imh  --&gt; flat
-      ccd013.imh  --&gt; object
-      ccd014.imh  --&gt; object
-      ccd015.imh  --&gt; object
-      ccd016.imh  --&gt; object
-      [... etc ...]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdgroups *.imh "" group=ccdtype
+  ccd005.imh  --&gt; zero
+  ccd006.imh  --&gt; zero
+  ccd007.imh  --&gt; zero
+  ccd008.imh  --&gt; dark
+  ccd009.imh  --&gt; flat
+  ccd012.imh  --&gt; flat
+  ccd013.imh  --&gt; object
+  ccd014.imh  --&gt; object
+  ccd015.imh  --&gt; object
+  ccd016.imh  --&gt; object
+  [... etc ...]
+  </pre></div>
   <p>
    
   Note the use of a null root name and the extension is the standard
@@ -192,31 +192,31 @@ ccdgroups: Group CCD images into image lists
   5. To get groups by subset:
    
   </p>
-  <pre>
-      cl&gt; ccdgroups *.imh filt group=subset
-      ccd005.imh  --&gt; filt
-      ccd006.imh  --&gt; filtB
-      ccd007.imh  --&gt; filtB
-      ccd008.imh  --&gt; filtB
-      ccd009.imh  --&gt; filtV
-      ccd012.imh  --&gt; filtV
-      ccd013.imh  --&gt; filtV
-      ccd014.imh  --&gt; filtB
-      ccd015.imh  --&gt; filtB
-      ccd016.imh  --&gt; filtB
-      [... etc ...]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ccdgroups *.imh filt group=subset
+  ccd005.imh  --&gt; filt
+  ccd006.imh  --&gt; filtB
+  ccd007.imh  --&gt; filtB
+  ccd008.imh  --&gt; filtB
+  ccd009.imh  --&gt; filtV
+  ccd012.imh  --&gt; filtV
+  ccd013.imh  --&gt; filtV
+  ccd014.imh  --&gt; filtB
+  ccd015.imh  --&gt; filtB
+  ccd016.imh  --&gt; filtB
+  [... etc ...]
+  </pre></div>
   <p>
    
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ccdlist, ccdtypes, instruments, subsets
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

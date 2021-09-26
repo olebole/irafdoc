@@ -7,22 +7,22 @@ rvidlines: Measure radial velocities from spectral lines
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rvidlines images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of spectral images in which to identify spectral lines and measure a
   velocity.  The spectra must be dispersion calibrated in Angstroms.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_section">
   <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If an image is not one dimensional or given as a one dimensional image
@@ -33,10 +33,10 @@ rvidlines: Measure radial velocities from spectral lines
   within the program.
   The section parameter may be specified directly as an image section or
   in one of the following forms
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   line|column|x|y|z first|middle|last|# [first|middle|last|#]]
   first|middle|last|# [first|middle|last|#] line|column|x|y|z
-  </pre>
+  </pre></div>
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator
   which is used with 3D data.  See the example section for examples of
@@ -44,13 +44,13 @@ rvidlines: Measure radial velocities from spectral lines
   that <span style="font-family: monospace;">'l'</span> is not a sufficient abbreviation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database in which the feature data and redshifts are recorded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordlist">
   <dt><b>coordlist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = ""' -->
   <dd>User coordinate list consisting of an ordered list of rest spectral line
@@ -58,7 +58,7 @@ rvidlines: Measure radial velocities from spectral lines
   automatically found and added to the lines being measured.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"' -->
   <dd>Number of lines, columns, or bands across the designated vector axis to be
@@ -70,7 +70,7 @@ rvidlines: Measure radial velocities from spectral lines
   the first number is used for both axes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = 5.' -->
   <dd>The maximum difference for a match between the measured line coordinate
@@ -78,14 +78,14 @@ rvidlines: Measure radial velocities from spectral lines
   is that of the user coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxfeatures">
   <dt><b>maxfeatures = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxfeatures' Line='maxfeatures = 50' -->
   <dd>Maximum number of the strongest features to be selected automatically from
   the coordinate list (function <span style="font-family: monospace;">'l'</span>) or from the image data (function <span style="font-family: monospace;">'y'</span>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zwidth">
   <dt><b>zwidth = 100.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zwidth' Line='zwidth = 100.' -->
   <dd>Width of graphs, in user coordinates, when in zoom mode (function <span style="font-family: monospace;">'z'</span>).
@@ -94,7 +94,7 @@ rvidlines: Measure radial velocities from spectral lines
   <p>
   The following parameters are used in determining feature positions.
   </p>
-  <dl>
+  <dl id="l_ftype">
   <dt><b>ftype = <span style="font-family: monospace;">"absorption"</span> (emission|absorption|gemission|gabsorption)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "absorption" (emission|absorption|gemission|gabsorption)' -->
   <dd>Type of features to be identified.  The possibly abbreviated choices are
@@ -103,27 +103,27 @@ rvidlines: Measure radial velocities from spectral lines
   select the Gaussian fitting centering algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fwidth">
   <dt><b>fwidth = 4.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4.' -->
   <dd>Width in pixels of features to be identified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.' -->
   <dd>The maximum distance, in pixels, allowed between a feature position
   and the initial estimate when defining a new feature.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.' -->
   <dd>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minsep">
   <dt><b>minsep = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.' -->
   <dd>The minimum separation, in pixels, allowed between feature positions
@@ -133,7 +133,7 @@ rvidlines: Measure radial velocities from spectral lines
   <p>
   The following parameters control the input and output.
   </p>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Log file for recording the results of the velocity measurements.  The
@@ -142,7 +142,7 @@ rvidlines: Measure radial velocities from spectral lines
   is specified then the results are not saved.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_autowrite">
   <dt><b>autowrite = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autowrite' Line='autowrite = no' -->
   <dd>Automatically write or update the logfile and database?  If no then a query
@@ -152,7 +152,7 @@ rvidlines: Measure radial velocities from spectral lines
   database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_keywpars">
   <dt><b>keywpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = ""' -->
   <dd>The image header keyword translation table as described in 
@@ -161,23 +161,23 @@ rvidlines: Measure radial velocities from spectral lines
   heliocentric velocity.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
   cursor is read.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_addtional_parameters">
   <h3>Addtional parameters</h3>
-  <!-- BeginSection: 'ADDTIONAL PARAMETERS' -->
   <p>
   The measured velocities are corrected to a heliocentric frame of reference
   if possible.  This requires determining various parameters about the
@@ -205,10 +205,10 @@ rvidlines: Measure radial velocities from spectral lines
   then point the <span style="font-family: monospace;">"date_obs"</span> and <span style="font-family: monospace;">"ut"</span> parameters in KEYWPARS to the same
   keyword.
   </p>
-  <!-- EndSection:   'ADDTIONAL PARAMETERS' -->
+  </section>
+  <section id="s_cursor_keys">
   <h3>Cursor keys</h3>
-  <!-- BeginSection: 'CURSOR KEYS' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ?  Clear the screen and print menu of options
   a  Apply next (c)enter or (d)elete operation to (a)ll features
   b  Mark and de(b)lend features by Gaussian fitting
@@ -233,35 +233,35 @@ rvidlines: Measure radial velocities from spectral lines
   +  Move the cursor or zoom to the next feature
   -  Move the cursor or zoom to the previous feature
   I  Interrupt task and exit immediately
-  </pre>
+  </pre></div>
   <p>
   The parameters are listed or set with the following commands which may be
   abbreviated.  To list the value of a parameter type the command alone.
   </p>
-  <pre>
-  :show file		Show the values of all the parameters
-  :features file		Write feature list to file (default STDOUT)
+  <div class="highlight-default-notranslate"><pre>
+  :show file              Show the values of all the parameters
+  :features file          Write feature list to file (default STDOUT)
   
-  :coordlist file		Coordinate list file
-  :cradius value		Centering radius in pixels
-  :threshold value	Detection threshold for feature centering
-  :database name		Database for recording feature records
-  :ftype value		Feature type
-  			  (emission|absorption|gemission|gabsorption)
-  :fwidth value		Feature width in pixels
-  :image imagename 	Set a new image or show the current image
-  :labels value		Feature label type
-  			    (none|index|pixel|coords|user|both)
-  :match value		Coordinate list matching distance
-  :maxfeatures value	Maximum number of features automatically found
-  :minsep value		Minimum separation allowed between features
-  :read name ap		Read a record from the database
-  			  (name/ap default to the current spectrum)
-  :write name ap		Write a record to the database
-  			  (name/ap default to the current spectrum)
-  :add name ap		Add features from the database
-  			  (name/ap default to the current spectrum)
-  :zwidth value		Zoom width in user units
+  :coordlist file         Coordinate list file
+  :cradius value          Centering radius in pixels
+  :threshold value        Detection threshold for feature centering
+  :database name          Database for recording feature records
+  :ftype value            Feature type
+                            (emission|absorption|gemission|gabsorption)
+  :fwidth value           Feature width in pixels
+  :image imagename        Set a new image or show the current image
+  :labels value           Feature label type
+                              (none|index|pixel|coords|user|both)
+  :match value            Coordinate list matching distance
+  :maxfeatures value      Maximum number of features automatically found
+  :minsep value           Minimum separation allowed between features
+  :read name ap           Read a record from the database
+                            (name/ap default to the current spectrum)
+  :write name ap          Write a record to the database
+                            (name/ap default to the current spectrum)
+  :add name ap            Add features from the database
+                            (name/ap default to the current spectrum)
+  :zwidth value           Zoom width in user units
   
   Labels:
         none - No labels
@@ -270,10 +270,10 @@ rvidlines: Measure radial velocities from spectral lines
       coords - User coordinates such as wavelength
         user - User labels
         both - Combination of coords and user
-  </pre>
-  <!-- EndSection:   'CURSOR KEYS' -->
+  </pre></div>
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Rvidlines</b> measures radial velocities from spectra by determining the
   wavelength shift in spectral lines relative to specified rest wavelengths.
@@ -407,9 +407,9 @@ rvidlines: Measure radial velocities from spectral lines
   The key <span style="font-family: monospace;">'f'</span> computes (<span style="font-family: monospace;">"fits"</span>) a velocity to the defined features.
   This is done by taking a weighted average of the redshifts,
   </p>
-  <pre>
-  	z = (measured - true) / true
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  z = (measured - true) / true
+  </pre></div>
   <p>
   of the individual lines.  The default weights are always one but a different
   weight may be entered with the <span style="font-family: monospace;">'u'</span> key.  The average redshift is
@@ -501,17 +501,16 @@ rvidlines: Measure radial velocities from spectral lines
   format is designed so that if there are multiple velocities recorded
   in the same log file they can be easily extracted with the match command:
   </p>
-  <pre>
-      cl&gt; match Vhelio logfile
-      im1 45 : Vhelio = 15.06 km/s, Mean err = 4.593 km/s, Lines = 7
-      im1 40 : Vhelio = 17.77 km/s, Mean err = 3.565 km/s, Lines = 7
-      im2 45 : Vhelio = 24.44 km/s, Mean err = 3.741 km/s, Lines = 7
-      im2 40 : Vhelio = 14.65 km/s, Mean err =  11.2 km/s, Lines = 7
-      ...
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; match Vhelio logfile
+  im1 45 : Vhelio = 15.06 km/s, Mean err = 4.593 km/s, Lines = 7
+  im1 40 : Vhelio = 17.77 km/s, Mean err = 3.565 km/s, Lines = 7
+  im2 45 : Vhelio = 24.44 km/s, Mean err = 3.741 km/s, Lines = 7
+  im2 40 : Vhelio = 14.65 km/s, Mean err =  11.2 km/s, Lines = 7
+  </pre></div>
+  </section>
+  <section id="s_database_records">
   <h3>Database records</h3>
-  <!-- BeginSection: 'DATABASE RECORDS' -->
   <p>
   The database specified by the parameter <i>database</i> is a directory of
   simple text files.  The text files have names beginning with 'id' followed
@@ -533,27 +532,27 @@ rvidlines: Measure radial velocities from spectral lines
   these files may also be read by the <b>identify</b> task for changing
   the dispersion function based on the rest wavelengths.
   </p>
-  <!-- EndSection:   'DATABASE RECORDS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The radial velocity of the  spectrum, kstar1, is to be determined.
   The user creates a list of line features to be used in the file
   klines.dat.
   </p>
-  <pre>
-      cl&gt; rvidlines kstar1 coord=klines.dat
-  	a. The spectrum is drawn
-  	b. A line is marked with <span style="font-family: monospace;">'m'</span>
-  	c. Enter the rest wavelength
-  	d. Compute a velocity with <span style="font-family: monospace;">'f'</span>
-  	e. Find other lines in the list with <span style="font-family: monospace;">'l'</span>
-  	f. Exit with <span style="font-family: monospace;">'q'</span>
-      Write velocity data to the logfile (yes)? y
-      Write feature data to the database (yes)? y
-      cl&gt; match Vhelio logfile
-      kstar1 1 : Vhelio = 25.1 km/s, Mean err = 1.123 km/s, Lines = 10
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rvidlines kstar1 coord=klines.dat
+      a. The spectrum is drawn
+      b. A line is marked with <span style="font-family: monospace;">'m'</span>
+      c. Enter the rest wavelength
+      d. Compute a velocity with <span style="font-family: monospace;">'f'</span>
+      e. Find other lines in the list with <span style="font-family: monospace;">'l'</span>
+      f. Exit with <span style="font-family: monospace;">'q'</span>
+  Write velocity data to the logfile (yes)? y
+  Write feature data to the database (yes)? y
+  cl&gt; match Vhelio logfile
+  kstar1 1 : Vhelio = 25.1 km/s, Mean err = 1.123 km/s, Lines = 10
+  </pre></div>
   <p>
   2.  For echelle or multispec spectra the keys <span style="font-family: monospace;">'o'</span>, <span style="font-family: monospace;">'j'</span>, and <span style="font-family: monospace;">'k'</span> may
   be used to switch between spectra.  Note that the inheritance of features
@@ -568,32 +567,32 @@ rvidlines: Measure radial velocities from spectral lines
   use an image section to define a vector.  For example, to select column
   20:
   </p>
-  <pre>
-      cl&gt; rvidlines obj[20,*]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; rvidlines obj[20,*]
+  </pre></div>
   <p>
   The alternative is to use the section parameter.  Below are some examples
   of the section parameter syntax for an image <span style="font-family: monospace;">"im2d"</span> which is 100x200
   and <span style="font-family: monospace;">"im3d"</span> which is 100x200x50.  On the left is the section string syntax
   and on the right is the image section
   </p>
-  <pre>
-      Section parameter |  Image section      |  Description
-      ------------------|---------------------|---------------------
-      first line        |  im2d[*,1]          |  First image line
-      middle column     |  im2d[50,*]         |  Middle image column
-      last z            |  im3d[100,200,*]    |  Last image z vector
-      middle last y     |  im3d[50,*,50]      |  Image y vector
-      line 20           |  im2d[*,20]         |  Line 20
-      column 20         |  im2d[20,*]         |  Column 20
-      x 20              |  im2d[*,20]         |  Line 20
-      y 20              |  im2d[20,*]         |  Column 20
-      y 20 30           |  im2d[20,*,30]      |  Column 20
-      z 20 30	      |  im3d[20,30,*]      |  Image z vector
-      x middle          |  im3d[*,100,25]     |  Middle of image
-      y middle          |  im3d[50,*,25]      |  Middle of image
-      z middle          |  im3d[50,100,*]     |  Middle of image
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Section parameter |  Image section      |  Description
+  ------------------|---------------------|---------------------
+  first line        |  im2d[*,1]          |  First image line
+  middle column     |  im2d[50,*]         |  Middle image column
+  last z            |  im3d[100,200,*]    |  Last image z vector
+  middle last y     |  im3d[50,*,50]      |  Image y vector
+  line 20           |  im2d[*,20]         |  Line 20
+  column 20         |  im2d[20,*]         |  Column 20
+  x 20              |  im2d[*,20]         |  Line 20
+  y 20              |  im2d[20,*]         |  Column 20
+  y 20 30           |  im2d[20,*,30]      |  Column 20
+  z 20 30           |  im3d[20,30,*]      |  Image z vector
+  x middle          |  im3d[*,100,25]     |  Middle of image
+  y middle          |  im3d[50,*,25]      |  Middle of image
+  z middle          |  im3d[50,100,*]     |  Middle of image
+  </pre></div>
   <p>
   The most common usage should be <span style="font-family: monospace;">"middle line"</span>, <span style="font-family: monospace;">"middle column"</span> or <span style="font-family: monospace;">"middle z"</span>.
   </p>
@@ -603,37 +602,37 @@ rvidlines: Measure radial velocities from spectral lines
   are summed, the second and third columns, when the vector axis is that shown
   in the first column.
   </p>
-  <pre>
-      Vector axis       |   Sum axis in 2D    |  Sum axes in 3D
-      ------------------|---------------------|--------------------
-           1            |         2           |      2 3                 
-           2            |         1           |      1 3                 
-           3            |         -           |      1 2                 
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  Vector axis       |   Sum axis in 2D    |  Sum axes in 3D
+  ------------------|---------------------|--------------------
+       1            |         2           |      2 3
+       2            |         1           |      1 3
+       3            |         -           |      1 2
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_RVIDLINES">
   <dt><b>RVIDLINES V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='RVIDLINES' Line='RVIDLINES V2.11' -->
   <dd>This task will now work in the units of the input spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_RVIDLINES">
   <dt><b>RVIDLINES V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='RVIDLINES' Line='RVIDLINES V2.10.3' -->
   <dd>This is a new task in this version. 
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   center1d, fxcor, gtools, identify, keywpars, observatory,
   rvcorrect, rvreidlines
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDTIONAL PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'DATABASE RECORDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

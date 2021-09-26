@@ -7,67 +7,67 @@ stdgraph: Plot metacode on the standard graphics device
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   stdgraph input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The input metacode, may be a list of files or redirected STDIN.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>The terminal type.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_generic">
   <dt><b>generic = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='generic' Line='generic = no' -->
   <dd>The remaining parameters are ignored if <b>generic</b> = yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_debug">
   <dt><b>debug = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = no' -->
   <dd>When <b>debug</b> = yes, the decoded plotting instructions are printed
   during processing.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>If <b>verbose</b> = yes, elements of polylines and cell array calls are 
   printed in debug mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gkiunits">
   <dt><b>gkiunits = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gkiunits' Line='gkiunits = no' -->
   <dd>In debug mode, coordinates can be printed in GKI rather than NDC units.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_txquality">
   <dt><b>txquality = <span style="font-family: monospace;">"normal"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='txquality' Line='txquality = "normal"' -->
   <dd>The character drawing quality.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xres">
   <dt><b>xres = 0, yres= 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xres' Line='xres = 0, yres= 0' -->
   <dd>The number of resolution elements in x and y
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>stdgraph</i> translates GKI metacode and draws a plot on a
   graphics terminal.  Input to
@@ -89,35 +89,35 @@ stdgraph: Plot metacode on the standard graphics device
   Coordinates can be printed in either GKI (0 - 32767) or NDC (0.0 - 1.0)
   units.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Extract the fourth frame from metacode file <span style="font-family: monospace;">"plots.mc"</span> and plot it.
   </p>
-  <p>
-      cl&gt; gkiextract plots.mc 4 | stdgraph
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; gkiextract plots.mc 4 | stdgraph
+  </pre></div>
   <p>
   2. Process file <span style="font-family: monospace;">"one.mc"</span> in debug mode.
   </p>
-  <p>
-      cl&gt; stdgraph oned.mc debug+
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stdgraph oned.mc debug+
+  </pre></div>
   <p>
   3. Plot file <span style="font-family: monospace;">"oned.mc"</span> with high quality text generation.
   </p>
-  <p>
-      cl&gt; stdgraph oned.mc txquality=high
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; stdgraph oned.mc txquality=high
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   gkiextract,  stdplot
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

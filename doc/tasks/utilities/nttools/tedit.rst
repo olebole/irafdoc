@@ -7,14 +7,14 @@ tedit: Edit a table.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tedit table
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task is a screen editor for STSDAS tables. You edit a table by
   moving the cursor around the screen with the cursor keys and typing in
@@ -71,13 +71,13 @@ tedit: Edit a table.
   <p>
   The following is a list of the available commands:
   </p>
-  <dl>
+  <dl id="l_add">
   <dt><b>add column &lt;name&gt; &lt;type&gt; &lt;format&gt; &lt;units&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='add' Line='add column &lt;name&gt; &lt;type&gt; &lt;format&gt; &lt;units&gt;' -->
   <dd>Add a new column to the table with the specified name and data type.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_add">
   <dt><b>add row &lt;row&gt; &lt;number&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='add' Line='add row &lt;row&gt; &lt;number&gt;' -->
   <dd>Add new, blank rows after row number &lt;row&gt;. The legal range of &lt;row&gt; is
@@ -85,7 +85,7 @@ tedit: Edit a table.
   &lt;number&gt;.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_copy">
   <dt><b>copy &lt;first&gt; &lt;last&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='copy' Line='copy &lt;first&gt; &lt;last&gt;' -->
   <dd>Copy the rows between &lt;first&gt; and &lt;last&gt; into the paste buffer. The 
@@ -94,7 +94,7 @@ tedit: Edit a table.
   buffer can be put back into the table by the 'insert' command.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_copy">
   <dt><b>copy append &lt;first&gt; &lt;last&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='copy' Line='copy append &lt;first&gt; &lt;last&gt;' -->
   <dd>Copy the rows between &lt;first&gt; and &lt;last&gt; into the paste buffer. The 
@@ -102,7 +102,7 @@ tedit: Edit a table.
   are inserted after them.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delete">
   <dt><b>delete &lt;first&gt; &lt;last&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='delete' Line='delete &lt;first&gt; &lt;last&gt;' -->
   <dd>Delete the rows between &lt;first&gt; and &lt;last&gt;. The deleted rows are placed
@@ -110,20 +110,20 @@ tedit: Edit a table.
   destroyed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delete">
   <dt><b>delete append &lt;first&gt; &lt;last&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='delete' Line='delete append &lt;first&gt; &lt;last&gt;' -->
   <dd>Delete the rows between &lt;first&gt; and &lt;last&gt;. The deleted rows are appended 
   to the paste buffer.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_exit">
   <dt><b>exit</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='exit' Line='exit' -->
   <dd>Exit the table editor, saving any changes made to the table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find &lt;expression&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='find' Line='find &lt;expression&gt;' -->
   <dd>Find the next row in the table which makes &lt;expression&gt; true and move
@@ -137,27 +137,27 @@ tedit: Edit a table.
   command is executed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find forward &lt;expression&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='find' Line='find forward &lt;expression&gt;' -->
   <dd>Find the next row in the table which makes &lt;expression&gt; true and move the
   cursor to that row. The search is done in the forwards direction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find backwards &lt;expression&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='find' Line='find backwards &lt;expression&gt;' -->
   <dd>Find the next row in the table which makes &lt;expression&gt; true and move the
   cursor to that row. The search is done in the backwards direction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_goto">
   <dt><b>goto &lt;row&gt; &lt;column&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='goto' Line='goto &lt;row&gt; &lt;column&gt;' -->
   <dd>Move the cursor to &lt;row&gt; and &lt;column&gt;.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_help">
   <dt><b>help</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='help' Line='help' -->
   <dd>Display online help information for the table editor. The help includes 
@@ -165,48 +165,48 @@ tedit: Edit a table.
   for table editing commands.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_insert">
   <dt><b>insert &lt;row&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='insert' Line='insert &lt;row&gt;' -->
   <dd>Insert the contents of the paste buffer after row number &lt;row&gt;. The 
   contents of the paste buffer are not changed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lower">
   <dt><b>lower &lt;column&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='lower' Line='lower &lt;column&gt;' -->
   <dd>Convert &lt;column&gt; to lower case. Only string columns can be converted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_next">
   <dt><b>next</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='next' Line='next' -->
   <dd>Repeat the previous find command, using the same expression and search 
   direction that was used with it.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_next">
   <dt><b>next forward</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='next' Line='next forward' -->
   <dd>Repeat the previous find command, changing the search direction to 
   forwards.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_next">
   <dt><b>next backwards</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='next' Line='next backwards' -->
   <dd>Repeat the previous find command, changing the search direction to 
   backwards.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_quit">
   <dt><b>quit</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='quit' Line='quit' -->
   <dd>Exit the table editor. If the table has been changed, the table editor 
   will ask you whether to save it before exiting.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_set">
   <dt><b>set &lt;column&gt; &lt;expression&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='set' Line='set &lt;column&gt; &lt;expression&gt;' -->
   <dd>Set a column equal to an expression. If the column is a string column,
@@ -215,7 +215,7 @@ tedit: Edit a table.
   the exact syntax of the expression, see the help file for tcalc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_substitute">
   <dt><b>substitute &lt;column&gt; &lt;target&gt; &lt;replacement&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='substitute' Line='substitute &lt;column&gt; &lt;target&gt; &lt;replacement&gt;' -->
   <dd>Search for and replace text patterns in a column.  The syntax for the
@@ -227,15 +227,15 @@ tedit: Edit a table.
   preceding it with the escape character, <span style="font-family: monospace;">`\'</span>. For example, the escape
   character itself is indicated in a pattern by `\\'. The meta-characters
   which can be used in the target pattern are:
-  <pre>
-  beginning of string	^	end of string		$
-  white space		#	escape character	\<br>
-  ignore case		{	end ignore case		}
-  begin character class	[	end character class	]
-  not, in char class	^	range, in char class	-
-  one character		?	zero or more occurrences *
-  begin tagged string	\(	end tagged string	\)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  beginning of string     ^       end of string           $
+  white space             #       escape character        \<br>
+  ignore case             {       end ignore case         }
+  begin character class   [       end character class     ]
+  not, in char class      ^       range, in char class    -
+  one character           ?       zero or more occurrences *
+  begin tagged string     \(      end tagged string       \)
+  </pre></div>
   A set of characters is indicated in the target string by the character
   class construct. For example, punctuation could be indicated by
   `[,;.!]'.  A range of characters contiguous in the underlying
@@ -249,11 +249,11 @@ tedit: Edit a table.
   have no effect on the match, they only serve to identify portions of
   the matched string for the replacement pattern. The meta-characters
   which are used in the replacement pattern are the following:
-  <pre>
-  entire string		&amp;	tagged string		\n
-  capitalize		\u	upper case		\U
-  lower case		\L	end case conversion	\e \E
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  entire string           &amp;       tagged string           \n
+  capitalize              \u      upper case              \U
+  lower case              \L      end case conversion     \e \E
+  </pre></div>
   The ditto meta-character, <span style="font-family: monospace;">`&amp;`</span>, indicates that the entire portion of the
   string that was matched by the target pattern. The tag meta-character
   indicates that the n-th tagged string.  For example, `\1' indicates
@@ -264,7 +264,7 @@ tedit: Edit a table.
   turned off explicitly with `\e' or `\E'.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_upper">
   <dt><b>upper &lt;column&gt;</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='upper' Line='upper &lt;column&gt;' -->
   <dd>Convert &lt;column&gt; to upper case. Only string columns can be converted.
@@ -296,10 +296,10 @@ tedit: Edit a table.
   <p>
   The 'tread' task can also be used to view a file in readonly mode.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [string]' -->
   <dd>The name of the table to be edited. The editor checks for the
@@ -326,9 +326,9 @@ tedit: Edit a table.
   column names so there is no question about spelling.  This list may be
   edited to rearrange or delete the names, and then the list
   file is given preceded by an <span style="font-family: monospace;">'@'</span> sign, for example:
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tedit junk columns=@colnames.lis
-  </pre>
+  </pre></div>
   </dd>
   </dl>
   <dl>
@@ -352,9 +352,9 @@ tedit: Edit a table.
   set to <span style="font-family: monospace;">"yes"</span> the table is always edited in place.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Make a copy of the table 'm12b.tab' (if it exists) and edit the copy. 
   If the table does not exist
@@ -363,28 +363,28 @@ tedit: Edit a table.
   exit (rather than quitting) the temporary table will be renamed to
   'm12b.tab'.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tedit m12b
-  </pre>
+  </pre></div>
   <p>
   2. Display the columns 'SHARP' and 'ROUND' in an existing table. Rows may 
   be added or deleted, and columns may be added.  
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tedit m12b columns="SHARP,ROUND"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also_">
   <h3>See also </h3>
-  <!-- BeginSection: 'SEE ALSO ' -->
   <p>
   tread, tprint, tselect, stty
   </p>
@@ -392,7 +392,7 @@ tedit: Edit a table.
   Type <span style="font-family: monospace;">"help tables opt=sys"</span> for a description of the 'tables' package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO ' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO '  -->
   

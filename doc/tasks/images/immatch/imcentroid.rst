@@ -7,15 +7,15 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imcentroid input reference coords
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of images within which sources are to be centered.  If a
@@ -26,7 +26,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   used in the calculation of the  overlap region.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference = ""' -->
   <dd>The reference image to which the input images will be aligned.  If
@@ -35,7 +35,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   only the centers for the individual sources will be reported.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords' -->
   <dd>A text file containing the coordinates of the registration objects to
@@ -44,7 +44,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   should be measured in the frame of the reference image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shifts">
   <dt><b>shifts = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shifts' Line='shifts = ""' -->
   <dd>A text file containing the initial estimate for each image of the
@@ -58,7 +58,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   the initial shifts.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boxsize">
   <dt><b>boxsize = 7</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boxsize' Line='boxsize = 7' -->
   <dd>The size in pixels of the box to use for the final centering, during
@@ -68,7 +68,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   since it is highly data dependent.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bigbox">
   <dt><b>bigbox = 11</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bigbox' Line='bigbox = 11' -->
   <dd>The size in pixels of the box to use for coarse centering.  The coarse
@@ -83,13 +83,13 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   aborts.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_negative">
   <dt><b>negative = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='negative' Line='negative = no' -->
   <dd>Are the features negative ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = INDEF' -->
   <dd>The absolute reference level for the marginal centroid calculation.
@@ -97,21 +97,21 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   thresholds) of the individual sources.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lower">
   <dt><b>lower = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lower' Line='lower = INDEF' -->
   <dd>The lower threshold for the data.  Individual pixels less than this
   value will be given zero weight in the centroids.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_upper">
   <dt><b>upper = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='upper' Line='upper = INDEF' -->
   <dd>The upper threshold for the data.  Individual pixels greater than this
   value will be given zero weight in the centroids.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 3' -->
   <dd>The maximum number of centering iterations to perform.  The centering
@@ -119,14 +119,14 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   is achieved.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tolerance">
   <dt><b>tolerance = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tolerance' Line='tolerance = 0' -->
   <dd>The tolerance for convergence of the centering algorithm.  This is the
   integral shift of the centering box from one iteration to the next.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxshift">
   <dt><b>maxshift = INDEFR</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxshift' Line='maxshift = INDEFR' -->
   <dd>The maximum permitted difference between the predicted shift and the
@@ -134,7 +134,7 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   maxshift are ignored. If maxshift is undefined no shift checking is done.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print the centers for the individual objects ?  If verbose is no
@@ -142,9 +142,9 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   If no reference image is supplied, verbose is automatically set to yes.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IMCENTROID measures the X and Y coordinates of a list of sources in a
   list of images and finds the mean X and Y shifts between the input
@@ -233,21 +233,21 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   nature of the process of image registration.  This all leads to a few
   guidelines:
   </p>
-  <pre>
-      o	Include the reference image in the input image list
+  <div class="highlight-default-notranslate"><pre>
+  o   Include the reference image in the input image list
   
-      o	Use the smallest image as the reference image
+  o   Use the smallest image as the reference image
   
-      o	Choose the reference image such that the input images
-          are scattered to either side in the shifts in each axis
+  o   Choose the reference image such that the input images
+      are scattered to either side in the shifts in each axis
   
-      o	Align images that are the same size, OR
+  o   Align images that are the same size, OR
   
-      o	Pad dissimilar sized images with blanks to the largest size
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  o   Pad dissimilar sized images with blanks to the largest size
+  </pre></div>
+  </section>
+  <section id="s_centering_algorithm">
   <h3>Centering algorithm</h3>
-  <!-- BeginSection: 'CENTERING ALGORITHM' -->
   <p>
   The algorithm is a <span style="font-family: monospace;">"marginal"</span> centroid in which the fit for each axis
   is performed separately upon a vector created by collapsing the
@@ -273,49 +273,49 @@ imcentroid: Compute and print relative shifts for a list of 2-D images
   try increasing the tolerance gingerly.  If the sky background is not
   flat, but varies across the image, it can be removed before processing.
   </p>
-  <!-- EndSection:   'CENTERING ALGORITHM' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Calculate the shifts between three images using the first image
   as a reference image and the list of registration star coordinates in
   the file <span style="font-family: monospace;">"x1.coords"</span>.
   </p>
-  <pre>
-      cl&gt; imcentroid x1,x2,x3 x1 x1.coords
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcentroid x1,x2,x3 x1 x1.coords
+  </pre></div>
   <p>
   2. Calculate the shifts between a list of images contained in the file
   <span style="font-family: monospace;">"imlist"</span>:
   </p>
-  <pre>
-      pr&gt; imcentroid @imlist x1 x1.coords
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; imcentroid @imlist x1 x1.coords
+  </pre></div>
   <p>
   3. Perform the centering, but don't calculate the shifts, i.e., don't
   supply a reference image.  Note that the <i>input</i> list of shifts,
   or a coarse centering pass are still needed:
   </p>
-  <pre>
-      pr&gt; imcentroid @imlist "" x1.coords
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  pr&gt; imcentroid @imlist "" x1.coords
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The coarse centering portion of the algorithm can be fooled if the
   first source on the list is not well separated from other sources, or
   if the first source has a low signal to noise ratio, or if there is a
   complicated shape to the background.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imalign, imshift, xregister, geomap, geotran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CENTERING ALGORITHM' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

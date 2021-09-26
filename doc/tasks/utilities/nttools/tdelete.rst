@@ -7,14 +7,14 @@ tdelete: Delete tables.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tdelete table
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task deletes tables.
   The input may be a general filename template,
@@ -27,10 +27,10 @@ tdelete: Delete tables.
   In order to protect against accidental deletion of files other than tables,
   text tables may be deleted using 'tdelete' only if 'verify = yes'.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
   <dd>A list of one or more tables to be deleted.
@@ -51,7 +51,7 @@ tdelete: Delete tables.
   the delete.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_go_ahead">
   <dt><b>go_ahead = yes [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='go_ahead' Line='go_ahead = yes [boolean]' -->
   <dd>This is a copy of 'default_action' used for prompting if 'verify = yes'.
@@ -59,23 +59,22 @@ tdelete: Delete tables.
   but cannot be directly set by the user.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Delete a single table.
   </p>
-  <pre>
-  	cl&gt; tdelete table
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tdelete table
+  </pre></div>
   <p>
   2. Delete several tables.
   </p>
-  <pre>
-  	cl&gt; tdelete table1,table2,tab67
-  	cl&gt; tdelete *.tab,a,b,c
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tdelete table1,table2,tab67
+  cl&gt; tdelete *.tab,a,b,c
+  </pre></div>
   <p>
   In the latter case, the extension is given explicitly because there may be
   other files beginning with <span style="font-family: monospace;">"tab"</span> that are not tables.
@@ -83,32 +82,32 @@ tdelete: Delete tables.
   <p>
   3. Delete a list of tables using verify.
   </p>
-  <pre>
-  	cl&gt; tdelete fits*.tab ver+
-  	cl&gt; delete table `fits1.tab' ? (yes): yes
-  	cl&gt; delete table `fits2.tab' ? (yes): yes
-  	cl&gt; delete table `fits3.tab' ? (yes): yes
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; tdelete fits*.tab ver+
+  cl&gt; delete table `fits1.tab' ? (yes): yes
+  cl&gt; delete table `fits2.tab' ? (yes): yes
+  cl&gt; delete table `fits3.tab' ? (yes): yes
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Text tables cannot be deleted by 'tdelete' unless 'verify' is set to yes.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   delete, tcopy, trename
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

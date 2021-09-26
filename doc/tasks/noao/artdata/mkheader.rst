@@ -7,21 +7,21 @@ mkheader: Append/replace header parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkheader images headers
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images in which header information is to be added or modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>List of images or header keyword data files.  If the list is shorter
@@ -35,21 +35,21 @@ mkheader: Append/replace header parameters
   output of <b>imheader</b> is an acceptable data file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = yes' -->
   <dd>Append to existing keywords?  If no then the existing header is replaced.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Verbose output?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The image headers in the list of input images may be replaced or appended
   with information from images or data files specified by the <i>header</i>
@@ -78,43 +78,43 @@ mkheader: Append/replace header parameters
   data package with a standard default file <span style="font-family: monospace;">"artdata$stdheader.dat"</span>.
   To edit image headers also see <b>hedit</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Add some standard keywords from a file to an image.
   </p>
-  <pre>
-      ar&gt; type myheader
-      # MY header list
-      INSTRUME= 'bspec mark II'		/ B Spectrograph
-      LENS    =                  3	/ Lens number
-      FOCRATIO=                5.2        / Focal ratio
-      ar&gt; mkheader *.imh myheader
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; type myheader
+  # MY header list
+  INSTRUME= 'bspec mark II'           / B Spectrograph
+  LENS    =                  3        / Lens number
+  FOCRATIO=                5.2        / Focal ratio
+  ar&gt; mkheader *.imh myheader
+  </pre></div>
   <p>
   2. Copy an image header.
   </p>
-  <p>
-      ar&gt; mkheader new dev$pix append-
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; mkheader new dev$pix append-
+  </pre></div>
   <p>
   3. Edit the image header with a text editor and replace the old header
   with the edited header.
   </p>
-  <pre>
-      ar&gt; imheader myimage l+ &gt; temp
-      ar&gt; edit temp
-      ar&gt; mkheader myimage temp append-
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; imheader myimage l+ &gt; temp
+  ar&gt; edit temp
+  ar&gt; mkheader myimage temp append-
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   hedit, mkobjects, mknoise, mk1dspec, mk2dspec
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

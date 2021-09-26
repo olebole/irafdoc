@@ -7,22 +7,22 @@ sfit: Fit spectra and output fit, ratio, or difference
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   sfit input output
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input spectra to be fit.  These may be any combination of echelle,
   multispec, onedspec, long slit, and spectral cube format images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output fitted spectra.  The number of output spectra must
@@ -30,7 +30,7 @@ sfit: Fit spectra and output fit, ratio, or difference
   <b>listonly</b> is yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lines">
   <dt><b>lines = <span style="font-family: monospace;">"*"</span>, bands = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = "*", bands = "1"' -->
   <dd>A range specifications for the image lines and bands to be fit.  Unspecified
@@ -41,7 +41,7 @@ sfit: Fit spectra and output fit, ratio, or difference
   separated by commas.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_type">
   <dt><b>type = <span style="font-family: monospace;">"fit"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='type' Line='type = "fit"' -->
   <dd>Type of output spectra.  The choices are <span style="font-family: monospace;">"fit"</span> for the fitted function,
@@ -50,14 +50,14 @@ sfit: Fit spectra and output fit, ratio, or difference
   the data minus any rejected points replaced by the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_replace">
   <dt><b>replace = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='replace' Line='replace = no' -->
   <dd>Replace rejected points by the fit in the difference, ratio, and
   data output types?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wavescale">
   <dt><b>wavescale = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wavescale' Line='wavescale = yes' -->
   <dd>Wavelength scale the X axis of the plot?  This option requires that the
@@ -65,14 +65,14 @@ sfit: Fit spectra and output fit, ratio, or difference
   will be in <span style="font-family: monospace;">"channel"</span> (pixel) space.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logscale">
   <dt><b>logscale = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logscale' Line='logscale = no' -->
   <dd>Take the log (base 10) of both axes?  This can be used when <b>listonly</b>
   is yes to measure the exponent of the slope of the continuum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_override">
   <dt><b>override = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='override' Line='override = no' -->
   <dd>Override previously fit spectra?  If <b>override</b> is yes and
@@ -81,21 +81,21 @@ sfit: Fit spectra and output fit, ratio, or difference
   skipped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_listonly">
   <dt><b>listonly = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no' -->
   <dd>Don't modify any images?  If <b>listonly</b> is yes, the <b>output</b>
   image list may be skipped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfiles">
   <dt><b>logfiles = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "logfile"' -->
   <dd>List of log files to which to write the power series coefficients.  If
   <b>logfiles</b> = NULL (<span style="font-family: monospace;">""</span>), the coefficients will not be calculated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Perform the fit interactively using the icfit commands?  This will allow
@@ -105,7 +105,7 @@ sfit: Fit spectra and output fit, ratio, or difference
   remembered when that spectrum is fit in the next image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>The ranges of X values to be used in the fits.  The units will vary
@@ -116,7 +116,7 @@ sfit: Fit spectra and output fit, ratio, or difference
   given separated by commas.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Number of sample points to combined to create a fitting point.
@@ -124,7 +124,7 @@ sfit: Fit spectra and output fit, ratio, or difference
   a median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = spline3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = spline3' -->
   <dd>Function to be fit to the spectra.  The functions are
@@ -134,53 +134,53 @@ sfit: Fit spectra and output fit, ratio, or difference
   calculated if <b>function</b> is <span style="font-family: monospace;">"legendre"</span> or <span style="font-family: monospace;">"chebyshev"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>The order of the polynomials or the number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 3., high_reject = 3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3., high_reject = 3.' -->
   <dd>Rejection limits below and above the fit in units of the residual sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 1.' -->
   <dd>When a pixel is rejected, pixels within this distance of the rejected pixel
   are also rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_markrej">
   <dt><b>markrej = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='markrej' Line='markrej = yes' -->
   <dd>Mark rejected points?  If there are many rejected points it might be
   desired to not mark rejected points.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for interactive graphics.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A one dimensional function is fit to spectra in a list of echelle,
   multispec, or onedspec format images.  The first two formats will
@@ -254,42 +254,42 @@ sfit: Fit spectra and output fit, ratio, or difference
   maintained for each line so that interactive changes to the parameter
   defaults will be remembered from image to image.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_prompts">
   <h3>Prompts</h3>
-  <!-- BeginSection: 'PROMPTS' -->
   <p>
   If several images or lines are specified, the user is asked whether
   to perform an interactive fit for each spectrum.  The response
   may be <b>yes, no, skip, YES, NO</b> or <b>SKIP</b>.  The meaning of each
   response is:
   </p>
-  <pre>
-  	yes   - Fit the next spectrum interactively.
-  	no    - Fit the next spectrum non-interactively.
-  	skip  - Skip the next spectrum in this image.
+  <div class="highlight-default-notranslate"><pre>
+  yes   - Fit the next spectrum interactively.
+  no    - Fit the next spectrum non-interactively.
+  skip  - Skip the next spectrum in this image.
   
-  	YES   - Interactively fit all of the spectra of
-  		all of the images with no further prompts.
-  	NO   	Non-interactively fit all chosen spectra of all images.
-  	SKIP  - This will produce a second prompt, "Skip what?",
-  		with the choices:
+  YES   - Interactively fit all of the spectra of
+          all of the images with no further prompts.
+  NO      Non-interactively fit all chosen spectra of all images.
+  SKIP  - This will produce a second prompt, "Skip what?",
+          with the choices:
   
-  		spectrum - skip this spectrum in all images
-  		image    - skip the rest of the current image
-  		all      - <b>exit</b> the program
-  		           This will <b>unlearn</b> the fit parameters
-  			   for all spectra!
-  		cancel  - return to the main prompt
-  </pre>
-  <!-- EndSection:   'PROMPTS' -->
+          spectrum - skip this spectrum in all images
+          image    - skip the rest of the current image
+          all      - <b>exit</b> the program
+                     This will <b>unlearn</b> the fit parameters
+                     for all spectra!
+          cancel  - return to the main prompt
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To normalize all orders of the echelle spectrum for hd221170
   </p>
-  <p>
-  	cl&gt; sfit hd221170.ec nhd221170.ec type=ratio
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sfit hd221170.ec nhd221170.ec type=ratio
+  </pre></div>
   <p>
   Each order of the spectrum is graphed and the interactive options for
   setting and fitting the continuum are available.  The important
@@ -311,16 +311,16 @@ sfit: Fit spectra and output fit, ratio, or difference
   <p>
   2.  To do several images at the same time
   </p>
-  <p>
-  	cl&gt; sfit spec*.imh c//spec*.imh
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sfit spec*.imh c//spec*.imh
+  </pre></div>
   <p>
   Note how the image template concatenation operator is used to construct
   the output list of spectra.  Alternatively:
   </p>
-  <p>
-  	cl&gt; sfit @inlist @outlist
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sfit @inlist @outlist
+  </pre></div>
   <p>
   where the two list files could have been created with the sections
   command or by editing.
@@ -328,13 +328,13 @@ sfit: Fit spectra and output fit, ratio, or difference
   <p>
   3.  To measure the power law slope of the continuum (fluxed data)
   </p>
-  <p>
-  	cl&gt; sfit uv.* type=ratio logscale+ listonly+ fun=leg order=2
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sfit uv.* type=ratio logscale+ listonly+ fun=leg order=2
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SFIT">
   <dt><b>SFIT V2.10.4</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SFIT' Line='SFIT V2.10.4' -->
   <dd>The task was expanded to include fitting specified bands in 3D multispec
@@ -342,15 +342,15 @@ sfit: Fit spectra and output fit, ratio, or difference
   The task was expanded to include long slit and spectral cube data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SFIT">
   <dt><b>SFIT V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SFIT' Line='SFIT V2.10' -->
   <dd>This task is new.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The errors are not listed for the power series coefficients.
   </p>
@@ -361,14 +361,14 @@ sfit: Fit spectra and output fit, ratio, or difference
   <p>
   Selection by aperture number is not supported.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   continuum, fit1d, icfit, ranges
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'PROMPTS' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   orfits fits_file file_list iraf_file
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_fits_file">
   <dt><b>fits_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fits_file' Line='fits_file' -->
   <dd>The FITS data source.  This is either a template describing a list of disk files
@@ -27,7 +27,7 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   then the files specified by the file_list parameter will be read from the tape.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_file_list">
   <dt><b>file_list</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='file_list' Line='file_list' -->
   <dd>The files to be read from a tape are specified by the file_list string.  The
@@ -38,7 +38,7 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   will convert the files 1 through 8.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_iraf_file">
   <dt><b>iraf_file</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='iraf_file' Line='iraf_file' -->
   <dd>The IRAF file which will receive the FITS data if the make_image parameter
@@ -53,7 +53,7 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   data1 and data2.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_make_image">
   <dt><b>make_image = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='make_image' Line='make_image = yes' -->
   <dd>This switch determines whether FITS image data is converted to an IRAF image
@@ -61,20 +61,20 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   long_header or short_header switches.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_long_header">
   <dt><b>long_header = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='long_header' Line='long_header = no' -->
   <dd>If this switch is set the full FITS header is printed on the standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_short_header">
   <dt><b>short_header = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='short_header' Line='short_header = yes' -->
   <dd>If this switch is set only the output filename,
   the title string, and the image dimensions are printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datatype">
   <dt><b>datatype</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datatype' Line='datatype' -->
   <dd>The IRAF image file may be of a different data type than the FITS image data.
@@ -90,13 +90,13 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   other than 1.0 and 0.0, orfits selects datatype r.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blank">
   <dt><b>blank = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blank' Line='blank = 0.' -->
   <dd>The IRAF image value of a blank pixel.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = yes' -->
   <dd>If scale equals no the integers are read directly off the tape.
@@ -104,14 +104,14 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   are not 1. and 0. respectively, ORFITS scales the data before output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_oldirafname">
   <dt><b>oldirafname = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='oldirafname' Line='oldirafname = no' -->
   <dd>If the oldirafname switch is set ORFITS will attempt to restore the image to
   disk with the filename defined by the IRAFNAME parameter in the FITS header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offset">
   <dt><b>offset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 0' -->
   <dd>Offset is an integer parameter specifying the offset to the current tape file
@@ -120,9 +120,9 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   respectively rather than <span style="font-family: monospace;">"fits0001"</span>, <span style="font-family: monospace;">"fits0002"</span> and <span style="font-family: monospace;">"fits0003"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   FITS data is read from the specified source; either disk or
   magnetic tape.  The FITS header may optionally be printed on the standard
@@ -140,16 +140,16 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   length by setting the environment variable min_lenuserarea (see example
   below).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Convert a set of FITS files on tape to a set of IRAF image files, allowing
   orfits to select the output datatype. Blanks are set to zero.
   </p>
-  <pre>
-  	cl&gt; orfits mtb1600 1-999 images
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; orfits mtb1600 1-999 images
+  </pre></div>
   <p>
   2. Convert a list of FITS files on disk to a set of IRAF images. In the first
   case the files specified by fits* are written to the images images0001,
@@ -157,61 +157,61 @@ orfits: Convert a FITS image into an IRAF image (dataio V2.10.4)
   line in the text file fitslist are written to the output images listed
   one per line in the file imlist.
   </p>
-  <pre>
-  	cl&gt; orfits fits* * images
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; orfits fits* * images
   
-  	cl. orfits @fitslist * @imlist
-  </pre>
+  cl. orfits @fitslist * @imlist
+  </pre></div>
   <p>
   3. List the contents of a FITS tape on the standard output without creating
   any image files.
   </p>
-  <pre>
-  	cl&gt; orfits mtb1600 1-999 images ma-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; orfits mtb1600 1-999 images ma-
+  </pre></div>
   <p>
   4. Convert FITS files directly to IRAF images without scaling.
   </p>
-  <pre>
-  	cl&gt; orfits mtb1600 1-999 images scal-
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; orfits mtb1600 1-999 images scal-
+  </pre></div>
   <p>
   5. Convert the first three FITS files on tape to IRAF files setting blanks
   to -1.
   </p>
-  <pre>
-  	cl&gt; orfits mta 1-3 images blan=-1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; orfits mta 1-3 images blan=-1
+  </pre></div>
   <p>
   6. Read in a FITS file with a header roughly twice the usual IRAF length
   of 8000 characters.
   </p>
-  <pre>
-  	cl&gt; set min_lenuserarea = 16300
-  	cl&gt; orfits mta 1 images
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; set min_lenuserarea = 16300
+  cl&gt; orfits mta 1 images
+  </pre></div>
   <p>
   7. Read a FITS tape with 5 normal fits records (2880 bytes) to a tape record.
   Notice that no extra parameters are needed.
   </p>
-  <pre>
-  	cl&gt; orfits mta 1-3 fits
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; orfits mta 1-3 fits
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Blank pixels are counted and set to a user determined value,  but not flagged
   in the image header.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   owfits, reblock, t2d
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

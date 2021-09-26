@@ -7,21 +7,21 @@ nstar: Fit the psf to predefined groups of stars
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   nstar image groupfile psfimage nstarfile rejfile
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images containing the stellar groups to be fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_groupfile">
   <dt><b>groupfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='groupfile' Line='groupfile' -->
   <dd>The list of input group photometry files containing the group membership
@@ -34,7 +34,7 @@ nstar: Fit the psf to predefined groups of stars
   APPHOT/DAOPHOT text database or an STSDAS binary table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psfimage">
   <dt><b>psfimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The list of images containing the PSF models computed by the DAOPHOT PSF task.
@@ -44,7 +44,7 @@ nstar: Fit the psf to predefined groups of stars
   ? is the highest existing version number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nstarfile">
   <dt><b>nstarfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nstarfile' Line='nstarfile' -->
   <dd>The list of output photometry files. There must be one output photometry
@@ -55,7 +55,7 @@ nstar: Fit the psf to predefined groups of stars
   database if it is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rejfile">
   <dt><b>rejfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rejfile' Line='rejfile' -->
   <dd>The list of output rejected photometry files containing the positions and sky
@@ -70,7 +70,7 @@ nstar: Fit the psf to predefined groups of stars
   if it is <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameters
@@ -78,7 +78,7 @@ nstar: Fit the psf to predefined groups of stars
   is undefined then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_daopars">
   <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
@@ -86,7 +86,7 @@ nstar: Fit the psf to predefined groups of stars
   then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span>, wcspsf = <span style="font-family: monospace;">")_.wcspsf"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"' -->
   <dd>The coordinate system of the input coordinates read from <i>groupfile</i>, of the
@@ -155,7 +155,7 @@ nstar: Fit the psf to predefined groups of stars
   wcsin, wcspsf,  and wcsout are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -163,30 +163,30 @@ nstar: Fit the psf to predefined groups of stars
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical NSTAR task parameters? Verify can be set to the DAOPHOT
   package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the NSTAR task parameters if <i>verify</i> is <span style="font-family: monospace;">"yes"</span>? Update can be
   set to the default daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task ? Verbose can be set to the
   DAOPHOT package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   NSTAR computes x and y centers and magnitudes for all the stellar groups in
   <i>groupfile</i> by fitting the PSF <i>psfimage</i> to the data in <i>image</i>.
@@ -387,9 +387,9 @@ nstar: Fit the psf to predefined groups of stars
   actually fit together. NSTAR is the task of choice when a user wants to
   maintain rigorous control over the composition of the stellar groups.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   If <i>verbose</i> = yes, a single line is output to the terminal for each star
   fit or rejected. Full output is written to <i>nstarfile</i> and <i>rejfile</i>.
@@ -397,10 +397,10 @@ nstar: Fit the psf to predefined groups of stars
   parameters is written. For each star fit/rejected the following quantities are
   written to the output file.
   </p>
-  <pre>
-  	id  group  xcenter  ycenter  mag  merr  msky  niter  sharpness
-  	    chi  pier  perr
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  id  group  xcenter  ycenter  mag  merr  msky  niter  sharpness
+      chi  pier  perr
+  </pre></div>
   <p>
   Id is the id number of the star and group is its group number. Xcenter and
   ycenter are the fitted coordinates in pixels. Mag and merr are the fitted
@@ -410,173 +410,171 @@ nstar: Fit the psf to predefined groups of stars
   Pier and perror are the photometry error code and accompanying error message
   respectively.
   </p>
-  <!-- EndSection:   'OUTPUT' -->
+  </section>
+  <section id="s_errors">
   <h3>Errors</h3>
-  <!-- BeginSection: 'ERRORS' -->
   <p>
   If no errors occur during the fitting process then pier is 0. Non-zero
   values of pier flag the following error conditions.
   </p>
-  <pre>
-  	0		# No error
-  	1		# The star is in a group too large to fit
-  	2		# The sky is undefined
-  	3		# There are too few good pixels to fit the star
-  	4		# The fit is singular
-  	5		# The star is too faint
-  	6		# The star has merged with a brighter star
-  	7		# The star is off the image
-  </pre>
-  <!-- EndSection:   'ERRORS' -->
+  <div class="highlight-default-notranslate"><pre>
+  0               # No error
+  1               # The star is in a group too large to fit
+  2               # The sky is undefined
+  3               # There are too few good pixels to fit the star
+  4               # The fit is singular
+  5               # The star is too faint
+  6               # The star has merged with a brighter star
+  7               # The star is off the image
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Fit the PSF to a list stars in the test image dev$ypix. Good stars for
   making the PSF model can be found at (442,410), (348,189), and (379,67).
   </p>
-  <pre>
-     da&gt; datapars.epadu = 14.0
-     da&gt; datapars.readnoise = 75.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; datapars.epadu = 14.0
+  da&gt; datapars.readnoise = 75.0
   
-         ... set the gain and readout noise for the detector
+      ... set the gain and readout noise for the detector
   
-     da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
+  da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
   
-          ... answer verify prompts
+       ... answer verify prompts
   
-          ... find stars in the image
+       ... find stars in the image
   
-          ... answer will appear in ypix.coo.1
+       ... answer will appear in ypix.coo.1
   
-      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
-          apertures = 3.0
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+       apertures = 3.0
   
-          ... answer verify prompts
+       ... answer verify prompts
   
-          ... do aperture photometry on the detected stars
+       ... do aperture photometry on the detected stars
   
-          ... answer will appear in ypix.mag.1
+       ... answer will appear in ypix.mag.1
   
-      da&gt; display dev$ypix 1
+   da&gt; display dev$ypix 1
   
-      da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
-          fitrad=3.0 mkstars=yes display=imdr
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+       fitrad=3.0 mkstars=yes display=imdr
   
-          ... verify the critical parameters
+       ... verify the critical parameters
   
-          ... move the image cursor to a candidate star and hit the a key,
-              a plot of the stellar data appears
+       ... move the image cursor to a candidate star and hit the a key,
+           a plot of the stellar data appears
   
-          ... type ? for a listing of the graphics cursor menu
+       ... type ? for a listing of the graphics cursor menu
   
-          ... type a to accept the star, d to reject it
+       ... type a to accept the star, d to reject it
   
-          ... move to the next candidate stars and repeat the previous
-              steps
+       ... move to the next candidate stars and repeat the previous
+           steps
   
-          ... type l to list all the psf stars
+       ... type l to list all the psf stars
   
-          ... type f to fit the psf
+       ... type f to fit the psf
   
-          ... move cursor to first psf star and type s to see residuals,
-              repeat for all the psf stars
+       ... move cursor to first psf star and type s to see residuals,
+           repeat for all the psf stars
   
-          ... type w to save the PSF model
+       ... type w to save the PSF model
   
-          ... type q to quit, and q again to confirm
+       ... type q to quit, and q again to confirm
   
-          ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
-              ypix.psg.1
+       ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
+           ypix.psg.1
   
-      da&gt; group dev$ypix default default default 
+   da&gt; group dev$ypix default default default
   
-          ... verify the prompts
+       ... verify the prompts
   
-          ... the output will appear in ypix.grp.1
+       ... the output will appear in ypix.grp.1
   
-      da&gt; nstar dev$ypix default default default default
+   da&gt; nstar dev$ypix default default default default
   
-          ... verify the prompts
+       ... verify the prompts
   
-          ... the results will appear in ypix.nst.1 and ypix.nrj.1
+       ... the results will appear in ypix.nst.1 and ypix.nrj.1
   
-      da&gt; pdump ypix.nst.1 sharpness,chi yes | graph
+   da&gt; pdump ypix.nst.1 sharpness,chi yes | graph
   
-          ... plot chi versus sharpness, the stars should cluster around
-              sharpness = 0.0 and chi = 1.0, note that the frame does
-              not have a lot of stars
+       ... plot chi versus sharpness, the stars should cluster around
+           sharpness = 0.0 and chi = 1.0, note that the frame does
+           not have a lot of stars
   
-      da&gt; substar dev$ypix default  "" default default
+   da&gt; substar dev$ypix default  "" default default
   
-          ... subtract the fitted stars
+       ... subtract the fitted stars
   
-      da&gt; display ypix.sub.1 2
+   da&gt; display ypix.sub.1 2
   
-          ... note that the psf stars subtract reasonably well but other
-              objects which are not stars don't
-  </pre>
+       ... note that the psf stars subtract reasonably well but other
+           objects which are not stars don't
+  </pre></div>
   <p>
   2. Run nstar on a section of the input image using the group file and PSF
   model derived in example 1 for the parent image and writing the results
   in the coordinate system of the parent image.
   </p>
-  <pre>
-      da&gt; nstar dev$ypix[150:450,150:450] default default default default \<br>
-          wcsin=tv wcspsf=tv wcsout=tv
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; nstar dev$ypix[150:450,150:450] default default default default \<br>
+      wcsin=tv wcspsf=tv wcsout=tv
   
-          ... answer the verify prompts
+      ... answer the verify prompts
   
-          ... fit the stars
+      ... fit the stars
   
-          ... the results will appear in ypix.nst.2 and ypix.nrj.2
+      ... the results will appear in ypix.nst.2 and ypix.nrj.2
   
-      da&gt; display dev$ypix[150:450,150:450] 1
+  da&gt; display dev$ypix[150:450,150:450] 1
   
-          ... display the image
+      ... display the image
   
-      da&gt; pdump ypix.nst.2 xc,yc yes | tvmark 1 STDIN col=204
+  da&gt; pdump ypix.nst.2 xc,yc yes | tvmark 1 STDIN col=204
   
-          ... mark the stars
+      ... mark the stars
   
-      da&gt; substar dev$ypix ypix.nst.2 "" default default
+  da&gt; substar dev$ypix ypix.nst.2 "" default default
   
-          ... subtract stars from parent image
+      ... subtract stars from parent image
   
-          ... the output images is ypix.sub.2
+      ... the output images is ypix.sub.2
   
+  da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \<br>
+      wcsin=tv wcspsf=tv wcsout=tv
   
-      da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \<br>
-          wcsin=tv wcspsf=tv wcsout=tv
+      ... subtract stars from the nstar input image
   
-          ... subtract stars from the nstar input image
-  
-          ... the output images is ypix.sub.3
-  
-  </pre>
+      ... the output images is ypix.sub.3
+  </pre></div>
   <p>
   3. Run nstar exactly as in example 1 but submit the task to the background.
   Turn off verify and verbose.
   </p>
-  <pre>
-      da&gt; nstar dev$ypix default default default default verbose- \<br>
-          verify- &amp;
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; nstar dev$ypix default default default default verbose- \<br>
+      verify- &amp;
   
-          ... the results will appear in ypix.nst.3 and ypix.nrj.3
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... the results will appear in ypix.nst.3 and ypix.nrj.3
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars,daopars,peak,allstar
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'ERRORS' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

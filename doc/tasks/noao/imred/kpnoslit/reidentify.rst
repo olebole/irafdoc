@@ -7,8 +7,8 @@ reidentify: Reidentify arc lines and determine new dispersion functions
 
 .. raw:: html
 
+  <section id="s_summary">
   <h3>Summary</h3>
-  <!-- BeginSection: 'SUMMARY' -->
   <p>
   Given a reference vector with identified features and (optionally) a
   coordinate function find the same features in other elements of the
@@ -19,16 +19,16 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   solutions in arc calibration spectra and for mapping geometric and
   dispersion distortion in two and three dimensional images.
   </p>
-  <!-- EndSection:   'SUMMARY' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   reidentify reference images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>Image with previously identified features to be used as features reference for
@@ -38,7 +38,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   (selected by <i>step</i>) are reidentified as needed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images in which the features in the reference image are to be
@@ -47,7 +47,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Examine and fit features interactively?  If the task is run interactively a
@@ -56,7 +56,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   user may chose to enter the interactive <b>identify</b> task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_section">
   <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If the reference image is not one dimensional or specified as a one dimensional
@@ -67,10 +67,10 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   (columns, lines, or z) of the image vectors to be reidentified.
   The section parameter may be specified directly as an image section or
   in one of the following forms
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   line|column|x|y|z first|middle|last|# [first|middle|last|#]]
   first|middle|last|# [first|middle|last|#] line|column|x|y|z
-  </pre>
+  </pre></div>
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator which
   is used with three dimensional data.  See the example section for
@@ -78,7 +78,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   though beware that <span style="font-family: monospace;">'l'</span> is not a sufficient abbreviation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_newaps">
   <dt><b>newaps = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newaps' Line='newaps = yes' -->
   <dd>Reidentify new apertures in the images which are not in the reference
@@ -89,7 +89,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   further identifications of the new aperture will then use this solution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_override">
   <dt><b>override = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='override' Line='override = no' -->
   <dd>Override previous solutions?  If there are previous solutions for a
@@ -99,7 +99,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   overwrite the solution in the database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refit">
   <dt><b>refit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes' -->
   <dd>Refit the coordinate function?  If yes and there is more than one feature
@@ -114,7 +114,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   The following parameters are used for selecting and reidentifying additional
   lines, columns, or apertures in two dimensional formats.
   </p>
-  <dl>
+  <dl id="l_trace">
   <dt><b>trace = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = no' -->
   <dd>There are two methods for defining additional reference lines, columns, or
@@ -129,7 +129,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   reference features.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_step">
   <dt><b>step = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step = "10"' -->
   <dd>The step from the reference line, column, or band used for selecting and/or
@@ -144,7 +144,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   significant changes in the feature positions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"' -->
   <dd>Number of lines, columns, or bands across the designated vector axis to be
@@ -157,7 +157,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   multispec type images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shift">
   <dt><b>shift = <span style="font-family: monospace;">"0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = "0"' -->
   <dd>Shift in user coordinates to be added to the reference features before
@@ -171,7 +171,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   a shift.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_search">
   <dt><b>search = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='search' Line='search = 0.' -->
   <dd>If the <i>shift</i> parameter is specified as INDEF then an automatic
@@ -183,7 +183,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   fraction of the reference dispersion range.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlost">
   <dt><b>nlost = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlost' Line='nlost = 0' -->
   <dd>When reidentifying features by tracing, if the number of features not found
@@ -196,7 +196,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   The following parameters define the finding and recentering of features.
   See also <b>center1d</b>.
   </p>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.' -->
   <dd>Centering radius in pixels.  If a reidentified feature falls further
@@ -205,7 +205,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   then the feature is not reidentified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.' -->
   <dd>In order for a feature center to be determined, the range of pixel
@@ -220,7 +220,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   The following parameters select and control the automatic addition of
   new features during reidentification.
   </p>
-  <dl>
+  <dl id="l_addfeatures">
   <dt><b>addfeatures = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='addfeatures' Line='addfeatures = no' -->
   <dd>Add new features from a line list during each reidentification?  If
@@ -230,7 +230,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   are not introduced.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordlist">
   <dt><b>coordlist = <span style="font-family: monospace;">"linelists$idhenear.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat"' -->
   <dd>User coordinate list consisting of a list of line coordinates.
@@ -238,7 +238,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   The standard line lists are described under the topic <i>linelists</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = -3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = -3.' -->
   <dd>The maximum difference for a match between the feature coordinate function
@@ -246,14 +246,14 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   are in user coordinate units and negative values are in units of pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxfeatures">
   <dt><b>maxfeatures = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxfeatures' Line='maxfeatures = 50' -->
   <dd>Maximum number of the strongest features to be selected automatically from
   the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minsep">
   <dt><b>minsep = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.' -->
   <dd>The minimum separation, in pixels, allowed between feature positions
@@ -263,40 +263,40 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   <p>
   The following parameters determine the input and output of the task.
   </p>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the feature data for the reference image and in which
   the features for the reidentified images are recorded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfiles">
   <dt><b>logfiles = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "logfile"' -->
   <dd>List of files in which to keep a processing log.  If a null file, <span style="font-family: monospace;">""</span>,
   is given then no log is kept.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>Optional file to contain metacode plots of the residuals.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print reidentification information on the standard output?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
@@ -307,7 +307,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   The following parameters are queried when the <span style="font-family: monospace;">'b'</span> key is used in the
   interactive review.
   </p>
-  <dl>
+  <dl id="l_crval">
   <dt><b>crval, cdelt</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crval' Line='crval, cdelt' -->
   <dd>These parameters specify an approximate coordinate value and coordinate
@@ -322,16 +322,16 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   keywords in the image header whose values are to be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aidpars">
   <dt><b>aidpars = <span style="font-family: monospace;">""</span> (parameter set)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)' -->
   <dd>This parameter points to a parameter set for the automatic line
   identification algorithm.  See <i>aidpars</i> for further information.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Features (spectral lines, cross-dispersion profiles, etc.) identified in a
   single reference vector (using the tasks <b>identify</b> or
@@ -554,40 +554,40 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   in the database are text files with filenames formed by adding
   the prefix <span style="font-family: monospace;">"id"</span> to the image name without an image extension.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Arc lines and a dispersion solution were defined for the middle
   aperture in the multispec for arc spectrum a042.ms.  To reidentify the
   other apertures in the reference image and then another arc image:
   </p>
-  <pre>
-    cl&gt; reiden a042.ms a045.ms inter+ step=1 ver+
-    REIDENTIFY: NOAO/IRAF V2.9 valdes@puppis Fri 29-Jun-90
-      Reference image = a042.ms.imh, New image = a042.ms, Refit = yes
-       Image Data    Found     Fit Pix Shift  User Shift     RMS
-    a042.ms - Ap 24  48/48   47/48   -2.38E-4    -3.75E-6  0.699
-    Fit dispersion function interactively? (no|yes|NO|YES) (yes): y
-    a042.ms - Ap 24  48/48   47/48   -2.38E-4    -3.75E-6  0.699
-    a042.ms - Ap 23  48/48   47/48      0.216        1.32  0.754
-    Fit dispersion function interactively? (no|yes|NO|YES) (yes): n
-    a042.ms - Ap 22  48/48   47/48     0.0627       0.383  0.749
-    Fit dispersion function interactively? (no|yes|NO|YES) (yes): n
-    a042.ms - Ap 21  48/48   47/48      0.337        2.06  0.815
-    &lt;etc&gt;
-      Reference image = a042.ms.imh, New image = a045.ms, Refit = yes
-       Image Data    Found     Fit Pix Shift  User Shift     RMS
-    a045.ms - Ap 24  48/48   47/48   -2.38E-4    -3.75E-6  0.699
-    Fit dispersion function interactively? (no|yes|NO|YES) (yes): y
-    a045.ms - Ap 24  48/48   47/48   -2.38E-4    -3.75E-6  0.699
-    a045.ms - Ap 23  48/48   47/48      0.216        1.32  0.754
-    Fit dispersion function interactively? (no|yes|NO|YES) (yes): N
-    a045.ms - Ap 22  48/48   47/48     0.0627       0.383  0.749
-    a042.ms - Ap 21  48/48   47/48      0.337        2.06  0.815
-    a042.ms - Ap 20  48/48   47/48     -0.293       -1.79  0.726
-    a042.ms - Ap 19  48/48   48/48      0.472        2.88  0.912
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; reiden a042.ms a045.ms inter+ step=1 ver+
+  REIDENTIFY: NOAO/IRAF V2.9 valdes@puppis Fri 29-Jun-90
+    Reference image = a042.ms.imh, New image = a042.ms, Refit = yes
+     Image Data    Found     Fit Pix Shift  User Shift     RMS
+  a042.ms - Ap 24  48/48   47/48   -2.38E-4    -3.75E-6  0.699
+  Fit dispersion function interactively? (no|yes|NO|YES) (yes): y
+  a042.ms - Ap 24  48/48   47/48   -2.38E-4    -3.75E-6  0.699
+  a042.ms - Ap 23  48/48   47/48      0.216        1.32  0.754
+  Fit dispersion function interactively? (no|yes|NO|YES) (yes): n
+  a042.ms - Ap 22  48/48   47/48     0.0627       0.383  0.749
+  Fit dispersion function interactively? (no|yes|NO|YES) (yes): n
+  a042.ms - Ap 21  48/48   47/48      0.337        2.06  0.815
+  &lt;etc&gt;
+    Reference image = a042.ms.imh, New image = a045.ms, Refit = yes
+     Image Data    Found     Fit Pix Shift  User Shift     RMS
+  a045.ms - Ap 24  48/48   47/48   -2.38E-4    -3.75E-6  0.699
+  Fit dispersion function interactively? (no|yes|NO|YES) (yes): y
+  a045.ms - Ap 24  48/48   47/48   -2.38E-4    -3.75E-6  0.699
+  a045.ms - Ap 23  48/48   47/48      0.216        1.32  0.754
+  Fit dispersion function interactively? (no|yes|NO|YES) (yes): N
+  a045.ms - Ap 22  48/48   47/48     0.0627       0.383  0.749
+  a042.ms - Ap 21  48/48   47/48      0.337        2.06  0.815
+  a042.ms - Ap 20  48/48   47/48     -0.293       -1.79  0.726
+  a042.ms - Ap 19  48/48   48/48      0.472        2.88  0.912
+  </pre></div>
   <p>
   This example is verbose and includes interactive review of reidentifications.
   The statistics lines have been shortened.
@@ -596,14 +596,14 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   2.  To trace a stellar profile and arc lines in long slit images for the
   purpose of making a distortion correction:
   </p>
-  <pre>
-    cl&gt; reiden rog022[135,*] "" trace+
-    cl&gt; reiden rog023 "" sec="mid line" trace+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; reiden rog022[135,*] "" trace+
+  cl&gt; reiden rog023 "" sec="mid line" trace+
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_REIDENTIFY">
   <dt><b>REIDENTIFY V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='REIDENTIFY' Line='REIDENTIFY V2.11' -->
   <dd>The <i>search</i> parameter and new searching algorithm has been added.
@@ -618,7 +618,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   calibration.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_REIDENTIFY">
   <dt><b>REIDENTIFY V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='REIDENTIFY' Line='REIDENTIFY V2.10.3' -->
   <dd>The section, nsum, step, and shift parameter syntax was extended to apply to 3D
@@ -627,7 +627,7 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   to be reidentified and any other step selects reidentifying all apertures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_REIDENTIFY">
   <dt><b>REIDENTIFY V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='REIDENTIFY' Line='REIDENTIFY V2.10' -->
   <dd>This task is a new version with many new features.  The new features
@@ -640,14 +640,14 @@ reidentify: Reidentify arc lines and determine new dispersion functions
   in the reference image may be added.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   autoidentify, identify, aidpars, center1d, linelists, fitcoords
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

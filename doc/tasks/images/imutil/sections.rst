@@ -7,15 +7,15 @@ sections: Expand an image template on the standard output
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   sections images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>Image template or list of images.  There is no check that the names are
@@ -27,7 +27,7 @@ sections: Expand an image template on the standard output
   extension such as <span style="font-family: monospace;">".imh"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_option">
   <dt><b>option = <span style="font-family: monospace;">"fullname"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "fullname"' -->
   <dd>The options are:
@@ -57,15 +57,15 @@ sections: Expand an image template on the standard output
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nimages">
   <dt><b>nimages</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nimages' Line='nimages' -->
   <dd>The number of images in the image template.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The image template list <i>images</i> is expanded and the images are printed
   one per line on the standard output unless the <span style="font-family: monospace;">"nolist"</span> option is given.
@@ -109,26 +109,26 @@ sections: Expand an image template on the standard output
   preceded by the escape character <span style="font-family: monospace;">'!'</span>.  To explicitly limit a wildcard
   template to images one should use an appropriate extension such as <span style="font-family: monospace;">".imh"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Calculate and print the number of images in a template:
   </p>
-  <pre>
-  	cl&gt; sections fits*.imh opti=no
-  	cl&gt; = sections.nimages
-  	cl&gt; 7
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sections fits*.imh opti=no
+  cl&gt; = sections.nimages
+  cl&gt; 7
+  </pre></div>
   <p>
   2. Expand an image template:
   </p>
-  <pre>
-  	cl&gt; sections fits*![3-9].imh[1:10,*]
-  	fits003.imh[1:10,*]
-  	fits004.imh[1:10,*]
-  	&lt;etc.&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sections fits*![3-9].imh[1:10,*]
+  fits003.imh[1:10,*]
+  fits004.imh[1:10,*]
+  &lt;etc.&gt;
+  </pre></div>
   <p>
   Note the use of the character class escape, image section appending,
   and explicit use of the .imh extension.
@@ -136,12 +136,12 @@ sections: Expand an image template on the standard output
   <p>
   3. Create a new list of image names by adding the suffix <span style="font-family: monospace;">"new"</span>:
   </p>
-  <pre>
-  	cl&gt; sections jan18???//new
-  	jan18001new
-  	jan18002new
-  	&lt;etc.&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sections jan18???//new
+  jan18001new
+  jan18002new
+  &lt;etc.&gt;
+  </pre></div>
   <p>
   Note the use of the append syntax.  Also there is no guarantee that the
   files are actually images.
@@ -150,32 +150,32 @@ sections: Expand an image template on the standard output
   4. Subtract two sets of images:
   	
   </p>
-  <pre>
-  	cl&gt; sections objs*.imh[100:200,300:400] &gt; objslist
-  	cl&gt; sections skys*.imh[100:200,300:400] &gt; skyslist
-  	cl&gt; sections %objs%bck%* &gt; bcklist
-  	cl&gt; imarith @objslist - @skyslist @bcklist
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sections objs*.imh[100:200,300:400] &gt; objslist
+  cl&gt; sections skys*.imh[100:200,300:400] &gt; skyslist
+  cl&gt; sections %objs%bck%* &gt; bcklist
+  cl&gt; imarith @objslist - @skyslist @bcklist
+  </pre></div>
   <p>
   Note the use of the substitution syntax.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The  image list is not sorted.           
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   files
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

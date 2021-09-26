@@ -7,15 +7,15 @@ astcalc: Astronomical calculator
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   astcalc
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_commands">
   <dt><b>commands</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='commands' Line='commands' -->
   <dd>A file of commands using the simple syntax given in the DESCRIPTION.  If no
@@ -27,7 +27,7 @@ astcalc: Astronomical calculator
   escaped newlines are allowed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_images">
   <dt><b>images = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images = ""' -->
   <dd>Optional list of images.  The command input is repeated for each image.
@@ -36,7 +36,7 @@ astcalc: Astronomical calculator
   read-write permissions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_table">
   <dt><b>table = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table = ""' -->
   <dd>Optional text file containing columns of values.  The table consists of
@@ -47,7 +47,7 @@ astcalc: Astronomical calculator
   until all the lines in the table have been read.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_prompt">
   <dt><b>prompt = <span style="font-family: monospace;">"astcalc&gt; "</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='prompt' Line='prompt = "astcalc&gt; "' -->
   <dd>When no command file is specified the input commands are read from the
@@ -57,16 +57,16 @@ astcalc: Astronomical calculator
   the standard input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print each variable assignment?  This is useful for debugging command
   files.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Astcalc</b> evaluates statements using variables, constants, and
   functions.  Of special interest are many astronomical functions and the
@@ -144,19 +144,19 @@ astcalc: Astronomical calculator
   The following gives a more formal description of the statement syntax
   and the special words <span style="font-family: monospace;">"if"</span>, <span style="font-family: monospace;">"else"</span>, <span style="font-family: monospace;">"endif"</span>, and <span style="font-family: monospace;">"quit"</span>.
   </p>
-  <pre>
-          &lt;variable&gt; = &lt;expression&gt;
-          &lt;expression&gt;
-          if (&lt;expression&gt;)
-              &lt;statements&gt;
-          endif
-          if (&lt;expression&gt;)
-              &lt;statements&gt;
-          else
-              &lt;statements&gt;
-          endif
-          quit
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  &lt;variable&gt; = &lt;expression&gt;
+  &lt;expression&gt;
+  if (&lt;expression&gt;)
+      &lt;statements&gt;
+  endif
+  if (&lt;expression&gt;)
+      &lt;statements&gt;
+  else
+      &lt;statements&gt;
+  endif
+  quit
+  </pre></div>
   <p>
   The result of the expression in the <span style="font-family: monospace;">"if"</span> statement is normally a logical
   value.  However, a numeric value of 0 is false while any other value is
@@ -169,9 +169,9 @@ astcalc: Astronomical calculator
   <p>
   Variables may formally be defined as:
   </p>
-  <pre>
-          [$]{a-zA-Z}[{a-zA-Z0-9._$}]*
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  [$]{a-zA-Z}[{a-zA-Z0-9._$}]*
+  </pre></div>
   <p>
   where [] indicate optional, {} indicates a class, - indicates an
   ASCII range of characters, and * indicates zero or more occurrences.
@@ -183,11 +183,11 @@ astcalc: Astronomical calculator
   There are a few predefined variables which may be referenced in
   expressions.
   </p>
-  <pre>
-          $I      The name of the current image (if used)
-          $D      The current date in the YYYY-MM-DD format
-          $T      The current (local) time as a sexagesimal string
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  $I      The name of the current image (if used)
+  $D      The current date in the YYYY-MM-DD format
+  $T      The current (local) time as a sexagesimal string
+  </pre></div>
   <p>
   The date and time are set once at the beginning of execution.
   </p>
@@ -222,17 +222,17 @@ astcalc: Astronomical calculator
   of the operators <span style="font-family: monospace;">"?"</span> and <span style="font-family: monospace;">"?="</span>, the operator set is equivalent to that
   available in the CL and SPP languages.
   </p>
-  <pre>
-          +  -  *  /              arithmetic operators
-          **                      exponentiation
-          //                      string concatenation
-          !  -                    boolean not, unary negation
-          &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
-          == != &amp;&amp; ||             equals, not equals, and, or
-          ?=                      string equals pattern
-          ? :                     conditional expression
-  	@			reference a variable
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  +  -  *  /              arithmetic operators
+  **                      exponentiation
+  //                      string concatenation
+  !  -                    boolean not, unary negation
+  &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
+  == != &amp;&amp; ||             equals, not equals, and, or
+  ?=                      string equals pattern
+  ? :                     conditional expression
+  @                       reference a variable
+  </pre></div>
   <p>
   The operators <span style="font-family: monospace;">"=="</span>, <span style="font-family: monospace;">"&amp;&amp;"</span>, and <span style="font-family: monospace;">"||"</span> may be abbreviated as <span style="font-family: monospace;">"="</span>, <span style="font-family: monospace;">"&amp;"</span>, and <span style="font-family: monospace;">"|"</span>
   if desired.  The ?= operator performs pattern matching upon strings.
@@ -251,12 +251,12 @@ astcalc: Astronomical calculator
   A number of standard intrinsic functions are recognized within expressions.
   The set of functions currently supported is shown below.
   </p>
-  <pre>
-  	abs     atan2   deg     log     min     real    sqrt
-  	acos    bool    double  log10   mod     short   str
-  	asin    cos     exp     long    nint    sin     tan
-  	atan    cosh    int     max     rad     sinh    tanh
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  abs     atan2   deg     log     min     real    sqrt
+  acos    bool    double  log10   mod     short   str
+  asin    cos     exp     long    nint    sin     tan
+  atan    cosh    int     max     rad     sinh    tanh
+  </pre></div>
   <p>
   The trigonometric functions operate in units of radians.
   The <i>min</i> and <i>max</i> functions may have any number of arguments up
@@ -266,11 +266,11 @@ astcalc: Astronomical calculator
   <p>
   A function call may take either of the following forms:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
           &lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   or
           &lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
-  </pre>
+  </pre></div>
   <p>
   The first form is the conventional form found in all programming languages.
   The second permits the generation of function names by string valued
@@ -283,7 +283,7 @@ astcalc: Astronomical calculator
   In addition to the above intrinsic functions there are a number of
   astronomical functions.  More will be added in time.  These are:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
        sexstr - convert a number to a sexagesimal string (xx:mm:ss.ss)
         epoch - compute an epoch given a date and time
        julday - compute a Julian day given a date and time
@@ -294,8 +294,8 @@ astcalc: Astronomical calculator
      eairmass - compute effective airmass given
                   ra, dec, sidereal time, exposure time, and latitude
         obsdb - get parameters from the observatory database
-  </pre>
-  <dl>
+  </pre></div>
+  <dl id="l_sexstr">
   <dt><b>sexstr (number), sexstr (number, digits)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='sexstr' Line='sexstr (number), sexstr (number, digits)' -->
   <dd>Convert a number to a sexagesimal string in the format X:MM:SS.SS.  There
@@ -303,7 +303,7 @@ astcalc: Astronomical calculator
   decimal digits in the seconds field.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_epoch">
   <dt><b>epoch (date[, ut])</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='epoch' Line='epoch (date[, ut])' -->
   <dd>Compute an epoch given a date and time.  The date is a string in the
@@ -315,14 +315,14 @@ astcalc: Astronomical calculator
   string will be used and if absent a time of 0h is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_julday">
   <dt><b>julday (date[, ut])</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='julday' Line='julday (date[, ut])' -->
   <dd>Compute a Julian day given a date and time.  The date and time are
   specified as described previously.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mst">
   <dt><b>mst (date[, ut], longitude)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='mst' Line='mst (date[, ut], longitude)' -->
   <dd>Compute a mean sidereal time given a date, time, and longitude in degrees.  The
@@ -332,7 +332,7 @@ astcalc: Astronomical calculator
   string with two decimals in the seconds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_precess">
   <dt><b>precess (ra, dec, epoch1, epoch2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='precess' Line='precess (ra, dec, epoch1, epoch2)' -->
   <dd>Precess coordinates from one epoch to another.  The ra is the
@@ -343,7 +343,7 @@ astcalc: Astronomical calculator
   functions ra_precess and dec_precess.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ra_precess">
   <dt><b>ra_precess (ra, dec, epoch1, epoch2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='ra_precess' Line='ra_precess (ra, dec, epoch1, epoch2)' -->
   <dd>Precess a right ascension from one epoch to another.  The ra is the
@@ -353,7 +353,7 @@ astcalc: Astronomical calculator
   The returned value is a sexagesimal string with two decimals in the seconds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dec_precess">
   <dt><b>dec_precess (ra1, dec1, epoch1, epoch2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='dec_precess' Line='dec_precess (ra1, dec1, epoch1, epoch2)' -->
   <dd>Precess a declination from one epoch to another.  The ra is the
@@ -363,7 +363,7 @@ astcalc: Astronomical calculator
   The returned value is a sexagesimal string with two decimals in the seconds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_arcsep">
   <dt><b>arcsep (ra1, dec1, ra2, dec2)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='arcsep' Line='arcsep (ra1, dec1, ra2, dec2)' -->
   <dd>Compute the separation between two spherical coordinates.  The parameters
@@ -372,7 +372,7 @@ astcalc: Astronomical calculator
   latitude, etc.).  The computed value is returned in seconds of arc.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_airmass">
   <dt><b>airmass (ra, dec, st, latitude)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='airmass' Line='airmass (ra, dec, st, latitude)' -->
   <dd>Compute an airmass given right ascension in hours, declination in
@@ -381,7 +381,7 @@ astcalc: Astronomical calculator
   in the examples.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_eairmass">
   <dt><b>eairmass (ra, dec, st, exptime, latitude)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='eairmass' Line='eairmass (ra, dec, st, exptime, latitude)' -->
   <dd>Compute an <span style="font-family: monospace;">"effective"</span> airmass given right ascension in hours, declination
@@ -391,12 +391,12 @@ astcalc: Astronomical calculator
   airmass is based on a Simpson's rule weighting of the beginning, middle,
   and ending airmass (with no provision for paused exposure).  The weights
   are:
-  <pre>
-      effective = beginning + 4 * middle + ending
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  effective = beginning + 4 * middle + ending
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obsdb">
   <dt><b>obsdb (observatory, parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='obsdb' Line='obsdb (observatory, parameter)' -->
   <dd>Return a value from the observatory database.  The observatory parameter is
@@ -416,20 +416,20 @@ astcalc: Astronomical calculator
   reading, writing, and deleting image header keywords, reading a text file,
   and reading and writing CL parameters.
   </p>
-  <pre>
-       print  - print a set of arguments with default format
-       printf - print a set arguments with specified format
-       format - format a string
-       error  - print an error message and abort
-       clget  - get a value from a CL parameter
-       clput  - put a value to a CL parameter
-        scan  - scan a string and parse into variables
-       fscan  - scan a line of a text file
-       imget  - get the value of an image header keyword
-       imput  - put (add or modify) the value of an image header keyword
-       imdel  - delete an image header keyword
-  </pre>
-  <dl>
+  <div class="highlight-default-notranslate"><pre>
+  print  - print a set of arguments with default format
+  printf - print a set arguments with specified format
+  format - format a string
+  error  - print an error message and abort
+  clget  - get a value from a CL parameter
+  clput  - put a value to a CL parameter
+   scan  - scan a string and parse into variables
+  fscan  - scan a line of a text file
+  imget  - get the value of an image header keyword
+  imput  - put (add or modify) the value of an image header keyword
+  imdel  - delete an image header keyword
+  </pre></div>
+  <dl id="l_print">
   <dt><b>print ([argument, ...])</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='print' Line='print ([argument, ...])' -->
   <dd>Print the arguments with default formats based on the type of value ending
@@ -437,7 +437,7 @@ astcalc: Astronomical calculator
   only a newline will be printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_printf">
   <dt><b>printf (fmt [, argument, ...])</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='printf' Line='printf (fmt [, argument, ...])' -->
   <dd>Print a list of arguments using the formatting syntax described later.
@@ -447,7 +447,7 @@ astcalc: Astronomical calculator
   produce newlines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_error">
   <dt><b>error (message)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='error' Line='error (message)' -->
   <dd>Print the <span style="font-family: monospace;">"message"</span>, which can be any string variable such as might
@@ -456,14 +456,14 @@ astcalc: Astronomical calculator
   takes an inappropriate value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clget">
   <dt><b>clget (parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='clget' Line='clget (parameter)' -->
   <dd>Get the value of a CL parameter.  The argument must be a string.  The
   function value is the value of the parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clput">
   <dt><b>clput (parameter, value)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='clput' Line='clput (parameter, value)' -->
   <dd>Put a value into a CL parameter.  The parameter argument must be a
@@ -472,7 +472,7 @@ astcalc: Astronomical calculator
   the actual values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scan">
   <dt><b>scan (string, var, ...)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='scan' Line='scan (string, var, ...)' -->
   <dd>Parse a string of whitespace separated words into a list of
@@ -480,7 +480,7 @@ astcalc: Astronomical calculator
   the returned value of the function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fscan">
   <dt><b>fscan (var, ...)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='fscan' Line='fscan (var, ...)' -->
   <dd>Scan a line of a text file into a list of variables.  The arguments
@@ -489,14 +489,14 @@ astcalc: Astronomical calculator
   is the returned value of the function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imget">
   <dt><b>imget (parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='imget' Line='imget (parameter)' -->
   <dd>Get the value of an image header keyword from the current image.  The
   argument must be a string.  The function value is the value of the keyword.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imput">
   <dt><b>imput (parameter, value)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='imput' Line='imput (parameter, value)' -->
   <dd>Put a value into an image header keyword for the current image.  The
@@ -507,7 +507,7 @@ astcalc: Astronomical calculator
   modified keywords where parameter and value are the actual values.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imdel">
   <dt><b>imdel (parameter)</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='imdel' Line='imdel (parameter)' -->
   <dd>Delete an image header keyword.  The parameter argument must be a string.
@@ -516,9 +516,9 @@ astcalc: Astronomical calculator
   name and value is the old value.
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_formats">
   <h3>Formats</h3>
-  <!-- BeginSection: 'FORMATS' -->
   <p>
   A  format  specification has the form <span style="font-family: monospace;">"%w.dCn"</span>, where w is the field
   width, d is the number of decimal places or the number of digits  of
@@ -527,7 +527,7 @@ astcalc: Astronomical calculator
   codes C are as follows:
       
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   b       boolean (YES or NO)
   c       single character (c or '\c' or '\0nnn')
   d       decimal integer
@@ -540,22 +540,20 @@ astcalc: Astronomical calculator
   rN      convert integer in any radix N
   s       string (D field specifies max chars to print)
   t       advance To column given as field W
-  u       unsigned decimal integer 
+  u       unsigned decimal integer
   w       output the number of spaces given by field W
   x       hexadecimal integer
   z       complex format (r,r) (D = precision)
-      
-      
+  
   Conventions for w (field width) specification:
-      
+  
       W =  n      right justify in field of N characters, blank fill
           -n      left justify in field of N characters, blank fill
           0n      zero fill at left (only if right justified)
   absent, 0       use as much space as needed (D field sets precision)
-      
-      
+  
   Escape sequences (e.g. "\n" for newline):
-      
+  
   \b      backspace   (not implemented)
        formfeed
   \n      newline (crlf)
@@ -565,15 +563,15 @@ astcalc: Astronomical calculator
   \'      character constant delimiter character
   \\      backslash character
   \nnn    octal value of character
-      
+  
   Examples
-      
+  
   %s          format a string using as much space as required
   %-10s       left justify a string in a field of 10 characters
   %-10.10s    left justify and truncate a string in a field of 10 characters
   %10s        right justify a string in a field of 10 characters
   %10.10s     right justify and truncate a string in a field of 10 characters
-      
+  
   %7.3f       print a real number right justified in floating point format
   %-7.3f      same as above but left justified
   %15.7e      print a real number right justified in exponential format
@@ -586,7 +584,7 @@ astcalc: Astronomical calculator
   %-15h       left justify nn:nn:nn.n in a field of 15 characters
   %12.2h      right justify nn:nn:nn.nn
   %-12.2h     left justify nn:nn:nn.nn
-      
+  
   %H          / by 15 and format as nn:nn:nn.n
   %15H        / by 15 and right justify nn:nn:nn.n in field of 15 characters
   %-15H       / by 15 and left justify nn:nn:nn.n in field of 15 characters
@@ -594,108 +592,108 @@ astcalc: Astronomical calculator
   %-12.2H     / by 15 and left justify nn:nn:nn.nn
   
   \n          insert a newline
-  </pre>
-  <!-- EndSection:   'FORMATS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  This example shows interactive use.
   </p>
-  <pre>
-      cl&gt; astcalc
-      astcalc&gt; print ((1 + 2 + 3) / 2 - 2 * 2)
-      -1
-      astcalc&gt; observatory = "kpno"
-      astcalc&gt; date = "05/04/87"
-      astcalc&gt; ut = 9:27:27
-      astcalc&gt; ra = 13:29:24
-      astcalc&gt; dec = 47:15:34
-      astcalc&gt; epoch = epoch (date, ut)
-      astcalc&gt; mst = mst (date, ut, obsdb (observatory, "longitude"))
-      astcalc&gt; print (epoch)
-      1987.257752395672
-      astcalc&gt; print (mst)
-      14:53:39.81
-      astcalc&gt; print (julday (date, ut))
-      2446890.894062519
-      astcalc&gt; print (ra_precess (ra, dec, epoch, 1950))
-      13:27:49.84
-      astcalc&gt; print (dec_precess (ra, dec, epoch, 1950))
-      47:27:05.72
-      astcalc&gt; print (airmass (ra, dec, mst, obsdb (observatory, "latitude")))
-      1.07968417231416
-      astcalc&gt; printf ("Hello World: %s\n", precess (ra, dec, epoch, 1950))
-      Hello World: 13:27:49.84  47:27:05.7   1950.
-      astcalc&gt; quit
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; astcalc
+  astcalc&gt; print ((1 + 2 + 3) / 2 - 2 * 2)
+  -1
+  astcalc&gt; observatory = "kpno"
+  astcalc&gt; date = "05/04/87"
+  astcalc&gt; ut = 9:27:27
+  astcalc&gt; ra = 13:29:24
+  astcalc&gt; dec = 47:15:34
+  astcalc&gt; epoch = epoch (date, ut)
+  astcalc&gt; mst = mst (date, ut, obsdb (observatory, "longitude"))
+  astcalc&gt; print (epoch)
+  1987.257752395672
+  astcalc&gt; print (mst)
+  14:53:39.81
+  astcalc&gt; print (julday (date, ut))
+  2446890.894062519
+  astcalc&gt; print (ra_precess (ra, dec, epoch, 1950))
+  13:27:49.84
+  astcalc&gt; print (dec_precess (ra, dec, epoch, 1950))
+  47:27:05.72
+  astcalc&gt; print (airmass (ra, dec, mst, obsdb (observatory, "latitude")))
+  1.07968417231416
+  astcalc&gt; printf ("Hello World: %s\n", precess (ra, dec, epoch, 1950))
+  Hello World: 13:27:49.84  47:27:05.7   1950.
+  astcalc&gt; quit
+  </pre></div>
   <p>
   2.  This example shows the same commands as in the previous example
   read from a file.
   </p>
-  <pre>
-      cl&gt; type example2.dat
-      # Define variables.
-      observatory = "kpno"
-      date = "05/04/87"
-      ut = 9:27:27
-      ra = 13:29:24
-      dec = 47:15:34
-      epoch = epoch (date, ut)
-      mst = mst (date, ut, obsdb (observatory, "longitude"))
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type example2.dat
+  # Define variables.
+  observatory = "kpno"
+  date = "05/04/87"
+  ut = 9:27:27
+  ra = 13:29:24
+  dec = 47:15:34
+  epoch = epoch (date, ut)
+  mst = mst (date, ut, obsdb (observatory, "longitude"))
   
-      # Print results of some expressions.
-      print ((1 + 2 + 3) / 2 - 2 * 2)       # Calculation with constants
-      print (epoch)                         # Print variable
-      print (mst)                           # Print variable
-      print (julday (date, ut))             # Print result of function
-      print (ra_precess (ra, dec, epoch, 1950))
-      print (dec_precess (ra, dec, epoch, 1950))
-      print (airmass (ra, dec, mst, obsdb (observatory, "latitude")))
+  # Print results of some expressions.
+  print ((1 + 2 + 3) / 2 - 2 * 2)       # Calculation with constants
+  print (epoch)                         # Print variable
+  print (mst)                           # Print variable
+  print (julday (date, ut))             # Print result of function
+  print (ra_precess (ra, dec, epoch, 1950))
+  print (dec_precess (ra, dec, epoch, 1950))
+  print (airmass (ra, dec, mst, obsdb (observatory, "latitude")))
   
-      # Formatted print with arguments.  Note newline.
-      printf ("Hello World: %s\n", precess (ra, dec, epoch, 1950))
-      cl&gt; astcalc commands=example2.dat
-      -1
-      1987.257752395672
-      14:53:39.81
-      2446890.894062519
-      13:27:49.84
-      47:27:05.72
-      1.07968417231416
-      Hello World: 13:27:49.84  47:27:05.7   1950.
-  </pre>
+  # Formatted print with arguments.  Note newline.
+  printf ("Hello World: %s\n", precess (ra, dec, epoch, 1950))
+  cl&gt; astcalc commands=example2.dat
+  -1
+  1987.257752395672
+  14:53:39.81
+  2446890.894062519
+  13:27:49.84
+  47:27:05.72
+  1.07968417231416
+  Hello World: 13:27:49.84  47:27:05.7   1950.
+  </pre></div>
   <p>
   3.  This example precesses coordinates given in a text file.
   </p>
-  <pre>
-      cl&gt; type example3.dat,table.dat
-      ===&gt; example3.dat &lt;===
-      # Read table of RA, DEC, and optional EPOCH and precess to 2000.
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type example3.dat,table.dat
+  ===&gt; example3.dat &lt;===
+  # Read table of RA, DEC, and optional EPOCH and precess to 2000.
   
-      epoch = 1900            # Default input epoch
-      epoch1 = 2000           # Precession epoch
+  epoch = 1900            # Default input epoch
+  epoch1 = 2000           # Precession epoch
   
-      # Scan table and precess coordinates.
-      if (fscan ("ra", "dec", "epoch") &gt;= 2)
-  	ra1 = ra_precess (ra, dec, epoch, epoch1)
-  	dec1 = dec_precess (ra, dec, epoch, epoch1)
-  	printf ("%h %h %d -&gt; %h %h %d\n", ra, dec, epoch, ra1, dec1, epoch1)
-      else
-  	printf ("Missing coordinates\n")
-      endif
+  # Scan table and precess coordinates.
+  if (fscan ("ra", "dec", "epoch") &gt;= 2)
+      ra1 = ra_precess (ra, dec, epoch, epoch1)
+      dec1 = dec_precess (ra, dec, epoch, epoch1)
+      printf ("%h %h %d -&gt; %h %h %d\n", ra, dec, epoch, ra1, dec1, epoch1)
+  else
+      printf ("Missing coordinates\n")
+  endif
   
-      ===&gt; table.dat &lt;===
-      12:22:31        31:10:15        1950
-      13:52:44        10:21:32        1996.1
-      14:52:44        11:21:32
-      10:20:30
+  ===&gt; table.dat &lt;===
+  12:22:31        31:10:15        1950
+  13:52:44        10:21:32        1996.1
+  14:52:44        11:21:32
+  10:20:30
   
-      cl&gt; astcalc commands=example3.dat table=table.dat
-      12:22:31.0 31:10:15.0 1950 -&gt; 12:25:00.56 30:53:38.13 2000
-      13:52:44.0 10:21:32.0 1996 -&gt; 13:52:55.54 10:20:23.11 2000
-      14:52:44.0 11:21:32.0 1900 -&gt; 14:57:33.16 10:57:24.74 2000
-      Missing coordinates
-  </pre>
+  cl&gt; astcalc commands=example3.dat table=table.dat
+  12:22:31.0 31:10:15.0 1950 -&gt; 12:25:00.56 30:53:38.13 2000
+  13:52:44.0 10:21:32.0 1996 -&gt; 13:52:55.54 10:20:23.11 2000
+  14:52:44.0 11:21:32.0 1900 -&gt; 14:57:33.16 10:57:24.74 2000
+  Missing coordinates
+  </pre></div>
   <p>
   4.  This complex example illustrates reading from CL parameters and
   image header keywords.  It precesses coordinates to a standard epoch
@@ -704,53 +702,53 @@ astcalc: Astronomical calculator
   prints the image name and additional information.  This is the
   data file for the <b>astradius</b> script task.
   </p>
-  <pre>
-      cl&gt; type astutil$astradius.dat
-      # Print images which are within a given radius in the sky.
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type astutil$astradius.dat
+  # Print images which are within a given radius in the sky.
   
-      # Get parameters.
-      racenter = clget ("astradius.racenter")
-      deccenter = clget ("astradius.deccenter")
-      epcenter = clget ("astradius.epcenter")
-      radius = clget ("astradius.radius")
-      ra = imget(clget("keywpars.ra"))
-      dec = imget(clget("keywpars.dec"))
+  # Get parameters.
+  racenter = clget ("astradius.racenter")
+  deccenter = clget ("astradius.deccenter")
+  epcenter = clget ("astradius.epcenter")
+  radius = clget ("astradius.radius")
+  ra = imget(clget("keywpars.ra"))
+  dec = imget(clget("keywpars.dec"))
   
-      epoch = imget(clget("keywpars.epoch"))
-      if (str(epoch) == "" || real(epoch) == 0.)
-  	date = imget(clget("keywpars.date_obs"))
-  	ut = imget(clget("keywpars.ut"))
-  	epoch = epoch (date, ut)
-      endif
+  epoch = imget(clget("keywpars.epoch"))
+  if (str(epoch) == "" || real(epoch) == 0.)
+      date = imget(clget("keywpars.date_obs"))
+      ut = imget(clget("keywpars.ut"))
+      epoch = epoch (date, ut)
+  endif
   
-      # Precess image coordinates to center epoch and compute separation.
-      radec = precess (ra, dec, epoch, epcenter)
-      ra1 = ra_precess (ra, dec, epoch, epcenter)
-      dec1 = dec_precess (ra, dec, epoch, epcenter)
-      sep = arcsep (racenter, deccenter, ra1, dec1)
+  # Precess image coordinates to center epoch and compute separation.
+  radec = precess (ra, dec, epoch, epcenter)
+  ra1 = ra_precess (ra, dec, epoch, epcenter)
+  dec1 = dec_precess (ra, dec, epoch, epcenter)
+  sep = arcsep (racenter, deccenter, ra1, dec1)
   
-      # Print result if within radius.
-      if (sep &lt; real (radius))
-  	printf ("%-15s %s %4d %s\n", $I, radec, sep, imget ("title"))
-      endif
-      cl&gt; astcalc commands=astutil$astradius.dat images=dev$pix
-      RA center (hours) (13:31): 
-      DEC center (degrees) (47:00): 
-      Epoch of center (2000.): 
-      Radius in arc seconds (3600.): 
-      dev$pix         13:29:56.16  47:11:37.9   2000.  955 m51  B  600s
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  # Print result if within radius.
+  if (sep &lt; real (radius))
+      printf ("%-15s %s %4d %s\n", $I, radec, sep, imget ("title"))
+  endif
+  cl&gt; astcalc commands=astutil$astradius.dat images=dev$pix
+  RA center (hours) (13:31):
+  DEC center (degrees) (47:00):
+  Epoch of center (2000.):
+  Radius in arc seconds (3600.):
+  dev$pix         13:29:56.16  47:11:37.9   2000.  955 m51  B  600s
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_ASTCALC">
   <dt><b>ASTCALC V2.15</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.15' -->
   <dd>The $D variable was changed from the old MM/DD/YY format to the post-Y2K
   YYYY-MM-DD format.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ASTCALC">
   <dt><b>ASTCALC V2.11.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.11.2' -->
   <dd>Y2K update:  The epoch, julday, and mst functions now take either the old
@@ -760,20 +758,20 @@ astcalc: Astronomical calculator
   $GMT, and $GMDT for the current time Greenwich time are defined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ASTCALC">
   <dt><b>ASTCALC V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='ASTCALC' Line='ASTCALC V2.11' -->
   <dd>This task is new in this release.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   astradius, asthedit, setairmass, setjd, asttimes, precess, observatory, hedit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'FORMATS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkapfile photfiles naperts apercors
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_photfiles">
   <dt><b>photfiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfiles' Line='photfiles' -->
   <dd>A list of APPHOT photometry files containing the images names or image ids, x-y
@@ -24,14 +24,14 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   of all the objects to be used to compute the aperture corrections.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naperts">
   <dt><b>naperts</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naperts' Line='naperts' -->
   <dd>The number of aperture radii for which aperture radii, magnitudes, and
   magnitude errors are to be extracted from <i>photfiles</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apercors">
   <dt><b>apercors</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apercors' Line='apercors' -->
   <dd>The name of the output text file containing the aperture
@@ -39,14 +39,14 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   for each image in <i>photfiles</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_smallap">
   <dt><b>smallap = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='smallap' Line='smallap = 1' -->
   <dd>The index of the smallest extracted aperture for which the aperture 
   correction is to be computed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_largeap">
   <dt><b>largeap = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='largeap' Line='largeap = 0' -->
   <dd>The index of the largest extracted aperture for which the aperture 
@@ -54,7 +54,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   the largest aperture is <i>naperts</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_magfile">
   <dt><b>magfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='magfile' Line='magfile = ""' -->
   <dd>The name of an optional output text file containing the magnitudes
@@ -63,7 +63,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   which the estimated error is a minimum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>The name of an optional output text file containing details of the curve
@@ -72,7 +72,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   <span style="font-family: monospace;">"yes"</span> output is appended to an existing logfile.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>The name of an optional output plot file containing plots of the
@@ -84,13 +84,13 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   <span style="font-family: monospace;">"yes"</span> output is appended to an existing plotfile.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_append">
   <dt><b>append = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='append' Line='append = no' -->
   <dd>Open <i>logfile</i> and/or <i>plotfile</i> in append mode ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obsparams">
   <dt><b>obsparams = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obsparams' Line='obsparams = ""' -->
   <dd>The name of an optional input text file containing the correct filter ids,
@@ -102,7 +102,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   <i>obscolumns</i>. The image names must match those in <i>photfiles</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_obscolumns">
   <dt><b>obscolumns = <span style="font-family: monospace;">"2 3 4 5"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='obscolumns' Line='obscolumns = "2 3 4 5"' -->
   <dd>The list of numbers separated by commas or whitespace specifying which
@@ -114,7 +114,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   <span style="font-family: monospace;">"0 0 column 0"</span>, where column is the airmass column number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maglim">
   <dt><b>maglim = 0.10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maglim' Line='maglim = 0.10' -->
   <dd>The maximum magnitude error permitted in the input magnitude measurements.
@@ -122,7 +122,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   measurement has an error greater than <i>magerr</i> is rejected on input.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nparams">
   <dt><b>nparams = 3</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nparams' Line='nparams = 3' -->
   <dd>The number parameters in the five parameter curve of growth model to be fit.
@@ -133,7 +133,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   <i>Nparams</i> must be greater than or equal to one.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_swings">
   <dt><b>swings = 1.2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='swings' Line='swings = 1.2' -->
   <dd>The slope of the power law component of the analytic curve of growth model
@@ -141,14 +141,14 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   physically reasonable profile <i>swings</i> must be greater than 1.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pwings">
   <dt><b>pwings = 0.1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pwings' Line='pwings = 0.1' -->
   <dd>The fraction of the total power in the seeing independent
   part of the stellar profile, if <i>xwings</i> is 0.0.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pgauss">
   <dt><b>pgauss = 0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pgauss' Line='pgauss = 0.5' -->
   <dd>The fraction of the total power in the seeing dependent part of the
@@ -156,7 +156,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   of the analytic curve of growth function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rgescale">
   <dt><b>rgescale = 0.9</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rgescale' Line='rgescale = 0.9' -->
   <dd>The ratio of the exponential to the gaussian radial scale
@@ -165,7 +165,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   significantly on this parameter and it can be left at its default value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xwings">
   <dt><b>xwings = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xwings' Line='xwings = 0.0' -->
   <dd>A parameter describing the effect of airmass on the total power 
@@ -173,34 +173,34 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   is defined as defined as <i>pwings</i> + <i>xwings</i> * <i>airmass</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Fit the curve of growth interactively ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = no' -->
   <dd>Verify interactive user input ? This option is used only if <i>obsparams</i>
   is set to the standard input STDIN.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The interactive graphics cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>The default graphics device.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   MKAPFILE takes a list of APPHOT photometry files <i>photfiles</i>, 
   containing the image names, x and y coordinates, filter ids, exposure times,
@@ -330,53 +330,53 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   for each image in <i>photfiles</i> are saved in the plot metacode file
   <i>plotfile</i>..
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The following commands are available in interactive graphics cursor mode.
   </p>
-  <pre>
-  	Keystroke Commands 
+  <div class="highlight-default-notranslate"><pre>
+          Keystroke Commands
   
-  ?	Print help
-  w	Print computed aperture correction
-  c	Print coordinates of star nearest cursor
-  f	Compute a new fit
-  d	Delete point(s) nearest the cursor
-  u	Undelete point(s) nearest the cursor
-  m	Plot the observed and model cog versus radius
-  r	Plot the cog fit residuals versus radius
-  b	Plot the cog fit residuals versus magnitude
-  x	Plot the cog residuals versus the x coordinate
-  y	Plot the cog residuals versus the y coordinate
-  a	Plot the aperture correction versus radius
-  g	Redraw the current plot
-  n	Move to the next image
-  p	Move to the previous image
-  q	Quit task
+  ?       Print help
+  w       Print computed aperture correction
+  c       Print coordinates of star nearest cursor
+  f       Compute a new fit
+  d       Delete point(s) nearest the cursor
+  u       Undelete point(s) nearest the cursor
+  m       Plot the observed and model cog versus radius
+  r       Plot the cog fit residuals versus radius
+  b       Plot the cog fit residuals versus magnitude
+  x       Plot the cog residuals versus the x coordinate
+  y       Plot the cog residuals versus the y coordinate
+  a       Plot the aperture correction versus radius
+  g       Redraw the current plot
+  n       Move to the next image
+  p       Move to the previous image
+  q       Quit task
   
-  	Colon commands
+          Colon commands
   
   :show   parameters   Show the initial cog model parameter values
-  :show   model	     Show the fitted cog model parameters
+  :show   model        Show the fitted cog model parameters
   :show   seeing       Show the computed seeing radii for all images
   :image  [value]      Show/set the image to be analyzed
   
-  	Colon Parameter Editing Commands
+          Colon Parameter Editing Commands
   
   :smallap   [value]  Show/set the index of the smallest aperture
   :largeap   [value]  Show/set the index of the largest aperture
-  :nparams   [value]  Show/set the number of cog model parameters to fit 
-  :swings	   [value]  Show/set initial power law slope of stellar wings
-  :pwings	   [value]  Show/set fraction of total power in stellar wings 
-  :pgauss	   [value]  Show/set fraction of total core power in gaussian 
+  :nparams   [value]  Show/set the number of cog model parameters to fit
+  :swings    [value]  Show/set initial power law slope of stellar wings
+  :pwings    [value]  Show/set fraction of total power in stellar wings
+  :pgauss    [value]  Show/set fraction of total core power in gaussian
   :rgescale  [value]  Show/set ratio of exp to gauss radial scales
-  :xwings	   [value]  Show/set the extinction coefficient
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  :xwings    [value]  Show/set the extinction coefficient
+  </pre></div>
+  </section>
+  <section id="s_algorithms">
   <h3>Algorithms</h3>
-  <!-- BeginSection: 'ALGORITHMS' -->
   <p>
   The algorithm used to compute the aperture correction is the DAOGROW
   algorithm developed by Peter Stetson (1990, see the references section).
@@ -387,56 +387,48 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   exponential analytic components of the model respectively. The subscript i
   denotes quantities that are a function of each image. 
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  I[r,X[i];RO[i],swings,pwings,pgauss,regscale,xwings] =
+      (pwings + X[i] * xwings) * P[r;swings] + (1 - pwings - X[i] *
+      xwings) * (pgauss * G[r;RO[i]] + (1 - pgauss) *
+      E[r;rgescale,RO[i]])
   
-      I[r,X[i];RO[i],swings,pwings,pgauss,regscale,xwings] =
-  	(pwings + X[i] * xwings) * P[r;swings] + (1 - pwings - X[i] *
-  	xwings) * (pgauss * G[r;RO[i]] + (1 - pgauss) *
-  	E[r;rgescale,RO[i]])
+  P[r;swings] = mnorm * (1 + r ** 2) ** swings
+        mnorm = (swings - 1) / PI
   
-      P[r;swings] = mnorm * (1 + r ** 2) ** swings
-            mnorm = (swings - 1) / PI
+  G[r;RO[i]] = gnorm * exp (-0.5 * r ** 2 / RO[i] ** 2)
+       gnorm = 1 / (2 * PI * RO[i] ** 2)
   
-      G[r;RO[i]] = gnorm * exp (-0.5 * r ** 2 / RO[i] ** 2)
-           gnorm = 1 / (2 * PI * RO[i] ** 2)
-  
-      E[r;RO[i]] = hnorm  * exp (-r / (rgescale * RO[i]))
-           hnorm = 1 /  (2 * PI * (rgescale * RO[i]) ** 2) 
-  
-  </pre>
+  E[r;RO[i]] = hnorm  * exp (-r / (rgescale * RO[i]))
+       hnorm = 1 /  (2 * PI * (rgescale * RO[i]) ** 2)
+  </pre></div>
   <p>
   This equation is actually applied to the magnitude differences between
   apertures where the observed magnitude differences are computed as follows
   for image i, star j, and aperture k.
   </p>
-  <pre>
-  
-      mdiff[i,j,k] = m[i,j,k] - m[i,j,k-1]           k=2,..,naperts
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  mdiff[i,j,k] = m[i,j,k] - m[i,j,k-1]           k=2,..,naperts
+  </pre></div>
   <p>
   The observed differences are fit by least-squares techniques to 
   to the theoretical model differences represented by the following equation.
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   diff[i,j,k] = -2.5 * log10 (integral (2 * PI * r * I) from 0 to r[k] /
             integral (2 * PI * r * I) from 0 to r[k-1])
-  
-  </pre>
+  </pre></div>
   <p>
   The integrals of the three model components P, G, and E are the following.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  integral (2 * PI * r * P) = 1 - (1 + r ** 2) ** -swings
   
-      integral (2 * PI * r * P) = 1 - (1 + r ** 2) ** -swings
+  integral (2 * PI * r * G) = 1 - exp (-r ** 2 / (2 * RO[i] ** 2))
   
-      integral (2 * PI * r * G) = 1 - exp (-r ** 2 / (2 * RO[i] ** 2))
-  
-      integral (2 * PI * r * H) = 1 + (1 + r / (rgescale * RO[i]) *
-                            exp (-r / (rgescale * RO[i]))
-  
-  </pre>
+  integral (2 * PI * r * H) = 1 + (1 + r / (rgescale * RO[i]) *
+                        exp (-r / (rgescale * RO[i]))
+  </pre></div>
   <p>
   In a given run of MKAPFILE the seeing radius
   RO[i] is fit separately for each image, but the parameters swings, pwings,
@@ -472,65 +464,65 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   magnitude. This file can be read into the OBSFILE program so as to
   create a photometry catalog suitable for input into PHOTCAL.
   </p>
-  <!-- EndSection:   'ALGORITHMS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   A full description of the DAOGROW algorithm used by MKAPFILE can be
   found in the article <span style="font-family: monospace;">"On the Growth-Curve Method for Calibrating
   Stellar Photometry with CCDs"</span> by Peter Stetson in PASP 102, 932
   (1990).
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Prepare an aperture corrections file from a set of observations
   from 5 different data frames taken in a single night.
   </p>
-  <pre>
-  	ph&gt; mkapfile *.mag.* 15 apercor
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkapfile *.mag.* 15 apercor
   
-  	    ... plot of the cog for the first image will appear
+      ... plot of the cog for the first image will appear
   
-  	    ... type r to examine fit residuals versus radius
+      ... type r to examine fit residuals versus radius
   
-  	    ... type a to examine the aperture correction curve
-  		versus radius
+      ... type a to examine the aperture correction curve
+          versus radius
   
-  	    ... type n to look at results for next image
+      ... type n to look at results for next image
   
-  	    ... type d to remove a discrepant point
+      ... type d to remove a discrepant point
   
-  	    ... type f to refit the cog
+      ... type f to refit the cog
   
-  	    ... type r to examine the residuals for this image
+      ... type r to examine the residuals for this image
   
-  	    ... type p to recheck the residuals for the first image
+      ... type p to recheck the residuals for the first image
   
-  	    ... step through the remaining image deleting points and
-  		refitting as necessary
+      ... step through the remaining image deleting points and
+          refitting as necessary
   
-  	    ... type q to quit
+      ... type q to quit
   
-  	    ... the compute aperture corrections will appear in apercor
-  </pre>
+      ... the compute aperture corrections will appear in apercor
+  </pre></div>
   <p>
   2. Repeat the previous example in non-interactive mode saving all the
   details and plots of the fit in the log and plot file respectively.
   </p>
-  <pre>
-  	ph&gt; mkapfile *.mag.* 15 apercor inter- logfile=apercor.log\<br>
-  	    plotfile=apercor.plot
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkapfile *.mag.* 15 apercor inter- logfile=apercor.log\<br>
+      plotfile=apercor.plot
   
-  	ph&gt; page apercor.log
+  ph&gt; page apercor.log
   
-  	    ... page through the log file
+      ... page through the log file
   
-  	ph&gt; gkiextract apercor.plot "1-25" | stdplot
+  ph&gt; gkiextract apercor.plot "1-25" | stdplot
   
-  	    ... send all the plots of the fit to the default plotter
-  </pre>
+      ... send all the plots of the fit to the default plotter
+  </pre></div>
   <p>
   3. Compute the magnitudes corrected to largeap, of all the standard
   stars observed in a night using the observed magnitude and computed magnitude
@@ -538,29 +530,29 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   Assume that the filter ids (U,B,V), exposure times, and airmasses were
   all present and correct in the photometry files.
   </p>
-  <pre>
-  	ph&gt; mkapfile stdfiles 15 apercor inter- magfile="stdfiles.ap"\<br>
-  	    logfile=apercor.log plotfile=apercor.plot
+  <div class="highlight-default-notranslate"><pre>
+  ph&gt; mkapfile stdfiles 15 apercor inter- magfile="stdfiles.ap"\<br>
+      logfile=apercor.log plotfile=apercor.plot
   
-  	ph&gt; obsfile stdfiles.ap "1,2,3,4,5,6,7,8,9" "U,B,V" imsets stdobs 
+  ph&gt; obsfile stdfiles.ap "1,2,3,4,5,6,7,8,9" "U,B,V" imsets stdobs
   
-  	    ... create a standard star observations file suitable for
-  		input to the photcal package
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... create a standard star observations file suitable for
+          input to the photcal package
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apfile, mknobsfile,mkobsfile,obsfile
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'ALGORITHMS' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

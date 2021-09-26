@@ -7,15 +7,15 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   surfit input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input text file containing the data to be fit.  The file consists of lines
@@ -23,7 +23,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   optionally a weight.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_image">
   <dt><b>image = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image = ""' -->
   <dd>Optional image name in which to create an evenly sampled image of the
@@ -36,7 +36,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   for the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordinates">
   <dt><b>coordinates = <span style="font-family: monospace;">""</span>, fit = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordinates' Line='coordinates = "", fit = ""' -->
   <dd>The first two columns of the text file specified by the coordinates parameter
@@ -48,20 +48,20 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   as the coordinate file to create a separate output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"polynomial"</span> (chebyshev|legendre|polynomial)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "polynomial" (chebyshev|legendre|polynomial)' -->
   <dd>Surface function type to fit.  The choices are a chebyshev, legendre,
   or simple power series bi-dimensional polynomial.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xorder">
   <dt><b>xorder = 2, yorder = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xorder' Line='xorder = 2, yorder = 2' -->
   <dd>The polynomial orders in x and y.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xterms">
   <dt><b>xterms = <span style="font-family: monospace;">"full"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xterms' Line='xterms = "full"' -->
   <dd>The options are:
@@ -88,7 +88,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weighting">
   <dt><b>weighting = <span style="font-family: monospace;">"user"</span> (uniform|user|statistical|instrumental)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "user" (uniform|user|statistical|instrumental)' -->
   <dd>The type of weighting for the fit. The options are:
@@ -122,7 +122,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmin">
   <dt><b>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>These parameters define the range of input x and y data to be used and
@@ -134,7 +134,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   allow extrapolation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zmin">
   <dt><b>zmin = INDEF, zmax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zmin' Line='zmin = INDEF, zmax = INDEF' -->
   <dd>These parameters apply threshold limits to the input data.  If INDEF
@@ -142,7 +142,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   data points with z values outside this range are discarded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = 100, nlines = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 100, nlines = 100' -->
   <dd>The number of columns and lines for the optional surface image.  These
@@ -150,9 +150,9 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   y input data range is subdivided.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task fits a surface, a function of two coordinates, to a set of
   possibly irregularly sampled data points specified in a text file.
@@ -185,7 +185,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   <span style="font-family: monospace;">"half"</span>, and <span style="font-family: monospace;">"full"</span> are illustrated below for a quadratic polynomial in
   x and y.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   xterms = "none"
   xorder = 3, yorder = 3
   
@@ -203,7 +203,7 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
            a12 * y + a22 * x * y +  a32 * x ** 2 * y +
            a13 * y ** 2 + a23 * x *  y ** 2 +
            a33 * x ** 2 * y ** 2
-  </pre>
+  </pre></div>
   <p>
   The fit results are written to the standard output; the terminal unless
   redirected.  It consists of the input parameters, the coefficients and
@@ -226,10 +226,10 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   dimension is the minimum x or y value and the sample interval per pixel is
   given by:
   </p>
-  <pre>
-  	dx = (xmax - xmin) / (ncols - 1)
-  	dy = (ymax - ymin) / (nlines - 1)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  dx = (xmax - xmin) / (ncols - 1)
+  dy = (ymax - ymin) / (nlines - 1)
+  </pre></div>
   <p>
   The fitted surface is evaluated at each pixel and written to the image.
   The linear world coordinate system defining the x and y pixel sampling is
@@ -249,83 +249,82 @@ surfit: Fit a surface, z=f(x,y), to a set of x, y, z points
   Also the output data file may be specified as <span style="font-family: monospace;">"STDOUT"</span> to merge
   this output with the basic results output.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following example shows use of all the output options using some
   random numbers.
   </p>
-  <pre>
-      cl&gt; urand 50 3 scale=100. &gt;sf1
-      cl&gt; head sf1 nl=5
-       70.87   42.5  99.06
-       51.49  42.19  64.86
-       70.75  83.34  80.39
-        57.1  67.79  30.24
-       60.91  49.76  53.32
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; urand 50 3 scale=100. &gt;sf1
+  cl&gt; head sf1 nl=5
+   70.87   42.5  99.06
+   51.49  42.19  64.86
+   70.75  83.34  80.39
+    57.1  67.79  30.24
+   60.91  49.76  53.32
   
-      cl&gt; urand 5 2 scale=100. seed=2 &gt;sf2
-      cl&gt; head sf2
-       20.62  17.86
-       66.39  86.26
-       48.08  35.07
-       70.39   95.8
-       53.64  15.51
+  cl&gt; urand 5 2 scale=100. seed=2 &gt;sf2
+  cl&gt; head sf2
+   20.62  17.86
+   66.39  86.26
+   48.08  35.07
+   70.39   95.8
+   53.64  15.51
   
-      cl&gt; surfit sf1 image=sf coord=sf2 fit=sf3 ncols=20 nlines=20
-      Surface parameters:
-        function = polynomial
-        xorder = 2
-        yorder = 2
-        xterms = full
-        weighting = user
-        xmin =    0.684
-        xmax =    89.74
-        ymin =    1.051
-        ymax =    95.36
-        zmin =    1.217
-        zmax =    99.14
+  cl&gt; surfit sf1 image=sf coord=sf2 fit=sf3 ncols=20 nlines=20
+  Surface parameters:
+    function = polynomial
+    xorder = 2
+    yorder = 2
+    xterms = full
+    weighting = user
+    xmin =    0.684
+    xmax =    89.74
+    ymin =    1.051
+    ymax =    95.36
+    zmin =    1.217
+    zmax =    99.14
   
+  Surface coefficients:
+     x  y    coeff    error
+     0  0  75.7125  17.2504
+     1  0 -0.37273 0.356014
+     0  1 -0.77194 0.336627
+     1  1 0.009884 0.006295
   
-      Surface coefficients:
-         x  y    coeff    error
-         0  0  75.7125  17.2504
-         1  0 -0.37273 0.356014
-         0  1 -0.77194 0.336627
-         1  1 0.009884 0.006295
+  Fitted points:
+           x        y        z      fit residual   weight
+       70.87     42.5    99.06  46.2611  52.7989       1.
+       51.49    42.19    64.86  45.4249  19.4351       1.
+       70.75    83.34    80.39  43.2899  37.1001       1.
+        57.1    67.79    30.24  40.3604 -10.1204       1.
+       60.91    49.76    53.32  44.5562  8.76384       1.
+       ...
   
-      Fitted points:
-  	     x        y        z      fit residual   weight
-  	 70.87     42.5    99.06  46.2611  52.7989       1.
-  	 51.49    42.19    64.86  45.4249  19.4351       1.
-  	 70.75    83.34    80.39  43.2899  37.1001       1.
-  	  57.1    67.79    30.24  40.3604 -10.1204       1.
-  	 60.91    49.76    53.32  44.5562  8.76384       1.
-  	 ...
+    chisqr = 903.797
   
-        chisqr = 903.797
+  cl&gt; head sf3
+   20.62    17.86  57.8802
+   66.39    86.26  40.9855
+   48.08    35.07  47.3864
+   53.64    15.51  51.9697
   
-      cl&gt; head sf3
-       20.62    17.86  57.8802
-       66.39    86.26  40.9855
-       48.08    35.07  47.3864
-       53.64    15.51  51.9697
-  
-      cl&gt; listpix sf[*:10,*:10] wcs=world formats="%5.2f %5.2f"
-       0.68  1.05  74.65366
-      47.56  1.05  57.66973
-       0.68 50.69  36.67273
-      47.56 50.69  42.6855
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  cl&gt; listpix sf[*:10,*:10] wcs=world formats="%5.2f %5.2f"
+   0.68  1.05  74.65366
+  47.56  1.05  57.66973
+   0.68 50.69  36.67273
+  47.56 50.69  42.6855
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apphot.fitsky, apphot.txdump, imsurfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

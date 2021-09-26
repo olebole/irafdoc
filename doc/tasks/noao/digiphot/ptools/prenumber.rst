@@ -7,27 +7,27 @@ prenumber: Renumber a list of apphot/daophot databases
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   renumber infile
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_infile">
   <dt><b>infile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='infile' Line='infile' -->
   <dd>The APPHOT/DAOPHOT database to be renumbered.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_id">
   <dt><b>id = <span style="font-family: monospace;">"ID"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='id' Line='id = "ID"' -->
   <dd>The name of the keyword whose value is the sequence number of the object
   </dd>
   </dl>
-  <dl>
+  <dl id="l_idoffset">
   <dt><b>idoffset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='idoffset' Line='idoffset = 0' -->
   <dd>An integer offset  to be added to the id numbers of the stars in
@@ -36,9 +36,9 @@ prenumber: Renumber a list of apphot/daophot databases
   in the database.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   PRENUMBER is a simple task which accepts an APPHOT/DAOPHOT
   database file and renumbers the objects in the file from 1 + idoffset
@@ -53,36 +53,36 @@ prenumber: Renumber a list of apphot/daophot databases
   database is a text database or TCALC if the file is an STSDAS table
   database.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Renumber a sorted NSTAR database that has been sorted on magnitude.
   </p>
-  <pre>
-     pt&gt; prenumber m92r.nst.1
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; prenumber m92r.nst.1
+  </pre></div>
   <p>
   2. Renumber a PHOT photometry file of extra stars so as to ensure the
   stars' id numbers are  greater than 4000.
   </p>
-  <pre>
-      pt&gt; prenumber m92r.mag.extra idoffset=4000
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; prenumber m92r.mag.extra idoffset=4000
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ptools.txrenumber,ptools.tbrenumber,tables.tcalc
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

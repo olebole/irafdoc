@@ -7,21 +7,21 @@ coincor: Correct spectra for detector count rates
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   coincor input records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The root file name of the input spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra.
@@ -29,7 +29,7 @@ coincor: Correct spectra for detector count rates
   elements to the input root name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>This is the root file name for the corrected spectra.  If no root name
@@ -37,14 +37,14 @@ coincor: Correct spectra for detector count rates
   is done in place.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_start_rec">
   <dt><b>start_rec = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='start_rec' Line='start_rec = 1' -->
   <dd>The starting record number to be appended to the root name of the
   created spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccmode">
   <dt><b>ccmode = )_.ccmode</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccmode' Line='ccmode = )_.ccmode' -->
   <dd>The mode used to model the detector count rate corrections.
@@ -71,7 +71,7 @@ coincor: Correct spectra for detector count rates
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_deadtime">
   <dt><b>deadtime = )_.deadtime</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='deadtime' Line='deadtime = )_.deadtime' -->
   <dd>For the <span style="font-family: monospace;">"photo"</span> mode this parameter is the period, in seconds, during
@@ -83,15 +83,15 @@ coincor: Correct spectra for detector count rates
   seconds.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_power">
   <dt><b>power = )_.power</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='power' Line='power = )_.power' -->
   <dd>The IIDS power law coefficient.  The standard value is 0.975.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The input spectra are corrected for detector count rate errors.  If no
   output root name is given then the operation is done in place.  The type
@@ -114,37 +114,37 @@ coincor: Correct spectra for detector count rates
   applied by the mountain reduction software), 1 for the full IIDS
   correction, and 2 for the photomuliplier mode correction.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following example corrects a series of IIDS spectra:
   </p>
-  <p>
-  	cl&gt; coincor nite1 1-250 output=nite1cc start_rec=1
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; coincor nite1 1-250 output=nite1cc start_rec=1
+  </pre></div>
   <p>
   The following example corrects a series of spectra from the
   Lick ITS:
   </p>
-  <pre>
-  	cl&gt; coincor its 1-250 output=itscc start=1 ccmode=photo \<br>
-  	&gt;&gt;&gt; deadtime=2.4E-4 power=1
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; coincor its 1-250 output=itscc start=1 ccmode=photo \<br>
+  &gt;&gt;&gt; deadtime=2.4E-4 power=1
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   <b>Coincor</b> requires approximately 1 second per spectrum of length 1024.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   The <b>imred.iids</b> package is designed for reducing NOAO IIDS spectra.
-  </pre>
+  </pre></div>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'SEE ALSO'  -->
   

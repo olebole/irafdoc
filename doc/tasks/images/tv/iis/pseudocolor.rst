@@ -7,15 +7,15 @@ pseudocolor: Select pseudocolor enhancement
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   pseudocolor
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_enhancement">
   <dt><b>enhancement</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='enhancement' Line='enhancement' -->
   <dd>Type of pseudocolor enhancement.  The types are:
@@ -39,37 +39,37 @@ pseudocolor: Select pseudocolor enhancement
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_window">
   <dt><b>window = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='window' Line='window = yes' -->
   <dd>Window the lookup table for the frame after enabling the pseudocolor?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The display levels from the lookup table are mapped into various saturated
   colors to enhance an image.  There is a choice of three color mappings.
   After the pseudocolor enhancement is enabled on the display monitor the
   user may, optionally, adjust the frame lookup table.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
-  	cl&gt; pseudocolor random
-  	cl&gt; pseudocolor 8color
-  	cl&gt; pseudocolor linear
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pseudocolor random
+  cl&gt; pseudocolor 8color
+  cl&gt; pseudocolor linear
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   cv
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

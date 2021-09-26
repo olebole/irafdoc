@@ -7,68 +7,68 @@ hdfit: Fit a curve to density, log exposure values
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   hdfit database 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>Database[s] containing the density, log exposure information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"power"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "power"' -->
   <dd>Type of curve to fit; chosen from <span style="font-family: monospace;">"power"</span>, <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"chebyshev"</span>, 
   <span style="font-family: monospace;">"spline1"</span> or <span style="font-family: monospace;">"spline3"</span>.  Abbreviations are permitted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_transform">
   <dt><b>transform = <span style="font-family: monospace;">"logopacitance"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transform' Line='transform = "logopacitance"' -->
   <dd>Transformation performed on the density prior to fitting.  Chosen from
   <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"logopacitance"</span>, <span style="font-family: monospace;">"k50"</span> or <span style="font-family: monospace;">"k75"</span>. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_weighting">
   <dt><b>weighting = <span style="font-family: monospace;">"none"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weighting' Line='weighting = "none"' -->
   <dd>Weights can be assigned to the independent variable for fitting a curve.
   Choices are <span style="font-family: monospace;">"none"</span>, <span style="font-family: monospace;">"user"</span> and <span style="font-family: monospace;">"calculated"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 4' -->
   <dd>Order of the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Fit the data interactively?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Interactive graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">"stdgcur"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = "stdgcur"' -->
   <dd>Source of cursor input.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>hdfit</i> is used to fit a curve to density and log exposure
   values in preparation for transforming an image from density to intensity.
@@ -98,27 +98,27 @@ hdfit: Fit a curve to density, log exposure values
   default choice is to fit log exposure as a function of the log opacitance; 
   this is traditionally known as the Baker-Seidel function.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   Using the defaults as starting parameters, interactively fit a curve to
   the data points in db1.
   
-  	cl&gt; hdfit db1 
+          cl&gt; hdfit db1
   
   A sixth order power series function is fit in batch mode to the db1 data.
   
-  	cl&gt; hdfit db1 order=6 interactive-
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+          cl&gt; hdfit db1 order=6 interactive-
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   spotlist, dematch, hdtoi
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

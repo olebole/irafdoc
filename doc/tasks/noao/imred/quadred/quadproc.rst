@@ -7,22 +7,22 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   quadproc images
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of input CCD images to process.  The list may include processed
   images and calibration images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccdtype">
   <dt><b>ccdtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccdtype' Line='ccdtype = ""' -->
   <dd>CCD image type to select from the input image list.  If no type is given
@@ -30,7 +30,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   in <b>ccdtypes</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_max_cache">
   <dt><b>max_cache = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='max_cache' Line='max_cache = 0' -->
   <dd>Maximum image caching memory (in Mbytes).  If there is sufficient memory
@@ -40,7 +40,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   value is zero image caching is not used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_noproc">
   <dt><b>noproc = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='noproc' Line='noproc = no' -->
   <dd>List processing steps only?
@@ -49,58 +49,58 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <p style="text-align:center">PROCESSING SWITCHES
   
   </p>
-  <dl>
+  <dl id="l_fixpix">
   <dt><b>fixpix = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixpix' Line='fixpix = yes' -->
   <dd>Fix bad CCD lines and columns by linear interpolation from neighboring
   lines and columns?  If yes then a bad pixel file must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_overscan">
   <dt><b>overscan = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='overscan' Line='overscan = yes' -->
   <dd>Apply overscan or prescan bias correction?  If yes then the overscan
   image section and the readout axis must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trim">
   <dt><b>trim = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trim' Line='trim = yes' -->
   <dd>Trim the image of the overscan region and bad edge lines and columns?
   If yes then the trim section must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zerocor">
   <dt><b>zerocor = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zerocor' Line='zerocor = yes' -->
   <dd>Apply zero level correction?  If yes a zero level image must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_darkcor">
   <dt><b>darkcor = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='darkcor' Line='darkcor = yes' -->
   <dd>Apply dark count correction?  If yes a dark count image must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flatcor">
   <dt><b>flatcor = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flatcor' Line='flatcor = yes' -->
   <dd>Apply flat field correction?  If yes flat field images must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_illumcor">
   <dt><b>illumcor = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='illumcor' Line='illumcor = no' -->
   <dd>Apply iillumination correction?  If yes iillumination images must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fringecor">
   <dt><b>fringecor = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fringecor' Line='fringecor = no' -->
   <dd>Apply fringe correction?  If yes fringe images must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_readcor">
   <dt><b>readcor = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readcor' Line='readcor = no' -->
   <dd>Convert zero level images to readout correction images?  If yes then
@@ -108,7 +108,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   dimensional zero level readout correction images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scancor">
   <dt><b>scancor = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scancor' Line='scancor = no' -->
   <dd>Convert flat field images to scan mode flat field images?  If yes then the
@@ -118,13 +118,13 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <p style="text-align:center">PROCESSING PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_readaxis">
   <dt><b>readaxis = <span style="font-family: monospace;">"line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readaxis' Line='readaxis = "line"' -->
   <dd>Read out axis specified as <span style="font-family: monospace;">"line"</span> or <span style="font-family: monospace;">"column"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fixfile">
   <dt><b>fixfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixfile' Line='fixfile' -->
   <dd>File describing the bad lines and columns.  If <span style="font-family: monospace;">"image"</span> is specified then
@@ -132,7 +132,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   See Section 2. of Description for further information on bad pixel files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_biassec">
   <dt><b>biassec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='biassec' Line='biassec' -->
   <dd>Overscan bias strip image section.  If <span style="font-family: monospace;">"image"</span> is specified then the overscan
@@ -140,7 +140,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   See Section 3. of Description for further information on setting this parmeter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trimsec">
   <dt><b>trimsec</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trimsec' Line='trimsec' -->
   <dd>image section for trimming.  If <span style="font-family: monospace;">"image"</span> is specified then the trim
@@ -148,7 +148,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   See Section 4. of Description for further information on setting this parmeter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zero">
   <dt><b>zero = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zero' Line='zero = ""' -->
   <dd>Zero level calibration image.  The zero level image may be one or two
@@ -157,7 +157,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   given in the input list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dark">
   <dt><b>dark = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dark' Line='dark = ""' -->
   <dd>Dark count calibration image.  The CCD image type and subset are not checked
@@ -165,7 +165,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   images given in the input list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flat">
   <dt><b>flat = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = ""' -->
   <dd>Flat field calibration images.  The flat field images may be one or
@@ -175,7 +175,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   input image being processed is selected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_illum">
   <dt><b>illum = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='illum' Line='illum = ""' -->
   <dd>Iillumination correction images.  The CCD image type is not checked for these
@@ -184,7 +184,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   input image being processed is selected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fringe">
   <dt><b>fringe = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fringe' Line='fringe = ""' -->
   <dd>Fringe correction images.  The CCD image type is not checked for these
@@ -193,7 +193,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   input image being processed is selected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minreplace">
   <dt><b>minreplace = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minreplace' Line='minreplace = 1.' -->
   <dd>When processing flat fields, pixel values below this value (after
@@ -203,7 +203,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scantype">
   <dt><b>scantype = <span style="font-family: monospace;">"shortscan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scantype' Line='scantype = "shortscan"' -->
   <dd>Type of scan format used in creating the CCD images.  The modes are:
@@ -230,7 +230,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nscan">
   <dt><b>nscan</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nscan' Line='nscan' -->
   <dd>Number of scan readout lines used in short scan mode.  This parameter is used
@@ -240,7 +240,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <p style="text-align:center">OVERSCAN FITTING PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Fit the overscan vector interactively?  If yes the overscan vector is fit
@@ -248,7 +248,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   given below are used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"legendre"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "legendre"' -->
   <dd>Overscan fitting function.  The function types are <span style="font-family: monospace;">"legendre"</span> polynomial,
@@ -256,49 +256,49 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   spline.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>Number of polynomial terms or spline pieces in the overscan fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample points to use in the overscan fit.  The string <span style="font-family: monospace;">"*"</span> specified all
   points otherwise an <b>icfit</b> range string is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Number of points to average or median to form fitting points.  Positive
   numbers specify averages and negative numbers specify medians.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
   <dd>Number of rejection iterations to remove deviant points from the overscan fit.
   If 0 then no points are rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 3., high_reject = 3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3., high_reject = 3.' -->
   <dd>Low and high sigma rejection factors for rejecting deviant points from the
   overscan fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0.' -->
   <dd>One dimensional growing radius for rejection of neighbors to deviant points.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Quadproc</b> processes CCD images to remove all <span style="font-family: monospace;">"instrumental signatures"</span> from
   the data. The operations performed are:
@@ -315,7 +315,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   o correct for pixel-to-pixel sensitivity variations
   o correct for non-uniform iillumination
   o correct for fringing
-  </pre>
+  </pre></div>
   </dd>
   </dl>
   <br>
@@ -361,9 +361,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   description of the differences between the two tasks. For a user's guide and 
   cookbook for the <b>quad</b> package see <b>guide</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_1__parameters">
   <h3>1. parameters</h3>
-  <!-- BeginSection: '1. Parameters' -->
   <p>
   There are many parameters but they may be easily reviewed and modified using
   the task <b>eparam</b>.
@@ -415,9 +415,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   up into groups, in <span style="font-family: monospace;">"@"</span> files for example, each with their own calibration
   frames.
   </p>
-  <!-- EndSection:   '1. Parameters' -->
+  </section>
+  <section id="s_2__fixpix">
   <h3>2. fixpix</h3>
-  <!-- BeginSection: '2. Fixpix' -->
   <p>
   Regions of bad lines and columns may be replaced by linear
   interpolation from neighboring lines and columns when the parameter
@@ -448,9 +448,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   or indirectly if the parameter has the value <span style="font-family: monospace;">"image"</span>.  In the latter case
   the instrument file must contain the name of the file.
   </p>
-  <!-- EndSection:   '2. Fixpix' -->
+  </section>
+  <section id="s_3__overscan">
   <h3>3. overscan</h3>
-  <!-- BeginSection: '3. Overscan' -->
   <p>
   The portion of the image used to determine the readout bias level is specified
   with the parameter <b>biassec</b>. This may be an explicit image section, or it
@@ -506,9 +506,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   (unless the sky level is zero) because of gain difference between the
   amplifiers.
   </p>
-  <!-- EndSection:   '3. Overscan' -->
+  </section>
+  <section id="s_4__trim">
   <h3>4. trim</h3>
-  <!-- BeginSection: '4. Trim' -->
   <p>
   When the parameter <i>trim</i> is set the input image will be trimmed to
   the image section given by the parameter <i>trimsec</i>. This may be an explicit
@@ -539,9 +539,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   The trim section used for science images should, of course, be the same as 
   that used for the calibration images.
   </p>
-  <!-- EndSection:   '4. Trim' -->
+  </section>
+  <section id="s_5__zerocor">
   <h3>5. zerocor</h3>
-  <!-- BeginSection: '5. Zerocor' -->
   <p>
   After the readout bias is subtracted, as defined by the overscan or prescan
   region, there may still be a zero level bias.  This level may be two
@@ -561,9 +561,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   overscan correction, trimming, and averaging to one dimension if the
   readout correction is specified.
   </p>
-  <!-- EndSection:   '5. Zerocor' -->
+  </section>
+  <section id="s_6__darkcor">
   <h3>6. darkcor</h3>
-  <!-- BeginSection: '6. Darkcor' -->
   <p>
   Dark counts are subtracted by scaling a dark count calibration image to
   the same exposure time as the input image and subtracting.  The
@@ -578,9 +578,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   consists of bad pixel replacement, overscan and zero level correction,
   and trimming.
   </p>
-  <!-- EndSection:   '6. Darkcor' -->
+  </section>
+  <section id="s_7__flatcor">
   <h3>7. flatcor</h3>
-  <!-- BeginSection: '7. Flatcor' -->
   <p>
   The relative detector pixel response is calibrated by dividing by a
   scaled flat field calibration image.  A flat field image is obtained by
@@ -616,9 +616,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <i>minreplace</i> parameter only applies to flat fields processed by
   <b>quadproc</b>.
   </p>
-  <!-- EndSection:   '7. Flatcor' -->
+  </section>
+  <section id="s_8__illumcor">
   <h3>8. illumcor</h3>
-  <!-- BeginSection: '8. Illumcor' -->
   <p>
   CCD images processed through the flat field calibration may not be
   completely flat (in the absence of objects).  In particular, a blank
@@ -646,9 +646,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   with the flat field.  These methods are discussed further in the
   tasks which create them; <b>mkillumcor</b> and <b>mkskycor</b>.
   </p>
-  <!-- EndSection:   '8. Illumcor' -->
+  </section>
+  <section id="s_9__fringecor">
   <h3>9. fringecor</h3>
-  <!-- BeginSection: '9. Fringecor' -->
   <p>
   There may be a fringe pattern in the images due to the night sky lines.
   To remove this fringe pattern a blank sky image is heavily smoothed
@@ -661,9 +661,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   a fringe correction image for each subset to be processed.
   The task <b>mkfringecor</b> is used to create the fringe correction images.
   </p>
-  <!-- EndSection:   '9. Fringecor' -->
+  </section>
+  <section id="s_10__readcor">
   <h3>10. readcor</h3>
-  <!-- BeginSection: '10. Readcor' -->
   <p>
   If a zero level correction is desired (<i>zerocor</i> parameter)
   and the parameter <i>readcor</i> is yes then a single zero level
@@ -677,9 +677,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   averaging across the readout axis.  Note that this modifies the zero
   level calibration image.
   </p>
-  <!-- EndSection:   '10. Readcor' -->
+  </section>
+  <section id="s_11__scancor">
   <h3>11. scancor</h3>
-  <!-- BeginSection: '11. Scancor' -->
   <p>
   CCD detectors may be operated in several modes in astronomical
   applications.  The most common is as a direct imager where each pixel
@@ -716,14 +716,14 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   it will be averaged across the readout axis to form a one dimensional
   correction image.
   </p>
-  <!-- EndSection:   '11. Scancor' -->
+  </section>
+  <section id="s_12__outline_of_processing_steps">
   <h3>12. outline of processing steps</h3>
-  <!-- BeginSection: '12. Outline of Processing Steps' -->
   <p>
   Because of the special handling required for multi-readout data
   <b>quadproc</b> internally reduces the data in two stages.
   </p>
-  <dl>
+  <dl id="l_Stage">
   <dt><b>Stage one</b></dt>
   <!-- Sec='12. Outline of Processing Steps' Level=0 Label='Stage' Line='Stage one' -->
   <dd>The operations which may be performed in the first stage are badpixel
@@ -751,7 +751,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   image names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Stage">
   <dt><b>Stage two</b></dt>
   <!-- Sec='12. Outline of Processing Steps' Level=0 Label='Stage' Line='Stage two' -->
   <dd><b>Ccdproc</b> is now run a second time to process ALL input images. For those
@@ -794,9 +794,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   then done sequentially on all images in the input list.
   </dd>
   </dl>
-  <!-- EndSection:   '12. Outline of Processing Steps' -->
+  </section>
+  <section id="s_13__processing_arithmetic">
   <h3>13. processing arithmetic</h3>
-  <!-- BeginSection: '13. Processing Arithmetic' -->
   <p>
   The <b>quadproc</b> task has two data paths, one for real image pixel datatypes
   and one for short integer pixel datatype.  In addition internal arithmetic
@@ -833,9 +833,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   of the computation.
   </dd>
   </dl>
-  <!-- EndSection:   '13. Processing Arithmetic' -->
+  </section>
+  <section id="s_14__in_the_absence_of_image_header_information">
   <h3>14. in the absence of image header information</h3>
-  <!-- BeginSection: '14. In the Absence of Image Header Information' -->
   <p>
   The tasks in the <b>quad</b> package are most convenient to use when
   the CCD image type, subset, and exposure time are contained in the
@@ -860,9 +860,9 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   works because the exposure times default to 1 if they are not given in
   the image header.
   </p>
-  <!-- EndSection:   '14. In the Absence of Image Header Information' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The user's <b>guide</b> presents a tutorial in the use of this task.
   </p>
@@ -870,22 +870,22 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   1. In general all that needs to be done is to set the task parameters
   and enter
   </p>
-  <p>
-  	cl&gt; quadproc *.imh &amp;
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; quadproc *.imh &amp;
+  </pre></div>
   <p>
   This will run in the background and process all images which have not
   been processed previously.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   quadformat, ccdproc, instruments, ccdtypes, flatfields, icfit, quad, guide,
   mkillumcor, mkskycor, mkfringecor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' '1. Parameters' '2. Fixpix' '3. Overscan' '4. Trim' '5. Zerocor' '6. Darkcor' '7. Flatcor' '8. Illumcor' '9. Fringecor' '10. Readcor' '11. Scancor' '12. Outline of Processing Steps' '13. Processing Arithmetic' '14. In the Absence of Image Header Information' 'EXAMPLES' 'SEE ALSO'  -->
   

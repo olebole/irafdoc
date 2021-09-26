@@ -7,21 +7,21 @@ sensfunc: Create sensitivity function
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   sensfunc standards sensitivity
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_standards">
   <dt><b>standards = <span style="font-family: monospace;">"std"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='standards' Line='standards = "std"' -->
   <dd>Input standard star data file created by the task <b>standard</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sensitivity">
   <dt><b>sensitivity = <span style="font-family: monospace;">"sens"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sensitivity' Line='sensitivity = "sens"' -->
   <dd>Output sensitivity function image name or rootname.  Generally each
@@ -32,7 +32,7 @@ sensfunc: Create sensitivity function
   with no extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected from the input file.  All other apertures
@@ -40,7 +40,7 @@ sensfunc: Create sensitivity function
   See <b>ranges</b> for the syntax.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ignoreaps">
   <dt><b>ignoreaps = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no' -->
   <dd>Ignore aperture numbers and create a single sensitivity function?  Normally
@@ -49,7 +49,7 @@ sensfunc: Create sensitivity function
   a single sensitivity function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Output log filename for statistical information about the stars used
@@ -57,7 +57,7 @@ sensfunc: Create sensitivity function
   If no filename is given then no file is written.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extinction">
   <dt><b>extinction = &lt;no default&gt;</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = &lt;no default&gt;' -->
   <dd>Input extinction file.  Any extinction determination made will be
@@ -72,7 +72,7 @@ sensfunc: Create sensitivity function
   This includes using no extinction file in both tasks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_newextinction">
   <dt><b>newextinction = <span style="font-family: monospace;">"extinct.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newextinction' Line='newextinction = "extinct.dat"' -->
   <dd>Output revised extinction file.  If the extinction is revised and an
@@ -80,7 +80,7 @@ sensfunc: Create sensitivity function
   has the same format as the standard extinction files.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">")_.observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = ")_.observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
@@ -95,7 +95,7 @@ sensfunc: Create sensitivity function
   <b>observatory</b> for additional information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>Function used to fit the sensitivity data.  The function types are
@@ -103,7 +103,7 @@ sensfunc: Create sensitivity function
   and <span style="font-family: monospace;">"spline1"</span> linear spline.  The default value may be changed interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 6</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 6' -->
   <dd>Order of the sensitivity fitting function.  The value corresponds to the
@@ -111,7 +111,7 @@ sensfunc: Create sensitivity function
   value may be changed interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Determine the sensitivity function interactively?  If yes the user
@@ -119,24 +119,24 @@ sensfunc: Create sensitivity function
   affecting the sensitivity function, and determines a residual extinction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphs">
   <dt><b>graphs = <span style="font-family: monospace;">"sr"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphs' Line='graphs = "sr"' -->
   <dd>Graphs to be displayed per frame.  From one to four graphs may be displayed
   per frame.  The graph types are selected by single characters and are:
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   a - residual sensitivity vs airmass
   c - composite residual sensitivity and error bars vs wavelength
   e - input extinction and revised extinction vs wavelength
   i - Flux calibrated spectrum vs wavelength
   r - residual sensitivity vs wavelength
   s - sensitivity vs wavelength
-  </pre>
+  </pre></div>
   All other characters including whitespace and commas are ignored.  The order
   and number of graphs determines the positions of the graphs.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_marks">
   <dt><b>marks = <span style="font-family: monospace;">"plus cross box"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='marks' Line='marks = "plus cross box"' -->
   <dd>Symbols used to mark included, deleted, and added data respectively.
@@ -145,7 +145,7 @@ sensfunc: Create sensitivity function
   vebar (vertical error bar), and circle.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_colors">
   <dt><b>colors = <span style="font-family: monospace;">"2 1 3 4"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='colors' Line='colors = "2 1 3 4"' -->
   <dd>Colors to use for <span style="font-family: monospace;">"lines"</span>, <span style="font-family: monospace;">"marks"</span>, <span style="font-family: monospace;">"deleted"</span> data, and <span style="font-family: monospace;">"added"</span> data.
@@ -154,71 +154,71 @@ sensfunc: Create sensitivity function
   devices that don't support colors only one color will appear.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input list.  If not specified as a file then standard
   graphics cursor is read.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph"' -->
   <dd>Graphics output device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_answer">
   <dt><b>answer</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='answer' Line='answer' -->
   <dd>Query parameter for selecting whether to fit apertures interactively.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
-  <pre>
-  ?	Print help
-  a	Add a point at the cursor position
-  c	Toggle use of composite points
-  d	Delete point, star, or wavelength nearest the cursor
-  e	Toggle residual extinction correction
-  f	Fit data with a sensitivity function and overplot
-  g	Fit data with a sensitivity function and redraw the graph(s)
-  i	Print information about point nearest the cursor
-  m	Move point, star, wavelength nearest the cursor to new sensitivity
-  o	Reset to original data
-  q	Quit and write sensitivity function for current aperture
-  r	Redraw graph(s)
-  s	Toggle shift of standard stars to eliminate mean deviations
-  u	Undelete point, star, or wavelength nearest the cursor
-  w	Change weights of point, star, or wavelength nearest the cursor
+  <div class="highlight-default-notranslate"><pre>
+  ?       Print help
+  a       Add a point at the cursor position
+  c       Toggle use of composite points
+  d       Delete point, star, or wavelength nearest the cursor
+  e       Toggle residual extinction correction
+  f       Fit data with a sensitivity function and overplot
+  g       Fit data with a sensitivity function and redraw the graph(s)
+  i       Print information about point nearest the cursor
+  m       Move point, star, wavelength nearest the cursor to new sensitivity
+  o       Reset to original data
+  q       Quit and write sensitivity function for current aperture
+  r       Redraw graph(s)
+  s       Toggle shift of standard stars to eliminate mean deviations
+  u       Undelete point, star, or wavelength nearest the cursor
+  w       Change weights of point, star, or wavelength nearest the cursor
   
   :flux [min] [max]  Limits for flux calibrated graphs (INDEF for autoscale)
   :function [type]   Function to be fit to sensitivity data:
-  			chebyshev - Chebyshev polynomial
-  			legendre  - Legendre polynomial
-  			spline1   - Linear spline
-  			spline3   - Cubic spline
+                          chebyshev - Chebyshev polynomial
+                          legendre  - Legendre polynomial
+                          spline1   - Linear spline
+                          spline3   - Cubic spline
   :graphs [types]    Graphs to be displayed (up to four):
-  		a - Residual sensitivity vs airmass
-  		c - Composite residuals and error bars vs wavelength
-  		e - Extinction (and revised extinction) vs wavelength
-  		i - Flux calibrated image vs wavelength
-  		l - Log of flux calibrated image vs wavelength
-  		r - Residual sensitivity vs wavelength
-  		s - Sensitivity vs wavelength
+                  a - Residual sensitivity vs airmass
+                  c - Composite residuals and error bars vs wavelength
+                  e - Extinction (and revised extinction) vs wavelength
+                  i - Flux calibrated image vs wavelength
+                  l - Log of flux calibrated image vs wavelength
+                  r - Residual sensitivity vs wavelength
+                  s - Sensitivity vs wavelength
   :images [images]   Images to flux calibrate and plot (up to four)
   :marks marks       Mark types to use for included, delete, and added points:
-  			point, box, plus, cross, diamond, hline,
-  			vline, hebar, vebar, circle
+                          point, box, plus, cross, diamond, hline,
+                          vline, hebar, vebar, circle
   :order [order]     Order of function
   :skys [images]     Sky images for flux calibration (up to four)
   :stats [file]      Statistics about stars and sensitivity fit
   :vstats [file]     Verbose statistics about sensitivity fit
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  </pre></div>
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Standard star calibration measurements are used to determine the system
   sensitivity as a function of wavelength for each independent aperture.
@@ -356,14 +356,14 @@ sensfunc: Create sensitivity function
   The user selects how many and which types of graphs to display.  The
   graph types and their single character code used to select them are:
   </p>
-  <pre>
-     a - residual sensitivity vs airmass
-     c - composite residual sensitivity and error bars vs wavelength
-     e - input extinction and revised extinction vs wavelength
-     i - Flux calibrated spectrum vs wavelength
-     r - residual sensitivity vs wavelength
-     s - sensitivity vs wavelength
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  a - residual sensitivity vs airmass
+  c - composite residual sensitivity and error bars vs wavelength
+  e - input extinction and revised extinction vs wavelength
+  i - Flux calibrated spectrum vs wavelength
+  r - residual sensitivity vs wavelength
+  s - sensitivity vs wavelength
+  </pre></div>
   <p>
   The initial graphs are selected with the parameter <b>graphs</b> and changed
   interactively with the colon command ':graphs <i>types</i>'.  The ability
@@ -446,15 +446,15 @@ sensfunc: Create sensitivity function
   original input extinction by the new extinction and rederive the
   sensitivity.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following command generates sensitivity spectra
   </p>
-  <p>
-  	cl&gt; sensfunc std sens
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; sensfunc std sens
+  </pre></div>
   <p>
   This command uses the data from the <b>standard</b> output
   file <span style="font-family: monospace;">"std"</span> to create sensitivity functions with rootname <span style="font-family: monospace;">"sens"</span>.
@@ -472,38 +472,38 @@ sensfunc: Create sensitivity function
   if no argument is given the current value is displayed.  For the statistics
   commands an optional output file may be given to record the information.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   :flux 1e-12 INDEF    Set lower limit for flux plots
   :flux INDEF INDEF    Restore autoscaling in flux plots
-  :func spline3	     Select cubic spline function
-  :g srae		     Graph sensitivity, residuals, airmass,
-  		     and extinction
-  :g sii		     Graph sensitivity and two images
+  :func spline3        Select cubic spline function
+  :g srae              Graph sensitivity, residuals, airmass,
+                       and extinction
+  :g sii               Graph sensitivity and two images
   :i n1.0004 n1.0008   Set first two images to graph (the defaults
-  		     are taken from the standard star list)
-  :skys n1.0005	     Subtract this sky image from first image
-  		     for flux calibrated spectrum
-  :m plus		     Change the mark type for included points and
-  		     don't change the deleted or added point mark type
-  :stats		     Print statistics to terminal
+                       are taken from the standard star list)
+  :skys n1.0005        Subtract this sky image from first image
+                       for flux calibrated spectrum
+  :m plus              Change the mark type for included points and
+                       don't change the deleted or added point mark type
+  :stats               Print statistics to terminal
   :vstats stdstats     Print verbose statistics to file
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SENSFUNC">
   <dt><b>SENSFUNC V2.10.3+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.10.3+' -->
   <dd>Deleted points and stars are now ignored from the grey shift calculation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SENSFUNC">
   <dt><b>SENSFUNC V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.10.3' -->
   <dd>A color parameter was added for graphics terminals supporting color.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SENSFUNC">
   <dt><b>SENSFUNC V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.10' -->
   <dd>The latitude parameter has been replaced by the observatory parameter.
@@ -512,12 +512,12 @@ sensfunc: Create sensitivity function
   command allows fixing the flux limits for the flux calibrated graphs.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SENSFUNC">
   <dt><b>SENSFUNC V2.8</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SENSFUNC' Line='SENSFUNC V2.8' -->
   <dd>This task has been completely rewritten from that of versions 2.5 and
   earlier.
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1. The input standard data format is different.
   2. Extinction corrections beyond a grey term are now supported.
   3. Weighting by the counts is not supported.
@@ -528,12 +528,12 @@ sensfunc: Create sensitivity function
   8. One or more flux calibrated images may be displayed using the
      current sensitivity function.
   9. Additional flexibility is provided for treating apertures.
-  </pre>
+  </pre></div>
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   If the flux points do not span the wavelength range, set by the
   standard star observations, then the fitting may fail at some maximum
@@ -544,14 +544,14 @@ sensfunc: Create sensitivity function
   part of the image data which cannot be uncalibrated (using
   <b>scopy</b> or <b>dispcor</b>).
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   standard, lcalib, calibrate, observatory, icfit, ranges, scopy, dispcor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR COMMANDS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  -->
   

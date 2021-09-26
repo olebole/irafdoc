@@ -7,55 +7,55 @@ selftest: Self test program to check DTOI transformation
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   selftest nbits
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_nbits">
   <dt><b>nbits = 12</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nbits' Line='nbits = 12' -->
   <dd>Dymanic range of data to test.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"stdgraph"</span> </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "stdgraph" ' -->
   <dd>Plotting device for graphical output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>A table of density, intensity values is printed if <b>verbose</b> = yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ceiling">
   <dt><b>ceiling = 30000.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ceiling' Line='ceiling = 30000.' -->
   <dd>Maximum intensity to output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_max_raw">
   <dt><b>max_raw = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='max_raw' Line='max_raw = 0' -->
   <dd>The maximum raw data value.  Needed only if <i>nbits</i> equals something
   other than 12, 15 or 0.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 0.0' -->
   <dd>The raw data value to density scale value.  Needed only if <i>nbits</i>
   equals something other than 12, 15, or 0.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>selftest</i> is a test program for the <i>dtoi</i> package.  Its 
   output can be examined to see if numerical errors are introduced during
@@ -92,27 +92,25 @@ selftest: Self test program to check DTOI transformation
   In verbose mode, <b>selftest</b> produced a three column table of raw
   data value, density and calculated intensity. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   Run task selftest for 12 bit data with plots appearing on the terminal.
   
-  	cl&gt; selftest
-  
-  </pre>
+          cl&gt; selftest
+  </pre></div>
   <p>
   Run selftest in verbose mode, spooling the output to file 'ditable'.  This
   file is then run through the 'fields' task to extract the density and intensity
   columns which are piped to plot.  The results in a plot of the look up table.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; selftest ver+ &gt; ditable
+  cl&gt; fields ditable 2,3 | graph xlab=Density ylab=Intensity
+  </pre></div>
   
-  	cl&gt; selftest ver+ &gt; ditable
-  	cl&gt; fields ditable 2,3 | graph xlab=Density ylab=Intensity
-  </pre>
-  
-  <!-- EndSection:    'EXAMPLES' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

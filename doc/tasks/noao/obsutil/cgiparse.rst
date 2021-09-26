@@ -7,30 +7,30 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
 
 .. raw:: html
 
+  <section id="s_synopsis">
   <h3>Synopsis</h3>
-  <!-- BeginSection: 'SYNOPSIS' -->
   <p>
   CGIPARSE parses the STRING_QUERY environment varabile and sets parameters.
   The string format is a list of task.param=value pairs which includes the
   standard QUERY string special characters <span style="font-family: monospace;">'&amp;'</span>, <span style="font-family: monospace;">'+'</span>, and <span style="font-family: monospace;">'%'</span>.  This is
   intended to parse a query from a CGI script.
   </p>
-  <!-- EndSection:   'SYNOPSIS' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   cgiparse
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <p>
   There are no parameters.  The input is the value of the QUERY_STRING
   environment variable.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   CGIPARSE parses the STRING_QUERY environment varabile and sets parameters.
   The string format is a list of task.param=value pairs which includes the
@@ -45,30 +45,30 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
   assumes the tasks are defined.  Theere is no error checking for
   undefined tasks or parameters.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  A CGI script calls a CL script with the STRING_QUERY string set.
   The string has <span style="font-family: monospace;">"imheader.longheader=yes"</span>.  CGIPARSE is called and
   when it completes the parameter value is set.
   </p>
-  <pre>
-      cl&gt; lpar imhead
-      cl&gt; lpar imheader
-             images =                 image names
-            (imlist = "*.imh,*.fits,*.pl,*.qp,*.hhh") default image ...
-        (longheader = no)             print header in multi-line format
-        (userfields = yes)            print the user fields ...
-              (mode = "ql")           
-      cl&gt; cgiparse
-      cl&gt; lpar imheader
-             images =                 image names
-            (imlist = "*.imh,*.fits,*.pl,*.qp,*.hhh") default image ...
-        (longheader = yes)            print header in multi-line format
-        (userfields = yes)            print the user fields ...
-              (mode = "ql")           
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; lpar imhead
+  cl&gt; lpar imheader
+         images =                 image names
+        (imlist = "*.imh,*.fits,*.pl,*.qp,*.hhh") default image ...
+    (longheader = no)             print header in multi-line format
+    (userfields = yes)            print the user fields ...
+          (mode = "ql")
+  cl&gt; cgiparse
+  cl&gt; lpar imheader
+         images =                 image names
+        (imlist = "*.imh,*.fits,*.pl,*.qp,*.hhh") default image ...
+    (longheader = yes)            print header in multi-line format
+    (userfields = yes)            print the user fields ...
+          (mode = "ql")
+  </pre></div>
   <p>
   Note that when running this in a <span style="font-family: monospace;">"#!cl"</span> script where the <span style="font-family: monospace;">"login.cl"</span> is
   not used that you must be careful to have all tasks referenced by the
@@ -79,10 +79,10 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
   a spectral exposure time calculator based on OBSUTIL.SPTIME though many
   aspects are fairly generic for this type of application.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   #!/iraf/iraf/bin.freebsd/cl.e -f
   
-  file	urldir
+  file    urldir
   
   # The following must be set for different hosts.
   # The home directory and the urldir are the same but in different syntax.
@@ -154,15 +154,14 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
       files *.gif | count STDIN | scan (i)
   }
   
-  
   if (i &gt; 0) {
       printf ("&lt;br&gt;&lt;p&gt;&lt;em&gt;Note: DN and S/N are per-pixel&lt;/em&gt;&lt;br&gt;\n")
-  	
+  
       files *.gif &gt; gifs
       list = "gifs"
       while (fscan (list, s1) != EOF) {
-  	if (access (s1))
-  		printf ("&lt;img src=\"%s%s\"&gt;\n", urldir, s1)
+          if (access (s1))
+                  printf ("&lt;img src=\"%s%s\"&gt;\n", urldir, s1)
       }
       list = ""
       ## delete ("uparm$gifs", verify-)
@@ -180,12 +179,12 @@ cgiparse: Parse STRING_QUERY environment variable into task parameters
   ## delete ("*[^g][^i][^f]", verify-)
   
   logout
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SYNOPSIS' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -7,8 +7,8 @@ quadformat: Format for multi-amplifier CCD images
 
 .. raw:: html
 
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   CCDs may be readout from multiple amplifiers at the same time to increase
   the readout speed.  This produces multiple images of rectangular regions in
@@ -49,17 +49,17 @@ quadformat: Format for multi-amplifier CCD images
   The figure below illustrates a <span style="font-family: monospace;">"dual"</span> and <span style="font-family: monospace;">"quad"</span> readout with equal
   size regions.
   </p>
-  <pre>
-          +-----+-+-+-----+   +-----+-+-+-----+   +----------+-+
-          |  D  !B|B!  D  |   |  D  !B|B!  D  |   |     D    !B|
-          |  3  !3|4!  4  |   |  1  !1|2!  2  |   |     2    !2|
-          |     ! | !     |   |     ! | !     |   |          ! |
-          +-----+-+-+-----+   |     ! | !     |   +----------+-+
-          |  D  !B|B!  D  |   |     ! | !     |   |     D    !B|
-          |  1  !1|2!  2  |   |     ! | !     |   |     1    !1|
-          |     ! | !     |   |     ! | !     |   |          ! |
-          +-----+-+-+-----+   +-----+-+-+-----+   +----------+-+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  +-----+-+-+-----+   +-----+-+-+-----+   +----------+-+
+  |  D  !B|B!  D  |   |  D  !B|B!  D  |   |     D    !B|
+  |  3  !3|4!  4  |   |  1  !1|2!  2  |   |     2    !2|
+  |     ! | !     |   |     ! | !     |   |          ! |
+  +-----+-+-+-----+   |     ! | !     |   +----------+-+
+  |  D  !B|B!  D  |   |     ! | !     |   |     D    !B|
+  |  1  !1|2!  2  |   |     ! | !     |   |     1    !1|
+  |     ! | !     |   |     ! | !     |   |          ! |
+  +-----+-+-+-----+   +-----+-+-+-----+   +----------+-+
+  </pre></div>
   <p>
   The areas labeled D are the data sections and those labeled B are the
   bias sections.  The data and biases are match by the amplifier labels
@@ -74,9 +74,9 @@ quadformat: Format for multi-amplifier CCD images
   string keyword AMPLIST.  The value is a string of space separated
   amplifier labels.  For the above four amplifier example it would be
   </p>
-  <pre>
-      AMPLIST = '1 2 3 4'
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  AMPLIST = '1 2 3 4'
+  </pre></div>
   <p>
   For CTIO data the labels are '11  12 21 22'.   Note that the labels
   are appended to rootnames so they should be relatively short. 
@@ -93,28 +93,28 @@ quadformat: Format for multi-amplifier CCD images
   The various sections are defined below.  The labels again show the default
   untranslated keyword roots.
   </p>
-  <dl>
+  <dl id="l_ASEC">
   <dt><b>ASEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='ASEC' Line='ASEC' -->
   <dd>The section of the image containing the amplifier readout.  This is the
   combination of the data and bias regions as shown in the figures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_DSEC">
   <dt><b>DSEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='DSEC' Line='DSEC' -->
   <dd>The section of the image containing the actual CCD data exclusive of
   bias data.  In the figures these are the D regions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_BSEC">
   <dt><b>BSEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='BSEC' Line='BSEC' -->
   <dd>The section of the image containing the bias data.  In the figures these
   are the B regions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_TSEC">
   <dt><b>TSEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='TSEC' Line='TSEC' -->
   <dd>The second of the image containing the useful CCD data.  This defines
@@ -125,7 +125,7 @@ quadformat: Format for multi-amplifier CCD images
   trim regions at the edges of the CCD.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_CSEC">
   <dt><b>CSEC</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='CSEC' Line='CSEC' -->
   <dd>The section of the CCD corresponding to the data section in the image.
@@ -148,14 +148,14 @@ quadformat: Format for multi-amplifier CCD images
   from opposite corners are used some of them must be flipped by the
   data acquisition system before recording then in this <b>quadformat</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following is an example of a full 2048x2048 CCD readout with
   four amplifiers at CTIO.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   qu&gt; imhad quad0020
   quad0020[2196,2048][ushort]: IC 1257 5290 180s
   No bad pixels, min=435., max=61973.
@@ -240,13 +240,13 @@ quadformat: Format for multi-amplifier CCD images
   XPIXSIZE=                0.432 / Pixel size in X (arcsec/pix)
   YPIXSIZE=                0.432 / Pixel size in Y (arcsec/pix)
   RECID   = 'ct60.990707.011817' / NOAO Archive record ID
-  </pre>
+  </pre></div>
   <p>
   2.  The following is a more complex readout of a region where the
   full 2Kx2K CCD is not readout and where even the regions are not the
   same size.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   qu&gt; imhead quad0013
   quad0013[1686,1538][ushort]: R sky flat 7s
   No bad pixels, min=393., max=65535.
@@ -331,7 +331,7 @@ quadformat: Format for multi-amplifier CCD images
   XPIXSIZE=                0.432 / Pixel size in X (arcsec/pix)
   YPIXSIZE=                0.432 / Pixel size in Y (arcsec/pix)
   RECID   = 'ct60.990706.222551' / NOAO Archive record ID
-  </pre>
+  </pre></div>
   <p>
   3.  The following is for the raw image of example 2 after it has been
   processed by CCDPROC.  Note that the various bias, trim, and CCD sections are
@@ -339,7 +339,7 @@ quadformat: Format for multi-amplifier CCD images
   or evaluate the individual amplifier regions with tasks such as QUADSECTIONS,
   QUADSPLIT, and QSTATISTICS.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   qu&gt; imhead quad0013
   quad0013[1280,1280][real]: R sky flat 7s
   No bad pixels, min=unknown, max=unknown
@@ -418,9 +418,9 @@ quadformat: Format for multi-amplifier CCD images
   CCDMEAN =             9727.605
   CCDMEANT=            683126983
   CCDPROC = 'Aug 24 13:29 CCD processing done'
-  </pre>
+  </pre></div>
   
-  <!-- EndSection:    'EXAMPLES' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DESCRIPTION' 'EXAMPLES'  -->
   

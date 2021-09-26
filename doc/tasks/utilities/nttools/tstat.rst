@@ -7,14 +7,14 @@ tstat: Get mean, standard deviation, min, and max for a column.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tstat intable column
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task gets the mean, standard deviation, median, minimum and maximum
   values for a table column.
@@ -65,10 +65,10 @@ tstat: Get mean, standard deviation, min, and max for a column.
   by using 'tdump' and piping the output to 'tstat'.
   See the examples for more information.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name template]' -->
   <dd>A list of input tables.
@@ -79,7 +79,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
   it will be taken to be the column name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_column">
   <dt><b>column [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
   <dd>Column in input tables.
@@ -228,17 +228,16 @@ tstat: Get mean, standard deviation, min, and max for a column.
   This is a task output parameter.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Get statistics on column <span style="font-family: monospace;">"flux"</span> in all tables, putting the output
   (assuming outtable=<span style="font-family: monospace;">"STDOUT"</span>) in the ASCII file 'flux.lis':
   </p>
-  <pre>
-  
-      tt&gt; tstat *.tab flux &gt; flux.lis
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tstat *.tab flux &gt; flux.lis
+  </pre></div>
   <p>
   2.  In order to get statistics on the data
   in a row rather than a column,
@@ -253,59 +252,54 @@ tstat: Get mean, standard deviation, min, and max for a column.
   so we don't specify the column name either.
   In this example, we get statistics on row 17 of <span style="font-family: monospace;">"bs.fits"</span>:
   </p>
-  <pre>
-  
-      tt&gt; tdump bs.fits cdfile="" pfile="" \<br>
-      &gt;&gt;&gt; row=17 pwidth=15 | tstat
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tdump bs.fits cdfile="" pfile="" \<br>
+  &gt;&gt;&gt; row=17 pwidth=15 | tstat
+  </pre></div>
   <p>
   3.  When the input is redirected and has multiple columns,
   the command-line argument should be the column name to use,
   not the table name.
   The table name in this case will internally be set to <span style="font-family: monospace;">"STDIN"</span>.
   </p>
-  <pre>
-  
-      tt&gt; dir l+ | tstat c3
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; dir l+ | tstat c3
+  </pre></div>
   <p>
   4.  The statistics on column <span style="font-family: monospace;">"flux"</span> in 'hr465.tab' are put in parameters
   'tstat.nrows', 'tstat.mean', etc.,
   and are not written to STDOUT or to a table.
   We only include rows for which column V is no larger than 12.
   </p>
-  <pre>
-  
-      tt&gt; tstat "hr465.tab[r:v=:12][c:flux]" outtable=""
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tstat "hr465.tab[r:v=:12][c:flux]" outtable=""
+  </pre></div>
   <p>
   5.  The output statistics are written to a table.  The default column name
   for the mean value is overridden:
   </p>
-  <pre>
-  
-      tt&gt; tstat hr465.tab flux outtable=hr465s.tab n_mean="mean_flux"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tstat hr465.tab flux outtable=hr465s.tab n_mean="mean_flux"
+  </pre></div>
   <p>
   6.  Get statistics on column <span style="font-family: monospace;">"flux"</span> in table 'hr465.tab', but only for
   rows 17 through 116, row 271, and row 952:
   </p>
-  <pre>
-  
-      tt&gt; tstat hr465.tab[c:flux] outtable="STDOUT" row="17-116,271,952"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  tt&gt; tstat hr465.tab[c:flux] outtable="STDOUT" row="17-116,271,952"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   thistogram, ranges
   </p>
@@ -314,7 +308,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
   package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

@@ -7,8 +7,8 @@ autoidentify: Automatically identify lines and fit dispersion
 
 .. raw:: html
 
+  <section id="s_summary">
   <h3>Summary</h3>
-  <!-- BeginSection: 'SUMMARY' -->
   <p>
   Spectral lines are automatically identified from a list of coordinates
   by pattern matching.  The identified lines are then used to fit a
@@ -16,16 +16,16 @@ autoidentify: Automatically identify lines and fit dispersion
   in dispersion calibration.  After a solution is found the identified
   lines and dispersion function may be examined interactively.
   </p>
-  <!-- EndSection:   'SUMMARY' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   autoidentify images crval cdelt
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images containing one dimensional spectra in which to identify
@@ -34,7 +34,7 @@ autoidentify: Automatically identify lines and fit dispersion
   dimensional spectral vector or use the <i>section</i> parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_crval">
   <dt><b>crval, cdelt</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crval' Line='crval, cdelt' -->
   <dd>These parameters specify an approximate coordinate value and coordinate
@@ -49,7 +49,7 @@ autoidentify: Automatically identify lines and fit dispersion
   and more likely to fail.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordlist">
   <dt><b>coordlist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = ""' -->
   <dd>Coordinate list consisting of an list of spectral line coordinates.
@@ -67,20 +67,20 @@ autoidentify: Automatically identify lines and fit dispersion
   See the help topic <i>linelists</i> for the available line lists.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_units">
   <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>The units to use if no database entry exists.  The units are specified as
   described in
-  <pre>
-      cl&gt; help onedspec.package section=units
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help onedspec.package section=units
+  </pre></div>
   If no units are specified and a coordinate list is used then the units of
   the coordinate list are selected.  If a database entry exists then the
   units defined there override both this parameter and the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes (no|yes|NO|YES)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes (no|yes|NO|YES)' -->
   <dd>After automatically identifying the spectral lines and dispersion function
@@ -91,7 +91,7 @@ autoidentify: Automatically identify lines and fit dispersion
   review is the same as the task <b>identify</b> with a few restriction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aidpars">
   <dt><b>aidpars = <span style="font-family: monospace;">""</span> (parameter set)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)' -->
   <dd>Parameter set for the automatic line identification algorithm.  The
@@ -102,7 +102,7 @@ autoidentify: Automatically identify lines and fit dispersion
   For two and three dimensional spectral images the following parameters are
   used to select a one dimensional spectrum.
   </p>
-  <dl>
+  <dl id="l_section">
   <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If an image is not one dimensional or specified as a one dimensional image
@@ -111,17 +111,17 @@ autoidentify: Automatically identify lines and fit dispersion
   derived from the vector direction.
   The section parameter may be specified directly as an image section or
   in one of the following forms
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   line|column|x|y|z first|middle|last|# [first|middle|last|#]]
   first|middle|last|# [first|middle|last|#] line|column|x|y|z
-  </pre>
+  </pre></div>
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator which
   is used with three dimensional data.  Abbreviations are allowed though
   beware that <span style="font-family: monospace;">'l'</span> is not a sufficient abbreviation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "1"' -->
   <dd>Number of lines, columns, or bands across the designated dispersion axis to
@@ -136,41 +136,41 @@ autoidentify: Automatically identify lines and fit dispersion
   <p>
   The following parameters are used in finding spectral lines.
   </p>
-  <dl>
+  <dl id="l_ftype">
   <dt><b>ftype = <span style="font-family: monospace;">"emission"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "emission"' -->
   <dd>Type of spectral lines to be identified.  The possibly abbreviated choices are
   <span style="font-family: monospace;">"emission"</span> and <span style="font-family: monospace;">"absorption"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fwidth">
   <dt><b>fwidth = 4.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4.' -->
   <dd>Full-width at the base (in pixels) of the spectral lines to be identified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.' -->
   <dd>The maximum distance, in pixels, allowed between a line position
   and the initial estimate when defining a new line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.' -->
   <dd>In order for a line center to be determined the range of pixel intensities
   around the line must exceed this threshold.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minsep">
   <dt><b>minsep = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.' -->
   <dd>The minimum separation, in pixels, allowed between line positions
   when defining a new line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = -3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = -3.' -->
   <dd>The maximum difference for a match between the line coordinate derived from
@@ -184,39 +184,39 @@ autoidentify: Automatically identify lines and fit dispersion
   coordinates.  The <b>icfit</b> routines are used and further descriptions
   about these parameters may be found under that topic.
   </p>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>The function to be fit to user coordinates as a function of the pixel
   coordinates.  The choices are <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>Order of the fitting function.  The order is the number of polynomial
   terms (coefficients) or the number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample regions for fitting specified in pixel coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 10' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 3.0, high_reject = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0' -->
   <dd>Lower and upper residual rejection in terms of the RMS of the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0' -->
   <dd>Distance from a rejected point in which additional points are automatically
@@ -226,7 +226,7 @@ autoidentify: Automatically identify lines and fit dispersion
   <p>
   The following parameters control the input and output.
   </p>
-  <dl>
+  <dl id="l_dbwrite">
   <dt><b>dbwrite = <span style="font-family: monospace;">"yes"</span>  (no|yes|NO|YES)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dbwrite' Line='dbwrite = "yes"  (no|yes|NO|YES)' -->
   <dd>Automatically write or update the database with the line identifications
@@ -238,7 +238,7 @@ autoidentify: Automatically identify lines and fit dispersion
   suppress any further queries for any remaining spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_overwrite">
   <dt><b>overwrite = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='overwrite' Line='overwrite = yes' -->
   <dd>Overwrite previous solutions in the database?  If there is a previous
@@ -248,27 +248,27 @@ autoidentify: Automatically identify lines and fit dispersion
   solution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database for reading and writing the line identifications and
   dispersion functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print results of the identification on the standard output?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile"' -->
   <dd>Filename for recording log information about the identifications.
   The null string, <span style="font-family: monospace;">""</span>, may be specified to skip recording the log information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>Filename for recording log plot information as IRAF metacode.  A
@@ -276,29 +276,29 @@ autoidentify: Automatically identify lines and fit dispersion
   (Plot output is currently not implemented.)
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device for the interactive review.  The default is the standard
   graphics device which is generally a graphics terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file for the interactive review.  If a cursor file is not
   given then the standard graphics cursor is read.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_query">
   <dt><b>query</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='query' Line='query' -->
   <dd>Parameter used by the program to query the user.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Autoidentify</b> automatically identifies spectral lines from a list of
   spectral line coordinates (<i>coordlist</i>) and determines a dispersion
@@ -448,47 +448,47 @@ autoidentify: Automatically identify lines and fit dispersion
   further queries.  For <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"YES"</span> the <i>identify</i> review  mode is
   entered.  To exit type <span style="font-family: monospace;">'q'</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following example finds a dispersion solution for the middle column
   of a long slit spectrum of a He-Ne-Ar arc spectrum using all the
   interactive options.
   </p>
-  <pre>
-      cl&gt; autoid arc0022 6000 6 coord=linelists$henear.dat sec="mid col"
-      AUTOIDENITFY: NOAO/IRAF IRAFX valdes@puppis Thu 15:50:31 25-Jan-96
-        Spectrum                # Found   Midpoint Dispersion        RMS
-        arc0022[50,*]                50      5790.       6.17      0.322
-      arc0022[50,*]: Examine identifications interactively?  (yes): 
-      arc0022[50,*]: Write results to database?  (yes): yes
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; autoid arc0022 6000 6 coord=linelists$henear.dat sec="mid col"
+  AUTOIDENITFY: NOAO/IRAF IRAFX valdes@puppis Thu 15:50:31 25-Jan-96
+    Spectrum                # Found   Midpoint Dispersion        RMS
+    arc0022[50,*]                50      5790.       6.17      0.322
+  arc0022[50,*]: Examine identifications interactively?  (yes):
+  arc0022[50,*]: Write results to database?  (yes): yes
+  </pre></div>
   <p>
   2.  The next example shows a non-interactive mode with no queries for
   the middle fiber of an extracted multispec image.
   </p>
-  <pre>
-      cl&gt; autoid.coordlist="linelists$henear.dat"
-      cl&gt; autoid a0003 5300 3.2 interactive- verbose- dbwrite=YES
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; autoid.coordlist="linelists$henear.dat"
+  cl&gt; autoid a0003 5300 3.2 interactive- verbose- dbwrite=YES
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_AUTOIDENTIFY">
   <dt><b>AUTOIDENTIFY V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='AUTOIDENTIFY' Line='AUTOIDENTIFY V2.11' -->
   <dd>This task is new in this version.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   identify, reidentify, aidpars, linelists, center1d, icfit, gtools
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

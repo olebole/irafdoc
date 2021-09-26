@@ -7,15 +7,15 @@ illumination: Determine illumination calibration
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   illumination images illuminations
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>Images to use in determining illumination calibrations.  These are
@@ -23,7 +23,7 @@ illumination: Determine illumination calibration
   portion of the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_illuminations">
   <dt><b>illuminations</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='illuminations' Line='illuminations' -->
   <dd>Iillumination calibration images to be created.  Each illumination image is
@@ -31,14 +31,14 @@ illumination: Determine illumination calibration
   otherwise it is created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Graph the average spectrum and select the dispersion bins
   and graph and fit the slit profile for each dispersion bin interactively?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bins">
   <dt><b>bins = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bins' Line='bins = ""' -->
   <dd>Range string defining the dispersions bins within which the slit profiles
@@ -46,7 +46,7 @@ illumination: Determine illumination calibration
   bins are determined by the parameter <i>nbins</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nbins">
   <dt><b>nbins = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins = 5' -->
   <dd>If the dispersion bins are not specified explicitly by the parameter
@@ -54,14 +54,14 @@ illumination: Determine illumination calibration
   nearly equal bins.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample of points to use in fitting each slit profile.
   The sample is selected with a range string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_naverage">
   <dt><b>naverage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='naverage' Line='naverage = 1' -->
   <dd>Number of sample points to average or median before fitting a function.
@@ -71,62 +71,62 @@ illumination: Determine illumination calibration
   used in fitting the slit profile.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>Function to fit to each dispersion bin to form the illumination function.
   The options are <span style="font-family: monospace;">"spline1"</span>, <span style="font-family: monospace;">"spline3"</span>, <span style="font-family: monospace;">"legendre"</span>, and <span style="font-family: monospace;">"chebyshev"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>Order of the fitting function or the number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 0., high_reject = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 0., high_reject = 0.' -->
   <dd>Rejection limits below and above the fit in units of the residual sigma.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0' -->
   <dd>Reject additional points within this distance of points exceeding the
   rejection threshold.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolator">
   <dt><b>interpolator = <span style="font-family: monospace;">"poly3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolator' Line='interpolator = "poly3"' -->
   <dd>Interpolation type.  One of <span style="font-family: monospace;">"nearest"</span>, <span style="font-family: monospace;">"linear"</span>, <span style="font-family: monospace;">"poly3"</span>, <span style="font-family: monospace;">"poly5"</span>, or
   <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device.  May be one of the standard devices <span style="font-family: monospace;">"stdgraph"</span>,
   <span style="font-family: monospace;">"stdplot"</span>, or <span style="font-family: monospace;">"stdvdm"</span> or an explicit device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics input device.  May be either null for the standard graphics cursor
   or a file containing cursor commands.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_cursor_keys">
   <h3>Cursor keys</h3>
-  <!-- BeginSection: 'CURSOR KEYS' -->
   <p>
   The interactive curve fitting package <b>icfit</b> is used to fit a function
   to the average calibration spectrum.  Additional help on using this package
@@ -142,19 +142,19 @@ illumination: Determine illumination calibration
   <dd>Clear the screen and print a menu of the cursor options.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i">
   <dt><b>i</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='i' Line='i' -->
   <dd>Initialize the sample ranges.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_q">
   <dt><b>q</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='q' Line='q' -->
   <dd>Exit interactive dispersion bin selection.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_s">
   <dt><b>s</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='s' Line='s' -->
   <dd>Set a bin with the cursor.  This may be repeated any number of times.
@@ -165,13 +165,13 @@ illumination: Determine illumination calibration
   The parameters are listed or set with the following commands which may be
   abbreviated.  To list the value of a parameter type the command alone.
   </p>
-  <pre>
-  :bins value		Iillumination bins
-  :show			Show the values of all the parameters
-  </pre>
-  <!-- EndSection:   'CURSOR KEYS' -->
+  <div class="highlight-default-notranslate"><pre>
+  :bins value             Iillumination bins
+  :show                   Show the values of all the parameters
+  </pre></div>
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   An illumination calibration, in the form of an image, is created for each
   longslit calibration image, normally a sky spectrum.  The illumination
@@ -262,45 +262,45 @@ illumination: Determine illumination calibration
   then be given until the last dispersion bin has been fit.  The illumination
   calibration image is then created.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To create an illumination image non-interactively:
   </p>
-  <pre>
-  	cl&gt; illumination sky illum nbins=8 order=20 interactive=no
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; illumination sky illum nbins=8 order=20 interactive=no
+  </pre></div>
   <p>
   2. To determine independent illuminations for a multislit image determine the
   image sections defining each slit.  Then the illumination functions are
   computed as follows:
   </p>
-  <pre>
-  	cl&gt; illumination sky[10:20,*],sky[35:45,*] illum,illum
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; illumination sky[10:20,*],sky[35:45,*] illum,illum
+  </pre></div>
   <p>
   3. Generally the slit image sections are prepared in a file which is then
   used to define the lists of input images and illuminations.
   </p>
-  <pre>
-  	cl&gt; illumination @slits @illums
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; illumination @slits @illums
+  </pre></div>
   <p>
   3.  If the DISPAXIS keyword is missing and the dispersion is running
   vertically (varying with the image lines):
   </p>
-  <pre>
-  	cl&gt; hedit *.imh dispaxis 2 add+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit *.imh dispaxis 2 add+
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   icfit, response
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

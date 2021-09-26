@@ -7,15 +7,15 @@ imjoin: Join images along a given dimension
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imjoin input output join_dimension 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The list of input images to be joined. The input images must have the
@@ -23,19 +23,19 @@ imjoin: Join images along a given dimension
   dimension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>The output combined image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_join_dimension">
   <dt><b>join_dimension</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='join_dimension' Line='join_dimension' -->
   <dd>The image dimension along which the input images will be joined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixtype">
   <dt><b>pixtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = ""' -->
   <dd>The output image pixel type. The options are in order of increasing
@@ -45,15 +45,15 @@ imjoin: Join images along a given dimension
   precedence input image datatype.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about actions taken by the task ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IMJOIN creates a single output image <i>output</i>  by joining a list of input
   images <i>input</i> along a specified dimension <i>join_dimension</i>. IMJOIN
@@ -64,10 +64,10 @@ imjoin: Join images along a given dimension
   all dimensions by the join dimension. The output image inherits the
   world coordinates system if any of the first input image.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1.  Join a list of 1-dimensional spectra into a single long output spectrum.
   
       cl&gt; imjoin @inlist output 1
@@ -75,26 +75,25 @@ imjoin: Join images along a given dimension
   2.  Join three datacubes along the z direction.
   
       cl&gt; imjoin c1,c2,c3 c123 3
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   On some systems there are limitations on the number of input images that
   can be joined in a single execution of IMJOIN.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imstack, imslice, imtile
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMINGS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,22 +7,22 @@ aidpars: Automatic line identification parameters and algorithm
 
 .. raw:: html
 
+  <section id="s_summary">
   <h3>Summary</h3>
-  <!-- BeginSection: 'SUMMARY' -->
   <p>
   The automatic line identification parameters and algorithm used in
   <b>autoidentify</b>, <b>identify</b>, and <b>reidentify</b> are described.
   </p>
-  <!-- EndSection:   'SUMMARY' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   aidpars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_reflist">
   <dt><b>reflist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reflist' Line='reflist = ""' -->
   <dd>Optional reference coordinate list to use in the pattern matching algorithm
@@ -31,7 +31,7 @@ aidpars: Automatic line identification parameters and algorithm
   lines for the specific data being identified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refspec">
   <dt><b>refspec = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refspec' Line='refspec = ""' -->
   <dd>Optional reference dispersion calibrated spectrum.  This template spectrum
@@ -40,7 +40,7 @@ aidpars: Automatic line identification parameters and algorithm
   the target spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_crpix">
   <dt><b>crpix = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crpix' Line='crpix = "INDEF"' -->
   <dd>Coordinate reference pixel for the coordinate reference value specified by
@@ -51,15 +51,15 @@ aidpars: Automatic line identification parameters and algorithm
   the target spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_crquad">
   <dt><b>crquad = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crquad' Line='crquad = INDEF' -->
   <dd>Quadratic correction to the detected pixel positions to <span style="font-family: monospace;">"linearize"</span> the
   pattern of line spacings.  The corrected positions x' are derived from
   the measured positions x by
-  <pre>
-      x' = x + crquad * (x - crpix)**2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  x' = x + crquad * (x - crpix)**2
+  </pre></div>
   where crpix is the pixel reference point as defined by the <i>crpix</i>
   parameter.  The measured and corrected positions may be examined by
   using the <span style="font-family: monospace;">'t'</span> debug flag.  The value may be a number or a header
@@ -67,7 +67,7 @@ aidpars: Automatic line identification parameters and algorithm
   to zero; i.e. no quadratic correction.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cddir">
   <dt><b>cddir = <span style="font-family: monospace;">"sign"</span> (unknown|sign|increasing|decreasing)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cddir' Line='cddir = "sign" (unknown|sign|increasing|decreasing)' -->
   <dd>The sense of the dispersion increment with respect to the pixel coordinates
@@ -78,7 +78,7 @@ aidpars: Automatic line identification parameters and algorithm
   <span style="font-family: monospace;">"unknown"</span> if the sense is unknown and to be determined by the algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_crsearch">
   <dt><b>crsearch = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crsearch' Line='crsearch = "INDEF"' -->
   <dd>Coordinate reference value search radius.  The value may be specified
@@ -94,7 +94,7 @@ aidpars: Automatic line identification parameters and algorithm
   of 10% of the estimated dispersion range.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cdsearch">
   <dt><b>cdsearch = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cdsearch' Line='cdsearch = "INDEF"' -->
   <dd>Dispersion coordinate increment search radius.  The value may be specified
@@ -108,14 +108,14 @@ aidpars: Automatic line identification parameters and algorithm
   of 10% of <i>cdelt</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ntarget">
   <dt><b>ntarget = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ntarget' Line='ntarget = 100' -->
   <dd>Number of spectral lines from the target spectrum to use in the pattern
   matching.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_npattern">
   <dt><b>npattern = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='npattern' Line='npattern = 5' -->
   <dd>Initial number of spectral lines in patterns to be matched.  There is a
@@ -127,14 +127,14 @@ aidpars: Automatic line identification parameters and algorithm
   search more possiblities.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nneighbors">
   <dt><b>nneighbors = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nneighbors' Line='nneighbors = 10' -->
   <dd>Number of neighbors to use in making patterns of lines.  This parameter
   restricts patterns to include lines which are near each other.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nbins">
   <dt><b>nbins = 6</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nbins' Line='nbins = 6' -->
   <dd>Maximum number of bins to divide the reference coordinate list or spectrum
@@ -144,7 +144,7 @@ aidpars: Automatic line identification parameters and algorithm
   searched for a solution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ndmax">
   <dt><b>ndmax = 1000</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ndmax' Line='ndmax = 1000' -->
   <dd>Maximum number of candidate dispersions to examine.  The algorithm ranks
@@ -155,7 +155,7 @@ aidpars: Automatic line identification parameters and algorithm
   dispersion in the ranked list are examined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aidord">
   <dt><b>aidord = 3 (minimum of 2)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aidord' Line='aidord = 3 (minimum of 2)' -->
   <dd>The order of the dispersion function fit by the automatic identification
@@ -166,28 +166,28 @@ aidpars: Automatic line identification parameters and algorithm
   degrees of freedom if finding incorrect line identifications.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxnl">
   <dt><b>maxnl = 0.02</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxnl' Line='maxnl = 0.02' -->
   <dd>Maximum non-linearity allowed in any trial dispersion function.
   The definition of the non-linearity test is
-  <pre>
-      maxnl &gt; (w(0.5) - w(0)) / (w(1) - w(0)) - 0.5
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  maxnl &gt; (w(0.5) - w(0)) / (w(1) - w(0)) - 0.5
+  </pre></div>
   where w(x) is the dispersion function value (e.g. wavelength) of the fit
   and x is a normalized pixel positions where the endpoints of the spectrum
   are [0,1].  If the test fails on a trial dispersion fit then a linear
   function is determined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nfound">
   <dt><b>nfound = 6</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nfound' Line='nfound = 6' -->
   <dd>Minimum number of identified spectral lines required in the final solution.
   If a candidate solution has fewer identified lines it is rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigma">
   <dt><b>sigma = 0.05</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 0.05' -->
   <dd>Sigma (uncertainty) in the line center estimates specified in pixels.
@@ -195,14 +195,14 @@ aidpars: Automatic line identification parameters and algorithm
   the observed patterns of lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minratio">
   <dt><b>minratio = 0.1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minratio' Line='minratio = 0.1' -->
   <dd>Minimum spacing ratio used.  Patterns of lines in which the ratio of
   spacings between consecutive lines is less than this amount are excluded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rms">
   <dt><b>rms = 0.1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rms' Line='rms = 0.1' -->
   <dd>RMS goal for a correct dispersion solution.  This is the RMS in the
@@ -214,7 +214,7 @@ aidpars: Automatic line identification parameters and algorithm
   the dispersion.  The RMS will be small for a valid solution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fmatch">
   <dt><b>fmatch = 0.2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fmatch' Line='fmatch = 0.2' -->
   <dd>Goal for the fraction of unidentified lines in a correct dispersion
@@ -224,13 +224,13 @@ aidpars: Automatic line identification parameters and algorithm
   identified.  Both fractions will be small for a valid solution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_debug">
   <dt><b>debug = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='debug' Line='debug = ""' -->
   <dd>Print or display debugging information.  This is intended for the developer
   and not the user.  The parameter is specified as a string of characters
   where each character displays some information.  The characters are:
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
       a: Print candidate line assignments.
       b: Print search limits.
       c: Print list of line ratios.
@@ -242,14 +242,14 @@ aidpars: Automatic line identification parameters and algorithm
       t: Print list of target lines.
       v: Print vote array.
       w: Print wavelength bin limits.
-  </pre>
+  </pre></div>
   The items with an asterisk are the most useful.  The graphs are exited
   with <span style="font-family: monospace;">'q'</span> or <span style="font-family: monospace;">'Q'</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <b>aidpars</b> parameter set contains the parameters for the automatic
   spectral line identification algorithm used in the task <b>autoidentify</b>,
@@ -328,18 +328,18 @@ aidpars: Automatic line identification parameters and algorithm
   value or as a fraction.  When the values are positive they are used
   as an absolute value;
   </p>
-  <pre>
-      crval(final) = <i>crval</i> +/- <i>crsearch</i>
-      cdelt(final) = <i>cdelt</i> +/- <i>cdsearch</i>.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  crval(final) = <i>crval</i> +/- <i>crsearch</i>
+  cdelt(final) = <i>cdelt</i> +/- <i>cdsearch</i>.
+  </pre></div>
   <p>
   When the values are negative they are used as a fraction of the dispersion
   range or fraction of the dispersion increment;
   </p>
-  <pre>
-      crval(final) = <i>crval</i> +/- abs (<i>crsearch</i> * <i>cdelt</i>) * N_pix
-      cdelt(final) = <i>cdelt</i> +/- abs (<i>cdsearch</i> * <i>cdelt</i>)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  crval(final) = <i>crval</i> +/- abs (<i>crsearch</i> * <i>cdelt</i>) * N_pix
+  cdelt(final) = <i>cdelt</i> +/- abs (<i>cdsearch</i> * <i>cdelt</i>)
+  </pre></div>
   <p>
   where abs is the absolute value function and N_pix is the number of pixels
   in the target spectrum.  When the ranges are not given explicitly, that is
@@ -453,9 +453,9 @@ aidpars: Automatic line identification parameters and algorithm
   pixel positions to another set of <span style="font-family: monospace;">"linearized"</span> positions  which are used
   in the line ratio pattern matching.  The form of the transformation is
   </p>
-  <pre>
-      x' = x + crquad * (x - crpix)**2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  x' = x + crquad * (x - crpix)**2
+  </pre></div>
   <p>
   where x is the measured position, x' is the transformed position,
   crquad is the value of the distortion parameter, and crpix is the value
@@ -497,9 +497,9 @@ aidpars: Automatic line identification parameters and algorithm
   an amount specified by the <i>maxnl</i> parameter.  The definition of
   the test is
   </p>
-  <pre>
-      maxnl &gt; (w(0.5) - w(0)) / (w(1) - w(0)) - 0.5
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  maxnl &gt; (w(0.5) - w(0)) / (w(1) - w(0)) - 0.5
+  </pre></div>
   <p>
   where w(x) is the dispersion function value (e.g. wavelength) of the fit
   and x is a normalized pixel positions where the endpoints of the spectrum
@@ -612,42 +612,42 @@ aidpars: Automatic line identification parameters and algorithm
   possibilities the algorithm will inform the task using it and the task will
   report this appropriately.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the parameters.
   </p>
-  <pre>
-      cl&gt; lpar aidpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; lpar aidpars
+  </pre></div>
   <p>
   2. Edit the parameters with <b>eparam</b>.
   </p>
-  <pre>
-      cl&gt; aidpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; aidpars
+  </pre></div>
   <p>
   3. Edit the <b>aidpars</b> parameters from within <b>autoidentify</b>.
   </p>
-  <pre>
-      cl&gt; epar autoid
-  	[edit the parameters]
-  	[move to the "aidpars" parameter and type :e]
-  	[edit the aidpars parameters and type :q or EOF character]
-  	[finish editing the autoidentify parameters]
-  	[type :wq or the EOF character]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; epar autoid
+      [edit the parameters]
+      [move to the "aidpars" parameter and type :e]
+      [edit the aidpars parameters and type :q or EOF character]
+      [finish editing the autoidentify parameters]
+      [type :wq or the EOF character]
+  </pre></div>
   <p>
   4. Set one of the parameters on the command line.
   </p>
-  <pre>
-      cl&gt; autoidentify spec002 5400 2.5 crpix=1
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; autoidentify spec002 5400 2.5 crpix=1
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_AIDPARS">
   <dt><b>AIDPARS V2.12.2</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.12.2' -->
   <dd>There were many changes made in the paramters and algorithm.  New parameters
@@ -659,20 +659,20 @@ aidpars: Automatic line identification parameters and algorithm
   number of candidate dispersions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_AIDPARS">
   <dt><b>AIDPARS V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='AIDPARS' Line='AIDPARS V2.11' -->
   <dd>This parameter set is new in this version.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   autoidentify, identify, reidentify, center1d
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

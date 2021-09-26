@@ -7,8 +7,8 @@ specwcs: Discussion and description of the spectral image formats
 
 .. raw:: html
 
+  <section id="s_1__types_of_spectral_data">
   <h3>1. types of spectral data</h3>
-  <!-- BeginSection: '1. Types of Spectral Data' -->
   <p>
   Spectra are stored as one, two, or three dimensional images with one axis
   being the dispersion axis.  A pixel value is the flux over
@@ -89,9 +89,9 @@ specwcs: Discussion and description of the spectral image formats
   long slit and 3D spectra simply and without resort to the more general
   <b>apextract</b> package.
   </p>
-  <!-- EndSection:   '1. Types of Spectral Data' -->
+  </section>
+  <section id="s_2__world_coordinate_systems">
   <h3>2. world coordinate systems</h3>
-  <!-- BeginSection: '2. World Coordinate Systems' -->
   <p>
   IRAF images have three types of coordinate systems.  The pixel array
   coordinates of an image or image section, i.e. the lines and
@@ -134,9 +134,9 @@ specwcs: Discussion and description of the spectral image formats
   correction, and the last one is the one to use for the more complex
   multispec format attributes.
   </p>
-  <!-- EndSection:   '2. World Coordinate Systems' -->
+  </section>
+  <section id="s_3__physical_coordinate_system">
   <h3>3. physical coordinate system</h3>
-  <!-- BeginSection: '3. Physical Coordinate System' -->
   <p>
   The physical coordinate system is used by the spectral tasks when there is
   no dispersion coordinate information (such as before dispersion
@@ -149,9 +149,9 @@ specwcs: Discussion and description of the spectral image formats
   the header keywords LTVi, LTMi_j (where i and j are axis numbers) through
   the vector equation
   </p>
-  <pre>
-      l = |m| * p + v
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  l = |m| * p + v
+  </pre></div>
   <p>
   where l is a logical coordinate vector, p is a physical
   coordinate vector, v is the origin translation vector specified by
@@ -169,9 +169,9 @@ specwcs: Discussion and description of the spectral image formats
   (in fact many tasks will not work if there is a rotation) so the
   transformations along each axis are given by the linear equation
   </p>
-  <pre>
-      li = LTMi_i * pi + LTVi.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  li = LTMi_i * pi + LTVi.
+  </pre></div>
   <p>
   If all the LTM/LTV keywords are missing they are assumed to have zero
   values except that the diagonal matrix terms, LTMi_i, are assumed to be 1.
@@ -205,9 +205,9 @@ specwcs: Discussion and description of the spectral image formats
   parameter, or the axis definitions for the equispec and or multispec
   formats are always in terms of the original physical axes.
   </p>
-  <!-- EndSection:   '3. Physical Coordinate System' -->
+  </section>
+  <section id="s_4__linear_spectral_world_coordinate_systems">
   <h3>4. linear spectral world coordinate systems</h3>
-  <!-- BeginSection: '4. Linear Spectral World Coordinate Systems' -->
   <p>
   When there is a linear or logarithmic relation between pixels and
   dispersion coordinates which is the same for all spectra the WCS header
@@ -227,9 +227,9 @@ specwcs: Discussion and description of the spectral image formats
   the type of coordinate system.  The transformation between dispersion
   coordinate, wi, and logical pixel coordinate, li, along axis i is given by
   </p>
-  <pre>
-      wi = CRVALi + CDi_i * (li - CRPIXi)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  wi = CRVALi + CDi_i * (li - CRPIXi)
+  </pre></div>
   <p>
   If the keywords are missing then the values are assumed to be zero except
   for the diagonal elements of the scale/rotation matrix, the CDi_i, which
@@ -274,28 +274,28 @@ specwcs: Discussion and description of the spectral image formats
   <p style="text-align:center">Figure 1: Long Slit Spectrum
   
   </p>
-  <pre>
-      WAT0_001= 'system=world'
-      WAT1_001= 'wtype=linear'
-      WAT2_001= 'wtype=linear label=Wavelength units=Angstroms'
-      WCSDIM  =                    2
-      DISPAXIS=                    2
-      DC-FLAG =                    0
+  <div class="highlight-default-notranslate"><pre>
+  WAT0_001= 'system=world'
+  WAT1_001= 'wtype=linear'
+  WAT2_001= 'wtype=linear label=Wavelength units=Angstroms'
+  WCSDIM  =                    2
+  DISPAXIS=                    2
+  DC-FLAG =                    0
   
-      CTYPE1  = 'LINEAR  '
-      LTV1    =                 -10.
-      LTM1_1  =                   1.
-      CRPIX1  =                  -9.
-      CRVAL1  =     19.5743865966797
-      CD1_1   =     1.01503419876099
+  CTYPE1  = 'LINEAR  '
+  LTV1    =                 -10.
+  LTM1_1  =                   1.
+  CRPIX1  =                  -9.
+  CRVAL1  =     19.5743865966797
+  CD1_1   =     1.01503419876099
   
-      CTYPE2  = 'LINEAR  '
-      LTV2    =                -49.5
-      LTM2_2  =                  0.5
-      CRPIX2  =                 -49.
-      CRVAL2  =       4204.462890625
-      CD2_2   =     12.3337936401367
-  </pre>
+  CTYPE2  = 'LINEAR  '
+  LTV2    =                -49.5
+  LTM2_2  =                  0.5
+  CRPIX2  =                 -49.
+  CRVAL2  =       4204.462890625
+  CD2_2   =     12.3337936401367
+  </pre></div>
   <p>
   Figure 2 shows the WCS keywords for a three dimensional image where each
   line is an independent spectrum or associated data but where all spectra
@@ -308,34 +308,34 @@ specwcs: Discussion and description of the spectral image formats
   <p style="text-align:center">Figure 2: Equispec Spectrum
   
   </p>
-  <pre>
-      WAT0_001= 'system=equispec'
-      WAT1_001= 'wtype=linear label=Wavelength units=Angstroms'
-      WAT2_001= 'wtype=linear'
-      WAT3_001= 'wtype=linear'
-      WCSDIM  =                    3
-      DC-FLAG =                    0
-      APNUM1  = '41 3 7.37 13.48'
-      APNUM2  = '15 1 28.04 34.15'
-      APNUM3  = '33 2 43.20 49.32'
+  <div class="highlight-default-notranslate"><pre>
+  WAT0_001= 'system=equispec'
+  WAT1_001= 'wtype=linear label=Wavelength units=Angstroms'
+  WAT2_001= 'wtype=linear'
+  WAT3_001= 'wtype=linear'
+  WCSDIM  =                    3
+  DC-FLAG =                    0
+  APNUM1  = '41 3 7.37 13.48'
+  APNUM2  = '15 1 28.04 34.15'
+  APNUM3  = '33 2 43.20 49.32'
   
-      CTYPE1  = 'LINEAR  '
-      LTM1_1  =                   1.
-      CRPIX1  =                   1.
-      CRVAL1  =             4204.463
-      CD1_1   =     6.16689700000001
+  CTYPE1  = 'LINEAR  '
+  LTM1_1  =                   1.
+  CRPIX1  =                   1.
+  CRVAL1  =             4204.463
+  CD1_1   =     6.16689700000001
   
-      CTYPE2  = 'LINEAR  '
-      LTM2_2  =                   1.
-      CD2_2   =                   1.
+  CTYPE2  = 'LINEAR  '
+  LTM2_2  =                   1.
+  CD2_2   =                   1.
   
-      CTYPE3  = 'LINEAR  '
-      LTM3_3  =                   1.
-      CD3_3   =                   1.
-  </pre>
-  <!-- EndSection:   '4. Linear Spectral World Coordinate Systems' -->
+  CTYPE3  = 'LINEAR  '
+  LTM3_3  =                   1.
+  CD3_3   =                   1.
+  </pre></div>
+  </section>
+  <section id="s_5__multispec_spectral_world_coordinate_system">
   <h3>5. multispec spectral world coordinate system</h3>
-  <!-- BeginSection: '5. Multispec Spectral World Coordinate System' -->
   <p>
   The <i>multispec</i> spectral world coordinate system applies only to one
   dimensional spectra; i.e. there is no analog for the spatial type spectra.
@@ -360,15 +360,15 @@ specwcs: Discussion and description of the spectral image formats
   attribute strings contain a series of numeric fields.  The fields are
   indicated symbolically as follows.
   </p>
-  <pre>
-           specN = ap beam dtype w1 dw nw z aplow aphigh [functions_i]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  specN = ap beam dtype w1 dw nw z aplow aphigh [functions_i]
+  </pre></div>
   <p>
   where there are zero or more functions having the following fields,
   </p>
-  <pre>
-      function_i =  wt_i w0_i ftype_i [parameters] [coefficients]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  function_i =  wt_i w0_i ftype_i [parameters] [coefficients]
+  </pre></div>
   <p>
   The first nine fields in the attribute are common to all the dispersion
   functions.  The first field of the WCS attribute is the aperture number,
@@ -415,9 +415,9 @@ specwcs: Discussion and description of the spectral image formats
   object observation with the weights based on the relative time difference
   between the calibration dispersion functions and the object observation.
   </p>
-  <pre>
-      w = sum from i=1 to nfunc {wt_i * (w0_i + W_i(p)) / (1 + z)}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  w = sum from i=1 to nfunc {wt_i * (w0_i + W_i(p)) / (1 + z)}
+  </pre></div>
   <p>
   The multispec coordinate systems define a transformation between physical
   pixel, p, and world coordinates, w.  Generally there is an intermediate
@@ -434,16 +434,16 @@ specwcs: Discussion and description of the spectral image formats
   s is the continuous spline coordinate and j is the nearest integer less
   than or equal to s.
   </p>
-  <pre>
-      p = (l - LTV1) / LTM1_1
-      n = (p - pmiddle) / (prange / 2)
-        = (p - (pmax+pmin)/2) / ((pmax-pmin) / 2)
-      s = (p - pmin) / (pmax - pmin) * npieces
-      j = int(s)
-  </pre>
-  <!-- EndSection:   '5. Multispec Spectral World Coordinate System' -->
+  <div class="highlight-default-notranslate"><pre>
+  p = (l - LTV1) / LTM1_1
+  n = (p - pmiddle) / (prange / 2)
+    = (p - (pmax+pmin)/2) / ((pmax-pmin) / 2)
+  s = (p - pmin) / (pmax - pmin) * npieces
+  j = int(s)
+  </pre></div>
+  </section>
+  <section id="s_5_1_linear_and_log_linear_dispersion_function">
   <h3>5.1 linear and log linear dispersion function</h3>
-  <!-- BeginSection: '5.1 Linear and Log Linear Dispersion Function' -->
   <p>
   The linear and log-linear dispersion functions are described by a
   wavelength at the first <i>physical</i> pixel and a wavelength increment per
@@ -452,10 +452,10 @@ specwcs: Discussion and description of the spectral image formats
   always wavelength even though the pixel sampling and the dispersion
   parameters may be log-linear.
   </p>
-  <pre>
-      w = (w1 + dw * (p - 1)) / (1 + z)
-      w = 10 ** {(w1 + dw * (p - 1)) / (1 + z)}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  w = (w1 + dw * (p - 1)) / (1 + z)
+  w = 10 ** {(w1 + dw * (p - 1)) / (1 + z)}
+  </pre></div>
   <p>
   Figure 3 shows an example from a multispec image with
   independent linear dispersion coordinates.  This is a linearized echelle
@@ -465,26 +465,26 @@ specwcs: Discussion and description of the spectral image formats
   <p style="text-align:center">Figure 3: Echelle Spectrum with Linear Dispersion Function
   
   </p>
-  <pre>
-      WAT0_001= 'system=multispec'
-      WAT1_001= 'wtype=multispec label=Wavelength units=Angstroms'
-      WAT2_001= 'wtype=multispec spec1 = "1 113 0 4955.44287109375 0.05...
-      WAT2_002= '5 256 0. 23.22 31.27" spec2 = "2 112 0 4999.0810546875...
-      WAT2_003= '58854293 256 0. 46.09 58.44" spec3 = "3 111 0 5043.505...
-      WAT2_004= '928358078002 256 0. 69.28 77.89"
-      WCSDIM  =                    2
+  <div class="highlight-default-notranslate"><pre>
+  WAT0_001= 'system=multispec'
+  WAT1_001= 'wtype=multispec label=Wavelength units=Angstroms'
+  WAT2_001= 'wtype=multispec spec1 = "1 113 0 4955.44287109375 0.05...
+  WAT2_002= '5 256 0. 23.22 31.27" spec2 = "2 112 0 4999.0810546875...
+  WAT2_003= '58854293 256 0. 46.09 58.44" spec3 = "3 111 0 5043.505...
+  WAT2_004= '928358078002 256 0. 69.28 77.89"
+  WCSDIM  =                    2
   
-      CTYPE1  = 'MULTISPE'
-      LTM1_1  =                   1.
-      CD1_1   =                   1.
+  CTYPE1  = 'MULTISPE'
+  LTM1_1  =                   1.
+  CD1_1   =                   1.
   
-      CTYPE2  = 'MULTISPE'
-      LTM2_2  =                   1.
-      CD2_2   =                   1.
-  </pre>
-  <!-- EndSection:   '5.1 Linear and Log Linear Dispersion Function' -->
+  CTYPE2  = 'MULTISPE'
+  LTM2_2  =                   1.
+  CD2_2   =                   1.
+  </pre></div>
+  </section>
+  <section id="s_5_2_chebyshev_polynomial_dispersion_function">
   <h3>5.2 chebyshev polynomial dispersion function</h3>
-  <!-- BeginSection: '5.2 Chebyshev Polynomial Dispersion Function' -->
   <p>
   The parameters for the chebyshev polynomial dispersion function are the
   order (number of coefficients) and the normalizing range of physical
@@ -503,12 +503,12 @@ specwcs: Discussion and description of the spectral image formats
   function using an iterative definition
   where x_1 = 1, x_2 = n, and x_i = 2 * n * x_{i-1} - x_{i-2}.
   </p>
-  <pre>
-      W = sum from i=1 to order {c_i * x_i}
-  </pre>
-  <!-- EndSection:   '5.2 Chebyshev Polynomial Dispersion Function' -->
+  <div class="highlight-default-notranslate"><pre>
+  W = sum from i=1 to order {c_i * x_i}
+  </pre></div>
+  </section>
+  <section id="s_5_3_legendre_polynomial_dispersion_function">
   <h3>5.3 legendre polynomial dispersion function</h3>
-  <!-- BeginSection: '5.3 Legendre Polynomial Dispersion Function' -->
   <p>
   The parameters for the legendre polynomial dispersion function are the
   order (number of coefficients) and the normalizing range of physical
@@ -518,9 +518,9 @@ specwcs: Discussion and description of the spectral image formats
   function using an iterative definition where x_1 = 1, x_2 = n, and
   x_i = ((2i-3)*n*x_{i-1}-(i-2)*x_{i-2})/(i-1).
   </p>
-  <pre>
-      W = sum from i=1 to order {c_i * x_i}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  W = sum from i=1 to order {c_i * x_i}
+  </pre></div>
   <p>
   Figure 4 shows an example from a multispec image with independent nonlinear
   dispersion coordinates.  This is again from an echelle spectrum.  Note that
@@ -534,30 +534,30 @@ specwcs: Discussion and description of the spectral image formats
   <p style="text-align:center">Figure 4: Echelle Spectrum with Legendre Polynomial Function
   
   </p>
-  <pre>
-      WAT0_001= 'system=multispec'
-      WAT1_001= 'wtype=multispec label=Wavelength units=Angstroms'
-      WAT2_001= 'wtype=multispec spec1 = "1 113 2 4955.442888635351 0.05...
-      WAT2_002= '83 256 0. 23.22 31.27 1. 0. 2 4 1. 256. 4963.0163112090...
-      WAT2_003= '976664 -0.3191636898579552 -0.8169352858733255" spec2 =...
-      WAT2_004= '9.081188912082 0.06387049476832223 256 0. 46.09 58.44 1...
-      WAT2_005= '56. 5007.401409453303 8.555959076467951 -0.176732458267...
-      WAT2_006= '09935064388" spec3 = "3 111 2 5043.505764869474 0.07097...
-      WAT2_007= '256 0. 69.28 77.89 1. 0. 2 4 1. 256. 5052.586239197408 ...
-      WAT2_008= '271 -0.03173489817897474 -7.190562320405975E-4"
-      WCSDIM  =                    2
+  <div class="highlight-default-notranslate"><pre>
+  WAT0_001= 'system=multispec'
+  WAT1_001= 'wtype=multispec label=Wavelength units=Angstroms'
+  WAT2_001= 'wtype=multispec spec1 = "1 113 2 4955.442888635351 0.05...
+  WAT2_002= '83 256 0. 23.22 31.27 1. 0. 2 4 1. 256. 4963.0163112090...
+  WAT2_003= '976664 -0.3191636898579552 -0.8169352858733255" spec2 =...
+  WAT2_004= '9.081188912082 0.06387049476832223 256 0. 46.09 58.44 1...
+  WAT2_005= '56. 5007.401409453303 8.555959076467951 -0.176732458267...
+  WAT2_006= '09935064388" spec3 = "3 111 2 5043.505764869474 0.07097...
+  WAT2_007= '256 0. 69.28 77.89 1. 0. 2 4 1. 256. 5052.586239197408 ...
+  WAT2_008= '271 -0.03173489817897474 -7.190562320405975E-4"
+  WCSDIM  =                    2
   
-      CTYPE1  = 'MULTISPE'
-      LTM1_1  =                   1.
-      CD1_1   =                   1.
+  CTYPE1  = 'MULTISPE'
+  LTM1_1  =                   1.
+  CD1_1   =                   1.
   
-      CTYPE2  = 'MULTISPE'
-      LTM2_2  =                   1.
-      CD2_2   =                   1.
-  </pre>
-  <!-- EndSection:   '5.3 Legendre Polynomial Dispersion Function' -->
+  CTYPE2  = 'MULTISPE'
+  LTM2_2  =                   1.
+  CD2_2   =                   1.
+  </pre></div>
+  </section>
+  <section id="s_5_4_linear_spline_dispersion_function">
   <h3>5.4 linear spline dispersion function</h3>
-  <!-- BeginSection: '5.4 Linear Spline Dispersion Function' -->
   <p>
   The parameters for the linear spline dispersion function are the number of
   spline pieces, npieces, and the range of physical coordinates, pmin
@@ -568,12 +568,12 @@ specwcs: Discussion and description of the spectral image formats
   are the fractions of the interval in the spline piece between the spline
   knots, a=(j+1)-s, b=s-j, and x_0=a, and x_1=b.
   </p>
-  <pre>
-      W = sum from i=0 to 1 {c_(i+j) * x_i}
-  </pre>
-  <!-- EndSection:   '5.4 Linear Spline Dispersion Function' -->
+  <div class="highlight-default-notranslate"><pre>
+  W = sum from i=0 to 1 {c_(i+j) * x_i}
+  </pre></div>
+  </section>
+  <section id="s_5_5_cubic_spline_dispersion_function">
   <h3>5.5 cubic spline dispersion function</h3>
-  <!-- BeginSection: '5.5 Cubic Spline Dispersion Function' -->
   <p>
   The parameters for the cubic spline dispersion function are the number of
   spline pieces, npieces, and the range of physical coordinates, pmin
@@ -595,12 +595,12 @@ specwcs: Discussion and description of the spectral image formats
   integer spline knots are given by a and b, a=(j+1)-s, b=s-j,
   and x_0=a**3, x_1=(1+3*a*(1+a*b)), x_2=(1+3*b*(1+a*b)), and x_3=b**3.
   </p>
-  <pre>
-      W = sum from i=0 to 3 {c_(i+j) * x_i}
-  </pre>
-  <!-- EndSection:   '5.5 Cubic Spline Dispersion Function' -->
+  <div class="highlight-default-notranslate"><pre>
+  W = sum from i=0 to 3 {c_(i+j) * x_i}
+  </pre></div>
+  </section>
+  <section id="s_5_6_pixel_array_dispersion_function">
   <h3>5.6 pixel array dispersion function</h3>
-  <!-- BeginSection: '5.6 Pixel Array Dispersion Function' -->
   <p>
   The parameters for the pixel array dispersion function consists of just the
   number of coordinates ncoords.  Following this are the wavelengths at
@@ -611,12 +611,12 @@ specwcs: Discussion and description of the spectral image formats
   fractional intervals k=int(p), a=(k+1)-p, b=p-k,
   and x_0=a, and x_1=b.
   </p>
-  <pre>
-      W = sum from i=0 to 1 {c_(i+j) * x_i}
-  </pre>
-  <!-- EndSection:   '5.6 Pixel Array Dispersion Function' -->
+  <div class="highlight-default-notranslate"><pre>
+  W = sum from i=0 to 1 {c_(i+j) * x_i}
+  </pre></div>
+  </section>
+  <section id="s_5_7_sampled_array_dispersion_function">
   <h3>5.7 sampled array dispersion function</h3>
-  <!-- BeginSection: '5.7 Sampled Array Dispersion Function' -->
   <p>
   The parameters for the sampled array dispersion function consists of
   the number of coordinate pairs, ncoords, and a dummy field.
@@ -626,7 +626,7 @@ specwcs: Discussion and description of the spectral image formats
   is computed between the two sample points.
   </p>
   
-  <!-- EndSection:    '5.7 Sampled Array Dispersion Function' -->
+  </section>
   
   <!-- Contents: '1. Types of Spectral Data' '2. World Coordinate Systems' '3. Physical Coordinate System' '4. Linear Spectral World Coordinate Systems' '5. Multispec Spectral World Coordinate System' '5.1 Linear and Log Linear Dispersion Function' '5.2 Chebyshev Polynomial Dispersion Function' '5.3 Legendre Polynomial Dispersion Function' '5.4 Linear Spline Dispersion Function' '5.5 Cubic Spline Dispersion Function' '5.6 Pixel Array Dispersion Function' '5.7 Sampled Array Dispersion Function'  -->
   

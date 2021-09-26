@@ -7,21 +7,21 @@ addstar: Add artificial stars to an image using the computed psf
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   addstar image photfile psfimage addimage
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images to which artificial stars are to be added.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_photfile">
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of photometry files containing the x and y coordinates and magnitudes
@@ -34,7 +34,7 @@ addstar: Add artificial stars to an image using the computed psf
   text database file (<i>simple_text</i> = no), or an STSDAS binary table file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_psfimage">
   <dt><b>psfimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='psfimage' Line='psfimage' -->
   <dd>The list of images containing the PSF models computed by the DAOPHOT PSF task.
@@ -44,7 +44,7 @@ addstar: Add artificial stars to an image using the computed psf
   existing version number.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_addimage">
   <dt><b>addimage</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='addimage' Line='addimage' -->
   <dd>The root name of the output images. There must be one output root image name
@@ -56,7 +56,7 @@ addstar: Add artificial stars to an image using the computed psf
   table is written.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minmag">
   <dt><b>minmag</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minmag' Line='minmag' -->
   <dd>The minimum magnitude of the computer generated artificial stars to be
@@ -65,7 +65,7 @@ addstar: Add artificial stars to an image using the computed psf
   <i>psfimage</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxmag">
   <dt><b>maxmag</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxmag' Line='maxmag' -->
   <dd>The maximum magnitude of the computer generated artificial stars to be
@@ -74,14 +74,14 @@ addstar: Add artificial stars to an image using the computed psf
   <i>psfimage</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nstar">
   <dt><b>nstar</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nstar' Line='nstar' -->
   <dd>The number of computer generated artificial stars to be added to the input
   image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The text file in which the data dependent parameters are stored. The gain
@@ -89,7 +89,7 @@ addstar: Add artificial stars to an image using the computed psf
   undefined then the default parameter set in the user's uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_daopars">
   <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The text file in which the daophot fitting parameters are stored. The PSF
@@ -97,7 +97,7 @@ addstar: Add artificial stars to an image using the computed psf
   undefined then the default parameter set in the user's uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_simple_text">
   <dt><b>simple_text = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='simple_text' Line='simple_text = no' -->
   <dd>If <i>photfile</i> is a text file and <i>simple_text</i> = <span style="font-family: monospace;">"no"</span>, then ADDSTAR
@@ -105,20 +105,20 @@ addstar: Add artificial stars to an image using the computed psf
   format with x, y, magnitude, and id in columns 1, 2,3, and 4 respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_seed">
   <dt><b>seed = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 0' -->
   <dd>The seed for the random number generator used to generate the positions
   and magnitudes of the artificial stars.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nimage">
   <dt><b>nimage = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nimage' Line='nimage = 1' -->
   <dd>The number of output images to be created per input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_idoffset">
   <dt><b>idoffset = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='idoffset' Line='idoffset = 0' -->
   <dd>The integer offset to be added to the id numbers of stars in the output
@@ -126,7 +126,7 @@ addstar: Add artificial stars to an image using the computed psf
   to N where N is the number of artificial stars added to the input frame.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span>, wcspsf = <span style="font-family: monospace;">")_.wcspsf"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout", wcspsf = ")_.wcspsf"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i>, of the
@@ -195,7 +195,7 @@ addstar: Add artificial stars to an image using the computed psf
   wcsin, wcspsf,  and wcsout are <span style="font-family: monospace;">"logical"</span>, <span style="font-family: monospace;">"physical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -203,14 +203,14 @@ addstar: Add artificial stars to an image using the computed psf
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical ADDSTAR task parameters? Verify may be set to the
   daophot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the critical ADDSTAR task parameters if <i>verify</i> = <span style="font-family: monospace;">"yes"</span>?
@@ -218,16 +218,16 @@ addstar: Add artificial stars to an image using the computed psf
   <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of ADDSTAR? Verbose may be set to the
   daophot package parameter value (the default), <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   ADDSTAR adds artificial stars, whose positions and magnitudes are listed in
   <i>photfile</i> or generated at random by the computer, to the input image
@@ -295,9 +295,9 @@ addstar: Add artificial stars to an image using the computed psf
   specified by the DATAPARS parameter <i>gain</i> if present, or the value of the
   DATAPARS parameter <i>epadu</i>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   If <i>verbose</i> = yes, a line of output is written to the terminal for each
   artificial star added to the input image.
@@ -308,144 +308,140 @@ addstar: Add artificial stars to an image using the computed psf
   parameters. For each artificial star added to the input image the following
   record is written.
   </p>
-  <pre>
-  	id  xcenter  ycenter  mag
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  id  xcenter  ycenter  mag
+  </pre></div>
   <p>
   Id is the id number of the star, xcenter and ycenter are its coordinates, and
   mag is its magnitude.
   </p>
-  <!-- EndSection:   'OUTPUT' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Add 30 stars uniformly distributed between 17 and 20th magnitude and in
   position to the input image m92. Display the new image and mark the
   artificial stars. Good stars for making the PSF model can be found at
   (442,410), (348,189), and (379,67).
   </p>
-  <pre>
-      da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
   
-          ... answer verify prompts
+      ... answer verify prompts
   
-          ... find stars in the image
+      ... find stars in the image
   
-          ... answer will appear in ypix.coo.1
+      ... answer will appear in ypix.coo.1
   
-      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
-          apertures = 5.0
+  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+      apertures = 5.0
   
-          ... answer verify prompts
+      ... answer verify prompts
   
-          ... do aperture photometry on the detected stars
+      ... do aperture photometry on the detected stars
   
-          ... answer will appear in ypix.mag.1
+      ... answer will appear in ypix.mag.1
   
-      da&gt; display dev$ypix 1
+  da&gt; display dev$ypix 1
   
-  	... display the image
+      ... display the image
   
-      da&gt; psf dev$ypix default "" default default default psfrad=9.0 \<br>
-          fitrad=3.0 mkstars=yes display=imdr
+  da&gt; psf dev$ypix default "" default default default psfrad=9.0 \<br>
+      fitrad=3.0 mkstars=yes display=imdr
   
-          ... verify the critical parameters
+      ... verify the critical parameters
   
-          ... move the image cursor to a candidate star and hit the a key,
-              a plot of the stellar data appears
+      ... move the image cursor to a candidate star and hit the a key,
+          a plot of the stellar data appears
   
-          ... type ? for a listing of the graphics cursor menu
+      ... type ? for a listing of the graphics cursor menu
   
-          ... type a to accept the star, d to reject it
+      ... type a to accept the star, d to reject it
   
-          ... move to the next candidate stars and repeat the previous
-              steps
+      ... move to the next candidate stars and repeat the previous
+          steps
   
-          ... type l to list all the psf stars
+      ... type l to list all the psf stars
   
-          ... type f to fit the psf
+      ... type f to fit the psf
   
-          ... move cursor to first psf star and type s to see residuals,
-              repeat for all the psf stars
+      ... move cursor to first psf star and type s to see residuals,
+          repeat for all the psf stars
   
-          ... type w to save the PSF model
+      ... type w to save the PSF model
   
-          ... type q to quit, and q again to confirm
+      ... type q to quit, and q again to confirm
   
-          ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
-              ypix.psg.1
+      ... the output will appear in ypix.psf.1.imh, ypix.pst.1 and
+          ypix.psg.1
   
-      da&gt; addstar dev$ypix "" default default 12.0 17.0 30 epadu=14.0
+  da&gt; addstar dev$ypix "" default default 12.0 17.0 30 epadu=14.0
   
-  	... verify the critical parameters
+      ... verify the critical parameters
   
-      da&gt; display ypix.add.1 2
+  da&gt; display ypix.add.1 2
   
-  	... display the artificial image
+      ... display the artificial image
   
-      da&gt; pdump ypix.art.1 xcenter,ycenter yes | tvmark 2 STDIN col=204
+  da&gt; pdump ypix.art.1 xcenter,ycenter yes | tvmark 2 STDIN col=204
   
-  	... mark the stars on the artificial image
-  </pre>
+      ... mark the stars on the artificial image
+  </pre></div>
   <p>
   2. Repeat example 1 using the output starlist as input.
   </p>
-  <pre>
-      da&gt; addstar dev$ypix ypix.art.1  default default simple- epadu=14.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; addstar dev$ypix ypix.art.1  default default simple- epadu=14.0
   
-      ... the answers will appear in ypix.add.2 and ypix.art.2
-  </pre>
+  </pre></div>
   <p>
   3. Repeat example 1 using a simple text file as input.
   </p>
-  <pre>
-      da&gt; pdump ypix.art.1 xc,yc,mag yes &gt; artdata
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; pdump ypix.art.1 xc,yc,mag yes &gt; artdata
   
-      ... create a simple text file from the addstar output
   
-      da&gt; addstar dev$ypix artdata default default simple+ epadu=14.0
+  da&gt; addstar dev$ypix artdata default default simple+ epadu=14.0
   
-      ... the answers will appear in ypix.add.3 and ypix.art.3
-  </pre>
+  </pre></div>
   <p>
   4. Run addstar on a section of the input image using the PSF model derived in
   example 1 for the parent image, the artificial star list from examples 2 and
   3, and write the results in the coordinate system of the image section
   not the parent image.
   </p>
-  <pre>
-     da&gt; addstar dev$ypix[150:450,150:450] artdata default default simple+ \<br>
-         epadu=14.0 wcsin=tv wcspsf=tv wcsout=logical
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; addstar dev$ypix[150:450,150:450] artdata default default simple+ \<br>
+      epadu=14.0 wcsin=tv wcspsf=tv wcsout=logical
   
-          ... answer the verify prompts
+       ... answer the verify prompts
   
-          ... fit the stars
+       ... fit the stars
   
-          ... the results will appear in ypix.add.4 and ypix.art.4
+       ... the results will appear in ypix.add.4 and ypix.art.4
   
-      da&gt; display ypix.add.4 1
+   da&gt; display ypix.add.4 1
   
-          ... display the image
+       ... display the image
   
-      da&gt; pdump ypix.art.4 xc,yc yes | tvmark 1 STDIN col=204
+   da&gt; pdump ypix.art.4 xc,yc yes | tvmark 1 STDIN col=204
   
-          ... mark the stars
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+       ... mark the stars
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars,daopars
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'OUTPUT' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,14 +7,14 @@ tunits: Convert table column from one set of units to another
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tunits table column newunits
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Tunits converts a column in a table from one set of units to
   another. It supports both scalar and array columns. You supply the
@@ -49,11 +49,11 @@ tunits: Convert table column from one set of units to another
   <p>
   The operators recognized are:
   </p>
-  <pre>
-  division	/ or per
-  multiplication	*
-  exponentiation	^ or **
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  division        / or per
+  multiplication  *
+  exponentiation  ^ or **
+  </pre></div>
   <p>
   Division has the lowest priority and exponentiation the highest. This
   means ergs/sec*angstrom is interpreted as ergs/(sec*angstrom) and not
@@ -74,23 +74,23 @@ tunits: Convert table column from one set of units to another
   conversion factor. Only one conversion is allowed for each set of
   units. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [file]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file]' -->
   <dd>The name of the table the conversion is applied to.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_column">
   <dt><b>column [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='column' Line='column [string]' -->
   <dd>The column to be converted. Both scalar and array columns are
   supported.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_newunits">
   <dt><b>newunits [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newunits' Line='newunits [string]' -->
   <dd>The new set of units for the column. The format of this parameter is
@@ -159,29 +159,29 @@ tunits: Convert table column from one set of units to another
   factor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Convert watts to ergs per second. Print the diagnostic messages:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tunits source.tab power "ergs/sec" old=watts verb+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tlcol, tcalc
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'REFERENCES' 'SEE ALSO'  -->
   

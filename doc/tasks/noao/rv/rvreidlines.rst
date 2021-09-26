@@ -7,15 +7,15 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rvreidlines reference images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>Spectrum with previously identified features to be used as reference for
@@ -25,7 +25,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   reidentified if needed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of dispersion corrected spectral images in which the features in the
@@ -34,7 +34,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   columns, or bands with those in the reference image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Examine and fit features and velocities interactively?  If the task is run
@@ -44,7 +44,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   <b>rvidlines</b> task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_section">
   <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If the reference image is not one dimensional or given as a one dimensional
@@ -55,10 +55,10 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   (columns, lines, or z) of the image vectors to be reidentified.
   The section parameter may be specified directly as an image section or
   in one of the following forms
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   line|column|x|y|z first|middle|last|# [first|middle|last|#]]
   first|middle|last|# [first|middle|last|#] line|column|x|y|z
-  </pre>
+  </pre></div>
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator which
   is used with 3D data.  See the example section for <b>rvidlines</b> for
@@ -66,7 +66,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   is not a sufficient abbreviation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_newaps">
   <dt><b>newaps = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newaps' Line='newaps = yes' -->
   <dd>Reidentify new apertures in the images which are not in the reference
@@ -77,7 +77,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   further identifications of the new aperture will then use this result.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_override">
   <dt><b>override = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='override' Line='override = no' -->
   <dd>Override previous solutions?  If there are previous measurements for a
@@ -91,7 +91,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   The following parameters are used for selecting and reidentifying additional
   lines, columns, or apertures in two dimensional formats.
   </p>
-  <dl>
+  <dl id="l_trace">
   <dt><b>trace = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = no' -->
   <dd>There are two methods for defining additional reference lines, columns, or
@@ -106,7 +106,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   reference features.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_step">
   <dt><b>step = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step = "10"' -->
   <dd>The step from the reference aperture, line, column, or band used for
@@ -119,7 +119,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   line, column, or band is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"' -->
   <dd>Number of lines, columns, or bands across the designated vector axis to be
@@ -131,7 +131,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   the first number is used for both axes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shift">
   <dt><b>shift = <span style="font-family: monospace;">"0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = "0"' -->
   <dd>Shift in user coordinates to be added to the reference features before
@@ -144,7 +144,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   for the two axes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlost">
   <dt><b>nlost = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlost' Line='nlost = 0' -->
   <dd>When reidentifying features by tracing, if the number of features not found
@@ -156,7 +156,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   The following parameters define the finding and recentering of features.
   See also <b>center1d</b> and <b>rvidlines</b>.
   </p>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.' -->
   <dd>Centering radius in pixels.  If a reidentified feature falls further
@@ -165,7 +165,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   then the feature is not reidentified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10.' -->
   <dd>In order for a feature center to be determined, the range of pixel
@@ -180,7 +180,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   The following parameters select and control the automatic addition of
   new features during reidentification.
   </p>
-  <dl>
+  <dl id="l_addfeatures">
   <dt><b>addfeatures = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='addfeatures' Line='addfeatures = no' -->
   <dd>Add new features from a line list during each reidentification?  If
@@ -190,14 +190,14 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   are not introduced.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordlist">
   <dt><b>coordlist = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = ""' -->
   <dd>User coordinate list consisting of an ordered list of rest spectral line
   coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = 10.' -->
   <dd>The maximum difference for a match between the feature coordinate function
@@ -205,14 +205,14 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   velocity).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxfeatures">
   <dt><b>maxfeatures = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxfeatures' Line='maxfeatures = 50' -->
   <dd>Maximum number of the strongest features to be selected automatically from
   the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minsep">
   <dt><b>minsep = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.' -->
   <dd>The minimum separation, in pixels, allowed between feature positions
@@ -222,27 +222,27 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   <p>
   The following parameters determine the input and output of the task.
   </p>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the feature data for the reference image and in which
   the features for the reidentified images are recorded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfiles">
   <dt><b>logfiles = <span style="font-family: monospace;">"logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "logfile"' -->
   <dd>List of file in which to record the velocity results and to keep a
   processing log.  If a null file, <span style="font-family: monospace;">""</span>, is given then no log is kept.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print reidentification and velocity information on the standard output?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_keywpars">
   <dt><b>keywpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keywpars' Line='keywpars = ""' -->
   <dd>The image header keyword translation table as described in 
@@ -251,14 +251,14 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   heliocentric velocity.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
@@ -280,9 +280,9 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   for the observation are obtained from the image header.  The keywords
   for these parameters are defined in the <b>keywpars</b> parameter set.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Rvreidlines</b> takes spectral lines previously identified in a reference
   image and recorded in a database and identifies them in other spectra and
@@ -421,9 +421,9 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   are recorded.  This is the same information as is produced
   by <b>rvidlines</b>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_database_records">
   <h3>Database records</h3>
-  <!-- BeginSection: 'DATABASE RECORDS' -->
   <p>
   The database specified by the parameter <i>database</i> is a directory of
   simple text files.  The text files have names beginning with 'id' followed
@@ -445,9 +445,9 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   these files may also be read by the <b>identify</b> task for changing
   the dispersion function based on the rest wavelengths.
   </p>
-  <!-- EndSection:   'DATABASE RECORDS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To generate a rotation curve for a long slit spectrum of a
   galaxy first use <b>rvidlines</b> to mark some lines at the center of the
@@ -457,38 +457,38 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   wavelengths.  Then run <b>rvreidlines</b>.  The <i>nsum</i> and <i>step</i>
   parameters allow controlling the summing size and spacing.
   </p>
-  <pre>
-      rv&gt; rvid lsgal sec="mid col" nsum=5
-  	    Mark lines and then quit.
-      Write velocity data to the logfile (yes)?
-      Write feature data to the database (yes)?
-      rv&gt; rvreid lsgal "" sec="mid col" nsum=5 step=5 trace+ v+
+  <div class="highlight-default-notranslate"><pre>
+  rv&gt; rvid lsgal sec="mid col" nsum=5
+          Mark lines and then quit.
+  Write velocity data to the logfile (yes)?
+  Write feature data to the database (yes)?
+  rv&gt; rvreid lsgal "" sec="mid col" nsum=5 step=5 trace+ v+
   
-      RVREIDLINES: NOAO/IRAF V2.10.3 valdes Sat 14:47:55 21-Aug-93
-        Reference image = lsgal, New image = lsgal
-       Image Data  Found    Fit  Pix Shift  User Shift Velocity    RMS
-      lsgal[45,*]    7/7    7/7    -0.0181     -0.0212    -1.37   11.3
-      lsgal[40,*]    7/7    7/7     0.0147      0.0193     1.34   8.73
-      lsgal[35,*]    7/7    7/7     0.0931       0.116     8.01   9.16
-      lsgal[30,*]    7/7    7/7    -0.0224     -0.0265    -1.78   27.6
-      lsgal[25,*]    7/7    7/7     0.0558        0.07     4.83   33.7
-      lsgal[20,*]    7/7    7/7    -0.0317     -0.0379    -3.08   33.6
-      lsgal[15,*]    5/7    5/5      0.015      0.0201    0.799   43.7
-      lsgal[10,*]    7/7    7/7      0.395       0.489     33.7   54.9
-      lsgal[5,*]     4/7    4/4      -1.22       -1.51    -106.   84.3
-      lsgal[55,*]    7/7    7/7      0.014      0.0184     1.41   10.5
-      lsgal[60,*]    7/7    7/7    -0.0897      -0.109    -7.59   7.21
-      lsgal[65,*]    7/7    7/7    -0.0109     -0.0122   -0.957   10.9
-      lsgal[70,*]    7/7    7/7     -0.074     -0.0902    -6.55   14.6
-      lsgal[75,*]    7/7    7/7   -0.00203    -0.00136    0.227   54.3
-      lsgal[80,*]    6/7    6/6       0.08      0.0997     6.66   96.7
-      lsgal[85,*]    6/7    6/6      0.289       0.357     27.2   104.
-      lsgal[90,*]    6/7    6/6      0.459       0.568     40.5   33.2
-      lsgal[95,*]    6/7    6/6      0.926        1.14     78.5   65.5
-      lsgal[100,*    5/7    5/5      0.696        0.86     59.1   44.2
-      rv&gt; match Vobs logfile | fields "" 2,6,11 | \<br>
-      &gt;&gt;&gt; graph point- mark=vebar szmark=-1
-  </pre>
+  RVREIDLINES: NOAO/IRAF V2.10.3 valdes Sat 14:47:55 21-Aug-93
+    Reference image = lsgal, New image = lsgal
+   Image Data  Found    Fit  Pix Shift  User Shift Velocity    RMS
+  lsgal[45,*]    7/7    7/7    -0.0181     -0.0212    -1.37   11.3
+  lsgal[40,*]    7/7    7/7     0.0147      0.0193     1.34   8.73
+  lsgal[35,*]    7/7    7/7     0.0931       0.116     8.01   9.16
+  lsgal[30,*]    7/7    7/7    -0.0224     -0.0265    -1.78   27.6
+  lsgal[25,*]    7/7    7/7     0.0558        0.07     4.83   33.7
+  lsgal[20,*]    7/7    7/7    -0.0317     -0.0379    -3.08   33.6
+  lsgal[15,*]    5/7    5/5      0.015      0.0201    0.799   43.7
+  lsgal[10,*]    7/7    7/7      0.395       0.489     33.7   54.9
+  lsgal[5,*]     4/7    4/4      -1.22       -1.51    -106.   84.3
+  lsgal[55,*]    7/7    7/7      0.014      0.0184     1.41   10.5
+  lsgal[60,*]    7/7    7/7    -0.0897      -0.109    -7.59   7.21
+  lsgal[65,*]    7/7    7/7    -0.0109     -0.0122   -0.957   10.9
+  lsgal[70,*]    7/7    7/7     -0.074     -0.0902    -6.55   14.6
+  lsgal[75,*]    7/7    7/7   -0.00203    -0.00136    0.227   54.3
+  lsgal[80,*]    6/7    6/6       0.08      0.0997     6.66   96.7
+  lsgal[85,*]    6/7    6/6      0.289       0.357     27.2   104.
+  lsgal[90,*]    6/7    6/6      0.459       0.568     40.5   33.2
+  lsgal[95,*]    6/7    6/6      0.926        1.14     78.5   65.5
+  lsgal[100,*    5/7    5/5      0.696        0.86     59.1   44.2
+  rv&gt; match Vobs logfile | fields "" 2,6,11 | \<br>
+  &gt;&gt;&gt; graph point- mark=vebar szmark=-1
+  </pre></div>
   <p>
   The last command extracts the Vobs results from the logfile using
   <b>match</b>, the column number, velocity, and mean error are extract
@@ -496,29 +496,29 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   drawback to this method is that the nubmer of columns summed is
   constant and so the signal-to-noise decreases with the galaxy light.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_RVREIDLINES">
   <dt><b>RVREIDLINES V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='RVREIDLINES' Line='RVREIDLINES V2.11' -->
   <dd>This task will now work in the units of the input spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_RVREIDLINES">
   <dt><b>RVREIDLINES V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='RVREIDLINES' Line='RVREIDLINES V2.10.3' -->
   <dd>This task in new in the version.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   center1d, fxcor, keywpars, observatory, rvcorrect, rvidlines
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'DATABASE RECORDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

@@ -7,14 +7,14 @@ tjoin: Perform a relational join of two tables.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tjoin intable1 intable2 outtable column1 column2
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task combines two tables into a new table on the basis of one or
   more common columns.  Two rows from the input tables are combined to
@@ -58,28 +58,28 @@ tjoin: Perform a relational join of two tables.
   and <span style="font-family: monospace;">"_2"</span> to the second name. If the task cannot create a unique name
   in this way, it stops with an error.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable1">
   <dt><b>intable1 [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable1' Line='intable1 [file name]' -->
   <dd>First input table. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_intable2">
   <dt><b>intable2 [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable2' Line='intable2 [file name]' -->
   <dd>Second input table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name]' -->
   <dd>Output table.  This is the join of the two input tables.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_column1">
   <dt><b>column1 [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='column1' Line='column1 [string]' -->
   <dd>Names of the common columns in the first table. If there is more than
@@ -89,7 +89,7 @@ tjoin: Perform a relational join of two tables.
   table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_column2">
   <dt><b>column2 [string]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='column2' Line='column2 [string]' -->
   <dd>Comma separated list of names of the common columns in the second
@@ -126,47 +126,47 @@ tjoin: Perform a relational join of two tables.
   If set to <span style="font-family: monospace;">"yes"</span>, the test for equality is case sensitive.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Combine a table of star positions and a table of star magnitudes to create
   a star catalog. The star name is not case sensitive:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tjoin starpos.tab starmag.tab starcat.tab name name case-
-  </pre>
+  </pre></div>
   <p>
   2. Create a table of all spectral lines that match a set of reference
   wavelengths within 10 angstroms:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tjoin spectrum.tab reference.tab lines.tab WAVE WAVE tol=10.
-  </pre>
+  </pre></div>
   <p>
   3. Combine a phone list with an address list where the name is stored
   in two columns, <span style="font-family: monospace;">"last"</span> and <span style="font-family: monospace;">"first"</span>. 
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tjoin phone.tab address.tab output.tab LAST,FIRST LAST,FIRST
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Bernie Simon.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tselect, tproject, tproduct
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

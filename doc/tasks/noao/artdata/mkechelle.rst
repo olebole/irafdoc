@@ -7,21 +7,21 @@ mkechelle: Make artificial 1D and 2D echelle spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkechelle images [clobber]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of echelle spectra to create or modify.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clobber">
   <dt><b>clobber (query)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clobber' Line='clobber (query)' -->
   <dd>If an existing image is specified the clobber query parameter is used.
@@ -31,7 +31,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   done if the task is run in the background.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = 512, nlines = 512, norders = 23</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512, nlines = 512, norders = 23' -->
   <dd>For two dimensional spectra these parameters define the number of columns
@@ -51,13 +51,13 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   the number of orders are created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">"Artificial Echelle Spectrum"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "Artificial Echelle Spectrum"' -->
   <dd>Image title to be given to the spectra.  Maximum of 79 characters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image
@@ -69,20 +69,20 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   acceptable data file.  See <b>mkheader</b> for further information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_list">
   <dt><b>list = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='list' Line='list = no' -->
   <dd>List the grating/instrument parameters?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_make">
   <dt><b>make = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='make' Line='make = yes' -->
   <dd>Make the artificial spectra?  This is set to no if only the grating
   parameter listing is desired.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_comments">
   <dt><b>comments = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes' -->
   <dd>Include comments recording task parameters in the image header?
@@ -91,7 +91,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <p style="text-align:center">FORMAT PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_xc">
   <dt><b>xc = INDEF, yc = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xc' Line='xc = INDEF, yc = INDEF' -->
   <dd>The column and line position of the blaze peak in the reference order (see
@@ -102,7 +102,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   is extracted or not.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixsize">
   <dt><b>pixsize = 0.027</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixsize' Line='pixsize = 0.027' -->
   <dd>Pixel size in millimeters.  This is used to convert the focal length
@@ -110,7 +110,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   assumed to be in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_profile">
   <dt><b>profile = <span style="font-family: monospace;">"gaussian"</span> (extracted|gaussian|slit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='profile' Line='profile = "gaussian" (extracted|gaussian|slit)' -->
   <dd>The order profile across the dispersion.  If the value is <span style="font-family: monospace;">"extracted"</span>
@@ -119,7 +119,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   See <b>mk2dspec</b> for a discussion of the profile functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_width">
   <dt><b>width = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='width' Line='width = 5.' -->
   <dd>If two dimensional echelle images are selected this parameter specifies
@@ -127,7 +127,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   for a fuller discussion.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scattered">
   <dt><b>scattered = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scattered' Line='scattered = 0.' -->
   <dd>Scattered light peak flux per pixel.  A simple scattered light component
@@ -149,7 +149,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   then a linear dispersion function is used.  Also in this case the
   extracted format will include dispersion information.
   </p>
-  <dl>
+  <dl id="l_f">
   <dt><b>f = 590., cf = 590.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f' Line='f = 590., cf = 590.' -->
   <dd>Echelle and crossdisperser focal lengths in millimeters (if <i>pixsize</i>
@@ -161,7 +161,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   the other parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gmm">
   <dt><b>gmm = 31.6, cgmm = 226.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gmm' Line='gmm = 31.6, cgmm = 226.' -->
   <dd>Echelle and crossdisperser grating grooves per millimeter.  If specified as
@@ -169,7 +169,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   and the other parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_blaze">
   <dt><b>blaze = 63., cblaze = 4.53</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='blaze' Line='blaze = 63., cblaze = 4.53' -->
   <dd>Echelle and crossdisperser blaze angles in degrees.  It is always specified or printed as a positive
@@ -177,7 +177,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   computed from the other parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_theta">
   <dt><b>theta = 69., ctheta = -11.97</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 69., ctheta = -11.97' -->
   <dd>Echelle and crossdisperser angles of incidence in degrees.  The angle of
@@ -190,7 +190,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   other parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 112</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 112' -->
   <dd>The central or reference echelle order for which the wavelength and
@@ -203,7 +203,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   reference order is also used in the definitions of <i>xc</i> and <i>yc</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_corder">
   <dt><b>corder = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='corder' Line='corder = 1' -->
   <dd>The crossdisperser order for which the crossdisperser blaze wavelength and
@@ -217,14 +217,14 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wavelength">
   <dt><b>wavelength = 5007.49 cwavelength = 6700.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wavelength' Line='wavelength = 5007.49 cwavelength = 6700.' -->
   <dd>Echelle and crossdisperser blaze wavelengths in Angstroms at the reference
   orders.  If specified as INDEF it will be computed from the other parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispersion">
   <dt><b>dispersion = 2.61 cdispersion = 70.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispersion' Line='dispersion = 2.61 cdispersion = 70.' -->
   <dd>Echelle and crossdisperser blaze dispersions in Angstroms per millimeter
@@ -236,7 +236,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <p style="text-align:center">SPECTRA PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_rv">
   <dt><b>rv = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rv' Line='rv = 0.' -->
   <dd>Radial velocity (km/s) or redshift, as selected by the parameter <i>z</i>,
@@ -246,19 +246,19 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   underlying artificial spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z">
   <dt><b>z = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='z' Line='z = no' -->
   <dd>Is the velocity parameter a radial velocity or a redshift?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_continuum">
   <dt><b>continuum = 1000.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='continuum' Line='continuum = 1000.' -->
   <dd>Continuum at the echelle blaze peak in the reference order.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_temperature">
   <dt><b>temperature = 5700.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='temperature' Line='temperature = 5700.' -->
   <dd>Blackbody continuum temperature in Kelvin.  A value of 0 is used if
@@ -266,7 +266,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   scaling to the continuum level at blaze peak reference point.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lines">
   <dt><b>lines = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lines' Line='lines = ""' -->
   <dd>List of spectral line files.  Spectral line files contain lines of rest
@@ -280,7 +280,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   spectral line list file is reused.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlines">
   <dt><b>nlines = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlines' Line='nlines = 0' -->
   <dd>If no spectral line file or a new file is specified then the task will
@@ -292,7 +292,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   periodically.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_peak">
   <dt><b>peak = -0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='peak' Line='peak = -0.5' -->
   <dd>The maximum spectral line peak value when generating random lines or
@@ -301,14 +301,14 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   Negative values are absorption lines and positive values are emission lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sigma">
   <dt><b>sigma = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sigma' Line='sigma = 1.' -->
   <dd>The default line width as a gaussian sigma in Angstroms when generating
   random lines or when the width is missing from the spectral line file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_seed">
   <dt><b>seed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1' -->
   <dd>Random number seed.
@@ -317,14 +317,14 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <p>
   PACKAGE PARAMETERS
   </p>
-  <dl>
+  <dl id="l_nxsub">
   <dt><b>nxsub = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub = 10' -->
   <dd>Number of pixel subsamples used in computing the gaussian spectral line
   profiles.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dynrange">
   <dt><b>dynrange = 100000.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dynrange' Line='dynrange = 100000.' -->
   <dd>The gaussian line profiles extend to infinity so a dynamic range, the ratio
@@ -332,9 +332,9 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   profiles.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task creates or adds to artificial extracted (one dimensional
   <span style="font-family: monospace;">"echelle"</span> format) or two dimensional echelle spectra.  The input spectrum
@@ -489,25 +489,25 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   plane perpendicular to the grating face (gamma=0).  In this case the basic
   equation is
   </p>
-  <pre>
-  (1)	m * lambda = (sin(theta) + sin(beta)) / g
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (1)     m * lambda = (sin(theta) + sin(beta)) / g
+  </pre></div>
   <p>
   where m is the order, lambda the wavelength, g the grooves per wavelength
   unit, theta the angle of incidence to the grating normal, and beta the
   angle of diffraction to the normal.  The diffraction angle relative to that
   of the blaze maximum, psi, is given by
   </p>
-  <pre>
-  (2)	beta = psi + 2 * blaze - theta
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (2)     beta = psi + 2 * blaze - theta
+  </pre></div>
   <p>
   where blaze is the blaze angle.  The diffraction angle psi is related to
   position on the detector, again measured from the blaze peak, by
   </p>
-  <pre>
-  (3)	x = f / pixsize * tan(psi)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (3)     x = f / pixsize * tan(psi)
+  </pre></div>
   <p>
   where f is the effective focal length (as defined by this equation) and
   pixsize is the pixel size in millimeters that converts the detector
@@ -518,20 +518,20 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   The second basic equation is the diffraction pattern or blaze response
   given by
   </p>
-  <pre>
-  (5)	I = I0 * (sin(delta) / delta) ** 2
-  (6)	delta = 2 * pi / lambda * (cos(theta) / g) / cos(epsilon) *
-  		sin(psi/2) * cos(epsilon-psi/2)
-  (7)	epsilon = theta - blaze
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (5)     I = I0 * (sin(delta) / delta) ** 2
+  (6)     delta = 2 * pi / lambda * (cos(theta) / g) / cos(epsilon) *
+                  sin(psi/2) * cos(epsilon-psi/2)
+  (7)     epsilon = theta - blaze
+  </pre></div>
   <p>
   where epsilon is the angle between the blaze angle and the angle of
   incidence (the theta of  Shroeder and Hilliard).  When theta = blaze, (6)
   simplifies to
   </p>
-  <pre>
-  (6a)	delta = pi / lambda * (cos (blaze) / g) * sin (psi)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (6a)    delta = pi / lambda * (cos (blaze) / g) * sin (psi)
+  </pre></div>
   <p>
   As discussed by Schroeder and Hilliard, the relative intensity at the blaze
   peak, I0, must be reduced by the fraction of light at the same wavelength
@@ -550,10 +550,10 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   millimeter on the detector are given by (1) and the derivative of (1) with
   respect to x:
   </p>
-  <pre>
-  (8)	wavelength = 1E7*(sin(theta)+sin(2*blaze-theta))/(gmm*order)
-  (9)	dispersion = 1E7*cos(2*blaze-theta)/(gmm*order*f/pixsize)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (8)     wavelength = 1E7*(sin(theta)+sin(2*blaze-theta))/(gmm*order)
+  (9)     dispersion = 1E7*cos(2*blaze-theta)/(gmm*order*f/pixsize)
+  </pre></div>
   <p>
   The variable names are the same as the parameters in this task.   In
   particular, gmm is the echelle grooves per millimeter with the factors of
@@ -569,12 +569,12 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   position.  The approximation is that tan(psi) = sin(psi) = psi so
   that
   </p>
-  <pre>
-  (9)	lambda = (order * wavelength + dispersion * x) / m
+  <div class="highlight-default-notranslate"><pre>
+  (9)     lambda = (order * wavelength + dispersion * x) / m
                  = (a + b * x) / m
-  (10)	delta  = pi * order * dispersion / lambda * x
+  (10)    delta  = pi * order * dispersion / lambda * x
                  =  c / lambda * x
-  </pre>
+  </pre></div>
   <p>
   Also in this case the extracted format (described later) includes
   wavelength information in the header so that the spectra appear as fully
@@ -636,10 +636,10 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   relation is used to determine where the order falls at each wavelength.
   The spatial profiles are defined by the formulas:
   </p>
-  <pre>
-      gaussian:   I(x) = exp (-ln(2) * (2*(x-xc(w))/width)**2)
-          slit:   I(x) = exp (-ln(2) * (2*(x-xc(w))/width)**10)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  gaussian:   I(x) = exp (-ln(2) * (2*(x-xc(w))/width)**2)
+      slit:   I(x) = exp (-ln(2) * (2*(x-xc(w))/width)**10)
+  </pre></div>
   <p>
   where x is the spatial coordinate, xc(w) is the order center at
   wavelength w, and width is the full width at half maximum specified by
@@ -657,24 +657,24 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   to the columns and constant wavelength is exactly aligned with the
   image lines.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create an absorption spectrum with blackbody continuum and scattered
   light using the default grating parameters then add noise.
   </p>
-  <pre>
-  	cl&gt; mkechelle ex1 nrand=100 scat=100.
-  	cl&gt; mknoise ex1 gain=2 rdnoise=5 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkechelle ex1 nrand=100 scat=100.
+  cl&gt; mknoise ex1 gain=2 rdnoise=5 poisson+
+  </pre></div>
   <p>
   2. Create an arc spectrum using the line list noao$lib/onedstds/thorium.dat.
   </p>
-  <pre>
-  	cl&gt; mkechelle ex2 cont=10 temp=0 \<br>
-  	lines=noao$lib/onedstds/thorium.dat peak=1000 sigma=.05
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkechelle ex2 cont=10 temp=0 \<br>
+  lines=noao$lib/onedstds/thorium.dat peak=1000 sigma=.05
+  </pre></div>
   <p>
   Note that the line intensities are random and not realistic.  The peak
   intensities range from 0 to 1000 times the continuum or 10000.
@@ -682,10 +682,10 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <p>
   3. Create an extracted version of example1.
   </p>
-  <pre>
-  	cl&gt; mkechelle ex1.ec prof=extracted nrand=100 scat=100.
-  	cl&gt; mknoise ex1.ec gain=2 rdnoise=5 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkechelle ex1.ec prof=extracted nrand=100 scat=100.
+  cl&gt; mknoise ex1.ec gain=2 rdnoise=5 poisson+
+  </pre></div>
   <p>
   Note that the noise is different and greater than would be the case with
   extracting the orders of example 1 because the noise is not summed
@@ -694,13 +694,13 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <p>
   4. Create an extracted and dispersion corrected version of example1.
   </p>
-  <pre>
-  	cl&gt; mkechelle ex1.ec prof=extracted nrand=100 scat=100. \<br>
-  	gmm=INDEF blaze=INDEF theta=INDEF
-  	Echelle grating: Using linear dispersion
-  	Warning: Insufficient information to resolve grating parameters
-  	cl&gt; mknoise ex1.ec gain=2 rdnoise=5 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkechelle ex1.ec prof=extracted nrand=100 scat=100. \<br>
+  gmm=INDEF blaze=INDEF theta=INDEF
+  Echelle grating: Using linear dispersion
+  Warning: Insufficient information to resolve grating parameters
+  cl&gt; mknoise ex1.ec gain=2 rdnoise=5 poisson+
+  </pre></div>
   <p>
   The warning is expected.  By not specifying all the parameters needed to
   fully model an echelle grating the default action is to use a linear
@@ -711,20 +711,20 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   <b>dispcor</b>.  As with example 3, the noise is different since it is added
   after extraction and dispersion correction.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_MKECHELLE">
   <dt><b>MKECHELLE V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKECHELLE' Line='MKECHELLE V2.10.3' -->
   <dd>The task was updated to produce the current coordinate system format.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also_mknoise__mk1dspec__mk2dspec__mkheader__astutil_gratings">
   <h3>See also mknoise, mk1dspec, mk2dspec, mkheader, astutil.gratings</h3>
-  <!-- BeginSection: 'SEE ALSO mknoise, mk1dspec, mk2dspec, mkheader, astutil.gratings' -->
   
-  <!-- EndSection:    'SEE ALSO mknoise, mk1dspec, mk2dspec, mkheader, astutil.gratings' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO mknoise, mk1dspec, mk2dspec, mkheader, astutil.gratings'  -->
   

@@ -7,22 +7,22 @@ flatfit: Sum and normalize flat field spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   flatfit root records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_root">
   <dt><b>root</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='root' Line='root' -->
   <dd>The root file name for the input names of the flat field
   spectra to be accumulated and fit for normalization.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The range of spectra indicating the elements of the string.
@@ -30,7 +30,7 @@ flatfit: Sum and normalize flat field spectra
   elements to the input root name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>This is the root file name for the names of the spectra which will
@@ -39,55 +39,55 @@ flatfit: Sum and normalize flat field spectra
   number with leading 0's.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"chebyshev"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "chebyshev"' -->
   <dd>The accumulated spectra are fit by this function type - either
   chebyshev or legendre polynomials, or spline3 or spline1 interpolators.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 4</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 4' -->
   <dd>The order of the fit using the above function. This should generally be
   a low order fit to avoid introduction of high spatial frequency wiggles.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niter">
   <dt><b>niter = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niter' Line='niter = 1' -->
   <dd>The number of iterations to reject discrepant pixels upon initial
   startup of the solution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lower">
   <dt><b>lower = 2.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lower' Line='lower = 2.0' -->
   <dd>The number of sigmas for which data values less than this cutoff are
   rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_upper">
   <dt><b>upper = 2.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='upper' Line='upper = 2.0' -->
   <dd>The number of sigmas for which data values greater than this cutoff are
   rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ngrow">
   <dt><b>ngrow = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ngrow' Line='ngrow = 0' -->
   <dd>The number of pixels on either side of a rejected pixel to also be rejected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_div_min">
   <dt><b>div_min = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='div_min' Line='div_min = 1.0' -->
   <dd>During the normalization process, a division by zero will produce
   this value as a result.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interact">
   <dt><b>interact = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interact' Line='interact = yes' -->
   <dd>If set to yes, graphical interaction with the normalization process
@@ -95,7 +95,7 @@ flatfit: Sum and normalize flat field spectra
   If set to no, no interaction is provided.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_all_interact">
   <dt><b>all_interact = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='all_interact' Line='all_interact = no' -->
   <dd>If set to yes, then interaction will be provided for all apertures
@@ -103,7 +103,7 @@ flatfit: Sum and normalize flat field spectra
   will determine if the first aperture data is to be interactive.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coincor">
   <dt><b>coincor = )_.coincor</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coincor' Line='coincor = )_.coincor' -->
   <dd>If set to yes, coincidence correction is applied to the data during
@@ -130,16 +130,16 @@ flatfit: Sum and normalize flat field spectra
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.  When null the standard cursor is used otherwise
   the specified file is used.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The specified spectra are added by aperture number to produce
   summations which are then fit by a specified fitting function.
@@ -199,7 +199,7 @@ flatfit: Sum and normalize flat field spectra
   <dd>Indicate active keystrokes on the status line
   </dd>
   </dl>
-  <dl>
+  <dl id="l_e">
   <dt><b>e</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='e' Line='e' -->
   <dd>Change plot mode to an error plot. This display is defined
@@ -207,55 +207,55 @@ flatfit: Sum and normalize flat field spectra
   at each pixel
   </dd>
   </dl>
-  <dl>
+  <dl id="l_f">
   <dt><b>f</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='f' Line='f' -->
   <dd>Change plot mode back to the fit through the data display
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='o' Line='o' -->
   <dd>Change the order of the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_l">
   <dt><b>l</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='l' Line='l' -->
   <dd>Change the lower rejection criterion (in units of sigma).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_u">
   <dt><b>u</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='u' Line='u' -->
   <dd>Change the upper rejection criterion.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_s">
   <dt><b>s</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='s' Line='s' -->
   <dd>Change both rejection criteria to the same value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_r">
   <dt><b>r</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='r' Line='r' -->
   <dd>Reinstate rejected pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i">
   <dt><b>i</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='i' Line='i' -->
   <dd>Iterate one more time.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_n">
   <dt><b>n</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='n' Line='n' -->
   <dd>Iterate several more times - the user is prompted for the count.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_q">
   <dt><b>q</b></dt>
   <!-- Sec='DESCRIPTION' Level=0 Label='q' Line='q' -->
   <dd>Quit and accept the solution
@@ -273,21 +273,21 @@ flatfit: Sum and normalize flat field spectra
   reject additional pixels. To fully inhibit pixel rejection, the sigmas
   should be set to a large value (e.g. 100).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following example will accumulate 8 spectra and fit the first
   aperture data interactively but not the second, and apply coincidence
   corrections to the sums. The upper and lower rejection criteria
   have been altered to bias the seventh order fit to a higher level.
   </p>
-  <p>
-  	cl&gt; flatfit nite1 1-4,201-204 coin+ low=1.4 up=3 order=7
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; flatfit nite1 1-4,201-204 coin+ low=1.4 up=3 order=7
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   For some reason, the error plot is supposed to have a zero level line
   drawn, but none appears.
@@ -297,14 +297,14 @@ flatfit: Sum and normalize flat field spectra
   of terms in the fit, so that a fit of order 1 implies a constant and order
   2 implies a linear fit.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   coincor, flatdiv
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

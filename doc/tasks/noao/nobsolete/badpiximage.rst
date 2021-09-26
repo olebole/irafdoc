@@ -7,47 +7,47 @@ badpiximage: Create a bad pixel mask image (from imred.ccdred V2.10.4)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   badpiximage fixfile template image
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_fixfile">
   <dt><b>fixfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fixfile' Line='fixfile' -->
   <dd>Bad pixel file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_template">
   <dt><b>template</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='template' Line='template' -->
   <dd>Template image used to define the size of the bad pixel mask image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>Bad pixel mask image to be created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_goodvalue">
   <dt><b>goodvalue = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='goodvalue' Line='goodvalue = 1' -->
   <dd>Integer value assigned to the good pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_badvalue">
   <dt><b>badvalue = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='badvalue' Line='badvalue = 0' -->
   <dd>Integer value assigned to the bad pixels.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   A bad pixel mask image is created from the specified bad pixel file.
   The format of the bad pixel file is that used by <b>ccdproc</b> to
@@ -61,30 +61,30 @@ badpiximage: Create a bad pixel mask image (from imred.ccdred V2.10.4)
   and to propagate the positions of the bad pixels through the
   reductions.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To make a bad pixel mask image from the bad pixel file <span style="font-family: monospace;">"cryocambp.dat"</span>
   using the image <span style="font-family: monospace;">"ccd005"</span> as the template:
   </p>
-  <p>
-  	cl&gt; badpiximage cryocambp.dat ccd005 cryocambp
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; badpiximage cryocambp.dat ccd005 cryocambp
+  </pre></div>
   <p>
   2. To make the bad pixel mask image with good values of 0 and bad values of 1:
   </p>
-  <p>
-  	cl&gt; badpixim cryomapbp.dat ccd005 cryocambp good=0 bad=1
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; badpixim cryomapbp.dat ccd005 cryocambp good=0 bad=1
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   text2image
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

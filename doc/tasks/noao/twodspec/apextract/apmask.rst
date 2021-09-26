@@ -7,28 +7,28 @@ apmask: Create and IRAF pixel list mask of the apertures
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   apfind input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images with aperture definitions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output mask names.  As a convention the extension <span style="font-family: monospace;">".pl"</span> (pixel
   list) should be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>Apertures to recenter, resize, trace, and create a mask.  This only applies
@@ -40,7 +40,7 @@ apmask: Create and IRAF pixel list mask of the apertures
   for example, <span style="font-family: monospace;">"1,3-5,9-12x2"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_references">
   <dt><b>references = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = ""' -->
   <dd>List of reference images to be used to define apertures for the input
@@ -53,7 +53,7 @@ apmask: Create and IRAF pixel list mask of the apertures
   and the word <span style="font-family: monospace;">"NEW"</span> requires that the entry not exist for each input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Run this task interactively?  If the task is not run interactively then
@@ -61,7 +61,7 @@ apmask: Create and IRAF pixel list mask of the apertures
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_find">
   <dt><b>find = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='find' Line='find = yes' -->
   <dd>Find the spectra and define apertures automatically?  In order for
@@ -70,44 +70,44 @@ apmask: Create and IRAF pixel list mask of the apertures
   parameter <i>nfind</i> must be greater than zero.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = no' -->
   <dd>Recenter the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_resize">
   <dt><b>resize = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='resize' Line='resize = no' -->
   <dd>Resize the apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = yes' -->
   <dd>Edit the apertures?  The <i>interactive</i> parameter must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trace">
   <dt><b>trace = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trace' Line='trace = yes' -->
   <dd>Trace apertures?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fittrace">
   <dt><b>fittrace = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fittrace' Line='fittrace = yes' -->
   <dd>Fit the traced points interactively?  The <i>interactive</i> parameter
   must also be yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mask">
   <dt><b>mask = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mask' Line='mask = yes' -->
   <dd>Create mask images?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF' -->
   <dd>The dispersion line (line or column perpendicular to the dispersion axis) to
@@ -115,7 +115,7 @@ apmask: Create and IRAF pixel list mask of the apertures
   trace spectra.  A value of INDEF selects the middle of the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = 1' -->
   <dd>Number of dispersion lines to be summed or medianed.  The lines are taken
@@ -123,7 +123,7 @@ apmask: Create and IRAF pixel list mask of the apertures
   sum and a negative value selects a median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_buffer">
   <dt><b>buffer = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 0.' -->
   <dd>Buffer to add to aperture limits.  One use for this is to increase
@@ -131,9 +131,9 @@ apmask: Create and IRAF pixel list mask of the apertures
   the apertures.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_additional_parameters">
   <h3>Additional parameters</h3>
-  <!-- BeginSection: 'ADDITIONAL PARAMETERS' -->
   <p>
   I/O parameters and the default dispersion axis are taken from the
   package parameters, the default aperture parameters from
@@ -143,9 +143,9 @@ apmask: Create and IRAF pixel list mask of the apertures
   editing the apertures from <b>apedit</b>, and tracing parameters from
   <b>aptrace</b>.
   </p>
-  <!-- EndSection:   'ADDITIONAL PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Pixel list masks are created from the aperture definitions in the input
   images.  Pixel list masks are a compact way to define arbitrary
@@ -158,20 +158,20 @@ apmask: Create and IRAF pixel list mask of the apertures
   <b>imsurfit</b> to fit a background or scattered light surface.
   (See <b>apscatter</b> for an alternative method).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To replace all data outside the apertures by zero:
   </p>
-  <pre>
-  	cl&gt; apmask image image.pl nfind=10
-  	cl&gt; imarith image * image.pl image1
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; apmask image image.pl nfind=10
+  cl&gt; imarith image * image.pl image1
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_APMASK">
   <dt><b>APMASK V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='APMASK' Line='APMASK V2.11' -->
   <dd>The <span style="font-family: monospace;">"apertures"</span> parameter can be used to select apertures for resizing,
@@ -180,14 +180,14 @@ apmask: Create and IRAF pixel list mask of the apertures
   parameter name for this is now <span style="font-family: monospace;">"aprecenter"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apdefault, aprecenter, apresize, apedit, aptrace, apall
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'ADDITIONAL PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

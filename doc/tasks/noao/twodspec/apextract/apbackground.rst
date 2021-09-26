@@ -7,13 +7,13 @@ apbackground: Background subtraction algorithms
 
 .. raw:: html
 
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   approfile apvariance apdefault icfit apall apsum
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'SEE ALSO'  -->
   

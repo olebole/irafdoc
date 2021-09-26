@@ -7,64 +7,64 @@ cl: Execute commands from the standard input
 
 .. raw:: html
 
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_gcur">
   <dt><b>gcur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcur' Line='gcur = ""' -->
   <dd>Global graphics cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imcur">
   <dt><b>imcur = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imcur' Line='imcur = ""' -->
   <dd>Global image cursor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_abbreviate">
   <dt><b>abbreviate = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='abbreviate' Line='abbreviate = yes' -->
   <dd>Permits minimum match abbreviations of task and parameter names (disabled
   within scripts).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_echo">
   <dt><b>echo = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='echo' Line='echo = no' -->
   <dd>Echo all commands received by the CL on the terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ehinit">
   <dt><b>ehinit = <span style="font-family: monospace;">"standout eol noverify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ehinit' Line='ehinit = "standout eol noverify"' -->
   <dd>Ehistory options string.  (See <span style="font-family: monospace;">"ehistory"</span>)
   </dd>
   </dl>
-  <dl>
+  <dl id="l_epinit">
   <dt><b>epinit = <span style="font-family: monospace;">"standout noshowall"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='epinit' Line='epinit = "standout noshowall"' -->
   <dd>Eparam options string.  (See <span style="font-family: monospace;">"eparam"</span>)
   </dd>
   </dl>
-  <dl>
+  <dl id="l_keeplog">
   <dt><b>keeplog = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='keeplog' Line='keeplog = no' -->
   <dd>Keep a log of all CL commands.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"uparm$logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "uparm$logfile"' -->
   <dd>The name of the logfile, if command logging is enabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logmode">
   <dt><b>logmode = <span style="font-family: monospace;">"commands nobackground noerrors notrace"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logmode' Line='logmode = "commands nobackground noerrors notrace"' -->
   <dd>Logging mode control parameter.  (See <span style="font-family: monospace;">"logging"</span>)
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lexmodes">
   <dt><b>lexmodes = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lexmodes' Line='lexmodes = yes' -->
   <dd>Enable automatic mode switching between <span style="font-family: monospace;">"command mode"</span> (used when commands are
@@ -74,14 +74,14 @@ cl: Execute commands from the standard input
   scripts and within parenthesis, i.e., expressions or formal argument lists.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_menus">
   <dt><b>menus = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='menus' Line='menus = yes' -->
   <dd>If <i>menus</i> are enabled, a table will be printed whenever a package is
   entered or exited listing the tasks (or subpackages) in the new package.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mode">
   <dt><b>mode = <span style="font-family: monospace;">"ql"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mode' Line='mode = "ql"' -->
   <dd>The parameter mode of the CL, and of any tasks run by the CL which do not
@@ -96,7 +96,7 @@ cl: Execute commands from the standard input
   global CL mode.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_notify">
   <dt><b>notify = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='notify' Line='notify = yes' -->
   <dd>If <i>notify</i> is enabled background jobs will print a message on the user
@@ -104,7 +104,7 @@ cl: Execute commands from the standard input
   job completes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_szprcache">
   <dt><b>szprcache = (a small number)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='szprcache' Line='szprcache = (a small number)' -->
   <dd>Controls the size of the process cache.  The value may range from 1 to 10.
@@ -112,9 +112,9 @@ cl: Execute commands from the standard input
   critical system/job resources.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>cl</i> and <i>clbye</i> commands are used to call the CL as a task.
   The function of the <i>cl</i> task is to read and execute commands from
@@ -139,54 +139,54 @@ cl: Execute commands from the standard input
   after the <i>cl</i> returns.  If a <i>clbye</i> is used in a script, any
   commands following the <i>clbye</i> will not be executed.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Execute CL commands from a file.
   </p>
-  <p>
-  	cl&gt; cl &lt; cmdfile
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cl &lt; cmdfile
+  </pre></div>
   <p>
   2. Execute CL commands from a pipe.
   </p>
-  <p>
-  	cl&gt; print (<span style="font-family: monospace;">"!type "</span>, fname) | cl
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; print ("!type ", fname) | cl
+  </pre></div>
   <p>
   3. Execute <i>cl</i>, taking command input from the terminal.  Since command
   input is already from the terminal, the only effect is to mark the state
   of CL memory, to allow <i>task</i>, <i>set</i>, and other definitions to be
   made temporarily and later freed by terminating the <i>cl</i> with a <i>bye</i>.
   </p>
-  <pre>
-  	cl&gt; cl
-  	cl&gt; set pak = "home$tasks/"
-  	cl&gt; task $mytask = pak$x_mytask.e
-  		(execute the task)
-  	cl&gt; bye
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cl
+  cl&gt; set pak = "home$tasks/"
+  cl&gt; task $mytask = pak$x_mytask.e
+          (execute the task)
+  cl&gt; bye
+  </pre></div>
   <p>
   In the example above, the declarations of the logical directory <span style="font-family: monospace;">"pak"</span> and the
   task <span style="font-family: monospace;">"mytask"</span> are discarded when the <i>bye</i> is entered, terminating the
   <i>cl</i>.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Beware that any changes made to the global CL parameters during the execution
   of a <i>cl</i> remain in effect after the task terminates.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   bye, keep, logout
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

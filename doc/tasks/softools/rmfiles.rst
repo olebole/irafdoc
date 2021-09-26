@@ -7,14 +7,14 @@ rmfiles: Find/delete files in subdirectories
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rmfiles [-dnv] [-f progfile] rootdir action extns
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <dl>
   <dt><b>-d</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='-d' -->
@@ -42,14 +42,14 @@ rmfiles: Find/delete files in subdirectories
   the remaining arguments are normally omitted.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rootdir">
   <dt><b>rootdir</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rootdir' Line='rootdir' -->
   <dd>The root directory of the directory tree to be pruned.  This must be a
   path from the current directory or from a logical directory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_action">
   <dt><b>action</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='action' Line='action' -->
   <dd>The possible actions are listed below.  This is a required parameter.
@@ -78,15 +78,15 @@ rmfiles: Find/delete files in subdirectories
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extns">
   <dt><b>extns</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extns' Line='extns' -->
   <dd>A list of filename extensions delimited by spaces, e.g., <span style="font-family: monospace;">".a .o .e .hlp"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>rmfiles</i> utility is used to delete (or list) files in one or more
   directory trees.  If only one directory tree is to be pruned the necessary
@@ -121,36 +121,36 @@ rmfiles: Find/delete files in subdirectories
   <i>Rmfiles</i> is a bootstrap utility implemented as a foreign task, hence
   it may be called either from within IRAF or from the host system.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Delete all .o, .e, .a, and .hd files in the directory <span style="font-family: monospace;">"iraf$pkg"</span>.
   Print the names of the files as they are deleted.  Note that one must
   move to the directory containing the directory to be pruned before running
   <i>rmfiles</i>.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; cd iraf
   	cl&gt; rmfiles -v pkg .o .e .a .hd
-  </pre>
+  </pre></div>
   <p>
   2. Strip the entire IRAF system, using the program in file <span style="font-family: monospace;">"hlib$stripper"</span>.
   The use of the $ in the filename here could cause problems on some systems
   since <i>rmfiles</i> is a foreign task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   	cl&gt; cd iraf
   	cl&gt; rmfiles -vf hlib$stripper
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rmbin, rtar, wtar
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ acatpars: Default astrometry file format parameter set
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   acatpars 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_ftype">
   <dt><b>ftype = <span style="font-family: monospace;">"stext"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "stext"' -->
   <dd>The astrometry file format. The current options are:
@@ -34,7 +34,7 @@ acatpars: Default astrometry file format parameter set
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ccsystem">
   <dt><b>ccsystem = <span style="font-family: monospace;">"j2000"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ccsystem' Line='ccsystem = "j2000"' -->
   <dd>The default celestial coordinate system. The coordinate systems of most
@@ -43,7 +43,7 @@ acatpars: Default astrometry file format parameter set
   <span style="font-family: monospace;">"help ccsystems"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_standard">
   <dt><b>standard astrometry file fields</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='standard' Line='standard astrometry file fields' -->
   <dd>The following parameters define the standard astrometry file fields. The
@@ -267,9 +267,9 @@ acatpars: Default astrometry file format parameter set
   </dl>
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The acatpars parameters define the default astrometry file format. These
   parameters are used if the input astrometry file does not contain a standard
@@ -285,12 +285,12 @@ acatpars: Default astrometry file format parameter set
   the fields by setting the appropriate standard file parameters
   to a string with the following format, e.g.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   parname = "fieldno [units [format]]"
   
        ra = "1 hours"
       dec = "2 degrees"
-  </pre>
+  </pre></div>
   <p>
   where fieldno is the field or column number in the record. The
   units and format strings are optional and reasonable defaults are
@@ -308,11 +308,11 @@ acatpars: Default astrometry file format parameter set
   define the fields by setting the appropriate standard file parameters to
   a string with the following format, e.g.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   parname = "foffset fsize [units [format]]"
        ra = "1 15 hours"
       dec = "16 15 degrees"
-  </pre>
+  </pre></div>
   <p>
   where foffset and fsize are the field offset and size in characters.
   Formats and units are treated in the same way as they for simple text files.
@@ -324,50 +324,50 @@ acatpars: Default astrometry file format parameter set
   field is defined, in which case the astrometry file may contain entries in
   many different fundamental coordinate systems.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the astrometry file format parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; lpar acatpars
-  </pre>
+  </pre></div>
   <p>
   2. Edit the astrometry file format parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; acatpars
-  </pre>
+  </pre></div>
   <p>
   3. Edit the astrometry file format parameters from the afiltcat task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; epar afiltcat
-  </pre>
+  </pre></div>
   <p>
   4. Save the current acatpars parameter values in a text file called
   acat1.par.  Use the saved parameter set in the next call to the afiltcat
   task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; epar acatpars
   cl&gt; afiltcat ... acatpars=afilt1.par ...
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   afiltcat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

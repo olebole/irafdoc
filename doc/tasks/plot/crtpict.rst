@@ -7,41 +7,41 @@ crtpict: Generate greyscale plots of IRAF images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   crtpict input 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input images to be processed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_device">
   <dt><b>device = <span style="font-family: monospace;">"dicomed"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='device' Line='device = "dicomed"' -->
   <dd>The output device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_auto_fill">
   <dt><b>auto_fill = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='auto_fill' Line='auto_fill = yes' -->
   <dd>If set to yes, the image will be scaled to fit the device viewport.
   The aspect ratio is always preserved when <i>auto_fill</i> = yes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = 1.0, ymag = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1.0, ymag = 1.0' -->
   <dd>When <i>auto_fill</i> = no, the x and y magnification ratios are specified
   by these parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_replicate">
   <dt><b>replicate = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='replicate' Line='replicate = yes' -->
   <dd>The image pixels are block replicated to fit the device viewport when
@@ -49,7 +49,7 @@ crtpict: Generate greyscale plots of IRAF images
   to match the device pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x_block_avg">
   <dt><b>x_block_avg = 1, y_block_avg = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='x_block_avg' Line='x_block_avg = 1, y_block_avg = 1' -->
   <dd>These parameters are used when <i>replicate</i> = no to decrease the
@@ -58,22 +58,21 @@ crtpict: Generate greyscale plots of IRAF images
   block replicated to fill the device viewport.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ztrans">
   <dt><b>ztrans = <span style="font-family: monospace;">"auto"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "auto"' -->
   <dd>This parameter specifies how the image intensities are mapped into the 
   greyscale values of the output device.  Intensity z1 maps to black, z2 to white.
   The 4 choices for <i>ztrans</i> are:
-  <pre>
-  
-  	"auto"		- z1 and z2 centered on median of image
-  	"min_max"	- set z1 and z2 to specified intensities
-  	"none" 		- truncate intensities to fit output range
-  	"user"		- user supplies look up table of values
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  "auto"          - z1 and z2 centered on median of image
+  "min_max"       - set z1 and z2 to specified intensities
+  "none"          - truncate intensities to fit output range
+  "user"          - user supplies look up table of values
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lutfile">
   <dt><b>lutfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""' -->
   <dd>Name of text file containing the look up table when <i>ztrans</i> = user. 
@@ -81,7 +80,7 @@ crtpict: Generate greyscale plots of IRAF images
   intensity, column 2 the desired greyscale output.  
   </dd>
   </dl>
-  <dl>
+  <dl id="l_contrast">
   <dt><b>contrast = 0.25</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='contrast' Line='contrast = 0.25' -->
   <dd>Used when automatically determining z1 and z2.  The slope of the transfer
@@ -89,47 +88,47 @@ crtpict: Generate greyscale plots of IRAF images
   result in a negative transfer function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsample_lines">
   <dt><b>nsample_lines = 25</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsample_lines' Line='nsample_lines = 25' -->
   <dd>Used when automatically determining z1 and z2, this parameter sets the number 
   of image lines to be sampled when determining the median.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z1">
   <dt><b>z1 = 0.0, z2 = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='z1' Line='z1 = 0.0, z2 = 0.0' -->
   <dd>These parameters are used when <i>ztrans</i> = <span style="font-family: monospace;">"min_max"</span>, to specify which
   pixel values map to black and white.  
   </dd>
   </dl>
-  <dl>
+  <dl id="l_perimeter">
   <dt><b>perimeter = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='perimeter' Line='perimeter = yes' -->
   <dd>Draw annotated axes around the plot perimeter?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_image_fraction">
   <dt><b>image_fraction = 0.70</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image_fraction' Line='image_fraction = 0.70' -->
   <dd>The fraction of the vertical device viewport reserved for the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics_fraction">
   <dt><b>graphics_fraction = 0.20</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics_fraction' Line='graphics_fraction = 0.20' -->
   <dd>The fraction of the vertical device viewport reserved for histogram
   plots and id information. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_greyscale_fraction">
   <dt><b>greyscale_fraction = 0.05</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='greyscale_fraction' Line='greyscale_fraction = 0.05' -->
   <dd>The fraction of the vertical device viewport reserved for the greyscale
   step wedge.  
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output metacode is appended to this file.
@@ -137,9 +136,9 @@ crtpict: Generate greyscale plots of IRAF images
   spooling process intercepted.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Procedure <b>crtpict</b> makes a photographic hardcopy plot of IRAF images.
   </p>
@@ -194,63 +193,63 @@ crtpict: Generate greyscale plots of IRAF images
   the output device.  Task <b>showcap</b> can be used to determine the range
   of acceptable greyscale levels.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To subsample every 4th pixel of a large image, fill the output area and use
   previously determined values of z1 and z2 for the greyscale transformation
   the command would be:
   </p>
-  <p>
-      cl&gt; crtpict sunpic[*:4,*:4] ztrans=min z1=0 z2=800
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; crtpict sunpic[*:4,*:4] ztrans=min z1=0 z2=800
+  </pre></div>
   <p>
   2.  To process every image with the root name ccdpic, using default values of
   all parameters, the command would be:
   </p>
-  <p>
-      cl&gt; crtpict ccdpic*
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; crtpict ccdpic*
+  </pre></div>
   <p>
   3.  To process images created with <b>snap</b>, ztrans and z2 must be changed
   from their default values:
   </p>
-  <p>
-      cl&gt; crtpict iis.snap ztrans=min z2=1023
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; crtpict iis.snap ztrans=min z2=1023
+  </pre></div>
   <p>
   4.  Image `mypic' is processed using the look up table in file `mylut',
   </p>
-  <p>
-      cl&gt; crtpict mypic ztrans=user lutfile=mylut
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; crtpict mypic ztrans=user lutfile=mylut
+  </pre></div>
   <p>
   Where file `mylut' contains this information:
   </p>
-  <pre>
-  		10	40
-  		1500	100
-  		2500	100
-  		3500	200
-  		7500	255
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  10      40
+  1500    100
+  2500    100
+  3500    200
+  7500    255
+  </pre></div>
+  </section>
+  <section id="s_timing">
   <h3>Timing</h3>
-  <!-- BeginSection: 'TIMING' -->
   <p>
   For a 512 x 512 real image, <b>crtpict</b> takes about 40 cpu seconds with
   <b>auto_fill</b> and <b>replicate</b> = yes.  When <b>auto_fill</b> = yes
   but <b>replicate</b> = no, <b>crtpict</b> requires almost 400 cpu seconds.
   </p>
-  <!-- EndSection:   'TIMING' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   display, showcap
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIMING' 'SEE ALSO'  -->
   

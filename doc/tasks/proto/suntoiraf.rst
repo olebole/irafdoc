@@ -7,15 +7,15 @@ suntoiraf: Convert Sun rasters into IRAF images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   suntoiraf input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_names">
   <dt><b>names</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='names' Line='names' -->
   <dd>List of raster files to be converted.  The output image names will be
@@ -26,7 +26,7 @@ suntoiraf: Convert Sun rasters into IRAF images
   login directory when the task is used within an imtool R_DISPOSE string.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apply_lut">
   <dt><b>apply_lut = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apply_lut' Line='apply_lut = yes' -->
   <dd>Apply the lookup table translation to each pixel?  If <b>apply_lut</b> =
@@ -35,35 +35,35 @@ suntoiraf: Convert Sun rasters into IRAF images
   color lookup table will be applied to each pixel to convert to grayscale.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delete">
   <dt><b>delete = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no' -->
   <dd>Delete the rasterfile after making the image?  This is useful for making
   automated (Unix or IRAF) scripts for producing photographic or other hardcopy.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print informative information while the transformation is occurring?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_listonly">
   <dt><b>listonly = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no' -->
   <dd>List the rasterfile header information instead?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_yflip">
   <dt><b>yflip = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='yflip' Line='yflip = yes' -->
   <dd>Flip the output image top to bottom?  Rasterfiles are stored in reverse
   vertical order from IRAF images.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Suntoiraf</b> will convert Sun raster files into IRAF images.  This is
   useful, for example, to make <b>solitaire</b> photographic prints or
@@ -99,9 +99,9 @@ suntoiraf: Convert Sun rasters into IRAF images
   hand, if <b>yflip</b> = no, the storage order will be preserved at the
   expense of the output orientation appearing inverted.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_imtool_hints">
   <h3>Imtool hints</h3>
-  <!-- BeginSection: 'IMTOOL HINTS' -->
   <p>
   One possible first step in making a hardcopy is to create the raster files
   from the imtool window.  The recommended way to do this is to select <span style="font-family: monospace;">"Imcopy"</span>
@@ -137,10 +137,10 @@ suntoiraf: Convert Sun rasters into IRAF images
   <p>
   In the setup menu try:
   </p>
-  <pre>
-      Show colorbar:	No
-      Background color:	black
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Show colorbar:      No
+  Background color:   black
+  </pre></div>
   <p>
   The choice of the background color may have an effect on any graphics
   in the frame.
@@ -153,17 +153,17 @@ suntoiraf: Convert Sun rasters into IRAF images
   into another directory by setting the UNIX environment variable `tmp'
   to the desired pathname:
   </p>
-  <pre>
-      % setenv tmp '/scr1/v13/pixels/'
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  % setenv tmp '/scr1/v13/pixels/'
+  </pre></div>
   <p>
   *before* starting up IMTOOL (IN THE PARENT SHELL OF THE IMTOOL).
   Note that if this is set when IRAF is entered, all IRAF temporary
   files will end up in this directory.
   </p>
-  <!-- EndSection:   'IMTOOL HINTS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   These are rather specific to NOAO/Tucson, but may suggest ways that the
   task may be useful to you.
@@ -179,10 +179,10 @@ suntoiraf: Convert Sun rasters into IRAF images
   called directly by the imtool.  For example, place these lines in
   your `.login' file:
   </p>
-  <pre>
-      setenv R_RASTERFILE 'snap.%d'
-      setenv R_DISPOSE '/ursa/iraf/extern/nlocal/lib/imttodmd %s'
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  setenv R_RASTERFILE 'snap.%d'
+  setenv R_DISPOSE '/ursa/iraf/extern/nlocal/lib/imttodmd %s'
+  </pre></div>
   <p>
   More recent versions of imtool also allow setting these strings from
   the setup panel.
@@ -205,9 +205,9 @@ suntoiraf: Convert Sun rasters into IRAF images
   imtool on a lightly loaded system.  If faster response is needed,
   the script may be run in the background:
   </p>
-  <pre>
-      setenv R_DISPOSE    '/ursa/iraf/extern/nlocal/lib/imttodmd %s &amp;'
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  setenv R_DISPOSE    '/ursa/iraf/extern/nlocal/lib/imttodmd %s &amp;'
+  </pre></div>
   <p>
   Care should be taken in this case to avoid having too many
   (<b>too many is typically more than one</b>) background job running
@@ -222,15 +222,15 @@ suntoiraf: Convert Sun rasters into IRAF images
   directory and also make solitaires (i.e., if you are highly
   suspicious by nature) set the variable:
   </p>
-  <pre>
-      setenv R_DISPOSE    '/ursa/iraf/extern/nlocal/lib/imttodmd -image %s'
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  setenv R_DISPOSE    '/ursa/iraf/extern/nlocal/lib/imttodmd -image %s'
+  </pre></div>
   <p>
   To only make the images, with no solitaire output:
   </p>
-  <pre>
-      setenv R_DISPOSE    '/ursa/iraf/extern/nlocal/lib/imttodmd -nocrt %s'
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  setenv R_DISPOSE    '/ursa/iraf/extern/nlocal/lib/imttodmd -nocrt %s'
+  </pre></div>
   <p>
   This will allow you to run a single CRTPICT job after collecting all
   the snap files.
@@ -241,9 +241,9 @@ suntoiraf: Convert Sun rasters into IRAF images
   <p>
   Enter this from the UNIX shell, <b>before starting suntools</b>:
   </p>
-  <pre>
-      % setenv R_RASTERFILE "frame.%d"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  % setenv R_RASTERFILE "frame.%d"
+  </pre></div>
   <p>
   Start suntools, login to iraf and load the noao, tv and local
   packages.  Display an image and press the &lt;F7&gt; function key to
@@ -254,30 +254,30 @@ suntoiraf: Convert Sun rasters into IRAF images
   <p>
   Dump the raster files to the solitaire queue:
   </p>
-  <pre>
-      lo&gt; suntoiraf frame.*
-      lo&gt; crtpict frame.*.i.imh ztrans=min_max z1=5 z2=260
-  	(The z1 &amp; z2 values were empirically determined.)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  lo&gt; suntoiraf frame.*
+  lo&gt; crtpict frame.*.i.imh ztrans=min_max z1=5 z2=260
+      (The z1 &amp; z2 values were empirically determined.)
+  </pre></div>
   <p>
   *** Don't forget to clean up! ***
   </p>
-  <pre>
-      lo&gt; imdelete frame.*.i.imh
-      lo&gt; delete frame.*
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  lo&gt; imdelete frame.*.i.imh
+  lo&gt; delete frame.*
+  </pre></div>
   <p>
   The solitaires should be ready the next day in the basket by the
   main computer lab.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   irafil, binfil, and the UNIX man page for imtool
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'IMTOOL HINTS' 'EXAMPLES' 'SEE ALSO'  -->
   

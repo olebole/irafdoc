@@ -7,21 +7,21 @@ starlist: Make an artificial star list
 
 .. raw:: html
 
+  <section id="s_task">
   <h3>Task</h3>
-  <!-- BeginSection: 'TASK' -->
   <p>
   starlist -- make an artificial star list
   </p>
-  <!-- EndSection:   'TASK' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   starlist starlist nstars
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_starlist">
   <dt><b>starlist</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='starlist' Line='starlist' -->
   <dd>The name of the output text file for the x and y coordinates
@@ -29,13 +29,13 @@ starlist: Make an artificial star list
   file is it exists.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nstars">
   <dt><b>nstars = 5000</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nstars' Line='nstars = 5000' -->
   <dd>The number of stars in the output star list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Examine plots and change the parameters of the spatial luminosity
@@ -45,7 +45,7 @@ starlist: Make an artificial star list
   <p>
   			SPATIAL DISTRIBUTION
   </p>
-  <dl>
+  <dl id="l_spatial">
   <dt><b>spatial = <span style="font-family: monospace;">"uniform"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spatial' Line='spatial = "uniform"' -->
   <dd>Type of spatial distribution.  The types are:
@@ -72,13 +72,13 @@ starlist: Make an artificial star list
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmin">
   <dt><b>xmin = 1., xmax = 512., ymin = 1., ymax = 512.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = 1., xmax = 512., ymin = 1., ymax = 512.' -->
   <dd>The range of output coordinates in x and y.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcenter">
   <dt><b>xcenter = INDEF, ycenter = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = INDEF, ycenter = INDEF' -->
   <dd>The coordinate of the center of symmetry for the <span style="font-family: monospace;">"hubble"</span>
@@ -86,20 +86,20 @@ starlist: Make an artificial star list
   midpoint of the coordinate limits.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_core_radius">
   <dt><b>core_radius = 30</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='core_radius' Line='core_radius = 30' -->
   <dd>The core radius of the Hubble spatial distribution in pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_base">
   <dt><b>base = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='base' Line='base = 0.0' -->
   <dd>The background density relative to the central density of the Hubble
   density distribution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sseed">
   <dt><b>sseed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sseed' Line='sseed = 1' -->
   <dd>The initial value supplied to the random number generator used to
@@ -112,7 +112,7 @@ starlist: Make an artificial star list
   <p>
   			MAGNITUDE DISTRIBUTION
   </p>
-  <dl>
+  <dl id="l_luminosity">
   <dt><b>luminosity = <span style="font-family: monospace;">"powlaw"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='luminosity' Line='luminosity = "powlaw"' -->
   <dd>Type of luminosity distribution.  The types are:
@@ -154,7 +154,7 @@ starlist: Make an artificial star list
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minmag">
   <dt><b>minmag = -7., maxmag = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minmag' Line='minmag = -7., maxmag = 0.' -->
   <dd>The range of output magnitudes.  The <span style="font-family: monospace;">"salpeter"</span> luminosity function
@@ -163,7 +163,7 @@ starlist: Make an artificial star list
   <i>mzero</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mzero">
   <dt><b>mzero = -4.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mzero' Line='mzero = -4.' -->
   <dd>The zero point for converting the output relative magnitudes
@@ -172,7 +172,7 @@ starlist: Make an artificial star list
   absolute magnitude range of -3 to +4.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_power">
   <dt><b>power = 0.6</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='power' Line='power = 0.6' -->
   <dd>Coefficient for the power law magnitude distribution.
@@ -180,13 +180,13 @@ starlist: Make an artificial star list
   and isotropic distribution with no cutoff in distance.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_alpha">
   <dt><b>alpha = 0.74, beta = 0.04, delta = 0.294, mstar = 1.28</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='alpha' Line='alpha = 0.74, beta = 0.04, delta = 0.294, mstar = 1.28' -->
   <dd>The parameters of the Bahcall and Soneira luminosity function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lseed">
   <dt><b>lseed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lseed' Line='lseed = 1' -->
   <dd>The initial value supplied to the random number generator used to
@@ -199,7 +199,7 @@ starlist: Make an artificial star list
   <p>
   			USER FUNCTIONS
   </p>
-  <dl>
+  <dl id="l_sfile">
   <dt><b>sfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sfile' Line='sfile' -->
   <dd>The name of the input text file containing the sampled spatial radial
@@ -209,7 +209,7 @@ starlist: Make an artificial star list
   uniformly spaced or normalized.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nssample">
   <dt><b>nssample = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nssample' Line='nssample = 100' -->
   <dd>The number of points at which the <i>spatial</i> density function is 
@@ -219,14 +219,14 @@ starlist: Make an artificial star list
   initial smoothing step is performed before sampling.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sorder">
   <dt><b>sorder = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sorder' Line='sorder = 10' -->
   <dd>The order of the spline fits used to evaluate the integrated spatial
   density function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lfile">
   <dt><b>lfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lfile' Line='lfile' -->
   <dd>The name of the input text file containing the sampled luminosity
@@ -235,7 +235,7 @@ starlist: Make an artificial star list
   uniformly spaced or normalized.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nlsample">
   <dt><b>nlsample = 100</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nlsample' Line='nlsample = 100' -->
   <dd>The number of points at which the luminosity function is sampled. If
@@ -245,7 +245,7 @@ starlist: Make an artificial star list
   is performed before sampling.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lorder">
   <dt><b>lorder = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lorder' Line='lorder = 10' -->
   <dd>The order of the spline fits used to evaluate the integrated
@@ -255,34 +255,34 @@ starlist: Make an artificial star list
   <p>
   			INTERACTIVE PARAMETERS
   </p>
-  <dl>
+  <dl id="l_rbinsize">
   <dt><b>rbinsize = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rbinsize' Line='rbinsize = 10.' -->
   <dd>The bin size in pixels of the plotted histogram of the radial density
   distribution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mbinsize">
   <dt><b>mbinsize = 0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mbinsize' Line='mbinsize = 0.5' -->
   <dd>The bin size in magnitudes of the plotted histogram of the luminosity function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = stdgraph</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = stdgraph' -->
   <dd>The default graphics device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>The graphics cursor.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Starlist</b> generates a list of x and y coordinates and magnitudes
   for a sample of <i>nstars</i> stars based on a user selected spatial
@@ -305,11 +305,11 @@ starlist: Make an artificial star list
   density function R(user), P(user) supplied by the user in the text file
   <i>sfile</i>.
   </p>
-  <pre>
-      uniform:  P = C
-      hubble:   P = 1.0 / (1 + R / core_radius) ** 2 + base
-      file:     P = f (R(user), P(user))
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  uniform:  P = C
+  hubble:   P = 1.0 / (1 + R / core_radius) ** 2 + base
+  file:     P = f (R(user), P(user))
+  </pre></div>
   <p>
   The Hubble and user file spatial density function are sampled at
   <i>nssample</i> equally spaced points, and integrated to give the
@@ -329,23 +329,23 @@ starlist: Make an artificial star list
   function to the luminosity function M(user), P(user) supplied by the
   in the text file <i>lfile</i>.
   </p>
-  <pre>
-    uniform:  P = C
+  <div class="highlight-default-notranslate"><pre>
+  uniform:  P = C
   
-    powlaw:   P = C * 10. ** (power * M)
+  powlaw:   P = C * 10. ** (power * M)
   
-    salpeter: P = C * 10. ** (-3.158 + 1.551e-1*dM - 5.194e-3*dM**2)
+  salpeter: P = C * 10. ** (-3.158 + 1.551e-1*dM - 5.194e-3*dM**2)
   
-              dM = M - mzero
+            dM = M - mzero
   
-                               C * 10. ** (beta * dM)
-    bands:   P =  --------------------------------------------------
-                 (1. + 10. ** ((beta-alpha)*delta*dM))) ** 1. /delta
+                             C * 10. ** (beta * dM)
+  bands:   P =  --------------------------------------------------
+               (1. + 10. ** ((beta-alpha)*delta*dM))) ** 1. /delta
   
-             dM = M - mstar - mzero
+           dM = M - mstar - mzero
   
-    file:    P = f (M(user), P(user))
-  </pre>
+  file:    P = f (M(user), P(user))
+  </pre></div>
   <p>
   The Salpeter and <span style="font-family: monospace;">"bands"</span> functions are defined in terms of absolute
   magnitudes so the parameter <i>mzero</i> is used to convert from
@@ -364,87 +364,87 @@ starlist: Make an artificial star list
   Astr. 7, 141). The Bahcall and Soneira function and the default values
   of the parameters are discussed by Bahcall and Soneira (Ap.J.  Supp. 44, 73).
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursors">
   <h3>Cursors</h3>
-  <!-- BeginSection: 'CURSORS' -->
   <p>
   The following interactive keystroke commands are available from within the
   STARLIST task.
   </p>
-  <pre>
-  	Starlist Keystroke Commands
+  <div class="highlight-default-notranslate"><pre>
+          Starlist Keystroke Commands
   
-  ?	Print options
-  f	Fit  one or more of the following
-  	    Spatial density function (SDF)
-  	    Luminosity functions (LF)
-  x	Plot the x-y spatial density function
-  r	Plot the histogram of the radial density function
-  m	Plot the histogram of the luminosity function
-  :	Colon escape commands (see below)
-  q	Exit program
-  </pre>
+  ?       Print options
+  f       Fit  one or more of the following
+              Spatial density function (SDF)
+              Luminosity functions (LF)
+  x       Plot the x-y spatial density function
+  r       Plot the histogram of the radial density function
+  m       Plot the histogram of the luminosity function
+  :       Colon escape commands (see below)
+  q       Exit program
+  </pre></div>
   <p>
   The following parameters can be shown or set from within the STARLIST task.
   </p>
-  <pre>
-  		Starlist Colon Commands
+  <div class="highlight-default-notranslate"><pre>
+                  Starlist Colon Commands
   
-  :show			Show starlist parameters
-  :nstars     [value]	Number of stars
+  :show                   Show starlist parameters
+  :nstars     [value]     Number of stars
   
-  :spatial    [string]	Spatial density function (SDF)
-  			(uniform|hubble|file) 
-  :xmin       [value]	Minimum X value
-  :xmax       [value]	Maximum X value
-  :ymin       [value]	Minimum Y value
-  :ymax       [value]	Maximum Y value
-  :xcenter    [value]	X center for SDF
-  :ycenter    [value]	Y center for SDF
-  :core       [value]	Core radius for Hubble density function
-  :base       [value]	Background density for Hubble density function
+  :spatial    [string]    Spatial density function (SDF)
+                          (uniform|hubble|file)
+  :xmin       [value]     Minimum X value
+  :xmax       [value]     Maximum X value
+  :ymin       [value]     Minimum Y value
+  :ymax       [value]     Maximum Y value
+  :xcenter    [value]     X center for SDF
+  :ycenter    [value]     Y center for SDF
+  :core       [value]     Core radius for Hubble density function
+  :base       [value]     Background density for Hubble density function
   
-  :luminosity [string]	Luminosity function (LF)
-  			(uniform|powlaw|salpeter|bands|file)
-  :minmag     [value]	Minimum magnitude
-  :maxmag     [value]	Maximum magnitude
-  :mzero	    [value]	Magnitude zero-point for salpeter and bands LF
-  :power	    [value]	Exponent for powlaw LF
-  :alpha      [value]	Alpha parameter for bands LF
-  :beta       [value]	Beta parameter for bands LF
-  :delta      [value]	Delta parameter for bands LF
-  :mstar      [value]	Mstar parameter for bands LF
+  :luminosity [string]    Luminosity function (LF)
+                          (uniform|powlaw|salpeter|bands|file)
+  :minmag     [value]     Minimum magnitude
+  :maxmag     [value]     Maximum magnitude
+  :mzero      [value]     Magnitude zero-point for salpeter and bands LF
+  :power      [value]     Exponent for powlaw LF
+  :alpha      [value]     Alpha parameter for bands LF
+  :beta       [value]     Beta parameter for bands LF
+  :delta      [value]     Delta parameter for bands LF
+  :mstar      [value]     Mstar parameter for bands LF
   
-  :sfile	    [string]    File containing the user SDF
-  :nssample   [value]	Number of SDF sample points
-  :sorder	    [value]	Order of spline fit to integrated SDF
-  :lfile	    [string]    File containing the user LF
-  :nlsample   [value]	Number of LF sample points 
-  :lorder	    [value]	Order of spline fit to the integrated LF
+  :sfile      [string]    File containing the user SDF
+  :nssample   [value]     Number of SDF sample points
+  :sorder     [value]     Order of spline fit to integrated SDF
+  :lfile      [string]    File containing the user LF
+  :nlsample   [value]     Number of LF sample points
+  :lorder     [value]     Order of spline fit to the integrated LF
   
-  :rbinsize   [value]	Resolution of radial profile histogram (pixels)
-  :mbinsize   [value]	Resolution of magnitude histogram (mag)
-  </pre>
-  <!-- EndSection:   'CURSORS' -->
+  :rbinsize   [value]     Resolution of radial profile histogram (pixels)
+  :mbinsize   [value]     Resolution of magnitude histogram (mag)
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a uniform artificial starfield of 5000 stars for a 512 square image.
   </p>
-  <pre>
-      ar&gt; starlist starfield.dat 5000
-      ar&gt; mkobjects starfield obj=starfield.dat gain=2 rdnoise=10 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; starlist starfield.dat 5000
+  ar&gt; mkobjects starfield obj=starfield.dat gain=2 rdnoise=10 poisson+
+  </pre></div>
   <p>
   This example takes about a minute on a SPARCstation 1.
   </p>
   <p>
   2. Create a globular cluster field of 5000 stars for a 512 square image.
   </p>
-  <pre>
-      ar&gt; starlist gc.dat 5000 spat=hubble lum=bands
-      ar&gt; mkobjects starfield obj=gc.dat gain=2 rdnoise=10 poisson+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; starlist gc.dat 5000 spat=hubble lum=bands
+  ar&gt; mkobjects starfield obj=gc.dat gain=2 rdnoise=10 poisson+
+  </pre></div>
   <p>
   This example takes about a minute on a SPARCstation 1.
   </p>
@@ -453,27 +453,27 @@ starlist: Make an artificial star list
   and Salpeter magnitude distribution using 1000 stars without
   creating a data file.
   </p>
-  <pre>
-      ar&gt; starlist dev$null 1000 inter+ spat=hubble lum=salpeter
-  	    ... an x-y plot will appear on the screen
-  	    ... type r to examine the radial density function
-  	    ... type m to examine the luminosity function
-  	    ... type = to make a copy of any of the plots
-  	    ... type q to quit
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  ar&gt; starlist dev$null 1000 inter+ spat=hubble lum=salpeter
+          ... an x-y plot will appear on the screen
+          ... type r to examine the radial density function
+          ... type m to examine the luminosity function
+          ... type = to make a copy of any of the plots
+          ... type q to quit
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_STARLIST">
   <dt><b>STARLIST V2.11+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='STARLIST' Line='STARLIST V2.11+' -->
   <dd>The random number seeds can be set from the clock time by using the value
   <span style="font-family: monospace;">"INDEF"</span> to yield different random numbers for each execution.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The spline approximation to the spatial density and luminosity
   probability functions can  cause wiggles in the output spatial density
@@ -483,14 +483,14 @@ starlist: Make an artificial star list
   of 10 sample points per spline piece is generally satisfactory for the
   spatial density and luminosity functions supplied here.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   gallist mkobjects
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'TASK' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSORS' 'EXAMPLES' 'REVISIONS' 'BUGS' 'SEE ALSO'  -->
   

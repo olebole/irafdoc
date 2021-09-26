@@ -7,53 +7,53 @@ osfn: Return the host system equivalent of an IRAF filename
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   string = osfn (vfn)
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_vfn">
   <dt><b>vfn  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='vfn' Line='vfn  ' -->
   <dd>The IRAF virtual filename to be translated into a host filename.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Osfn</i> is a string valued intrinsic function which takes an IRAF virtual
   filename as input and returns the equivalent host system filename as output.
   <i>Osfn</i> can only be called as a function.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Print the host equivalent of the vfn <span style="font-family: monospace;">"hlib$login.cl"</span>.
   </p>
-  <p>
-  	cl&gt; = osfn (<span style="font-family: monospace;">"hlib$login.cl"</span>)
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; = osfn ("hlib$login.cl")
+  </pre></div>
   <p>
   2. Compute a host filename for use as an argument to a foreign task
   (see help <i>task</i> for more information on foreign tasks).
   </p>
-  <pre>
-  	cl&gt; task $vdir = "$directory"	# VMS directory lister
-  	cl&gt; vdir /size osfn("bin$")
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; task $vdir = "$directory"   # VMS directory lister
+  cl&gt; vdir /size osfn("bin$")
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   pathnames, task
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

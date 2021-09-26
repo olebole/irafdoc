@@ -7,34 +7,34 @@ gregister: Register 1-D or 2-D images using the geomap transforms
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   gregister input output database transforms
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be transformed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database' -->
   <dd>The name of the text file database produced by GEOMAP containing the coordinate
   transformation(s).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_transforms">
   <dt><b>transforms</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transforms' Line='transforms' -->
   <dd>The list of the database record(s) containing the transformations. 
@@ -44,7 +44,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   coordinates of the control points.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_geometry">
   <dt><b>geometry = <span style="font-family: monospace;">"geometric"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='geometry' Line='geometry = "geometric"' -->
   <dd>The type of geometry to be applied: The choices are:
@@ -62,7 +62,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmin">
   <dt><b>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>The minimum and maximum x and y reference values of the output image.
@@ -70,7 +70,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   and may not extend beyond the bounds of those parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xscale">
   <dt><b>xscale = 1.0, yscale = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xscale' Line='xscale = 1.0, yscale = 1.0' -->
   <dd>The output x and y scales in units of reference x and y
@@ -84,7 +84,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   Xscale and yscale override the values of ncols and nlines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = INDEF, nlines = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = INDEF, nlines = INDEF' -->
   <dd>The number of columns and lines in the output image. Ncols and nlines default
@@ -92,7 +92,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   are overridden.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xsample">
   <dt><b>xsample = 1.0, ysample = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xsample' Line='xsample = 1.0, ysample = 1.0' -->
   <dd>The coordinate surface subsampling factor. The coordinate surfaces are
@@ -101,7 +101,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   bilinear interpolation in the coordinate surfaces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolant">
   <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The choices are the following.
@@ -173,7 +173,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The boundary extension choices are:
@@ -203,20 +203,20 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The value of the constant for boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fluxconserve">
   <dt><b>fluxconserve = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes' -->
   <dd>Preserve the total image flux. The output pixel values are multiplied by
   the Jacobian of the coordinate transformation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxblock">
   <dt><b>nxblock = 512, nyblock = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512' -->
   <dd>If the dimensions of the output image are less than nxblock and nyblock
@@ -224,15 +224,15 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   nxblock by nyblock are transformed one at a time.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about the progress of the task ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   GREGISTER corrects an image for geometric distortion using the coordinate
   transformation computed by GEOMAP. The transformation is stored as the
@@ -254,19 +254,19 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   and may not exceed these values.
   The scale and size of the output picture is determined as follows.
   </p>
-  <pre>
-  	ncols = ncols(input)
-  	if (xscale == INDEF)
-  	    xscale = (xmax - xmin ) / (ncols - 1)
-  	else
-  	    ncols = (xmax - xmin) / xscale + 1
+  <div class="highlight-default-notranslate"><pre>
+  ncols = ncols(input)
+  if (xscale == INDEF)
+      xscale = (xmax - xmin ) / (ncols - 1)
+  else
+      ncols = (xmax - xmin) / xscale + 1
   
-  	nlines = nlines(input)
-  	if (yscale == INDEF)
-  	    yscale = (ymax - ymin ) / (nlines - 1)
-  	else
-  	    nlines = (ymax - ymin) / yscale + 1
-  </pre>
+  nlines = nlines(input)
+  if (yscale == INDEF)
+      yscale = (ymax - ymin ) / (nlines - 1)
+  else
+      nlines = (ymax - ymin) / yscale + 1
+  </pre></div>
   <p>
   The output image gray levels are determined by interpolating in the input
   image at the positions of the transformed output pixels. If the
@@ -291,95 +291,95 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   for the higher order distortion corrections that GREGISTER is capable
   of performing.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   It requires approximately 70 and 290 cpu seconds to correct a 512 by 512
   square image for geometric distortion using a low order coordinate surface
   and bilinear and biquintic interpolation respectively (Vax 11/750 far).
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <dl>
+  <dl id="l_1">
   <dt><b>1.</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='1' Line='1.' -->
   <dd>Transform an image to the reference coordinate system of a 512 by 512 pixel
   square image. The output image will have the same scale and size as the
   reference image if the reference coordinates are in pixels.
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; geomap coords database 1.0 512.0 1.0 512.0
   cl&gt; gregister input output database coords
-  </pre>
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_2">
   <dt><b>2.</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='2' Line='2.' -->
   <dd>Repeat the previous example but rescale the output image. The scale of the
   output image will be 2.5 reference units per pixel and its size will be
   determined by the xmin, xmax, ymin, ymax parameters (1.0, 512.0, 1.0, 512.0).
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; geomap coords database 1.0 512.0 1.0 512.0
   cl&gt; gregister input output database coords xscale=2.5 yscale=2.5
-  </pre>
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_3">
   <dt><b>3.</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='3' Line='3.' -->
   <dd>Correct an image for 3rd order geometric distortion using an output scale of 2
   reference units per pixel unit and bicubic spline interpolation with no flux
   correction. 
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; geomap coords database 1.0 512.0 1.0 512.0 xxorder=4 xyorder=4 \<br>
   xxterms=yes yxorder=4 yyorder=4 yxterms=yes
   cl&gt; gregister input output database coords xscale=2. yscale=2. \<br>
   &gt;&gt;&gt; inter=spline3 flux-
-  </pre>
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_4">
   <dt><b>4.</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='4' Line='4.' -->
   <dd>Transform three images using 3 different transformation records stored
   in the database file.
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; geomap coord1,coord2,coord3 database 1. 512. 1. 512.
   cl&gt; gregister im1,im2,im3 imout1,imout2,imout3 database \<br>
   &gt;&gt;&gt; coord1,coord2,coords3
-  </pre>
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_5">
   <dt><b>5.</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='5' Line='5.' -->
   <dd>Repeat the above example using the textfiles inlist, outlist, reclist which
   contain the list of input images, list of output images and list of coordinate
   files respectively.
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; geomap @reclist database 1. 512. 1. 512.
   cl&gt; gregister @inlist @outlist database @reclist
-  </pre>
+  </pre></div>
   </dd>
   </dl>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Support does yet exist in the IRAF world coordinate system interface
   for the higher order distortion corrections that GREGISTER is capable
   of performing.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imshift, magnify, rotate, imlintran, geomap, geotran, geoxytran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'TIMINGS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

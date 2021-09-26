@@ -7,8 +7,8 @@ identify: Identify features
 
 .. raw:: html
 
+  <section id="s_summary">
   <h3>Summary</h3>
-  <!-- BeginSection: 'SUMMARY' -->
   <p>
   Features are interactively marked in one dimensional image vectors.
   The features may be spectral lines when the vector is a spectrum
@@ -18,22 +18,22 @@ identify: Identify features
   such as arc-line calibration spectra.  The profile position measurements
   are generally used for geometric calibrations.
   </p>
-  <!-- EndSection:   'SUMMARY' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   identify images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of images in which to identify features and fit coordinate functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_section">
   <dt><b>section = <span style="font-family: monospace;">"middle line"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='section' Line='section = "middle line"' -->
   <dd>If an image is not one dimensional or specified as a one dimensional image
@@ -43,10 +43,10 @@ identify: Identify features
   within the program.
   The section parameter may be specified directly as an image section or
   in one of the following forms
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   line|column|x|y|z first|middle|last|# [first|middle|last|#]]
   first|middle|last|# [first|middle|last|#] line|column|x|y|z
-  </pre>
+  </pre></div>
   where each field can be one of the strings separated by | except for #
   which is an integer number.  The field in [] is a second designator
   which is used with three dimensional data.  See the example section for
@@ -54,13 +54,13 @@ identify: Identify features
   is not a sufficient abbreviation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database in which the feature data and coordinate functions are recorded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordlist">
   <dt><b>coordlist = <span style="font-family: monospace;">"linelists$idhenear.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat"' -->
   <dd>User coordinate list consisting of an list of line coordinates.  A
@@ -71,20 +71,20 @@ identify: Identify features
   described under the topic <i>linelists</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_units">
   <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>The units to use if no database entry exists.  The units are specified as
   described in
-  <pre>
-      cl&gt; help onedspec.package section=units
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; help onedspec.package section=units
+  </pre></div>
   If no units are specified and a coordinate list is used then the units of
   the coordinate list are selected.  If a database entry exists then the
   units defined there override both this parameter and the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsum">
   <dt><b>nsum = <span style="font-family: monospace;">"10"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsum' Line='nsum = "10"' -->
   <dd>Number of lines, columns, or bands across the designated vector axis to be
@@ -96,7 +96,7 @@ identify: Identify features
   the first number is used for both axes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = -3.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = -3.' -->
   <dd>The maximum difference for a match between the feature coordinate function
@@ -104,14 +104,14 @@ identify: Identify features
   are in user coordinate units and negative values are in units of pixels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxfeatures">
   <dt><b>maxfeatures = 50</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxfeatures' Line='maxfeatures = 50' -->
   <dd>Maximum number of the strongest features to be selected automatically from
   the coordinate list (function <span style="font-family: monospace;">'l'</span>) or from the image data (function <span style="font-family: monospace;">'y'</span>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zwidth">
   <dt><b>zwidth = 100.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zwidth' Line='zwidth = 100.' -->
   <dd>Width of graphs, in user coordinates, when in zoom mode (function <span style="font-family: monospace;">'z'</span>).
@@ -120,34 +120,34 @@ identify: Identify features
   <p>
   The following parameters are used in determining feature positions.
   </p>
-  <dl>
+  <dl id="l_ftype">
   <dt><b>ftype = <span style="font-family: monospace;">"emission"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ftype' Line='ftype = "emission"' -->
   <dd>Type of features to be identified.  The possibly abbreviated choices are
   <span style="font-family: monospace;">"emission"</span> and <span style="font-family: monospace;">"absorption"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fwidth">
   <dt><b>fwidth = 4.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 4.' -->
   <dd>Full-width at the base (in pixels) of features to be identified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.' -->
   <dd>The maximum distance, in pixels, allowed between a feature position
   and the initial estimate when defining a new feature.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 0.' -->
   <dd>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_minsep">
   <dt><b>minsep = 2.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='minsep' Line='minsep = 2.' -->
   <dd>The minimum separation, in pixels, allowed between feature positions
@@ -159,40 +159,40 @@ identify: Identify features
   The <b>icfit</b> package is used and further descriptions about these parameters
   may be found under that package.
   </p>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>The function to be fit to the user coordinates as a function of the pixel
   coordinate.  The choices are <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order = 1' -->
   <dd>Order of the fitting function.  The order is the number of polynomial terms
   or number of spline pieces.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample regions for fitting. This is in pixel coordinates and not the user
   coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 0' -->
   <dd>Number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 3.0, high_reject = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0, high_reject = 3.0' -->
   <dd>Lower and upper residual rejection in terms of the RMS of the fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_grow">
   <dt><b>grow = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='grow' Line='grow = 0' -->
   <dd>Distance from a rejected point in which additional points are automatically
@@ -202,7 +202,7 @@ identify: Identify features
   <p>
   The following parameters control the input and output.
   </p>
-  <dl>
+  <dl id="l_autowrite">
   <dt><b>autowrite = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autowrite' Line='autowrite = no' -->
   <dd>Automatically write or update the database?  If <span style="font-family: monospace;">"no"</span> then when exiting the
@@ -212,14 +212,14 @@ identify: Identify features
   database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics device.  The default is the standard graphics device which is
   generally a graphics terminal.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Cursor input file.  If a cursor file is not given then the standard graphics
@@ -229,7 +229,7 @@ identify: Identify features
   <p>
   The following parameters are queried when the <span style="font-family: monospace;">'b'</span> key is used.
   </p>
-  <dl>
+  <dl id="l_crval">
   <dt><b>crval, cdelt</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crval' Line='crval, cdelt' -->
   <dd>These parameters specify an approximate coordinate value and coordinate
@@ -244,64 +244,64 @@ identify: Identify features
   keywords in the image header whose values are to be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aidpars">
   <dt><b>aidpars = <span style="font-family: monospace;">""</span> (parameter set)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aidpars' Line='aidpars = "" (parameter set)' -->
   <dd>This parameter points to a parameter set for the automatic line
   identification algorithm.  See <i>aidpars</i> for further information.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_cursor_keys">
   <h3>Cursor keys</h3>
-  <!-- BeginSection: 'CURSOR KEYS' -->
   <dl>
   <dt><b>?</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='' Line='?' -->
   <dd>Clear the screen and print a menu of options.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_a">
   <dt><b>a</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='a' Line='a' -->
   <dd>Apply next (c)enter or (d)elete operation to (a)ll features
   </dd>
   </dl>
-  <dl>
+  <dl id="l_b">
   <dt><b>b</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='b' Line='b' -->
   <dd>Identify features and find a dispersion function automatically using
   the coordinate line list and approximate values for the dispersion.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_c">
   <dt><b>c</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='c' Line='c' -->
   <dd>(C)enter the feature nearest the cursor.  Used when changing the position
   finding parameters or when features are defined from a previous feature list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_d">
   <dt><b>d</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='d' Line='d' -->
   <dd>(D)elete the feature nearest the cursor.  (D)elete all features when preceded
   by the (a)ll key.  This does not affect the dispersion function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_e">
   <dt><b>e</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='e' Line='e' -->
   <dd>Find features from a coordinate list without doing any fitting.  This is
   like the <span style="font-family: monospace;">'l'</span> key without any fitting.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_f">
   <dt><b>f</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='f' Line='f' -->
   <dd>(F)it a function of the pixel coordinates to the user coordinates.  This enters
   the interactive function fitting package.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_g">
   <dt><b>g</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='g' Line='g' -->
   <dd>Fit a zero point shift to the user coordinates by minimizing the difference
@@ -309,25 +309,25 @@ identify: Identify features
   not changed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i">
   <dt><b>i</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='i' Line='i' -->
   <dd>(I)nitialize (delete features and coordinate fit).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_j">
   <dt><b>j</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='j' Line='j' -->
   <dd>Go to the preceding line, column, or band in a 2D/3D or multispec image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_k">
   <dt><b>k</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='k' Line='k' -->
   <dd>Go to the next line, column, or band in a 2D/3D or multispec image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_l">
   <dt><b>l</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='l' Line='l' -->
   <dd>(L)ocate features in the coordinate list.  A coordinate function must be
@@ -337,45 +337,45 @@ identify: Identify features
   and then a final fit is done.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_m">
   <dt><b>m</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='m' Line='m' -->
   <dd>(M)ark a new feature using the cursor position as the initial position
   estimate.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_n">
   <dt><b>n</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='n' Line='n' -->
   <dd>Move the cursor or zoom window to the (n)ext feature (same as +).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='o' Line='o' -->
   <dd>Go to the specified line, column, or band in a 2D/3D or multispec image.
   For 3D images two numbers are specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_p">
   <dt><b>p</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='p' Line='p' -->
   <dd>(P)an to the original window after (z)ooming on a feature.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_q">
   <dt><b>q</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='q' Line='q' -->
   <dd>(Q)uit and continue with next image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_r">
   <dt><b>r</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='r' Line='r' -->
   <dd>(R)edraw the graph.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_s">
   <dt><b>s</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='s' Line='s' -->
   <dd>(S)hift the fit coordinates relative to the pixel coordinates.  The
@@ -385,28 +385,28 @@ identify: Identify features
   The shift in pixels, user coordinates, and z (fractional shift) is printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_t">
   <dt><b>t</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='t' Line='t' -->
   <dd>Reset the current feature to the position of the cursor.  The feature
   is <i>not</i> recentered.  This is used to mark an arbitrary position.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_u">
   <dt><b>u</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='u' Line='u' -->
   <dd>Enter a new (u)ser coordinate for the current feature.
   When (m)arking a new feature the user coordinate is also requested.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_v">
   <dt><b>v</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='v' Line='v' -->
   <dd>Modify the fitting weight of the current feature.  The weights are
   integers with the lowest weight being the default of 1.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_w">
   <dt><b>w</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='w' Line='w' -->
   <dd>(W)indow the graph.  A window prompt is given and a number of windowing
@@ -414,7 +414,7 @@ identify: Identify features
   see help under <i>gtools</i>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_x">
   <dt><b>x</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='x' Line='x' -->
   <dd>Find a zero point shift for the current dispersion function.  This is used
@@ -423,7 +423,7 @@ identify: Identify features
   the fractional shift in user coordinates is printed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_y">
   <dt><b>y</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='y' Line='y' -->
   <dd>Up to <i>maxfeatures</i> emission peaks are found automatically (in order of
@@ -431,7 +431,7 @@ identify: Identify features
   identified from the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z">
   <dt><b>z</b></dt>
   <!-- Sec='CURSOR KEYS' Level=0 Label='z' Line='z' -->
   <dd>(Z)oom on the feature nearest the cursor.  The width of the zoom window
@@ -585,9 +585,9 @@ identify: Identify features
   <dd>Print additional help for formatting graphs.  See help under <span style="font-family: monospace;">"gtools"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'CURSOR KEYS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Features in the input images are identified interactively and assigned
   user coordinates.  A <span style="font-family: monospace;">"coordinate function"</span> mapping pixel coordinates to
@@ -806,9 +806,9 @@ identify: Identify features
   As an immediate exit the <span style="font-family: monospace;">'I'</span> interrupt key may be used.  This does not save
   the feature information and may leave the graphics in a confused state.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_database_records">
   <h3>Database records</h3>
-  <!-- BeginSection: 'DATABASE RECORDS' -->
   <p>
   The database specified by the parameter <i>database</i> is a directory of
   simple text files.  The text files have names beginning with 'id' followed
@@ -836,13 +836,13 @@ identify: Identify features
   (the line or column coordinate along the dispersion).  The first
   coefficient is the function type code with values:
   </p>
-  <pre>
-  	Code	Type
-  	   1	Chebyshev polynomial
-  	   2	Legendre polynomial
-  	   3	Cubic spline
-  	   4	Linear spline
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Code    Type
+     1    Chebyshev polynomial
+     2    Legendre polynomial
+     3    Cubic spline
+     4    Linear spline
+  </pre></div>
   <p>
   The second coefficient is the order (actually the number of terms) of
   the polynomial or the number of pieces in the spline.
@@ -853,9 +853,9 @@ identify: Identify features
   input variable to the range -1 to 1 in the polynomial functions.  If the
   independent variable is x and the normalized variable is n, then
   </p>
-  <pre>
-  	n = (2 * x - (xmax + xmin)) / (xmax - xmin)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  n = (2 * x - (xmax + xmin)) / (xmax - xmin)
+  </pre></div>
   <p>
   where xmin and xmax are the two coefficients.
   </p>
@@ -864,10 +864,10 @@ identify: Identify features
   pieces.  A spline coordinate s and the nearest integer below s,
   denoted as j, are defined by
   </p>
-  <pre>
-  	s = (x - xmin) / (xmax - xmin) * npieces
-  	j = integer part of s
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  s = (x - xmin) / (xmax - xmin) * npieces
+  j = integer part of s
+  </pre></div>
   <p>
   where npieces are the number of pieces.
   </p>
@@ -883,81 +883,81 @@ identify: Identify features
   <p>
   The polynomial can be expressed as the sum
   </p>
-  <pre>
-  	y = sum from i=1 to order {c_i * z_i}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = sum from i=1 to order {c_i * z_i}
+  </pre></div>
   <p>
   where the c_i are the coefficients and the z_i are defined
   interactively as:
   </p>
-  <pre>
-  	z_1 = 1
-  	z_2 = n
-  	z_i = 2 * n * z_{i-1} - z_{i-2}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  z_1 = 1
+  z_2 = n
+  z_i = 2 * n * z_{i-1} - z_{i-2}
+  </pre></div>
   <p>
   2. Legendre Polynomial
   </p>
   <p>
   The polynomial can be expressed as the sum
   </p>
-  <pre>
-  	y = sum from i=1 to order {c_i * z_i}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = sum from i=1 to order {c_i * z_i}
+  </pre></div>
   <p>
   where the c_i are the coefficients and the z_i are defined
   interactively as:
   </p>
-  <pre>
-  	z_1 = 1
-  	z_2 = n
-  	z_i = ((2*i-3) * n * z_{i-1} - (i-2) * z_{i-2}) / (i-1)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  z_1 = 1
+  z_2 = n
+  z_i = ((2*i-3) * n * z_{i-1} - (i-2) * z_{i-2}) / (i-1)
+  </pre></div>
   <p>
   3. Linear Spline
   </p>
   <p>
   The linear spline is evaluated as
   </p>
-  <pre>
-  	y = c_j * a + c_{j+1} * b
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = c_j * a + c_{j+1} * b
+  </pre></div>
   <p>
   where j is as defined earlier and a and b are fractional difference
   between s and the nearest integers above and below
   </p>
-  <pre>
-  	a = (j + 1) - s
-  	b = s - j
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  a = (j + 1) - s
+  b = s - j
+  </pre></div>
   <p>
   4.  Cubic Spline
   </p>
   <p>
   The cubic spline is evaluated as
   </p>
-  <pre>
-  	y = sum from i=0 to 3 {c_{i+j} * z_i}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  y = sum from i=0 to 3 {c_{i+j} * z_i}
+  </pre></div>
   <p>
   where j is as defined earlier.  The term z_i are computed from
   a and b, as defined earlier, as follows
   </p>
-  <pre>
-  	z_0 = a**3
-  	z_1 = 1 + 3 * a * (1 + a * b)
-  	z_2 = 1 + 3 * b * (1 + a * b)
-  	z_3 = b**3
-  </pre>
-  <!-- EndSection:   'DATABASE RECORDS' -->
+  <div class="highlight-default-notranslate"><pre>
+  z_0 = a**3
+  z_1 = 1 + 3 * a * (1 + a * b)
+  z_2 = 1 + 3 * b * (1 + a * b)
+  z_3 = b**3
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Because this task is interactive and has many possible applications
   it is difficult to provide actual examples.  Instead some uses of the task
   are described.
   </p>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='o' Line='o' -->
   <dd>For defining distortions in the slit dimension as a function of
@@ -966,7 +966,7 @@ identify: Identify features
   wavelengths.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='o' Line='o' -->
   <dd>For determining dispersion solutions in a one dimensional
@@ -979,7 +979,7 @@ identify: Identify features
   Deleting the features does not delete the coordinate function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_o">
   <dt><b>o</b></dt>
   <!-- Sec='EXAMPLES' Level=0 Label='o' Line='o' -->
   <dd>For determining a two or three dimensional coordinate transformation a
@@ -996,32 +996,32 @@ identify: Identify features
   use an image section to define a vector.  For example, to select column
   20:
   </p>
-  <pre>
-      cl&gt; identify obj[20,*]
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; identify obj[20,*]
+  </pre></div>
   <p>
   The alternative is to use the section parameter.  Below are some examples
   of the section parameter syntax for an image <span style="font-family: monospace;">"im2d"</span> which is 100x200
   and <span style="font-family: monospace;">"im3d"</span> which is 100x200x50.  On the left is the section string syntax
   and on the right is the image section
   </p>
-  <pre>
-      Section parameter |  Image section      |  Description
-      ------------------|---------------------|---------------------
-      first line        |  im2d[*,1]          |  First image line
-      middle column     |  im2d[50,*]         |  Middle image column
-      last z            |  im3d[100,200,*]    |  Last image z vector
-      middle last y     |  im3d[50,*,50]      |  Image y vector
-      line 20           |  im2d[*,20]         |  Line 20
-      column 20         |  im2d[20,*]         |  Column 20
-      x 20              |  im2d[*,20]         |  Line 20
-      y 20              |  im2d[20,*]         |  Column 20
-      y 20 30           |  im2d[20,*,30]      |  Column 20
-      z 20 30	      |  im3d[20,30,*]      |  Image z vector
-      x middle          |  im3d[*,100,25]     |  Middle of image
-      y middle          |  im3d[50,*,25]      |  Middle of image
-      z middle          |  im3d[50,100,*]     |  Middle of image
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  Section parameter |  Image section      |  Description
+  ------------------|---------------------|---------------------
+  first line        |  im2d[*,1]          |  First image line
+  middle column     |  im2d[50,*]         |  Middle image column
+  last z            |  im3d[100,200,*]    |  Last image z vector
+  middle last y     |  im3d[50,*,50]      |  Image y vector
+  line 20           |  im2d[*,20]         |  Line 20
+  column 20         |  im2d[20,*]         |  Column 20
+  x 20              |  im2d[*,20]         |  Line 20
+  y 20              |  im2d[20,*]         |  Column 20
+  y 20 30           |  im2d[20,*,30]      |  Column 20
+  z 20 30           |  im3d[20,30,*]      |  Image z vector
+  x middle          |  im3d[*,100,25]     |  Middle of image
+  y middle          |  im3d[50,*,25]      |  Middle of image
+  z middle          |  im3d[50,100,*]     |  Middle of image
+  </pre></div>
   <p>
   The most common usage should be <span style="font-family: monospace;">"middle line"</span>, <span style="font-family: monospace;">"middle column"</span> or <span style="font-family: monospace;">"middle z"</span>.
   </p>
@@ -1031,17 +1031,17 @@ identify: Identify features
   are summed, the second and third columns, when the vector axis is that shown
   in the first column.
   </p>
-  <pre>
-      Vector axis       |   Sum axis in 2D    |  Sum axes in 3D
-      ------------------|---------------------|--------------------
-           1            |         2           |      2 3                 
-           2            |         1           |      1 3                 
-           3            |         -           |      1 2                 
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  Vector axis       |   Sum axis in 2D    |  Sum axes in 3D
+  ------------------|---------------------|--------------------
+       1            |         2           |      2 3
+       2            |         1           |      1 3
+       3            |         -           |      1 2
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_IDENTIFY">
   <dt><b>IDENTIFY V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IDENTIFY' Line='IDENTIFY V2.11' -->
   <dd>The dispersion units are now determined from a user parameter,
@@ -1058,7 +1058,7 @@ identify: Identify features
   The default threshold value has been changed to 0.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IDENTIFY">
   <dt><b>IDENTIFY V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IDENTIFY' Line='IDENTIFY V2.10.3' -->
   <dd>The section and nsum parameter syntax was extended to apply to 3D
@@ -1066,7 +1066,7 @@ identify: Identify features
   The <span style="font-family: monospace;">'v'</span> key was added to allow assigning weights to features.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_IDENTIFY">
   <dt><b>IDENTIFY V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IDENTIFY' Line='IDENTIFY V2.10' -->
   <dd>The principle revision is to allow multiple aperture images and long slit
@@ -1080,15 +1080,15 @@ identify: Identify features
   spectrum or arc type and then apply the fit to the combined set of features.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   autoidentify, reidentify, aidpars, center1d, linelists, fitcoords, icfit,
   gtools
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'CURSOR KEYS' 'DESCRIPTION' 'DATABASE RECORDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

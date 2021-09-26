@@ -7,21 +7,21 @@ gradient: Convolve a list of 1 or 2-D images with a gradient operator
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   gradient input output gradient
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images for which gradient images are to be calculated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images. The number of output images must equal the number of
@@ -29,7 +29,7 @@ gradient: Convolve a list of 1 or 2-D images with a gradient operator
   convolved image will replace the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gradient">
   <dt><b>gradient</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gradient' Line='gradient' -->
   <dd>The gradient filters are a set of 8 three by three kernels identified by the
@@ -81,7 +81,7 @@ gradient: Convolve a list of 1 or 2-D images with a gradient operator
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The algorithm used to compute the values of out of bounds pixels. The 
@@ -112,15 +112,15 @@ gradient: Convolve a list of 1 or 2-D images with a gradient operator
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The constant for constant-valued boundary extension.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   GRADIENT convolves the list of images specified by <i>input</i> with one of
   eight three by three gradient kernels specified by <i>gradient</i> 
@@ -143,84 +143,83 @@ gradient: Convolve a list of 1 or 2-D images with a gradient operator
   The eight gradient filters are listed below. The I[*,*] are the elements of
   the input image and the O[*,*] are elements of the output image.
   </p>
-  <pre>
-                           0
+  <div class="highlight-default-notranslate"><pre>
+                        0
   
-  	    - I[-1,1]          + 0*I[0,1]  + I[1,1]
-     O[0,0] = - I[-1,0]*sqrt(2)  + 0*I[0,0]  + I[1,0] * sqrt(2)  
-  	    - I[-1,-1]         + 0*I[0,-1] + I[-1,-1]
+           - I[-1,1]          + 0*I[0,1]  + I[1,1]
+  O[0,0] = - I[-1,0]*sqrt(2)  + 0*I[0,0]  + I[1,0] * sqrt(2)
+           - I[-1,-1]         + 0*I[0,-1] + I[-1,-1]
   
-  			45
-  	     
-  	    + I[-1,1]*0          + I[0,1]   + I[1,1]/2/sqrt(2)
-     O[0,0] = - I[-1,0]            + I[0,0]*0 + I[1,0] 
-              - I[-1,-1]/2/sqrt(2) - I[0,-1]  + I[1,-1]*0 
+                       45
   
-  			90
-  	     
-  	    + I[-1,1]    + I[0,1]*sqrt(2)  + I[1,1]
-     O[0,0] = + I[-1,0]*0  + I[0,0]*0        + I[1,0]
-  	    - I[-1,-1]   - I[0,-1]*sqrt(2) - I[-1,-1]
+           + I[-1,1]*0          + I[0,1]   + I[1,1]/2/sqrt(2)
+  O[0,0] = - I[-1,0]            + I[0,0]*0 + I[1,0]
+           - I[-1,-1]/2/sqrt(2) - I[0,-1]  + I[1,-1]*0
   
-  		       135
+                       90
   
-  	    + I[-1,1]/2/sqrt(2) + I[0,1]   + I[1,1]*0
-     O[0,0] = + I[-1,0]           + I[0,0]*0 - I[1,0]
-              + I[-1,-1]*0        - I[0,-1]  - I[1,-1]/2/sqrt(2) 
+           + I[-1,1]    + I[0,1]*sqrt(2)  + I[1,1]
+  O[0,0] = + I[-1,0]*0  + I[0,0]*0        + I[1,0]
+           - I[-1,-1]   - I[0,-1]*sqrt(2) - I[-1,-1]
   
-  			180
+                      135
   
-  	    + I[-1,1]          + 0*I[0,1]  - I[1,1]
-     O[0,0] = + I[-1,0]*sqrt(2)  + 0*I[0,0]  - I[1,0]*sqrt(2)
-  	    + I[-1,-1]         + 0*I[0,-1] - I[-1,-1]
+           + I[-1,1]/2/sqrt(2) + I[0,1]   + I[1,1]*0
+  O[0,0] = + I[-1,0]           + I[0,0]*0 - I[1,0]
+           + I[-1,-1]*0        - I[0,-1]  - I[1,-1]/2/sqrt(2)
   
-  		       225
+                       180
   
-  	    + I[-1,1]*0          - I[0,1]   - I[1,1]/2/sqrt(2)
-     O[0,0] = + I[-1,0]            + I[0,0]*0 - I[1,0]
-              + I[-1,-1]/2/sqrt(2) + I[0,-1]  + I[1,-1]*0 
+           + I[-1,1]          + 0*I[0,1]  - I[1,1]
+  O[0,0] = + I[-1,0]*sqrt(2)  + 0*I[0,0]  - I[1,0]*sqrt(2)
+           + I[-1,-1]         + 0*I[0,-1] - I[-1,-1]
   
-  		       270
+                      225
   
-  	    - I[-1,1]    - I[0,1]*sqrt(2)  - I[1,1]
-     O[0,0] = + I[-1,0]*0  + I[0,0]*0        + I[1,0]*0
-  	    + I[-1,-1]   + I[0,-1]*sqrt(2) + I[-1,-1]
+           + I[-1,1]*0          - I[0,1]   - I[1,1]/2/sqrt(2)
+  O[0,0] = + I[-1,0]            + I[0,0]*0 - I[1,0]
+           + I[-1,-1]/2/sqrt(2) + I[0,-1]  + I[1,-1]*0
   
-  		      315
+                      270
   
-  	    - I[-1,1]/2/sqrt(2) - I[0,1]   + I[1,1]*0
-     O[0,0] = - I[-1,0]           + I[0,0]*0 + I[1,0]
-              + I[-1,-1]*0        + I[0,-1]  + I[1,-1]/2/sqrt(2) 
+           - I[-1,1]    - I[0,1]*sqrt(2)  - I[1,1]
+  O[0,0] = + I[-1,0]*0  + I[0,0]*0        + I[1,0]*0
+           + I[-1,-1]   + I[0,-1]*sqrt(2) + I[-1,-1]
   
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+                     315
+  
+           - I[-1,1]/2/sqrt(2) - I[0,1]   + I[1,1]*0
+  O[0,0] = - I[-1,0]           + I[0,0]*0 + I[1,0]
+           + I[-1,-1]*0        + I[0,-1]  + I[1,-1]/2/sqrt(2)
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Calculate the gradient in the 180 degree direction using nearest neighbor
      boundary extension.
   </p>
-  <pre>
-      cl&gt; gradient m83 m83.odeg 180
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; gradient m83 m83.odeg 180
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   GRADIENT requires approximately 2.0 cpu seconds to convolve a
   512 square real image with a 3 by 3 gradient kernel on a Sparc Station 1.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   convolve, gauss, laplace, boxcar
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

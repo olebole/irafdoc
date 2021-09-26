@@ -7,21 +7,21 @@ scoords: Set spectral coordinates as a pixel array (1D spectra only)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   scoords images coords
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>List of one dimensional spectrum image names.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coords">
   <dt><b>coords</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coords' Line='coords' -->
   <dd>List of file names containing the coordinate values.  There may be
@@ -32,14 +32,14 @@ scoords: Set spectral coordinates as a pixel array (1D spectra only)
   The number of coordinates must match the number of pixels in the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_label">
   <dt><b>label = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='label' Line='label = ""' -->
   <dd>Optional coordinate axis label.  A typical value is <span style="font-family: monospace;">"Wavelength"</span>
   for wavelength coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_units">
   <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>Optional coordinate axis units.  A typical value is <span style="font-family: monospace;">"Angstroms"</span>.  In
@@ -48,15 +48,15 @@ scoords: Set spectral coordinates as a pixel array (1D spectra only)
   (see units description in <b>onedspec.package</b>).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print a line as each spectrum is processed?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Scoords</b> sets spectral coordinates in one dimensional spectral
   images as a list of coordinates in the image header.  The
@@ -84,42 +84,42 @@ scoords: Set spectral coordinates as a pixel array (1D spectra only)
   defines the maximum size of the image header in number of characters
   is large enough to hold all the coordinates.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Set the coordinates for a spectrum.
   </p>
-  <pre>
-      cl&gt; type coords.dat
-      4000.
-      4010.123
-      4020.246
-      4031.7
-      &lt;etc&gt;
-      cl&gt; scoords spec coords.dat label=Wavelength units=Angstroms
-      cl&gt; listpix spec wcs=world
-      4000.  	124.
-      4010.123	543
-      &lt;etc&gt;
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type coords.dat
+  4000.
+  4010.123
+  4020.246
+  4031.7
+  &lt;etc&gt;
+  cl&gt; scoords spec coords.dat label=Wavelength units=Angstroms
+  cl&gt; listpix spec wcs=world
+  4000.       124.
+  4010.123    543
+  &lt;etc&gt;
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SCOORDS">
   <dt><b>SCOORDS V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SCOORDS' Line='SCOORDS V2.11' -->
   <dd>This is a new task with this version.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rtextimage, dispcor, specwcs, onedspec.package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

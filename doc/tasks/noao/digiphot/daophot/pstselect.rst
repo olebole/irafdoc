@@ -7,21 +7,21 @@ pstselect: Select candidate psf stars based on proximity
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   pstselect image photfile pstfile maxnpsf
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images containing the candidate psf stars.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_photfile">
   <dt><b>photfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='photfile' Line='photfile' -->
   <dd>The list of input  photometry files. The number of photometry files must
@@ -33,7 +33,7 @@ pstselect: Select candidate psf stars based on proximity
   text file or an STSDAS binary table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pstfile">
   <dt><b>pstfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pstfile' Line='pstfile' -->
   <dd>The  list  of  output  psf star photometry files. There must be one output
@@ -44,19 +44,19 @@ pstselect: Select candidate psf stars based on proximity
   text or STSDAS binary file, from photfile.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxnpsf">
   <dt><b>maxnpsf = 25</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxnpsf' Line='maxnpsf = 25' -->
   <dd>The maximum number of candidate psf stars to be selected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_mkstars">
   <dt><b>mkstars = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mkstars' Line='mkstars = no' -->
   <dd>Mark the selected or deleted psf stars on the image display ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plotfile">
   <dt><b>plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plotfile' Line='plotfile = ""' -->
   <dd>The name of the output file containing mesh, contour, or profile plots of the
@@ -65,7 +65,7 @@ pstselect: Select candidate psf stars based on proximity
   selected. Plotfile is opened in append mode and may become very large.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datapars">
   <dt><b>datapars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datapars' Line='datapars = ""' -->
   <dd>The name of the file containing the data dependent parameters. The parameter
@@ -73,7 +73,7 @@ pstselect: Select candidate psf stars based on proximity
   parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_daopars">
   <dt><b>daopars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='daopars' Line='daopars = ""' -->
   <dd>The name of the file containing the daophot fitting parameters. The parameters
@@ -81,7 +81,7 @@ pstselect: Select candidate psf stars based on proximity
   then the default parameter set in uparm directory is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = no' -->
   <dd>Select the psf stars interactively ? If interactive = yes and icommands is
@@ -92,26 +92,26 @@ pstselect: Select candidate psf stars based on proximity
   set to <span style="font-family: monospace;">"no"</span>, and commands are read from the image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_plottype">
   <dt><b>plottype = <span style="font-family: monospace;">"mesh"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='plottype' Line='plottype = "mesh"' -->
   <dd>The default plot type displayed when a psf star is selected interactively.
   The choices are <span style="font-family: monospace;">"mesh"</span>, <span style="font-family: monospace;">"contour"</span>, or <span style="font-family: monospace;">"radial"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_icommands">
   <dt><b>icommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='icommands' Line='icommands = ""' -->
   <dd>The image display cursor or image cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gcommands">
   <dt><b>gcommands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gcommands' Line='gcommands = ""' -->
   <dd>The graphics cursor or graphics cursor command file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wcsin">
   <dt><b>wcsin = <span style="font-family: monospace;">")_.wcsin"</span>, wcsout = <span style="font-family: monospace;">")_.wcsout"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wcsin' Line='wcsin = ")_.wcsin", wcsout = ")_.wcsout"' -->
   <dd>The coordinate system of the input coordinates read from <i>photfile</i> and
@@ -179,7 +179,7 @@ pstselect: Select candidate psf stars based on proximity
   wcsin and wcsout are <span style="font-family: monospace;">"logical"</span> and <span style="font-family: monospace;">"logical"</span> respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cache">
   <dt><b>cache = <span style="font-family: monospace;">")_.cache"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cache' Line='cache = ")_.cache"' -->
   <dd>Cache the image pixels in memory. Cache may be set to the value of the apphot
@@ -187,7 +187,7 @@ pstselect: Select candidate psf stars based on proximity
   disabled.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = <span style="font-family: monospace;">")_.verify"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = ")_.verify"' -->
   <dd>Verify the critical PSTSELECT parameters ?
@@ -195,7 +195,7 @@ pstselect: Select candidate psf stars based on proximity
   <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = <span style="font-family: monospace;">")_.update"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = ")_.update"' -->
   <dd>Update the algorithm parameters if verify is <span style="font-family: monospace;">"yes"</span>?
@@ -203,7 +203,7 @@ pstselect: Select candidate psf stars based on proximity
   <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = <span style="font-family: monospace;">")_.verbose"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = ")_.verbose"' -->
   <dd>Print messages about the progress of the task in non-interactive mode ?
@@ -219,7 +219,7 @@ pstselect: Select candidate psf stars based on proximity
   daophot package parameter value, <span style="font-family: monospace;">"yes"</span>, or <span style="font-family: monospace;">"no"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_display">
   <dt><b>display = <span style="font-family: monospace;">")_.display"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='display' Line='display = ")_.display"' -->
   <dd>The  default  image  display  device.  Display can be set to the DAOPHOT
@@ -228,9 +228,9 @@ pstselect: Select candidate psf stars based on proximity
   <span style="font-family: monospace;">"imdy"</span> enables graphics overlay with the IMD graphics kernel.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   PSTSELECT reads the input photometry file <i>photfile</i>, extracts the ID,
   XCENTER, YCENTER, MAG, and MSKY fields for up to <i>maxnpsf</i> psf stars,
@@ -296,30 +296,29 @@ pstselect: Select candidate psf stars based on proximity
   effect of caching in interactive is can be quite noticeable if measurements
   of objects in the top and bottom halves of the image are alternated.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursors">
   <h3>Cursors</h3>
-  <!-- BeginSection: 'CURSORS' -->
   <p>
       The  following  cursor  commands are available once the image cursor
       has been activated.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+          Keystroke Commands
   
-  	Keystroke Commands 
+  ?       Print help
+  p       Print photometry for star nearest the cursor
+  l       List the current psf stars
+  n       Select the next good candidate psf star from the list
+  a       Add star nearest cursor to psf star list
+  d       Delete psf star nearest cursor from psf star list
+  q       Quit task
   
-  ?	Print help
-  p	Print photometry for star nearest the cursor
-  l	List the current psf stars
-  n	Select the next good candidate psf star from the list
-  a	Add star nearest cursor to psf star list
-  d	Delete psf star nearest cursor from psf star list
-  q	Quit task
+          Colon Commands
   
-  	Colon Commands
-  
-  :p [n]	Print photometry for star n
-  :a [n]	Add star n to psf star list
-  :d [n]	Delete star n from psf star list
+  :p [n]  Print photometry for star n
+  :a [n]  Add star n to psf star list
+  :d [n]  Delete star n from psf star list
   
   The following cursor commands are available once a star has been selected
   and the graphics cursor has been activated.
@@ -339,7 +338,6 @@ pstselect: Select candidate psf stars based on proximity
   c       Plot the default contour plot for this star
   r       Plot the radial profile for this star
   
-  
           Colon Graphics Commands
   
   :m [val] [val]  Set the mesh plot vertical and horizontal viewing angles
@@ -348,10 +346,10 @@ pstselect: Select candidate psf stars based on proximity
   :c [val] [val]  Set the contour plot floor and ceiling levels
   :l [value]      Set the contour plot floor level
   :u [value]      Set the contour plot ceiling level
-  </pre>
-  <!-- EndSection:   'CURSORS' -->
+  </pre></div>
+  </section>
+  <section id="s_output">
   <h3>Output</h3>
-  <!-- BeginSection: 'OUTPUT' -->
   <p>
   If <i>verbose</i> = <span style="font-family: monospace;">"yes"</span> a single line is written to the terminal for each
   star added to the candidate psf star list. Full output is written to the
@@ -359,148 +357,147 @@ pstselect: Select candidate psf stars based on proximity
   values of all the important parameters. For each star included in the candidate
   psf star list the following quantities are written.
   </p>
-  <pre>
-  	id  xcenter ycenter mag msky
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  id  xcenter ycenter mag msky
+  </pre></div>
   <p>
   Id, xcenter, ycenter, mag, and msky are the id, x and y coordinates,
   magnitudes and sky values for the candidate psf stars listed in
   <i>photfile</i>.
   </p>
-  <!-- EndSection:   'OUTPUT' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Select up to 10 psf stars from the PHOT task output non-interactively. 
   Save surface plots of the selected stars in the file <span style="font-family: monospace;">"psf.plots"</span>.
   </p>
-  <pre>
-      da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20.0
   
-          ... answer verify prompts
+      ... answer verify prompts
   
-          ... find stars in the image
+      ... find stars in the image
   
-  	... answer will appear in ypix.coo.1
+      ... answer will appear in ypix.coo.1
   
-      da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
-  	apertures = 5.0
+  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+      apertures = 5.0
   
-          ... answer verify prompts
+      ... answer verify prompts
   
-          ... do aperture photometry on the detected stars
+      ... do aperture photometry on the detected stars
   
-  	... answer will appear in ypix.mag.1
+      ... answer will appear in ypix.mag.1
   
-      da&gt; pstselect dev$ypix default default 10 psfrad=9.0 fitrad=3.0 \<br>
-          plotfile=psf.plots
+  da&gt; pstselect dev$ypix default default 10 psfrad=9.0 fitrad=3.0 \<br>
+      plotfile=psf.plots
   
-          ... answer verify prompts
+      ... answer verify prompts
   
-          ... select candidate psf stars
+      ... select candidate psf stars
   
-          ... the output will appear in ypix.pst.1 
+      ... the output will appear in ypix.pst.1
   
-      da&gt; display dev$ypix 1
+  da&gt; display dev$ypix 1
   
-          ... display the image
+      ... display the image
   
-      da&gt; pdump ypix.pst.1 xc,yc yes | tvmark 1 STDIN col=204
+  da&gt; pdump ypix.pst.1 xc,yc yes | tvmark 1 STDIN col=204
   
-          ... mark the stars
+      ... mark the stars
   
-      da&gt; gkiextract psf.plots 1 | stdgraph
+  da&gt; gkiextract psf.plots 1 | stdgraph
   
-  	... make a surface plot of the first candidate psf star
-  </pre>
+      ... make a surface plot of the first candidate psf star
+  </pre></div>
   <p>
   2. Repeat the previous results for an image section while preserving the
   coordinate system of the original image.
   </p>
-  <pre>
-      da&gt; daofind dev$ypix[150:450,150:450] default wcsout=tv fwhmpsf=2.5 \<br>
-          sigma=5.0 threshold=20.0
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; daofind dev$ypix[150:450,150:450] default wcsout=tv fwhmpsf=2.5 \<br>
+      sigma=5.0 threshold=20.0
   
-  	... answer verify prompts
+      ... answer verify prompts
   
-          ... find stars in the image
+      ... find stars in the image
   
-  	... answer will appear in ypix.coo.2
+      ... answer will appear in ypix.coo.2
   
-      da&gt; phot dev$ypix[150:450,150:450] default default wcsin=tv wcsout=tv \<br>
-          annulus=10.  dannulus=5. apertures = 5.0
+  da&gt; phot dev$ypix[150:450,150:450] default default wcsin=tv wcsout=tv \<br>
+      annulus=10.  dannulus=5. apertures = 5.0
   
-  	... answer verify prompts
+      ... answer verify prompts
   
-          ... do aperture photometry on the detected stars
+      ... do aperture photometry on the detected stars
   
-  	... answer will appear in ypix.mag.2
+      ... answer will appear in ypix.mag.2
   
-      da&gt; pstselect dev$ypix[150:450,150:450] default default 10 wcsin=tv \<br>
-          wcsout=tv psfrad=9.0 fitrad=3.0 plotfile=psf.plots2
+  da&gt; pstselect dev$ypix[150:450,150:450] default default 10 wcsin=tv \<br>
+      wcsout=tv psfrad=9.0 fitrad=3.0 plotfile=psf.plots2
   
-  	... answer verify prompts
+      ... answer verify prompts
   
-          ... select candidate psf stars
+      ... select candidate psf stars
   
-          ... the output will appear in ypix.pst.2 
+      ... the output will appear in ypix.pst.2
   
-      da&gt; display dev$ypix[150:450,150:450] 1
+  da&gt; display dev$ypix[150:450,150:450] 1
   
-          ... display the image
+      ... display the image
   
-      da&gt; pdump ypix.pst.2 xc,yc yes | tvmark 1 STDIN col=204
+  da&gt; pdump ypix.pst.2 xc,yc yes | tvmark 1 STDIN col=204
   
-          ... mark the stars
+      ... mark the stars
   
-      da&gt; gkiextract psf.plots2 4 | stdgraph
+  da&gt; gkiextract psf.plots2 4 | stdgraph
   
-  	... make a surface plot of the 4th candidate psf star
-  </pre>
+      ... make a surface plot of the 4th candidate psf star
+  </pre></div>
   <p>
   3. Repeat example 1 but run pstselect in interactive mode and do not save the
   plots.
   </p>
-  <pre>
-      da&gt; display dev$ypix 1
+  <div class="highlight-default-notranslate"><pre>
+  da&gt; display dev$ypix 1
   
-          ... display the image 
+      ... display the image
   
-      da&gt; pstselect dev$ypix ypix.mag.1 default 10 psfrad=9. fitrad=3. \<br>
-          interactive+ mkstars+ display=imdr
+  da&gt; pstselect dev$ypix ypix.mag.1 default 10 psfrad=9. fitrad=3. \<br>
+      interactive+ mkstars+ display=imdr
   
-  	... verify the critical parameters as instructed
+      ... verify the critical parameters as instructed
   
-  	... when the image cursor appears type the n keystroke
-  	    command to select the first suitable candidate psf
-  	    star, examine its surface plot, and type a or d to
-  	    accept or reject the candidate
+      ... when the image cursor appears type the n keystroke
+          command to select the first suitable candidate psf
+          star, examine its surface plot, and type a or d to
+          accept or reject the candidate
   
-  	... repeat the previous command until 10 psf stars have
-      	    been selected, the end of the star list is reached,
-  	    or a sufficient number of stars but fewer than maxnpsf
-  	    have been selected
+      ... repeat the previous command until 10 psf stars have
+          been selected, the end of the star list is reached,
+          or a sufficient number of stars but fewer than maxnpsf
+          have been selected
   
-  	... if fewer than maxnpsf stars are found automatically
-  	    add psf stars to the list with the a keystroke command
+      ... if fewer than maxnpsf stars are found automatically
+          add psf stars to the list with the a keystroke command
   
-  	... type q to quit
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      ... type q to quit
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   datapars,daopars,phot,psf
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSORS' 'OUTPUT' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

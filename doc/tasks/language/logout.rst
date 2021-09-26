@@ -7,14 +7,14 @@ logout: Log out of the CL
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   logout
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Logout</i> causes the CL to shut itself down, regardless of how many
   packages may currently be active.  The only way to shut the CL down without
@@ -28,23 +28,23 @@ logout: Log out of the CL
   <i>logout</i> repeated, else type <i>logout</i> several times and you will
   be permitted to logout with the device still allocated.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_example">
   <h3>Example</h3>
-  <!-- BeginSection: 'EXAMPLE' -->
   <p>
   1. Logout of the CL.
   </p>
-  <p>
-  	cl&gt; logo
-  </p>
-  <!-- EndSection:   'EXAMPLE' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; logo
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   deallocate, bye
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO'  -->
   

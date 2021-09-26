@@ -7,28 +7,28 @@ references: Find all help database references for a given topic
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   references topic
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_topic">
   <dt><b>topic</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='topic' Line='topic' -->
   <dd>The topic for which help is desired, i.e., a keyword, phrase, or pattern
   which the help database or quick-reference file is to be searched for.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_quickref">
   <dt><b>quickref = <span style="font-family: monospace;">"uparm$quick.ref"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='quickref' Line='quickref = "uparm$quick.ref"' -->
   <dd>The name of the optional quick-reference file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_updquick">
   <dt><b>updquick = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='updquick' Line='updquick = no' -->
   <dd>Create or update the quick-reference file, e.g., because new packages
@@ -36,7 +36,7 @@ references: Find all help database references for a given topic
   file automatically enables <i>usequick</i>, discussed below.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_usequick">
   <dt><b>usequick = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='usequick' Line='usequick = no' -->
   <dd>Use the quick-reference file.  By default, a runtime search of all the package
@@ -44,9 +44,9 @@ references: Find all help database references for a given topic
   are searched, but which is comparatively slow.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>references</i> task is used to search the help database for all tasks
   or other help modules pertaining to the given topic, where <i>topic</i> may be
@@ -61,10 +61,10 @@ references: Find all help database references for a given topic
   <p>
   References to tasks (or other objects) are printed in the form
   </p>
-  <pre>
-         keyword1 - one line description
-         keyword2 - one line description
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  keyword1 - one line description
+  keyword2 - one line description
+  </pre></div>
   <p>
   and so on.  To determine the <i>package pathname</i> of each named task,
   get <i>help</i> on the named <i>keyword</i> and the pathname will be seen at
@@ -72,52 +72,52 @@ references: Find all help database references for a given topic
   referenced object.  If there are multiple objects with the same name,
   a <span style="font-family: monospace;">"help &lt;keyword&gt; all+"</span> may be required to locate a particular one.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Find all help on CCDs.
   </p>
-  <p>
-  	cl&gt; ref ccd
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ref ccd
+  </pre></div>
   <p>
   2. Create or update your private quick-reference file.
   </p>
-  <p>
-  	cl&gt; ref upd+
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; ref upd+
+  </pre></div>
   <p>
   3. Examine the quick-reference file to get a summary of all the tasks
   or other help modules in the help database.
   </p>
-  <p>
-  	cl&gt; page (ref.quickref)
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; page (ref.quickref)
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   If a quick-reference file is used searching takes seconds, otherwise it
   might take a minute or so for the typical large help database containing
   all help modules for the core system and several external, layered packages.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Only the one-liner (NAME) field describing each help module is used for
   the searches.  With a little work searching could be made much more
   comprehensive as well as faster.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   help, match
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,22 +7,22 @@ mkpattern: Make/add patterns to images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   mkpattern input
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Images to create or modify.  Image sections are allowed to apply a pattern
   to a portion of an image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output images when modifying input images.  If no output images are
@@ -31,7 +31,7 @@ mkpattern: Make/add patterns to images
   input list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pattern">
   <dt><b>pattern = <span style="font-family: monospace;">"constant"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pattern' Line='pattern = "constant"' -->
   <dd>Pattern to be used.  The patterns are:
@@ -79,26 +79,26 @@ mkpattern: Make/add patterns to images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_option">
   <dt><b>option = <span style="font-family: monospace;">"replace"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option = "replace"' -->
   <dd>Editing option when modifying existing images.  Often this is used
   in conjunction with image sections to modify a part of an image.
   The options are:
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
    replace - Replace the image with the pattern.
        add - Add the pattern to the image.
   multiply - Multiply the pattern with the image values.
-  </pre>
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_v1">
   <dt><b>v1 = 0., v2 = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='v1' Line='v1 = 0., v2 = 1.' -->
   <dd>Pattern values used as described for each pattern.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_size">
   <dt><b>size = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='size' Line='size = 1' -->
   <dd>Pattern size used as described for each pattern.
@@ -107,38 +107,38 @@ mkpattern: Make/add patterns to images
   <p>
   WHEN CREATING NEW IMAGES
   </p>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the images.  Maximum of 79 characters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixtype">
   <dt><b>pixtype = <span style="font-family: monospace;">"real"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = "real"' -->
   <dd>Pixel datatype of new images; one of ushort, short, integer, real, double,
   or complex.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ndim">
   <dt><b>ndim = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ndim' Line='ndim = 2' -->
   <dd>Number of dimensions between 0 and 7.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = 512, nlines = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512, nlines = 512' -->
   <dd>Number of columns (first dimension) and lines (second dimension).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_n3">
   <dt><b>n3 = 1, n4 = 1, n5 = 1, n6 = 1, n7 = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='n3' Line='n3 = 1, n4 = 1, n5 = 1, n6 = 1, n7 = 1' -->
   <dd>Number of pixels in 3rd-7th  dimensions
   </dd>
   </dl>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
@@ -151,9 +151,9 @@ mkpattern: Make/add patterns to images
   for further information.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task creates or modifies images with a choice of patterns.  New images
   are created with the specified dimensions, datatype, and pattern.
@@ -191,69 +191,69 @@ mkpattern: Make/add patterns to images
   columns and lines in the image, int is the integer function, mod is the
   modulus function, and sqrt is the square root function.
   </p>
-  <pre>
-                  k = int ((i-1)/size), l = int ((j-1)/size)
-                  ksr = int (sqrt (k)), lsr = int (sqrt (l))
-                  slope = (v2-v1) / ((ncols+nlines-2)/size)
+  <div class="highlight-default-notranslate"><pre>
+                 k = int ((i-1)/size), l = int ((j-1)/size)
+                 ksr = int (sqrt (k)), lsr = int (sqrt (l))
+                 slope = (v2-v1) / ((ncols+nlines-2)/size)
   
-      constant:   P(i,j) = v1
+     constant:   P(i,j) = v1
   
-          grid:   P(i,j) = v2   when mod(i,size)=1 or mod(j,size)=1
-                  P(i,j) = v1   otherwise
+         grid:   P(i,j) = v2   when mod(i,size)=1 or mod(j,size)=1
+                 P(i,j) = v1   otherwise
   
-   coordinates:   P(i,j) = i + j * ncols
+  coordinates:   P(i,j) = i + j * ncols
   
-       checker:   P(i,j) = v1   when mod(k,2)=0 and mod(l,2)=0
-                  P(i,j) = v2   when mod(k,2)=1 and mod(l,2)=0
-                  P(i,j) = v2   when mod(k,2)=0 and mod(l,2)=1
-                  P(i,j) = v1   when mod(k,2)=1 and mod(l,2)=1
+      checker:   P(i,j) = v1   when mod(k,2)=0 and mod(l,2)=0
+                 P(i,j) = v2   when mod(k,2)=1 and mod(l,2)=0
+                 P(i,j) = v2   when mod(k,2)=0 and mod(l,2)=1
+                 P(i,j) = v1   when mod(k,2)=1 and mod(l,2)=1
   
-         slope:   P(i,j) = v1 + slope * (k + l) 
+        slope:   P(i,j) = v1 + slope * (k + l)
   
-        square:   P(i,j) = v1   when mod(ksr,2)=0 and mod(lsr,2)=0
-                  P(i,j) = v2   when mod(ksr,2)=1 and mod(lsr,2)=0
-                  P(i,j) = v2   when mod(ksr,2)=0 and mod(lsr,2)=1
-                  P(i,j) = v1   when mod(ksr,2)=1 and mod(lsr,2)=1
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+       square:   P(i,j) = v1   when mod(ksr,2)=0 and mod(lsr,2)=0
+                 P(i,j) = v2   when mod(ksr,2)=1 and mod(lsr,2)=0
+                 P(i,j) = v2   when mod(ksr,2)=0 and mod(lsr,2)=1
+                 P(i,j) = v1   when mod(ksr,2)=1 and mod(lsr,2)=1
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create an empty (constant value of zero) three dimensional image.
   </p>
-  <pre>
-  	cl&gt; mkpattern cube ndim=3 nc=100 nl=100 n3=100
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkpattern cube ndim=3 nc=100 nl=100 n3=100
+  </pre></div>
   <p>
   2. Replace a square region of an image with the value -1000.
   </p>
-  <pre>
-  	cl&gt; mkpat alpha[201:250,1:50] v1=-1000
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkpat alpha[201:250,1:50] v1=-1000
+  </pre></div>
   <p>
   3. Put a grid pattern on an image to create a new image.
   </p>
-  <pre>
-  	cl&gt; mkpat dev$pix out=gridpix pat=grid op=mul v1=1 v2=0
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mkpat dev$pix out=gridpix pat=grid op=mul v1=1 v2=0
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_MKPATTERN">
   <dt><b>MKPATTERN V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKPATTERN' Line='MKPATTERN V2.11' -->
   <dd>Now allows ndim=0 to create dataless header.
   Now allows type ushort pixel type.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imcopy, imreplace
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

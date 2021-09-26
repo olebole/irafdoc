@@ -7,21 +7,21 @@ import: Convert some other format to an IRAF image
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   import binfiles images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_binfiles">
   <dt><b>binfiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='binfiles' Line='binfiles' -->
   <dd>The list of input binary files to be read.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>The list of output IRAF images to be written. This parameter only needs to
@@ -29,7 +29,7 @@ import: Convert some other format to an IRAF image
   description).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_format">
   <dt><b>format = <span style="font-family: monospace;">"sense"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='format' Line='format = "sense"' -->
   <dd>The type of format to be processed. In default mode, i.e. <i>sense</i>,
@@ -44,14 +44,14 @@ import: Convert some other format to an IRAF image
   <p style="text-align:center">INPUT PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_dims">
   <dt><b>dims = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dims' Line='dims = ""' -->
   <dd>The input file dimension string.  This is a space or comma delimited string
   containing the length of the file in each dimension, e.g. <span style="font-family: monospace;">"512,512,3"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pixtype">
   <dt><b>pixtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pixtype' Line='pixtype = ""' -->
   <dd>Input pixel type. This is a comma delimited string giving the type and size
@@ -61,26 +61,25 @@ import: Convert some other format to an IRAF image
   <dt><b> &lt;type&gt;&lt;nbytes&gt;[:tag],&lt;type&gt;&lt;nbytes&gt;[:tag],[....]</b></dt>
   <!-- Sec='PARAMETERS' Level=1 Label='' Line=' &lt;type&gt;&lt;nbytes&gt;[:tag],&lt;type&gt;&lt;nbytes&gt;[:tag],[....]' -->
   <dd>where
-  <pre>
-      type = b            # byte (no conversions)
-             u            # unsigned integer
-             i            # signed integer
-             r            # ieee floating point
-             n            # native floating point
-             x            # ignore (skip)
+  <div class="highlight-default-notranslate"><pre>
+  type = b            # byte (no conversions)
+         u            # unsigned integer
+         i            # signed integer
+         r            # ieee floating point
+         n            # native floating point
+         x            # ignore (skip)
   
-      nbytes = 1, 2, 4, or 8
+  nbytes = 1, 2, 4, or 8
   
-      tag is something like <span style="font-family: monospace;">'r'</span>,<span style="font-family: monospace;">'g'</span>,<span style="font-family: monospace;">'b'</span> (color triplets), <span style="font-family: monospace;">'r'</span>,
-  	<span style="font-family: monospace;">'i'</span> (complex data), etc.  If no tags are given one will 
-  	automatically be assigned of the form 'b1', 'b2', etc.
-  
-  </pre>
+  tag is something like <span style="font-family: monospace;">'r'</span>,<span style="font-family: monospace;">'g'</span>,<span style="font-family: monospace;">'b'</span> (color triplets), <span style="font-family: monospace;">'r'</span>,
+      <span style="font-family: monospace;">'i'</span> (complex data), etc.  If no tags are given one will
+      automatically be assigned of the form 'b1', 'b2', etc.
+  </pre></div>
   </dd>
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interleave">
   <dt><b>interleave = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interleave' Line='interleave = 0' -->
   <dd>Pixel interleave type. If the <i>pixtype</i> parameter is a composite then
@@ -93,7 +92,7 @@ import: Convert some other format to an IRAF image
   is stored sequentially.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bswap">
   <dt><b>bswap = <span style="font-family: monospace;">"no"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bswap' Line='bswap = "no"' -->
   <dd>Type of byte-swapping to perform.  By default no byte swapping is done, 
@@ -103,31 +102,31 @@ import: Convert some other format to an IRAF image
   swap only integer values, floating point numbers will not be swapped.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_hskip">
   <dt><b>hskip = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='hskip' Line='hskip = 0' -->
   <dd>Number of bytes preceding pixel data to skip.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tskip">
   <dt><b>tskip = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tskip' Line='tskip = 0' -->
   <dd>Number of bytes to skip at end of file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bskip">
   <dt><b>bskip = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bskip' Line='bskip = 0' -->
   <dd>Number of bytes between image bands to skip.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lskip">
   <dt><b>lskip = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lskip' Line='lskip = 0' -->
   <dd>Number of bytes to skip at font of each line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lpad">
   <dt><b>lpad = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lpad' Line='lpad = 0' -->
   <dd>Number of bytes to skip at end of each line.
@@ -136,7 +135,7 @@ import: Convert some other format to an IRAF image
   <p style="text-align:center">OUTPUT PARAMETERS
   
   </p>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">"image"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = "image"' -->
   <dd>Type of output to generate.  Possible values include <span style="font-family: monospace;">"none"</span> process the files
@@ -148,7 +147,7 @@ import: Convert some other format to an IRAF image
   is only used for <i>output</i>=image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtype">
   <dt><b>outtype = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtype' Line='outtype = ""' -->
   <dd>The data type of the output image.  May be one of <span style="font-family: monospace;">'s'</span> for a short image, <span style="font-family: monospace;">'i'</span>
@@ -158,7 +157,7 @@ import: Convert some other format to an IRAF image
   used when <i>output</i> is set to <span style="font-family: monospace;">"image"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outbands">
   <dt><b>outbands = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outbands' Line='outbands = ""' -->
   <dd>Output image band expressions.  If no expressions are given then all of the
@@ -167,7 +166,7 @@ import: Convert some other format to an IRAF image
   section for a more complete description of this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_imheader">
   <dt><b>imheader = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='imheader' Line='imheader = ""' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
@@ -180,7 +179,7 @@ import: Convert some other format to an IRAF image
   for further information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"imcnv$lib/images.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "imcnv$lib/images.dat"' -->
   <dd>The format database. This may also be a list of files to be searched (e.g.
@@ -188,13 +187,13 @@ import: Convert some other format to an IRAF image
   a single database.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print verbose output during the conversion?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_buffer_size">
   <dt><b>buffer_size = 64</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='buffer_size' Line='buffer_size = 64' -->
   <dd>Number of image lines <i>per band</i> to buffer in memory before writing to
@@ -202,9 +201,9 @@ import: Convert some other format to an IRAF image
   of 30 for some formats but requires more memory.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   	The <i>import</i> task is used to convert arbitrary raster binary
   files to IRAF format images.  The input format may be specified either
@@ -217,9 +216,9 @@ import: Convert some other format to an IRAF image
   in a manner similar to the <i>LISTPIX</i> task, or information about the
   file format if it is supported in the database. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_input_file_specification">
   <h3>Input file specification</h3>
-  <!-- BeginSection: 'Input File Specification' -->
   <p>
   	The input raster is assumed to be at most three dimensional, with
   pixels of various sizes that can be interleaved in a variety of ways.
@@ -251,9 +250,9 @@ import: Convert some other format to an IRAF image
   parameter.  Additionally, pixels may be ignored on input while still
   specifying the full format.
   </p>
-  <!-- EndSection:   'Input File Specification' -->
+  </section>
+  <section id="s_output_parameters">
   <h3>Output parameters</h3>
-  <!-- BeginSection: 'Output Parameters' -->
   <p>
   	Once a format has been found, the task may output an IRAF image
   by setting <i>output</i> to <span style="font-family: monospace;">"image"</span>, a list of the pixels in the file
@@ -292,9 +291,9 @@ import: Convert some other format to an IRAF image
   leading whitespace and eliminating the blank keyword case is so that
   the long output of <b>imheader</b> may be used directly as input.
   </p>
-  <!-- EndSection:   'Output Parameters' -->
+  </section>
+  <section id="s_outbands_expressions">
   <h3>Outbands expressions</h3>
-  <!-- BeginSection: 'OUTBANDS EXPRESSIONS' -->
   <p>
           The outbands parameter is a comma delimited list of expressions, the 
   simplest of which is the name of a tag itself (or the default names of the 
@@ -309,10 +308,10 @@ import: Convert some other format to an IRAF image
   exclude certain input bands, or to change the channel order. For example 
   the commands:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; import file img pixtype="u1:a,u1:r,u1:g,u1:b" outbands="g,r,a"
   cl&gt; import file img pixtype="u1,u1,u1,u1" outbands="b3,b2,b1"
-  </pre>
+  </pre></div>
   <p>
   both convert an input 32-bit image with ARGB components.  In the first case
   the output image is an IRAF image where the B component has been eliminated
@@ -326,17 +325,15 @@ import: Convert some other format to an IRAF image
   the <i>imexpr</i> help page for more details).  Special functions in 
   expressions also include:
   </p>
-  <pre>
-  
-       flipx (arg)      	- flip image in X
-       flipy (arg)      	- flip image in Y
-     gr[ea]y (r,g,b)    	- RGB to grayscale using the NTSC Y formula
-         red (arg)	- get the red component of a colormap image
-       green (arg)	- get the green component of a colormap image
-        blue (arg)	- get the blue component of a colormap image
-       gamma (arg, gamma) - apply a gamma correction to the image
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+    flipx (arg)        - flip image in X
+    flipy (arg)        - flip image in Y
+  gr[ea]y (r,g,b)      - RGB to grayscale using the NTSC Y formula
+      red (arg)        - get the red component of a colormap image
+    green (arg)        - get the green component of a colormap image
+     blue (arg)        - get the blue component of a colormap image
+    gamma (arg, gamma) - apply a gamma correction to the image
+  </pre></div>
   <p>
   The two flip functions can change the image orientation by reversing the order
   of pixels within a line (a flipx() call), or it can flip an image from top-
@@ -345,11 +342,9 @@ import: Convert some other format to an IRAF image
   order simply change the order of the tags in the outbands parameter.  RGB
   images may be converted to a single grayscale image using the NTSC formula:
   </p>
-  <pre>
-  
-  	gray = (0.289 * r) + (0.587 * G) + (0.114 * B)
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  gray = (0.289 * r) + (0.587 * G) + (0.114 * B)
+  </pre></div>
   <p>
   Note that a similar grayscale conversion can be done by explicitly defining
   a similar equation in <i>outbands</i> and supplying different coefficients.
@@ -361,34 +356,32 @@ import: Convert some other format to an IRAF image
   GIF color image into it's RGB components one could specify an outbands
   parameter such as
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; import foo.gif bar format=gif outbands="red(b1),green(b1),blue(b1)"
-  
-  </pre>
+  </pre></div>
   <p>
           Functions may also be nested in complex expressions such as:
   </p>
-  <pre>
-   flipy (gray(r,g,b))           - convert to grayscale, flip in Y
-   flipx (flipy (gray (r,g,b)))  - convert to grayscale, flip in X &amp; Y
-    gray (r,g,255)               - use constant 255 as the B band
-    gray (r,g+100,-b)            - add constant to G, negate B
-  </pre>
-  <!-- EndSection:   'OUTBANDS EXPRESSIONS' -->
+  <div class="highlight-default-notranslate"><pre>
+  flipy (gray(r,g,b))           - convert to grayscale, flip in Y
+  flipx (flipy (gray (r,g,b)))  - convert to grayscale, flip in X &amp; Y
+   gray (r,g,255)               - use constant 255 as the B band
+   gray (r,g+100,-b)            - add constant to G, negate B
+  </pre></div>
+  </section>
+  <section id="s_format_database">
   <h3>Format database</h3>
-  <!-- BeginSection: 'FORMAT DATABASE' -->
   <p>
           The format database is a text file named as a task parameter.  
   Each record of a database entry is of the form:
   </p>
-  <pre>
-          &lt;format_name&gt;:
-          &lt;alias&gt;:
-                  keyword = &lt;expr&gt;
-                  keyword = &lt;expr&gt;
-                     ...and so on
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  &lt;format_name&gt;:
+  &lt;alias&gt;:
+          keyword = &lt;expr&gt;
+          keyword = &lt;expr&gt;
+             ...and so on
+  </pre></div>
   <p>
   A database record begins with the format name at the beginning of a line.
   Whitespace at the beginning of a line is considered the continuation of a
@@ -405,22 +398,22 @@ import: Convert some other format to an IRAF image
   database, any number of aliases may also be given to identify the same 
   format possibly known by another name. Supported keywords include:
   </p>
-  <pre>
-      image_id     - A boolean expression identifying the image type
-      id_string    - Verbose name of file format
-      bswap        - is file byte-swapped? (See Below)
-      dims         - a whitespace/comma delimited string of dimensions
-      pixtype      - pixel type, size [and tag], may be a composite
-      interleave   - describes how pixels are stored
-      hskip        - # of bytes of header info to skip
-      tskip        - # of bytes of trailing info to skip at end of file
-      bskip        - # of bytes of info to skip between image bands
-      lskip        - # of bytes of info to skip at front of each line
-      lpad         - # of bytes of info to skip at end of each line
-      error        - A condition that would cause a file read error, 
-  		   returns a string with the error message, otherwise 
-  		   returns the string "okay"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  image_id     - A boolean expression identifying the image type
+  id_string    - Verbose name of file format
+  bswap        - is file byte-swapped? (See Below)
+  dims         - a whitespace/comma delimited string of dimensions
+  pixtype      - pixel type, size [and tag], may be a composite
+  interleave   - describes how pixels are stored
+  hskip        - # of bytes of header info to skip
+  tskip        - # of bytes of trailing info to skip at end of file
+  bskip        - # of bytes of info to skip between image bands
+  lskip        - # of bytes of info to skip at front of each line
+  lpad         - # of bytes of info to skip at end of each line
+  error        - A condition that would cause a file read error,
+                 returns a string with the error message, otherwise
+                 returns the string "okay"
+  </pre></div>
   <p>
   The 'image_id' string is an expression to be evaluated which, if true,
   uniquely identifies the file format (such as a comparison to a <span style="font-family: monospace;">"magic number"</span>).
@@ -459,15 +452,14 @@ import: Convert some other format to an IRAF image
   extension.
   </dd>
   </dl>
-  <!-- EndSection:   'FORMAT DATABASE' -->
+  </section>
+  <section id="s_special_functions_">
   <h3>Special functions:</h3>
-  <!-- BeginSection: 'Special Functions:' -->
   <p>
           In addition to the intrinsic functions already provided there are a
   number of input and utility functions for the database.  These are:
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
                        <i>INPUT FUNCTIONS</i>
   
      ctocc ([offset])      - convert byte to printable char constant
@@ -496,17 +488,17 @@ import: Convert some other format to an IRAF image
   
   parameter (param)        - return the current task parameter
     default (param)        - return the default task parameter
-   lsb_host ()		 - returns true if host is little-endian
-   msb_host ()		 - returns true if host is big-endian
-  </pre>
-  <dl>
+   lsb_host ()             - returns true if host is little-endian
+   msb_host ()             - returns true if host is big-endian
+  </pre></div>
+  <dl id="l_ctocc">
   <dt><b>ctocc ([offset])			[string]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='ctocc' Line='ctocc ([offset])			[string]' -->
   <dd>Convert byte at the given offset to printable char constant.
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ctod">
   <dt><b>ctod ([offset])			[double]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='ctod' Line='ctod ([offset])			[double]' -->
   <dd>Convert string to double precision real.
@@ -515,7 +507,7 @@ import: Convert some other format to an IRAF image
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ctoi">
   <dt><b>ctoi ([offset])			[int]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='ctoi' Line='ctoi ([offset])			[int]' -->
   <dd>Convert string to integer.
@@ -524,7 +516,7 @@ import: Convert some other format to an IRAF image
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ctol">
   <dt><b>ctol ([offset])			[long]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='ctol' Line='ctol ([offset])			[long]' -->
   <dd>Convert string to long.
@@ -533,7 +525,7 @@ import: Convert some other format to an IRAF image
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ctor">
   <dt><b>ctor ([offset])			[real]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='ctor' Line='ctor ([offset])			[real]' -->
   <dd>Convert string to single precision real.  
@@ -542,14 +534,14 @@ import: Convert some other format to an IRAF image
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ctowrd">
   <dt><b>ctowrd ([offset])			[string]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='ctowrd' Line='ctowrd ([offset])			[string]' -->
   <dd>Get 1st white-space delimited word from str, leading whitespace is skipped.
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_getstr">
   <dt><b>getstr ([offset,] len)		[string]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='getstr' Line='getstr ([offset,] len)		[string]' -->
   <dd>Get a string at offset.
@@ -557,21 +549,21 @@ import: Convert some other format to an IRAF image
   the string must be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_getb">
   <dt><b>getb ([offset])			[int]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='getb' Line='getb ([offset])			[int]' -->
   <dd>Get a byte at offset.
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_getu">
   <dt><b>getu ([offset])			[int]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='getu' Line='getu ([offset])			[int]' -->
   <dd>Get an unsigned short integer at offset.
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_geti">
   <dt><b>geti[24] ([offset])			[int]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='geti' Line='geti[24] ([offset])			[int]' -->
   <dd>Get a signed int at offset.
@@ -580,7 +572,7 @@ import: Convert some other format to an IRAF image
   the names geti() and geti2() return short integers.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_getr">
   <dt><b>getr[48] ([offset])			[real/double]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='getr' Line='getr[48] ([offset])			[real/double]' -->
   <dd>Get an IEEE floating point number at an optional offset.
@@ -589,7 +581,7 @@ import: Convert some other format to an IRAF image
   the names getr() and getr4() return single precision real.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_getn">
   <dt><b>getn[48] ([offset])			[real/double]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='getn' Line='getn[48] ([offset])			[real/double]' -->
   <dd>Get a native floating point number at an optional offset.
@@ -598,48 +590,48 @@ import: Convert some other format to an IRAF image
   the names getn() and getn4() return single precision real.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_locate">
   <dt><b>locate ([offset,] pat)		[int]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='locate' Line='locate ([offset,] pat)		[int]' -->
   <dd>Compute an offset.
   If no offset argument is given the current offset is used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_line">
   <dt><b>line (N)				[int]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='line' Line='line (N)				[int]' -->
   <dd>Offset of line N in bytes.  The database is rewound and the offset of the
   requested line number is returned, line are delimited by the '\n' character.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_skip">
   <dt><b>skip (nbytes)			[int]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='skip' Line='skip (nbytes)			[int]' -->
   <dd>Move current offset by N-bytes. The number of bytes skipped is returned as
   the function value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bswap">
   <dt><b>bswap (arg)				[type of arg]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='bswap' Line='bswap (arg)				[type of arg]' -->
   <dd>Byte swap the argument.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_substr">
   <dt><b>substr (str, first, last)		[string]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='substr' Line='substr (str, first, last)		[string]' -->
   <dd>Extracts a substring from string <i>str</i>.  The  first  character  in
   the string is at index 1.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_stridx">
   <dt><b>stridx (test, str)			[int]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='stridx' Line='stridx (test, str)			[int]' -->
   <dd>Finds the position of the first occurrence of any character found
   in <i>test</i> in the string <i>str</i>, returning 0 if the match fails.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_parameter">
   <dt><b>parameter (param)			[param type]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='parameter' Line='parameter (param)			[param type]' -->
   <dd>Return the current task parameter. The parameter is specified as a string
@@ -647,7 +639,7 @@ import: Convert some other format to an IRAF image
   the parameter type 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_default">
   <dt><b>default (param)			[param type]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='default' Line='default (param)			[param type]' -->
   <dd>Return the default task parameter.  The parameter is specified as a string
@@ -655,7 +647,7 @@ import: Convert some other format to an IRAF image
   the parameter type 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsb_host">
   <dt><b>lsb_host ()				[bool]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='lsb_host' Line='lsb_host ()				[bool]' -->
   <dd>Returns true if host is little-endian.
@@ -663,7 +655,7 @@ import: Convert some other format to an IRAF image
   with a specified byte order.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_msb_host">
   <dt><b>msb_host ()				[bool]</b></dt>
   <!-- Sec='Special Functions:' Level=0 Label='msb_host' Line='msb_host ()				[bool]' -->
   <dd>Returns true if host is big-endian.
@@ -671,9 +663,9 @@ import: Convert some other format to an IRAF image
   with a specified byte order.
   </dd>
   </dl>
-  <!-- EndSection:   'Special Functions:' -->
+  </section>
+  <section id="s_byte_swapping">
   <h3>Byte swapping</h3>
-  <!-- BeginSection: 'BYTE SWAPPING' -->
   <p>
   	The 'bswap' database entry is similar to the task parameter,  it may
   be used to set byte swapping for the whole file, or for only certain data
@@ -681,15 +673,14 @@ import: Convert some other format to an IRAF image
   whole file, <span style="font-family: monospace;">"no"</span> to not swap anything, or a comma delimited string of types
   described below to enable swapping for only those values.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  bswap = { no | yes | i2 i4 }
   
-          bswap = { no | yes | i2 i4 }
-  
-                  no              # no swapping (default)
-                  yes             # byte swap whole file
-                  i2              # byte swap short ints only
-                  i4              # byte swap long ints only
-  </pre>
+          no              # no swapping (default)
+          yes             # byte swap whole file
+          i2              # byte swap short ints only
+          i4              # byte swap long ints only
+  </pre></div>
   <p>
   	The <i>bswap</i> task parameter applies only to the pixel data,
   but the bswap keyword in a database record sets byte-swapping 
@@ -699,11 +690,10 @@ import: Convert some other format to an IRAF image
   argument if it is or is not set by the keyword (the default is no byte 
   swapping).
   </p>
-  <!-- EndSection:   'BYTE SWAPPING' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   Get a list of known input formats:
   
       cl&gt; import "" "" output=info
@@ -749,7 +739,7 @@ import: Convert some other format to an IRAF image
       cl&gt; import rgb img format=none dims="640,480,3" \<br>
       &gt;&gt;&gt;    pixtype="u1" interleave=0 outbands="gray(b1,b2,b3)"
   
-  Read an 8-bit colormap GIF image and separate the RGB colors into 
+  Read an 8-bit colormap GIF image and separate the RGB colors into
      separate bands in the output image:
   
       cl&gt; import file.gif img outbands="red(b1),green(b1),blue(b1)"
@@ -770,33 +760,32 @@ import: Convert some other format to an IRAF image
       cl&gt; imdel nite1.imh
       cl&gt; import nite1.fits nite1 format="none" dims="640,480" \<br>
       &gt;&gt;&gt; bswap+ hskip=2880 pixtype="i2" outtype="s" imheader="imheader.dat"
-  
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Bitmap images are not yet supported.  Their most logical use would be as
   pixel masks but there hasn't been much call for these formats so they may
   be implemented at a later time.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_IMPORT">
   <dt><b>IMPORT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='IMPORT' Line='IMPORT V2.11' -->
   <dd>This is a new task in this version.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   export. imexpr, hedit, default image database imcnv$lib/images.dat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'Input File Specification' 'Output Parameters' 'OUTBANDS EXPRESSIONS' 'FORMAT DATABASE' 'Special Functions:' 'BYTE SWAPPING' 'EXAMPLES' 'BUGS' 'REVISIONS' 'SEE ALSO'  -->
   

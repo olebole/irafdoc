@@ -7,21 +7,21 @@ filtpars: Edit the filter function parameters
 
 .. raw:: html
 
+  <section id="s_name_">
   <h3>Name </h3>
-  <!-- BeginSection: 'NAME ' -->
   <p>
   filtpars -- edit the filter function parameters
   </p>
-  <!-- EndSection:   'NAME ' -->
+  </section>
+  <section id="s_usage_">
   <h3>Usage </h3>
-  <!-- BeginSection: 'USAGE ' -->
   <p>
   filtpars
   </p>
-  <!-- EndSection:   'USAGE ' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_f_type">
   <dt><b>f_type = <span style="font-family: monospace;">"ramp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_type' Line='f_type = "ramp"' -->
   <dd>Type of filter to be used.  Possible choices are
@@ -57,36 +57,36 @@ filtpars: Edit the filter function parameters
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cuton">
   <dt><b>cuton = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cuton' Line='cuton = 0' -->
   <dd>The fourier wavenumber at which the filter begins to pass the filtered fft
   component.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cutoff">
   <dt><b>cutoff = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cutoff' Line='cutoff = 0' -->
   <dd>The fourier wavenumber at which the filter ceases to pass fft components.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fullon">
   <dt><b>fullon = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fullon' Line='fullon = 0' -->
   <dd>Used only for a 'ramp' filter.  The fourier wavenumber at which the filter
   reaches full value and passes all of the data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fulloff">
   <dt><b>fulloff = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fulloff' Line='fulloff = 0' -->
   <dd>Used only for a 'ramp' filter.  The fourier wavenumber at which the filter
   reaches zero value and passes none of the data.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description_">
   <h3>Description </h3>
-  <!-- BeginSection: 'DESCRIPTION ' -->
   <p>
   The filtering parameters control the type of filter to be used
   on the Fourier transformed data as well as the range in wavenumbers over
@@ -115,7 +115,7 @@ filtpars: Edit the filter function parameters
   <p>
   The filter choices behave as follows:
   </p>
-  <dl>
+  <dl id="l_Square">
   <dt><b>Square Filter</b></dt>
   <!-- Sec='DESCRIPTION ' Level=0 Label='Square' Line='Square Filter' -->
   <dd>The fourier components at wavenumbers between the <i>cuton</i> and <i>cutoff</i>
@@ -123,7 +123,7 @@ filtpars: Edit the filter function parameters
   are set to zero.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Ramp">
   <dt><b>Ramp Filter</b></dt>
   <!-- Sec='DESCRIPTION ' Level=0 Label='Ramp' Line='Ramp Filter' -->
   <dd>Fourier components below the <i>cuton</i> and above the <i>fulloff</i> 
@@ -136,40 +136,38 @@ filtpars: Edit the filter function parameters
   (i.e. zeros) the fourier components at the <i>fulloff</i> wavenumber.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Welch">
   <dt><b>Welch Filter</b></dt>
   <!-- Sec='DESCRIPTION ' Level=0 Label='Welch' Line='Welch Filter' -->
   <dd>Fourier components below the <i>cuton</i> and above the <i>cutoff</i> 
   wavenumbers are set to zero.  Components between these regions are weighted
   according to the equation for a Welch window.  Namely,
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+                                               2
+  w(j)  = 1. - [ (j - 1/2(N-1)) / (1/2(N+1)) ]
   
-  						     2      
-  	w(j)  = 1. - [ (j - 1/2(N-1)) / (1/2(N+1)) ] 
-  		        
-  		where j =  (wavenumber - cuton_wavenumber) 
-  	      	      N =  (cutoff - cuton) + 1
-  </pre>
+          where j =  (wavenumber - cuton_wavenumber)
+                N =  (cutoff - cuton) + 1
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_Hanning">
   <dt><b>Hanning Filter</b></dt>
   <!-- Sec='DESCRIPTION ' Level=0 Label='Hanning' Line='Hanning Filter' -->
   <dd>Fourier components below the <i>cuton</i> and above the <i>cutoff</i> 
   wavenumbers are set to zero. Components between these regions are weighted
   according to the equation for a Hanning window.  Namely,
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
+  w(j)  =  1/2 [ 1. - cos( (TWOPI*j) / (N-1) ) ]
   
-  	w(j)  =  1/2 [ 1. - cos( (TWOPI*j) / (N-1) ) ]
-  
-  		where j =  (wavenumber - cuton_wavenumber) 
-  	              N =  (cutoff - cuton) + 1
-  </pre>
+          where j =  (wavenumber - cuton_wavenumber)
+                N =  (cutoff - cuton) + 1
+  </pre></div>
   </dd>
   </dl>
-  <!-- EndSection:   'DESCRIPTION ' -->
+  </section>
+  <section id="s_task_colon_commands">
   <h3>Task colon commands</h3>
-  <!-- BeginSection: 'TASK COLON COMMANDS' -->
   <p>
   The values of the <i>filtpars</i> pset may be changed, displayed, or updated
   from within the Fourier mode of the <i>fxcor</i> task.  Simply 
@@ -231,29 +229,29 @@ filtpars: Edit the filter function parameters
   <dd>Set or show the current value of the fulloff fourier component
   </dd>
   </dl>
-  <!-- EndSection:   'TASK COLON COMMANDS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the filtering parameters.
   </p>
-  <pre>
-  	rv&gt; lpar filtpars
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  rv&gt; lpar filtpars
+  </pre></div>
   <p>
   2. Edit the filtering parameters
   </p>
-  <pre>
-  	rv&gt; filtpars
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  rv&gt; filtpars
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   fxcor
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME ' 'USAGE ' 'PARAMETERS' 'DESCRIPTION ' 'TASK COLON COMMANDS' 'EXAMPLES' 'SEE ALSO'  -->
   

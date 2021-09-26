@@ -7,20 +7,20 @@ jobs: Display status of background jobs
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   jobs
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <p>
   None.
   </p>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Jobs</i> is used to display the status of background jobs.
   If no job number is specified then all the status of all background
@@ -39,38 +39,38 @@ jobs: Display status of background jobs
   <p>
   The possible states for a background job are:
   </p>
-  <pre>
-  	Done    -- the job has finished normally
-  	Exit N  -- the job terminated with exit code N
-  	Stopped -- the job is waiting for input from the user
-  			(see the <i>service</i> command)
-  	Running -- the job is currently executing
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  <div class="highlight-default-notranslate"><pre>
+  Done    -- the job has finished normally
+  Exit N  -- the job terminated with exit code N
+  Stopped -- the job is waiting for input from the user
+                  (see the <i>service</i> command)
+  Running -- the job is currently executing
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; jobs
-      [1]  21:13  Done      mkhelp &gt;&amp; dev$null &amp; 
-      [2]   0:05 +Running   count *.hlp &gt; _junk &amp; 
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+      [1]  21:13  Done      mkhelp &gt;&amp; dev$null &amp;
+      [2]   0:05 +Running   count *.hlp &gt; _junk &amp;
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   Exit codes are rarely displayed when jobs terminate abnormally.
   The CL checks for background job termination only when a command is
   entered, hence the elapsed time shown will often be greater than it
   should be.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   kill, service
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

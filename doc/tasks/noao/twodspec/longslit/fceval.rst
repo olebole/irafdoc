@@ -7,43 +7,43 @@ fceval: Evaluate coordinates using the FITSCOORDS solutions
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   fceval input output fitnames
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Input text file of pixel coordinates.  This may be <span style="font-family: monospace;">"STDIN"</span> to read
   coordinates from the terminal or pipe.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output text file of pixel coordinates and fitted coordinates.  This may
   be <span style="font-family: monospace;">"STDOUT"</span> to write coordinates to the terminal or pipe.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitnames">
   <dt><b>fitnames  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitnames' Line='fitnames  ' -->
   <dd>Names of the user coordinate maps to evaluate.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the coordinate maps.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task transforms pixel coordinates to the world coordinates fit with
   FITCOORDS.  When there is no map for an axis the identify transform is
@@ -61,24 +61,24 @@ fceval: Evaluate coordinates using the FITSCOORDS solutions
   points in the untransformed data and to generate transformations using
   GEOMAP and GEOTRAN.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Evaluate a wavelength and slit position fit where the input pixel coordinates
   are entered interactively and the output is written to the terminal.
   </p>
-  <pre>
-      cl&gt; fceval STDIN STDOUT arcfit,std
-      1 1
-      1. 1. 20.60425149463117 4202.47202514205
-      60 1
-      60. 1. 79.60425149463118 4203.316616448186
-      1 512
-      1. 512. 19.15606081299484 7356.089801036373
-      60 512
-      60. 512. 78.15606081299485 7355.042495319318
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; fceval STDIN STDOUT arcfit,std
+  1 1
+  1. 1. 20.60425149463117 4202.47202514205
+  60 1
+  60. 1. 79.60425149463118 4203.316616448186
+  1 512
+  1. 512. 19.15606081299484 7356.089801036373
+  60 512
+  60. 512. 78.15606081299485 7355.042495319318
+  </pre></div>
   <p>
   In this case the first axis corresponds to the spatial dimension and
   the second to the dispersion dimension.  The arcfit was created using
@@ -91,13 +91,13 @@ fceval: Evaluate coordinates using the FITSCOORDS solutions
   pixel coordinates in the transformed data using WCSCTRAN, 3) fit a
   transformation using GEOMAP, and 4) transform the data with GEOTRAN.
   </p>
-  <pre>
-      cl&gt; listpix orig[*:5,*:5] wcs=physical verb- |
-      &gt;&gt;&gt; fceval STDIN STDOUT arcfit,std |
-      &gt;&gt;&gt; wcsctran STDIN coords trans world logical columns="3 4"
-      cl&gt; geomap coords geomap.db 1 61 1 512
-      cl&gt; geotran trans origNEW geomap.db coords flux+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; listpix orig[*:5,*:5] wcs=physical verb- |
+  &gt;&gt;&gt; fceval STDIN STDOUT arcfit,std |
+  &gt;&gt;&gt; wcsctran STDIN coords trans world logical columns="3 4"
+  cl&gt; geomap coords geomap.db 1 61 1 512
+  cl&gt; geotran trans origNEW geomap.db coords flux+
+  </pre></div>
   <p>
   This example uses pipes to eliminate intermediate files.  But these
   files can be useful for understanding the process.  LIXTPIX is used to
@@ -110,14 +110,14 @@ fceval: Evaluate coordinates using the FITSCOORDS solutions
   by TRANSFORM.  However, the world coordinate system information will
   not be automatically set.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   fitcoords, transform, geomap, geotran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

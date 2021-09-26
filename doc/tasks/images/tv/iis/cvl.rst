@@ -7,90 +7,90 @@ cvl: Load image display (newer version of 'display')
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   cvl image frame
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>Image to be loaded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_frame">
   <dt><b>frame</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='frame' Line='frame' -->
   <dd>Display frame to be loaded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_erase">
   <dt><b>erase = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='erase' Line='erase = yes' -->
   <dd>Erase frame before loading image?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_border_erase">
   <dt><b>border_erase = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='border_erase' Line='border_erase = no' -->
   <dd>Erase unfilled area of window in display frame if the whole frame is not
   erased?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_select_frame">
   <dt><b>select_frame = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select_frame' Line='select_frame = yes' -->
   <dd>Display the frame to be loaded?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fill">
   <dt><b>fill = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fill' Line='fill = no' -->
   <dd>Interpolate or block average the image to fit the display window?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zscale">
   <dt><b>zscale = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zscale' Line='zscale = yes' -->
   <dd>Apply an automatic intensity mapping algorithm when loading the image?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_contrast">
   <dt><b>contrast = 0.25</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='contrast' Line='contrast = 0.25' -->
   <dd>Contrast factor for the automatic intensity mapping algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zrange">
   <dt><b>zrange = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zrange' Line='zrange = yes' -->
   <dd>If not using the automatic mapping algorithm (<i>zscale = no</i>) map the
   full range of the image intensity to the full range of the display?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsample_lines">
   <dt><b>nsample_lines = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsample_lines' Line='nsample_lines = 5' -->
   <dd>Number of sample lines to use in the automatic intensity mapping algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcenter">
   <dt><b>xcenter = 0.5, ycenter = 0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcenter' Line='xcenter = 0.5, ycenter = 0.5' -->
   <dd>Horizontal and vertical centers of the display window in normalized
   coordinates measured from the left and bottom respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xsize">
   <dt><b>xsize = 1, ysize = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xsize' Line='xsize = 1, ysize = 1' -->
   <dd>Horizontal and vertical sizes of the display window in normalized coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag = 1., ymag = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag = 1., ymag = 1.' -->
   <dd>Horizontal and vertical image magnifications when not filling the display
@@ -99,7 +99,7 @@ cvl: Load image display (newer version of 'display')
   into a display pixel.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_z1">
   <dt><b>z1, z2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='z1' Line='z1, z2' -->
   <dd>Minimum and maximum image intensity to be mapped to the minimum and maximum
@@ -107,7 +107,7 @@ cvl: Load image display (newer version of 'display')
   intensity mapping methods.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ztrans">
   <dt><b>ztrans = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ztrans' Line='ztrans = "linear"' -->
   <dd>Transformation of the image intensity levels to the display levels.  The
@@ -146,7 +146,7 @@ cvl: Load image display (newer version of 'display')
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lutfile">
   <dt><b>lutfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lutfile' Line='lutfile = ""' -->
   <dd>Name of text file containing the look up table when <i>ztrans</i> = user.
@@ -154,9 +154,9 @@ cvl: Load image display (newer version of 'display')
   intensity, column 2 the desired greyscale output.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The specified image is loaded into the specified frame of the standard
   image display device (<span style="font-family: monospace;">"stdimage"</span>).  For devices with more than one
@@ -258,9 +258,9 @@ cvl: Load image display (newer version of 'display')
   Finally, if the zrange algorithm is not selected the user specifies the
   values of <i>z1</i> and <i>z2</i> directly.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_zscale_algorithm">
   <h3>Zscale algorithm</h3>
-  <!-- BeginSection: 'ZSCALE ALGORITHM' -->
   <p>
   The zscale algorithm is designed to display the image values near the median
   image value without the time consuming process of computing a full image
@@ -290,17 +290,17 @@ cvl: Load image display (newer version of 'display')
   function are used (provided they are within the original range of the
   sample):
   </p>
-  <pre>
-  	z1 = I(midpoint) + (slope / contrast) * (1 - midpoint)
-  	z2 = I(midpoint) + (slope / contrast) * (npoints - midpoint)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  z1 = I(midpoint) + (slope / contrast) * (1 - midpoint)
+  z2 = I(midpoint) + (slope / contrast) * (npoints - midpoint)
+  </pre></div>
   <p>
   As can be seen, the parameter <i>contrast</i> may be used to adjust the contrast
   produced by this algorithm.
   </p>
-  <!-- EndSection:   'ZSCALE ALGORITHM' -->
+  </section>
+  <section id="s_magnify_and_fill_algorithm">
   <h3>Magnify and fill algorithm</h3>
-  <!-- BeginSection: 'MAGNIFY AND FILL ALGORITHM' -->
   <p>
   The spatial interpolation algorithm magnifies (or demagnifies) the
   image along each axis by the desired amount.  The fill option is a
@@ -331,9 +331,9 @@ cvl: Load image display (newer version of 'display')
   the subsampling.  With block averaging pixel-to-pixel noise is reduced
   and small scale features still contribute to the displayed image.
   </p>
-  <!-- EndSection:   'MAGNIFY AND FILL ALGORITHM' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   For the purpose of these examples we assume a display with four frames,
   512 x 512 in size, and a display range of 0 to 255.  Also consider two
@@ -341,10 +341,10 @@ cvl: Load image display (newer version of 'display')
   2000 x 1000 with a range -1000 to 1000.  To load the images with the
   default parameters:
   </p>
-  <pre>
-  	cl&gt; cvl image1 1
-  	cl&gt; cvl image2 2
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cvl image1 1
+  cl&gt; cvl image2 2
+  </pre></div>
   <p>
   The image frames are first erased and image1 is loaded in the center of
   display frame 1 without spatial interpolation and with the automatic intensity
@@ -353,40 +353,40 @@ cvl: Load image display (newer version of 'display')
   <p>
   To load the display without any intensity transformation:
   </p>
-  <p>
-  	cl&gt; cvl image1 1 ztrans=none
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cvl image1 1 ztrans=none
+  </pre></div>
   <p>
   The next example interpolates image2 to fill the full 512 horizontal range
   of the frame and maps the full image range into the display range.  Note
   that the spatial interpolation first block averages by a factor of 2 and then
   magnifies by 0.512.
   </p>
-  <p>
-  	cl&gt; cvl image2 3 fill+ zscale-
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cvl image2 3 fill+ zscale-
+  </pre></div>
   <p>
   The next example makes image1 square and sets the intensity range explicitly.
   </p>
-  <p>
-  	cl&gt; cvl image1 4 zscale- zrange- z1=800 z2=1200 xmag=2
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cvl image1 4 zscale- zrange- z1=800 z2=1200 xmag=2
+  </pre></div>
   <p>
   The next example loads the two images in the same frame side-by-side.
   </p>
-  <pre>
-  	cl&gt; cvl.xsize=0.5
-  	cl&gt; cvl image1 fill+ xcen=0.25
-  	cl&gt; cvl image2 erase- fill+ xcen=0.75
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cvl.xsize=0.5
+  cl&gt; cvl image1 fill+ xcen=0.25
+  cl&gt; cvl image2 erase- fill+ xcen=0.75
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   display, magnify
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'ZSCALE ALGORITHM' 'MAGNIFY AND FILL ALGORITHM' 'EXAMPLES' 'SEE ALSO'  -->
   

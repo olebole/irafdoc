@@ -7,46 +7,46 @@ imtitle: Change the title of an image (noao.proto V2.9)
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   imtitle image title
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>Image to be modified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title' -->
   <dd>New image title.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The title in <i>image</i> is changed to <i>title</i>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <p>
-      cl&gt; imtitle m1 <span style="font-family: monospace;">"M1 U Band"</span>
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imtitle m1 "M1 U Band"
+  </pre></div>
+  </section>
+  <section id="s_use_instead">
   <h3>Use instead</h3>
-  <!-- BeginSection: 'USE INSTEAD' -->
   <p>
   images.hedit
   </p>
   
-  <!-- EndSection:    'USE INSTEAD' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'USE INSTEAD'  -->
   

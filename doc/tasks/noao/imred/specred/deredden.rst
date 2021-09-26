@@ -7,15 +7,15 @@ deredden: Apply interstellar extinction correction
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   deredden input output [records] value
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input spectra to be dereddened.  When using record
@@ -23,7 +23,7 @@ deredden: Apply interstellar extinction correction
   image names are used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of derreddened spectra.  If no output list is specified then
@@ -35,7 +35,7 @@ deredden: Apply interstellar extinction correction
   will be the same as the input record number extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records (imred.irs and imred.iids only)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids only)' -->
   <dd>The set of record number extensions to be applied to each input
@@ -46,7 +46,7 @@ deredden: Apply interstellar extinction correction
   formats are not used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_value">
   <dt><b>value</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
   <dd>Extinction parameter value as selected by the type parameter.
@@ -55,13 +55,13 @@ deredden: Apply interstellar extinction correction
   These quantities are discussed further below.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_R">
   <dt><b>R = 3.1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='R' Line='R = 3.1' -->
   <dd>The ratio of extinction at V, A(V), to color excess between B and V, E(B-V).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_type">
   <dt><b>type = <span style="font-family: monospace;">"E(B-V)"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='type' Line='type = "E(B-V)"' -->
   <dd>The type of extinction parameter used.  The values may be:
@@ -85,7 +85,7 @@ deredden: Apply interstellar extinction correction
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be selected from input one dimensional spectra
@@ -95,7 +95,7 @@ deredden: Apply interstellar extinction correction
   spectra such as calibrated long slit and Fabry-Perot data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_override">
   <dt><b>override = no, uncorrect = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='override' Line='override = no, uncorrect = yes' -->
   <dd>If a spectrum has been previously corrected it will contain the header
@@ -112,9 +112,9 @@ deredden: Apply interstellar extinction correction
   uncorrect parameter should be no.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The input spectra are corrected for interstellar extinction, or
   reddening, using the empirical selective extinction function of
@@ -140,17 +140,17 @@ deredden: Apply interstellar extinction correction
   If A(V) is used then the CCM function can be directly evaluated.  If
   E(B-V) is used then A(V) is derived by:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   (1)     A(V) = R(V) * E(B-V)
-  </pre>
+  </pre></div>
   <p>
   For planetary nebula studies the logarithmic extinction at H beta,
   denoted as c, is often determined instead of E(B-V).  If this type
   of input is chosen then A(V) is derived by:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   (2)     A(V) = R(V) * c * (0.61 + 0.024 * c).
-  </pre>
+  </pre></div>
   <p>
   This relation is based on the relation betwen E(B-V) and c computed
   by Kaler and Lutz, <b>PASP 97:700</b>, 1985 to include corrections between
@@ -158,9 +158,9 @@ deredden: Apply interstellar extinction correction
   In particular the function is a least squares fit to the values of
   c and E(B-V) in Table III of the form:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   (3)     E(B-V) = c * (A + B * c)
-  </pre>
+  </pre></div>
   <p>
   The input spectra are specified by a list of root names (when using record
   extension format) or full image names.  They are required to be dispersion
@@ -189,51 +189,51 @@ deredden: Apply interstellar extinction correction
   Note that by specifying a negative extinction parameter this task may
   be used to add interstellar extinction.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To deredden a spectrum with an extinction of 1.2 magnitudes at V:
       
   </p>
-  <pre>
-  	cl&gt; deredden obj1.ms drobj1.ms 1.2 type=A
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; deredden obj1.ms drobj1.ms 1.2 type=A
+  </pre></div>
   <p>
   2.  To deredden a spectrum in place with a color excess of 0.65 and
   and R(V) value of 4.5:
   </p>
-  <pre>
-  	cl&gt; deredden obj2.ms obj2.ms R=4.5
-  	E(B-V): .65
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; deredden obj2.ms obj2.ms R=4.5
+  E(B-V): .65
+  </pre></div>
   <p>
   3.  To deredden a series of IRS planetary nebula spectra using the
   H beta extinction in the irs package:
   </p>
-  <pre>
-  	cl&gt; deredden pn12 drpn12 1-5,12-14 type=c
-  	c: 1.05
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; deredden pn12 drpn12 1-5,12-14 type=c
+  c: 1.05
+  </pre></div>
   <p>
   4.  To redden a spectrum:
   </p>
-  <pre>
-  	cl&gt; deredden artspec artspec -1.2 type=A
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; deredden artspec artspec -1.2 type=A
+  </pre></div>
   <p>
   5. To deredden a long slit or Fabry-Perot spectrum either DISPAXIS
   must be in the image header or be specified in the package parameters.
   The summing parameters are ignored.
       
   </p>
-  <pre>
-  	cl&gt; deredden obj1 drobj1 1.2 type=A
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; deredden obj1 drobj1 1.2 type=A
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_DEREDDEN">
   <dt><b>DEREDDEN V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DEREDDEN' Line='DEREDDEN V2.10.3' -->
   <dd>Extended to operate on two and three dimensional spatial spectra such as
@@ -243,28 +243,28 @@ deredden: Apply interstellar extinction correction
   data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_DEREDDEN">
   <dt><b>DEREDDEN V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DEREDDEN' Line='DEREDDEN V2.10' -->
   <dd>This task is new.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_notes">
   <h3>Notes</h3>
-  <!-- BeginSection: 'NOTES' -->
   <p>
   Since there can be only one deredding flag in multispectral images
   one needs to override the flag if different spectra require different
   corrections and then only the last correction will be recorded.
   </p>
-  <!-- EndSection:   'NOTES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   calibrate
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'NOTES' 'SEE ALSO'  -->
   

@@ -7,30 +7,30 @@ set: Set an environment variable
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   set [varname = valuestring]
   reset [varname = valuestring]
-  </pre>
-  <!-- EndSection:   'USAGE' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_varname">
   <dt><b>varname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='varname' Line='varname' -->
   <dd>The environment variable to be defined or set.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_valuestring">
   <dt><b>valuestring</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='valuestring' Line='valuestring' -->
   <dd>The new string value of the environment variable.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The CL maintains a list of environment variables, each of which consists
   of a keyword = value pair.  The <i>set</i> and <i>reset</i> operators are used
@@ -51,19 +51,19 @@ set: Set an environment variable
   <p>
   For example,
   </p>
-  <pre>
-  	set	testdir = "/usr/iraf/testdir"		# Unix
-  	set	testdir = "dua2:[iraf.testdir]"		# VMS
-  	task	tst1 = testdir$tst1.cl
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  set     testdir = "/usr/iraf/testdir"           # Unix
+  set     testdir = "dua2:[iraf.testdir]"         # VMS
+  task    tst1 = testdir$tst1.cl
+  </pre></div>
   <p>
   New IRAF logicals may be defined in terms or existing IRAF logical names,
   i.e., logical names are recursively expanded.
   </p>
-  <pre>
-  	set	subdir1 = testdir$subdir1/
-  	task	tst2 = subdir1$tst2.e
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  set     subdir1 = testdir$subdir1/
+  task    tst2 = subdir1$tst2.e
+  </pre></div>
   <p>
   If the <i>set</i> command is entered without any arguments the current
   environment list is printed in the reverse of the order in which the
@@ -71,35 +71,35 @@ set: Set an environment variable
   final and original definition are shown.   The <i>show</i> command can be
   used to show only the current value.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Define the data directory <span style="font-family: monospace;">"dd"</span> on a remote node, and call <i>implot</i>
   to make plots of an image which resides in the remote directory.
   </p>
-  <pre>
-  	cl&gt; set dd = lyra!/u2/me/data
-  	cl&gt; implot dd$picture
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; set dd = lyra!/u2/me/data
+  cl&gt; implot dd$picture
+  </pre></div>
   <p>
   2. Temporarily change the value of the variable <i>printer</i>.  The new
   value is discarded when the <i>bye</i> is entered.
   </p>
-  <pre>
-  	cl&gt; cl
-  	cl&gt; set printer = qms
-  		...
-  	cl&gt; bye
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cl
+  cl&gt; set printer = qms
+          ...
+  cl&gt; bye
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   show, envget
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

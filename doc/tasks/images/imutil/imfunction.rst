@@ -7,21 +7,21 @@ imfunction: Apply a single argument function to a list of images
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
   <p>
   imfunction input output function
   </p>
-  <!-- EndSection:   'USAGE	' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The input image list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output image list. The number of output images must match the number of
@@ -29,7 +29,7 @@ imfunction: Apply a single argument function to a list of images
   the input images are overwritten.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function' -->
   <dd>Function to be applied to the input pixels. The options are:
@@ -168,15 +168,15 @@ imfunction: Apply a single argument function to a list of images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about actions taken by the task?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The selected function <i>function</i> is applied to the pixel values of all
   the input images <i>input</i> to create the pixel values of the output
@@ -196,24 +196,24 @@ imfunction: Apply a single argument function to a list of images
   Values of the machine dependent constants MAX_REAL and MAX_EXPONENT can be
   found in the file <span style="font-family: monospace;">"hlib$mach.h"</span>. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Take the logarithm of the pixel values of images in1 and in2 and write
   the results to out1 and out2.
   </p>
-  <pre>
-      cl&gt; imfunction in1,in2 out1,out2 log10
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imfunction in1,in2 out1,out2 log10
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imarith,imreplace
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

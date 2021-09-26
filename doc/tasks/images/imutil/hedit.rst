@@ -7,21 +7,21 @@ hedit: Header editor
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   hedit images fields value
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>Template specifying the images to be edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fields">
   <dt><b>fields</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fields' Line='fields' -->
   <dd>Template specifying the fields to be edited in each image.  The template is
@@ -29,7 +29,7 @@ hedit: Header editor
   image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_value">
   <dt><b>value</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='value' Line='value' -->
   <dd>Either a string constant or a general expression (if the first character is
@@ -38,7 +38,7 @@ hedit: Header editor
   value of each field to be printed rather than edited.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_add">
   <dt><b>add = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='add' Line='add = no' -->
   <dd>Change the operation of the editor from update to add new field. If the
@@ -47,7 +47,7 @@ hedit: Header editor
   over the addonly and delete switches.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_addonly">
   <dt><b>addonly = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='addonly' Line='addonly = no' -->
   <dd>Change the operation of the editor from update to add a new field. If the
@@ -56,14 +56,14 @@ hedit: Header editor
   the delete switch.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_delete">
   <dt><b>delete = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='delete' Line='delete = no' -->
   <dd>Change the operation of the editor from update to delete field.
   The listed fields are deleted from each image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verify">
   <dt><b>verify = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verify' Line='verify = yes' -->
   <dd>Interactively verify all operations which modify the image database.
@@ -74,7 +74,7 @@ hedit: Header editor
   the parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_show">
   <dt><b>show = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='show' Line='show = yes' -->
   <dd>Print a record of each operation which modifies the database upon the standard
@@ -82,7 +82,7 @@ hedit: Header editor
   undo an edit operation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
   <dd>Enable updating of the image database.  If updating is disabled the edit
@@ -90,9 +90,9 @@ hedit: Header editor
   on disk.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   1. Basic Usage
   </p>
@@ -103,18 +103,18 @@ hedit: Header editor
   fields are writable.  For example, to change the value of the standard field
   <span style="font-family: monospace;">"title"</span> of the image <span style="font-family: monospace;">"m74"</span> to <span style="font-family: monospace;">"sky flat"</span> we would enter the following command.
   </p>
-  <p>
-  	cl&gt; hedit m74 title <span style="font-family: monospace;">"sky flat"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit m74 title "sky flat"
+  </pre></div>
   <p>
   If <i>verify</i> mode is selected the editor will print the old value of the
   field and query with the new value, allowing some other value to be entered
   instead, e.g.:
   </p>
-  <pre>
-  	cl&gt; hedit m74 title "sky flat"
-  	m74,i_title ("old title" -&gt; "sky flat"):
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit m74 title "sky flat"
+  m74,i_title ("old title" -&gt; "sky flat"):
+  </pre></div>
   <p>
   To accept the new value shown to the right of the arrow, type carriage
   return or <span style="font-family: monospace;">"yes"</span> or <span style="font-family: monospace;">"y"</span> followed by carriage return.  To continue without
@@ -132,31 +132,31 @@ hedit: Header editor
   To conveniently print the value of the field <span style="font-family: monospace;">"title"</span> without modifying the
   image header, we repeat the command with the special value <span style="font-family: monospace;">"."</span>.
   </p>
-  <p>
-  	cl&gt; hedit m74 title .
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit m74 title .
+  </pre></div>
   <p>
   To print (or edit) the values of all header fields a field template may be
   given.
   </p>
-  <p>
-  	cl&gt; hedit m74 * .
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit m74 * .
+  </pre></div>
   <p>
   To print (or edit) the values of only a few fields the field template may
   be given as a list.
   </p>
-  <p>
-  	cl&gt; hedit m74 w0,wpc .
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit m74 w0,wpc .
+  </pre></div>
   <p>
   To print the value of one or more fields in a set of images, an image template
   may be given.  Both image templates and field templates may be given if
   desired.
   </p>
-  <p>
-  	cl&gt; hedit n1.* exp .
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit n1.* exp .
+  </pre></div>
   <p>
   Abbreviations are not permitted for field names, i.e., the given template
   must match the full field name.  Currently, field name matches are case
@@ -179,12 +179,12 @@ hedit: Header editor
   <p>
   The major editing functions of the <i>hedit</i> task are the following:
   </p>
-  <pre>
-  	update		modify the value of a field or fields
-  	addonly		add a new field
-  	add		add a new field or modify an old one
-  	delete		delete a set of fields
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  update          modify the value of a field or fields
+  addonly         add a new field
+  add             add a new field or modify an old one
+  delete          delete a set of fields
+  </pre></div>
   <p>
   In addition, <i>hedit</i> may be used merely to inspect the values of the header
   fields, without modification of the image database.
@@ -198,19 +198,19 @@ hedit: Header editor
   currently defined are shown below.  There is no guarantee that the names and/or
   usage of these fields will not change in the future.
   </p>
-  <pre>
-  	i_ctime		int		create time
-  	i_history	string		history comments
-  	i_limtime	int		time when min,max last updated
-  	i_maxpixval	real		maximum pixel value
-  	i_minpixval	real		minimum pixel value
-  	i_mtime		int		time of last modify
-  	i_naxis		int		number of axes (dimensionality)
-  	i_naxis[1-7]	int		length of each axis
-  	i_pixfile	string		pathname of pixel storage file
-  	i_pixtype	int		pixel datatype code
-  	i_title		string		title string
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  i_ctime         int             create time
+  i_history       string          history comments
+  i_limtime       int             time when min,max last updated
+  i_maxpixval     real            maximum pixel value
+  i_minpixval     real            minimum pixel value
+  i_mtime         int             time of last modify
+  i_naxis         int             number of axes (dimensionality)
+  i_naxis[1-7]    int             length of each axis
+  i_pixfile       string          pathname of pixel storage file
+  i_pixtype       int             pixel datatype code
+  i_title         string          title string
+  </pre></div>
   <p>
   The standard header field names have an <span style="font-family: monospace;">"i_"</span> prefix to reduce the possibility
   of a name collision with a user field name, and to distinguish the two classes
@@ -246,16 +246,16 @@ hedit: Header editor
   <p>
   For example, the command
   </p>
-  <p>
-  	cl&gt; hedit m74 title <span style="font-family: monospace;">"title // ';ss'"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit m74 title "title // ';ss'"
+  </pre></div>
   <p>
   would change the title to the literal string constant <span style="font-family: monospace;">"title // ';ss'"</span>,
   whereas the command
   </p>
-  <p>
-  	cl&gt; hedit m74 title <span style="font-family: monospace;">"(title // ';ss')"</span>
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit m74 title "(title // ';ss')"
+  </pre></div>
   <p>
   would concatenate the string <span style="font-family: monospace;">";ss"</span> to the old title string.  We require
   parenthesis for expression evaluation to avoid the need to doubly quote
@@ -264,9 +264,9 @@ hedit: Header editor
   be parenthesized, the first example in the basic usage section would have
   to be entered as shown below.
   </p>
-  <p>
-  	cl&gt; hedit m74 title '<span style="font-family: monospace;">"sky flat"</span>'	# invalid command
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit m74 title '"sky flat"'        # invalid command
+  </pre></div>
   <p>
   Expression evaluation for <i>hedit</i>, <i>hselect</i>, and similar tasks
   is carried out internally by the FMTIO library routine <b>evexpr</b>.
@@ -282,17 +282,17 @@ hedit: Header editor
   exception of the operators <span style="font-family: monospace;">"?"</span>, <span style="font-family: monospace;">"?="</span>, and <span style="font-family: monospace;">"@"</span>, the operator set is equivalent
   to that available in the CL and SPP languages.
   </p>
-  <pre>
-  	+  -  *  /		arithmetic operators
-  	**			exponentiation
-  	//			string concatenation
-  	!  -			boolean not, unary negation
-  	&lt;  &lt;= &gt;  &gt;=		order comparison (works for strings)
-  	== != &amp;&amp; ||		equals, not equals, and, or
-  	?=			string equals pattern
-  	? :			conditional expression
-  	@			reference a variable
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  +  -  *  /              arithmetic operators
+  **                      exponentiation
+  //                      string concatenation
+  !  -                    boolean not, unary negation
+  &lt;  &lt;= &gt;  &gt;=             order comparison (works for strings)
+  == != &amp;&amp; ||             equals, not equals, and, or
+  ?=                      string equals pattern
+  ? :                     conditional expression
+  @                       reference a variable
+  </pre></div>
   <p>
   The operators <span style="font-family: monospace;">"=="</span>, <span style="font-family: monospace;">"&amp;&amp;"</span>, and <span style="font-family: monospace;">"||"</span> may be abbreviated as <span style="font-family: monospace;">"="</span>, <span style="font-family: monospace;">"&amp;"</span>, and <span style="font-family: monospace;">"|"</span>
   if desired.  The ?= operator performs pattern matching upon strings.
@@ -365,11 +365,11 @@ hedit: Header editor
       A number of standard intrinsic functions are recognized within expressions.
   The set of functions currently supported is shown below.
   </p>
-  <pre>
-  	abs	acos	asin	atan	atan2	bool	cos
-  	exp	int	log	log10	max	min	mod
-  	nint	real	sin	sqrt	str	tan	
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  abs     acos    asin    atan    atan2   bool    cos
+  exp     int     log     log10   max     min     mod
+  nint    real    sin     sqrt    str     tan
+  </pre></div>
   <p>
   The trigonometric functions operate in units of degrees rather than radians.
   The <i>min</i> and <i>max</i> functions may have any number of arguments up
@@ -379,11 +379,11 @@ hedit: Header editor
   <p>
   A function call may take either of the following forms:
   </p>
-  <pre>
-  	&lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
+  <div class="highlight-default-notranslate"><pre>
+          &lt;identifier&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
   or
-  	&lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
-  </pre>
+          &lt;string_expr&gt; <span style="font-family: monospace;">'('</span> arglist <span style="font-family: monospace;">')'</span>
+  </pre></div>
   <p>
   The first form is the conventional form found in all programming languages.
   The second permits the generation of function names by string valued
@@ -397,45 +397,44 @@ hedit: Header editor
   fields), function calls, or references to any of the special variables.
   The following special variables are recognized within expressions:
   </p>
-  <pre>
-  	.		A string constant, used to flag printing
-  	$		The value of the "current field"
-  	$F		The name of the "current field"
-  	$I		The name of the "current image"
-  	$T		The current clock time (an integer value)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  $               The value of the "current field"
+  $F              The name of the "current field"
+  $I              The name of the "current image"
+  $T              The current clock time (an integer value)
+  </pre></div>
   <p>
   These builtin variables are especially useful for constructing context
   dependent expressions.  For example, the value of a field may be incremented
   by 100 by assigning it the value <span style="font-family: monospace;">"$ + 100"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Globally edit the database <span style="font-family: monospace;">"n1"</span>, setting the value of the string parameter
   <span style="font-family: monospace;">"obs"</span> to <span style="font-family: monospace;">"sky"</span> if <span style="font-family: monospace;">"s-flag"</span> is 1, to <span style="font-family: monospace;">"obj"</span> otherwise.
   </p>
-  <p>
-      cl&gt; hedit n1.* obs '(@<span style="font-family: monospace;">"s-flag"</span> == 1 ? <span style="font-family: monospace;">"sky"</span> : <span style="font-family: monospace;">"obj"</span>)'
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit n1.* obs '(@"s-flag" == 1 ? "sky" : "obj")'
+  </pre></div>
   <p>
   2. Globally edit the same database, replacing the value of the parameter
   <span style="font-family: monospace;">"variance"</span> by the square root of the original value.
   </p>
-  <p>
-      cl&gt; hedit n1.* var '(sqrt(var))'
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit n1.* var '(sqrt(var))'
+  </pre></div>
   <p>
   3. Replace the values of the fields A and B by the absolute value of the
   original value:
   </p>
-  <p>
-      cl&gt; hedit n1.* a,b '(abs($))'
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit n1.* a,b '(abs($))'
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The internal storage format is currently FITS card image, hence field names
   are limited to 8 characters with no case sensitivity.  String values are
@@ -448,14 +447,14 @@ hedit: Header editor
   A task is needed which would take the audit trail produced by the <i>show</i>
   option and use it to undo an edit.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   hselect, imgets, imheader
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

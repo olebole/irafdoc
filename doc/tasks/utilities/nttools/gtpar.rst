@@ -7,14 +7,14 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   pltpar
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Parameters in the 'gtpar' pset specify the attributes of plots drawn with the
   'gtedit' task.
@@ -30,9 +30,9 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   to change values in the pset,
   position the cursor to the 'gtpar' pset name and type <span style="font-family: monospace;">":e"</span> to invoke 'eparam'.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
   <dl>
   <dt><b>(wx1 = 0) [real]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='' Line='(wx1 = 0) [real]' -->
@@ -188,15 +188,15 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   <dd>Fill the viewport rather than enforcing unity aspect ratio?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   sgraph
   </p>
@@ -205,7 +205,7 @@ gtpar: Pset to specify graph parameters for 'gtedit' task.
   package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

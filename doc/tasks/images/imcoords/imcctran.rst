@@ -7,15 +7,15 @@ imcctran: Transform image header from one celestial wcs to another
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imcctran image outsystem
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_image">
   <dt><b>image</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='image' Line='image' -->
   <dd>The list of images whose celestial coordinate systems are to be converted. The
@@ -24,7 +24,7 @@ imcctran: Transform image header from one celestial wcs to another
   galactic, or supergalactic.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outsystem">
   <dt><b>outsystem</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outsystem' Line='outsystem' -->
   <dd>The input and output celestial coordinate systems. The options are
@@ -174,7 +174,7 @@ imcctran: Transform image header from one celestial wcs to another
   equatorial fk4, noefk4, fk5, or icrs systems and proper motions are defined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nx">
   <dt><b>nx = 10, ny = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nx' Line='nx = 10, ny = 10' -->
   <dd>The dimensions of the coordinate grid used to compute the rotation angle and,
@@ -182,7 +182,7 @@ imcctran: Transform image header from one celestial wcs to another
   image celestial coordinate system to the output celestial coordinate system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_longpole">
   <dt><b>longpole = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='longpole' Line='longpole = no' -->
   <dd>If longpole = yes the zenithal projections ARC, SIN, STG, TAN, and ZEA
@@ -190,21 +190,21 @@ imcctran: Transform image header from one celestial wcs to another
   of rotating the CD matrix in the usual manner.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print messages about actions taken by the task on the standard output ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
   <dd>Update the image celestial coordinate system ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IMCCTRAN converts the celestial coordinate system stored in the headers of the
   input images <i>image</i> to the celestial coordinate system specified by
@@ -315,7 +315,7 @@ imcctran: Transform image header from one celestial wcs to another
   required to transform the original CD matrix to the correct new CD matrix.
   The process is shown schematically below.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1.       x,y(input grid) -&gt; ra,dec(input grid)
   
   2.    ra,dec(input grid) -&gt; ra,dec(output grid)
@@ -327,7 +327,7 @@ imcctran: Transform image header from one celestial wcs to another
   5.      x,y(input  grid) -&gt; F -&gt; x,y(predicted grid)
   
   6.      cd matrix(input) -&gt; F -&gt; cd matrix(output)
-  </pre>
+  </pre></div>
   <p>
   F is the fitted function of the x and y axis rotation angles and the
   x and y scaling factors required to match the input x and y values to the
@@ -380,9 +380,9 @@ imcctran: Transform image header from one celestial wcs to another
   THE CURRENT DRAFT PROPOSAL AS MUCH AS POSSIBLE, WHERE NO ADOPTED STANDARDS
   CURRENTLY EXIST, THE FINAL FITS STANDARD MAY DIFFER FROM THE ONE ADOPTED HERE.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   Additional information on the IRAF world coordinate systems can be found in
   the help pages for the WCSEDIT and WCRESET tasks.
@@ -411,15 +411,15 @@ imcctran: Transform image header from one celestial wcs to another
   paper <span style="font-family: monospace;">"SLALIB - A Library of Subprograms"</span>, Starlink User Note 67.7
   by P.T. Wallace, available from the Starlink archives.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   [1]. Precess the equatorial FK5 J2000 celestial coordinate system of the
   input 512 by 512 pixel square input image to J1975.0.
   </p>
-  <pre>
-  cl&gt; imcctran image j1975.0 
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; imcctran image j1975.0
   
   INPUT IMAGE: image
   Insystem: image logical  Projection: TAN  Ra/Dec axes: 1/2
@@ -430,51 +430,47 @@ imcctran: Transform image header from one celestial wcs to another
   Crval1,2: 201:56:43.5, 47:27:16.0 -&gt; 201:40:53.8, 47:35:01.2 dd:mm:ss.s
       Scaling: Xmag: 1.000000 Ymag: 1.000000 Xrot: 359.923 Yrot: 359.923 degrees
       Rms: X fit: 8.465123E-11 pixels  Y fit: 5.204446E-11 pixels
-  </pre>
+  </pre></div>
   <p>
   Before the transformation the image coordinate system looked like the following.
   </p>
-  <pre>
-      ...
-      EPOCH   =                 2000
-      DATE-OBS= '05/04/87'          
-      CRPIX1  =               257.75
-      CRPIX2  =               258.93
-      CRVAL1  =      201.94541667302
-      CRVAL2  =             47.45444
-      CDELT1  =        -2.1277777E-4
-      CDELT2  =         2.1277777E-4
-      CTYPE1  = 'RA---TAN'
-      CTYPE2  = 'DEC--TAN'
-      ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  EPOCH   =                 2000
+  DATE-OBS= '05/04/87'
+  CRPIX1  =               257.75
+  CRPIX2  =               258.93
+  CRVAL1  =      201.94541667302
+  CRVAL2  =             47.45444
+  CDELT1  =        -2.1277777E-4
+  CDELT2  =         2.1277777E-4
+  CTYPE1  = 'RA---TAN'
+  CTYPE2  = 'DEC--TAN'
+  </pre></div>
   <p>
   After the transformation the header looks like the following.
   </p>
-  <pre>
-      ...
-      DATE-OBS= '05/04/87'          
-      CRPIX1  =               257.75
-      CRPIX2  =               258.93
-      CRVAL1  =     201.681616387759
-      CRVAL2  =      47.583668865029
-      CTYPE1  = 'RA---TAN'
-      CTYPE2  = 'DEC--TAN'
-      RADECSYS= 'FK5     '
-      EQUINOX =                1975.
-      MJD-WCS =             42413.25
-      WCSDIM  =                    2
-      CD1_1   =  -2.1277757990523E-4
-      CD1_2   =  2.84421945372844E-7
-      CD2_1   =  2.84421945363011E-7
-      CD2_2   =  2.12777579905235E-4
-      LTM1_1  =                   1.
-      LTM2_2  =                   1.
-      WAT0_001= 'system=image'
-      WAT1_001= 'wtype=tan axtype=ra'
-      WAT2_001= 'wtype=tan axtype=dec'
-      ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  DATE-OBS= '05/04/87'
+  CRPIX1  =               257.75
+  CRPIX2  =               258.93
+  CRVAL1  =     201.681616387759
+  CRVAL2  =      47.583668865029
+  CTYPE1  = 'RA---TAN'
+  CTYPE2  = 'DEC--TAN'
+  RADECSYS= 'FK5     '
+  EQUINOX =                1975.
+  MJD-WCS =             42413.25
+  WCSDIM  =                    2
+  CD1_1   =  -2.1277757990523E-4
+  CD1_2   =  2.84421945372844E-7
+  CD2_1   =  2.84421945363011E-7
+  CD2_2   =  2.12777579905235E-4
+  LTM1_1  =                   1.
+  LTM2_2  =                   1.
+  WAT0_001= 'system=image'
+  WAT1_001= 'wtype=tan axtype=ra'
+  WAT2_001= 'wtype=tan axtype=dec'
+  </pre></div>
   <p>
   Note the rms of the x and y fits is on the order 10.0e-10 to 10.0e-11 which
   is the expected numerical precision of the transformation.
@@ -482,7 +478,7 @@ imcctran: Transform image header from one celestial wcs to another
   <p>
   [2]. Convert the input image used in example 1 to the BFK4 1950.0 system. 
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; imcctran image B1950.0
   
   INPUT IMAGE: image
@@ -494,8 +490,7 @@ imcctran: Transform image header from one celestial wcs to another
   Crval1,2: 201:56:43.5, 47:27:16.0 -&gt; 201:25:02.3, 47:42:47.1 dd:mm:ss.s
       Scaling: Xmag: 0.999999 Ymag: 0.999999 Xrot: 359.848 Yrot: 359.848 degrees
       Rms: X fit: 1.302837E-7 pixels  Y fit: 8.545616E-8 pixels
-  
-  </pre>
+  </pre></div>
   <p>
   Note that precision of the transformation is still good but is significantly
   less that the precision of the previous example. This is due to the fact
@@ -505,35 +500,33 @@ imcctran: Transform image header from one celestial wcs to another
   <p>
   The transformed image header in this case looks like the following.
   </p>
-  <pre>
-      ...
-      DATE-OBS= '05/04/87'          
-      CRPIX1  =               257.75
-      CRPIX2  =               258.93
-      CRVAL1  =     201.417300629944
-      CRVAL2  =     47.7130749603847
-      CTYPE1  = 'RA---TAN'
-      CTYPE2  = 'DEC--TAN'
-      RADECSYS= 'FK4     '
-      EQUINOX =                1950.
-      MJD-WCS =       33281.92345905
-      WCSDIM  =                    2
-      CD1_1   =  -2.1277680505752E-4
-      CD1_2   =  5.66226465943254E-7
-      CD2_1   =  5.66226470798410E-7
-      CD2_2   =  2.12776805056766E-4
-      LTM1_1  =                   1.
-      LTM2_2  =                   1.
-      WAT0_001= 'system=image'
-      WAT1_001= 'wtype=tan axtype=ra'
-      WAT2_001= 'wtype=tan axtype=dec'
-      ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  DATE-OBS= '05/04/87'
+  CRPIX1  =               257.75
+  CRPIX2  =               258.93
+  CRVAL1  =     201.417300629944
+  CRVAL2  =     47.7130749603847
+  CTYPE1  = 'RA---TAN'
+  CTYPE2  = 'DEC--TAN'
+  RADECSYS= 'FK4     '
+  EQUINOX =                1950.
+  MJD-WCS =       33281.92345905
+  WCSDIM  =                    2
+  CD1_1   =  -2.1277680505752E-4
+  CD1_2   =  5.66226465943254E-7
+  CD2_1   =  5.66226470798410E-7
+  CD2_2   =  2.12776805056766E-4
+  LTM1_1  =                   1.
+  LTM2_2  =                   1.
+  WAT0_001= 'system=image'
+  WAT1_001= 'wtype=tan axtype=ra'
+  WAT2_001= 'wtype=tan axtype=dec'
+  </pre></div>
   <p>
   [3].  Transform the celestial coordinate system of the input image used in
   examples 1 and 2 to the galactic coordinate system.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; imcctran image galactic
   
   INPUT IMAGE: image
@@ -545,32 +538,30 @@ imcctran: Transform image header from one celestial wcs to another
   rval1,2: 201:56:43.5, 47:27:16.0 -&gt; 106:01:19.4, 68:27:46.1 dd:mm:ss.s
       Scaling: Xmag: 1.000000 Ymag: 1.000000 Xrot: 202.510 Yrot: 202.510 degrees
       Rms: X fit: 9.087450E-11 pixels  Y fit: 3.815443E-11 pixels
-  </pre>
+  </pre></div>
   <p>
   The transformed header looks like the following.
   </p>
-  <pre>
-      ...
-      DATE-OBS= '05/04/87'          
-      CRPIX1  =               257.75
-      CRPIX2  =               258.93
-      CRVAL1  =     106.022047915293
-      CRVAL2  =     68.4627934475432
-      CTYPE1  = 'GLON-TAN'
-      CTYPE2  = 'GLAT-TAN'
-      MJD-WCS =       33281.92345905
-      WCSDIM  =                    2
-      CD1_1   =  1.96567112095654E-4
-      CD1_2   =  8.14601120181094E-5
-      CD2_1   =  8.14601120174619E-5
-      CD2_2   =  -1.9656711209802E-4
-      LTM1_1  =                   1.
-      LTM2_2  =                   1.
-      WAT0_001= 'system=image'
-      WAT1_001= 'wtype=tan axtype=glon'
-      WAT2_001= 'wtype=tan axtype=glat'
-      ...
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  DATE-OBS= '05/04/87'
+  CRPIX1  =               257.75
+  CRPIX2  =               258.93
+  CRVAL1  =     106.022047915293
+  CRVAL2  =     68.4627934475432
+  CTYPE1  = 'GLON-TAN'
+  CTYPE2  = 'GLAT-TAN'
+  MJD-WCS =       33281.92345905
+  WCSDIM  =                    2
+  CD1_1   =  1.96567112095654E-4
+  CD1_2   =  8.14601120181094E-5
+  CD2_1   =  8.14601120174619E-5
+  CD2_2   =  -1.9656711209802E-4
+  LTM1_1  =                   1.
+  LTM2_2  =                   1.
+  WAT0_001= 'system=image'
+  WAT1_001= 'wtype=tan axtype=glon'
+  WAT2_001= 'wtype=tan axtype=glat'
+  </pre></div>
   <p>
   Users should not that although imcctran can write a legal galactic coordinate
   system to the image header, it and other iraf tasks cannot currently
@@ -579,7 +570,7 @@ imcctran: Transform image header from one celestial wcs to another
   <p>
   [4]. Repeat the previous example but don't update the image header.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; imcctran image galactic update-
   
   INPUT IMAGE: image
@@ -590,28 +581,28 @@ imcctran: Transform image header from one celestial wcs to another
       MJD: 33281.92346 Epoch: J1949.99979044 B1950.00000000
   
   Current wcs
-      Axis            1           2  
-      Crval    201.9454     47.4544  
-      Crpix      257.75      258.93  
-      Cd 1    -2.128E-4          0.  
-      Cd 2           0.    2.128E-4  
+      Axis            1           2
+      Crval    201.9454     47.4544
+      Crpix      257.75      258.93
+      Cd 1    -2.128E-4          0.
+      Cd 2           0.    2.128E-4
   
   New wcs
-      Axis            1           2  
-      Crval    106.0220     68.4628  
-      Crpix      257.75      258.93  
-      Cd 1     1.966E-4    8.146E-5  
-      Cd 2     8.146E-5   -1.966E-4  
+      Axis            1           2
+      Crval    106.0220     68.4628
+      Crpix      257.75      258.93
+      Cd 1     1.966E-4    8.146E-5
+      Cd 2     8.146E-5   -1.966E-4
   
   Crval1,2: 201:56:43.5, 47:27:16.0 -&gt; 106:01:19.4, 68:27:46.1 dd:mm:ss.s
       Scaling: Xmag: 1.000000 Ymag: 1.000000 Xrot: 202.510 Yrot: 202.510 degrees
       Rms: X fit: 9.087450E-11 pixels  Y fit: 3.815443E-11 pixels
-  </pre>
+  </pre></div>
   <p>
   [5]. Repeat example 1 and check the accuracy of the results by using the
   skyctran task on the original image and on the transformed image.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; type coords
     1.0   1.0
   512.0   1.0
@@ -650,13 +641,13 @@ imcctran: Transform image header from one celestial wcs to another
   512.0   1.0  13:26:24.3330 47:31:43.793
   512.0 512.0  13:26:24.3448 47:38:15.219
     1.0 512.0  13:27:03.0718 47:38:14.693
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   At present IRAF requires that the LONGPOLE and or LATPOLE keywords be
   defined in the appropriate WAT_* keywords, e.g. WAT1_* and WAT2_* for
@@ -668,14 +659,14 @@ imcctran: Transform image header from one celestial wcs to another
   with precision. Users should use the SKYCTRAN task to transform individual
   coordinate pairs.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   setjd,precess,galactic,xray.xspatial.skypix,stsdas.toolbox.tools.tprecess
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

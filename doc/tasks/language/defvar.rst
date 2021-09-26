@@ -7,46 +7,46 @@ defvar: Test if an environment variable is defined
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   defpac  (pacname)
   deftask (taskname)
   defpar  (param)
   defvar  (variable)
-  </pre>
-  <!-- EndSection:   'USAGE' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_pacname">
   <dt><b>pacname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pacname' Line='pacname' -->
   <dd>An IRAF package name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_taskname">
   <dt><b>taskname</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='taskname' Line='taskname' -->
   <dd>An IRAF taskname.  It may be specified as <span style="font-family: monospace;">"taskname"</span> or as
   <span style="font-family: monospace;">"packagename.taskname"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_param">
   <dt><b>param</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='param' Line='param' -->
   <dd>An IRAF parameter name.  It may be specified as <span style="font-family: monospace;">"paramname"</span>,
   <span style="font-family: monospace;">"taskname.paramname"</span> or <span style="font-family: monospace;">"packagename.taskname.paramname"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_variable">
   <dt><b>variable</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='variable' Line='variable' -->
   <dd>An environment variable name.  It may be specified as <span style="font-family: monospace;">"varname"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   These routines return a boolean value indicating whether the
   relevant parameter, task or package has been defined.
@@ -60,49 +60,49 @@ defvar: Test if an environment variable is defined
   be either in the host environment, or in the CL environment as a result
   of a <i>set</i> or <i>reset</i> statement.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Test if a task exists.
   </p>
-  <pre>
-  	cl&gt; if (deftask ("system.page"))
-  	&gt;&gt;&gt;	print ("task page exists")
-  	&gt;&gt;&gt; else
-  	&gt;&gt;&gt;	print ("task page not found")
-  	task page exists
-  	cl&gt;
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; if (deftask ("system.page"))
+  &gt;&gt;&gt;     print ("task page exists")
+  &gt;&gt;&gt; else
+  &gt;&gt;&gt;     print ("task page not found")
+  task page exists
+  cl&gt;
+  </pre></div>
   <p>
   2. Add the value of the named parameter into a sum, but only if the parameter
   exists (the example is for a script).
   </p>
-  <pre>
-  	sum = 0
-  	for (i=0;  i &lt;= 10;  i+=1) {
-  	    parname = "data" // i
-  	    if (defpar (parname)
-  		sum += parname
-  	}
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  sum = 0
+  for (i=0;  i &lt;= 10;  i+=1) {
+      parname = "data" // i
+      if (defpar (parname)
+          sum += parname
+  }
+  </pre></div>
   <p>
   3. Checked whether the 'IRAFARCH' environment variable is defined.
   </p>
-  <pre>
-  	cl&gt; if (defvar("IRAFARCH")) {
-  	&gt;&gt;&gt;    print ("IRAFARCH is " // envget("IRAFARCH")
-  	&gt;&gt;&gt; }
-  	&gt;&gt;&gt; ;
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; if (defvar("IRAFARCH")) {
+  &gt;&gt;&gt;    print ("IRAFARCH is " // envget("IRAFARCH")
+  &gt;&gt;&gt; }
+  &gt;&gt;&gt; ;
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   package, task, redefine, lparam
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

@@ -7,26 +7,26 @@ declarations: Parameter/variable declarations
 
 .. raw:: html
 
+  <section id="s_syntax">
   <h3>Syntax</h3>
-  <!-- BeginSection: 'SYNTAX' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   vartype [*]varname[index_list] [= init_value] [{options}] [, ...]
   
     or
   
   vartype [*]varname[index_list] [{init_value [, options]}] [, ...]
-  </pre>
-  <!-- EndSection:   'SYNTAX' -->
+  </pre></div>
+  </section>
+  <section id="s_elements">
   <h3>Elements</h3>
-  <!-- BeginSection: 'ELEMENTS' -->
-  <dl>
+  <dl id="l_vartype">
   <dt><b>vartype</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='vartype' Line='vartype' -->
   <dd>One of the legal variable types, i.e.:
   	int, bool, char, real, gcur, imcur, struct, file
   </dd>
   </dl>
-  <dl>
+  <dl id="l_varname">
   <dt><b>varname</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='varname' Line='varname' -->
   <dd>The name of the variable or parameter.  The name must begin with
@@ -36,7 +36,7 @@ declarations: Parameter/variable declarations
   each time the parameter is read.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_index_list">
   <dt><b>index_list</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='index_list' Line='index_list' -->
   <dd>The index_list consists of a series of ranges enclosed in square brackets.
@@ -48,7 +48,7 @@ declarations: Parameter/variable declarations
   number of elements in the initialization list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_init_value">
   <dt><b>init_value</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='init_value' Line='init_value' -->
   <dd>The initialization value is a single value for scalar parameters but
@@ -58,7 +58,7 @@ declarations: Parameter/variable declarations
   The values in the initialization list are separated by commas.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_options">
   <dt><b>options</b></dt>
   <!-- Sec='ELEMENTS' Level=0 Label='options' Line='options' -->
   <dd><br>
@@ -110,12 +110,12 @@ declarations: Parameter/variable declarations
   <dt><b></b></dt>
   <!-- Sec='ELEMENTS' Level=2 Label='' Line=' ' -->
   <dd><pre>
-  r	file exists and is readable
-  w	file exists and is writable
-  n	file does not exist
-  b	file is a binary file
-  t	file is a text file
-  </pre>
+  r       file exists and is readable
+  w       file exists and is writable
+  n       file does not exist
+  b       file is a binary file
+  t       file is a text file
+  </pre></div>
   </dd>
   </dl>
   </dd>
@@ -132,9 +132,9 @@ declarations: Parameter/variable declarations
   quotes.
   </dd>
   </dl>
-  <!-- EndSection:   'ELEMENTS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Declaration statements are used for inline declaration of parameters and
   local variables.   A declaration after the begin statement of a procedure
@@ -148,48 +148,48 @@ declarations: Parameter/variable declarations
   declarations, but this depends upon certain hidden aspects of
   declarations which are not obvious to the user.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
-  real	x
-  int	ii=32
-  int	y {min=0, max=14}
-  char	z="abc" {enum="abc|def|ghi", mode="q"}
+  <div class="highlight-default-notranslate"><pre>
+  real    x
+  int     ii=32
+  int     y {min=0, max=14}
+  char    z="abc" {enum="abc|def|ghi", mode="q"}
   
-  bool	isotest {YES, mode="ql",
-  	    prompt="Do you want to test for isotropy?"}
+  bool    isotest {YES, mode="ql",
+              prompt="Do you want to test for isotropy?"}
   
-  int	ii=1 {min=0,max=10, prompt="Number of images", mode="h"}
-  file	infile="testfile" {filetype="r"}
-  struct	line {length=80, mode="h"}
+  int     ii=1 {min=0,max=10, prompt="Number of images", mode="h"}
+  file    infile="testfile" {filetype="r"}
+  struct  line {length=80, mode="h"}
   
-  real	array[10]
-  int	iarray[15]=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 {min=0, max=100}
-  int	jarray[15] { 5(0), 5(2), 5(4), min=0, max=400}
-  char	carray[5]= 5("Junk")
-  bool	flags[4,-3:3] = 28(NO) {mode="h", prompt="Value set"}
-  file	inp_files[3]= "fil1.inp", "fil2.inp", "fil3.inp"
+  real    array[10]
+  int     iarray[15]=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 {min=0, max=100}
+  int     jarray[15] { 5(0), 5(2), 5(4), min=0, max=400}
+  char    carray[5]= 5("Junk")
+  bool    flags[4,-3:3] = 28(NO) {mode="h", prompt="Value set"}
+  file    inp_files[3]= "fil1.inp", "fil2.inp", "fil3.inp"
   
-  int	karray[3]=1	# (note second and third elements are undefined)
-  struct	*list="inputfile.list" {mode="q"}
-  int	*ilist="infile.inp" {mode="h", min=0, max=100}
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  int     karray[3]=1     # (note second and third elements are undefined)
+  struct  *list="inputfile.list" {mode="q"}
+  int     *ilist="infile.inp" {mode="h", min=0, max=100}
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   Options are only permitted for parameters, not local variables.
   The filetype options are recognized but are not implemented internally.
-  </pre>
-  <!-- EndSection:   'BUGS' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   parameters, procedure
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SYNTAX' 'ELEMENTS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

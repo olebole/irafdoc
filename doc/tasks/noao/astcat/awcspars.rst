@@ -7,15 +7,15 @@ awcspars: Default image wcs parameters
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   awcspars 
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_wxref">
   <dt><b>wxref = <span style="font-family: monospace;">"INDEF"</span>, wyref = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxref' Line='wxref = "INDEF", wyref = "INDEF"' -->
   <dd>The image header keyword names or the numerical values of the x and y reference
@@ -23,7 +23,7 @@ awcspars: Default image wcs parameters
   point defaults to the center of the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wxmag">
   <dt><b>wxmag = <span style="font-family: monospace;">"INDEF"</span>, wymag = <span style="font-family: monospace;">"INDEF"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxmag' Line='wxmag = "INDEF", wymag = "INDEF"' -->
   <dd>The image header keyword names or the numerical values of the x and y scale
@@ -31,7 +31,7 @@ awcspars: Default image wcs parameters
   wcs cannot be created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wxrot">
   <dt><b>wxrot = <span style="font-family: monospace;">"180.0"</span>, wyrot = <span style="font-family: monospace;">"0.0"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wxrot' Line='wxrot = "180.0", wyrot = "0.0"' -->
   <dd>The image header keyword names or the numerical values of the x and y rotation
@@ -42,7 +42,7 @@ awcspars: Default image wcs parameters
   north=up, left, down, and right respectively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wraref">
   <dt><b>wraref = <span style="font-family: monospace;">"RA"</span>, wdecref = <span style="font-family: monospace;">"DEC"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wraref' Line='wraref = "RA", wdecref = "DEC"' -->
   <dd>The image header keyword names or the numerical values of the reference
@@ -50,7 +50,7 @@ awcspars: Default image wcs parameters
   a new wcs cannot be created.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wraunits">
   <dt><b>wraunits = <span style="font-family: monospace;">""</span>, wdecunits = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wraunits' Line='wraunits = "", wdecunits = ""' -->
   <dd>The units of the reference point celestial coordinates. The options are
@@ -59,7 +59,7 @@ awcspars: Default image wcs parameters
   they default to the preferred units of the reference system.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wproj">
   <dt><b>wproj = <span style="font-family: monospace;">"tan"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wproj' Line='wproj = "tan"' -->
   <dd>The sky projection geometry. The most commonly used projections are <span style="font-family: monospace;">"tan"</span>,
@@ -67,7 +67,7 @@ awcspars: Default image wcs parameters
   <span style="font-family: monospace;">"gls"</span>, <span style="font-family: monospace;">"mer"</span>, <span style="font-family: monospace;">"mol"</span>, <span style="font-family: monospace;">"par"</span>, <span style="font-family: monospace;">"pco"</span>, <span style="font-family: monospace;">"qsc"</span>, <span style="font-family: monospace;">"stg"</span>, <span style="font-family: monospace;">"tsc"</span>, and <span style="font-family: monospace;">"zea"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_wsystem">
   <dt><b>wsystem = <span style="font-family: monospace;">"EQUINOX"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='wsystem' Line='wsystem = "EQUINOX"' -->
   <dd>The image header keyword name or string defining the celestial coordinate
@@ -76,9 +76,9 @@ awcspars: Default image wcs parameters
   a full list of options.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The default wcs parameters are used to create an approximate  FITS wcs for
   an images which do not have one. Creating an approximate header
@@ -95,50 +95,50 @@ awcspars: Default image wcs parameters
   and <i>wraunits</i> and <i>wdecunits</i> must be set explicitly. The image
   projection function <i>wproj</i> must also be set separately.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List the default wcs parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; lpar awcspars
-  </pre>
+  </pre></div>
   <p>
   2. Edit the default wcs parameters.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; awcspars
-  </pre>
+  </pre></div>
   <p>
   3. Edit the default wcs parameters from the agetim task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; epar agetim
-  </pre>
+  </pre></div>
   <p>
   4. Save the current awcspars parameter values in a text file called
   awcs1.par.  Use the saved parameter set in the next call to the agetim
   task.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; epar awcspars
   cl&gt; agetim ... awcspars=awcs1.par ...
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   agetim, ahedit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

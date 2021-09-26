@@ -7,16 +7,16 @@ redefine: Redefine a task
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   task     t1 [t2 ...] = tfile
   redefine t1 [t2 ...] = tfile
-  </pre>
-  <!-- EndSection:   'USAGE' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_t1">
   <dt><b>t1, t2, ...</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t1' Line='t1, t2, ...' -->
   <dd>The names of the new logical tasks.  The task name should be prefixed by a $
@@ -26,7 +26,7 @@ redefine: Redefine a task
   a text standard input, and a binary standard output.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tfile">
   <dt><b>tfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tfile' Line='tfile' -->
   <dd>The name of the file to be executed or interpreted to run the task.
@@ -36,9 +36,9 @@ redefine: Redefine a task
   <i>foreign task</i> (see the discussion below).
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <i>task</i> statement defines a new task to the CL, and is required before
   the task can be run from the CL.  The new task is added to the <span style="font-family: monospace;">"current
@@ -94,12 +94,12 @@ redefine: Redefine a task
   sequences are passed on unchanged.  The argument substitution macros are
   summarized in the table below.
   </p>
-  <pre>
-  	$0		task name
-  	$N		argument N
-  	$*		all arguments
-  	$(...)		host system filename translation of "..."
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  $0              task name
+  $N              argument N
+  $*              all arguments
+  $(...)          host system filename translation of "..."
+  </pre></div>
   <p>
   When a task is invoked, an executable is run by starting an attached
   sub-process, while a script is run by starting a new level of the CL
@@ -115,27 +115,27 @@ redefine: Redefine a task
   task names must already be defined in the current package.  It is often
   useful after misspelling the task file name in a task command.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Call up the editor to create a new program (task) mytask.x.  Compile
   the new program.  Declare it using the task statement and then run it.
   </p>
-  <pre>
-  	cl&gt; edit mytask.x			# edit
-  	cl&gt; xc mytask.x				# compile &amp; link
-  	cl&gt; task $mytask = mytask.e		# define task
-  	cl&gt; mytask arg1 arg2			# run it
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; edit mytask.x                       # edit
+  cl&gt; xc mytask.x                         # compile &amp; link
+  cl&gt; task $mytask = mytask.e             # define task
+  cl&gt; mytask arg1 arg2                    # run it
+  </pre></div>
   <p>
   2. Define a script task with associated parameter file (if the script is
   a <i>procedure</i>, the parameter file is omitted since procedure scripts
   always have defined parameters).
   </p>
-  <p>
-  	cl&gt; task myscript = myscript.cl
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; task myscript = myscript.cl
+  </pre></div>
   <p>
   3. Define the four new tasks implot, graph, showcap, and gkiextract.
   All have parameter files except showcap.  The gkiextract task has a
@@ -144,33 +144,33 @@ redefine: Redefine a task
   delimiters in this example; this is a compute mode example as would
   be found in a package script task.
   </p>
-  <pre>
-  	task	implot,			# compute mode syntax
-  		graph,
-  		$showcap,
-  		gkiextract.tb	= "plot$x_plot.e"
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  task    implot,                 # compute mode syntax
+          graph,
+          $showcap,
+          gkiextract.tb   = "plot$x_plot.e"
+  </pre></div>
   <p>
   4. Make the listed UNIX programs available in the IRAF environment as
   foreign tasks.  None of the tasks has a parameter file.  The <span style="font-family: monospace;">"$foreign"</span>
   declares the tasks as foreign, and indicates that the IRAF task name
   is the same as the host system task name.
   </p>
-  <p>
-  	cl&gt; task $ls $od $rlogin = $foreign
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; task $ls $od $rlogin = $foreign
+  </pre></div>
   <p>
   5. Define a couple of foreign tasks for VMS, where the command to be sent
   to VMS is not the same as the IRAF task name.
   </p>
-  <pre>
-  	cl&gt; task $run	= $run/nodebug
-  	cl&gt; task $debug = $run/debug
-  	cl&gt; task $top	= "$show proc/topcpu"
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; task $run   = $run/nodebug
+  cl&gt; task $debug = $run/debug
+  cl&gt; task $top   = "$show proc/topcpu"
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   The distinction between command and compute mode syntax can be confusing.
   When defining tasks in your login.cl or in a package script task, use
@@ -183,14 +183,14 @@ redefine: Redefine a task
   <p>
   	ERROR: IRAF Main: command syntax error
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   prcache, flprcache, package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

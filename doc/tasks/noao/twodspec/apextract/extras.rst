@@ -7,8 +7,8 @@ extras: Information about the extra information in 3D images
 
 .. raw:: html
 
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   When one dimensional spectra are extracted by the tasks in the
   <b>apextract</b> package the user may specify that additional
@@ -22,11 +22,11 @@ extras: Information about the extra information in 3D images
   images with dispersion information given in the image header.  The
   image axes for such images are:
   </p>
-  <pre>
-      1 (columns) - dispersion axis
-      2 (lines)   - spectrum axis (each line is a separate spectrum)
-      3 (bands)   - extras axis (each band is associated data)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  1 (columns) - dispersion axis
+  2 (lines)   - spectrum axis (each line is a separate spectrum)
+  3 (bands)   - extras axis (each band is associated data)
+  </pre></div>
   <p>
   The lengths of the second and third axes, that is the number of
   lines and bands, may be one or more.  If there is only one band
@@ -42,12 +42,12 @@ extras: Information about the extra information in 3D images
   The associated data in the image bands depends on which extraction
   options are performed.  The various types of data are:
   </p>
-  <pre>
-      The primary spectrum flux values.
-      Simple aperture sum if variance weighting or cleaning was done.
-      Background spectrum if background subtraction was done.
-      Sigma spectrum if variance weighting or cleaning was done.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  The primary spectrum flux values.
+  Simple aperture sum if variance weighting or cleaning was done.
+  Background spectrum if background subtraction was done.
+  Sigma spectrum if variance weighting or cleaning was done.
+  </pre></div>
   <p>
   The primary spectrum is always the first band and will be the cleaned
   and/or variance weighted and/or background subtracted spectrum.  The
@@ -66,14 +66,14 @@ extras: Information about the extra information in 3D images
   <p>
   For more information get help under the topic <span style="font-family: monospace;">"apextract.package"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apextract.package
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'DESCRIPTION' 'SEE ALSO'  -->
   

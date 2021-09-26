@@ -7,15 +7,15 @@ agetcat: Extract astrometry files from astrometric catalogs
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   agetcat regions output
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_regions">
   <dt><b>regions</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='regions' Line='regions' -->
   <dd>The source  of the extraction region definitions. The options are:
@@ -46,7 +46,7 @@ agetcat: Extract astrometry files from astrometric catalogs
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output ' -->
   <dd>The list of output astrometry files. The number of output files must be equal
@@ -58,7 +58,7 @@ agetcat: Extract astrometry files from astrometric catalogs
   is only inserted if there is more than one catalog in the catalog list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_aregpars">
   <dt><b>aregpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='aregpars' Line='aregpars = ""' -->
   <dd>The region definition parameter set. The aregpars parameters define the
@@ -67,14 +67,14 @@ agetcat: Extract astrometry files from astrometric catalogs
   <i>regions</i> = <span style="font-family: monospace;">"pars"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catalogs">
   <dt><b>catalogs = <span style="font-family: monospace;">")_.catalogs"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catalogs' Line='catalogs = ")_.catalogs"' -->
   <dd>The list of input astrometry catalogs. By default the catalog name is set to the
   value of the package parameter catalogs. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_standard">
   <dt><b>standard = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='standard' Line='standard = yes' -->
   <dd>Output a standard astrometry file ? If standard = yes then a header describing
@@ -85,14 +85,14 @@ agetcat: Extract astrometry files from astrometric catalogs
   file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_filter">
   <dt><b>filter = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='filter' Line='filter = no' -->
   <dd>Filter the results of the catalog query before writing the final results
   to the output astrometry file ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_afiltpars">
   <dt><b>afiltpars = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='afiltpars' Line='afiltpars = ""' -->
   <dd>The astrometry file filtering parameter set. These parameters permit the user
@@ -102,20 +102,20 @@ agetcat: Extract astrometry files from astrometric catalogs
   the output, and perform simple coordinate transformations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = no' -->
   <dd>Update the default values of the algorithm parameters, e.g. aregpars and
   afiltpars, at task termination ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Print status messages on the terminal as the task proceeds ?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_catdb">
   <dt><b>catdb = <span style="font-family: monospace;">")_.catdb"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='catdb' Line='catdb = ")_.catdb"' -->
   <dd>The catalog configuration file. Catdb defaults to the value of the
@@ -123,9 +123,9 @@ agetcat: Extract astrometry files from astrometric catalogs
   <span style="font-family: monospace;">"astcat$lib/catdb.dat"</span>.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Agetcat extracts astrometry files from local or remote astrometry catalogs
   <i>catalogs</i> using a list of region definitions <i>regions</i> supplied by
@@ -142,13 +142,13 @@ agetcat: Extract astrometry files from astrometric catalogs
   system in the image header.  If <i>regions</i> is a file name they are
   read from a file whose format is the following.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # Optional comment
   
   ra1 dec1 xwidth1 ywidth1 [raunits1 [decunits1 [system1]]]
   ra2 dec2 xwidth2 ywidth2 [raunits2 [decunits2 [system2]]]
   raN decN xwidthN ywidthN [raunitsN [decunitsN [systemN]]]
-  </pre>
+  </pre></div>
   <p>
   Quantities in square brackets are optional. If system is undefined the
   coordinate system defaults to the query coordinate system, i.e. if the
@@ -165,14 +165,14 @@ agetcat: Extract astrometry files from astrometric catalogs
   is assumed in examples 1 and 2, is specified in example 3, and example 4
   is same region as example 3 but expressed in the B1950.0 coordinate system.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   # List of targets
   
-  13:29:53.27 +47:11:48.4 10.0 10.0 
-  13:29:53.27 +47:11:48.4 10.0 10.0 hours degrees 
+  13:29:53.27 +47:11:48.4 10.0 10.0
+  13:29:53.27 +47:11:48.4 10.0 10.0 hours degrees
   13:29:53.27 +47:11:48.4 10.0 10.0 hours degrees J2000.0
   13:27:46.90 +47:27:16.0 10.0 10.0 hours degrees B1950.0
-  </pre>
+  </pre></div>
   <p>
   For each specified astrometry catalog in <i>catalog</i> agetcat loops through the
   regions list, formats the catalog query, makes a local or remote
@@ -209,55 +209,55 @@ agetcat: Extract astrometry files from astrometric catalogs
   parameters will be updated at task termination. If <i>verbose</i> = yes
   then detailed status reports are issued as the task executes.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Extract data from the default catalog using the default region definition
   and page the results to determine the catalog format, i.e. the number and
   names of the default output fields.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; agetcat pars default
   cl&gt; page reg001.cat.1
-  </pre>
+  </pre></div>
   <p>
   2. Repeat the previous example but sort the output on the sort field <span style="font-family: monospace;">"mag1"</span>.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; agetcat pars default filter+ fsort=mag1
   cl&gt; page reg001.cat.2
-  </pre>
+  </pre></div>
   <p>
   3. Repeat example 2 but output only those records for which mag &lt;= 16.0.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; agetcat pars default filter+ fsort=mag1 fexpr="mag1 &lt;= 16.0"
   cl&gt; page reg001.cat.3
-  </pre>
+  </pre></div>
   <p>
   4. Repeat example 3 but output a new field equal to mag2 - mag3.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; agetcat pars default filter+ fsort=mag1 fexpr="mag1 &lt;= 16.0" \<br>
   fields="f[*],mag2-mag1"
   cl&gt; page reg001.cat.4
-  </pre>
+  </pre></div>
   <p>
   5. Run agetcat on the text file regions which contains a list of region
   definitions. Note that the coordinate system and coordinate units default
   to those expected by the catalog query. The latter information can be
   determined by running aclist on the default catalog.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; page regions
-  00:00:00.0 -90:00:00 10.0 10.0 
-  00:00:00.0 -60:00:00 10.0 10.0 
-  00:00:00.0 -30:00:00 10.0 10.0 
-  00:00:00.0 +00:00:00 10.0 10.0 
-  00:00:00.0 +30:00:00 10.0 10.0 
-  00:00:00.0 +60:00:00 10.0 10.0 
-  00:00:00.0 +90:00:00 10.0 10.0 
+  00:00:00.0 -90:00:00 10.0 10.0
+  00:00:00.0 -60:00:00 10.0 10.0
+  00:00:00.0 -30:00:00 10.0 10.0
+  00:00:00.0 +00:00:00 10.0 10.0
+  00:00:00.0 +30:00:00 10.0 10.0
+  00:00:00.0 +60:00:00 10.0 10.0
+  00:00:00.0 +90:00:00 10.0 10.0
   cl&gt; agetcat regions default
   cl&gt; page reg001.cat.5
   cl&gt; page reg002.cat.1
@@ -266,48 +266,48 @@ agetcat: Extract astrometry files from astrometric catalogs
   cl&gt; page reg005.cat.1
   cl&gt; page reg006.cat.1
   cl&gt; page reg007.cat.1
-  </pre>
+  </pre></div>
   <p>
   6. Repeat example 5 but find data for two catalogs the usno2@noao and
   gsc@cadc.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   page regions
-  00:00:00.0 -90:00:00 10.0 10.0 
-  00:00:00.0 -60:00:00 10.0 10.0 
-  00:00:00.0 -30:00:00 10.0 10.0 
-  00:00:00.0 +00:00:00 10.0 10.0 
-  00:00:00.0 +30:00:00 10.0 10.0 
-  00:00:00.0 +60:00:00 10.0 10.0 
-  00:00:00.0 +90:00:00 10.0 10.0 
+  00:00:00.0 -90:00:00 10.0 10.0
+  00:00:00.0 -60:00:00 10.0 10.0
+  00:00:00.0 -30:00:00 10.0 10.0
+  00:00:00.0 +00:00:00 10.0 10.0
+  00:00:00.0 +30:00:00 10.0 10.0
+  00:00:00.0 +60:00:00 10.0 10.0
+  00:00:00.0 +90:00:00 10.0 10.0
   cl&gt; agetcat regions default catalogs="usno2@noao,gsc@noao"
-  </pre>
+  </pre></div>
   <p>
   7. Run agetcat on a list of images containing valid FITS WCS information.
   Note that in the following example the test image dev$pix does not
   have a FITS WCS so no data is extracted for it.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; page imlist
   dev$pix
   dev$ypix
   cl&gt; agetcat @imlist default
   cl&gt; page wpix.cat.1
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   aclist, adumpcat, aregpars, afiltpars
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

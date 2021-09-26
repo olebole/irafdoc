@@ -7,15 +7,15 @@ refspectra: Assign reference spectra to observations
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   refspectra input [records]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input spectra or root names to be assigned reference spectra.
@@ -23,7 +23,7 @@ refspectra: Assign reference spectra to observations
   will be appended to each root name in the list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records (imred.irs and imred.iids packages only)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records (imred.irs and imred.iids packages only)' -->
   <dd>List of records or ranges of records to be appended to the input root
@@ -36,14 +36,14 @@ refspectra: Assign reference spectra to observations
   the <i>recformat</i> parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_references">
   <dt><b>references = <span style="font-family: monospace;">"*.imh"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='references' Line='references = "*.imh"' -->
   <dd>List of reference spectra to be assigned or a <span style="font-family: monospace;">"reference spectra assignment
   table"</span> (see DESCRIPTION section).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to be SELECTED from the input list of spectra.  If no list
@@ -51,7 +51,7 @@ refspectra: Assign reference spectra to observations
   record number extensions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refaps">
   <dt><b>refaps = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refaps' Line='refaps = ""' -->
   <dd>List of reference spectra apertures to be SELECTED.  If no list is specified
@@ -59,7 +59,7 @@ refspectra: Assign reference spectra to observations
   extensions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ignoreaps">
   <dt><b>ignoreaps = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = yes' -->
   <dd>Ignore the input and reference apertures when ASSIGNING reference spectra.
@@ -72,7 +72,7 @@ refspectra: Assign reference spectra to observations
   spectra and reference spectra.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_select">
   <dt><b>select = <span style="font-family: monospace;">"interp"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp"' -->
   <dd>Selection method for assigning reference spectra.  The methods are:
@@ -129,7 +129,7 @@ refspectra: Assign reference spectra to observations
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sort">
   <dt><b>sort = <span style="font-family: monospace;">"jd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd"' -->
   <dd>Image header keyword to be used as the sorting parameter for selection
@@ -139,7 +139,7 @@ refspectra: Assign reference spectra to observations
   parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_group">
   <dt><b>group = <span style="font-family: monospace;">"ljd"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='group' Line='group = "ljd"' -->
   <dd>Image header keyword to be used to group spectra.  For those selection
@@ -151,7 +151,7 @@ refspectra: Assign reference spectra to observations
   to disable the grouping parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_time">
   <dt><b>time = no, timewrap = 17.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='time' Line='time = no, timewrap = 17.' -->
   <dd>Is the sorting parameter a 24 hour time?  If so then the time orgin
@@ -160,7 +160,7 @@ refspectra: Assign reference spectra to observations
   in a 24 hour cycle.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_override">
   <dt><b>override = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='override' Line='override = no' -->
   <dd>Override previous assignments?  If an input spectrum has reference
@@ -168,7 +168,7 @@ refspectra: Assign reference spectra to observations
   this flag is set.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_confirm">
   <dt><b>confirm = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='confirm' Line='confirm = yes' -->
   <dd>Confirm reference spectrum assignments?  If <i>yes</i> then the reference
@@ -177,7 +177,7 @@ refspectra: Assign reference spectra to observations
   input spectrum unchanged.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_assign">
   <dt><b>assign = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='assign' Line='assign = yes' -->
   <dd>Assign the reference spectrum by entering it in the image header?
@@ -186,7 +186,7 @@ refspectra: Assign reference spectra to observations
   without actually entering the assignments in the image headers.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfiles">
   <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT,logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"' -->
   <dd>List of log files for recording reference spectra assignments.
@@ -194,7 +194,7 @@ refspectra: Assign reference spectra to observations
   then no logs will be recorded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = yes' -->
   <dd>Verbose log output?  This prints additional information about the input
@@ -202,9 +202,9 @@ refspectra: Assign reference spectra to observations
   are ignored or not assigned as intended.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task allows the user to define which reference spectra are to be 
   used in the calculation of the dispersion solution of object spectra.
@@ -255,14 +255,14 @@ refspectra: Assign reference spectra to observations
   listed in the input parameter list are processed.  The example below
   illustrates the reference spectrum assignment table:
   </p>
-  <pre>
-  	spec1		spec2,spec3,spec4
-  	spec5
-  	spec6,spec7	spect8,spec9
-  	spec10		spec11
-  	spec12		spec13
-  	spec14		spec15
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  spec1           spec2,spec3,spec4
+  spec5
+  spec6,spec7     spect8,spec9
+  spec10          spec11
+  spec12          spec13
+  spec14          spec15
+  </pre></div>
   <p>
   As a convenience, if a reference list in the table is missing, the preceding
   reference list is implied. This table may be used to make arbitrary assignments.
@@ -367,9 +367,9 @@ refspectra: Assign reference spectra to observations
   to log files.  These options are separately controlled by the remaining
   task parameters. 
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_keywords">
   <h3>Keywords</h3>
-  <!-- BeginSection: 'KEYWORDS' -->
   <p>
   This task uses the header keyword BEAM-NUM to sort the apertures.  It
   has an integer value.  If the keyword does not exist then all apertures
@@ -383,76 +383,76 @@ refspectra: Assign reference spectra to observations
   The two keywords REFSPEC1 and optionally REFSPEC2 are created by the
   task when the assign parameter is set to yes.  They take the form:
   </p>
-  <pre>
-             REFSPEC1='d1.0001'  or
+  <div class="highlight-default-notranslate"><pre>
+  REFSPEC1='d1.0001'  or
   
-             REFSPEC1='d5.0001 0.756'
-             REFSPEC2='d5.0002 0.244'
-  </pre>
-  <!-- EndSection:   'KEYWORDS' -->
+  REFSPEC1='d5.0001 0.756'
+  REFSPEC2='d5.0002 0.244'
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Compute a Julian date at the midpoint of the exposure for sorting
   and a local Julian day number for grouping and then assign spectra
   using interpolation.
   </p>
-  <pre>
-      cl&gt; setjd *.imh jd=jd ljd=ljd
-      cl&gt; refspec *.imh sort=jd group=ljd select=interp
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; setjd *.imh jd=jd ljd=ljd
+  cl&gt; refspec *.imh sort=jd group=ljd select=interp
+  </pre></div>
   <p>
   2.  Specifically assign reference spectra to input spectra.
   </p>
-  <pre>
-      cl&gt; refspectra spec1,spec3 refe=spec2,spec4 select=match
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; refspectra spec1,spec3 refe=spec2,spec4 select=match
+  </pre></div>
   <p>
   3.  Use a reference assignment table to assign reference spectra to input
   spectra using the <span style="font-family: monospace;">"average"</span> option.  First a table is created using an
   editor.
   </p>
-  <pre>
-      cl&gt; type reftable
-      spec1		spec2,spec3,spec4
-      spec5
-      spec6,spec7		spect8,spec9
-      spec10		spec11
-      spec12		spec13
-      spec14		spec15
-      cl&gt; refspec spec*.imh recfor- select=average refe=reftable
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type reftable
+  spec1               spec2,spec3,spec4
+  spec5
+  spec6,spec7         spect8,spec9
+  spec10              spec11
+  spec12              spec13
+  spec14              spec15
+  cl&gt; refspec spec*.imh recfor- select=average refe=reftable
+  </pre></div>
   <p>
   4.  Assign the nearest reference spectrum in zenith distance using
   wildcard lists.  By default the aperture numbers must match.
   </p>
-  <p>
-      cl&gt; refspec *.imh <span style="font-family: monospace;">""</span> sort=zd select=nearest time-
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; refspec *.imh "" sort=zd select=nearest time-
+  </pre></div>
   <p>
   5.  Assign a specific reference spectrum to all apertures.
   </p>
-  <p>
-      cl&gt; refspec *.imh <span style="font-family: monospace;">""</span> refer=refnite1 ignoreaps+
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; refspec *.imh "" refer=refnite1 ignoreaps+
+  </pre></div>
   <p>
   6.  Confirm assignments.
   </p>
-  <pre>
-      cl&gt; hselect irs.*.imh "$I,beam-num,ut,refspec1" yes
-      irs.0009.imh	0	0:22:55		irs.0009
-      irs.0010.imh	1	0:22:53		irs.0010
-      irs.0100.imh	0	8:22:55
-      irs.0101.imh	1	8:22:53
-      irs.0447.imh	0	13:00:07	irs.0447
-      irs.0448.imh	1	13:00:05	irs.0448
-      cl&gt; refspec irs 100-101 refer=irs.*.imh conf+ ver+ select=nearest\<br>
-         &gt;&gt;&gt; ignoreaps-
-      [irs.0100] Not a reference spectrum
-      [irs.0101] Not a reference spectrum
-      [irs.0100] refspec1='irs.0447'   Accept assignment (yes)?
-      [irs.0101] refspec1='irs.0448'   Accept assignment (yes)?
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hselect irs.*.imh "$I,beam-num,ut,refspec1" yes
+  irs.0009.imh        0       0:22:55         irs.0009
+  irs.0010.imh        1       0:22:53         irs.0010
+  irs.0100.imh        0       8:22:55
+  irs.0101.imh        1       8:22:53
+  irs.0447.imh        0       13:00:07        irs.0447
+  irs.0448.imh        1       13:00:05        irs.0448
+  cl&gt; refspec irs 100-101 refer=irs.*.imh conf+ ver+ select=nearest\<br>
+     &gt;&gt;&gt; ignoreaps-
+  [irs.0100] Not a reference spectrum
+  [irs.0101] Not a reference spectrum
+  [irs.0100] refspec1='irs.0447'   Accept assignment (yes)?
+  [irs.0101] refspec1='irs.0448'   Accept assignment (yes)?
+  </pre></div>
   <p>
   Because the reference spectrum list includes all spectra the
   warning messages <span style="font-family: monospace;">"Not a reference spectrum"</span> are printed with verbose
@@ -466,36 +466,36 @@ refspectra: Assign reference spectra to observations
   new keyword and then compute its value to be that of mid-exposure.  The
   new keyword is then used as the sorting parameter.
   </p>
-  <pre>
-      cl&gt; hedit *.imh utmid 0. add+ ver- show-     
-      cl&gt; hedit *.imh utmid "(ut)" ver- show-
-      cl&gt; hedit *.imh utmid "(mod(utmid+exptime/7200.,24.))" ver- show-
-      cl&gt; refspec *.imh refer=*.imh recfor- select=interp sort=utmid
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit *.imh utmid 0. add+ ver- show-
+  cl&gt; hedit *.imh utmid "(ut)" ver- show-
+  cl&gt; hedit *.imh utmid "(mod(utmid+exptime/7200.,24.))" ver- show-
+  cl&gt; refspec *.imh refer=*.imh recfor- select=interp sort=utmid
+  </pre></div>
   <p>
   8.  Assign reference spectra using the <span style="font-family: monospace;">"average"</span> option and the reference
   assignment table with data with record number extensions.  First edit
   the file reftable:
   </p>
-  <pre>
-       cl&gt; type reftable
-              spec.0001     arc1.0001,arc2.0001
-              spec.0002     arc1.0002,arc2.0002
-              spec.0003     arc1.0003,arc2.0003
-              spec.0004     arc1.0004,arc2.0004
-       cl&gt; refspec spec.*.imh recfor- refer=reftable select=average
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type reftable
+         spec.0001     arc1.0001,arc2.0001
+         spec.0002     arc1.0002,arc2.0002
+         spec.0003     arc1.0003,arc2.0003
+         spec.0004     arc1.0004,arc2.0004
+  cl&gt; refspec spec.*.imh recfor- refer=reftable select=average
+  </pre></div>
   <p>
   9.  Assign a reference spectrum for aperture 1 to the object spectra
   for apertures 2 thru 5.
   </p>
-  <pre>
-       cl&gt; refspec spec 2-5 recfor+ refer=arc.*.imh refaps=1 ignoreaps+
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; refspec spec 2-5 recfor+ refer=arc.*.imh refaps=1 ignoreaps+
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_REFSPECTRA">
   <dt><b>REFSPECTRA V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='REFSPECTRA' Line='REFSPECTRA V2.10.3' -->
   <dd>If no reference spectrum is found in the interp, nearest, following,
@@ -503,7 +503,7 @@ refspectra: Assign reference spectra to observations
   showing why each was not acceptable.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_REFSPECTRA">
   <dt><b>REFSPECTRA V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='REFSPECTRA' Line='REFSPECTRA V2.10' -->
   <dd>A group parameter was added to allow restricting assignments by observing
@@ -511,14 +511,14 @@ refspectra: Assign reference spectra to observations
   the record format syntax is available in the <b>irs/iids</b> packages.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   identify, reidentify, dispcor, setjd, setairmass
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'KEYWORDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

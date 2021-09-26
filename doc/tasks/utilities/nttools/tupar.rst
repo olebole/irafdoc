@@ -7,14 +7,14 @@ tupar: Edit table header keywords.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tupar table
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task is an interactive editor that allows the user to modify table
   header parameters.
@@ -78,12 +78,12 @@ tupar: Edit table header keywords.
   the comment will be displayed following the value.
   The following are examples of valid syntax for listing header parameters:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   t
   l
   t 3
   l 300 310
-  </pre>
+  </pre></div>
   <p>
   The get command, indicated by <span style="font-family: monospace;">"g"</span>, will look for a specific keyword and
   display its current value.
@@ -103,11 +103,11 @@ tupar: Edit table header keywords.
   to distinguish the value from the comment.
   Examples of valid syntax follow:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   g history
   gd coeff0
   gi numpts
-  </pre>
+  </pre></div>
   <p>
   The put command, specified by <span style="font-family: monospace;">"p"</span>, will either replace the value of an
   existing parameter,
@@ -126,14 +126,14 @@ tupar: Edit table header keywords.
   and further comments cannot be added to them.)
   Examples of valid put command syntax follow:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   p comment Created for testing.
   gd coeff0
   pd coeff0 3.141592653589793
   pi ncoeff 7 number of coefficients
   pt fittype chebychev
   pt fittype "chebychev" type of fit that these coefficients represent
-  </pre>
+  </pre></div>
   <p>
   The replace command, specified by <span style="font-family: monospace;">"r"</span>, works much like the put command
   described above; however, it will prompt the user for confirmation before
@@ -172,14 +172,14 @@ tupar: Edit table header keywords.
   <p>
   Sample replace commands follow:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   r coeff0
   r 17
   r! 17
   r junk dummy
   r junk 12
   r 5 12
-  </pre>
+  </pre></div>
   <p>
   The delete command, specified by <span style="font-family: monospace;">"d"</span>, will delete a header parameter by
   either name or number.
@@ -199,14 +199,14 @@ tupar: Edit table header keywords.
   <p>
   Examples of valid delete commands follow:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   d testflag
   d 17
   d! 17
   d junk dummy
   d junk 12
   d 5 12
-  </pre>
+  </pre></div>
   <p>
   The <span style="font-family: monospace;">"k"</span> command changes the name of a keyword
   without changing the data type, value, or comment.
@@ -218,14 +218,14 @@ tupar: Edit table header keywords.
   <p>
   Examples of valid change keyword commands follow:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   k history comment
   k dummy test
-  </pre>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table [file name template]' -->
   <dd>A table name or list of table names whose header parameters are to be edited.
@@ -312,36 +312,34 @@ tupar: Edit table header keywords.
   for confirmation for the delete and replace commands.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_go_ahead">
   <dt><b>go_ahead [boolean]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='go_ahead' Line='go_ahead [boolean]' -->
   <dd>The user does not set this explicitly.
   It is the parameter which is actually gotten in response to a prompt.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. This example reads all history records from all tables in the default
   directory and writes them to 'history.lis'.
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tupar *.tab same=yes verbose=no readonly=yes &gt;history.lis
           (The task writes a ":" prompt and waits for input.)
   :g history
   :q
   tt&gt;
-  </pre>
+  </pre></div>
   <p>
   2. This example illustrates the use of each of the commands when editing
   parameters in one table.  This kind of interactive use of the task
   would not be appropriate when operating on a list of tables unless
   the 'same' parameter is set to <span style="font-family: monospace;">"no"</span>.
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   tt&gt; tupar junk
           (The task writes the table name and a ":" prompt and waits for input.)
   junk.lis
@@ -372,44 +370,44 @@ tupar: Edit table header keywords.
   :d garbage
   The following parameter is to be deleted:
   GARBAGE  d 3.1415926535
-     ...   OK to delete ? (yes):			(user hits return)
+     ...   OK to delete ? (yes):                  (user hits return)
   :d comment
   The following parameter is to be deleted:
   COMMENT  t This is the first comment.
-     ...   OK to delete ? (yes): n		(user types n)
+     ...   OK to delete ? (yes): n                (user types n)
   :l 4
   parameter out of range; max is 3
   :d 3
   The following parameter is to be deleted:
   COMMENT  t yet another comment
-     ...   OK to delete ? (yes):			(user hits return)
+     ...   OK to delete ? (yes):                  (user hits return)
   :t
   COMMENT  t This is the first comment.
   PI       d 3.141592653589793  a more accurate value
   :r 1
   keyword COMMENT, type t; give replacement value:
-  This is the first comment.			(TUPAR writes this &amp; waits)
-  this is a comment				(this line entered by user)
+  This is the first comment.                      (TUPAR writes this &amp; waits)
+  this is a comment                               (this line entered by user)
   Current parameter and its replacement are:
   COMMENT  t This is the first comment.
   COMMENT  t this is a comment
-     ...   OK to replace ? (yes): n		(user types n)
+     ...   OK to replace ? (yes): n               (user types n)
   no action taken
   :q
   tt&gt;
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by Phil Hodge.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   tprint, tdump, tedit
   </p>
@@ -418,7 +416,7 @@ tupar: Edit table header keywords.
   package.
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

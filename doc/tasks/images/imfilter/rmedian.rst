@@ -7,21 +7,21 @@ rmedian: Ring median filter a list of 1D or 2D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   rmedian input output rinner router
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of filtered images. The number of input images must be the same as the
@@ -29,21 +29,21 @@ rmedian: Ring median filter a list of 1D or 2D images
   the filtered images replaces the original image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rinner">
   <dt><b>rinner, router</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rinner' Line='rinner, router' -->
   <dd>The inner and outer semi-major axes of the ring filter in pixels. If rinner
   is set to 0.0 then the ring filter becomes a circular filter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ratio">
   <dt><b>ratio = 1.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ratio' Line='ratio = 1.0' -->
   <dd>The ratio of the semi-minor axis to the semi-major axis of the ring filter.
   If ratio is 1.0 the ring filter is circularly symmetric.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_theta">
   <dt><b>theta = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='theta' Line='theta = 0.0' -->
   <dd>The position angle of the major axis of the ring filter. Theta is measured
@@ -51,14 +51,14 @@ rmedian: Ring median filter a list of 1D or 2D images
   degrees.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_zloreject">
   <dt><b>zloreject = INDEF, zhireject = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='zloreject' Line='zloreject = INDEF, zhireject = INDEF' -->
   <dd>The minimum and maximum good pixel values. Zloreject and zhireject default
   to -MAX_REAL and MAX_REAL respectively. 
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The type of boundary extension. The options are:
@@ -88,15 +88,15 @@ rmedian: Ring median filter a list of 1D or 2D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The value for constant valued boundary extension.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   RMEDIAN takes a list of input images <i>input</i> and produces a list of
   filtered
@@ -120,9 +120,9 @@ rmedian: Ring median filter a list of 1D or 2D images
   if the majority of the pixels are less than zloreject, or to zhireject
   if the majority of pixels are greater than zhireject.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   The properties of the ring median filter and its application to
   astronomical data analysis problems is summarized in the
@@ -134,51 +134,51 @@ rmedian: Ring median filter a list of 1D or 2D images
   <span style="font-family: monospace;">"Statistics in Theory and Practice"</span>, Robert Lupton, 1993, Princeton
   University Press, problem 2.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Median filter an image using a circular ring filter with an inner
   radius of 4 pixels and a width of 1 pixel.
   </p>
-  <pre>
-     im&gt; rmedian input output 4.0 5.0 
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; rmedian input output 4.0 5.0
+  </pre></div>
   <p>
   2. Median filter an image using a circular ring filter of outer
   radius 3.
   </p>
-  <pre>
-     im&gt; rmedian input output 0.0 3.0 
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; rmedian input output 0.0 3.0
+  </pre></div>
   <p>
   3. Median filter the test image dev$pix rejecting any pixels &lt; 5 or
   greater than 19935 from the medianing process using a circular filter
   of outer radius 5.0.
   </p>
-  <pre>
-      im&gt; rmedian dev$pix output 0.0 5.0 zloreject=5 zhireject=19935
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  im&gt; rmedian dev$pix output 0.0 5.0 zloreject=5 zhireject=19935
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
   <p>
   It requires approximately 59 and 35 CPU seconds to median filter a
   512 by 512 square integer image with a circular filter of radius 5 pixels
   and a ring filter of inner and outer radii of 4.0 and 5.0 pixels respectively.
   (SPARCStation2).
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   median, fmedian, frmedian
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'REFERENCES' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

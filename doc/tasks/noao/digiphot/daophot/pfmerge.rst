@@ -7,15 +7,15 @@ pfmerge: Merge a list of photometry databases
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   pfmerge inphotfiles outphotfile
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_inphotfiles">
   <dt><b>inphotfiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='inphotfiles' Line='inphotfiles' -->
   <dd>The list of photometry files to be merged. Inphotfiles may be the output of the
@@ -24,7 +24,7 @@ pfmerge: Merge a list of photometry databases
   STSDAS binary tables.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outphotfile">
   <dt><b>outphotfile</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outphotfile' Line='outphotfile' -->
   <dd>The output photometry file. Outphotfile consists of the header of the first
@@ -35,15 +35,15 @@ pfmerge: Merge a list of photometry databases
   ST table.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose' -->
   <dd>Print messages about the progress of the task ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   PFMERGE creates a new photometry file suitable for input to PSF, PEAK, GROUP,
   or ALLSTAR by extracting the header of the first input photometry file and the
@@ -66,31 +66,31 @@ pfmerge: Merge a list of photometry databases
   The task PCONCAT can be used to combine photometry files produced by the same
   task.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Combine the results of the first allstar run with phot task results
   on a small list of stars detected after the first list of stars was
   subtracted from the original image.
   </p>
-  <pre>
-  	cl&gt; pfmerge m92.als.1,m92.mag.5 m92.als.2
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; pfmerge m92.als.1,m92.mag.5 m92.als.2
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   pconcat
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

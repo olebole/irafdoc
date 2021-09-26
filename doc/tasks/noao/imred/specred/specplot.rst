@@ -7,22 +7,22 @@ specplot: Scale, stack, and plot multiple spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   specplot spectra
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_spectra">
   <dt><b>spectra</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='spectra' Line='spectra' -->
   <dd>List of spectra to plot.  The spectra are assigned index numbers increasing
   from one in the order of the list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apertures">
   <dt><b>apertures = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apertures' Line='apertures = ""' -->
   <dd>List of apertures to plot.  An empty list selects all apertures.
@@ -31,14 +31,14 @@ specplot: Scale, stack, and plot multiple spectra
   by <span style="font-family: monospace;">'x'</span>.  See <b>ranges</b> for more.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bands">
   <dt><b>bands = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bands' Line='bands = "1"' -->
   <dd>List of bands to plot if the image is three dimensional.  The list has
   the same syntax as for the apertures.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispaxis">
   <dt><b>dispaxis = 1, nsum = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 1, nsum = 1' -->
   <dd>Parameters for defining vectors in 2D images.  The
@@ -47,7 +47,7 @@ specplot: Scale, stack, and plot multiple spectra
   <i>dispaxis</i> parameter.  These may be changed interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_autolayout">
   <dt><b>autolayout = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='autolayout' Line='autolayout = yes' -->
   <dd>Automatically layout the spectra by shifting or scaling to a common mean
@@ -70,7 +70,7 @@ specplot: Scale, stack, and plot multiple spectra
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_units">
   <dt><b>units = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='units' Line='units = ""' -->
   <dd>Dispersion coordinate units.  If the spectra have known units, currently
@@ -84,7 +84,7 @@ specplot: Scale, stack, and plot multiple spectra
   <b>onedspec</b> help for a further description and available units.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_transform">
   <dt><b>transform = <span style="font-family: monospace;">"none"</span> (none|log)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='transform' Line='transform = "none" (none|log)' -->
   <dd>Transform for the input pixel values.  Currently only <span style="font-family: monospace;">"log"</span> is implemented.
@@ -95,7 +95,7 @@ specplot: Scale, stack, and plot multiple spectra
   the task and execute it with the new value.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = 1., offset = 0. (value, @file, keyword)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1., offset = 0. (value, @file, keyword)' -->
   <dd>The scale and offset to apply to each spectrum.  The value of the parameter
@@ -104,14 +104,14 @@ specplot: Scale, stack, and plot multiple spectra
   header keyword whose value is to be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_step">
   <dt><b>step = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='step' Line='step = 0' -->
   <dd>The step separating spectra when not using the autolayout option.
   The value of this parameter depends on the range of the data.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ptype">
   <dt><b>ptype = <span style="font-family: monospace;">"1"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ptype' Line='ptype = "1"' -->
   <dd>Default plotting type for the spectra.  A numeric value selects line plots
@@ -125,7 +125,7 @@ specplot: Scale, stack, and plot multiple spectra
   The types for individual spectra may be changed interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_labels">
   <dt><b>labels = <span style="font-family: monospace;">"user"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='labels' Line='labels = "user"' -->
   <dd>Spectrum labels to be used.  If the null string or the word <span style="font-family: monospace;">"none"</span> is
@@ -137,13 +137,13 @@ specplot: Scale, stack, and plot multiple spectra
   are matched with the list of spectra, and also added interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ulabels">
   <dt><b>ulabels = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ulabels' Line='ulabels = ""' -->
   <dd>File containing user labels.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xlpos">
   <dt><b>xlpos = 1.02, ylpos = 0.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xlpos' Line='xlpos = 1.02, ylpos = 0.0' -->
   <dd>The starting position for the spectrum labels in fractions of the
@@ -154,14 +154,14 @@ specplot: Scale, stack, and plot multiple spectra
   the mean level of the spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sysid">
   <dt><b>sysid = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sysid' Line='sysid = yes' -->
   <dd>Include system banner and separation step label?  This may be changed
   interactively using <span style="font-family: monospace;">":/sysid"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_yscale">
   <dt><b>yscale = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='yscale' Line='yscale = no' -->
   <dd>Draw a Y axis scale?  Since stacked plots are relative labeling the Y
@@ -169,14 +169,14 @@ specplot: Scale, stack, and plot multiple spectra
   if desired.  The default is to not have a Y axis scale.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">""</span>, xlabel = <span style="font-family: monospace;">""</span>, ylabel = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = "", xlabel = "", ylabel = ""' -->
   <dd>Title, x axis label, and y axis label for graphs.  These may be changed
   interactively using <span style="font-family: monospace;">":/title"</span>, <span style="font-family: monospace;">":/xlabel"</span>, and <span style="font-family: monospace;">":/ylabel"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmin">
   <dt><b>xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmin' Line='xmin = INDEF, xmax = INDEF, ymin = INDEF, ymax = INDEF' -->
   <dd>The default limits for the initial graph.  If INDEF then the limit is
@@ -185,29 +185,29 @@ specplot: Scale, stack, and plot multiple spectra
   <span style="font-family: monospace;">":/ywindow"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = ""' -->
   <dd>Logfile to record the final set of spectra and scale factors displayed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Output graphics device.  One of <span style="font-family: monospace;">"stdgraph"</span>, <span style="font-family: monospace;">"stdplot"</span>, <span style="font-family: monospace;">"stdvdm"</span>,
   @(enviroment variable), or actual device.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input.  When null the standard cursor is used otherwise
   the specified file is used.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <b>Specplot</b> plots multiple spectra with provisions for scaling them,
   separating them vertically, shifting them horizontally, and labeling them.
@@ -336,14 +336,13 @@ specplot: Scale, stack, and plot multiple spectra
   is positive to all spectra below and including the one indicated if the
   value is negative.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_commands">
   <h3>Cursor commands</h3>
-  <!-- BeginSection: 'CURSOR COMMANDS' -->
   <p>
   The indicated spectrum is the one with a point closest to the cursor position.
   </p>
-  <pre>
-  
+  <div class="highlight-default-notranslate"><pre>
   ? - Print help summary
   a - Append a new spectrum following the indicated spectrum
   i - Insert a new spectrum before the indicated spectrum
@@ -367,10 +366,10 @@ specplot: Scale, stack, and plot multiple spectra
   x - Cancel all scales and offsets
   y - Automatically layout the spectra with offsets to common mean
   z - Automatically layout the spectra scaled to common mean
-  </pre>
-  <!-- EndSection:   'CURSOR COMMANDS' -->
+  </pre></div>
+  </section>
+  <section id="s_colon_commands">
   <h3>Colon commands</h3>
-  <!-- BeginSection: 'COLON COMMANDS' -->
   <p>
   A command without a value generally shows the current value of the
   parameter while with a value it sets the value of the parameter.  The show
@@ -381,73 +380,75 @@ specplot: Scale, stack, and plot multiple spectra
   number or the character *.  The latter applies the command to all the
   spectra.
   </p>
-  <pre>
-  :show &lt;file&gt;		   Show spectrum parameters (file optional)
-  :vshow &lt;file&gt;		   Show verbose parameters (file optional)
-  :step &lt;value&gt;		   Set or show step
-  :fraction &lt;value&gt;	   Set or show autolayout fraction
-  :label &lt;value&gt;		   Set or show label type
-  				(none|imtitle|imname|index|user)
+  <div class="highlight-default-notranslate"><pre>
+  :show &lt;file&gt;               Show spectrum parameters (file optional)
+  :vshow &lt;file&gt;              Show verbose parameters (file optional)
+  :step &lt;value&gt;              Set or show step
+  :fraction &lt;value&gt;          Set or show autolayout fraction
+  :label &lt;value&gt;             Set or show label type
+                                  (none|imtitle|imname|index|user)
   
-  :move[index] &lt;to_index&gt;	   Move spectrum to new index position
-  :shift[index|*] &lt;value&gt;	   Shift spectra by adding to index
-  :w0[index|*] &lt;value&gt;	   Set or show zero point wavelength
-  :wpc[index|*] &lt;value&gt;	   Set or show wavelength per channel
+  :move[index] &lt;to_index&gt;    Move spectrum to new index position
+  :shift[index|*] &lt;value&gt;    Shift spectra by adding to index
+  :w0[index|*] &lt;value&gt;       Set or show zero point wavelength
+  :wpc[index|*] &lt;value&gt;      Set or show wavelength per channel
   :velocity[index|*] &lt;value&gt; Set or show radial velocity (km/s)
   :redshift[index|*] &lt;value&gt; Set or show redshift
   :offset[index|*] &lt;value&gt;   Set or show intensity offset
-  :scale[index|*] &lt;value&gt;	   Set or show intensity scale
-  :xlpos[index|*] &lt;value&gt;	   Set or show X label position
-  :ylpos[index|*] &lt;value&gt;	   Set or show Y label position
-  :ptype[index|*] &lt;value&gt;	   Set or show plotting type
+  :scale[index|*] &lt;value&gt;    Set or show intensity scale
+  :xlpos[index|*] &lt;value&gt;    Set or show X label position
+  :ylpos[index|*] &lt;value&gt;    Set or show Y label position
+  :ptype[index|*] &lt;value&gt;    Set or show plotting type
   :color[index|*] &lt;value&gt;    Set or show color (1-9)
   :ulabel[index|*] &lt;value&gt;   Set or show user labels
-  :units[index|*] &lt;value&gt;	   Change coordinate units
+  :units[index|*] &lt;value&gt;    Change coordinate units
   
-  :/title &lt;value&gt;		   Set the title of the graph
-  :/xlabel &lt;value&gt;	   Set the X label of the graph
-  :/ylabel &lt;value&gt;	   Set the Y label of the graph
-  :/xwindow &lt;min max&gt;	   Set the X graph range
-  				(use INDEF for autoscaling)
-  :/ywindow &lt;min max&gt;	   Set the X graph range
-  				(use INDEF for autoscaling)
-   
-  
+  :/title &lt;value&gt;            Set the title of the graph
+  :/xlabel &lt;value&gt;           Set the X label of the graph
+  :/ylabel &lt;value&gt;           Set the Y label of the graph
+  :/xwindow &lt;min max&gt;        Set the X graph range
+                                  (use INDEF for autoscaling)
+  :/ywindow &lt;min max&gt;        Set the X graph range
+                                  (use INDEF for autoscaling)
+  </pre></div>
+  <p>
   Examples:
-      w0		  Print value of wavelength zero point
-      w0 4010	  Set wavelength zero point of spectrum nearest the cursor
-      w0[3] 4010	  Set wavelength zero point of spectrum with index 3
-      w0[*] 4010	  Set wavelength zero point of all spectra
-  </pre>
-  <!-- EndSection:   'COLON COMMANDS' -->
+  </p>
+  <div class="highlight-default-notranslate"><pre>
+  w0            Print value of wavelength zero point
+  w0 4010       Set wavelength zero point of spectrum nearest the cursor
+  w0[3] 4010    Set wavelength zero point of spectrum with index 3
+  w0[*] 4010    Set wavelength zero point of all spectra
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. To make a nice plot of a set of spectra with the default layout:
   </p>
-  <p>
-  	cl&gt; specplot spec*
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; specplot spec*
+  </pre></div>
   <p>
   2.  To set the colors or line types for multiple spectra in a batch
   mode application create a cursor file like:
   </p>
-  <p>
-  	cl&gt; type cursor.dat
-  	:color[1] 2
-  	:color[2] 3
-  	:color[3] 4
-  	r
-  	cl&gt; specplot im1,im2,im3 cursor=cursor.dat
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type cursor.dat
+  :color[1] 2
+  :color[2] 3
+  :color[3] 4
+  r
+  cl&gt; specplot im1,im2,im3 cursor=cursor.dat
+  </pre></div>
   <p>
   Note that the <span style="font-family: monospace;">'r'</span> key is necessary redraw the graph with the changed
   attributes.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SPECPLOT">
   <dt><b>SPECPLOT V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SPECPLOT' Line='SPECPLOT V2.11' -->
   <dd>The scale and offset parameters may now be a value, a filename, or
@@ -455,7 +456,7 @@ specplot: Scale, stack, and plot multiple spectra
   The <span style="font-family: monospace;">'f'</span> key was added to toggle between world and logical pixel coordinates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SPECPLOT">
   <dt><b>SPECPLOT V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SPECPLOT' Line='SPECPLOT V2.10.3' -->
   <dd>A color parameter was added for graphics terminals supporting color.
@@ -466,7 +467,7 @@ specplot: Scale, stack, and plot multiple spectra
   up a <span style="font-family: monospace;">"units_display"</span> WCS attribute if defined.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_SPECPLOT">
   <dt><b>SPECPLOT V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SPECPLOT' Line='SPECPLOT V2.10' -->
   <dd>New parameters were added to select apertures and bands, plot
@@ -480,23 +481,23 @@ specplot: Scale, stack, and plot multiple spectra
   functions.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_notes">
   <h3>Notes</h3>
-  <!-- BeginSection: 'NOTES' -->
   <p>
   The automatic layout algorithm is relatively simple and may not
   provide visually satisfactory results in all cases.  The fonts and Y axis
   scale capabilities are not as good as might be desired for publication
   quality plots.
   </p>
-  <!-- EndSection:   'NOTES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   bplot, splot, onedspec, gtools, ranges
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR COMMANDS' 'COLON COMMANDS' 'EXAMPLES' 'REVISIONS' 'NOTES' 'SEE ALSO'  -->
   

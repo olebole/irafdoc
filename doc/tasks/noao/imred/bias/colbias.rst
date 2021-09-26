@@ -7,21 +7,21 @@ colbias: Fit and subtract an average column bias
 
 .. raw:: html
 
+  <section id="s_usage_">
   <h3>Usage	</h3>
-  <!-- BeginSection: 'USAGE	' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   colbias input output
-  </pre>
-  <!-- EndSection:   'USAGE	' -->
+  </pre></div>
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Images to be bias subtracted.  The images may not contain image sections.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>Output bias subtracted images.  An output images may be the same as its
@@ -29,14 +29,14 @@ colbias: Fit and subtract an average column bias
   of the input pixel type.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_bias">
   <dt><b>bias = <span style="font-family: monospace;">"[]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='bias' Line='bias = "[]"' -->
   <dd>Bias section appended to the input image to define the bias region.
   The default section or an empty string will use the full image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_trim">
   <dt><b>trim = <span style="font-family: monospace;">"[]"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='trim' Line='trim = "[]"' -->
   <dd>Trim section appended to the input image to define the region to be
@@ -44,71 +44,71 @@ colbias: Fit and subtract an average column bias
   will use the full image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_median">
   <dt><b>median = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='median' Line='median = no' -->
   <dd>Take the median of the bias columns?  If no then the bias
   columns are averaged.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_function">
   <dt><b>function = <span style="font-family: monospace;">"spline3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='function' Line='function = "spline3"' -->
   <dd>The function fit to the average bias line.  The functions are <span style="font-family: monospace;">"legendre"</span>,
   <span style="font-family: monospace;">"chebyshev"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.  Abbreviations are allowed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_order">
   <dt><b>order</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='order' Line='order' -->
   <dd>The order (number of terms or number of spline pieces) in the function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_low_reject">
   <dt><b>low_reject = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='low_reject' Line='low_reject = 3.0' -->
   <dd>The low sigma rejection factor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_high_reject">
   <dt><b>high_reject = 3.0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='high_reject' Line='high_reject = 3.0' -->
   <dd>The high sigma rejection factor.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_niterate">
   <dt><b>niterate = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='niterate' Line='niterate = 1' -->
   <dd>The maximum number of rejection iterations.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Fit the average bias line interactively?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfiles">
   <dt><b>logfiles = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = ""' -->
   <dd>List of log files.  If no file name is given then no log file is kept.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_graphics">
   <dt><b>graphics = <span style="font-family: monospace;">"stdgraph"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='graphics' Line='graphics = "stdgraph"' -->
   <dd>Graphics output device for interactive graphics.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Graphics cursor input
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   For each input image in the input image list an average or median bias
   column is determined from the bias region.  The bias region is defined by
@@ -133,21 +133,21 @@ colbias: Fit and subtract an average column bias
   the remaining images non-interactively while a response of YES processes
   the remaining image interactively without prompting.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The bias region for a set of images occupies columns 801 to 832 and lines
   1 to 800.  To subtract the bias and remove the bias region:
   </p>
-  <pre>
-  	cl&gt; colbias.bias = "[801:832,*]"
-  	cl&gt; colbias.trim = "[1:800,*]"
-  	cl&gt; colbias ccd* ccd*
-  	colbias ccd001 (yes)? yes
-  	colbias ccd002 (yes)?
-  	colbias ccd003 (no)? NO
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; colbias.bias = "[801:832,*]"
+  cl&gt; colbias.trim = "[1:800,*]"
+  cl&gt; colbias ccd* ccd*
+  colbias ccd001 (yes)? yes
+  colbias ccd002 (yes)?
+  colbias ccd003 (no)? NO
+  </pre></div>
   <p>
   The first two lines set the bias and trim parameters.  These parameters
   could be temporarily set on the command line but generally these parameters
@@ -156,24 +156,24 @@ colbias: Fit and subtract an average column bias
   second image is examined and the fit found to be acceptable.  All remaining
   image are then fit non-interactively using the same fitting parameters.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_COLBIAS">
   <dt><b>COLBIAS V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='COLBIAS' Line='COLBIAS V2.10.3' -->
   <dd>The output pixel type is now real instead of preserving the pixel type
   of the input image.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   icfit
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE	' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

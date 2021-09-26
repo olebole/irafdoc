@@ -7,15 +7,15 @@ directory: List the files in a directory
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   directory [files]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_files">
   <dt><b>files</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='files' Line='files' -->
   <dd>A file template specifying the files to be listed, or the name of the directory
@@ -23,7 +23,7 @@ directory: List the files in a directory
   current directory are listed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_long">
   <dt><b>long = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='long' Line='long = no' -->
   <dd>Long format listing.  The long format listing lists each file on a separate
@@ -31,13 +31,13 @@ directory: List the files in a directory
   etc. of each file.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 0' -->
   <dd>If nonzero, the number of columns of output in multicolumn format.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_maxch">
   <dt><b>maxch = 18</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='maxch' Line='maxch = 18' -->
   <dd>The maximum number of characters to be displayed in each filename.
@@ -45,7 +45,7 @@ directory: List the files in a directory
   files with very long filenames.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sort">
   <dt><b>sort = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = yes' -->
   <dd>Sort the file list alphabetically.  If sorting is disabled the directory
@@ -57,16 +57,16 @@ directory: List the files in a directory
   large.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_all">
   <dt><b>all = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='all' Line='all = no' -->
   <dd>List all files, including the hidden (<span style="font-family: monospace;">"."</span> prefixed) files, and files with
   reserved filename extensions used internally by the VOS.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <b>directory</b> task lists or prints information describing some subset
   of the files in a directory or directories.  If no name template is given,
@@ -91,20 +91,8 @@ directory: List the files in a directory
   when a file is accessed, a directory is listed, or a filename template is
   expanded.
   </p>
-  <pre>
-  	.a	object library
-  	.c	C source file
-  	.cl	CL source file
-  	.e	executable (runnable) file
-  	.f	Fortran source file
-  	.gX	generic source file (X=[cx])
-  	.h	global header file
-  	.hlp	help file
-  	.o	object file
-  	.par	CL parameter file
-  	.s	assembler source file
-  	.x	SPP source file
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  </pre></div>
   <p>
   When listing large directories, the time required to accumulate and sort the
   entire directory in memory before producing the output listing may become
@@ -112,66 +100,66 @@ directory: List the files in a directory
   the <i>sort</i> option to <i>no</i>, and the directory listing should appear
   immediately.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. List all the files in the current directory in tabular format.
   </p>
-  <p>
-  	cl&gt; dir
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dir
+  </pre></div>
   <p>
   2. Print detailed information on all files in the current directory.
   </p>
-  <pre>
-          cl&gt; dir l+
-          -t-rwr-r- iraf         269 Oct 16  1983 README
-          dt-rwrwr- iraf        1024 Feb  7 12:48 doc
-          -t-rwr-r- iraf          60 Jan 30  1984 files.par
-          -t-rwr-r- iraf         420 Jan 30  1984 files.x
-          -b-rwrwr- system    187338 Jan 29 19:27 libpkg.a
-          xb-rwr-r- iraf      363520 Jan 29 19:29 x_system.e
-          -b-rwrwr- system      5037 Jan 19 22:15 x_system.o
-          -t-rwr-r- iraf         633 Jan 19 22:01 x_system.x
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dir l+
+  -t-rwr-r- iraf         269 Oct 16  1983 README
+  dt-rwrwr- iraf        1024 Feb  7 12:48 doc
+  -t-rwr-r- iraf          60 Jan 30  1984 files.par
+  -t-rwr-r- iraf         420 Jan 30  1984 files.x
+  -b-rwrwr- system    187338 Jan 29 19:27 libpkg.a
+  xb-rwr-r- iraf      363520 Jan 29 19:29 x_system.e
+  -b-rwrwr- system      5037 Jan 19 22:15 x_system.o
+  -t-rwr-r- iraf         633 Jan 19 22:01 x_system.x
+  </pre></div>
   <p>
   3. Print a single column listing of all the files with extension <span style="font-family: monospace;">".h"</span>
   in the logical directory <span style="font-family: monospace;">"lib$"</span>.
   </p>
-  <pre>
-  	cl&gt; dir lib$*.h l+
-  	lib$chars.h
-  	lib$clio.h
-  	lib$clpopn.h
-  	    (etc)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dir lib$*.h l+
+  lib$chars.h
+  lib$clio.h
+  lib$clpopn.h
+      (etc)
+  </pre></div>
   <p>
   4. While in the <span style="font-family: monospace;">"system"</span> directory, print the contents of the parallel
   directory <span style="font-family: monospace;">"dataio"</span>.
   </p>
-  <pre>
-  	cl&gt; cd pkg$system
-  	cl&gt; dir ../dataio
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cd pkg$system
+  cl&gt; dir ../dataio
+  </pre></div>
   <p>
   5. Test if the file <span style="font-family: monospace;">"alpha"</span> exists in the current directory.  In the example,
   the output given indicates that the file was not found.
   </p>
-  <pre>
-  	cl&gt; dir alpha
-  	no files found
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dir alpha
+  no files found
+  </pre></div>
   <p>
   6. Print the contents of the directory USR$2:[IRAF.LOCAL] on the remote VMS
   node <span style="font-family: monospace;">"draco"</span> (requires IRAF network access to the remote node).
   </p>
-  <pre>
-  	cl&gt; dir draco!usr\$2:\[iraf.local]
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; dir draco!usr\$2:\[iraf.local]
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
   <p>
   There is no provision for wildcarding directories, e.g., <span style="font-family: monospace;">"dir */*.x"</span>.
   The long format listing can currently only be sorted by filename (although
@@ -179,14 +167,14 @@ directory: List the files in a directory
   not be performed if individual files are named as list elements within
   a filename template.
   </p>
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   files, pathnames
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

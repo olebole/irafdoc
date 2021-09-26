@@ -7,40 +7,40 @@ extinction: Apply atmospheric extinction corrections to images (obsolete)
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   extinction images
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input images to be extinction corrected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output extinction corrected images.  Output images may be the
   same as the input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extinction">
   <dt><b>extinction = <span style="font-family: monospace;">"onedstds$kpnoextinct.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction = "onedstds$kpnoextinct.dat"' -->
   <dd>Extinction file to be used.  The standard extinction files:
-  <pre>
-  	onedstds$kpnoextinct.dat - KPNO standard extinction
-  	onedstds$ctioextinct.dat - CTIO standard extinction
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  onedstds$kpnoextinct.dat - KPNO standard extinction
+  onedstds$ctioextinct.dat - CTIO standard extinction
+  </pre></div>
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The specified images are corrected for atmospheric extinction according
   to the formula
@@ -88,31 +88,31 @@ extinction: Apply atmospheric extinction corrections to images (obsolete)
   which have DISPAXIS defined prior to transposing to still work correctly
   without requiring this keyword to be changed.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. A set of dispersion corrected images is extinction corrected in-place as
   follows:
   </p>
-  <pre>
-  	cl&gt; extinction img* img*
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; extinction img* img*
+  </pre></div>
   <p>
   2. To keep the uncorrected image:
   </p>
-  <pre>
-  	cl&gt; extinction nite1.004 nite1ext.004
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; extinction nite1.004 nite1ext.004
+  </pre></div>
   <p>
   3.  If the DISPAXIS keyword is missing and the dispersion is running
   vertically (varying with the image lines):
   </p>
-  <pre>
-  	cl&gt; hedit *.imh dispaxis 2 add+
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; hedit *.imh dispaxis 2 add+
+  </pre></div>
   
-  <!-- EndSection:    'EXAMPLES' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES'  -->
   

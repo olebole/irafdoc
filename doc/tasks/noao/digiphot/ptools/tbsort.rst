@@ -7,22 +7,22 @@ tbsort: Sort a list of apphot/daophot tables databases
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   tbsort table columns
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_table">
   <dt><b>table</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='table' Line='table' -->
   <dd>The list of APPHOT/DAOPHOT table databases to be sorted in-place.
   All tables are sorted on the same column or columns.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_columns">
   <dt><b>columns</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='columns' Line='columns' -->
   <dd>The list of columns to sort on.  A column template consists of a list of
@@ -32,7 +32,7 @@ tbsort: Sort a list of apphot/daophot tables databases
   <span style="font-family: monospace;">'@'</span> can be given in place of the column template.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ascend">
   <dt><b>ascend = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ascend' Line='ascend = yes' -->
   <dd>If <i>ascend</i> = yes, the table is sorted in ascending value order, with the
@@ -41,7 +41,7 @@ tbsort: Sort a list of apphot/daophot tables databases
   is sorted in descending order, with the largest value first.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_casesens">
   <dt><b>casesens = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='casesens' Line='casesens = yes' -->
   <dd>If <i>casesens</i> = yes, sorts on character columns are case sensitive,
@@ -49,9 +49,9 @@ tbsort: Sort a list of apphot/daophot tables databases
   Otherwise, the sort is case insensitive.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   TBSORT sorts an APPHOT/DAOPHOT STSDAS table database.
   TBSORT operates in place so
@@ -77,34 +77,34 @@ tbsort: Sort a list of apphot/daophot tables databases
   it has its own copy of the default parameter set so that users
   can modify the parameters independently of the TBSORT task in TABLES.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Sort the output of the DAOPHOT ALLSTAR task in increasing order of
   magnitude.
   </p>
-  <pre>
-     pt&gt; tbsort m92.al.1 MAG
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; tbsort m92.al.1 MAG
+  </pre></div>
   <p>
   2. Sort the output of the DAOPHOT task NSTAR in increasing order of
   the y position.
   </p>
-  <pre>
-     pt&gt; tbsort m92.nst.1 YCENTER
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; tbsort m92.nst.1 YCENTER
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ptools.txsort,ptools.psort,tables.tbsort
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

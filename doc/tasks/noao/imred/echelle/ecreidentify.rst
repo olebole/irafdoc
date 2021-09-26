@@ -7,29 +7,29 @@ ecreidentify: Automatically identify features in spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   ecreidentify images reference
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_images">
   <dt><b>images</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='images' Line='images' -->
   <dd>Echelle images in which the features in the reference image are to be
   reidentified and a new dispersion function fit.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_reference">
   <dt><b>reference</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='reference' Line='reference' -->
   <dd>Echelle image with previously identified features and dispersion
   function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shift">
   <dt><b>shift = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = 0.' -->
   <dd>Shift in user coordinates to be added to the reference features before
@@ -38,7 +38,7 @@ ecreidentify: Automatically identify features in spectra
   be reidentified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 5.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 5.' -->
   <dd>Centering radius in pixels.  If a reidentified feature falls further
@@ -46,14 +46,14 @@ ecreidentify: Automatically identify features in spectra
   not reidentified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 10.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10.' -->
   <dd>In order for a feature center to be determined the range of pixel
   intensities around the feature must exceed this threshold.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refit">
   <dt><b>refit = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes' -->
   <dd>Refit the dispersion function?  If yes and there are more than 4
@@ -65,14 +65,14 @@ ecreidentify: Automatically identify features in spectra
   coordinates without changing the form of the dispersion function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database containing the feature data for the reference image and in
   which the features for the reidentified images are recorded.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfiles">
   <dt><b>logfiles = <span style="font-family: monospace;">"STDOUT,logfile"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfiles' Line='logfiles = "STDOUT,logfile"' -->
   <dd>List of file in which to keep a processing log.  If a null file, <span style="font-family: monospace;">""</span>, is
@@ -80,9 +80,9 @@ ecreidentify: Automatically identify features in spectra
   written to the terminal.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Emission or absorption features in a reference echelle spectrum are
   reidentified in other echelle spectra.  The features for the reference
@@ -127,16 +127,16 @@ ecreidentify: Automatically identify features in spectra
   wavelengths given by the dispersion function to the user specified true
   wavelengths.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The features in the spectrum f033.ec were identified previously
   with the task <b>ecidentify</b>.  The features positions in f043.ec are
   are reidentified with and without refitting the dispersion function as
   follows:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ec&gt; ecreidentify f043.ec f033.ec
   
   ECREIDENTIFY: NOAO/IRAF V2.7 seaman@puppis Mon 09:03:51 27-Jun-88
@@ -144,22 +144,21 @@ ecreidentify: Automatically identify features in spectra
                  Image    Found  Pix Shift  User Shift  Z Shift      RMS
                f043.ec  561/561       0.11       -1.07  -1.9E-6   0.0117
   
-  
   ec&gt; ecreidentify f043.ec f033.ec refit=no
   
   ECREIDENTIFY: NOAO/IRAF V2.7 seaman@puppis Mon 09:15:21 27-Jun-88
     Reference image = f033.ec, Refit = no
                  Image    Found  Pix Shift  User Shift  Z Shift      RMS
                f043.ec  561/561       0.11       -1.07  -1.9E-6   0.0131
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   center1d, ecidentify
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

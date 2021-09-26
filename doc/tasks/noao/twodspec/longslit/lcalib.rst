@@ -7,15 +7,15 @@ lcalib: List calibration file data
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   lcalib option star_name
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_option">
   <dt><b>option</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option' -->
   <dd>Chooses calibration data to be listed.  Option
@@ -26,7 +26,7 @@ lcalib: List calibration file data
   <span style="font-family: monospace;">"stars"</span> to list the star names available in the calibration directory.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_star_name">
   <dt><b>star_name</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='star_name' Line='star_name' -->
   <dd>Selects which star's magnitude list is chosen if the option parameter
@@ -38,7 +38,7 @@ lcalib: List calibration file data
   The following three queried parameters apply if the selected calibration
   file is for a blackbody.  See <b>standard</b> for further details.
   </p>
-  <dl>
+  <dl id="l_mag">
   <dt><b>mag</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='mag' Line='mag' -->
   <dd>The magnitude of the observed star in the band given by the
@@ -48,7 +48,7 @@ lcalib: List calibration file data
   magnitudes between the two bands is in the calibration directory
   </dd>
   </dl>
-  <dl>
+  <dl id="l_magband">
   <dt><b>magband</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='magband' Line='magband' -->
   <dd>The standard band name for the input magnitude.  This should generally
@@ -56,7 +56,7 @@ lcalib: List calibration file data
   not the magnitude will be converted to the calibration band.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_teff">
   <dt><b>teff</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='teff' Line='teff' -->
   <dd>The effective temperature (deg K) or the spectral type of the star being
@@ -69,28 +69,28 @@ lcalib: List calibration file data
   is given it defaults to dwarf.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extinction">
   <dt><b>extinction</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extinction' Line='extinction' -->
   <dd>Extinction file.  The current standard extinction files:
-  <pre>
-  	onedstds$kpnoextinct.dat - KPNO standard extinction
-  	onedstds$ctioextinct.dat - CTIO standard extinction
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  onedstds$kpnoextinct.dat - KPNO standard extinction
+  onedstds$ctioextinct.dat - CTIO standard extinction
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_caldir">
   <dt><b>caldir</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='caldir' Line='caldir' -->
   <dd>Calibration directory containing standard star data.  The directory name
   must end with /.  The current calibration directories available in the
   onedstds$ may be listed with the command:
-  <pre>
-  	cl&gt; page onedstds$README
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; page onedstds$README
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fnuzero">
   <dt><b>fnuzero = 3.68e-20</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fnuzero' Line='fnuzero = 3.68e-20' -->
   <dd>The absolute flux per unit frequency at a magnitude of zero.  This is used
@@ -104,9 +104,9 @@ lcalib: List calibration file data
   user to change this calibration.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   LCALIB provides a means of checking the flux calibration data.  The calibration
   data consists of extinction, bandpasses, and stellar magnitudes.
@@ -132,39 +132,39 @@ lcalib: List calibration file data
   The calibration files may be typed, copied, and printed.  <b>Lcalib</b>
   may also be used to list data from the calibration files.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
-  	# List the extinction table
-  	cl&gt; lcalib ext
-  	# Plot the extinction table
-  	cl&gt; lcalib ext | graph
-  	# Plot the energy distribution
-  	cl&gt; lcalib mags "bd+28 4211" | graph
-  	# List the names of all the stars
-  	cl&gt; lcalib stars caldir=onedstds$irscal/
-  	# As above but for IIDS file
-  	cl&gt; lcalib stars calib_file=onedstds$iidscal/
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  # List the extinction table
+  cl&gt; lcalib ext
+  # Plot the extinction table
+  cl&gt; lcalib ext | graph
+  # Plot the energy distribution
+  cl&gt; lcalib mags "bd+28 4211" | graph
+  # List the names of all the stars
+  cl&gt; lcalib stars caldir=onedstds$irscal/
+  # As above but for IIDS file
+  cl&gt; lcalib stars calib_file=onedstds$iidscal/
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_LCALIB">
   <dt><b>LCALIB V2.10</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='LCALIB' Line='LCALIB V2.10' -->
   <dd>This task has a more compact listing for the <span style="font-family: monospace;">"stars"</span> option and allows
   paging a list of stars when the star name query is not recognized.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   standard, sensfunc, onedstds$README
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

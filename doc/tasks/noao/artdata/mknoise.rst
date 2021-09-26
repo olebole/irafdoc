@@ -7,15 +7,15 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
 
 .. raw:: html
 
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>Images to create or modify.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output = ""' -->
   <dd>Output images when modifying input images.  If no output images are
@@ -27,19 +27,19 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   <p>
   WHEN CREATING NEW IMAGES
   </p>
-  <dl>
+  <dl id="l_title">
   <dt><b>title = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='title' Line='title = ""' -->
   <dd>Image title to be given to the images.  Maximum of 79 characters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = 512, nlines = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = 512, nlines = 512' -->
   <dd>Number of columns and lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_header">
   <dt><b>header = <span style="font-family: monospace;">"artdata$stdheader.dat"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='header' Line='header = "artdata$stdheader.dat"' -->
   <dd>Image or header keyword data file.  If an image is given then the image header
@@ -55,33 +55,33 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   <p>
   NOISE PARAMETERS
   </p>
-  <dl>
+  <dl id="l_background">
   <dt><b>background = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='background' Line='background = 0.' -->
   <dd>Background to add to images before computing Poisson noise.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gain">
   <dt><b>gain = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = 1.' -->
   <dd>Gain in electrons per data number.  The gain is used for scaling the
   read noise parameter and in computing poisson noise.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_rdnoise">
   <dt><b>rdnoise = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='rdnoise' Line='rdnoise = 0.' -->
   <dd>Gaussian read noise in electrons.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_poisson">
   <dt><b>poisson = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='poisson' Line='poisson = no' -->
   <dd>Add poisson noise?  Note that any specified background is added to new
   or existing images before computing the Poisson noise.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_seed">
   <dt><b>seed = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='seed' Line='seed = 1' -->
   <dd>Random number seed.  If a value of <span style="font-family: monospace;">"INDEF"</span> is given then the clock
@@ -92,7 +92,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   <p>
   COSMIC RAYS
   </p>
-  <dl>
+  <dl id="l_cosrays">
   <dt><b>cosrays = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cosrays' Line='cosrays = ""' -->
   <dd>List of cosmic ray files.  Cosmic ray files contain lines of cosmic ray
@@ -104,7 +104,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   input images then the last cosmic ray file is reused.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncosrays">
   <dt><b>ncosrays = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncosrays' Line='ncosrays = 0' -->
   <dd>If no cosmic ray file or a new file is specified then the task will
@@ -113,34 +113,34 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   uniformly random between zero and a maximum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_energy">
   <dt><b>energy = 30000.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='energy' Line='energy = 30000.' -->
   <dd>When generating random events the cosmic rays will have a uniform energy
   distribution (in electrons) between zero and this maximum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_radius">
   <dt><b>radius = 0.5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='radius' Line='radius = 0.5' -->
   <dd>The half-intensity radius of gaussian profile cosmic rays in pixels
   along the major axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ar">
   <dt><b>ar = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ar' Line='ar = 1.' -->
   <dd>Minor to major axial ratio for cosmic rays.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pa">
   <dt><b>pa = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pa' Line='pa = 0.' -->
   <dd>Position angle in degrees measured counterclockwise from the X axis for
   cosmic rays.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_comments">
   <dt><b>comments = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='comments' Line='comments = yes' -->
   <dd>Include comments recording task parameters in the image header?
@@ -153,7 +153,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   These parameters define certain computational shortcuts which greatly
   affect the computational speed.  They should be adjusted with care.
   </p>
-  <dl>
+  <dl id="l_nxc">
   <dt><b>nxc = 5, nyc = 5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxc' Line='nxc = 5, nyc = 5' -->
   <dd>Number of cosmic ray centers per pixel in X and Y.  Rather than evaluate
@@ -163,7 +163,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   and startup time required.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxsub">
   <dt><b>nxsub = 10, nysub = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxsub' Line='nxsub = 10, nysub = 10' -->
   <dd>Number of pixel subsamples in X and Y used in computing the cosmic
@@ -172,7 +172,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   This affects the time required to compute the cosmic ray templates.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dynrange">
   <dt><b>dynrange = 100000.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dynrange' Line='dynrange = 100000.' -->
   <dd>The intensity profile of the gaussian cosmic rays extends to infinity so
@@ -181,7 +181,7 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   is not critical.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ranbuf">
   <dt><b>ranbuf = 0</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ranbuf' Line='ranbuf = 0' -->
   <dd>Random number buffer size.  When generating readout and poisson noise,
@@ -193,9 +193,9 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   value of this parameter to zero.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task creates or modifies images with readout noise, poisson noise,
   and cosmic ray events.  New images are created with the specified
@@ -229,10 +229,10 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   The data value is then multiplied by the gain, a poisson deviate is
   generated, and divided by the gain.  Expressed as a formula:
   </p>
-  <pre>
-        New images: out = P(background * gain) / gain
-   Existing images: out = P((in+background)*gain) / gain
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+       New images: out = P(background * gain) / gain
+  Existing images: out = P((in+background)*gain) / gain
+  </pre></div>
   <p>
   where P(x) is a poisson deviate with mean x, in and out are the input
   and final pixel values, and background and gain are the parameter
@@ -295,50 +295,50 @@ mknoise: Make/add noise and cosmic rays to 1D/2D images
   generated cosmic rays will be recorded for reuse or to allow
   identifying the events while testing tasks and algorithms.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Create a new image with a background of 1000, a read noise
   of 10 electrons, a gain of 2, and 50 random cosmic rays.  Don't keep a
   record of the cosmic rays.
   </p>
-  <pre>
-  	cl&gt; mknoise testim back=1000 rd=10 gain=2 poisson+ ncos=50
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; mknoise testim back=1000 rd=10 gain=2 poisson+ ncos=50
+  </pre></div>
   <p>
   2. Add cosmic rays to an image and create a new output image.
   </p>
-  <pre>
-  	cl&gt; head cosfile
-  	20.3 50.1 1000
-  	325.6 99.6 250
-  	cl&gt; mknoise dev$pix out=newpix cos=cosfile
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; head cosfile
+  20.3 50.1 1000
+  325.6 99.6 250
+  cl&gt; mknoise dev$pix out=newpix cos=cosfile
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_MKNOISE">
   <dt><b>MKNOISE V2.11+</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKNOISE' Line='MKNOISE V2.11+' -->
   <dd>The random number seed can be set from the clock time by using the value
   <span style="font-family: monospace;">"INDEF"</span> to yield different random numbers for each execution.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_MKNOISE">
   <dt><b>MKNOISE V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='MKNOISE' Line='MKNOISE V2.11' -->
   <dd>The default value of <span style="font-family: monospace;">"ranbuf"</span> was changed to zero.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   mkobjects, mkheader
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

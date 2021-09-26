@@ -7,35 +7,35 @@ widstape: Convert ONEDSPEC spectra to IDSOUT text format
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   widstape idsout input records
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_idsout">
   <dt><b>idsout</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='idsout' Line='idsout' -->
   <dd>The output file name to receive the card-image data. This may be a
   magtape specification (e.g. mta, mtb) or disk file name.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>The input root file name for the spectra to be written
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records' -->
   <dd>The record string to be appended to the root name to create the image
   names of the spectra to be written.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_new_tape">
   <dt><b>new_tape = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='new_tape' Line='new_tape = no' -->
   <dd>If set to yes, the tape is rewound and output begins at BOT. If no,
@@ -45,22 +45,22 @@ widstape: Convert ONEDSPEC spectra to IDSOUT text format
   at BOT regardless of the value for new_tape.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_block_size">
   <dt><b>block_size = 3200</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='block_size' Line='block_size = 3200' -->
   <dd>The tape block size in bytes. This must be an integral factor of 80.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ebcdic">
   <dt><b>ebcdic = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ebcdic' Line='ebcdic = no' -->
   <dd>The default character code is ASCII, but if this parameter is set to yes,
   the output character will be in EBCDIC.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The specified spectra are copied to the output file in a card-image format
   defined in the IPPS-IIDS/IRS Reduction Manual. Values from the extended
@@ -73,28 +73,28 @@ widstape: Convert ONEDSPEC spectra to IDSOUT text format
   Thus spectra up to 1024 points may be contained in the IDSOUT format. 
   The format is outlined below:
   </p>
-  <pre>
-   Line	Column	Type
-      1	   1-5	Integer	  Record number within IDSOUT text file
-  	  6-10	Integer	  Integration time
-  	 11-25	Real	  Wavelength of first bin
-  	 26-40	Real	  Dispersion
-  	 41-45	Integer	  0 (Index of first pixel)
-  	 46-50  Integer	  Line length - 1 (Index of last pixel)
-  	 71-80	Integer	  UT time
-      2	  1-10	Real	  Siderial time
-  	 11-25	Real	  Right Ascension
-  	 26-40	Real	  Declination
-      3	 21-35	Real	  Hour Angle
-  	 36-50	Real	  Air mass
-  	 51-58	Integer	  UT date
-  	 60-76	String	  Image title
-  	 78-80	String	  END
-      4	  1-64	String	  Record label
-  	 78-80	String	  END
-  5-132		Real	  1024 pixel values, 8 per line
-    133			  Blank line
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+   Line   Column  Type
+      1      1-5  Integer   Record number within IDSOUT text file
+            6-10  Integer   Integration time
+           11-25  Real      Wavelength of first bin
+           26-40  Real      Dispersion
+           41-45  Integer   0 (Index of first pixel)
+           46-50  Integer   Line length - 1 (Index of last pixel)
+           71-80  Integer   UT time
+      2     1-10  Real      Siderial time
+           11-25  Real      Right Ascension
+           26-40  Real      Declination
+      3    21-35  Real      Hour Angle
+           36-50  Real      Air mass
+           51-58  Integer   UT date
+           60-76  String    Image title
+           78-80  String    END
+      4     1-64  String    Record label
+           78-80  String    END
+  5-132           Real      1024 pixel values, 8 per line
+    133                     Blank line
+  </pre></div>
   <p>
   The data of type real are in exponent format; i.e FORTRAN <span style="font-family: monospace;">'E'</span> format (1.234e3).
   </p>
@@ -106,30 +106,30 @@ widstape: Convert ONEDSPEC spectra to IDSOUT text format
   blocks (except the very last one in the tape file) are all the same
   length.  A double end-of-mark is written after the last spectrum.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   The following example writes an IDSOUT format tape starting at the
   beginning of the tape.
   </p>
-  <p>
-  	cl&gt; widstape mta nite1 1001-1200 new_tape+
-  </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; widstape mta nite1 1001-1200 new_tape+
+  </pre></div>
+  </section>
+  <section id="s_time_requirements__unix_vax_11_750">
   <h3>Time requirements: unix/vax 11/750</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS: UNIX/VAX 11/750' -->
   <p>
   Each spectrum of 1024 points requires about 2 second.
   </p>
-  <!-- EndSection:   'TIME REQUIREMENTS: UNIX/VAX 11/750' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   rcardimage, ridsout
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS: UNIX/VAX 11/750' 'SEE ALSO'  -->
   

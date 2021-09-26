@@ -7,27 +7,27 @@ imlintran: Linearly transform a list of 2-D images
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   imlintran input output xrotation yrotation xmag ymag
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of images to be transformed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xrotation">
   <dt><b>xrotation, yrotation</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xrotation' Line='xrotation, yrotation' -->
   <dd>Angle of rotation of points on the image axes in degrees.
@@ -39,7 +39,7 @@ imlintran: Linearly transform a list of 2-D images
   multiple of 90 degrees.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xmag">
   <dt><b>xmag, ymag</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xmag' Line='xmag, ymag' -->
   <dd>The number of input pixels per output pixel in x and y. The magnifications
@@ -47,21 +47,21 @@ imlintran: Linearly transform a list of 2-D images
   numbers greater than one reduce the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xin">
   <dt><b>xin = INDEF, yin = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xin' Line='xin = INDEF, yin = INDEF' -->
   <dd>The origin of the input picture in pixels. Xin and yin default to the center of
   the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xout">
   <dt><b>xout = INDEF, yout = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xout' Line='xout = INDEF, yout = INDEF' -->
   <dd>The origin of the output image. Xout and yout default to the center of the
   output image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ncols">
   <dt><b>ncols = INDEF, nlines = INDEF</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ncols' Line='ncols = INDEF, nlines = INDEF' -->
   <dd>The number of columns and rows in the output image. The default is to
@@ -71,7 +71,7 @@ imlintran: Linearly transform a list of 2-D images
   of any origin shift.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interpolant">
   <dt><b>interpolant = <span style="font-family: monospace;">"linear"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interpolant' Line='interpolant = "linear"' -->
   <dd>The choices are the following.
@@ -143,7 +143,7 @@ imlintran: Linearly transform a list of 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_boundary">
   <dt><b>boundary = <span style="font-family: monospace;">"nearest"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='boundary' Line='boundary = "nearest"' -->
   <dd>The choices are:
@@ -173,19 +173,19 @@ imlintran: Linearly transform a list of 2-D images
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_constant">
   <dt><b>constant = 0.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='constant' Line='constant = 0.' -->
   <dd>The value of the constant for boundary extension.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fluxconserve">
   <dt><b>fluxconserve = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fluxconserve' Line='fluxconserve = yes' -->
   <dd>Preserve the total image flux?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nxblock">
   <dt><b>nxblock = 512, nyblock = 512</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nxblock' Line='nxblock = 512, nyblock = 512' -->
   <dd>If the size of the output image is less than nxblock by nyblock then
@@ -193,55 +193,54 @@ imlintran: Linearly transform a list of 2-D images
   is computed in blocks of nxblock by nxblock pixels.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   IMLINTRAN linearly transforms a the list of images in input using rotation
   angles and magnification factors supplied by the user and writes the output
   images into output. The coordinate transformation from input to output
   image is described below.
   </p>
-  <pre>
-      1. subtract the origin
+  <div class="highlight-default-notranslate"><pre>
+  1. subtract the origin
   
-      xt = x(input) - xin
-      yt = y(input) - yin
+  xt = x(input) - xin
+  yt = y(input) - yin
   
-      2. scale the image
+  2. scale the image
   
-      xt = xt / xmag
-      yt = xt / xmag
+  xt = xt / xmag
+  yt = xt / xmag
   
-      3. rotate the image
+  3. rotate the image
   
-      xt = xt * cos (xrotation) - yt * sin (yrotation)
-      yt = xt * sin (yrotation) + yt * cos (yrotation)
+  xt = xt * cos (xrotation) - yt * sin (yrotation)
+  yt = xt * sin (yrotation) + yt * cos (yrotation)
   
-      4. new orgin
+  4. new orgin
   
-      x(output) = xt + xout
-      y(output) = yt + yout
-  
-  </pre>
+  x(output) = xt + xout
+  y(output) = yt + yout
+  </pre></div>
   <p>
   The output image gray levels are determined by interpolating in the input
   image at the positions of the transformed output pixels using the inverse
   of the above transformation.
   IMLINTRAN uses the routines in the 2-D interpolation package.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_timings">
   <h3>Timings</h3>
-  <!-- BeginSection: 'TIMINGS' -->
   <p>
   It requires approximately 70 and 290 cpu seconds respectively to linearly
   transform a 512 by 512 real image using bilinear and biquintic
   interpolation respectively (Vax 11/750 fpa).
   </p>
-  <!-- EndSection:   'TIMINGS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   1. Rotate an image 45 degrees around its center and magnify
      the image by a factor of 2. in each direction.
   
@@ -257,18 +256,18 @@ imlintran: Linearly transform a list of 2-D images
      by a factor of 1.5
   
      cl&gt; imlintran n7026 n7026rm 45.0 45.0 1.5 1.5
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   imshift, magnify, rotate, lintran, register, geotran, geomap
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'TIMINGS' 'EXAMPLES' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,15 +7,15 @@ average: Compute the mean and standard deviation of a list
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   average option
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_option">
   <dt><b>option</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='option' Line='option' -->
   <dd>Chosen from <span style="font-family: monospace;">"add"</span>, <span style="font-family: monospace;">"subtract"</span> or <span style="font-family: monospace;">"new_sample"</span>, 
@@ -23,9 +23,9 @@ average: Compute the mean and standard deviation of a list
   If no argument is given on the command line, <span style="font-family: monospace;">"new_sample"</span> is assumed.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Task <i>average</i> computes the average and standard deviation of a list
   of numbers.  Numeric input is read from STDIN with one number per line.
@@ -38,39 +38,44 @@ average: Compute the mean and standard deviation of a list
   Additional points can be added to or deleted from the sample by rerunning
   <i>average</i> with <b>option</b> equal to one of the following:
   </p>
-  <pre>
-  
-  	add -- add points to the sample, recalculate mean and sigma
-  	sub -- subtract points from the sample
-  </pre>
+  <dl id="l_add">
+  <dt><b>add</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='add' Line='add' -->
+  <dd>add points to the sample, recalculate mean and sigma
+  </dd>
+  </dl>
+  <dl id="l_sub">
+  <dt><b>sub</b></dt>
+  <!-- Sec='DESCRIPTION' Level=0 Label='sub' Line='sub' -->
+  <dd>subtract points from the sample
+  </dd>
+  </dl>
   <p>
   The sample is reinitialized by setting <b>option</b> = <span style="font-family: monospace;">"new_sample"</span>.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Run <i>average</i> on the list of numbers in file <span style="font-family: monospace;">"numbers"</span>.
   </p>
-  <pre>
-  	
-  	cl&gt; type numbers | average
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; type numbers | average
+  </pre></div>
   <p>
   Add in to the sample the list of numbers in file <span style="font-family: monospace;">"numbers.2"</span>.
   </p>
-  <pre>
-  
-  	cl&gt; average add &lt; numbers.2
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; average add &lt; numbers.2
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   lintran
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

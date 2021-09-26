@@ -7,15 +7,15 @@ cd: Change directory
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   chdir [newdir]  or  cd [newdir]
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_newdir">
   <dt><b>newdir</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='newdir' Line='newdir' -->
   <dd>The new working directory.
@@ -23,9 +23,9 @@ cd: Change directory
   higher directory.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   <i>Chdir</i> is used to change the current working directory.
   When called without any arguments, <i>chdir</i> sets the default directory
@@ -40,57 +40,57 @@ cd: Change directory
   <i>back</i> may be called after a <i>chdir</i> to return to the previous
   directory without typing its name.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1. Return to our home directory.
   </p>
-  <p>
-  	cl&gt; cd
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cd
+  </pre></div>
   <p>
   2. Go to the package logical directory <span style="font-family: monospace;">"pkg$"</span>.
   </p>
-  <p>
-  	cl&gt; chdir pkg
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; chdir pkg
+  </pre></div>
   <p>
   3. Go down one level to the directory <span style="font-family: monospace;">"dataio"</span>, a subdirectory of <span style="font-family: monospace;">"pkg"</span>.
   </p>
-  <p>
-  	cl&gt; cd dataio
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cd dataio
+  </pre></div>
   <p>
   4. From <span style="font-family: monospace;">"dataio"</span>, go back up to <span style="font-family: monospace;">"pkg"</span> and down into <span style="font-family: monospace;">"images"</span>.
   </p>
-  <p>
-  	cl&gt; cd ../images
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cd ../images
+  </pre></div>
   <p>
   5. Go to the <span style="font-family: monospace;">"tv"</span> directory, a subdirectory of <span style="font-family: monospace;">"images"</span>, regardless of the
   current directory
   </p>
-  <p>
-  	cl&gt; cd pkg$images/tv
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; cd pkg$images/tv
+  </pre></div>
   <p>
   6. On a VMS system, define a new logical directory on a different disk device
   and go there.  Note that the character $ is not permitted in host file or
   directory names.
   </p>
-  <pre>
-  	cl&gt; set dd = scr1:[data]
-  	cl&gt; cd dd
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; set dd = scr1:[data]
+  cl&gt; cd dd
+  </pre></div>
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   back, pathnames
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'SEE ALSO'  -->
   

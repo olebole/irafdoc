@@ -7,14 +7,14 @@ do3fiber: Process KPNO coude three fiber spectra
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   do3fiber objects
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_summary">
   <h3>Summary</h3>
-  <!-- BeginSection: 'SUMMARY' -->
   <p>
   The <b>do3fiber</b> reduction task is specialized for scattered light
   subtraction, extraction, flat
@@ -33,10 +33,10 @@ do3fiber: Process KPNO coude three fiber spectra
   of guidance, automation, and record keeping necessary when dealing with
   this type of multifiber data.
   </p>
-  <!-- EndSection:   'SUMMARY' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_objects">
   <dt><b>objects</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objects' Line='objects' -->
   <dd>List of object spectra to be processed.  Previously processed spectra are
@@ -44,21 +44,21 @@ do3fiber: Process KPNO coude three fiber spectra
   dependent calibration data has changed.  Extracted spectra are ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apref">
   <dt><b>apref = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apref' Line='apref = ""' -->
   <dd>Aperture reference spectrum.  This spectrum is used to define the basic
   extraction apertures and is typically a flat field spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flat">
   <dt><b>flat = <span style="font-family: monospace;">""</span> (optional)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flat' Line='flat = "" (optional)' -->
   <dd>Flat field spectrum.  If specified the one dimensional flat field spectra
   are extracted and used to make flat field corrections.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_arcs">
   <dt><b>arcs = <span style="font-family: monospace;">""</span> (at least one if dispersion correcting)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arcs' Line='arcs = "" (at least one if dispersion correcting)' -->
   <dd>List of primary, all fiber arc spectra.  These spectra are used to define
@@ -69,7 +69,7 @@ do3fiber: Process KPNO coude three fiber spectra
   other fibers and arc spectra are derived from it.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_arctable">
   <dt><b>arctable = <span style="font-family: monospace;">""</span> (optional) (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='arctable' Line='arctable = "" (optional) (refspectra)' -->
   <dd>Table defining arc spectra to be assigned to object
@@ -77,7 +77,7 @@ do3fiber: Process KPNO coude three fiber spectra
   on a header parameter, <i>params.sort</i>, such as the observation time is made.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_readnoise">
   <dt><b>readnoise = <span style="font-family: monospace;">"RDNOISE"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='readnoise' Line='readnoise = "RDNOISE" (apsum)' -->
   <dd>Read out noise in photons.  This parameter defines the minimum noise
@@ -86,7 +86,7 @@ do3fiber: Process KPNO coude three fiber spectra
   (case insensitive) may be specified to get the value from the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_gain">
   <dt><b>gain = <span style="font-family: monospace;">"GAIN"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='gain' Line='gain = "GAIN" (apsum)' -->
   <dd>Detector gain or conversion factor between photons/electrons and
@@ -95,7 +95,7 @@ do3fiber: Process KPNO coude three fiber spectra
   from the image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_datamax">
   <dt><b>datamax = INDEF (apsum.saturation)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='datamax' Line='datamax = INDEF (apsum.saturation)' -->
   <dd>The maximum data value which is not a cosmic ray.
@@ -110,21 +110,21 @@ do3fiber: Process KPNO coude three fiber spectra
   <b>apextract</b> package.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fibers">
   <dt><b>fibers = 3 (apfind)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fibers' Line='fibers = 3 (apfind)' -->
   <dd>Number of fibers.  This number is used during the automatic definition of
   the apertures from the aperture reference spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_width">
   <dt><b>width = 6. (apedit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='width' Line='width = 6. (apedit)' -->
   <dd>Approximate base full width of the fiber profiles.  This parameter is used
   for the profile centering algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_crval">
   <dt><b>crval = INDEF, cdelt = INDEF (autoidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='crval' Line='crval = INDEF, cdelt = INDEF (autoidentify)' -->
   <dd>These parameters specify an approximate central wavelength and dispersion.
@@ -134,7 +134,7 @@ do3fiber: Process KPNO coude three fiber spectra
   to fail.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_objaps">
   <dt><b>objaps = <span style="font-family: monospace;">"2"</span>, arcaps = <span style="font-family: monospace;">"1,3"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='objaps' Line='objaps = "2", arcaps = "1,3"' -->
   <dd>List of object and arc aperture numbers.  These are used to
@@ -142,7 +142,7 @@ do3fiber: Process KPNO coude three fiber spectra
   for the final results.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scattered">
   <dt><b>scattered = no (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scattered' Line='scattered = no (apscatter)' -->
   <dd>Smooth and subtracted scattered light from the object and flat field
@@ -154,7 +154,7 @@ do3fiber: Process KPNO coude three fiber spectra
   subsequent subtractions use the same fitting parameters.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fitflat">
   <dt><b>fitflat = yes (flat1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fitflat' Line='fitflat = yes (flat1d)' -->
   <dd>Fit the composite flat field spectrum by a smooth function and divide each
@@ -163,13 +163,13 @@ do3fiber: Process KPNO coude three fiber spectra
   avoid modifying the object fluxes.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_recenter">
   <dt><b>recenter = yes (aprecenter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='recenter' Line='recenter = yes (aprecenter)' -->
   <dd>Recenter reference apertures for each object spectrum?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_edit">
   <dt><b>edit = no (apedit)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='edit' Line='edit = no (apedit)' -->
   <dd>Review aperture definitions for each object spectrum?  Note that this does
@@ -177,7 +177,7 @@ do3fiber: Process KPNO coude three fiber spectra
   interactive review of the aperture definitions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_clean">
   <dt><b>clean = no (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='clean' Line='clean = no (apsum)' -->
   <dd>Detect and correct for bad pixels during extraction?  This is the same
@@ -187,7 +187,7 @@ do3fiber: Process KPNO coude three fiber spectra
   can be useful.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispcor">
   <dt><b>dispcor = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispcor' Line='dispcor = yes' -->
   <dd>Dispersion correct spectra?  Depending on the <i>params.linearize</i>
@@ -195,40 +195,40 @@ do3fiber: Process KPNO coude three fiber spectra
   function in the image header.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_splot">
   <dt><b>splot = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='splot' Line='splot = yes' -->
   <dd>Plot the final spectra with the task <b>splot</b>?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_redo">
   <dt><b>redo = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='redo' Line='redo = no' -->
   <dd>Redo operations previously done?  If no then previously processed spectra
   in the objects list will not be processed (unless they need to be updated).
   </dd>
   </dl>
-  <dl>
+  <dl id="l_update">
   <dt><b>update = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='update' Line='update = yes' -->
   <dd>Update processing of previously processed spectra if aperture, flat
   field, or dispersion reference definitions are changed?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_batch">
   <dt><b>batch = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='batch' Line='batch = no' -->
   <dd>Process spectra as a background or batch job provided there are no interactive
   options (<i>edit</i> and <i>splot</i>) selected.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_listonly">
   <dt><b>listonly = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='listonly' Line='listonly = no' -->
   <dd>List processing steps but don't process?
   </dd>
   </dl>
-  <dl>
+  <dl id="l_params">
   <dt><b>params = <span style="font-family: monospace;">""</span> (pset)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='params' Line='params = "" (pset)' -->
   <dd>Name of parameter set containing additional processing parameters.  The
@@ -245,7 +245,7 @@ do3fiber: Process KPNO coude three fiber spectra
   Package parameters are those which generally apply to all task in the
   package.  This is also true of <b>do3fiber</b>.
   </p>
-  <dl>
+  <dl id="l_observatory">
   <dt><b>observatory = <span style="font-family: monospace;">"observatory"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='observatory' Line='observatory = "observatory"' -->
   <dd>Observatory at which the spectra were obtained if not specified in the
@@ -255,21 +255,21 @@ do3fiber: Process KPNO coude three fiber spectra
   as describe in <b>observatory</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp">
   <dt><b>interp = <span style="font-family: monospace;">"poly5"</span> (nearest|linear|poly3|poly5|spline3|sinc)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = "poly5" (nearest|linear|poly3|poly5|spline3|sinc)' -->
   <dd>Spectrum interpolation type used when spectra are resampled.  The choices are:
-  <pre>
-  	nearest - nearest neighbor
-  	 linear - linear
-  	  poly3 - 3rd order polynomial
-  	  poly5 - 5th order polynomial
-  	spline3 - cubic spline
-  	   sinc - sinc function
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  nearest - nearest neighbor
+   linear - linear
+    poly3 - 3rd order polynomial
+    poly5 - 5th order polynomial
+  spline3 - cubic spline
+     sinc - sinc function
+  </pre></div>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_dispaxis">
   <dt><b>dispaxis = 2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='dispaxis' Line='dispaxis = 2' -->
   <dd>Default dispersion axis.  The dispersion axis is 1 for dispersion
@@ -278,19 +278,19 @@ do3fiber: Process KPNO coude three fiber spectra
   precedence over this parameter.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_database">
   <dt><b>database = <span style="font-family: monospace;">"database"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='database' Line='database = "database"' -->
   <dd>Database (directory) used for storing aperture and dispersion information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_verbose">
   <dt><b>verbose = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='verbose' Line='verbose = no' -->
   <dd>Print verbose information available with various tasks.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_logfile">
   <dt><b>logfile = <span style="font-family: monospace;">"logfile"</span>, plotfile = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='logfile' Line='logfile = "logfile", plotfile = ""' -->
   <dd>Text and plot log files.  If a filename is not specified then no log is
@@ -298,13 +298,13 @@ do3fiber: Process KPNO coude three fiber spectra
   in various ways such as with <b>gkimosaic</b>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_records">
   <dt><b>records = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='records' Line='records = ""' -->
   <dd>Dummy parameter to be ignored.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_version">
   <dt><b>version = <span style="font-family: monospace;">"KPNOCOUDE: ..."</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='version' Line='version = "KPNOCOUDE: ..."' -->
   <dd>Version of the package.
@@ -320,7 +320,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">--  GENERAL PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_line">
   <dt><b>line = INDEF, nsum = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='line' Line='line = INDEF, nsum = 10' -->
   <dd>The dispersion line (line or column perpendicular to the dispersion
@@ -330,7 +330,7 @@ do3fiber: Process KPNO coude three fiber spectra
   image along the dispersion axis.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_extras">
   <dt><b>extras = no (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='extras' Line='extras = no (apsum)' -->
   <dd>Include extra information in the output spectra?  When cleaning or using
@@ -342,7 +342,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- DEFAULT APERTURE LIMITS --
   
   </p>
-  <dl>
+  <dl id="l_lower">
   <dt><b>lower = -3., upper = 3. (apdefault)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lower' Line='lower = -3., upper = 3. (apdefault)' -->
   <dd>Default lower and upper aperture limits relative to the aperture center.
@@ -353,7 +353,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- AUTOMATIC APERTURE RESIZING PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_ylevel">
   <dt><b>ylevel = 0.05 (apresize)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ylevel' Line='ylevel = 0.05 (apresize)' -->
   <dd>Data level at which to set aperture limits during automatic resizing.
@@ -363,7 +363,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- TRACE PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_t_step">
   <dt><b>t_step = 10 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_step' Line='t_step = 10 (aptrace)' -->
   <dd>Step along the dispersion axis between determination of the spectrum
@@ -371,7 +371,7 @@ do3fiber: Process KPNO coude three fiber spectra
   signal-to-noise at each step.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_t_function">
   <dt><b>t_function = <span style="font-family: monospace;">"spline3"</span>, t_order = 2 (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_function' Line='t_function = "spline3", t_order = 2 (aptrace)' -->
   <dd>Default trace fitting function and order.  The fitting function types are
@@ -381,7 +381,7 @@ do3fiber: Process KPNO coude three fiber spectra
   functions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_t_niterate">
   <dt><b>t_niterate = 1, t_low = 3., t_high = 3. (aptrace)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='t_niterate' Line='t_niterate = 1, t_low = 3., t_high = 3. (aptrace)' -->
   <dd>Default number of rejection iterations and rejection sigma thresholds.
@@ -390,14 +390,14 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- SCATTERED LIGHT PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_buffer">
   <dt><b>buffer = 1. (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='buffer' Line='buffer = 1. (apscatter)' -->
   <dd>Buffer distance from the aperture edges to be excluded in selecting the
   scattered light pixels to be used.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apscat1">
   <dt><b>apscat1 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat1' Line='apscat1 = "" (apscatter)' -->
   <dd>Fitting parameters across the dispersion.  This references an additional
@@ -405,7 +405,7 @@ do3fiber: Process KPNO coude three fiber spectra
   parameter set.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_apscat2">
   <dt><b>apscat2 = <span style="font-family: monospace;">""</span> (apscatter)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='apscat2' Line='apscat2 = "" (apscatter)' -->
   <dd>Fitting parameters along the dispersion.  This references an additional
@@ -416,7 +416,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- APERTURE EXTRACTION PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_weights">
   <dt><b>weights = <span style="font-family: monospace;">"none"</span> (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='weights' Line='weights = "none" (apsum)' -->
   <dd>Type of extraction weighting.  Note that if the <i>clean</i> parameter is
@@ -439,7 +439,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_pfit">
   <dt><b>pfit = <span style="font-family: monospace;">"fit1d"</span> (apsum) (fit1d|fit2d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='pfit' Line='pfit = "fit1d" (apsum) (fit1d|fit2d)' -->
   <dd>Profile fitting algorithm for cleaning and variance weighted extractions.
@@ -447,14 +447,14 @@ do3fiber: Process KPNO coude three fiber spectra
   may try the other algorithm.  See <b>approfiles</b> for further information.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lsigma">
   <dt><b>lsigma = 3., usigma = 3. (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lsigma' Line='lsigma = 3., usigma = 3. (apsum)' -->
   <dd>Lower and upper rejection thresholds, given as a number of times the
   estimated sigma of a pixel, for cleaning.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_nsubaps">
   <dt><b>nsubaps = 1 (apsum)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='nsubaps' Line='nsubaps = 1 (apsum)' -->
   <dd>During extraction it is possible to equally divide the apertures into
@@ -464,7 +464,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- FLAT FIELD FUNCTION FITTING PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_f_interactive">
   <dt><b>f_interactive = yes (fit1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_interactive' Line='f_interactive = yes (fit1d)' -->
   <dd>Fit the composite one dimensional flat field spectrum interactively?
@@ -472,7 +472,7 @@ do3fiber: Process KPNO coude three fiber spectra
   spectrum is specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_f_function">
   <dt><b>f_function = <span style="font-family: monospace;">"spline3"</span>, f_order = 20 (fit1d)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='f_function' Line='f_function = "spline3", f_order = 20 (fit1d)' -->
   <dd>Function and order used to fit the composite one dimensional flat field
@@ -484,40 +484,40 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- ARC DISPERSION FUNCTION PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_threshold">
   <dt><b>threshold = 10. (autoidentify/identify/reidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='threshold' Line='threshold = 10. (autoidentify/identify/reidentify)' -->
   <dd>In order for a feature center to be determined the range of pixel intensities
   around the feature must exceed this threshold.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_coordlist">
   <dt><b>coordlist = <span style="font-family: monospace;">"linelists$idhenear.dat"</span> (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='coordlist' Line='coordlist = "linelists$idhenear.dat" (autoidentify/identify)' -->
   <dd>Arc line list consisting of an ordered list of wavelengths.
   Some standard line lists are available in the directory <span style="font-family: monospace;">"linelists$"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_match">
   <dt><b>match = -3. (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='match' Line='match = -3. (autoidentify/identify)' -->
   <dd>The maximum difference for a match between the dispersion function prediction
   value and a wavelength in the coordinate list.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_fwidth">
   <dt><b>fwidth = 3.5 (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='fwidth' Line='fwidth = 3.5 (autoidentify/identify)' -->
   <dd>Approximate full base width (in pixels) of arc lines.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cradius">
   <dt><b>cradius = 4. (reidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cradius' Line='cradius = 4. (reidentify)' -->
   <dd>Radius from previous position to reidentify arc line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i_function">
   <dt><b>i_function = <span style="font-family: monospace;">"legendre"</span>, i_order = 3 (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_function' Line='i_function = "legendre", i_order = 3 (autoidentify/identify)' -->
   <dd>The default function and order to be fit to the arc wavelengths as a
@@ -525,14 +525,14 @@ do3fiber: Process KPNO coude three fiber spectra
   <span style="font-family: monospace;">"legendre"</span>, <span style="font-family: monospace;">"spline1"</span>, or <span style="font-family: monospace;">"spline3"</span>.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_i_niterate">
   <dt><b>i_niterate = 3, i_low = 3.0, i_high = 3.0 (autoidentify/identify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='i_niterate' Line='i_niterate = 3, i_low = 3.0, i_high = 3.0 (autoidentify/identify)' -->
   <dd>Number of rejection iterations and sigma thresholds for rejecting arc
   lines from the dispersion function fits.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_refit">
   <dt><b>refit = yes (reidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='refit' Line='refit = yes (reidentify)' -->
   <dd>Refit the dispersion function?  If yes and there is more than 1 line
@@ -543,7 +543,7 @@ do3fiber: Process KPNO coude three fiber spectra
   form of the dispersion function.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_addfeatures">
   <dt><b>addfeatures = no (reidentify)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='addfeatures' Line='addfeatures = no (reidentify)' -->
   <dd>Add new features from a line list during each reidentification?
@@ -555,7 +555,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- AUTOMATIC ARC ASSIGNMENT PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_select">
   <dt><b>select = <span style="font-family: monospace;">"interp"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='select' Line='select = "interp" (refspectra)' -->
   <dd>Selection method for assigning wavelength calibration spectra.
@@ -614,7 +614,7 @@ do3fiber: Process KPNO coude three fiber spectra
   </dl>
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sort">
   <dt><b>sort = <span style="font-family: monospace;">"jd"</span>, group = <span style="font-family: monospace;">"ljd"</span> (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sort' Line='sort = "jd", group = "ljd" (refspectra)' -->
   <dd>Image header keywords to be used as the sorting parameter for selection
@@ -632,7 +632,7 @@ do3fiber: Process KPNO coude three fiber spectra
   parameter UTMIDDLE is computed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_time">
   <dt><b>time = no, timewrap = 17. (refspectra)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='time' Line='time = no, timewrap = 17. (refspectra)' -->
   <dd>Is the sorting parameter a 24 hour time?  If so then the time origin
@@ -644,7 +644,7 @@ do3fiber: Process KPNO coude three fiber spectra
   <p style="text-align:center">-- DISPERSION  CORRECTION PARAMETERS --
   
   </p>
-  <dl>
+  <dl id="l_linearize">
   <dt><b>linearize = yes (dispcor)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='linearize' Line='linearize = yes (dispcor)' -->
   <dd>Interpolate the spectra to a linear dispersion sampling?  If yes the
@@ -654,7 +654,7 @@ do3fiber: Process KPNO coude three fiber spectra
   and the spectral data are not interpolated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_log">
   <dt><b>log = no (dispcor)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='log' Line='log = no (dispcor)' -->
   <dd>Use linear logarithmic wavelength coordinates?  Linear logarithmic
@@ -662,7 +662,7 @@ do3fiber: Process KPNO coude three fiber spectra
   in the logarithm of the wavelength.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_flux">
   <dt><b>flux = yes (dispcor)</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='flux' Line='flux = yes (dispcor)' -->
   <dd>Conserve the total flux during interpolation?  If <i>no</i> the output
@@ -672,18 +672,18 @@ do3fiber: Process KPNO coude three fiber spectra
   simple interpolation.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_environment_parameters">
   <h3>Environment parameters</h3>
-  <!-- BeginSection: 'ENVIRONMENT PARAMETERS' -->
   <p>
   The environment parameter <i>imtype</i> is used to determine the extension
   of the images to be processed and created.  This allows use with any
   supported image extension.  For STF images the extension has to be exact;
   for example <span style="font-family: monospace;">"d1h"</span>.
   </p>
-  <!-- EndSection:   'ENVIRONMENT PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   The <b>do3fiber</b> reduction task is specialized for scattered light
   subtraction, extraction, flat
@@ -1081,11 +1081,9 @@ do3fiber: Process KPNO coude three fiber spectra
   this type of data.  The parameter values can be changed from the
   defaults by using the parameter editor,
   </p>
-  <pre>
-  
-  	cl&gt; epar params
-  
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; epar params
+  </pre></div>
   <p>
   or simple typing <i>params</i>.  The parameter editor can also be
   entered when editing the <b>do3fiber</b> parameters by typing <i>:e
@@ -1377,15 +1375,15 @@ do3fiber: Process KPNO coude three fiber spectra
   parameters are described fully in the help for the task <b>dispcor</b> which
   performs the correction.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  The following example uses artificial data and may be executed
   at the terminal (with IRAF V2.10).  This is also the sequence performed
   by the test procedure <span style="font-family: monospace;">"demos do3fiber"</span>.
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   kp&gt; demos mkdo3fiber
   Creating image demoobj ...
   Creating image demoflat ...
@@ -1449,18 +1447,18 @@ do3fiber: Process KPNO coude three fiber spectra
   demoobj.ms.imh:
   Splot spectrum? (no|yes|NO|YES) (yes):
   &lt;Exit with <span style="font-family: monospace;">'q'</span>&gt;
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_DO3FIBER">
   <dt><b>DO3FIBER V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DO3FIBER' Line='DO3FIBER V2.11' -->
   <dd>The initial arc line identifications is done with the automatic line
   identification algorithm.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_DO3FIBER">
   <dt><b>DO3FIBER V2.10.3</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='DO3FIBER' Line='DO3FIBER V2.10.3' -->
   <dd>The usual output WCS format is <span style="font-family: monospace;">"equispec"</span>.  The image format type to be
@@ -1471,16 +1469,16 @@ do3fiber: Process KPNO coude three fiber spectra
   light subtraction processing option has been added.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   apedit, apfind, approfiles, aprecenter, apresize, apsum, aptrace, apvariance,
   ccdred, center1d, dispcor, fit1d, icfit, identify, observatory,
   onedspec.package, refspectra, reidentify, setairmass, setjd
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'SUMMARY' 'PARAMETERS' 'ENVIRONMENT PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

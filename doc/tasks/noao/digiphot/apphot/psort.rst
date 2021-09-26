@@ -7,21 +7,21 @@ psort: Sort an apphot database
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   psort infiles field
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_infiles">
   <dt><b>infiles</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='infiles' Line='infiles' -->
   <dd>The input APPHOT/DAOPHOT databases to be sorted. The sort is performed in place.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_field">
   <dt><b>field</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='field' Line='field' -->
   <dd>The field to be sorted on. If the input file is a text database,
@@ -34,15 +34,15 @@ psort: Sort an apphot database
   is performed.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ascend">
   <dt><b>ascend = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ascend' Line='ascend = yes' -->
   <dd>Sort in increasing value order.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   PSORT is a simple task which accepts an APPHOT/DAOPHOT database file
   and sorts it in place based on the value of the selected quantity
@@ -59,37 +59,37 @@ psort: Sort an apphot database
   PSORT is a simple CL script which call TXSORT if the input database is
   a text file and TSORT if the input database is a text file.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  Sort the output of the APPHOT task PHOT in increasing order of
   the y coordinate.
   </p>
-  <pre>
-      pt&gt; psort m92.mag.1 YCENTER
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; psort m92.mag.1 YCENTER
+  </pre></div>
   <p>
   2. Sort the output of the DAOPHOT task ALLSTAR in increasing order of
   magnitude.
   </p>
-  <pre>
-      pt&gt; psort m92.al.1 MAG
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  pt&gt; psort m92.al.1 MAG
+  </pre></div>
+  </section>
+  <section id="s_time_requirements">
   <h3>Time requirements</h3>
-  <!-- BeginSection: 'TIME REQUIREMENTS' -->
-  <!-- EndSection:   'TIME REQUIREMENTS' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   ptools.txsort,tables.tsort,ptools.tbsort
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLES' 'TIME REQUIREMENTS' 'BUGS' 'SEE ALSO'  -->
   

@@ -7,24 +7,24 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
 
 .. raw:: html
 
+  <section id="s_summary">
   <h3>Summary</h3>
-  <!-- BeginSection: 'SUMMARY' -->
   <p>
   Sky spectra are shifted and scaled to best subtract sky features from data
   spectra.  This may be done non-interactively to minimize the RMS in some
   region or regions of the data spectra and interactively with a graphically
   search.
   </p>
-  <!-- EndSection:   'SUMMARY' -->
+  </section>
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   skytweak input output cal
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_input">
   <dt><b>input</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='input' Line='input' -->
   <dd>List of input data images containing one dimensional spectra to be
@@ -32,7 +32,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   be wavelength calibrated.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_output">
   <dt><b>output</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='output' Line='output' -->
   <dd>List of output corrected images.  The list must either match the input list
@@ -43,7 +43,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   the task will proceed to the next input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cal">
   <dt><b>cal  </b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cal' Line='cal  ' -->
   <dd>List of sky calibration images.  If a single image is specified it
@@ -51,7 +51,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   images must match the list of input images.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_ignoreaps">
   <dt><b>ignoreaps = no</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='ignoreaps' Line='ignoreaps = no' -->
   <dd>Ignore aperture numbers between the input spectra and the calibration
@@ -61,7 +61,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   for all spectra in the input image.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_xcorr">
   <dt><b>xcorr = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='xcorr' Line='xcorr = yes' -->
   <dd>Cross-correlate each input spectrum with the calibration spectrum to
@@ -69,7 +69,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   the sample regions parameter will be used in the cross-correlation.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_tweakrms">
   <dt><b>tweakrms = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='tweakrms' Line='tweakrms = yes' -->
   <dd>Search for the minimum RMS in the corrected spectrum by adjusting the
@@ -77,7 +77,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   The RMS is minimized in the specified sample regions.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interactive">
   <dt><b>interactive = yes</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interactive' Line='interactive = yes' -->
   <dd>Enter an interactive graphical mode to search for the best shift
@@ -87,7 +87,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   step may be skipped during the execution of the task.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_sample">
   <dt><b>sample = <span style="font-family: monospace;">"*"</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='sample' Line='sample = "*"' -->
   <dd>Sample regions to use for cross-correlation, automatic RMS minimization,
@@ -99,7 +99,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   interactively either with the cursor or with a colon command.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_lag">
   <dt><b>lag = 10</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='lag' Line='lag = 10' -->
   <dd>The cross-correlation lag to use when <i>xcorr</i> = yes.  The lag
@@ -108,7 +108,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   If a value of zero is given then the cross-correlation step is not done.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_shift">
   <dt><b>shift = 0., dshift = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='shift' Line='shift = 0., dshift = 1.' -->
   <dd>The initial shift and shift step in pixels.  This initializes the shift
@@ -119,7 +119,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_scale">
   <dt><b>scale = 1., dscale = 0.2</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='scale' Line='scale = 1., dscale = 0.2' -->
   <dd>The initial scale and scale step.  This initializes the scale
@@ -130,7 +130,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   spectrum.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_offset">
   <dt><b>offset = 1.</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='offset' Line='offset = 1.' -->
   <dd>The interactive search displays three candidate corrected spectra which
@@ -138,7 +138,7 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   to separate the three candidates.  The value may be changed interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_smooth">
   <dt><b>smooth = 1</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='smooth' Line='smooth = 1' -->
   <dd>The displayed candidate corrected spectra are smoothed by a moving
@@ -147,30 +147,30 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   RMS or the output corrected spectra.  The value may be changed interactively.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_cursor">
   <dt><b>cursor = <span style="font-family: monospace;">""</span></b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='cursor' Line='cursor = ""' -->
   <dd>Input cursor for the interactive graphics.  A null value selects the
   graphics cursor otherwise a file of cursor values may be specified.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_answer">
   <dt><b>answer</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='answer' Line='answer' -->
   <dd>Query parameter for responding to the interactive question.  This parameter
   should not be specified on the command line.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_interp">
   <dt><b>interp = poly5</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='interp' Line='interp = poly5' -->
   <dd>The <b>package</b> parameter specifying the interpolation function for shifting
   the calibration spectra to match the input spectra.
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   Input one dimensional spectra are corrected to remove sky features by
   subtracting a shifted and scaled sky calibration spectra.
@@ -183,17 +183,17 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   spectrum to give J(x).  The shifted and scaled calibration function
   is then
   </p>
-  <pre>
-      (1)  J'(x) = J(x+dx) *scale
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (1)  J'(x) = J(x+dx) *scale
+  </pre></div>
   <p>
   where dx is the pixel shift parameter and
   scale is the scale parameter.
   The output corrected spectrum is then computed as
   </p>
-  <pre>
-      (2)  I'(x_i) = I(x_i) - J'(x_i)
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  (2)  I'(x_i) = I(x_i) - J'(x_i)
+  </pre></div>
   <p>
   where I' is the corrected spectrum and I is the input spectrum.  If the
   spectra are dispersion calibrated, possibly with different dispersion
@@ -331,10 +331,10 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   written to the output image.  A brief log output is printed for
   each spectrum.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_cursor_keys_and_colon_commands">
   <h3>Cursor keys and colon commands</h3>
-  <!-- BeginSection: 'CURSOR KEYS AND COLON COMMANDS' -->
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   ? - print help
   a - automatic RMS minimization within sample regions
   c - toggle calibration spectrum display
@@ -355,48 +355,48 @@ skytweak: Sky subtract 1D spectra after tweaking sky spectra
   :offset [value] - print or reset the current offset between spectra
   :sample [value] - print or reset the sample regions
   :smooth [value] - print or reset the smoothing box size
-  </pre>
-  <!-- EndSection:   'CURSOR KEYS AND COLON COMMANDS' -->
+  </pre></div>
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   1.  To interactively search for a best correction with the default
   cross-correlation and tweak steps:
   </p>
-  <pre>
-      cl&gt; skytweak spec001.ms skyspec001.ms spec005.ms
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skytweak spec001.ms skyspec001.ms spec005.ms
+  </pre></div>
   <p>
   2.  To search only for a scale factor:
   </p>
-  <pre>
-      cl&gt; skytweak spec001.ms skyspec001.ms spec005.ms xcorr- dshift=0.
-  </pre>
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skytweak spec001.ms skyspec001.ms spec005.ms xcorr- dshift=0.
+  </pre></div>
   <p>
   3.  To processes a set of spectra non-interactively with the same calibration
   spectrum and to replace the input spectra with the corrected spectra and
   log the processing:
   </p>
-  <pre>
-      cl&gt; skytweak spec* "" skyspec inter- &gt; log
-  </pre>
-  <!-- EndSection:   'EXAMPLES' -->
+  <div class="highlight-default-notranslate"><pre>
+  cl&gt; skytweak spec* "" skyspec inter- &gt; log
+  </pre></div>
+  </section>
+  <section id="s_revisions">
   <h3>Revisions</h3>
-  <!-- BeginSection: 'REVISIONS' -->
-  <dl>
+  <dl id="l_SKYTWEAK">
   <dt><b>SKYTWEAK V2.11</b></dt>
   <!-- Sec='REVISIONS' Level=0 Label='SKYTWEAK' Line='SKYTWEAK V2.11' -->
   <dd>This task is new in this version.
   </dd>
   </dl>
-  <!-- EndSection:   'REVISIONS' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   telluric
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'SUMMARY' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'CURSOR KEYS AND COLON COMMANDS' 'EXAMPLES' 'REVISIONS' 'SEE ALSO'  -->
   

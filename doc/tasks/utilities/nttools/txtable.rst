@@ -7,14 +7,14 @@ txtable: Extract 2-D tables from rows of 3-D tables.
 
 .. raw:: html
 
+  <section id="s_usage">
   <h3>Usage</h3>
-  <!-- BeginSection: 'USAGE' -->
   <p>
   txtable intable outtable
   </p>
-  <!-- EndSection:   'USAGE' -->
+  </section>
+  <section id="s_description">
   <h3>Description</h3>
-  <!-- BeginSection: 'DESCRIPTION' -->
   <p>
   This task extracts one or more rows from a 3-D table and writes each row
   as a 2-D table. The input may be a filename template, including 
@@ -69,16 +69,16 @@ txtable: Extract 2-D tables from rows of 3-D tables.
   keyword ORIG_ROW. This allows 'titable' to put the data back where 
   'txtable' got them from.
   </p>
-  <!-- EndSection:   'DESCRIPTION' -->
+  </section>
+  <section id="s_parameters">
   <h3>Parameters</h3>
-  <!-- BeginSection: 'PARAMETERS' -->
-  <dl>
+  <dl id="l_intable">
   <dt><b>intable [file name list/template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='intable' Line='intable [file name list/template]' -->
   <dd>A list of one or more tables to be expanded. Row/column selectors are supported.
   </dd>
   </dl>
-  <dl>
+  <dl id="l_outtable">
   <dt><b>outtable [file name template]</b></dt>
   <!-- Sec='PARAMETERS' Level=0 Label='outtable' Line='outtable [file name template]' -->
   <dd>Either a directory name or a list of output table names. The standard
@@ -97,36 +97,36 @@ txtable: Extract 2-D tables from rows of 3-D tables.
   <dd>Display names of input and output tables as files are processed ?
   </dd>
   </dl>
-  <!-- EndSection:   'PARAMETERS' -->
+  </section>
+  <section id="s_examples">
   <h3>Examples</h3>
-  <!-- BeginSection: 'EXAMPLES' -->
   <p>
   Extract columns named FLUX and WAVELENGTH from rows 11 to 13 of a 3-D table:
   </p>
-  <pre>
+  <div class="highlight-default-notranslate"><pre>
   cl&gt; txtable "table.tab[c:FLUX,WAVELENGTH][r:row=(11:13)]" tableout
-  </pre>
+  </pre></div>
   <p>
   This will generate three tables named <span style="font-family: monospace;">"tableout_r0011"</span>, <span style="font-family: monospace;">"tableout_r0012"</span>
   and <span style="font-family: monospace;">"tableout_r0013"</span>.
   </p>
-  <!-- EndSection:   'EXAMPLES' -->
+  </section>
+  <section id="s_bugs">
   <h3>Bugs</h3>
-  <!-- BeginSection: 'BUGS' -->
-  <!-- EndSection:   'BUGS' -->
+  </section>
+  <section id="s_references">
   <h3>References</h3>
-  <!-- BeginSection: 'REFERENCES' -->
   <p>
   This task was written by I. Busko.
   </p>
-  <!-- EndSection:   'REFERENCES' -->
+  </section>
+  <section id="s_see_also">
   <h3>See also</h3>
-  <!-- BeginSection: 'SEE ALSO' -->
   <p>
   titable, selectors
   </p>
   
-  <!-- EndSection:    'SEE ALSO' -->
+  </section>
   
   <!-- Contents: 'NAME' 'USAGE' 'DESCRIPTION' 'PARAMETERS' 'EXAMPLES' 'BUGS' 'REFERENCES' 'SEE ALSO'  -->
   

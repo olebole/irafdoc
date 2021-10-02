@@ -622,28 +622,45 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix 1 fi+
   
+  ... display the image
   
-  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant \<br>
+  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant \
       skyvalue=0.0 display=imdg mkpolygon+
   
+  ... type ? to print a help page
   
+  ... move image cursor to a region of interest
   
+  ... type g to enter the polygon definition menu
+  ... use the image cursor and spbar key to mark the vertices of
       the polygonal aperture
+  ... mark each vertex only once, POLYPHOT will close the polygon
       for you
+  ... type q to quit the polygon definition menu
   
+  ... type the v key to verify the parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... move the image cursor to the objects of interest and tap
       the space bar, the polygon will be marked on the image
       display
   
+  ... type g to enter the polygon definition menu
+  ... use the image cursor and spbar key to mark the vertices of
       the polygonal aperture
+  ... mark each vertex only once, POLYPHOT will close the polygon
       for you
+  ... type q to quit the polygon definition menu
   
+  ... move the image cursor to the objects of interest and tap
       the space bar, the polygon will be marked on the image
       display
   
+  ... a one line summary of the fitted parameters will appear on the
       standard output for each star measured
   
+  ... the output will appear in ypix.ply.1
   </pre></div>
   <p>
   2.  Repeat the previous example but use a contour plot and the graphics
@@ -654,40 +671,62 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   <div class="highlight-default-notranslate"><pre>
   ap&gt; show stdimcur
   
+  ... determine the default value of stdimcur
   
   ap&gt; set stdimcur = stdgraph
   
+  ... define the image cursor to be the graphics cursor
   
   ap&gt; contour dev$ypix
   
+  ... create a contour plot of dev$ypix
   
   ap&gt; contour dev$ypix &gt;G ypix.plot1
   
+  ... store the contour plot of dev$ypix in the file ypix.plot1
   
-  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant \<br>
+  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant \
       skyvalue=0.0 display=stdgraph mkpolygon+
   
+  ... type ? to print a help page
   
+  ... type the v key to verify the parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... move image cursor to a region of interest
+  ... type g to enter the polygon definition menu
+  ... use the image cursor and spbar key to mark the vertices of
       the polygonal aperture
+  ... mark each vertex only once, POLYPHOT will close the polygon
       for you
+  ... type q to quit the polygon definition menu
   
+  ... move the image cursor to the objects of interest and tap
       the space bar, the polygon will be marked on the contour
       plot
   
+  ... move image cursor to a region of interest
+  ... type g to enter the polygon definition menu
+  ... use the image cursor and spbar key to mark the vertices of
       the polygonal aperture
+  ... mark each vertex only once, POLYPHOT will close the polygon
       for you
+  ... type q to quit the polygon definition menu
   
+  ... move the image cursor to the objects of interest and tap
       the space bar, the polygon will be marked on the image
       display
   
+  ... a one line summary of the fitted parameters will appear on the
       standard output for each star measured and the polygons will
       be drawn on the display
   
+  ... full output will appear in the text file ypix.ply.2
   
   ap&gt; reset stdimcur = &lt;default&gt;
   
+  ... reset stdimcur to its default value
   </pre></div>
   <p>
   3. Setup and run POLYPHOT interactively on a list of objects created with
@@ -696,29 +735,43 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix 1
   
+  ... display the image
   
   ap&gt; polymark dev$ypix display=imdg
   
+  ... type g to enter the polygon definition menu
+  ... mark each vertex with the spbar
+  ... mark each vertex only once, POLYPHOT will close the
       polygon for you
+  ... type q to quit the polygon definition menu
   
+  ... move the cursor to the regions of interest and tap
       the space bar, the polygon will be marked on the image
       display
   
+  ... the polygon and polygon centers will be written to the text
       files ypix.ver.1 and ypix.coo.1 respectively
   
+  ... type q to quit and q again to confirm the quit
   
   ap&gt; display dev$ypix 2
   
+  ... redisplay the image
   
-  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant skyvalue=0.0 \<br>
+  ap&gt; polyphot dev$ypix calgorithm=none salgorithm=constant skyvalue=0.0 \
       coords=default polygon=default display=imdg mkpolygon+
   
+  ... type n to measure the first polygon in the list
   
+  ... if everything looks okay type l to measure the rest of the stars
   
+  ... a one line summary of results will appear on the standard output
       for each star measured and the aperture will be drawn on the
       image display
   
+  ... type q to quit and q again to confirm the quit
   
+  ... the output will appear in ypix.ply.3
   </pre></div>
   <p>
   4. Repeat example 3 but work on a section of the input image while
@@ -727,33 +780,48 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix[150:450,150:450] 1
   
+  ... display the image
   
   p&gt; polymark dev$ypix[150:450,150:450] wcsout=tv display=imdg
   
+  ... type g to enter the polygon definition menu
+  ... mark each vertex with the spbar
+  ... mark each vertex only once, POLYPHOT will close the
       polygon for you
+  ... type q to quit the polygon definition menu
   
+  ... move the cursor to the regions of interest and tap
       the space bar, the polygon will be marked on the image
       display
   
+  ... the polygon and polygon centers will be written to the text
       files ypix.ver.1 and ypix.coo.1 respectively
   
+  ... type q to quit and q again to confirm the quit
   
   ap&gt; display dev$ypix[150:450,150:450] 2
   
+  ... redisplay the image
   
-  ap&gt; polyphot dev$ypix[150:450,150:450] calgorithm=none \<br>
-      salgorithm=constant skyvalue=0.0 coords=default polygon=default \<br>
+  ap&gt; polyphot dev$ypix[150:450,150:450] calgorithm=none \
+      salgorithm=constant skyvalue=0.0 coords=default polygon=default \
       display=imdg mkpolygon+ wcsin=tv wcsout=tv
   
+  ... type n to measure the first polygon in the list
   
+  ... if everything looks okay type l to measure the rest of the stars
   
+  ... a one line summary of results will appear on the standard output
       for each star measured and the aperture will be drawn on the
       image display
   
+  ... type q to quit and q again to confirm the quit
   
+  ... the output will appear in ypix.ply.4
   
   ap&gt; pdump ypix.ply.4 xc,yc yes | tvmark 2 STDIN col=204
   
+  ... mark the centers of the polygons on the display
   </pre></div>
   <p>
   5. Run POLYPHOT in batch mode using a polygon and coordinate file and the
@@ -762,6 +830,7 @@ polyphot: Measure magnitudes inside a list of polygonal regions
   <div class="highlight-default-notranslate"><pre>
   ap&gt; polyphot dev$ypix coords=default polygon=default inter- verify+
   
+  ... output will appear in ypix.ply.5
   </pre></div>
   </section>
   <section id="s_timings">

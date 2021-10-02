@@ -417,7 +417,7 @@ telluric: Remove telluric features from 1D spectra
   4.  To apply the simplest scaling by the ratio of the airmasses alone:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; telluric spec* tel//spec* calspec inter- xcorr- tweak- inter- \<br>
+  cl&gt; telluric spec* tel//spec* calspec inter- xcorr- tweak- inter- \
   &gt;&gt;&gt; scale=1. shift=0.
   </pre></div>
   </section>

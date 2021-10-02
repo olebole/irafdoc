@@ -79,7 +79,7 @@ showcap: Show and decode graphcap entries
   </p>
   <div class="highlight-default-notranslate"><pre>
   * LT 3
-            program:  LT=\E/(1$0)1d\E`($1-5)0d\E(1_+.$D)0d\E`($$:\<br>
+            program:  LT=\E/(1$0)1d\E`($1-5)0d\E(1_+.$D)0d\E`($$:\
             encoding: ^[/0d^[b
   </pre></div>
   <p>

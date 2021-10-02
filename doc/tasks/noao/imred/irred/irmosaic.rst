@@ -200,7 +200,7 @@ irmosaic: Mosaic an ordered list of images onto a grid
   between each subraster.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; irmosaic @imlist mosaic mosaic.dat nxsub=8 nysub=8 \<br>
+  pr&gt; irmosaic @imlist mosaic mosaic.dat nxsub=8 nysub=8 \
       nxoverlap=-1 nyoverlap=-1 corner="ur" direct="column"
   </pre></div>
   <p>
@@ -210,8 +210,8 @@ irmosaic: Mosaic an ordered list of images onto a grid
   and are to be replaced in the output image with an unknown value of -1.0.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; irmosaic @imlist mosaic mosaic.dat nxsub=8 nysub=8 \<br>
-      nxoverlap=-1 nyoverlap=-1 corner="ur" direct="column"\<br>
+  pr&gt; irmosaic @imlist mosaic mosaic.dat nxsub=8 nysub=8 \
+      nxoverlap=-1 nyoverlap=-1 corner="ur" direct="column"\
       null_input="3,9", oval=-1.0
   </pre></div>
   </section>

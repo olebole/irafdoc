@@ -201,7 +201,7 @@ frmode: Quantize and ring modal filter a list of 1D or 2D images
   inner radius of 4 pixels and a width of 1 pixel.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; frmode input output 4.0 5.0 hmin=-32768 hmax=32767 zmin=-32768. \<br>
+  im&gt; frmode input output 4.0 5.0 hmin=-32768 hmax=32767 zmin=-32768. \
   &gt;&gt;&gt; zmax=32767.
   </pre></div>
   <p>
@@ -223,7 +223,7 @@ frmode: Quantize and ring modal filter a list of 1D or 2D images
   of inner radius 5.0 and width 0.5 pixels.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; frmode input output 5.0 0.5 unmap- hmin=0 hmax=1000 zmin=0. \<br>
+  im&gt; frmode input output 5.0 0.5 unmap- hmin=0 hmax=1000 zmin=0. \
   &gt;&gt;&gt; zmax=1.
   </pre></div>
   <p>
@@ -232,7 +232,7 @@ frmode: Quantize and ring modal filter a list of 1D or 2D images
   filter of outer radius 5.0.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; frmode dev$pix output 0.0 5.0 hmin=-1 hmax=20000 zmin=-1.0 \<br>
+  im&gt; frmode dev$pix output 0.0 5.0 hmin=-1 hmax=20000 zmin=-1.0 \
   &gt;&gt;&gt; zmax=20000 zloreject=5 zhireject=20000
   </pre></div>
   </section>

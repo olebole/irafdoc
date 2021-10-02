@@ -1076,23 +1076,20 @@ splot: Preliminary spectral plot/analysis
   gradient leads to the correct solution rather than an incorrect local
   minimum in the chi square.  The initial values are determined as follows:
   </p>
-  <p>
-  1. If the lines are input from a data file then those values in the
-  file are used.  Missing information is determined as below.
-  </p>
-  <p>
-  2. The line centers are those specified by the user either by marking
-  with the cursor, entering the wavelenths, for read from a file.
-  </p>
-  <p>
-  3. The initial widths are obtained by dividing the width of the
-  marked fitting region by the number of lines and then dividing this
-  width by a factor depending on the profile type.
-  </p>
-  <p>
-  4. The initial peak intensities are the data values at the given line
-  centers with the marked continuum subtracted.
-  </p>
+  <div class="highlight-default-notranslate"><pre>
+  1.  If the lines are input from a data file then those values
+      in the file are used.  Missing information is determined
+      as below.
+  2.  The line centers are those specified by the user
+      either by marking with the cursor, entering the wavelenths,
+      for read from a file.
+  3.  The initial widths are obtained by dividing the width of
+      the marked fitting region by the number of lines and then
+      dividing this width by a factor depending on the profile
+      type.
+  4.  The initial peak intensities are the data values at the
+      given line centers with the marked continuum subtracted.
+  </pre></div>
   <p>
   Note that each time a new fitting option is specified the initial parameters
   are those from the previous fits.

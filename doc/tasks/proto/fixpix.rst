@@ -169,6 +169,7 @@ fixpix: Fix bad pixels by linear interpolation from nearby pixels
   cl&gt; fixpix spec00*h ccdmask linterp=1 v+
   FIXPIX: image spec001.imh with mask ccdmask
   FIXPIX: image spec002.imh with mask ccdmask
+  ...
   </pre></div>
   <p>
   3.  A text file of bad pixels is used and the modified pixels are printed

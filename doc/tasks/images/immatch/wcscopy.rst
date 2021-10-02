@@ -78,7 +78,7 @@ wcscopy: Copy the wcs from one image to another
   are identical to the world coordinate system of the reference image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; xregister @inlist refimage [200:400,200:400] shifts \<br>
+  cl&gt; xregister @inlist refimage [200:400,200:400] shifts \
       output=@outlist xwindow=21 ywindow=21
   cl&gt; wcscopy @outlist refimage
   </pre></div>

@@ -454,12 +454,12 @@ fitpsf: Model the stellar psf with an analytic function
   
   image  xinit  yinit  id  coords  lid
       xcenter  ycenter  xsigma  ysigma  rot  amplitude  sky
-      excenter eycenter exsigma eysigma erot eamplitude esky  ier\<br>
+      excenter eycenter exsigma eysigma erot eamplitude esky  ier\
       error
   
   image  xinit  yinit  id  coords  lid
       xcenter  ycenter  rgyrat  ellip  pa amplitude  sky
-      excenter eycenter ergyrat eellip epa eamplitude esky  ier\<br>
+      excenter eycenter ergyrat eellip epa eamplitude esky  ier\
       error
   </pre></div>
   <p>
@@ -509,20 +509,34 @@ fitpsf: Model the stellar psf with an analytic function
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix 1 fi+
   
+  ... display the image
   
   ap&gt; fitpsf dev$ypix 11 noise=constant
   
+  ... type ? to see the help screen
   
+  ... move the image cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter maximum radius in pixels of the radial profile or type
       CR to accept the default value
+  ... set the fitting box width, fwhmpsf, and sigma using the graphics
       cursor and the stellar radial profile plot
+  ... typing &lt;CR&gt; leaves everything at the default value
+  ... type q to quit the setup menu
   
+  ... type the v key to verify the parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... move the image cursor to the stars of interest and tap
       the space bar
   
+  ... a one line summary of the fitted parameters will appear on the
       standard output for each star measured
   
+  ... type q to quit and another q to confirm the quit
   
+  ... the full output will appear in ypix.psf.1
   </pre></div>
   <p>
   2. Compute the radial Gaussian function  parameters for a few  stars in 
@@ -533,27 +547,44 @@ fitpsf: Model the stellar psf with an analytic function
   <div class="highlight-default-notranslate"><pre>
   ap&gt; show stdimcur
   
+  ... save the current value of stdimcur
   
   ap&gt; set stdimcur = stdgraph
   
+  ... define the image cursor to be the graphics cursor
   
   ap&gt; contour dev$ypix &gt;G ypix.plot1
   
+  ... store the contour plot of dev$ypix in the file ypix.plot1
   
   ap&gt; fitpsf dev$ypix 11.0 noise=constant display=stdgraph
   
+  ... type ? to get a short help page on the screen
   
+  ... move the graphics cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter the maximum radius in pixels of the radial profile or
       type CR to accept the default value
+  ... set the fitting box width, fwhmpsf, and sigma using the graphics
       cursor and the stellar radial profile plot
+  ... typing &lt;CR&gt; leaves everything at the default value
+  ... type q to quit the setup menu
   
+  ... type the v key to verify critical parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... retype :.read ypix.plot1 to reload the contour plot
   
+  ... move the graphics cursor to the stars of interest and tap
       the space bar
   
+  ... a one line summary of the fitted parameters will appear on the
       standard output for each star measured
   
+  ... type q to quit and q again to confirm the quit
   
+  ... full output will appear in the text file ypix.psf.2
   </pre></div>
   <p>
   3. Setup and run FITPSF interactively on a list of objects temporarily
@@ -563,21 +594,30 @@ fitpsf: Model the stellar psf with an analytic function
   <div class="highlight-default-notranslate"><pre>
   ap&gt; daofind dev$ypix fwhmpsf=2.6 sigma=25.0 verify-
   
+  ... make a coordinate list
   
+  ... the output will appear in the text file ypix.coo.1
   
   ap&gt; fitpsf dev$ypix 11.0 fwhmpsf=2.6 noise=constant coords=ypix.coo.1
   
+  ... type ? for optional help
   
+  ... move the graphics cursor to the stars and tap space bar
   
                           or
   
+  ... select stars from the input coordinate list with m / :m #
       and measure with spbar
   
+  ... measure stars selected from the input coordinate list
       with n / n #
   
+  ... a one line summary of results will appear on the standard output
       for each star measured
   
+  ... type q to quit and q again to confirm the quit
   
+  ... the output will appear in ypix.psf.3 ...
   </pre></div>
   <p>
   4. Display and fit some stars in an image section and write the output
@@ -587,11 +627,15 @@ fitpsf: Model the stellar psf with an analytic function
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix[150:450,150:450] 1
   
+  ... display the image section
   
   ap&gt; fitpsf dev$ypix[150:450,150:450] 11.0 noise=constant wcsout=tv
   
+  ... move cursor to stars and type spbar
   
+  ... type q to quit and q again to confirm quit
   
+  ... output will appear in ypix.psf.4
   
   ap&gt; pdump ypix.psf.4 xc,yc yes | tvmark 1 STDIN col=204
   </pre></div>
@@ -600,9 +644,10 @@ fitpsf: Model the stellar psf with an analytic function
   saved parameters. Use uniform weighting. Verify the critical parameters.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ap&gt; fitpsf dev$ypix 11.0 coords=ypix.coo.1 noise=constant verify+ \<br>
+  ap&gt; fitpsf dev$ypix 11.0 coords=ypix.coo.1 noise=constant verify+ \
       inter-
   
+  ... output will appear in ypix.psf.5 ...
   </pre></div>
   <p>
   6. Repeat example 5 but assume that the input coordinate are ra and dec
@@ -614,14 +659,18 @@ fitpsf: Model the stellar psf with an analytic function
   
   ap&gt; rimcursor wcs=world &gt; radec.coo
   
+  ... move to selected stars and type any key
   
+  ... type ^Z to quit
   
-  ap&gt; fitpsf dev$ypix 11.0 coords=radec.coo noise=constant \<br>
+  ap&gt; fitpsf dev$ypix 11.0 coords=radec.coo noise=constant \
       wcsin=world verify- inter- &amp;
   
+  ... output will appear in ypix.psf.6
   
   ap&gt; pdump ypix.psf.6 xc,yc yes | tvmark 1 STDIN col=204
   
+  ... mark the stars on the display
   </pre></div>
   <p>
   7. Run FITPSF interactively without using the image display.
@@ -629,27 +678,43 @@ fitpsf: Model the stellar psf with an analytic function
   <div class="highlight-default-notranslate"><pre>
   ap&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   ap&gt; set stdimcur = text
   
+  ... set the image cursor to the standard input
   
   ap&gt; fitpsf dev$ypix 11.0 coords=ypix.coo.1 noise=constant
   
+  ... type ? for optional help
   
+  ... type :m 3 to set the initial coordinates to those of the
       third star in the list
   
+  ... type i to enter the interactive setup menu
+  ... enter the maximum radius in pixels for the radial profile or
       accept the default with a CR
+  ... type v to enter the default menu
+  ... set the fwhmpsf, sigma, and fitting box size  using the
       graphics cursor and the stellar radial profile plot
+  ... typing &lt;CR&gt; after the prompt leaves the parameter at its default
       value
+  ... type q to quit the setup menu
   
+  ... type r to rewind the coordinate list
   
+  ... type l to measure all the stars in the coordinate list
   
+  ... a one line summary of the answers will appear on the standard
       output for each star measured
   
+  ... type q to quit followed by q to confirm the quit
   
+  ... full output will appear in the text file ypix.psf.7
   
   ap&gt; set stdimcur = &lt;default&gt;
   
+  ... reset the value of stdimcur
   </pre></div>
   <p>
   8. Use an image cursor command file to drive the FITPSF task. The cursor command
@@ -670,6 +735,7 @@ fitpsf: Model the stellar psf with an analytic function
   
   ap&gt; fitpsf dev$ypix 11.0 icommands=cmdfile verify-
   
+  ... full output will appear in ypix.psf.8
   </pre></div>
   </section>
   <section id="s_bugs">

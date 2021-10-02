@@ -79,7 +79,7 @@ mkttydata: Build cache for termcap/graphcap device entries
   be in the dev directory.
   </p>
   <div class="highlight-default-notranslate"><pre>
-                  <i>termcap_file</i>      <i>output_file</i>
+                  <i>termcap_file</i>     <i>output_file</i>
   
   termcap         dev$termcap     dev$cachet.dat
   graphcap        dev$graphcap    dev$cacheg.dat

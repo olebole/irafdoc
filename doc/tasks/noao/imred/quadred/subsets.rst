@@ -84,9 +84,9 @@ subsets: Description of CCD subsets
   <span style="font-family: monospace;">"ccdlist *.imh"</span> to cause all filters to be checked, the subset file contains:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  <span style="font-family: monospace;">'2'</span>     2
-  <span style="font-family: monospace;">'5'</span>     5
-  <span style="font-family: monospace;">'3'</span>     3
+  <span style="font-family: monospace;">'2'</span>        2
+  <span style="font-family: monospace;">'5'</span>        5
+  <span style="font-family: monospace;">'3'</span>        3
   </pre></div>
   <p>
   The order reflects the order in which the filters were encountered.
@@ -95,9 +95,9 @@ subsets: Description of CCD subsets
   </p>
   <div class="highlight-default-notranslate"><pre>
   # Sample translation file.
-  <span style="font-family: monospace;">'2'</span>     U
-  <span style="font-family: monospace;">'3'</span>     B
-  <span style="font-family: monospace;">'4'</span>     V
+  <span style="font-family: monospace;">'2'</span>        U
+  <span style="font-family: monospace;">'3'</span>        B
+  <span style="font-family: monospace;">'4'</span>        V
   </pre></div>
   <p>
   (This is only an example and does not mean these are standard filters.)

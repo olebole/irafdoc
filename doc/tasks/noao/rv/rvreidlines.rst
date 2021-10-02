@@ -486,7 +486,7 @@ rvreidlines: Reidentify spectral lines and measure radial velocities
   lsgal[90,*]    6/7    6/6      0.459       0.568     40.5   33.2
   lsgal[95,*]    6/7    6/6      0.926        1.14     78.5   65.5
   lsgal[100,*    5/7    5/5      0.696        0.86     59.1   44.2
-  rv&gt; match Vobs logfile | fields "" 2,6,11 | \<br>
+  rv&gt; match Vobs logfile | fields "" 2,6,11 | \
   &gt;&gt;&gt; graph point- mark=vebar szmark=-1
   </pre></div>
   <p>

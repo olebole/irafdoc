@@ -794,12 +794,15 @@ skyctran: Transform coordinates from one celestial wcs to another
   
   # Input file: STDIN  Output file: STDOUT
   
+  ... not including proper motion
   13:28:43.2 27:18:01.1
   13:28:43.2 27:18:01.1 13:31:03.855  27:02:35.13
   
+  ... including proper motion
   13:28:43.2 27:18:01.1 .36 -0.16
   13:28:43.2 27:18:01.1 .36 -0.16 13:31:05.215  27:02:27.37
   
+  ... change the output coordinate system to fk5 1975.0 and repeat
   :os fk5 1975.0
   :os
   
@@ -812,6 +815,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   13:28:43.2 27:18:01.1 .36 -0.16
   13:28:43.2 27:18:01.1 .36 -0.16 13:29:54.244  27:10:13.80
   
+  ... type EOF to quit
   &lt;EOF&gt;
   </pre></div>
   <p>
@@ -872,7 +876,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   observation is 1987.25.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0 \<br>
+  cl&gt; skyctran inlist outlist "b1950.0 1987.25" j2000.0 \
       transform+
   </pre></div>
   <p>
@@ -882,7 +886,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   and equinoxes are the same no precession is performed.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skyctran inlist outlist 2000.0 2000.0 olngunits=degrees \<br>
+  cl&gt; skyctran inlist outlist 2000.0 2000.0 olngunits=degrees \
       transform+
   </pre></div>
   <p>
@@ -901,7 +905,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   coordinates in the output file.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skyctran inlist outlist j2000 "ecliptic 2449879.5" \<br>
+  cl&gt; skyctran inlist outlist j2000 "ecliptic 2449879.5" \
       transform+
   </pre></div>
   <p>
@@ -955,7 +959,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   logical pixel coordinates as input to the task.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skyctran inlist outlist "image1 logical"\<br>
+  cl&gt; skyctran inlist outlist "image1 logical"\
       "image2 logical"
   </pre></div>
   <p>
@@ -963,7 +967,7 @@ skyctran: Transform coordinates from one celestial wcs to another
   of 100 tie points.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skyctran grid outlist "image1 logical"\<br>
+  cl&gt; skyctran grid outlist "image1 logical"\
       "image2 logical"
   </pre></div>
   </section>

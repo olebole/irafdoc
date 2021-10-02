@@ -735,7 +735,7 @@ psf: Compute the point spread function
   
       ... answer will appear in ypix.coo.1
   
-  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \
       apertures = 5.0
   
       ... answer verify prompts
@@ -748,7 +748,7 @@ psf: Compute the point spread function
   
       ... display the image
   
-  da&gt; psf dev$ypix default "" default default default psfrad=9.0 \<br>
+  da&gt; psf dev$ypix default "" default default default psfrad=9.0 \
       fitrad=3.0 mkstars=yes display=imdr
   
       ... verify the critical parameters
@@ -782,19 +782,23 @@ psf: Compute the point spread function
   created in the previous example.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; psf dev$ypix default default default default default \<br>
+  da&gt; psf dev$ypix default default default default default \
       psfrad=9.0 fitrad=3.0 interactive- plotfile=psf.plots
   
+  ... the output will appear in ypix.psf.2, ypix.psg.2, and
       ypix.pst.2
   
   da&gt; gkidir psf.plots
   
+  ... list the plots created by psf
   
   da&gt; gkiextract psf.plots 1 | stdgraph
   
+  ... display the surface plots of the first psf star
   
   da&gt; seepsf ypix.psf.2 ypixpsf
   
+  ... convert the sampled PSF look-up table to a PSF image
   </pre></div>
   <p>
   3. Setup and run PSF interactively without using the image display cursor.
@@ -804,35 +808,52 @@ psf: Compute the point spread function
   <div class="highlight-default-notranslate"><pre>
   da&gt; show stdimcur
   
+  ... store the default value
   
   da&gt; set stdimcur = text
   
+  ... define the image cursor to be the standard input
   
   da&gt; epar psf
   
+  ... edit the psf parameters
   
+  ... move to the datapars line and type :e edit the data dependent
       parameters, type :q to quit the datapars menu
   
+  ... move to the daopars line and type :e edit the daophot fitting
       parameters, type :q to quit the daopars menu
   
+  ... finish editing the psf parameters
   
-  da&gt; psf dev$ypix default "" default default default \<br>
+  da&gt; psf dev$ypix default "" default default default \
       plottype=radial
   
+  ... verify critical parameters
   
+  ... type :a # where # stands for the id number of the star,
       a plot of the stellar data appears
   
+  ... type a to accept the star, d to reject it
   
+  ... repeat for all the PSF stars
   
+  ... type l to list the psf stars
   
+  ... type f to fit the PSF
   
+  ... type :s # where # stands for the id of the psf star, a plot
       of the model residuals appears
   
+  ... type w to save the PSF
   
+  ... type q to quit PSF and q again to confirm the quit
   
+  ... the output will appear in ypix.psf.3, ypix.pst.3, ypix.psg.3
   
   da&gt; set stdimcur = stdimage
   
+  ... reset the image cursor
   </pre></div>
   <p>
   4. Run PSF in non-interactive mode using an image cursor  command file of
@@ -848,12 +869,15 @@ psf: Compute the point spread function
       w
       q
   
-  da&gt; psf dev$ypix default "" default default default  \<br>
+  da&gt; psf dev$ypix default "" default default default  \
       icommands=icmds
   
+  ... verify the critical parameters
   
+  ... the PSF will be constructed from stars 106, 24, 16, 68
       in the input photometry file
   
+  ... the output will appear in ypix.psf.4, ypix.pst.4, ypix.psg.4
   </pre></div>
   </section>
   <section id="s_time_requirements">

@@ -168,7 +168,7 @@ crnebula: Detect and replace cosmic rays in nebular data
   <div class="highlight-default-notranslate"><pre>
   cl&gt; display obj001 1                  # Display in first frame
   cl&gt; # Determine output image, cosmic ray mask, and residual images
-  cl&gt; crnebula obj001 crobj001 crmask=mask001 resid=res001\<br>
+  cl&gt; crnebula obj001 crobj001 crmask=mask001 resid=res001\
   &gt;&gt;&gt; rmedresid=rmed001 var0=2.78 var1=0.34
   cl&gt; display crobj001 2                # Display final image
   cl&gt; display res001 3 zs- zr- z1=-5 z2=5  # Display residuals

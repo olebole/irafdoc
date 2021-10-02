@@ -84,10 +84,7 @@ wtextimage: Convert an IRAF image to a text file
   linelength of 80 is used; an output format is specified.  The header portion 
   of the output text is as follows:
   </p>
-  <dl>
-  <dt><b></b></dt>
-  <!-- Sec='EXAMPLES' Level=0 Label='' Line=' ' -->
-  <dd><pre>
+  <div class="highlight-default-notranslate"><pre>
   BITPIX  =                    8  /  8-bit ASCII characters
   NAXIS   =                    2  /  Number of Image Dimensions
   NAXIS1  =                   10  /  Length of axis
@@ -118,8 +115,6 @@ wtextimage: Convert an IRAF image to a text file
   F2POS   =                    0  / filter bolt II position
   END
   </pre></div>
-  </dd>
-  </dl>
   <p>
                                                                                   
   2. Write a series of text files from the IRAF images having root name

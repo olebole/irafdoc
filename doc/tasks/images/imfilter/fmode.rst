@@ -178,7 +178,7 @@ fmode: Quantize and box modal filter a list of 1D or 2D images
   1. Modal filter a 16 bit CCD image using a 5 by 5 window.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; fmode input output 5 5 hmin=-32768 hmax=32767 zmin=-32768. \<br>
+  im&gt; fmode input output 5 5 hmin=-32768 hmax=32767 zmin=-32768. \
   &gt;&gt;&gt; zmax=32767.
   </pre></div>
   <p>
@@ -198,7 +198,7 @@ fmode: Quantize and box modal filter a list of 1D or 2D images
   of .003.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; fmode input output 5 5  hmin=0 hmax=1000 zmin=0. \<br>
+  im&gt; fmode input output 5 5  hmin=0 hmax=1000 zmin=0. \
   &gt;&gt;&gt; zmax=1.
   </pre></div>
   <p>
@@ -206,7 +206,7 @@ fmode: Quantize and box modal filter a list of 1D or 2D images
   greater than 19935 from the mode computing process.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; fmode dev$pix output 5 5 hmin=-1 hmax=20000 zmin=-1.0 \<br>
+  im&gt; fmode dev$pix output 5 5 hmin=-1 hmax=20000 zmin=-1.0 \
   &gt;&gt;&gt; zmax=20000 zloreject=5 zhireject=20000
   </pre></div>
   </section>

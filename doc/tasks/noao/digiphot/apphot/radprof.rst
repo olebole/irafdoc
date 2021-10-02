@@ -626,23 +626,38 @@ radprof: Compute the stellar radial profile of a list of stars
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix 1 fi+
   
+  ... display the image
   
   ap&gt; radprof dev$ypix 7.0 0.5
   
+  ... type ? to print a short help page
   
+  ... move the image cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter maximum radius in pixels of the radial profile or
       CR to accept the default value
+  ... set the fwhmpsf, centering radius, inner and outer sky
       annuli, apertures, sigma, profile radius and step size
       using the graphics cursor and the stellar radial profile
       plot
+  ... typing &lt;CR&gt; leaves everything at the default value
+  ... type q to quit the setup menu
   
+  ... type the v key to verify the parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... move the image cursor to the star of interest and tap
       the space bar
   
+  ... type :order 3 to change the spline order and see if the
        fit improves, if it does type w
   
+  ... a radial profile plot will appear on the graphics terminal
   
+  ... type q to quit and q to confirm the quit
   
+  ... by default radprof does not create an output file
   </pre></div>
   <p>
   2. Compute the radial profiles for a few  stars in dev$ypix using a contour
@@ -654,31 +669,50 @@ radprof: Compute the stellar radial profile of a list of stars
   <div class="highlight-default-notranslate"><pre>
   ap&gt; show stdimcur
   
+  ... determine the default value of stdimcur
   
   ap&gt; set stdimcur = stdgraph
   
+  ... define the image cursor to be the graphics cursor
   
   ap&gt; contour dev$ypix
   
+  ... make a contour plot of dev$ypix
   
   ap&gt; contour dev$ypix  &gt;G ypix.plot1
   
+  ... store the contour plot of dev$ypix in ypix.plot1
   
   ap&gt; radprof dev$ypix 7.0 0.5
   
+  ... type ? to print the help page
   
+  ... move graphics cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter maximum radius in pixels of the radial profile or
       hit CR to accept the default value
+  ... set the fwhmpsf, centering radius, inner and outer sky annuli,
       apertures, sigma, profile radius and step size using the
       graphics cursor and the stellar radial profile plot
+  ... typing &lt;CR&gt; leaves everything at the default value
+  ... type q to quit the setup menu
   
+  ... type the v key to verify the parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... type :.read ypix.plot1 to reload the contour plot
   
+  ... move the graphics cursor to the star of interest and tap
       the space bar
   
+  ... a radial profile plot will appear on the graphics terminal
   
+  ... repeat the above sequence for each additional star
   
+  ... type q to quit and q to confirm the quit
   
+  ... by default radprof does not create an output file
   </pre></div>
   <p>
   3. Setup and run RADPROF interactively on a list of objects temporarily
@@ -688,22 +722,31 @@ radprof: Compute the stellar radial profile of a list of stars
   <div class="highlight-default-notranslate"><pre>
   ap&gt; daofind dev$ypix fwhmpsf=2.6 sigma=25.0 verify-
   
+  ... make a coordinate list
   
+  ... the output will appear in the text file ypix.coo.1
   
-  ap&gt; radprof dev$ypix 7.0 0.5 fwhmpsf=2.6 sigma=5.0 cbox=7.0 \<br>
+  ap&gt; radprof dev$ypix 7.0 0.5 fwhmpsf=2.6 sigma=5.0 cbox=7.0 \
       annulus=10.0 dannulus=5.0 apertures=5.0 coords=ypix.coo.1
   
+  ... type ? for optional help
   
+  ... move the graphics cursor to the stars and tap space bar
   
                           or
   
+  ... select stars from the input coordinate list with m / :m #
       and measure with spbar
   
+  ... measure stars selected from the input coordinate list
       with n / n #
   
+  ... a one line summary of results will appear on the standard output
       for each star measured
   
+  ... type q to quit and q again to confirm the quit
   
+  ... by default radprof does not create an output file
   </pre></div>
   <p>
   4. Display and fit some stars in an image section and write the output
@@ -712,12 +755,16 @@ radprof: Compute the stellar radial profile of a list of stars
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix[150:450,150:450] 1
   
+  ... display the image section
   
-  ap&gt; radprof dev$ypix[150:450,150:450] 7.0 0.5 output=default \<br>
+  ap&gt; radprof dev$ypix[150:450,150:450] 7.0 0.5 output=default \
       wcsout=tv
   
+  ... move cursor to stars and type spbar
   
+  ... type q to quit and q again to confirm quit
   
+  ... output will appear in ypix.prf.1
   
   ap&gt; pdump ypix.prf.1 xc,yc yes | tvmark 1 STDIN col=204
   </pre></div>
@@ -726,15 +773,18 @@ radprof: Compute the stellar radial profile of a list of stars
   saved parameters. Save the text and plot output. 
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ap&gt; radprof dev$ypix 7. 0.5 coords=ypix.coo.1 output="default" \<br>
+  ap&gt; radprof dev$ypix 7. 0.5 coords=ypix.coo.1 output="default" \
       plotfile=ypix.rplots inter- verify-
   
+  ... output will appear in m92.prf.2 and ypix.rplots
   
   ap&gt; gkidir ypix.rplots
   
+  ... get a listing of the plots in ypix.rplots
   
   ap&gt; gkiextract ypix.rplots 1-3 | stdplot dev=lw16
   
+  ... extract plots 1-3 and plot them on device lw16
   </pre></div>
   <p>
   6. Repeat example 5 but assume that the input coordinates are ra and dec
@@ -746,15 +796,19 @@ radprof: Compute the stellar radial profile of a list of stars
   
   ap&gt; rimcursor wcs=world &gt; radec.coo
   
+  ... move to selected stars and type any key
   
+  ... type ^Z to quit
   
-  ap&gt; radprof dev$ypix 7.0 0.5 coords=radec.coo output=default \<br>
+  ap&gt; radprof dev$ypix 7.0 0.5 coords=radec.coo output=default \
       plotfile=ypix.rplots2 wcsin=world verify- inter- &amp;
   
+  ... output will appear in ypix.prf.3, plots will appear in
       ypix.rplots2
   
   ap&gt; pdump ypix.prf.3 xc,yc yes | tvmark 1 STDIN col=204
   
+  ... mark the stars on the display
   </pre></div>
   <p>
   7. Run RADPROF interactively without using the image display.
@@ -762,28 +816,44 @@ radprof: Compute the stellar radial profile of a list of stars
   <div class="highlight-default-notranslate"><pre>
   ap&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   ap&gt; set stdimcur = text
   
+  ... set the image cursor to the standard input
   
   ap&gt; radprof dev$ypix 7.0 0.5 coords=ypix.coo.1
   
+  ... type ? for optional help
   
+  ... type :m 3 to set the initial coordinates to those of the
       third star in the list
   
+  ... type i to enter the interactive setup menu
+  ... enter the maximum radius in pixels for the radial profile or
       accept the default with a CR
+  ... type v to enter the default menu
+  ... set the fwhmpsf, centering radius, inner and outer sky annuli,
       apertures, and sigma using the graphics cursor and the
       stellar radial profile plot
+  ... typing &lt;CR&gt; after the prompt leaves the parameter at its default
       value
+  ... type q to quit the setup menu
   
+  ... type r to rewind the coordinate list
   
+  ... type n to measure the next star
   
+  ... a one line summary of the answers will appear on the standard
       output for each star measured
   
+  ... type q to quit followed by q to confirm the quit
   
+  ... by default no output file is written
   
   ap&gt; set stdimcur = &lt;default&gt;
   
+  ... reset the value of stdimcur
   </pre></div>
   <p>
   8. Use a image cursor command file to drive the RADPROF task. The cursor
@@ -803,9 +873,10 @@ radprof: Compute the stellar radial profile of a list of stars
   w
   q
   
-  ap&gt; radprof dev$ypix 7.0 0.5 icommands=cmdfile  \<br>
+  ap&gt; radprof dev$ypix 7.0 0.5 icommands=cmdfile  \
       plotfile=ypix.rplots3 verify-
   
+  ... by default no output file is written, plots will appear in
       ypix.rplots3
   </pre></div>
   </section>

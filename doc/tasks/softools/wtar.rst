@@ -94,33 +94,33 @@ wtar: Write a TAR format archive file
   /dev/nrmt8.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; cd iraf
-  	cl&gt; wtar -of /dev/nrmt8
+  cl&gt; cd iraf
+  cl&gt; wtar -of /dev/nrmt8
   </pre></div>
   <p>
   2. Archive the <span style="font-family: monospace;">"uparm"</span> directory to the VMS logical device MSA0:.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; wtar -f msa0 uparm
+  cl&gt; wtar -f msa0 uparm
   </pre></div>
   <p>
   3. Make a disk archive of the LIB and PKG directory trees in your home
   directory.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; wtar -f home$archive.tar lib pkg 
+  cl&gt; wtar -f home$archive.tar lib pkg
   </pre></div>
   <p>
   4. Examine the resultant file to make sure everything worked correctly.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; rtar -tvf home$archive.tar
+  cl&gt; rtar -tvf home$archive.tar
   </pre></div>
   <p>
   5. Make a disk archive, using a host filename for the output file.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; wtar -f /tmp2/arc lib pkg sys
+  cl&gt; wtar -f /tmp2/arc lib pkg sys
   </pre></div>
   <p>
   IRAF magtape commands such as <i>rewind</i> may be used with <i>wtar</i>,

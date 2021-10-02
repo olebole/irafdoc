@@ -509,7 +509,7 @@ ccget: Extract objects from a text file catalog
   celestial coordinate system.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
+  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \
   outsystem=b1950
   </pre></div>
   <p>
@@ -519,7 +519,7 @@ ccget: Extract objects from a text file catalog
   as a range.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
+  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \
   exprs="c[1-5]"
   </pre></div>
   <p>
@@ -530,7 +530,7 @@ ccget: Extract objects from a text file catalog
   supplied.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \<br>
+  cl&gt; ccget nlandolt.dat output 03:55:00.0 0:00:00 1.0 1.0 \
   exprs="c[1-3],c4+c5,c5+c7" formats="%7.3f,%7.3f
   </pre></div>
   </section>

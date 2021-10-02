@@ -7,6 +7,10 @@ clbye: A cl followed by a bye (used to save file descriptors)
 
 .. raw:: html
 
+  <div class="highlight-default-notranslate"><pre>
+  cl    -- call the CL as a task
+  clbye -- like cl(), but closes current script file too
+  </pre></div>
   <section id="s_parameters">
   <h3>Parameters</h3>
   <dl id="l_gcur">

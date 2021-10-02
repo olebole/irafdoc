@@ -195,7 +195,7 @@ frmedian: Quantize and ring median filter a list of 1D or 2D images
   radius of 4 pixels and a width of 1 pixel.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; frmedian input output 4.0 5.0 hmin=-32768 hmax=32767 \<br>
+  im&gt; frmedian input output 4.0 5.0 hmin=-32768 hmax=32767 \
   &gt;&gt;&gt; zmin=-32768.  zmax=32767.
   </pre></div>
   <p>
@@ -217,7 +217,7 @@ frmedian: Quantize and ring median filter a list of 1D or 2D images
   inner radius 5.0 and width 0.5 pixels.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; frmedian input output 5.0 5.5 unmap- hmin=0 hmax=1000 zmin=0. \<br>
+  im&gt; frmedian input output 5.0 5.5 unmap- hmin=0 hmax=1000 zmin=0. \
   &gt;&gt;&gt; zmax=1.
   </pre></div>
   <p>
@@ -226,7 +226,7 @@ frmedian: Quantize and ring median filter a list of 1D or 2D images
   of outer radius 5.0.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; frmedian dev$pix output 0.0 5.0 hmin=-1 hmax=20000 zmin=-1.0 \<br>
+  im&gt; frmedian dev$pix output 0.0 5.0 hmin=-1 hmax=20000 zmin=-1.0 \
   &gt;&gt;&gt; zmax=20000 zloreject=5 zhireject=20000
   </pre></div>
   </section>

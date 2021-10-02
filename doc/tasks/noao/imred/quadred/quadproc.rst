@@ -303,10 +303,7 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   <b>Quadproc</b> processes CCD images to remove all <span style="font-family: monospace;">"instrumental signatures"</span> from
   the data. The operations performed are:
   </p>
-  <dl>
-  <dt><b></b></dt>
-  <!-- Sec='DESCRIPTION' Level=0 Label='' Line=' ' -->
-  <dd><pre>
+  <div class="highlight-default-notranslate"><pre>
   o correct detector defects (bad lines and columns)
   o determine readout bias level using overscan and subtract it
   o trim off the overscan regions and unwanted border pixels
@@ -316,8 +313,6 @@ quadproc: Process multi-amplifier CCD images (see also ccdproc)
   o correct for non-uniform iillumination
   o correct for fringing
   </pre></div>
-  </dd>
-  </dl>
   <br>
   <p>
   <b>Quadproc</b> is a cl script based on the task <b>ccdproc</b> in the

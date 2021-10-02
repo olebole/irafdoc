@@ -688,7 +688,7 @@ wcsmap: Compute geometric transforms using the image wcs
   on the results to do the actual registration.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; wcsmap radio xray geodb wxformat=%12.2H wyformat=%12.1h \<br>
+  cl&gt; wcsmap radio xray geodb wxformat=%12.2H wyformat=%12.1h \
       interactive-
   
   cl&gt; geotran radio radio.tran geodb radio
@@ -699,7 +699,7 @@ wcsmap: Compute geometric transforms using the image wcs
   residuals.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; wcsmap radio xray geodb wxformat=%12.2H wyformat=%12.1h \<br>
+  cl&gt; wcsmap radio xray geodb wxformat=%12.2H wyformat=%12.1h \
       xxo=4 xyo=4 xxt=half yxo=4 yyo=4 yxt=half
   
       ... a plot of the fit appears
@@ -721,7 +721,7 @@ wcsmap: Compute geometric transforms using the image wcs
   3. Repeat example 1 but assign a user name to the transform.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; wcsmap radio xray geodb transforms="m82" wxformat=%12.2H \<br>
+  cl&gt; wcsmap radio xray geodb transforms="m82" wxformat=%12.2H \
       wyformat=%12.1h interactive-
   
   cl&gt; geotran radio radio.tran geodb m82

@@ -117,7 +117,7 @@ txdump: Print selected columns of a list of apphot/daophot text databases
   <div class="highlight-default-notranslate"><pre>
   beginning of string     ^       end of string           $
   one character           ?       zero or more characters *
-  white space             #       escape character        \<br>
+  white space             #       escape character        \
   ignore case             {       end ignore case         }
   begin character class   [       end character class     ]
   not, in char class      ^       range, in char class    -
@@ -178,7 +178,7 @@ txdump: Print selected columns of a list of apphot/daophot text databases
      is suitable for input into a rerun of NSTAR.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pt&gt; txdump image.nst.1 "ID,XCENTER,YCENTER,MSKY,MAG"  \<br>
+  pt&gt; txdump image.nst.1 "ID,XCENTER,YCENTER,MSKY,MAG"  \
       "MAG[1] != INDEF" headers+
   </pre></div>
   </section>

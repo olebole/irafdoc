@@ -170,7 +170,7 @@ imtab: Copy an image to a table column.
   because the original image <span style="font-family: monospace;">"x0y70206t.d0h"</span> is 2-D.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; imtab x0y70206t.d0h[257:257,129:384] focus.tab x0y70206 \<br>
+  tt&gt; imtab x0y70206t.d0h[257:257,129:384] focus.tab x0y70206 \
   &gt;&gt;&gt; pname="p" wcs="world" formats="%12.1H %12.1h"
   </pre></div>
   <p>
@@ -178,7 +178,7 @@ imtab: Copy an image to a table column.
   but print the values on the standard output.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; imtab x0y70206t.d0h[257:257,129:384] STDOUT x0y70206 \<br>
+  tt&gt; imtab x0y70206t.d0h[257:257,129:384] STDOUT x0y70206 \
   &gt;&gt;&gt; pname="p" wcs="world" formats="%12.1H %12.1h"
   </pre></div>
   </section>

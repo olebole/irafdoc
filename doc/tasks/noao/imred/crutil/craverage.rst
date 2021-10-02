@@ -287,7 +287,7 @@ craverage: Detect CRs against average and avoid objects
   </pre></div>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; display obj001 1                  # Display in first frame
-  cl&gt; craverage obj001 "" crmask=mask001 var0=2.78 var1=0.34\<br>
+  cl&gt; craverage obj001 "" crmask=mask001 var0=2.78 var1=0.34\
   &gt;&gt;&gt; crval=1 objval=2
   cl&gt; display crobj001 2 overlay=mask001 ocol="1=green,2=red"
   </pre></div>

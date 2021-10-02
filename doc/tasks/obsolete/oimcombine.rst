@@ -1146,7 +1146,7 @@ oimcombine: IMCOMBINE from V2.11-V2.11.3
   sky brightness and make a weighted average:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; oimcombine obj* avsig combine=average reject=avsig \<br>
+  cl&gt; oimcombine obj* avsig combine=average reject=avsig \
   &gt;&gt;&gt; scale=exp zero=mode weight=exp  expname=exptime
   </pre></div>
   </section>

@@ -665,12 +665,12 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   
   cl&gt; rimcursor &gt; objects
   
-  cl&gt; psfmatch @inimlist refimage objects @kernels dnx=31 \<br>
+  cl&gt; psfmatch @inimlist refimage objects @kernels dnx=31 \
       dny=31 pnx=15 pny=15
   
   cl&gt; imstat @kernels
   
-  cl&gt; psfmatch @inlist refimage objects @kernels          \<br>
+  cl&gt; psfmatch @inlist refimage objects @kernels          \
       output=@outlist convolution="kernel"
   </pre></div>
   <p>
@@ -680,8 +680,8 @@ psfmatch: Match the point-spread functions of 1-D or 2-D images
   user chooses to turn centering off and set the backgrounds manually.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; psfmatch inspec refspec "303.0 1.0" kernel         \<br>
-      output=outspec dnx=31 dny=31 pnx=15 pny=15 center- \<br>
+  cl&gt; psfmatch inspec refspec "303.0 1.0" kernel         \
+      output=outspec dnx=31 dny=31 pnx=15 pny=15 center- \
       back="403.6 452.0"
   </pre></div>
   <p>

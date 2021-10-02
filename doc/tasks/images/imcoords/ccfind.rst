@@ -591,7 +591,7 @@ ccfind: Find catalog sources in an image
   coordinates.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccfind wpix.coords wpix.match wpix xmag=-0.77 ymag=.77 lngref=13:27:47 \<br>
+  cl&gt; ccfind wpix.coords wpix.match wpix xmag=-0.77 ymag=.77 lngref=13:27:47 \
   latref=47:27:14 refsystem=b1950.
   
   Input File: wpix.coords  Output File: wpix.match.1
@@ -629,7 +629,7 @@ ccfind: Find catalog sources in an image
   cl&gt; hedit wpix RA '13:29:21'
   cl&gt; hedit wpix DEC '47:15:42'
   
-  cl&gt; ccfind wpix.coords wpix.match wpix xmag=-0.77 ymag=.77 lngref=RA \<br>
+  cl&gt; ccfind wpix.coords wpix.match wpix xmag=-0.77 ymag=.77 lngref=RA \
   latref=DEC refsystem=EPOCH
   
   Input File: wpix.coords  Output File: wpix.match
@@ -659,7 +659,7 @@ ccfind: Find catalog sources in an image
   on the image display with red dots.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccfind wpix.coords wpix.match wpix xmag=-0.77 ymag=.77 lngref=RA \<br>
+  cl&gt; ccfind wpix.coords wpix.match wpix xmag=-0.77 ymag=.77 lngref=RA \
   latref=DEC refsystem=EPOCH center-
   
   Input File: wpix.coords  Output File: wpix.match

@@ -402,7 +402,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   </p>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; geomap m51.coo database 1.0 512.0 1.0 512.0
-  cl&gt; geotran m51 m51.tran database m51.coo xscale=2. yscale=2. \<br>
+  cl&gt; geotran m51 m51.tran database m51.coo xscale=2. yscale=2. \
   &gt;&gt;&gt; inter=spline3 flux-
   </pre></div>
   <p>
@@ -420,7 +420,7 @@ geotran: Transform 1-D or 2-D images using various mapping transforms
   applying a shift to each input image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; geotran image1 outimage[1:512,1:512] "" ncols=512 nlines=1536 \<br>
+  cl&gt; geotran image1 outimage[1:512,1:512] "" ncols=512 nlines=1536 \
       xshift=5.0 yshift=5.0
   cl&gt; geotran image2 outimage[1:512,513:1024] "" xshift=10.0 yshift=10.0
   cl&gt; geotran image3 outimage[1:512,1025:1536] "" xshift=15.0 yshift=15.0

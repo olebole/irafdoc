@@ -161,7 +161,7 @@ flat1d: Make flat field by fitting a 1D func. to the lines or columns
   and set grow to 4 pixels.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; flat1d quartz flat order=25 sample="2:799" grow=4 \<br>
+  cl&gt; flat1d quartz flat order=25 sample="2:799" grow=4 \
   &gt;&gt;&gt; interactive=no
   </pre></div>
   <p>

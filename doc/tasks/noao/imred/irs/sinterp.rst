@@ -181,7 +181,7 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   The following shows how a text file may be used to generate a spectrum:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; sinterp textfile make+ x1=4000 x2=5000 npts=1024 \<br>
+  cl&gt; sinterp textfile make+ x1=4000 x2=5000 npts=1024 \
   &gt;&gt;&gt; image=testimage interp_mode=curve
   </pre></div>
   <p>
@@ -190,7 +190,7 @@ sinterp: Interpolate a table of x,y pairs to create a spectrum
   </p>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; lcalib flam feige34 caldir=onedstds$irscal/ &gt;textfile
-  cl&gt; sinterp textfile make+ x1=3550 dx=1.242 npts=1024 \<br>
+  cl&gt; sinterp textfile make+ x1=3550 dx=1.242 npts=1024 \
   &gt;&gt;&gt; interp_mode=linear image=feige34
   </pre></div>
   </section>

@@ -398,6 +398,7 @@ hedit: Header editor
   The following special variables are recognized within expressions:
   </p>
   <div class="highlight-default-notranslate"><pre>
+  .               A string constant, used to flag printing
   $               The value of the "current field"
   $F              The name of the "current field"
   $I              The name of the "current image"

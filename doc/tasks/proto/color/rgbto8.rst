@@ -108,8 +108,8 @@ rgbto8: Create an 8-bit RGB image with special color map
   sections.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; rgbto8 trifidr[*:2,*:2] trifidv[*:2,*:2] trifidb[*:2,*:2] \<br>
-  &gt;&gt;&gt; trifid8 maptype=saoimage rz1=1 rz2=500 gz1=1 gz2=500 \<br>
+  cl&gt; rgbto8 trifidr[*:2,*:2] trifidv[*:2,*:2] trifidb[*:2,*:2] \
+  &gt;&gt;&gt; trifid8 maptype=saoimage rz1=1 rz2=500 gz1=1 gz2=500 \
   &gt;&gt;&gt; bz1=1 bz2=500
   </pre></div>
   <p>

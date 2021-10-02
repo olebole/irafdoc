@@ -147,7 +147,7 @@ ridsmtn: Convert mountain format IDS/IRS data to IRAF images
   </p>
   <p>
   	.nf
-  cl&gt; ridsmtn mtb aug83
+  	cl&gt; ridsmtn mtb aug83
   </p>
   <p>
   [2] List the headers from the same mountain tape read in example 1 but don't

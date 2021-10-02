@@ -205,7 +205,7 @@ ahedit: Initialize the image wcs and set standard keywords
   the image scale is 0.261 arcsec per pixel and east is left and north is down.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ahedit image "" wcsedit+ wcs="none" wraref="RA" wdecref="DEC" \<br>
+  cl&gt; ahedit image "" wcsedit+ wcs="none" wraref="RA" wdecref="DEC" \
   wxmag=0.26 wymag=0.26 wxrot=270 wyrot=90 wsystem="EQUINOX" hdredit-
   </pre></div>
   <p>
@@ -220,7 +220,7 @@ ahedit: Initialize the image wcs and set standard keywords
   keyword. Set the minimum good data limit at the same time.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ahedit image "" hupdate+ wcsedit- hdredit+ edatamin=-100.0 \<br>
+  cl&gt; ahedit image "" hupdate+ wcsedit- hdredit+ edatamin=-100.0 \
   edatamax=32000
   </pre></div>
   </section>

@@ -222,7 +222,7 @@ mosproc: Prepare images for quick look mosaicing
      flat field image
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ir&gt; mosproc @imlist mosaic 8 8 skysub+ sky=skyimage flatten+ \<br>
+  ir&gt; mosproc @imlist mosaic 8 8 skysub+ sky=skyimage flatten+ \
   &gt;&gt;&gt;  flat=flatfield
   </pre></div>
   <p>

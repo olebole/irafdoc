@@ -156,7 +156,7 @@ rcardimage: Convert a cardimage file into a text file
   with blanks, followed by rcardimage to convert the file to an IRAF textfile.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; reblock mta[1] cardimage inrecord=81 outrecord=82 \<br>
+  cl&gt; reblock mta[1] cardimage inrecord=81 outrecord=82 \
       padchar=" "
   cl&gt; rcardimage cardimage 1 textfile card_length=82
   </pre></div>

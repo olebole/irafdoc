@@ -381,7 +381,7 @@ pstselect: Select candidate psf stars based on proximity
   
       ... answer will appear in ypix.coo.1
   
-  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \
       apertures = 5.0
   
       ... answer verify prompts
@@ -390,7 +390,7 @@ pstselect: Select candidate psf stars based on proximity
   
       ... answer will appear in ypix.mag.1
   
-  da&gt; pstselect dev$ypix default default 10 psfrad=9.0 fitrad=3.0 \<br>
+  da&gt; pstselect dev$ypix default default 10 psfrad=9.0 fitrad=3.0 \
       plotfile=psf.plots
   
       ... answer verify prompts
@@ -416,7 +416,7 @@ pstselect: Select candidate psf stars based on proximity
   coordinate system of the original image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; daofind dev$ypix[150:450,150:450] default wcsout=tv fwhmpsf=2.5 \<br>
+  da&gt; daofind dev$ypix[150:450,150:450] default wcsout=tv fwhmpsf=2.5 \
       sigma=5.0 threshold=20.0
   
       ... answer verify prompts
@@ -425,7 +425,7 @@ pstselect: Select candidate psf stars based on proximity
   
       ... answer will appear in ypix.coo.2
   
-  da&gt; phot dev$ypix[150:450,150:450] default default wcsin=tv wcsout=tv \<br>
+  da&gt; phot dev$ypix[150:450,150:450] default default wcsin=tv wcsout=tv \
       annulus=10.  dannulus=5. apertures = 5.0
   
       ... answer verify prompts
@@ -434,7 +434,7 @@ pstselect: Select candidate psf stars based on proximity
   
       ... answer will appear in ypix.mag.2
   
-  da&gt; pstselect dev$ypix[150:450,150:450] default default 10 wcsin=tv \<br>
+  da&gt; pstselect dev$ypix[150:450,150:450] default default 10 wcsin=tv \
       wcsout=tv psfrad=9.0 fitrad=3.0 plotfile=psf.plots2
   
       ... answer verify prompts
@@ -464,7 +464,7 @@ pstselect: Select candidate psf stars based on proximity
   
       ... display the image
   
-  da&gt; pstselect dev$ypix ypix.mag.1 default 10 psfrad=9. fitrad=3. \<br>
+  da&gt; pstselect dev$ypix ypix.mag.1 default 10 psfrad=9. fitrad=3. \
       interactive+ mkstars+ display=imdr
   
       ... verify the critical parameters as instructed

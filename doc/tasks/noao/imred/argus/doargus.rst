@@ -1731,7 +1731,7 @@ doargus: Process ARGUS spectra
   Creating image demoflat ...
   Creating image demoarc ...
   hy&gt; argus.verbose = yes
-  hy&gt; doargus demoobj apref=demoflat flat=demoflat arcs1=demoarc \<br>
+  hy&gt; doargus demoobj apref=demoflat flat=demoflat arcs1=demoarc \
   &gt;&gt;&gt; fib=13 width=4. minsep=5. maxsep=7. clean- splot+
   Set reference apertures for demoflat
   Resize apertures for demoflat?  (yes):

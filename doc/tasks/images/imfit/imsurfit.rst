@@ -303,21 +303,21 @@ imsurfit: Fit a surface to a 2-D image
   2. To create a smoothed version of an image using median processing:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imsurfit m74 m74med 5 10 function=spline3 \<br>
+  cl&gt; imsurfit m74 m74med 5 10 function=spline3 \
   &gt;&gt;&gt; xmed=5 ymed=5
   </pre></div>
   <p>
   3. To subtract a constant background from an image:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imsurfit abell30 abell30bck 1 1 function=leg \<br>
+  cl&gt; imsurfit abell30 abell30bck 1 1 function=leg \
   &gt;&gt;&gt; type=resid
   </pre></div>
   <p>
   4. To make a ratio image using signals above 1000 units:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imsurfit n7006 n7006ratio 20 20 function=spline3 \<br>
+  cl&gt; imsurfit n7006 n7006ratio 20 20 function=spline3 \
   &gt;&gt;&gt; type=response div_min=1000
   </pre></div>
   </section>

@@ -68,18 +68,23 @@ pttest: Run basic tests on the ptoolsx package tasks
   <div class="highlight-default-notranslate"><pre>
   da&gt; ptools
   
+  ... load the ptools package
   
   da&gt; pttest testit
   
+  ... run the test script
   
   da&gt; lprint testit.log
   
+  ... print the text output
   
   da&gt; gkidir testit.plot
   
+  ... list the contents of the plot file
   
   da&gt; gkiextract testit.plot 1-N | stdplot
   
+  ... send the plots to the plotter
   </pre></div>
   </section>
   <section id="s_time_requirements">

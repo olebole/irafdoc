@@ -342,7 +342,9 @@ obsfile: Prepare an observations file from a text file
   STD1 :  nite045   nite046  nite047
   STD2 :  nite004   nite005  nite006
   STD2 :  nite048   nite049  nite050
+  ...
   STD7 :  INDEF     nite019  nite020
+  ...
   STD14 : nite039   nite040  nite041
   STD15 : nite042   nite043  nite044
   </pre></div>
@@ -529,7 +531,7 @@ obsfile: Prepare an observations file from a text file
       ..... .....  .....  .....
       ..... .....  .....  .....
   
-  ph&gt; obsfile magsfile "1 2 3 6 8 7 0 4 5" "U,B,V" fields standards.obs\<br>
+  ph&gt; obsfile magsfile "1 2 3 6 8 7 0 4 5" "U,B,V" fields standards.obs\
       tol=0.0
   
       ... create the observations file
@@ -568,7 +570,7 @@ obsfile: Prepare an observations file from a text file
   
       m92 : m92u  m92b  m92v
   
-  ph&gt; obsfile m92umags,m92bmags,m92vmags "1 2 3 6 8 7 0 4 5" "U,B,V"\<br>
+  ph&gt; obsfile m92umags,m92bmags,m92vmags "1 2 3 6 8 7 0 4 5" "U,B,V"\
       fields standards.obs tolerance=8.0
   </pre></div>
   </section>

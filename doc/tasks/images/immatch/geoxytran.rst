@@ -436,7 +436,7 @@ geoxytran: Transform coordinate lists using the geomap transforms
   output of the first example to illustrate getting back the coordinates
   used in the original geomap input.
   
-      cl&gt; geoxytran rtran STDOUT rtran.db rtran dir=forward |\<br>
+      cl&gt; geoxytran rtran STDOUT rtran.db rtran dir=forward |\
       &gt;&gt;&gt; geoxytran STDIN STDOUT rtran.db rtran dir=backward
       0.999798 0.9997257 184.1445 -153.0376
           512. 0.9999674 684.0376 184.1445
@@ -447,7 +447,7 @@ geoxytran: Transform coordinate lists using the geomap transforms
   unknowns but modify the transformation slightly by setting xmag
   and ymag to 1.18 and 1.18 exactly.
   
-      cl&gt; geoxytran unknowns unknowns.tran rtran.db rtran xmag=1.18 \<br>
+      cl&gt; geoxytran unknowns unknowns.tran rtran.db rtran xmag=1.18 \
           ymag=1.18
   
   4. Evaluate the same transformation for the same unknowns as before
@@ -455,7 +455,7 @@ geoxytran: Transform coordinate lists using the geomap transforms
   by geomap. Note that the angle is the negative of the one defined
   in the database file.
   
-      cl&gt; geoxytran unknowns unknowns.tran "" xmag=1.18 ymag=1.18 \<br>
+      cl&gt; geoxytran unknowns unknowns.tran "" xmag=1.18 ymag=1.18 \
           xrot=34 yrot=34 xshift=183.826 yshift=-154.6757
   </pre></div>
   </section>

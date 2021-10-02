@@ -477,14 +477,14 @@ xyxymatch: Match pixel coordinate lists
   and reference coordinate lists can be generated.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imlintran dev$pix[-*,*] lpix xrot=15 yrot=15 xmag=1.2 \<br>
-      ymag=1.2 xin=INDEF yin=INDEF xref=265.0 yref=265.0  \<br>
+  cl&gt; imlintran dev$pix[-*,*] lpix xrot=15 yrot=15 xmag=1.2 \
+      ymag=1.2 xin=INDEF yin=INDEF xref=265.0 yref=265.0  \
       ncols=INDEF nlines=INDEF
   
   cl&gt; daofind dev$pix fwhm=2.5 sigma=5.0 threshold=100.0
   cl&gt; daofind lpix fwhm=2.5 sigma=5.0 threshold=100.0
   
-  cl&gt; xyxymatch lpix.coo.1 pix.coo.1 xymatch toler=3     \<br>
+  cl&gt; xyxymatch lpix.coo.1 pix.coo.1 xymatch toler=3     \
       matching=triangles
   
   cl&gt; geomap xymatch geodb 1.0 512.0 1.0 512.0
@@ -497,7 +497,7 @@ xyxymatch: Match pixel coordinate lists
   cl&gt; display dev$pix 1 fi+
   cl&gt; display lpix 2 fi+
   
-  cl&gt; xyxymatch lpix.coo.1 pix.coo.1 xymatch toler=3     \<br>
+  cl&gt; xyxymatch lpix.coo.1 pix.coo.1 xymatch toler=3     \
       matching=tolerance interactive+
   
       ... Mark three points in the reference image dev$pix
@@ -513,8 +513,8 @@ xyxymatch: Match pixel coordinate lists
   <div class="highlight-default-notranslate"><pre>
   cl&gt; ...
   
-  cl&gt; xyxymatch lpix.coo.1 pix.coo.1 xymatch toler=3     \<br>
-      matching=tolerance xmag=1.2 ymag=1.2 xrot=165       \<br>
+  cl&gt; xyxymatch lpix.coo.1 pix.coo.1 xymatch toler=3     \
+      matching=tolerance xmag=1.2 ymag=1.2 xrot=165       \
       yrot=345 xref=646.10 yref=33.38
   
   cl&gt; geomap xymatch geodb 1.0 512.0 1.0 512.0
@@ -532,7 +532,7 @@ xyxymatch: Match pixel coordinate lists
       442.0 409.0   380.0  66.0    69.0 460.0
        82.0 347.0   207.0  84.0   371.0 469.0
   
-  cl&gt; xyxymatch lpix.coo.1 pix.coo.1 xymatch toler=3     \<br>
+  cl&gt; xyxymatch lpix.coo.1 pix.coo.1 xymatch toler=3     \
       refpoints=refpts matching=tolerance
   
   cl&gt; geomap xymatch geodb 1.0 512.0 1.0 512.0

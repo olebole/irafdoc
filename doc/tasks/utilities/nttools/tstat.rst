@@ -253,7 +253,7 @@ tstat: Get mean, standard deviation, min, and max for a column.
   In this example, we get statistics on row 17 of <span style="font-family: monospace;">"bs.fits"</span>:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; tdump bs.fits cdfile="" pfile="" \<br>
+  tt&gt; tdump bs.fits cdfile="" pfile="" \
   &gt;&gt;&gt; row=17 pwidth=15 | tstat
   </pre></div>
   <p>

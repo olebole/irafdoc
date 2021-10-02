@@ -753,6 +753,7 @@ asthedit: Astronomical header editor
     $I = obj002.imh
     midut = 9:48:05
     imagetyp = comp
+  ...
   </pre></div>
   <p>
   3.  The following example computes quantities used by some NOAO tasks from

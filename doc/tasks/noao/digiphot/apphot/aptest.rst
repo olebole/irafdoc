@@ -61,18 +61,23 @@ aptest: Run basic tests on the apphot package tasks
   <div class="highlight-default-notranslate"><pre>
   ap&gt; apphot
   
+  ... load the apphot package
   
   ap&gt; aptest testim
   
+  ... run the test script
   
   ap&gt; lprint testim.log
   
+  ... print the text output
   
   ap&gt; gkidir testim.plot
   
+  ... list the contents of the plot file
   
   ap&gt; gkiextract testim.plot 1-N | stdplot
   
+  ... send the plots to the plotter
   </pre></div>
   </section>
   <section id="s_time_requirements">

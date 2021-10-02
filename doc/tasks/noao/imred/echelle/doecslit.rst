@@ -1482,7 +1482,7 @@ doecslit: Process Echelle slit spectra
   Creating example longslit in image demoarc ...
   ec&gt; echelle.verbose=no
   ec&gt; echelle.caldir=onedstds$spechayescal/
-  ec&gt; doecslit Bdemoobj apref=Bdemostd arcs=Bdemoarc stand=Bdemostd \<br>
+  ec&gt; doecslit Bdemoobj apref=Bdemostd arcs=Bdemoarc stand=Bdemostd \
   &gt;&gt;&gt; norders=3 extcor+ fluxcal+ resize+ splot+
   Set reference aperture for Bdemostd
   Edit apertures for Bdemostd?  (yes):

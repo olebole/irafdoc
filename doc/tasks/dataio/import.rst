@@ -724,7 +724,7 @@ import: Convert some other format to an IRAF image
   
   Read a raw 8-bit file of pixels into an unsigned short IRAF image:
   
-      cl&gt; import file img format="none" dims="512,512" pixtype="b1" \<br>
+      cl&gt; import file img format="none" dims="512,512" pixtype="b1" \
       &gt;&gt;&gt;     outtype="u" outbands="b1"
   
   Read a JPL VICAR image or 8-bit Sun rasterfile:
@@ -736,7 +736,7 @@ import: Convert some other format to an IRAF image
      to a single grayscale image:
   
       cl&gt; concat pic.[rgb] &gt; rgb
-      cl&gt; import rgb img format=none dims="640,480,3" \<br>
+      cl&gt; import rgb img format=none dims="640,480,3" \
       &gt;&gt;&gt;    pixtype="u1" interleave=0 outbands="gray(b1,b2,b3)"
   
   Read an 8-bit colormap GIF image and separate the RGB colors into
@@ -748,7 +748,7 @@ import: Convert some other format to an IRAF image
       a single image, and combine the images to a single output band:
   
       cl&gt; concat pix.* &gt; rfiles
-      cl&gt; import rfiles img dims="512,512,3" pixtype="b1" \<br>
+      cl&gt; import rfiles img dims="512,512,3" pixtype="b1" \
       &gt;&gt;&gt; hskip=200 bskip=200 interleave=0 outbands="gray(b1,b2,b3)"
   
   Read a FITS image with one header record in which the data bytes
@@ -758,7 +758,7 @@ import: Convert some other format to an IRAF image
          File: nite1  1866-A                Size = 640x480
       cl&gt; imheader nite1 l+ &gt; imheader.dat    # Save the header info
       cl&gt; imdel nite1.imh
-      cl&gt; import nite1.fits nite1 format="none" dims="640,480" \<br>
+      cl&gt; import nite1.fits nite1 format="none" dims="640,480" \
       &gt;&gt;&gt; bswap+ hskip=2880 pixtype="i2" outtype="s" imheader="imheader.dat"
   </pre></div>
   </section>

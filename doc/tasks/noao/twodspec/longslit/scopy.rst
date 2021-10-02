@@ -383,6 +383,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   example1[3]  --&gt;  subset1[3]
   example2[1]  --&gt;  subset2[1]
   example2[3]  --&gt;  subset2[3]
+  ...
   </pre></div>
   <p>
   The output list uses the pattern substitution feature of image templates.
@@ -396,6 +397,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   example1[2]  --&gt;  ap2[1]
   example2[2]  --&gt;  ap2[2]
   example3[2]  --&gt;  ap2[3]
+  ...
   </pre></div>
   <p>
   6.  To renumber the apertures sequentially starting with 11:
@@ -405,6 +407,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   example1[1]  --&gt;  renum[11]
   example1[5]  --&gt;  renum[12]
   example1[9]  --&gt;  renum[13]
+  ...
   </pre></div>
   <p>
   7.  To replace apertures (2) in one image with that from another:
@@ -421,8 +424,10 @@ scopy: Sum and extract spectra from long slit to 1D format
   cl&gt; scopy example![12]* merge
   example1[1]  -&gt;  merge[1]
   example1[3]  -&gt;  merge[3]
+  ...
   example2[2]  -&gt;  merge[2]
   example2[4]  -&gt;  merge[4]
+  ...
   </pre></div>
   <p>
   The input list uses the ![] character substitution syntax of image templates.
@@ -453,11 +458,13 @@ scopy: Sum and extract spectra from long slit to 1D format
   cl&gt; scopy example3d.ms[*,*,1] var1.ms
   example3d.ms[*,*,1][1]  --&gt;  var1.ms[1]
   example3d.ms[*,*,1][2]  --&gt;  var1.ms[2]
+  ...
   cl&gt; scopy example3d.ms[10:400,3,3] skyap3
   example3d.ms[10:400,3,3][3]  --&gt;  skyap3[3]
   cl&gt; scopy example3d.ms[*,*,1] "" clobber+
   example3d.ms[*,*,1][1]  --&gt;  example3d.ms[1]
   example3d.ms[*,*,1][2]  --&gt;  example3d.ms[2]
+  ...
   </pre></div>
   <p>
   Note that this could also be done with <b>imcopy</b>.  The last example
@@ -475,6 +482,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   example1[1]  --&gt;  record.0001
   example1[5]  --&gt;  record.0005
   example1[9]  --&gt;  record.0009
+  ...
   </pre></div>
   <p>
   2.  Pack a set of individual 1D spectra into a single image:
@@ -484,6 +492,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   record.0001[1]  --&gt;  record.ms[1]
   record.0005[5]  --&gt;  record.ms[5]
   record.0009[9]  --&gt;  record.ms[9]
+  ...
   </pre></div>
   <p>
   3.  Copy a set of record syntax spectra to a different rootname and renumber:
@@ -493,6 +502,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   record.0001[1]  --&gt;  newroot.0001
   record.0005[5]  --&gt;  newroot.0002
   record.0009[9]  --&gt;  newroot.0003
+  ...
   </pre></div>
   <p>
   III. LONG SLIT IMAGES
@@ -519,6 +529,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   longslit1[5]  --&gt;  sum10[5]
   longslit1[15]  --&gt;  sum10[15]
   longslit1[25]  --&gt;  sum10[25]
+  ...
   </pre></div>
   <p>
   3.  To extract the sum of 10 columns centered on column 250 from a set
@@ -530,6 +541,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   longslit1[250]  --&gt;  c250.1[250]
   longslit2[250]  --&gt;  c250.2[250]
   longslit3[250]  --&gt;  c250.3[250]
+  ...
   </pre></div>
   <p>
   4.  To extract the sum of 10 columns centered on column 250 from a set of
@@ -541,6 +553,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   longslit1[250]  --&gt;  c250[1]
   longslit2[250]  --&gt;  c250[2]
   longslit3[250]  --&gt;  c250[3]
+  ...
   </pre></div>
   <p>
   IV. FABRY-PEROT IMAGES
@@ -568,6 +581,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   longslit1[5]  --&gt;  sum10[5]
   longslit1[15]  --&gt;  sum10[15]
   longslit1[25]  --&gt;  sum10[25]
+  ...
   </pre></div>
   <p>
   3.  To extract the sum of 10 columns and 20 lines centered on column 250 and
@@ -579,6 +593,7 @@ scopy: Sum and extract spectra from long slit to 1D format
   longslit1[250]  --&gt;  c250.1[250]
   longslit2[250]  --&gt;  c250.2[250]
   longslit3[250]  --&gt;  c250.3[250]
+  ...
   </pre></div>
   </section>
   <section id="s_revisions">

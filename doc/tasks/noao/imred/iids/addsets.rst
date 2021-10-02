@@ -90,7 +90,7 @@ addsets: Add subsets of strings of spectra
   <div class="highlight-default-notranslate"><pre>
   cl&gt; addsets nite1 2001-2100
   cl&gt; addsets nite1 2001-2023 subset=4
-  cl&gt; addsets nite1 2001-2010 subset=1 output=nite2 \<br>
+  cl&gt; addsets nite1 2001-2010 subset=1 output=nite2 \
   &gt;&gt;&gt; start_rec=2001
   </pre></div>
   </section>

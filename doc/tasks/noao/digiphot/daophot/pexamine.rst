@@ -976,31 +976,41 @@ pexamine: Interactively examine and edit a daophot database
   
   pt&gt; pexamine ypix.als.1 ypix.als.ed dev$ypix xcol=mag ycol=chi
   
+  ... a plot of the goodness of fit versus magnitude appears
       on the terminal and the graphics cursor comes up ready to
       accept commands
   
+  ... the user notices some very anomalous chi values and decides
       to see if these correspond to objects which have poor
       subtraction on the displayed image
   
+  ... the user switches to image command mode by tapping the <span style="font-family: monospace;">'i'</span>
       key, moves to the first poorly subtracted object and taps
       the <span style="font-family: monospace;">'o'</span> key
   
+  ... a list of the values of the loaded columns including chi
       appears in the text window , the program switches to graphics
       mode and places the graphics cursor on the corresponding
       point in the X-Y plot
   
+  ... the point in question indeed has a very high chi value
       and the user decides to try and investigate the reason for the
       anomalous value
   
+  ... the user taps the <span style="font-family: monospace;">'r'</span> key to get a radial profile of the
       object in the original image
   
+  ... after carefully examining the profile it appears that the
       object's profile is too broad and that it is not a star
   
+  ... the user switches back to the X-Y plot with the <span style="font-family: monospace;">'x'</span> key,
       marks the point with the <span style="font-family: monospace;">'d'</span> key and saves the deletions
       and replots with the <span style="font-family: monospace;">'f'</span> key.
   
+  ... the user goes back to image command mode with the <span style="font-family: monospace;">'i'</span> key
       and begins investigating the next object
   
+  ... finally after examining the image and making all the changes
       the user decides to quit and save the changes with the <span style="font-family: monospace;">'e'</span> key
   </pre></div>
   </section>

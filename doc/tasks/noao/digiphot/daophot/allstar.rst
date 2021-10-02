@@ -454,7 +454,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   
        ... answer will appear in ypix.coo.1
   
-   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \
        apertures = 3.0
   
        ... answer verify prompts
@@ -465,7 +465,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   
    da&gt; display dev$ypix 1
   
-   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \
        fitrad=3.0 mkstars=yes display=imdr
   
        ... verify the critical parameters
@@ -516,7 +516,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   radius of 3.0 and an outer radius of 15.0.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; allstar dev$ypix default default default default default fitsky+ \<br>
+  da&gt; allstar dev$ypix default default default default default fitsky+ \
       sannulus=3.0 wsannulus=12.0
   
       ... verify the prompts
@@ -540,7 +540,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   in the coordinate system of the parent image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; allstar dev$ypix[150:450,150:450] default default default default \<br>
+  da&gt; allstar dev$ypix[150:450,150:450] default default default default \
       default wcsin=tv wcspsf=tv wcsout=tv
   
       ... answer the verify prompts
@@ -566,7 +566,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   Turn off verify and verbose.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; allstar dev$ypix default default default default default verbose- \<br>
+  da&gt; allstar dev$ypix default default default default default verbose- \
       verify- &amp;
   
       ... the results will appear in ypix.als.4 and ypix.arj.4
@@ -575,7 +575,7 @@ allstar: Group and fit psf to multiple stars simultaneously
   4. Run ALLSTAR exactly as in example 3 but turn caching off.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; allstar m92 m92.grp.1 m92.psf.1 default "" default verb+ veri- \<br>
+  da&gt; allstar m92 m92.grp.1 m92.psf.1 default "" default verb+ veri- \
       cache- &gt; allstar.out &amp;
   </pre></div>
   </section>

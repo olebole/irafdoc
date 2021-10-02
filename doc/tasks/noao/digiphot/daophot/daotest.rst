@@ -65,31 +65,40 @@ daotest: Run basic tests on the daophot package tasks
   <div class="highlight-default-notranslate"><pre>
   da&gt; daophot
   
+  ... load the daophot package
   
   da&gt; daotest testim
   
+  ... run the test script
   
   da&gt; lprint testim.log
   
+  ... print the text output
   
   da&gt; gkidir testim.plot
   
+  ... list the contents of the plot file
   
   da&gt; gkiextract testim.plot 1-N | stdplot
   
+  ... send the plots to the plotter
   
   da&gt; display testim 1
   
+  ... display the original image
   
   da&gt; surface testim.psf.1
   
+  ... make a surface plot of the psf look-up table
   
   da&gt; display testim.sub.1 1
   
+  ... display the image with all the stars fitted by ALLSTAR
       subtracted out
   
   da&gt; display testim.add.1 1
   
+  ... display the image  containing three additional artificial
       stars added by the ADDSTAR routine
   </pre></div>
   </section>

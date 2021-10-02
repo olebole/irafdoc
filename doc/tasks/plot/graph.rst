@@ -335,7 +335,7 @@ graph: Graph one or more image sections or lists
   7. Annotate a graph:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; graph pix[*,10],pix[*,20] xlabel=column\<br>
+  cl&gt; graph pix[*,10],pix[*,20] xlabel=column\
   &gt;&gt;&gt; ylabel=intensity title="lines 10 and 20 of pix"
   </pre></div>
   <p>

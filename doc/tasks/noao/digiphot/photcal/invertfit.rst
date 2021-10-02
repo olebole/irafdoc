@@ -300,7 +300,7 @@ invertfit: Compute the standard indices by inverting the fit
   Escape sequences (e.g. "\n" for newline):
   
   \b      backspace   (<b>not implemented</b>)
-       formfeed
+  formfeed
   \n      newline (crlf)
   \r      carriage return
   \t      tab
@@ -349,7 +349,7 @@ invertfit: Compute the standard indices by inverting the fit
   id, V, error(V), resid(V), BV, error(BV), and resid(BV).
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ph&gt; invertfit m92.obs  m92.cfg m92.fit m92.cal\<br>
+  ph&gt; invertfit m92.obs  m92.cfg m92.fit m92.cal\
       format="%-10.10s %7.3f %6.3f %6.3f %7.3f %6.3f %6.3f\n"
   </pre></div>
   </section>

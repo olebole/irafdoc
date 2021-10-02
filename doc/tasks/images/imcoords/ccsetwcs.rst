@@ -467,7 +467,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   13:29:55.424  47:10:05.15  224.35  131.20
   13:30:01.816  47:12:58.79  134.37  356.33
   
-  cl&gt; ccmap coords coords.db image=pix xcol=3 ycol=4 lngcol=1 latcol=2 \<br>
+  cl&gt; ccmap coords coords.db image=pix xcol=3 ycol=4 lngcol=1 latcol=2 \
   inter-
   Coords File: coords  Image: pix
       Database: coords.db  Record: pix
@@ -597,7 +597,7 @@ ccsetwcs: Create an image celestial wcs from the ccmap plate solution
   hand.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccsetwcs pix "" xref=318.735 yref=273.900 lngref=13:29:48.129 \<br>
+  cl&gt; ccsetwcs pix "" xref=318.735 yref=273.900 lngref=13:29:48.129 \
   latref=47:11:53.37 xmag=.764 ymag=.767 xrot=180.890 yrot=1.042
   Image: pix
   Coordinate mapping parameters

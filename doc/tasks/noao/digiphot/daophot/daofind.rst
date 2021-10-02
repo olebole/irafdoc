@@ -440,7 +440,9 @@ daofind: Find stars in an image using the DAO algorithm
   <div class="highlight-default-notranslate"><pre>
   da&gt; daofind dev$ypix default fwhmpsf=2.5 sigma=5.0 threshold=20
   
+  ... answer the verify prompts
   
+  ... the output will appear in ypix.coo.1
   </pre></div>
   <p>
   2. Run daofind interactively on dev$ypix using the image display
@@ -451,19 +453,34 @@ daofind: Find stars in an image using the DAO algorithm
   <div class="highlight-default-notranslate"><pre>
   da&gt; display dev$ypix 1 fi+
   
+  ... display the image
   
   da&gt; daofind dev$ypix default interactive+
   
+  ... type ? to see help screen
   
+  ... move display cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter maximum radius in pixels of the radial profile or
       accept default with a CR
+  ... type v to enter the default setup menu
+  ... set the fwhmpsf and sigma using the graphics cursor and the
       radial profile plot
+  ... typing &lt;CR&gt; leaves the parameters at their default values
+  ... type q to quit setup menu
   
+  ... type the v key to verify the critical parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... type the space bar to detect stars in the image
   
+  ... a 1 line summary of the answers will appear on the standard
       output for each star measured
   
+  ... type q to quit and q again to confirm the quit
   
+  ... full output will appear in the text file ypix.coo.2
   </pre></div>
   <p>
   3. Run daofind interactively on a single image using a contour plot in place
@@ -476,31 +493,50 @@ daofind: Find stars in an image using the DAO algorithm
   <div class="highlight-default-notranslate"><pre>
   da&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   da&gt; set stdimcur = stdgraph
   
+  ... define the image cursor to be the graphics cursor
   
   da&gt; contour dev$ypix
   
+  ... make a contour plot of dev$ypix
   
   da&gt; contour dev$ypix &gt;G ypix.plot1
   
+  ... store the contour plot of ypix in the file ypix.plot
   
   da&gt; daofind dev$ypix default display=stdgraph interactive+
   
+  ... type ? to see the help screen
   
+  ... move graphics cursor to a setup star
+  ... type i to enter the interactive setup menu
+  ... enter maximum radius in pixels of the radial profile or
       accept the default with a CR
+  ... type v to enter the default setup menu
+  ... set the fwhmpsf and sigma using the graphics cursor and the
       radial profile plot
+  ... typing &lt;CR&gt; leaves the parameters at their default values
+  ... type q to quit the setup menu
   
+  ... type the v key to confirm the critical parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... retype :.read ypix.plot1 to reload the contour plot
   
+  ... type the space bar to detect stars in the image
   
+  ... a 1 line summary of the answers will appear on the standard
       output for each star measured
   
+  ... full output will appear in the text file ypix.coo.3
   
   da&gt; set stdimcur = &lt;default&gt;
   
+  ... reset the image cursor to its default value
   </pre></div>
   <p>
   4. Run DAOFIND interactively without using the image display cursor.
@@ -508,31 +544,48 @@ daofind: Find stars in an image using the DAO algorithm
   <div class="highlight-default-notranslate"><pre>
   da&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   da&gt; set stdimcur = text
   
+  ... set the image cursor to the standard input
   
   da&gt; display dev$ypix 1
   
+  ... display the image
   
   da&gt; daofind dev$ypix default interactive+
   
+  ... type ? for help
   
+  ... type "442 409 101 i" in response to the image cursor query where
       x and y are the coordinates of the star to be used as setup,
       101 is the default world coordinate system, and i enters the
       interactive setup menu.
+  ... enter maximum radius in pixels of the radial profile or
       type CR to accept the default
+  ... type v to enter the default setup menu
+  ... set the fwhmpsf and sigma using the graphics cursor and the
       radial profile plot
+  ... typing &lt;CR&gt; leaves the parameters at their default values
+  ... type q to quit the setup menu
   
+  ... type the v key to verify the parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... type the space bar to detect stars in the image
   
+  ... a 1 line summary of the answers will appear on the standard
       output for each star measured
   
+  ... type q to quit and q again to confirm
   
+  ... full output will appear in the text file ypix.coo.4
   
   da&gt; set stdimcur = &lt;default&gt;
   
+  ... reset the image cursor to its default value
   </pre></div>
   <p>
   5. Run daofind on a list of 3 images contained in the file imlist in batch mode.
@@ -547,7 +600,9 @@ daofind: Find stars in an image using the DAO algorithm
   
   da&gt; daofind @imlist default
   
+  ... answer the verify prompts
   
+  ... the output will appear in ypix.coo.5, wpix.coo.1, pix.coo.1
   </pre></div>
   <p>
   6. Display and find stars in an image section. Write the output coordinates
@@ -557,10 +612,13 @@ daofind: Find stars in an image using the DAO algorithm
   <div class="highlight-default-notranslate"><pre>
   da&gt; display dev$ypix[150:450,150:450] 1
   
+  ... display the image section
   
   da&gt; daofind dev$ypix[150:450,150:450] default wcsout=tv
   
+  ... answer the verify prompts
   
+  ... output will appear in ypix.coo.6
   
   da&gt; tvmark 1 ypix.coo.6 col=204
   </pre></div>
@@ -571,6 +629,7 @@ daofind: Find stars in an image using the DAO algorithm
   <div class="highlight-default-notranslate"><pre>
   da&gt; daofind @imlist default verify- verbose- &amp;
   
+  ... the output will appear in ypix.coo.7, wpix.coo.2, pix.coo.2
   </pre></div>
   <p>
   8. Use an image cursor command file to drive the daofind task. The cursor
@@ -588,6 +647,7 @@ daofind: Find stars in an image using the DAO algorithm
   
   da&gt; daofind dev$ypix default icommands=cmdfile verify-
   
+  ... full output will appear in ypix.coo.8
   </pre></div>
   </section>
   <section id="s_time_requirements">

@@ -218,7 +218,7 @@ tmatch: Find closest match between rows in two tables
   radius one would use the following command:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; tmatch catalog1.tab catalog2.tab match.tab \<br>
+  tt&gt; tmatch catalog1.tab catalog2.tab match.tab \
   &gt;&gt;&gt; ra,dec ra,dec 0:00:10 sphere+
   </pre></div>
   <p>
@@ -231,7 +231,7 @@ tmatch: Find closest match between rows in two tables
   then be supplied explicitly through the factor parameter:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; tmatch catalog1.tab catalog2.tab match.tab \<br>
+  tt&gt; tmatch catalog1.tab catalog2.tab match.tab \
   &gt;&gt;&gt; ra,dec ra,dec 0:00:10 factor=15,1 sphere+
   </pre></div>
   <p>
@@ -240,14 +240,14 @@ tmatch: Find closest match between rows in two tables
   catalog. This could be done with the following command:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; tmatch catalog1.tab catalog2.tab match.tab \<br>
+  tt&gt; tmatch catalog1.tab catalog2.tab match.tab \
   &gt;&gt;&gt; ra,dec ra,dec 0:00:10 incol1=name sphere+
   </pre></div>
   <p>
   4. To get diagnostic output from the task, use the following command:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; tmatch catalog1.tab catalog2.tab match.tab ra,dec ra,dec \<br>
+  tt&gt; tmatch catalog1.tab catalog2.tab match.tab ra,dec ra,dec \
   &gt;&gt;&gt; diag=diag.txt nmcol1=name nmcol2=name 0:00:10 sphere+
   </pre></div>
   <p>

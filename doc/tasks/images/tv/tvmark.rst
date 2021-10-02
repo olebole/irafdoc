@@ -388,7 +388,7 @@ tvmark: Mark objects on the image display
   </p>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; display m92r 1
-  cl&gt; tvmark 1 m92.coo.1 outimage=m92r.snap mark=none\<br>
+  cl&gt; tvmark 1 m92.coo.1 outimage=m92r.snap mark=none\
   &gt;&gt;&gt;   number+ col=204
   cl&gt; display m92r.snap 2 ztrans="none"
   </pre></div>

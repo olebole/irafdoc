@@ -7,6 +7,10 @@ redefine: Redefine a task
 
 .. raw:: html
 
+  <div class="highlight-default-notranslate"><pre>
+  task     -- define a new IRAF task
+  redefine -- redefine an IRAF task
+  </pre></div>
   <section id="s_usage">
   <h3>Usage</h3>
   <div class="highlight-default-notranslate"><pre>

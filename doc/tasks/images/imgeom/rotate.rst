@@ -203,7 +203,7 @@ rotate: Rotate and shift a list of 2-D images
   2. Rotate an image by 45 degrees around (100., 100.) and
      shift the origin to (150., 150.0) using bicubic interpolation.
   
-     cl&gt; rotate m92 m92r45 45.0 xin=100. yin=100. xout=150. yout=150.\<br>
+     cl&gt; rotate m92 m92r45 45.0 xin=100. yin=100. xout=150. yout=150.\
      &gt;&gt;&gt; interp=poly3
   
   3. Rotate an image 90 degrees counter-clockwise and clockwise around its

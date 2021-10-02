@@ -280,7 +280,7 @@ group: Group stars based on positional overlap and signal/noise
   
        ... answer will appear in ypix.coo.1
   
-   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \
        apertures = 3.0
   
        ... answer verify prompts
@@ -291,7 +291,7 @@ group: Group stars based on positional overlap and signal/noise
   
    da&gt; display dev$ypix 1
   
-   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \
        fitrad=3.0 mkstars=yes display=imdr
   
        ... verify the critical parameters
@@ -333,7 +333,7 @@ group: Group stars based on positional overlap and signal/noise
   example 2 are identical to those in example 1.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; group dev$ypix[150:450,150:450] default default default  \<br>
+  da&gt; group dev$ypix[150:450,150:450] default default default  \
       wcsin=tv wcspsf=tv wcsout=tv
   
       ... answer the verify prompts

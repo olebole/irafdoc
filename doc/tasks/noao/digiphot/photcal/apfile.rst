@@ -542,7 +542,7 @@ apfile: Prepare an aperture corrections file from a text file
   details and plots of the fit in the log and plot file respectively.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ph&gt; apfile photfiles "1,3,4,0,0,2,0,5,20,35" 15 apercor \<br>
+  ph&gt; apfile photfiles "1,3,4,0,0,2,0,5,20,35" 15 apercor \
       inter- logfile=apercor.log plotfile=apercor.plot
   
   ph&gt; page apercor.log
@@ -562,8 +562,8 @@ apfile: Prepare an aperture corrections file from a text file
   all present and correct in the photometry files.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ph&gt; apfile stdfiles "1,3,4,0,0,2,0,5,20,35" 15 apercor inter-\<br>
-      magfile="stdfiles.ap" logfile=apercor.log\<br>
+  ph&gt; apfile stdfiles "1,3,4,0,0,2,0,5,20,35" 15 apercor inter-\
+      magfile="stdfiles.ap" logfile=apercor.log\
       plotfile=apercor.plot
   
   ph&gt; obsfile stdfiles.ap "1,2,3,4,5,6,7,8,9" "U,B,V" imsets stdobs

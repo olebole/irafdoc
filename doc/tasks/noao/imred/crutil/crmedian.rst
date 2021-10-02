@@ -185,7 +185,7 @@ crmedian: Detect and replace cosmic rays with median filter
   <div class="highlight-default-notranslate"><pre>
   cl&gt; display obj001 1                  # Display in first frame
   cl&gt; # Determine output image, cosmic ray mask, and residual image
-  cl&gt; crmedian obj001 crobj001 crmask=mask001 resid=res001\<br>
+  cl&gt; crmedian obj001 crobj001 crmask=mask001 resid=res001\
   &gt;&gt;&gt; var0=2.78 var1=0.34
   cl&gt; display crobj001 2                # Display final image
   cl&gt; display mask001 3 zs- zr- z1=-1 z2=2 # Display mask

@@ -258,7 +258,7 @@ stty: Set/show terminal characteristics
   sequences \n, \t, \r, etc., the following special escape sequences are used:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  \\              \<br>
+  \\              \
   \^              ^
   ^@              NUL (ascii 000)
   ^[A-Z]          ctrl/a - ctrl/z (ascii 001 - 032)
@@ -363,8 +363,8 @@ stty: Set/show terminal characteristics
   </p>
   <div class="highlight-default-notranslate"><pre>
   space, return           continue execution
-  <span style="font-family: monospace;">'g'</span>                     go: turn verify mode off and continue
-  <span style="font-family: monospace;">'q'</span>                     quit: terminate playback mode
+  <span style="font-family: monospace;">'g'</span>                        go: turn verify mode off and continue
+  <span style="font-family: monospace;">'q'</span>                        quit: terminate playback mode
   </pre></div>
   <p>
   Verify mode is automatically disabled during raw mode input since the input

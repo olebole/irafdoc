@@ -425,7 +425,7 @@ pvol: Project volume image (generates 'rotating' volume images)
       only between projection voxels falling within the specified
       cutoffs (0.1 to 1.0).
   
-      cl&gt; pvol input[*:4,*:4,*:4] output nfr=2 deg=90 ptype=4 \<br>
+      cl&gt; pvol input[*:4,*:4,*:4] output nfr=2 deg=90 ptype=4 \
           dispower=3 discutoff+ imin=.1 imax=1.0
   
   4.  Project through a 4d image containing opacity information in

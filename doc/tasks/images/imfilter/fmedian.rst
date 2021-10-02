@@ -167,7 +167,7 @@ fmedian: Quantize and box median filter a list of 1D or 2D images
   1. Median filter a 16 bit CCD image using a 5 by 5 window.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; fmedian input output 5 5 hmin=-32768 hmax=32767 \<br>
+  im&gt; fmedian input output 5 5 hmin=-32768 hmax=32767 \
   &gt;&gt;&gt; zmin=-32768.  zmax=32767.
   </pre></div>
   <p>
@@ -187,7 +187,7 @@ fmedian: Quantize and box median filter a list of 1D or 2D images
   of .003 and leave the output pixels in integer format.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; fmedian input output 5 5 unmap- hmin=0 hmax=1000 zmin=0. \<br>
+  im&gt; fmedian input output 5 5 unmap- hmin=0 hmax=1000 zmin=0. \
   &gt;&gt;&gt; zmax=1.
   </pre></div>
   <p>
@@ -195,7 +195,7 @@ fmedian: Quantize and box median filter a list of 1D or 2D images
   greater than 19935 from the medianing process.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; fmedian dev$pix output 5 5 hmin=-1 hmax=20000 zmin=-1.0 \<br>
+  im&gt; fmedian dev$pix output 5 5 hmin=-1 hmax=20000 zmin=-1.0 \
   &gt;&gt;&gt; zmax=20000 zloreject=5 zhireject=20000
   </pre></div>
   </section>

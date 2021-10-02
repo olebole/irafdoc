@@ -272,40 +272,64 @@ polymark: Create polygon lists for polyphot
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix 1 fi+
   
+  ... display the image
   
   ap&gt; polymark dev$ypix display=imdg
   
+  ... type ? for an optional help page
   
+  ... type g to enter the "define a polygon" menu
+  ... move the cursor to the first vertex, tap the space bar
       to mark the vertex, and repeat for each vertex
+  ... type q to quit the "define a polygon" menu
+  ... mark each vertex only once, POLYPHOT will close the
       polygon for you
   
+  ... move the cursor to the desired polygon center and
       tap the space bar to record the polygon
+  ... repeat for all desired polygon centers
   
+  ... type g to define the next polygon
+  ... move the cursor to the first vertex, tap the space bar
       to mark the vertex and repeat for each vertex
+  ... type q to quit the polygon menu
+  ... mark each vertex only once, POLYPHOT will close the
       polygon for you
   
+  ... move the cursor to the desired polygon center and
       tap the space bar
+  ... repeat for all desired polygon centers
   
+  ... type q to quit and q to confirm the quit
   
-  
-  ap&gt; display dev$ypix 2 fi+
-  
-  
-  ap&gt; polymark dev$ypix coords=ypix.coo.1 polygons=ypix.ver.1 \<br>
-      display=imdg
-  
-  
-  
-  
+  ... output will appear in ypix.coo.1 and ypix.ver.1
   
   ap&gt; display dev$ypix 2 fi+
   
+  ... display the image
   
-  ap&gt; polymark dev$ypix coords="" polygons=ypix.ver.1 \<br>
+  ap&gt; polymark dev$ypix coords=ypix.coo.1 polygons=ypix.ver.1 \
       display=imdg
   
+  ... type m to mark the first polygon / polygon center on the display
+  
+  ... type m to mark the next polygon / polygon center on the display
+  
+  ... type l to mark the remaining polygons
+  
+  ... type q to quit and q to confirm the quit
+  
+  ap&gt; display dev$ypix 2 fi+
+  
+  ... redisplay the image
+  
+  ap&gt; polymark dev$ypix coords="" polygons=ypix.ver.1 \
+      display=imdg
+  
+  ... type l to mark the polygon list, note that since there is
       no coords file the polygons are not shifted
   
+  ... type q to quit and q to confirm the quit
   </pre></div>
   <p>
   2. Repeat the previous example using an image section.
@@ -313,30 +337,50 @@ polymark: Create polygon lists for polyphot
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix[150:450,150:450] 1 fi+
   
+  ... display the image
   
   ap&gt; polymark dev$ypix[150:450,150:450]] display=imdg wcsout=tv
   
+  ... type ? for an optional help page
   
+  ... type g to enter the "define a polygon" menu
+  ... move the cursor to the first vertex, tap the space bar
       to mark the vertex, and repeat for each vertex
+  ... type q to quit the "define a polygon" menu
+  ... mark each vertex only once, POLYPHOT will close the
       polygon for you
   
+  ... move the cursor to the desired polygon center and
       tap the space bar to record the polygon
+  ... repeat for all desired polygon centers
   
+  ... type g to define the next polygon
+  ... move the cursor to the first vertex, tap the space bar
       to mark the vertex and repeat for each vertex
+  ... type q to quit the polygon menu
+  ... mark each vertex only once, POLYPHOT will close the
       polygon for you
   
+  ... move the cursor to the desired polygon center and
       tap the space bar
+  ... repeat for all desired polygon centers
   
+  ... type q to quit and q to confirm the quit
   
+  ... output will appear in ypix.coo.2 and ypix.ver.2
   
   ap&gt; display dev$ypix[150:450,150:450] 2 fi+
   
+  ... display the image
   
-  ap&gt; polymark dev$ypix[150:450,150:450] coords=ypix.coo.2 \<br>
+  ap&gt; polymark dev$ypix[150:450,150:450] coords=ypix.coo.2 \
       polygons=ypix.ver.2 display=imdg wcsin=tv
   
+  ... type m to mark the first polygon / polygon center on the display
   
+  ... type m to mark the next polygon / polygon center on the display
   
+  ... type l to mark the remaining polygons
   </pre></div>
   <p>
   3. Repeat example 1 using a contour plot instead of the image display.
@@ -344,41 +388,64 @@ polymark: Create polygon lists for polyphot
   <div class="highlight-default-notranslate"><pre>
   ap&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   ap&gt; set stdimcur = stdgraph
   
+  ... define the image cursor to be the graphics cursor
   
   ap&gt; contour dev$ypix
   
+  ... draw a contour plot on the screen
   
   ap&gt; contour dev$ypix &gt;G ypix.plot1
   
+  ... store the contour plot of dev$ypix in the file ypix.plot1
   
   ap&gt; polymark dev$ypix display=stdgraph
   
+  ... type g to enter the define a polygon menu
+  ... move the cursor to the first vertex, tap the space bar
       to mark the vertex, and repeat for each vertex
+  ... type q to quit the define a polygon menu
+  ... mark each vertex only once, POLYPHOT will close the
       polygon for you
   
+  ... move the cursor to the desired polygon center and
       tap the space bar to record the polygon
+  ... repeat for all desired polygon centers
   
+  ... type g to define the next polygon
+  ... move the cursor to the first vertex, tap the space bar
       to mark the vertex and repeat for each vertex
+  ... type q to quit the define a polygon menu
+  ... mark each vertex only once, POLYPHOT will close the
       polygon for you
   
+  ... move the cursor to the desired polygon center and
       tap the space bar
+  ... repeat for all desired polygon centers
   
+  ... type r to rewind the coordinate and polygon lists
   
+  ... type :.read ypix.plot1 to reread the contour plot
   
+  ... type l to display all the polygons ...
   
+  ... type q to quit and q again to confirm the  quit
   
+  ... output will appear in ypix.ver.3 and ypix.coo.3
   
   ap&gt; contour dev$ypix
   
+  ... redraw the contour plot
   
-  ap&gt; polymark dev$ypix coords="ypix.coo.3" polygons=ypix.ver.3 \<br>
+  ap&gt; polymark dev$ypix coords="ypix.coo.3" polygons=ypix.ver.3 \
       display=stdgraph
   
   ap&gt; set stdimcur = &lt;default&gt;
   
+  ... reset the value of the stdimcur parameter
   </pre></div>
   </section>
   <section id="s_bugs">

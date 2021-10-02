@@ -187,7 +187,7 @@ thistogram: Make a histogram of a column in a table.
   but set the spacing between bins to be 0.1.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; thistogram bs STDOUT V nbins=INDEF dx=0.1 | \\<br>
+  tt&gt; thistogram bs STDOUT V nbins=INDEF dx=0.1 | \\
   &gt;&gt;&gt;   sgraph (crvstyle="pseudohist")
   </pre></div>
   </section>

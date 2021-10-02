@@ -593,10 +593,12 @@ sarith: Spectrum arithmetic
   longslit[5]  --&gt;  longslit.ms[5]
   longslit[15]  --&gt;  longslit.ms[15]
   longslit[25]  --&gt;  longslit.ms[25]
+  ...
   cl&gt; sarith longslit.ms / longslit.ms[*,25] norm ignore+
   longslit.ms[5]  /  longslit.ms[*,25][245]  --&gt;  norm[5]
   longslit.ms[15]  /  longslit.ms[*,25][245]  --&gt;  norm[15]
   longslit.ms[25]  /  longslit.ms[*,25][245]  --&gt;  norm[25]
+  ...
   </pre></div>
   <p>
   9.  In place operations:
@@ -605,18 +607,24 @@ sarith: Spectrum arithmetic
   cl&gt; sarith example* + 1000 example* clobber+
   example1[1]  +  1000.  --&gt;  example1[1]
   example1[2]  +  1000.  --&gt;  example1[2]
+  ...
   example2[1]  +  1000.  --&gt;  example2[1]
   example2[2]  +  1000.  --&gt;  example2[2]
+  ...
   cl&gt; sarith example* flam "" example* clobber+
   example1[1]  -- flam --&gt;  example1[1]
   example1[2]  -- flam --&gt;  example1[2]
+  ...
   example2[1]  -- flam --&gt;  example2[1]
   example2[2]  -- flam --&gt;  example2[2]
+  ...
   cl&gt; sarith example* - skyspec "" clobber+ ignore+
   example1[1]  +  skyspec[1]  --&gt;  example1[1]
   example1[2]  +  skyspec[1]  --&gt;  example1[2]
+  ...
   example2[1]  +  skyspec[1]  --&gt;  example2[1]
   example2[2]  +  skyspec[1]  --&gt;  example2[2]
+  ...
   </pre></div>
   <p>
   10.  Merging existing spectra with the results of operations:

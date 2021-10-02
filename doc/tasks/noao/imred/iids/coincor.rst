@@ -128,7 +128,7 @@ coincor: Correct spectra for detector count rates
   Lick ITS:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; coincor its 1-250 output=itscc start=1 ccmode=photo \<br>
+  cl&gt; coincor its 1-250 output=itscc start=1 ccmode=photo \
   &gt;&gt;&gt; deadtime=2.4E-4 power=1
   </pre></div>
   </section>

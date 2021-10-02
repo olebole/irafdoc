@@ -92,6 +92,18 @@ directory: List the files in a directory
   expanded.
   </p>
   <div class="highlight-default-notranslate"><pre>
+  .a      object library
+  .c      C source file
+  .cl     CL source file
+  .e      executable (runnable) file
+  .f      Fortran source file
+  .gX     generic source file (X=[cx])
+  .h      global header file
+  .hlp    help file
+  .o      object file
+  .par    CL parameter file
+  .s      assembler source file
+  .x      SPP source file
   </pre></div>
   <p>
   When listing large directories, the time required to accumulate and sort the

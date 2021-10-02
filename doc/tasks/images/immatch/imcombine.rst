@@ -1555,7 +1555,7 @@ imcombine: Combine images pixel-by-pixel using various algorithms
   sky brightness and make a weighted average:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imcombine obj* avsig combine=average reject=avsig \<br>
+  cl&gt; imcombine obj* avsig combine=average reject=avsig \
   &gt;&gt;&gt; scale=exp zero=mode weight=exp  expname=exptime
   </pre></div>
   </section>

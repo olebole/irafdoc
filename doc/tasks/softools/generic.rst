@@ -44,22 +44,17 @@ generic: Preprocess a generic source file
   output filename by appending the type character to the root filename of
   the input file.  The <i>type</i> string is some subset of [ubscilrdx],
   where the type characters are as follows.
-  <dl>
-  <dt><b></b></dt>
-  <!-- Sec='PARAMETERS' Level=1 Label='' Line=' ' -->
-  <dd><pre>
-  u	- C unsigned short
-  b	- C byte (char)
-  c	- SPP character
-  s	- SPP short
-  i	- SPP int
-  l	- SPP long
-  r	- SPP real
-  d	- SPP double
-  x	- SPP complex
+  <div class="highlight-default-notranslate"><pre>
+  u       - C unsigned short
+  b       - C byte (char)
+  c       - SPP character
+  s       - SPP short
+  i       - SPP int
+  l       - SPP long
+  r       - SPP real
+  d       - SPP double
+  x       - SPP complex
   </pre></div>
-  </dd>
-  </dl>
   This option cannot be used in combination with the -o option, and should
   not be used when generic code is expanded inline, rather than written into
   multiple output files.
@@ -206,22 +201,22 @@ generic: Preprocess a generic source file
   Control transfers to the matching $ELSE or $ENDIF.  The following may be
   used in the boolean expression:
   <div class="highlight-default-notranslate"><pre>
-  "datatype"	denotes the current type
-  ubcsilrdx	any subset of these characters denotes
-  		    the corresponding datatype
-  sizeof()	the size of the specified type,
-  		    e.g., for comparisons
+  "datatype"      denotes the current type
+  ubcsilrdx       any subset of these characters denotes
+                      the corresponding datatype
+  sizeof()        the size of the specified type,
+                      e.g., for comparisons
   
-  != ==		the relational operators
+  != ==           the relational operators
    &gt;  &lt;  &gt;= &lt;=
   
   Examples:
   
-  	$if (datatype != dx)
-  	    (code to be compiled if type not d or x)
+          $if (datatype != dx)
+              (code to be compiled if type not d or x)
   
-  	$if (sizeof(i) &lt;= sizeof(r))
-  	    (code to be compiled if size int &lt;= real)
+          $if (sizeof(i) &lt;= sizeof(r))
+              (code to be compiled if size int &lt;= real)
   </pre></div>
   $IF constructs may be nested.  The directive may appear anywhere on
   a line.
@@ -246,9 +241,9 @@ generic: Preprocess a generic source file
   the $FOR and the matching $ENDFOR.  Nesting is permitted.
   <div class="highlight-default-notranslate"><pre>
   Example:
-  	$for (silrd)
-  	(any amount of generic code)
-  	$endfor
+          $for (silrd)
+          (any amount of generic code)
+          $endfor
   </pre></div>
   </dd>
   </dl>
@@ -299,14 +294,14 @@ generic: Preprocess a generic source file
   command syntax.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; generic -k -p ak/ -t silrdx aadd.gx
+  cl&gt; generic -k -p ak/ -t silrdx aadd.gx
   </pre></div>
   <p>
   2. Perform an inline transformation ($FOR directive) of the source file
   <span style="font-family: monospace;">"imsum.gx"</span>, producing the single file <span style="font-family: monospace;">"imsum.x"</span> as output.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; generic -k -o imsum.x imsum.gx
+  cl&gt; generic -k -o imsum.x imsum.gx
   </pre></div>
   <p>
   3. The following is a simple example of a typical generic source file.
@@ -319,27 +314,27 @@ generic: Preprocess a generic source file
   
   procedure alim$t (a, npix, minval, maxval)
   
-  PIXEL	a[ARB], minval, maxval, value
-  int	npix, i
+  PIXEL   a[ARB], minval, maxval, value
+  int     npix, i
   
   begin
-  	minval = a[1]
-  	maxval = a[1]
+          minval = a[1]
+          maxval = a[1]
   
-  	do i = 1, npix {
-  	    value = a[i]
-  	    $if (datatype == x)
-  		if (abs(value) &lt; abs(minval))
-  		    minval = value
-  		else if (abs(value) &gt; abs(maxval))
-  		    maxval = value
-  	    $else
-  		if (value &lt; minval)
-  		    minval = value
-  		else if (value &gt; maxval)
-  		    maxval = value
-  	    $endif
-  	}
+          do i = 1, npix {
+              value = a[i]
+              $if (datatype == x)
+                  if (abs(value) &lt; abs(minval))
+                      minval = value
+                  else if (abs(value) &gt; abs(maxval))
+                      maxval = value
+              $else
+                  if (value &lt; minval)
+                      minval = value
+                  else if (value &gt; maxval)
+                      maxval = value
+              $endif
+          }
   end
   </pre></div>
   </section>

@@ -104,7 +104,7 @@ pconvert: Convert from an apphot/daophot text to tables database
   <div class="highlight-default-notranslate"><pre>
   beginning of string     ^       end of string           $
   one character           ?       zero or more characters *
-  white space             #       escape character        \<br>
+  white space             #       escape character        \
   ignore case             {       end ignore case         }
   begin character class   [       end character class     ]
   not, in char class      ^       range, in char class    -
@@ -154,7 +154,7 @@ pconvert: Convert from an apphot/daophot text to tables database
      n4147.tmag.1 and only select records with YCENTER &lt;= 200.0.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pt&gt; pconvert n4147.mag.1 n4147.tmag.1 "ID,XCENTER,YCENTER,MAG,MSKY" \<br>
+  pt&gt; pconvert n4147.mag.1 n4147.tmag.1 "ID,XCENTER,YCENTER,MAG,MSKY" \
       expr="YCENTER &lt; 200.0" append+
   </pre></div>
   <p>

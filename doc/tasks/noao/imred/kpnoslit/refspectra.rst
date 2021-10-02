@@ -446,7 +446,7 @@ refspectra: Assign reference spectra to observations
   irs.0101.imh        1       8:22:53
   irs.0447.imh        0       13:00:07        irs.0447
   irs.0448.imh        1       13:00:05        irs.0448
-  cl&gt; refspec irs 100-101 refer=irs.*.imh conf+ ver+ select=nearest\<br>
+  cl&gt; refspec irs 100-101 refer=irs.*.imh conf+ ver+ select=nearest\
      &gt;&gt;&gt; ignoreaps-
   [irs.0100] Not a reference spectrum
   [irs.0101] Not a reference spectrum

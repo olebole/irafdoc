@@ -111,7 +111,7 @@ rgbdither: Create an 8-bit RGB dithered image
   1023x1023 to be displayed.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; rgbdither trifidr trifidv trifidb trifidrgb \<br>
+  cl&gt; rgbdither trifidr trifidv trifidb trifidrgb \
   &gt;&gt;&gt; rz1=1 rz2=500 gz1=1 gz2=500 bz1=1 bz2=500 blk=6
   </pre></div>
   </section>

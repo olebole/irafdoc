@@ -73,6 +73,7 @@ gripes: Send suggestions, complaints, etc. to the system
   IMDEL * will delete non image files as well as images!
   It should be possible to delete images with the normal
   DELETE command.
+  .
   cl&gt;
   </pre></div>
   </section>

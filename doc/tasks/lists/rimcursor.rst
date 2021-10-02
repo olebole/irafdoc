@@ -239,18 +239,17 @@ rimcursor: Read the image display cursor (makes a list)
   to another program, e.g., for digital photometry.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; display dev$pix 1    # display image in frame 1
-  cl&gt; rimcursor &gt; starlist # make the object list
-  </pre></div>
-  <p>
-  At this point, the cursor loop is entered and the terminal is placed
-  into cursor mode.  The positions are marked using the space bar.
-  </p>
-  <div class="highlight-default-notranslate"><pre>
-  space_bar               mark the position of the object
-  space_bar               mark the position of another object
+  cl&gt; display dev$pix 1       # display image in frame 1
+  cl&gt; rimcursor &gt; starlist    # make the object list
   
-  &lt;ctrl/z&gt;                (EOF) terminates rimcursor
+  At this point, the cursor loop is entered and the terminal
+  is placed into cursor mode.  The positions are marked using
+  the space bar.
+  
+  space_bar           mark the position of the object
+  space_bar           mark the position of another object
+  
+  &lt;ctrl/z&gt;            (EOF) terminates rimcursor
   </pre></div>
   <p>
   Given the above command sequence, the output file <span style="font-family: monospace;">"starlist"</span> might

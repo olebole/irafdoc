@@ -1352,7 +1352,7 @@ doslit: Process slit spectra
   Creating example longslit in image demoobj1 ...
   Creating example longslit in image demostd1 ...
   Creating example longslit in image demoarc2 ...
-  cl&gt; doslit demoobj1 arcs=demoarc1,demoarc2 stand=demostd1 \<br>
+  cl&gt; doslit demoobj1 arcs=demoarc1,demoarc2 stand=demostd1 \
   &gt;&gt;&gt; extcor=yes, fluxcal=yes resize=yes
   Searching aperture database ...
   Finding apertures ...
@@ -1480,7 +1480,7 @@ doslit: Process slit spectra
   2.  To redo the above:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; doslit demoobj1 arcs=demoarc1,demoarc2 stand=demostd1 \<br>
+  cl&gt; doslit demoobj1 arcs=demoarc1,demoarc2 stand=demostd1 \
   &gt;&gt;&gt; extcor=yes, fluxcal=yes resize=yes redo+
   </pre></div>
   </section>

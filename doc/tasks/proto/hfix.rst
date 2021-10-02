@@ -91,7 +91,7 @@ hfix: Fix image headers with a user specified command
   equal sign is in column 10 instead of 9:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; hfix *.imh \<br>
+  cl&gt; hfix *.imh \
   &gt;&gt;&gt; command="!sed 's/ =/=/' $fname &gt;temp;mv temp $fname"
   </pre></div>
   <p>

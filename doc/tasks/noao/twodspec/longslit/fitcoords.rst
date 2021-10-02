@@ -256,11 +256,14 @@ fitcoords: Fit user coordinates to image coordinates
   C00
   C10
   C20
+  ...
   C&lt;xorder-1&gt;0
   C01
   C11
   C21
+  ...
   C&lt;xorder-1&gt;1
+  ...
   C&lt;xorder-1&gt;&lt;yorder-1&gt;
   </pre></div>
   <p>

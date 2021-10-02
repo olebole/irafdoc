@@ -96,8 +96,8 @@ rmbin: Find/delete binary files in subdirectories
   is for a UNIX host, but this works for all other IRAF hosts as well.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	% cd $iraf
-  	% rmbin -v pkg sys
+  % cd $iraf
+  % rmbin -v pkg sys
   </pre></div>
   </section>
   <section id="s_see_also">

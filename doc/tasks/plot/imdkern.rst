@@ -119,7 +119,7 @@ imdkern: Image display device (IMD) graphics kernel
   </p>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; display dev$pix 1
-  cl&gt; contour dev$pix \<br>
+  cl&gt; contour dev$pix \
   &gt;&gt;&gt; xres=256 yres=256 perim- fill+ label- ceil=500 dev=imdg
   </pre></div>
   <p>

@@ -382,7 +382,9 @@ ccdtime: CCD photometry exposure time calculator
         R  17.3  20.0  10.0 365.8    95.9  19.13  29.38  10.51
   
   cl&gt; ccdtime 21
+  ...
   cl&gt; ccdtime 22
+  ...
   </pre></div>
   </section>
   <section id="s_revisions">

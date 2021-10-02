@@ -798,7 +798,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   window of 21 pixels in x and y.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
+  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \
       xwindow=21 ywindow=21
   </pre></div>
   <p>
@@ -806,10 +806,10 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   function using boxcar smoothed versions of the input images.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; xregister @binimlist brefimage [*,*] shifts.db xwindow=21 \<br>
+  cl&gt; xregister @binimlist brefimage [*,*] shifts.db xwindow=21 \
       ywindow=21
   
-  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
+  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \
       records=@binimlist correlation=file
   </pre></div>
   <p>
@@ -818,7 +818,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   the imshift task.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; xregister @binimlist brefimage [*,*] shifts.db xwindow=21 \<br>
+  cl&gt; xregister @binimlist brefimage [*,*] shifts.db xwindow=21 \
       ywindow=21 databasefmt-
   
   cl&gt; fields shifts.db 2,3 &gt; shifts
@@ -833,8 +833,8 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   the previous image as the initial guess for the current image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \<br>
-      xlag=10 ylag=1 dxlag=INDEF dylag=INDEF correlation=fourier \<br>
+  cl&gt; xregister @inimlist refimage [*,*] shifts.db out=@outimlist \
+      xlag=10 ylag=1 dxlag=INDEF dylag=INDEF correlation=fourier \
       xwindow=21 ywindow=21
   </pre></div>
   <p>
@@ -844,7 +844,7 @@ xregister: Register 1-D or 2-D images using x-correlation techniques
   <div class="highlight-default-notranslate"><pre>
   cl&gt; display refimage
   
-  cl&gt; xregister inimage refimage [900:1100,900:1100] shifts.db \<br>
+  cl&gt; xregister inimage refimage [900:1100,900:1100] shifts.db \
       xwindow=15 ywindow=15 interactive+
   
       ... a contour plot of the cross-correlation function appears

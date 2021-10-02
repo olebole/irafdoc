@@ -266,7 +266,7 @@ evalfit: Compute the standard indices by evaluating the fit
   Escape sequences (e.g. "\n" for newline):
   
   \b      backspace   (<b>not implemented</b>)
-       formfeed
+  formfeed
   \n      newline (crlf)
   \r      carriage return
   \t      tab
@@ -318,7 +318,7 @@ evalfit: Compute the standard indices by evaluating the fit
   xu, yu, fit value and fit error respectively.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ph&gt; evalfit m92.obs m92.cfg m92.fit m92.cal print="xu,yu"\<br>
+  ph&gt; evalfit m92.obs m92.cfg m92.fit m92.cal print="xu,yu"\
       format="%-10.10s  %-7.2f  %-7.2f  %-7.3f  %-6.3f\n"
   </pre></div>
   </section>

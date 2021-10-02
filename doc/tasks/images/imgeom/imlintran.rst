@@ -249,7 +249,7 @@ imlintran: Linearly transform a list of 2-D images
   2. Rotate the axes of an image by 45 degrees around 100. and 100.,
      shift the orgin to 150. and 150. and flip the y axis.
   
-     cl&gt; imlintran n1068 n1068r 45.0 225.0 1.0 1.0 xin=100. yin=100. \<br>
+     cl&gt; imlintran n1068 n1068r 45.0 225.0 1.0 1.0 xin=100. yin=100. \
      &gt;&gt;&gt; xout=150. yout=150.
   
   3. Rotate an image by 45 degrees and reduce the scale in x and y

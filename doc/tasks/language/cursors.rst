@@ -526,7 +526,9 @@ cursors: Graphics and image display cursors
   </p>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; =gcur
+  ...
   :.snap versatec
+  ...
   :.snap versatec
   &lt;RETURN&gt;
   cl&gt;
@@ -539,6 +541,7 @@ cursors: Graphics and image display cursors
   </p>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; implot
+  ...                             (interactive session)
   :.write file1.mc
   &lt;RETURN&gt;
   cl&gt; stdplot file1.mc

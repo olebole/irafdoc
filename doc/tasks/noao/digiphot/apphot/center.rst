@@ -457,19 +457,33 @@ center: Compute accurate centers for a list of objects
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix 1 fi+
   
+  ... display the image
   
   ap&gt; center dev$ypix
   
+  ... type ? to see help screen
   
+  ... move image cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter the maximum radius in pixels for the radial profile or
       accept the default with a CR
+  ... type  v to get the default menu
+  ... set the fwhmpsf, sigma, and centering box half-width using the
       graphics cursor and the stellar radial profile plot
+  ... typing &lt;CR&gt; after a prompt leaves the parameter at its default
       value
+  ... type q to exit setup menu
   
+  ... type the v key to verify the critical parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... move the image cursor to the stars of interest and tap
       the space bar
   
+  ... type q to quit followed by q to confirm the quit
   
+  ... the output will appear in ypix.ctr.1
   </pre></div>
   <p>
   2. Compute the centers for a few stars in dev$ypix using the contour plot
@@ -481,34 +495,55 @@ center: Compute accurate centers for a list of objects
   <div class="highlight-default-notranslate"><pre>
   ap&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   ap&gt; set stdimcur = stdgraph
   
+  ... define the image cursor to be the graphics cursor
   
   ap&gt; contour dev$ypix
   
+  ... make a contour plot of dev$ypix
   
   ap&gt; contour dev$ypix &gt;G ypix.plot1
   
+  ... store the contour plot of ypix in the file ypix.plot
   
   ap&gt; center dev$ypix display=stdgraph
   
+  ... type ? to see the help screen
   
+  ... move graphics cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter the maximum radius in pixels for the radial profile or
       accept the default with a CR
+  ... type v key to get the default setup menu
+  ... enter maximum radius in pixels of the radial profile
+  ... set the fwhmpsf, sigma, and centering box half-width
       using the graphics cursor and the stellar radial profile plot
+  ... typing &lt;CR&gt; after the prompt leaves the parameter at its
       default value
+  ... type q to quit the setup menu
   
+  ... type the v key to verify critical parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... retype :.read ypix.plot1 to reload the contour plot
   
+  ... move the graphics cursor to the stars of interest and tap
       the space bar
   
+  ... a one line summary of the answers will appear on the standard
       output for each star measured
   
+  ... type q to quit followed by q to confirm the quit
   
+  ... full output will appear in the text file ypix.ctr.2
   
   ap&gt; set stdimcur = &lt;default&gt;
   
+  ... reset stdimcur to its previous value
   </pre></div>
   <p>
   3. Setup and run CENTER interactively on a list of objects temporarily
@@ -518,20 +553,28 @@ center: Compute accurate centers for a list of objects
   <div class="highlight-default-notranslate"><pre>
   ap&gt; daofind dev$ypix fwhmpsf=2.6 sigma=25.0 verify-
   
+  ... make a coordinate list
   
+  ... the output will appear in the text file ypix.coo.1
   
   ap&gt; center dev$ypix cbox=7.0 coords=ypix.coo.1
   
+  ... type ? for optional help
   
+  ... move the graphics cursor to the stars and tap space bar
   
                           or
   
+  ... select stars from the input coordinate list with m / :m #
       and measure with spbar
   
+  ... measure stars selected from the input coordinate list
       with n / n #
   
+  ... a one line summary of results will appear on the standard output
       for each star measured
   
+  ... the output will appear in ypix.ctr.3 ...
   </pre></div>
   <p>
   4. Display and measure some stars in an image section and write the output
@@ -540,11 +583,15 @@ center: Compute accurate centers for a list of objects
   <div class="highlight-default-notranslate"><pre>
   ap&gt; display dev$ypix[150:450,150:450] 1
   
+  ... display the image section
   
   ap&gt; center dev$ypix[150:450,150:450] wcsout=tv
   
+  ... move cursor to stars and type spbar
   
+  ... type q to quit and q again to confirm quit
   
+  ... output will appear in ypix.ctr.4
   
   ap&gt; pdump ypix.ctr.4 xc,yc yes | tvmark 1 STDIN col=204
   </pre></div>
@@ -555,6 +602,7 @@ center: Compute accurate centers for a list of objects
   <div class="highlight-default-notranslate"><pre>
   ap&gt; center dev$ypix coords=ypix.coo.1 verify+ inter-
   
+  ... output will appear in ypix.ctr.5 ...
   </pre></div>
   <p>
   6. Repeat example 5 but assume that the input coordinate are ra and dec
@@ -566,13 +614,17 @@ center: Compute accurate centers for a list of objects
   
   ap&gt; rimcursor wcs=world &gt; radec.coo
   
+  ... move to selected stars and type any key
   
+  ... type ^Z to quit
   
   ap&gt; center dev$ypix coords=radec.coo wcsin=world verify- inter- &amp;
   
+  ... output will appear in ypix.ctr.6
   
   ap&gt; pdump ypix.ctr.6 xc,yc yes | tvmark 1 STDIN col=204
   
+  ... mark the stars on the display
   </pre></div>
   <p>
   7. Run CENTER interactively without using the image display.
@@ -580,27 +632,42 @@ center: Compute accurate centers for a list of objects
   <div class="highlight-default-notranslate"><pre>
   ap&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   ap&gt; set stdimcur = text
   
+  ... set the image cursor to the standard input
   
   ap&gt; center dev$ypix coords=ypix.coo.1
   
+  ... type ? for optional help
   
+  ... type :m 3 to set the initial coordinates to those of the
       third star in the list
   
+  ... type i to enter the interactive setup menu
+  ... enter the maximum radius in pixels for the radial profile or
       accept the default with a CR
+  ... type v to enter the default menu
+  ... set the fwhmpsf, sigma, and centering box half-width
       using the graphics cursor and the stellar radial profile plot
+  ... typing &lt;CR&gt; after the prompt leaves the parameter at its default
       value
   
+  ... type r to rewind the coordinate list
   
+  ... type l to measure all the stars in the coordinate list
   
+  ... a one line summary of the answers will appear on the standard
       output for each star measured
   
+  ... type q to quit followed by q to confirm the quit
   
+  ... full output will appear in the text file ypix.ctr.7
   
   ap&gt; set stdimcur = &lt;default&gt;
   
+  ... reset the value of stdimcur
   </pre></div>
   <p>
   8. Use a image cursor command file to drive the CENTER task. The cursor command
@@ -620,6 +687,7 @@ center: Compute accurate centers for a list of objects
   
   ap&gt; center dev$ypix icommands=cmdfile  verify-
   
+  ... full output will appear in ypix.ctr.8
   </pre></div>
   </section>
   <section id="s_bugs">

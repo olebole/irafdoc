@@ -317,7 +317,7 @@ setairmass: Compute effective airmass and middle UT for an exposure
   <div class="highlight-default-notranslate"><pre>
   cl&gt; setairmass dev$ypix exposure=itime update-
   
-  cl&gt; setairmass dev$ypix ra=crval1 dec=crval2 equinox=equinox \<br>
+  cl&gt; setairmass dev$ypix ra=crval1 dec=crval2 equinox=equinox \
       exposure=itime update-
   </pre></div>
   <p>

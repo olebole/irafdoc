@@ -333,9 +333,9 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   reference units per pixel unit and bicubic spline interpolation with no flux
   correction. 
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; geomap coords database 1.0 512.0 1.0 512.0 xxorder=4 xyorder=4 \<br>
+  cl&gt; geomap coords database 1.0 512.0 1.0 512.0 xxorder=4 xyorder=4 \
   xxterms=yes yxorder=4 yyorder=4 yxterms=yes
-  cl&gt; gregister input output database coords xscale=2. yscale=2. \<br>
+  cl&gt; gregister input output database coords xscale=2. yscale=2. \
   &gt;&gt;&gt; inter=spline3 flux-
   </pre></div>
   </dd>
@@ -347,7 +347,7 @@ gregister: Register 1-D or 2-D images using the geomap transforms
   in the database file.
   <div class="highlight-default-notranslate"><pre>
   cl&gt; geomap coord1,coord2,coord3 database 1. 512. 1. 512.
-  cl&gt; gregister im1,im2,im3 imout1,imout2,imout3 database \<br>
+  cl&gt; gregister im1,im2,im3 imout1,imout2,imout3 database \
   &gt;&gt;&gt; coord1,coord2,coords3
   </pre></div>
   </dd>

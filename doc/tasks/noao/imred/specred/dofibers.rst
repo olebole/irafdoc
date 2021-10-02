@@ -1811,7 +1811,7 @@ dofibers: Process fiber spectra
   47 0
   48 1
   sp&gt; specred.verbose = yes
-  sp&gt; dofibers demoobj apref=demoflat flat=demoflat arcs1=demoarc \<br>
+  sp&gt; dofibers demoobj apref=demoflat flat=demoflat arcs1=demoarc \
   &gt;&gt;&gt; fib=12 apid=demoapid width=4. minsep=5. maxsep=7. clean- splot+
   Set reference apertures for demoflat
   Resize apertures for demoflat?  (yes):

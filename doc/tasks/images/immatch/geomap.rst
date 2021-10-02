@@ -475,7 +475,7 @@ geomap: Compute geometric transforms using matched coordinate lists
      of the same name written in example 1.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; geomap m51.coo database 1. 512. 1. 512. xxo=4 xyo=4 \<br>
+  cl&gt; geomap m51.coo database 1. 512. 1. 512. xxo=4 xyo=4 \
   &gt;&gt;&gt; yxo=4 yyo=4 xxt=full yxt=full inter-
   </pre></div>
   <p>
@@ -513,9 +513,9 @@ geomap: Compute geometric transforms using matched coordinate lists
   the database record names.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; geomap coo1,coo2,coo3 database 1. 512. 1. 512. \<br>
+  cl&gt; geomap coo1,coo2,coo3 database 1. 512. 1. 512. \
   &gt;&gt;&gt; transforms=im1,im2,im3
-  cl&gt; gregister im1,im2,im3  im1.out,im2.out,im3.out database \<br>
+  cl&gt; gregister im1,im2,im3  im1.out,im2.out,im3.out database \
   &gt;&gt;&gt; im1,im2,im3
   </pre></div>
   </section>

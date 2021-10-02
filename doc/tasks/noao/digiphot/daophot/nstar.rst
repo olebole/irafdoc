@@ -448,7 +448,7 @@ nstar: Fit the psf to predefined groups of stars
   
        ... answer will appear in ypix.coo.1
   
-   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \
        apertures = 3.0
   
        ... answer verify prompts
@@ -459,7 +459,7 @@ nstar: Fit the psf to predefined groups of stars
   
    da&gt; display dev$ypix 1
   
-   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \
        fitrad=3.0 mkstars=yes display=imdr
   
        ... verify the critical parameters
@@ -521,7 +521,7 @@ nstar: Fit the psf to predefined groups of stars
   in the coordinate system of the parent image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; nstar dev$ypix[150:450,150:450] default default default default \<br>
+  da&gt; nstar dev$ypix[150:450,150:450] default default default default \
       wcsin=tv wcspsf=tv wcsout=tv
   
       ... answer the verify prompts
@@ -544,7 +544,7 @@ nstar: Fit the psf to predefined groups of stars
   
       ... the output images is ypix.sub.2
   
-  da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \<br>
+  da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \
       wcsin=tv wcspsf=tv wcsout=tv
   
       ... subtract stars from the nstar input image
@@ -556,7 +556,7 @@ nstar: Fit the psf to predefined groups of stars
   Turn off verify and verbose.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; nstar dev$ypix default default default default verbose- \<br>
+  da&gt; nstar dev$ypix default default default default verbose- \
       verify- &amp;
   
       ... the results will appear in ypix.nst.3 and ypix.nrj.3

@@ -887,7 +887,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   format. Display the input and output image and blink them.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; sregister radio xray radio.tran rwxformat=%12.2H \<br>
+  cl&gt; sregister radio xray radio.tran rwxformat=%12.2H \
       rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h
   
   cl&gt; display radio 1 fi+
@@ -900,8 +900,8 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   residuals.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; sregister radio xray radio.tran rwxformat=%12.2H \<br>
-      rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h xxo=4 \<br>
+  cl&gt; sregister radio xray radio.tran rwxformat=%12.2H \
+      rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h xxo=4 \
       xyo=4 xxt=half yxo=4 yyo=4 yxt=half  inter+
   
       ... a plot of the fit appears
@@ -932,7 +932,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   
   # Give the dummy reference image the desired coordinate system
   
-  cl&gt; ccsetwcs refimage "" xref=3600.5 yref=3600.5 xmag=-0.5 \<br>
+  cl&gt; ccsetwcs refimage "" xref=3600.5 yref=3600.5 xmag=-0.5 \
   ymag=0.5 lngref=12:32:53.1 latref=43:13:03 ...
   
   # Register the images using constant boundary extension and set
@@ -940,7 +940,7 @@ sregister: Register 1-D or 2-D images using the image celestial wcs
   # It may be possible to improve performance by increasing nxblock
   # and nyblock.
   
-  cl&gt; sregister @inlist refimage @outlist boundary=constant \<br>
+  cl&gt; sregister @inlist refimage @outlist boundary=constant \
   constant=&lt;uservalue&gt; nxblock=7200 nyblock=1024 ...
   
   # Combine the images using imcombine

@@ -73,6 +73,7 @@ page: Page through a file
   i.e., no carriage return is required to pass the command to the program.
   </p>
   <div class="highlight-default-notranslate"><pre>
+  .               go to the beginning of the current file    [BOF]
   :               colon escape (see below)
   ?               display a one-line command summary
   G               go to the end of the current file          [EOF]

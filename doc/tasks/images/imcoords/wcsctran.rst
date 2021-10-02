@@ -349,7 +349,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   file, and the ras must be converted from hours to decimal degrees.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; wcsctran incoords outcoords image world logical units="h n" \<br>
+  im&gt; wcsctran incoords outcoords image world logical units="h n" \
       formats="%8.3f %0.3f"
   </pre></div>
   <p>
@@ -357,7 +357,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   produce output coordinate lists for a list of input images.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; wcsctran incoords @outcoolist @imlist world logical units="h n" \<br>
+  im&gt; wcsctran incoords @outcoolist @imlist world logical units="h n" \
       formats="%8.3f %8.3f"
   </pre></div>
   <p>
@@ -367,7 +367,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   input coordinate file.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  im&gt; wcsctran magfile omagfile image logical world col="3 4" \<br>
+  im&gt; wcsctran magfile omagfile image logical world col="3 4" \
       formats="%12.2H %12.1h"
   </pre></div>
   <p>
@@ -381,7 +381,7 @@ wcsctran: Transform coordinates from one iraf image wcs to another
   <div class="highlight-default-notranslate"><pre>
   im&gt; display parent 1 fi+
   im&gt; rimcursor &gt; coolist
-  im&gt; imlintran parent image 45.0 45.0 1.5 1.5 xin=256 yin=256 \<br>
+  im&gt; imlintran parent image 45.0 45.0 1.5 1.5 xin=256 yin=256 \
       xout=281 yout=263
   im&gt; wcsctran coolist ocoolist image physical logical
   im&gt; display image 2 fi+

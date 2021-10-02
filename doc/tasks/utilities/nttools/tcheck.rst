@@ -131,7 +131,7 @@ tcheck: Check STSDAS table element values.
   may be easier to use the match function.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  fgwa_id when ! match(fgwa_id,"CAM","H13","H19","H27",\<br>
+  fgwa_id when ! match(fgwa_id,"CAM","H13","H19","H27",\
   "H40","H57","H78")
   </pre></div>
   <p>

@@ -575,7 +575,7 @@ odcombine: Combine spectra having different wavelength ranges (new)
   3.  Combine spectra by apertures using exposure time scaling and weighting.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; odcombine *.ms comb1d \\<br>
+  cl&gt; odcombine *.ms comb1d \\
   &gt;&gt;&gt; group=apertures scale=exptime weights=exptime
   cl&gt; scopy comb1d.* comb.ms format="multispec"
   cl&gt; imdel comb1d.*

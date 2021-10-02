@@ -270,7 +270,7 @@ substar: Subtract the fitted stars from the original image
   
        ... answer will appear in ypix.coo.1
   
-   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \
        apertures = 3.0
   
        ... answer verify prompts
@@ -281,7 +281,7 @@ substar: Subtract the fitted stars from the original image
   
    da&gt; display dev$ypix 1
   
-   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \
        fitrad=3.0 mkstars=yes display=imdr
   
        ... verify the critical parameters
@@ -343,7 +343,7 @@ substar: Subtract the fitted stars from the original image
   results in the coordinate system of the parent image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; nstar dev$ypix[150:450,150:450] default default default default \<br>
+  da&gt; nstar dev$ypix[150:450,150:450] default default default default \
       wcsin=tv wcspsf=tv wcsout=tv
   
       ... answer the verify prompts
@@ -366,7 +366,7 @@ substar: Subtract the fitted stars from the original image
   
       ... the output images is ypix.sub.2
   
-  da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \<br>
+  da&gt; substar dev$ypix[150:450,150:450] ypix.nst.2 "" default default  \
       wcsin=tv wcspsf=tv wcsout=tv
   
       ... subtract stars from the nstarinput image

@@ -251,14 +251,14 @@ magnify: Magnify a list of 1-D or 2-D images
   3. To magnify the central part of an image by 2 into a 11 by 31 image:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; magnify imagein imageout 2 2 x1=25.3 x2=30.3 \<br>
+  cl&gt; magnify imagein imageout 2 2 x1=25.3 x2=30.3 \
   &gt;&gt;&gt; y1=20 y2=35
   </pre></div>
   <p>
   4. To use a higher order interpolator with wrap around boundary extension:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; magnify imagein imageout 2 2 x1=-10 y1=-10 \<br>
+  cl&gt; magnify imagein imageout 2 2 x1=-10 y1=-10 \
   &gt;&gt;&gt; interpolation=spline3 boundary=wrap
   </pre></div>
   <p>

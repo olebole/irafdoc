@@ -470,6 +470,7 @@ nhedit: Edit image header using a command file
   The following special variables are recognized within expressions:
   </p>
   <div class="highlight-default-notranslate"><pre>
+  .               A string constant, used to flag printing
   $               The value of the "current field"
   $F              The name of the "current field"
   $I              The name of the "current image"
@@ -518,7 +519,7 @@ nhedit: Edit image header using a command file
   5. Add HISTORY card before a given keyword
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; nhedit file.fits history \<br>
+  cl&gt; nhedit file.fits history \
       "History text from column 9 to 80, no quotes" before=wcsdim add+
   </pre></div>
   <p>

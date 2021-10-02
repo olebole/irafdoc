@@ -394,7 +394,7 @@ ccstd: Transform to and from standard astrometric coordinates
   13:29:55.424  47:10:05.15  224.35  131.20
   13:30:01.816  47:12:58.79  134.37  356.33
   
-  cl&gt; ccstd coords STDOUT "" xref=256.5 yref=256.5 lngref=13:29:48.1 \<br>
+  cl&gt; ccstd coords STDOUT "" xref=256.5 yref=256.5 lngref=13:29:48.1 \
   latref = 47:11:53.4 xcol=3 ycol=4 lngcol=1 latcol=2
     -8.180   104.120    71.000   153.880
   -109.087  -164.189   209.000  -194.400
@@ -407,7 +407,7 @@ ccstd: Transform to and from standard astrometric coordinates
   the second and fourth columns contain the position angle in degrees measured
   counter-clockwise with respect to the standard coordinates.
   
-  cl&gt; ccstd coords STDOUT "" xref=256.5 yref=256.5 lngref=13:29:48.1 \<br>
+  cl&gt; ccstd coords STDOUT "" xref=256.5 yref=256.5 lngref=13:29:48.1 \
   latref = 47:11:53.4 xcol=3 ycol=4 lngcol=1 latcol=2 polar+
   104.441    94.492   169.470    65.231
   197.124   236.400   285.434   317.073
@@ -482,7 +482,7 @@ ccstd: Transform to and from standard astrometric coordinates
     74.397  -108.210    74.107  -108.269
    139.454    65.467   139.721    65.376
   
-  cl&gt; ccstd coords STDOUT coords.db coords xcol=3 ycol=4 lngcol=1 latcol=2 \<br>
+  cl&gt; ccstd coords STDOUT coords.db coords xcol=3 ycol=4 lngcol=1 latcol=2 \
   polar+
   104.490    94.650   104.870    94.704
   197.264   236.325   197.106   236.361
@@ -493,8 +493,8 @@ ccstd: Transform to and from standard astrometric coordinates
   4. Use the previous plate solution to transform the pixel and equatorial
   coordinates to standard coordinates but enter the plate solution by hand.
   
-  cl&gt; ccstd coords STDOUT "" xref=318.735 yref=273.900 lngref=13:29:48.129 \<br>
-  latref=47:11:53.37 xmag=.764 ymag=.767 xrot=180.890 yrot=1.042 xcol=3    \<br>
+  cl&gt; ccstd coords STDOUT "" xref=318.735 yref=273.900 lngref=13:29:48.129 \
+  latref=47:11:53.37 xmag=.764 ymag=.767 xrot=180.890 yrot=1.042 xcol=3    \
   ycol=4 lngcol=1 latcol=2
     -8.475   104.150    -8.599   104.559
   -109.382  -164.159  -109.161  -164.165
@@ -502,8 +502,8 @@ ccstd: Transform to and from standard astrometric coordinates
     74.393  -108.206    74.092  -108.313
    139.450    65.471   139.688    65.401
   
-  cl&gt; ccstd coords STDOUT "" xref=318.735 yref=273.900 lngref=13:29:48.129 \<br>
-  latref=47:11:53.37 xmag=.764 ymag=.767 xrot=180.890 yrot=1.042 xcol=3    \<br>
+  cl&gt; ccstd coords STDOUT "" xref=318.735 yref=273.900 lngref=13:29:48.129 \
+  latref=47:11:53.37 xmag=.764 ymag=.767 xrot=180.890 yrot=1.042 xcol=3    \
   ycol=4 lngcol=1 latcol=2 polar+
   104.494    94.652   104.912    94.702
   197.263   236.324   197.145   236.378
@@ -527,7 +527,7 @@ ccstd: Transform to and from standard astrometric coordinates
     74.397  -108.210    74.107  -108.269
    139.454    65.467   139.721    65.376
   
-  cl&gt; ccstd stdcoords STDOUT coords.db coords xcol=3 ycol=4 lngcol=1 latcol=2  \<br>
+  cl&gt; ccstd stdcoords STDOUT coords.db coords xcol=3 ycol=4 lngcol=1 latcol=2  \
   forward-
   
   13:29:47.30 47:13:37.5   327.499   410.381

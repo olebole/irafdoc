@@ -601,7 +601,7 @@ ccxymatch: Match celestial and pixel coordinate lists
    13:30:07.960   47:05:18.30        401.034       147.262     17    42
    13:30:14.950   47:10:27.60        236.088       864.817     21    52
   
-  cl&gt; ccmap m51b.mat.1 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \<br>
+  cl&gt; ccmap m51b.mat.1 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \
   latcolumn=2 refpoint=user lngref=13:29:52.8 latref=47:11:41  interactive=no
   
   Coords File: m51b.mat.1  Image:
@@ -637,8 +637,8 @@ ccxymatch: Match celestial and pixel coordinate lists
   <div class="highlight-default-notranslate"><pre>
   cl&gt; regions 13:29:52.8 47:11:41 0.27 m51b.gsc.tab
   
-  cl&gt; gasp.skymap m51b.gsc.tab 13:29:52.8 47:11:41 INDEF 0.27            \<br>
-  objstyle=square racol=RA_HRS deccol=DEC_DEG magcol=MAG interactive-    \<br>
+  cl&gt; gasp.skymap m51b.gsc.tab 13:29:52.8 47:11:41 INDEF 0.27            \
+  objstyle=square racol=RA_HRS deccol=DEC_DEG magcol=MAG interactive-    \
   dev=stdplot
   
   cl&gt; tprint  m51b.gsc.tab &gt; m51b.gsc
@@ -684,7 +684,7 @@ ccxymatch: Match celestial and pixel coordinate lists
    13:30:07.960   47:05:18.30        401.022       147.183     17     1
    13:30:14.950   47:10:27.60        236.044       864.882     21     2
   
-  cl&gt; ccmap m51b.mat.2 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \<br>
+  cl&gt; ccmap m51b.mat.2 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \
   latcolumn=2 refpoint=user lngref=13:29:52.8 latref=47:11:41 interactive=no
   
   Coords File: m51b.mat.2  Image:
@@ -713,8 +713,8 @@ ccxymatch: Match celestial and pixel coordinate lists
   to match the two lists.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccxymatch m51b.coo.1 m51b.gsc m51b.mat.3 2.0 lngcolumn=2 latcolumn=4 \<br>
-  matching=tolerance xin=761.40 yin=1037.80 xmag=-0.43 ymag=0.43 xrot=0.0  \<br>
+  cl&gt; ccxymatch m51b.coo.1 m51b.gsc m51b.mat.3 2.0 lngcolumn=2 latcolumn=4 \
+  matching=tolerance xin=761.40 yin=1037.80 xmag=-0.43 ymag=0.43 xrot=0.0  \
   yrot=0.0 lngref=13:29:52.80 latref=47:11:42.9
   
   cl&gt; type m51b.mat.3
@@ -741,7 +741,7 @@ ccxymatch: Match celestial and pixel coordinate lists
    13:29:29.730   47:12:04.10       1307.802      1085.564     16    60
    13:29:38.700   47:13:36.20       1093.813      1300.189     13    63
   
-  cl&gt; ccmap m51b.mat.3 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \<br>
+  cl&gt; ccmap m51b.mat.3 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \
   latcolumn=2 refpoint=user lngref=13:29:52.8 latref=47:11:41 interactive=no
   
   Coords File: m51b.mat.3  Image:
@@ -780,8 +780,8 @@ ccxymatch: Match celestial and pixel coordinate lists
   13:29:55.42 47:10:05.2  13:29:38.70 47:13:36.2  13:30:14.95 47:10:27.6
        698.5       811.4      1093.8      1300.2       236.1       864.8
   
-  cl&gt; ccxymatch m51b.coo.1 m51b.gsc m51b.mat.4 2.0 refpoints=refpts          \<br>
-  lngcolumn=2 latcolumn=4 matching=tolerance lngref=13:29:52.80              \<br>
+  cl&gt; ccxymatch m51b.coo.1 m51b.gsc m51b.mat.4 2.0 refpoints=refpts          \
+  lngcolumn=2 latcolumn=4 matching=tolerance lngref=13:29:52.80              \
   latref=47:11:42.9
   
   cl&gt; type m51b.mat.4
@@ -812,7 +812,7 @@ ccxymatch: Match celestial and pixel coordinate lists
    13:29:29.730   47:12:04.10       1307.802      1085.564     16    60
    13:29:38.700   47:13:36.20       1093.813      1300.189     13    63
   
-  cl&gt; ccmap m51b.mat.4 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \<br>
+  cl&gt; ccmap m51b.mat.4 ccmap.db results=STDOUT xcolumn=3 ycolumn=4 lngcolumn=1 \
   latcolumn=2 refpoint=user lngref=13:29:52.8 latref=47:11:41 interactive=no
   </pre></div>
   </section>

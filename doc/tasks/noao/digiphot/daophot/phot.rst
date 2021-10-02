@@ -620,13 +620,16 @@ phot: Compute sky values and initial magnitudes for a list of stars
   created by DAOFIND and the default setup.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; daofind dev$ypix default fwhmpsf=2.6 sigma=5.0 threshold=20. \<br>
+  da&gt; daofind dev$ypix default fwhmpsf=2.6 sigma=5.0 threshold=20. \
       verify-
   
+  ... make the coordinate list ypix.coo.1
   
   da&gt; phot dev$ypix default default
   
+  ... answer the verify prompts
   
+  ... the results will appear in ypix.mag.1
   </pre></div>
   <p>
   2. Compute the magnitudes for a few  stars in dev$ypix using the display
@@ -636,21 +639,36 @@ phot: Compute sky values and initial magnitudes for a list of stars
   <div class="highlight-default-notranslate"><pre>
   da&gt; display dev$ypix 1 fi+
   
+  ... display the image
   
   da&gt; phot dev$ypix "" default calgorithm=centroid interactive+
   
+  ... type ? to print an optional help page
   
+  ... move the image cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter maximum radius in pixels of the radial profile or hit
       CR to accept the default
+  ... type v to enter the default menu
+  ... set the fwhmpsf, centering radius, inner and outer sky annuli,
       photometry apertures, and sigma using the graphics cursor and
       the stellar radial profile plot
+  ... typing &lt;CR&gt; leaves everything at the default value
+  ... type q to quit the setup menu
   
+  ... type the v key to verify the parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... move the image cursor to the stars of interest and tap
       the space bar
   
+  ... a one line summary of the fitted parameters will appear on the
       standard output for each star measured
   
+  ... type q to quit and q again to confirm the quit
   
+  ... the output will appear in ypix.mag.2
   </pre></div>
   <p>
   3. Compute the magnitudes for a few stars in dev$ypix using a contour plot
@@ -662,35 +680,55 @@ phot: Compute sky values and initial magnitudes for a list of stars
   <div class="highlight-default-notranslate"><pre>
   da&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   da&gt; set stdimcur = stdgraph
   
+  ... define the image cursor to be the graphics cursor
   
   da&gt; contour dev$ypix
   
+  ... make a contour plot of dev$ypix
   
   da&gt; contour dev$ypix &gt;G ypix.plot1
   
+  ... store the contour plot of dev$ypix in the file ypix.plot1
   
-  da&gt; phot dev$ypix "" default calgorithm="centroid" interactive+ \<br>
+  da&gt; phot dev$ypix "" default calgorithm="centroid" interactive+ \
       display=stdgraph
   
+  ... type ? to get an optional help page
   
+  ... move graphics cursor to a star
+  ... type i to enter the interactive setup menu
+  ... enter maximum radius in pixels of the radial profile or CR
       to accept the default value
+  ... type v to enter the default menu
+  ... set the fwhmpsf, centering radius, inner and outer sky annuli,
       apertures, and sigma using the graphics cursor and the
       stellar radial profile plot
+  ... typing &lt;CR&gt; leaves everything at the default value
+  ... type q to quit the setup menu
   
+  ... type the v key to verify the critical parameters
   
+  ... type the w key to save the parameters in the parameter files
   
+  ... retype :.read ypix.plot1 to reload the contour plot
   
+  ... move the graphics cursor to the stars of interest and tap
       the space bar
   
+  ... a one line summary of the fitted parameters will appear on the
       standard output for each star measured
   
+  ... type q to quit and q again to verify
   
+  ... full output will appear in the text file ypix.mag.3
   
   da&gt; set stdimcur = &lt;default&gt;
   
+  ... reset stdimcur to its previous value
   </pre></div>
   <p>
   4. Setup and run PHOT interactively on a list of objects temporarily
@@ -702,21 +740,28 @@ phot: Compute sky values and initial magnitudes for a list of stars
   
       ... display the image
   
-  da&gt; phot dev$ypix ypix.coo.1 default calgorithm="centroid" \<br>
-      cbox=7.0 annulus=12.0 dannulus=5.0 apertures="3.0,5.0"  \<br>
+  da&gt; phot dev$ypix ypix.coo.1 default calgorithm="centroid" \
+      cbox=7.0 annulus=12.0 dannulus=5.0 apertures="3.0,5.0"  \
       interactive+
   
+  ... type ? for optional help
   
+  ... move the graphics cursor to the stars and tap space bar
   
                           or
   
+  ... select stars from the input coordinate list with m / :m #
       and measure with spbar
   
+  ... measure stars selected from the input coordinate list
       with n / n #
   
+  ... a one line summary of results will appear on the standard output
       for each star measured
   
+  ... type q to quit and q again to confirm the quit
   
+  ... the output will appear in ypix.mag.4 ...
   </pre></div>
   <p>
   5. Display and measure some stars in an image section and write the output
@@ -725,12 +770,16 @@ phot: Compute sky values and initial magnitudes for a list of stars
   <div class="highlight-default-notranslate"><pre>
   da&gt; display dev$ypix[150:450,150:450] 1
   
+  ... display the image section
   
-  da&gt; phot dev$ypix[150:450,150:450] "" default wcsout=tv \<br>
+  da&gt; phot dev$ypix[150:450,150:450] "" default wcsout=tv \
       calgorithm="centroid" interactive+
   
+  ... move cursor to stars and type spbar
   
+  ... type q to quit and q again to confirm quit
   
+  ... output will appear in ypix.mag.5
   
   da&gt; pdump ypix.mag.5 xc,yc yes | tvmark 1 STDIN col=204
   </pre></div>
@@ -741,6 +790,7 @@ phot: Compute sky values and initial magnitudes for a list of stars
   <div class="highlight-default-notranslate"><pre>
   ap&gt; phot dev$ypix default default
   
+  ... output will appear in ypix.mag.6...
   </pre></div>
   <p>
   7. Repeat example 6 but assume that the input coordinate are ra and dec
@@ -752,13 +802,17 @@ phot: Compute sky values and initial magnitudes for a list of stars
   
   ap&gt; rimcursor wcs=world &gt; radec.coo
   
+  ... move to selected stars and type any key
   
+  ... type ^Z to quit
   
   da&gt; phot dev$ypix radec.coo default wcsin=world verify- verbose- &amp;
   
+  ... output will appear in ypix.mag.7
   
   da&gt; pdump ypix.mag.7 xc,yc yes | tvmark 1 STDIN col=204
   
+  ... mark the stars on the display
   </pre></div>
   <p>
   8. Run PHOT interactively without using the image display cursor.
@@ -766,28 +820,44 @@ phot: Compute sky values and initial magnitudes for a list of stars
   <div class="highlight-default-notranslate"><pre>
   da&gt; show stdimcur
   
+  ... record the default value of stdimcur
   
   da&gt; set stdimcur = text
   
+  ... set the image cursor to the standard input
   
   da&gt; phot dev$ypix default default interactive+
   
+  ... type ? for optional help
   
+  ... type :m 3 to set the initial coordinates to those of the
       third star in the list
   
+  ... type i to enter the interactive setup menu
+  ... enter the maximum radius in pixels for the radial profile or
       accept the default with a CR
+  ... type v to enter the default menu
+  ... set the fwhmpsf, centering radius, inner and outer sky annuli,
       apertures, and sigma using the graphics cursor and the
       stellar radial profile plot
+  ... typing &lt;CR&gt; after the prompt leaves the parameter at its default
       value
+  ... type q to quit the setup menu
   
+  ... type r to rewind the coordinate list
   
+  ... type l to measure all the stars in the coordinate list
   
+  ... a one line summary of the answers will appear on the standard
       output for each star measured
   
+  ... type q to quit followed by q to confirm the quit
   
+  ... full output will appear in the text file ypix.mag.8
   
   da&gt; set stdimcur = &lt;default&gt;
   
+  ... reset the value of stdimcur
   </pre></div>
   <p>
   8. Use a image cursor command file to drive the PHOT task. The cursor command
@@ -810,6 +880,7 @@ phot: Compute sky values and initial magnitudes for a list of stars
   
   da&gt; phot dev$ypix "" default icommands=cmdfile  verify-
   
+  ... full output will appear in ypix.mag.9
   </pre></div>
   </section>
   <section id="s_time_requirements">

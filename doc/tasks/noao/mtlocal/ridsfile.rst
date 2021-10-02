@@ -97,7 +97,7 @@ ridsfile: Convert IDSFILES from a DUMPF tape to IRAF images
   </p>
   <p>
   	.nf
-  cl&gt; ridsfile mtb 4 aug83
+  	cl&gt; ridsfile mtb 4 aug83
   </p>
   <p>
   [2] List the headers from the same IDSFILE read in example 1, but don't make

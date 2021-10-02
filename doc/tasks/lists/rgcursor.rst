@@ -74,7 +74,7 @@ rgcursor: Read the graphics cursor (makes a list)
   into cursor mode.  Any of the following commands might be appropriate:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  <b>command</b>           <b>action</b>
+  <b>command</b>          <b>action</b>
   
   :.markcur+      enables marking of the cursor position
                       when the cursor is read

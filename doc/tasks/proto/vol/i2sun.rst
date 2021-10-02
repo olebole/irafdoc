@@ -161,7 +161,7 @@ i2sun: Convert IRAF images to Sun rasterfiles
       using a pseudocolor color table file saved earlier, with
       input greylevels scaled between 10 and 100.
   
-      cl&gt; i2sun nzoom*.imh tmp$mydir/movie/frame.%d \<br>
+      cl&gt; i2sun nzoom*.imh tmp$mydir/movie/frame.%d \
           home$colors/pseudo.ras 10 100
   
   2.  Make a movie through the z, or band, axis of a datacube.
@@ -171,7 +171,7 @@ i2sun: Convert IRAF images to Sun rasterfiles
   3.  Make a movie through the 4th, or hyper-axis of a datacube,
       holding image band 10 constant.
   
-      cl&gt; i2sun hypercube[*,*,10,*] tmp$movie/frame.%d 1 256 \<br>
+      cl&gt; i2sun hypercube[*,*,10,*] tmp$movie/frame.%d 1 256 \
           sliceaxis=4
   
   4.  Run I2SUN on a VAX, with output to a Sun.

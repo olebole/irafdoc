@@ -186,47 +186,35 @@ lroff: Lroff (line-roff) text formatter
   <br>
   </p>
   <div class="highlight-default-notranslate"><pre>
-  </section>
-  <section id="s_name">
-  <h3>Name</h3>
+  .help stcopy   2       "string utilities"
+  .ih
+  NAME
   stcopy -- copy a string.
-  </section>
-  <section id="s_purpose">
-  <h3>Purpose</h3>
+  .ih
+  PURPOSE
   Stcopy is used to copy an EOS delimited character
   string.  The EOS delimiter MUST be present.
-  </section>
-  <section id="s_usage">
-  <h3>Usage</h3>
+  .ih
+  USAGE
   stcopy (from, to, maxchar)
-  </section>
-  <section id="s_parameters">
-  <h3>Parameters</h3>
-  <dl id="l_from">
-  <dt><b>from</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='from' Line='from' -->
-  <dd>The input string.
-  </dd>
-  </dl>
-  <dl id="l_to">
-  <dt><b>to</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='to' Line='to' -->
-  <dd>The output string, of length no less than "maxchar"
+  .ih
+  PARAMETERS
+  .ls from
+  The input string.
+  .le
+  .ls to
+  The output string, of length no less than "maxchar"
   characters (excluding the EOS).
-  </dd>
-  </dl>
-  <dl id="l_maxchar">
-  <dt><b>maxchar</b></dt>
-  <!-- Sec='PARAMETERS' Level=0 Label='maxchar' Line='maxchar' -->
-  <dd>The maximum number of characters to be copied.
+  .le
+  .ls maxchar
+  The maximum number of characters to be copied.
   Note that "maxchar" does not include the EOS.
   Thus, the destination string must contain storage
   for at least (maxchar + 1) characters.
-  </dd>
-  </dl>
-  </section>
-  <section id="s_description">
-  <h3>Description</h3>
+  .le
+  .ih
+  DESCRIPTION
+  ...
   </pre></div>
   <p>
   would be converted by <b>lroff</b> (as called from Help) into something like
@@ -254,20 +242,20 @@ lroff: Lroff (line-roff) text formatter
   </p>
   <dl id="l_from">
   <dt><b>from</b></dt>
-  <!-- Sec='DESCRIPTION' Level=0 Label='from' Line='from' -->
+  <!-- Sec='EXAMPLE' Level=0 Label='from' Line='from' -->
   <dd>The input string.
   </dd>
   </dl>
   <dl id="l_to">
   <dt><b>to</b></dt>
-  <!-- Sec='DESCRIPTION' Level=0 Label='to' Line='to' -->
+  <!-- Sec='EXAMPLE' Level=0 Label='to' Line='to' -->
   <dd>The output string, of length no less than <span style="font-family: monospace;">"maxchar"</span>
   characters (excluding the EOS).
   </dd>
   </dl>
   <dl id="l_maxchar">
   <dt><b>maxchar</b></dt>
-  <!-- Sec='DESCRIPTION' Level=0 Label='maxchar' Line='maxchar' -->
+  <!-- Sec='EXAMPLE' Level=0 Label='maxchar' Line='maxchar' -->
   <dd>The maximum number of characters to be copied.
   Note that <span style="font-family: monospace;">"maxchar"</span> does not include the EOS.
   Thus, the destination string must contain storage
@@ -326,5 +314,5 @@ lroff: Lroff (line-roff) text formatter
   
   </section>
   
-  <!-- Contents: 'NAME' 'PURPOSE' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'NAME' 'PURPOSE' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'SEE ALSO' 'REQUEST SUMMARY'  -->
+  <!-- Contents: 'NAME' 'PURPOSE' 'USAGE' 'PARAMETERS' 'DESCRIPTION' 'EXAMPLE' 'SEE ALSO' 'REQUEST SUMMARY'  -->
   

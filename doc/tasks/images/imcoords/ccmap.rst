@@ -970,7 +970,7 @@ ccmap: Compute image plate solutions using matched coordinate lists
   output.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4 \<br>
+  cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4 \
   lngcol=1 latcol=2 inter-
   
   # Coords File: coords  Image: pix
@@ -1005,8 +1005,8 @@ ccmap: Compute image plate solutions using matched coordinate lists
   tangent point in fk4 1950.0 coordinates.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4 lngcol=1 \<br>
-  latcol=2 refpoint=user lngref=13:27:46.9 latref=47:27:16 refsystem=b1950.0 \<br>
+  cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4 lngcol=1 \
+  latcol=2 refpoint=user lngref=13:27:46.9 latref=47:27:16 refsystem=b1950.0 \
   inter-
   
   # Coords File: coords  Image: pix
@@ -1054,8 +1054,8 @@ ccmap: Compute image plate solutions using matched coordinate lists
   DEC     = '47:15:34.00'         /  DECLINATION
   EPOCH   =              1987.26  /  EPOCH OF RA AND DEC
   
-  cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4 \<br>
-  lngcol=1 latcol=2 refpoint=user lngref=RA latref=DEC refsystem=EPOCH \<br>
+  cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4 \
+  lngcol=1 latcol=2 refpoint=user lngref=RA latref=DEC refsystem=EPOCH \
   inter-
   
   # Coords File: coords  Image: pix
@@ -1101,8 +1101,8 @@ ccmap: Compute image plate solutions using matched coordinate lists
   DEC     = '47:15:34.00'         /  DECLINATION
   EPOCH   =              1987.26  /  EPOCH OF RA AND DEC
   
-  cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4  \<br>
-  lngcol=1 latcol=2 refpoint=user lngref=13:27:46.9 latref=47:27:16    \<br>
+  cl&gt; ccmap coords coords.db image=pix results=STDOUT xcol=3 ycol=4  \
+  lngcol=1 latcol=2 refpoint=user lngref=13:27:46.9 latref=47:27:16    \
   refsystem=b1950.0 inter- update+
   
   # Coords File: coords  Image: pix

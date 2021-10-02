@@ -145,9 +145,11 @@ skygroup: Group a list containing RA and Dec into spatial sublists
   cl&gt; type group.lis
   group_001.lis
   group_002.lis
+  ...
   cl&gt; type group_001.lis
   obj4325.fits
   obj4329.fits
+  ...
   cl&gt; count @group.lis
   cl&gt; count @group
         1       3      85 group_001.lis

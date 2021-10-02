@@ -254,7 +254,7 @@ bswitch: Beam-switch strings of spectra to make obj-sky pairs
   of observations (16 in this case).
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; bswitch nite1 1011-1026,1051-1066,1081-1096 nite1bs 1 \<br>
+  cl&gt; bswitch nite1 1011-1026,1051-1066,1081-1096 nite1bs 1 \
   &gt;&gt;&gt; subset=16
   </pre></div>
   <p>
@@ -263,7 +263,7 @@ bswitch: Beam-switch strings of spectra to make obj-sky pairs
   of 5007A.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; bswitch nite1 1011-1026 nite1bs 1 weighting- \<br>
+  cl&gt; bswitch nite1 1011-1026 nite1bs 1 weighting- \
   &gt;&gt;&gt; wave1=4990, wave2=5020
   </pre></div>
   </section>

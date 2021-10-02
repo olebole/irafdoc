@@ -155,6 +155,7 @@ rspectext: Convert ascii text spectra to image spectra
   4000.00  1000.
   4010.10  1005.54
   4020.20  1011.05
+  ...
   cl&gt; rspectext text001 spec001
   </pre></div>
   <p>
@@ -166,6 +167,7 @@ rspectext: Convert ascii text spectra to image spectra
   4000.00  1000.
   4010.10  1005.54
   4020.20  1011.05
+  ...
   cl&gt; rspectext text002 spec002 title="HH12" dtype=nonlinear
   </pre></div>
   </section>

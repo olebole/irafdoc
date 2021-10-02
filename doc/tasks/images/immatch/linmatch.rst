@@ -695,8 +695,8 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
           star of interest and hitting the space bar key
       ... type EOF to terminate the list
   
-  cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
-      out=@outlist dnx=31 dny=31 scaling="mean mean" gain=gain \<br>
+  cl&gt; linmatch @imlist refimage objlist lintran.db \
+      out=@outlist dnx=31 dny=31 scaling="mean mean" gain=gain \
       readnoise=readnoise
   </pre></div>
   <p>
@@ -704,8 +704,8 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   instead of using the fitted value.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
-      out=@outlist dnx=31 dny=31 scaling="mean -100.0" \<br>
+  cl&gt; linmatch @imlist refimage objlist lintran.db \
+      out=@outlist dnx=31 dny=31 scaling="mean -100.0" \
       gain=gain readnoise=rdnoise
   </pre></div>
   <p>
@@ -715,11 +715,11 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   adjusted appropriately.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; linmatch @bimlist brefimage objlist lintran.db \<br>
-      dnx=31 dny=31 scaling="mean mean" gain=gain \<br>
+  cl&gt; linmatch @bimlist brefimage objlist lintran.db \
+      dnx=31 dny=31 scaling="mean mean" gain=gain \
       readnoise=rdnoise
   
-  cl&gt; linmatch @imlist refimage objlist lintran.db \<br>
+  cl&gt; linmatch @imlist refimage objlist lintran.db \
       out=@outimlist records=@bimlist scaling="file file"
   </pre></div>
   <p>
@@ -730,8 +730,8 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   by setting nreject, loreject, and hireject to appropriate values.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; linmatch image refimage [50:150,50:150] lintran.db \<br>
-      out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
+  cl&gt; linmatch image refimage [50:150,50:150] lintran.db \
+      out=outimage scaling="fit fit" datamax=28000 nreject=3 \
       loreject=3 hireject=3 gain=gain readnoise=rdnoise
   </pre></div>
   <p>
@@ -739,8 +739,8 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   the bscale and bzero values.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; linmatch image refimage sections lintran.db \<br>
-      out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
+  cl&gt; linmatch image refimage sections lintran.db \
+      out=outimage scaling="fit fit" datamax=28000 nreject=3 \
       loreject=3 hireject=3 gain=gain readnoise=rdnoise
   </pre></div>
   <p>
@@ -758,12 +758,12 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
       ... type EOF to terminate the list
   cl&gt; qphot refimage coords=objlist inter-
   cl&gt; qphot image coords=objlist inter-
-  cl&gt; pdump refimage.mag.1 msky,stdev,nsky,mag,merr yes | filecalc \<br>
+  cl&gt; pdump refimage.mag.1 msky,stdev,nsky,mag,merr yes | filecalc \
       STDIN "$1;$2/sqrt($3);$4;$5" &gt; refimage.phot
-  cl&gt; pdump image.mag.1 msky,stdev,nsky,mag,merr yes | filecalc \<br>
+  cl&gt; pdump image.mag.1 msky,stdev,nsky,mag,merr yes | filecalc \
       STDIN "$1;$2/sqrt($3);$4;$5" &gt; image.phot
-  cl&gt; linmatch image refimage.phot image.phot lintran.db \<br>
-      out=outimage scaling="phot phot" nreject=3 loreject=3\<br>
+  cl&gt; linmatch image refimage.phot image.phot lintran.db \
+      out=outimage scaling="phot phot" nreject=3 loreject=3\
       hireject=3
   </pre></div>
   <p>
@@ -771,9 +771,9 @@ linmatch: Match the linear intensity scales of 1-D or 2-D images
   five non-overlapping image regions in the sections file.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; linmatch image refimage sections lintran.db \<br>
-      out=outimage scaling="fit fit" datamax=28000 nreject=3 \<br>
-      loreject=3 hireject=3 gain=gain readnoise=rdnoise \<br>
+  cl&gt; linmatch image refimage sections lintran.db \
+      out=outimage scaling="fit fit" datamax=28000 nreject=3 \
+      loreject=3 hireject=3 gain=gain readnoise=rdnoise \
       interactive +
   
       ... a plot of bscale and bzero versus region number

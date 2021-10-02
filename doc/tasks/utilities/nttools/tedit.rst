@@ -229,7 +229,7 @@ tedit: Edit a table.
   which can be used in the target pattern are:
   <div class="highlight-default-notranslate"><pre>
   beginning of string     ^       end of string           $
-  white space             #       escape character        \<br>
+  white space             #       escape character        \
   ignore case             {       end ignore case         }
   begin character class   [       end character class     ]
   not, in char class      ^       range, in char class    -

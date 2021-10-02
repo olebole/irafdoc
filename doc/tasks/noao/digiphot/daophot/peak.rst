@@ -401,7 +401,7 @@ peak: Fit the psf to single stars
   
        ... answer will appear in ypix.coo.1
   
-   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+   da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \
        apertures = 3.0
   
        ... answer verify prompts
@@ -412,7 +412,7 @@ peak: Fit the psf to single stars
   
    da&gt; display dev$ypix 1
   
-   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \<br>
+   da&gt; psf dev$ypix default "" default default default psfrad=11.0 \
        fitrad=3.0 mkstars=yes display=imdr
   
        ... verify the critical parameters
@@ -466,7 +466,7 @@ peak: Fit the psf to single stars
   in the coordinate system of the parent image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; peak dev$ypix[150:450,150:450] default default default default \<br>
+  da&gt; peak dev$ypix[150:450,150:450] default default default default \
       wcsin=tv wcspsf=tv wcsout=tv
   
       ... answer the verify prompts
@@ -489,7 +489,7 @@ peak: Fit the psf to single stars
   
       ... the output images is ypix.sub.2
   
-  da&gt; substar dev$ypix[150:450,150:450] ypix.pk.2 "" default default  \<br>
+  da&gt; substar dev$ypix[150:450,150:450] ypix.pk.2 "" default default  \
       wcsin=tv wcspsf=tv wcsout=tv
   
       ... subtract stars from the peak input image

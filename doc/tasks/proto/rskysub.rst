@@ -309,7 +309,7 @@ rskysub: Sky subtract images using running mean or median
   are assumed to be stored in the BPM keyword.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; rskysub @inlist @outlist imasks="!BPM" maxiter=10 lnsigrej=5.0 \<br>
+  cl&gt; rskysub @inlist @outlist imasks="!BPM" maxiter=10 lnsigrej=5.0 \
   unsigrej=5.0
   </pre></div>
   </section>

@@ -373,7 +373,7 @@ starfind: Automatically detect stellar objects in a list of images
   world coordinates in hours and degrees as well as pixel coordinates.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; starfind dev$wpix default 1.25 100. wcs=world wxf="%12.2H"\<br>
+  cl&gt; starfind dev$wpix default 1.25 100. wcs=world wxf="%12.2H"\
       wyf="%12.1h"
   cl&gt; display dev$wpix 1 fi+
   cl&gt; tvmark 1 wpix.obj.1 col=204

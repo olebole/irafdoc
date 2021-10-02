@@ -335,7 +335,7 @@ mkimsets: Prepare an image set file for input to (mk)(n)obsfile
   internal blanks in the title would otherwise confuse the sorting routine.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ph&gt; mkimsets *.imh "1,2,3" jan10.stdim input="images" \<br>
+  ph&gt; mkimsets *.imh "1,2,3" jan10.stdim input="images" \
       filter="f1pos" fields="ST,i_title" sort="ST"
   
      ... MKIMSETS constructs the image list and sorts on

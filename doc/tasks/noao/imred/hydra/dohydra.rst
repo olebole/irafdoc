@@ -1880,7 +1880,7 @@ dohydra: Process HYDRA spectra
   47 0
   48 1
   hy&gt; hydra.verbose = yes
-  hy&gt; dohydra demoobj apref=demoflat flat=demoflat arcs1=demoarc \<br>
+  hy&gt; dohydra demoobj apref=demoflat flat=demoflat arcs1=demoarc \
   &gt;&gt;&gt; fib=12 apid=demoapid width=4. minsep=5. maxsep=7. clean- splot+
   Set reference apertures for demoflat
   Resize apertures for demoflat?  (yes):

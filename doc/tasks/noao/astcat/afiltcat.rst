@@ -170,7 +170,7 @@ afiltcat: Filter astrometry files derived from astrometric catalogs
   columns output a new color field equal to <span style="font-family: monospace;">"mag2 - mag1"</span>.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; afiltcat reg001.cat.1 reg001.cat.4 fsort=mag1 fexpr="mag1 &lt;= 16.0" \<br>
+  cl&gt; afiltcat reg001.cat.1 reg001.cat.4 fsort=mag1 fexpr="mag1 &lt;= 16.0" \
   fields="f[*],mag2-mag1"
   </pre></div>
   <p>
@@ -193,7 +193,7 @@ afiltcat: Filter astrometry files derived from astrometric catalogs
   coordinates of a list of source  in columns 1 and 2 of a simple text file.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; afiltcat @inlist @inlist ftype="stext" csystem=j2000 ra="1 hours" \<br>
+  cl&gt; afiltcat @inlist @inlist ftype="stext" csystem=j2000 ra="1 hours" \
       dec="2 degrees" mag="3-4" fields="f[1-2],f4,f3"
   </pre></div>
   </section>

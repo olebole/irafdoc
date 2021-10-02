@@ -458,7 +458,7 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   output world coordinates in hh:mm:ss.ss and dd:mm:ss.s format
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skyxymatch image refimage coords rwxformat=%12.2H \<br>
+  cl&gt; skyxymatch image refimage coords rwxformat=%12.2H \
       rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h
   </pre></div>
   <p>
@@ -472,8 +472,8 @@ skyxymatch: Generate matched pixel lists using the image celestial wcs
   in the same units as the input.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skyxymatch image refimage coords coords=radecs \<br>
-      xcolumn=3 ycolumn=4 xunits=hours rwxformat=%12.2H \<br>
+  cl&gt; skyxymatch image refimage coords coords=radecs \
+      xcolumn=3 ycolumn=4 xunits=hours rwxformat=%12.2H \
       rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h
   </pre></div>
   </section>

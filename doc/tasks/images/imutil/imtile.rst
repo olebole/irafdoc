@@ -190,7 +190,7 @@ imtile: Tile same sized 2D images into a 2D mosaic
   between each subraster.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imtile @imlist mosaic 8 8 ncoverlap=-1 nloverlap=-1 \<br>
+  cl&gt; imtile @imlist mosaic 8 8 ncoverlap=-1 nloverlap=-1 \
       start_tile="ur" row-
   </pre></div>
   <p>
@@ -200,7 +200,7 @@ imtile: Tile same sized 2D images into a 2D mosaic
   and are to be replaced in the output image with an unknown value of -1.0.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imtile @imlist mosaic 8 8 nxoverlap=-1 nyoverlap=-1  \<br>
+  cl&gt; imtile @imlist mosaic 8 8 nxoverlap=-1 nyoverlap=-1  \
       start_corner="ur" row- missing_input="3,9", ovalue=-1.0
   </pre></div>
   </section>

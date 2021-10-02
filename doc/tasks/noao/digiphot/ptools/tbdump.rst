@@ -180,7 +180,7 @@ tbdump: Print selected columns of a list of tables databases
   <div class="highlight-default-notranslate"><pre>
   beginning of string     ^       end of string           $
   one character           ?       zero or more characters *
-  white space             #       escape character        \<br>
+  white space             #       escape character        \
   ignore case             {       end ignore case         }
   begin character class   [       end character class     ]
   not, in char class      ^       range, in char class    -

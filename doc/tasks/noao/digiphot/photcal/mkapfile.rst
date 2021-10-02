@@ -512,7 +512,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   details and plots of the fit in the log and plot file respectively.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ph&gt; mkapfile *.mag.* 15 apercor inter- logfile=apercor.log\<br>
+  ph&gt; mkapfile *.mag.* 15 apercor inter- logfile=apercor.log\
       plotfile=apercor.plot
   
   ph&gt; page apercor.log
@@ -531,7 +531,7 @@ mkapfile: Prepare  aperture corrections file from apphot/daophot output
   all present and correct in the photometry files.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ph&gt; mkapfile stdfiles 15 apercor inter- magfile="stdfiles.ap"\<br>
+  ph&gt; mkapfile stdfiles 15 apercor inter- magfile="stdfiles.ap"\
       logfile=apercor.log plotfile=apercor.plot
   
   ph&gt; obsfile stdfiles.ap "1,2,3,4,5,6,7,8,9" "U,B,V" imsets stdobs

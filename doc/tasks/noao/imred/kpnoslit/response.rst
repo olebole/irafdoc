@@ -215,7 +215,7 @@ response: Determine response calibration
   follows:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; response quartz[10:20,*],quartz[35:45,*] \<br>
+  cl&gt; response quartz[10:20,*],quartz[35:45,*] \
   &gt;&gt;&gt; quartz[12:18,*],quartz[12:18,*] resp,resp
   </pre></div>
   <p>

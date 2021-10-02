@@ -408,7 +408,7 @@ cctran: Transform coordinate lists using the ccmap plate solution
                           -0.01393966623835092    0.7665650170136847
           surface2        0
   
-  cl&gt; cctran coords STDOUT coords.db coords xcol=3 ycol=4 lngformat=%0.3h \<br>
+  cl&gt; cctran coords STDOUT coords.db coords xcol=3 ycol=4 lngformat=%0.3h \
   latformat=%0.2h
   13:29:47.297  47:13:37.52 13:29:47.284 47:13:37.89
   13:29:37.406  47:09:09.18 13:29:37.425 47:09:09.24
@@ -434,8 +434,8 @@ cctran: Transform coordinate lists using the ccmap plate solution
   ra and dec values and vice versa but enter the plate solution by hand.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; cctran coords STDOUT "" xcol=3 ycol=4 lngformat=%0.3h latformat=%0.2h \<br>
-  xref=318.735 yref=273.900 lngref=13:29:48.129 latref=47:11:53.37 \<br>
+  cl&gt; cctran coords STDOUT "" xcol=3 ycol=4 lngformat=%0.3h latformat=%0.2h \
+  xref=318.735 yref=273.900 lngref=13:29:48.129 latref=47:11:53.37 \
   xmag=.764 ymag=.767 xrot=180.890 yrot=1.042
   13:29:47.297  47:13:37.52 13:29:47.285 47:13:37.93
   13:29:37.406  47:09:09.18 13:29:37.428 47:09:09.17
@@ -443,8 +443,8 @@ cctran: Transform coordinate lists using the ccmap plate solution
   13:29:55.424  47:10:05.15 13:29:55.395 47:10:05.04
   13:30:01.816  47:12:58.79 13:30:01.839 47:12:58.72
   
-  cl&gt; cctran coords STDOUT "" xcol=1 ycol=2 xref=318.735 yref=273.900 \<br>
-  lngref=13:29:48.129 latref=47:11:53.37 xmag=.764 ymag=.767 \<br>
+  cl&gt; cctran coords STDOUT "" xcol=1 ycol=2 xref=318.735 yref=273.900 \
+  lngref=13:29:48.129 latref=47:11:53.37 xmag=.764 ymag=.767 \
   xrot=180.890 yrot=1.042 forward-
   327.347   409.845  327.50  410.38
   465.790    62.113  465.50   62.10

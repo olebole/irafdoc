@@ -250,7 +250,7 @@ iralign: Align the mosaiced image produced by irmosaic
   1. Align an 8 by 8 mosaic with respect to subraster 6, 5.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \
       nyrsub=5
   </pre></div>
   <p>
@@ -259,7 +259,7 @@ iralign: Align the mosaiced image produced by irmosaic
   in y.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \
       nyrsub=5 xref=2 yref=3
   </pre></div>
   <p>
@@ -267,7 +267,7 @@ iralign: Align the mosaiced image produced by irmosaic
   of each input subraster before inserting it into the output image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \
       nyrsub=5 trimlimits="[2:2,2:2]"
   </pre></div>
   <p>
@@ -277,7 +277,7 @@ iralign: Align the mosaiced image produced by irmosaic
   new shifts.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+  pr&gt; iralign mosaic mosaic.al mosaic.db coords nxrsub=6 \
       nyrsub=5 trimlimits="[2:2,2:2]" &gt; shifts1
   
   pr&gt; fields shifts1 3,4,6 &gt; shifts2
@@ -286,7 +286,7 @@ iralign: Align the mosaiced image produced by irmosaic
   
       ... make whatever changes are desired
   
-  pr&gt; iralign mosaic mosaic.al.2 mosaic.db shifts2 align=file \<br>
+  pr&gt; iralign mosaic mosaic.al.2 mosaic.db shifts2 align=file \
       nxrsub=6 nyrsub=5 trimlimits="[2:2,2:2]"
   </pre></div>
   </section>

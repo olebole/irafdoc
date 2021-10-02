@@ -7,6 +7,9 @@ logging: Discussion of CL logging
 
 .. raw:: html
 
+  <div class="highlight-default-notranslate"><pre>
+  logging -- Using the CL logging features
+  </pre></div>
   <section id="s_description">
   <h3>Description</h3>
   <p>

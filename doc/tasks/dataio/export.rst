@@ -712,7 +712,7 @@ export: Convert IRAF images to some other format
   <dl id="l_EPS">
   <dt><b>EPS     - Encapsulated PostScript</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='EPS' Line='EPS     - Encapsulated PostScript' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
   -----    -----  ------  ----  ------  ------------  -----
     1      index  8       no    no      none
@@ -733,7 +733,7 @@ export: Convert IRAF images to some other format
   <dl id="l_GIF">
   <dt><b>GIF     - Compuserve's GIF format</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='GIF' Line='GIF     - Compuserve's GIF format' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
   -----    -----  ------  ----  ------  ------------  -----
     1      index  8       yes   no      none          1
@@ -766,7 +766,7 @@ export: Convert IRAF images to some other format
   <dl id="l_MIFF">
   <dt><b>MIFF    - ImageMagick MIFF format image</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='MIFF' Line='MIFF    - ImageMagick MIFF format image' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
   -----    -----  ------  ----  ------  ------------  -----
     1      index  8       no    no      none
@@ -786,7 +786,7 @@ export: Convert IRAF images to some other format
   <dl id="l_PGM">
   <dt><b>PGM     - PBMPlus PGM format image</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='PGM' Line='PGM     - PBMPlus PGM format image' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
   -----    -----  ------  ----  ------  ------------  -----
     1      index  8       no    no      none
@@ -802,7 +802,7 @@ export: Convert IRAF images to some other format
   <dl id="l_PPM">
   <dt><b>PPM     - PBMPlus PPM format image</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='PPM' Line='PPM     - PBMPlus PPM format image' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
   -----    -----  ------  ----  ------  ------------  -----
     3      rgb    24      no    no      pixel
@@ -814,7 +814,7 @@ export: Convert IRAF images to some other format
   <dl id="l_RAS">
   <dt><b>RAS     - Sun rasterfile format</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='RAS' Line='RAS     - Sun rasterfile format' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
   -----    -----  ------  ----  ------  ------------  -----
     1      index  8       no    no      none
@@ -836,7 +836,7 @@ export: Convert IRAF images to some other format
   <dl id="l_RGB">
   <dt><b>RGB     - SGI RGB format image</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='RGB' Line='RGB     - SGI RGB format image' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
   -----    -----  ------  ----  ------  ------------  -----
     1      index  8       no    no      none
@@ -850,7 +850,7 @@ export: Convert IRAF images to some other format
   <dl id="l_XWD">
   <dt><b>XWD     - X11 Window dump file</b></dt>
   <!-- Sec='BUILTIN FORMATS' Level=0 Label='XWD' Line='XWD     - X11 Window dump file' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   #expr    Type   bitpix  CLT?  Alpha?  Interleaving  Notes
   -----    -----  ------  ----  ------  ------------  -----
     1      index  8       yes   no      none          1,2,3
@@ -1062,7 +1062,7 @@ export: Convert IRAF images to some other format
   and apply a linear transformation to scale the pixel values:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; export dev$pix dpix eps \<br>
+  cl&gt; export dev$pix dpix eps \
   &gt;&gt;&gt;    outbands="psscale(bscale(i1,0.,0.32), 0.5)"
   </pre></div>
   <p>
@@ -1105,7 +1105,7 @@ export: Convert IRAF images to some other format
   by it's exposure time and apply a default intensity mapping:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; export im1,im2 two pgm \<br>
+  cl&gt; export im1,im2 two pgm \
   &gt;&gt;&gt;     outbands='(zscale(i1/i1.otime)) // (zscale(i2/i2.otime))'
   </pre></div>
   <p>
@@ -1152,7 +1152,7 @@ export: Convert IRAF images to some other format
   2x2 grid:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; export im1,im2,im3,im4 quad gif \<br>
+  cl&gt; export im1,im2,im3,im4 quad gif \
   &gt;&gt;&gt;        outbands="band( (i1//i2), (i3//i4) )"
   </pre></div>
   <p>
@@ -1181,7 +1181,7 @@ export: Convert IRAF images to some other format
   overlay pattern given by another mask (pattern).
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; export dev$pix,bpm,pattern foo gif \<br>
+  cl&gt; export dev$pix,bpm,pattern foo gif \
   &gt;&gt;&gt; outbands = "setcmap(i3==0?(zscalem(i1,i2==0)*200/255.):i3+203,'overlay')"
   </pre></div>
   <p>

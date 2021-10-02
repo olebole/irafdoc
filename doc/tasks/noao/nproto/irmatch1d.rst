@@ -244,7 +244,7 @@ irmatch1d: Align and intensity match image produced by irmosaic (1D)
   1. Align an 8 by 8 mosaic with respect to subraster 6, 5.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; irmatch1d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+  pr&gt; irmatch1d mosaic mosaic.al mosaic.db coords nxrsub=6 \
       nyrsub=5
   </pre></div>
   <p>
@@ -253,7 +253,7 @@ irmatch1d: Align and intensity match image produced by irmosaic (1D)
   in y.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; irmatch1d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+  pr&gt; irmatch1d mosaic mosaic.al mosaic.db coords nxrsub=6 \
       nyrsub=5 xref=2 yref=3
   </pre></div>
   <p>
@@ -261,7 +261,7 @@ irmatch1d: Align and intensity match image produced by irmosaic (1D)
   of each input image before inserting into the output image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; irmatch1d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+  pr&gt; irmatch1d mosaic mosaic.al mosaic.db coords nxrsub=6 \
       nyrsub=5 trimlimits="[2:2,2:2]"
   </pre></div>
   <p>
@@ -271,7 +271,7 @@ irmatch1d: Align and intensity match image produced by irmosaic (1D)
   new shifts.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pr&gt; irmatch1d mosaic mosaic.al mosaic.db coords nxrsub=6 \<br>
+  pr&gt; irmatch1d mosaic mosaic.al mosaic.db coords nxrsub=6 \
       nyrsub=5 trimlimits="[2:2,2:2]" &gt; shifts1
   
   pr&gt; fields shifts1 3,4,6 &gt; shifts2
@@ -280,7 +280,7 @@ irmatch1d: Align and intensity match image produced by irmosaic (1D)
   
       ... make whatever changes are desired
   
-  pr&gt; irmatch1d mosaic mosaic.al mosaic.db shifts2 align=file \<br>
+  pr&gt; irmatch1d mosaic mosaic.al mosaic.db shifts2 align=file \
       nxrsub=6 nyrsub=5 trimlimits="[2:2,2:2]"
   </pre></div>
   </section>

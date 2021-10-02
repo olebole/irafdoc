@@ -672,7 +672,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   2. Create an arc spectrum using the line list noao$lib/onedstds/thorium.dat.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; mkechelle ex2 cont=10 temp=0 \<br>
+  cl&gt; mkechelle ex2 cont=10 temp=0 \
   lines=noao$lib/onedstds/thorium.dat peak=1000 sigma=.05
   </pre></div>
   <p>
@@ -695,7 +695,7 @@ mkechelle: Make artificial 1D and 2D echelle spectra
   4. Create an extracted and dispersion corrected version of example1.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; mkechelle ex1.ec prof=extracted nrand=100 scat=100. \<br>
+  cl&gt; mkechelle ex1.ec prof=extracted nrand=100 scat=100. \
   gmm=INDEF blaze=INDEF theta=INDEF
   Echelle grating: Using linear dispersion
   Warning: Insufficient information to resolve grating parameters

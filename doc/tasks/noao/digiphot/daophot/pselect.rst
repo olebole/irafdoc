@@ -85,7 +85,7 @@ pselect: Select records from a daophot database
   <div class="highlight-default-notranslate"><pre>
   beginning of string     ^       end of string           $
   one character           ?       zero or more characters *
-  white space             #       escape character        \<br>
+  white space             #       escape character        \
   ignore case             {       end ignore case         }
   begin character class   [       end character class     ]
   not, in char class      ^       range, in char class    -
@@ -116,7 +116,7 @@ pselect: Select records from a daophot database
   which 100. &lt;= XCENTER &lt;= 200. and 300. &lt;= YCENTER &lt;= 400.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  pt&gt; pselect m92.ctr.3 m92out \<br>
+  pt&gt; pselect m92.ctr.3 m92out \
       "XCE &gt;= 100. &amp;&amp; XCE &lt;= 200. &amp;&amp; YCE &gt;= 300. &amp;&amp; YCE &lt;= 400."
   </pre></div>
   <p>

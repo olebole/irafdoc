@@ -131,7 +131,7 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
   1. Create a data-less header by specifying a new wcs name.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; mkcwwcs new ra=1:20:23.1 dec=-12:11:13 wave=5500. \<br>
+  cl&gt; mkcwwcs new ra=1:20:23.1 dec=-12:11:13 wave=5500. \
   &gt;&gt;&gt; scale=0.25 wscale=1.23
   </pre></div>
   <p>
@@ -144,7 +144,7 @@ mkcwwcs: Make or update a simple celestial/wavelength 3D wcs
   and pixel.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; mkcwwcs old ra=1:20:23.1 dec=-12:11:13 wave=5500. \<br>
+  cl&gt; mkcwwcs old ra=1:20:23.1 dec=-12:11:13 wave=5500. \
   &gt;&gt;&gt; rapix=1234 decpix=345 wpix=1024
   </pre></div>
   </section>

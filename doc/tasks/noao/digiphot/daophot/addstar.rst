@@ -333,7 +333,7 @@ addstar: Add artificial stars to an image using the computed psf
   
       ... answer will appear in ypix.coo.1
   
-  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \<br>
+  da&gt; phot dev$ypix default default annulus=10. dannulus=5.       \
       apertures = 5.0
   
       ... answer verify prompts
@@ -346,7 +346,7 @@ addstar: Add artificial stars to an image using the computed psf
   
       ... display the image
   
-  da&gt; psf dev$ypix default "" default default default psfrad=9.0 \<br>
+  da&gt; psf dev$ypix default "" default default default psfrad=9.0 \
       fitrad=3.0 mkstars=yes display=imdr
   
       ... verify the critical parameters
@@ -393,6 +393,7 @@ addstar: Add artificial stars to an image using the computed psf
   <div class="highlight-default-notranslate"><pre>
   da&gt; addstar dev$ypix ypix.art.1  default default simple- epadu=14.0
   
+  ... the answers will appear in ypix.add.2 and ypix.art.2
   </pre></div>
   <p>
   3. Repeat example 1 using a simple text file as input.
@@ -400,9 +401,11 @@ addstar: Add artificial stars to an image using the computed psf
   <div class="highlight-default-notranslate"><pre>
   da&gt; pdump ypix.art.1 xc,yc,mag yes &gt; artdata
   
+  ... create a simple text file from the addstar output
   
   da&gt; addstar dev$ypix artdata default default simple+ epadu=14.0
   
+  ... the answers will appear in ypix.add.3 and ypix.art.3
   </pre></div>
   <p>
   4. Run addstar on a section of the input image using the PSF model derived in
@@ -411,7 +414,7 @@ addstar: Add artificial stars to an image using the computed psf
   not the parent image.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  da&gt; addstar dev$ypix[150:450,150:450] artdata default default simple+ \<br>
+  da&gt; addstar dev$ypix[150:450,150:450] artdata default default simple+ \
       epadu=14.0 wcsin=tv wcspsf=tv wcsout=logical
   
        ... answer the verify prompts

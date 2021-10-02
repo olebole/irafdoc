@@ -131,8 +131,8 @@ rmfiles: Find/delete files in subdirectories
   <i>rmfiles</i>.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; cd iraf
-  	cl&gt; rmfiles -v pkg .o .e .a .hd
+  cl&gt; cd iraf
+  cl&gt; rmfiles -v pkg .o .e .a .hd
   </pre></div>
   <p>
   2. Strip the entire IRAF system, using the program in file <span style="font-family: monospace;">"hlib$stripper"</span>.
@@ -140,8 +140,8 @@ rmfiles: Find/delete files in subdirectories
   since <i>rmfiles</i> is a foreign task.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; cd iraf
-  	cl&gt; rmfiles -vf hlib$stripper
+  cl&gt; cd iraf
+  cl&gt; rmfiles -vf hlib$stripper
   </pre></div>
   </section>
   <section id="s_see_also">

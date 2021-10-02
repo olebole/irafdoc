@@ -76,6 +76,9 @@ mkhelpdb: Make (compile) a help database
   of these files will be found throughout the IRAF directories.
   </p>
   <div class="highlight-default-notranslate"><pre>
+  .hd             help directory file (tree structured)
+  .hlp            manual page
+  .men            package menu (module listing)
   </pre></div>
   </section>
   <section id="s_examples">

@@ -98,6 +98,7 @@ wspectext: Convert 1D image spectra to ascii text spectra
   4000.00  1000.
   4010.10  1005.54
   4020.20  1011.05
+  ...
   </pre></div>
   <p>
   2.  Write a simple text file with two columns of wavelength and flux.
@@ -108,6 +109,7 @@ wspectext: Convert 1D image spectra to ascii text spectra
   4000.00  1000.
   4010.10  1005.54
   4020.20  1011.05
+  ...
   </pre></div>
   </section>
   <section id="s_revisions">

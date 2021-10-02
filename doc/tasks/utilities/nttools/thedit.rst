@@ -153,7 +153,7 @@ thedit: Edit or print table header keywords.
   4.  Add a new HISTORY keyword to <span style="font-family: monospace;">"example.tab"</span>.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  tt&gt; thedit example.tab history \<br>
+  tt&gt; thedit example.tab history \
   "('file name is ' // i_file) // '; number of rows = ' // str (i_nrows)"
   </pre></div>
   <p>

@@ -226,7 +226,7 @@ curfit: Fit data with Chebyshev, Legendre or spline curve
   <b>curfit</b> is turned off.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; graph points.list point+ mark=box wx1=.13 xlab="X VALUES"\<br>
+  cl&gt; graph points.list point+ mark=box wx1=.13 xlab="X VALUES"\
   &gt;&gt;&gt; ylab="Y VALUES" title="Legendre fit to points.list"
   cl&gt; type points.list | curfit list+ inter- | graph append+
   </pre></div>

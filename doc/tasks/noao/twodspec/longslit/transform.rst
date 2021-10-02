@@ -235,7 +235,7 @@ transform: Transform longslit images to user coordinates
   of 3 Angstroms per pixel:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<br>
+  cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \
   &gt;&gt;&gt; y1=3800 y2=6400 dy=3
   </pre></div>
   <p>
@@ -243,7 +243,7 @@ transform: Transform longslit images to user coordinates
   pixels in the output images as in the input images:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \<br>
+  cl&gt; transform obj001,obj002 out001,out002 dispmap,distort \
   &gt;&gt;&gt; y1=3800 y2=6400 ylog=yes
   </pre></div>
   </section>

@@ -239,7 +239,7 @@ agetcat: Extract astrometry files from astrometric catalogs
   4. Repeat example 3 but output a new field equal to mag2 - mag3.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; agetcat pars default filter+ fsort=mag1 fexpr="mag1 &lt;= 16.0" \<br>
+  cl&gt; agetcat pars default filter+ fsort=mag1 fexpr="mag1 &lt;= 16.0" \
   fields="f[*],mag2-mag1"
   cl&gt; page reg001.cat.4
   </pre></div>

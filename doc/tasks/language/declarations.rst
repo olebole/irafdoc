@@ -109,7 +109,7 @@ declarations: Parameter/variable declarations
   <dl>
   <dt><b></b></dt>
   <!-- Sec='ELEMENTS' Level=2 Label='' Line=' ' -->
-  <dd><pre>
+  <dd><div class="highlight-default-notranslate"><pre>
   r       file exists and is readable
   w       file exists and is writable
   n       file does not exist

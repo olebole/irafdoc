@@ -111,7 +111,7 @@ rgbsun: Create a Sun 24-bit RGB rasterfile
   color printer interfaced as a Unix printer (the Shinko at NOAO).
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; rgbsun trifidr trifidv trifidb trifid.ras \<br>
+  cl&gt; rgbsun trifidr trifidv trifidb trifid.ras \
   &gt;&gt;&gt; rz1=1 rz2=500 gz1=1 gz2=500 bz1=1 bz2=500
   cl&gt; !xv -swap24 trifid.ras
   cl&gt; !lpr -Pclp trifd.ras

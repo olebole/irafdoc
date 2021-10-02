@@ -117,9 +117,9 @@ mkspec: Generate an artificial spectrum (obsolete)
   <h3>Examples</h3>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; mkspec allones "Spectrum of 1.0" 1024 1 1 constant=1.0
-  cl&gt; mkspec ramp "From 100.0 to 0.0" 1024 64 2 start=100 \<br>
+  cl&gt; mkspec ramp "From 100.0 to 0.0" 1024 64 2 start=100 \
   &gt;&gt;&gt; end=0.0
-  cl&gt; mkspec bb5000 "5000 deg black body" 512 1 3 start=3000 \<br>
+  cl&gt; mkspec bb5000 "5000 deg black body" 512 1 3 start=3000 \
   &gt;&gt;&gt; end=8000 temp=5000
   </pre></div>
   </section>

@@ -507,6 +507,7 @@ rvidlines: Measure radial velocities from spectral lines
   im1 40 : Vhelio = 17.77 km/s, Mean err = 3.565 km/s, Lines = 7
   im2 45 : Vhelio = 24.44 km/s, Mean err = 3.741 km/s, Lines = 7
   im2 40 : Vhelio = 14.65 km/s, Mean err =  11.2 km/s, Lines = 7
+  ...
   </pre></div>
   </section>
   <section id="s_database_records">

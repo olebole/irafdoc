@@ -207,21 +207,21 @@ rtar: Read a TAR format archive file
   1. List the contents of the disk archive file <span style="font-family: monospace;">"foo.tar"</span>.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; rtar -tvf foo.tar
+  cl&gt; rtar -tvf foo.tar
   </pre></div>
   <p>
   2. Unpack the tape archive on unix device /dev/nrmt8 in the current
   directory.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; rtar -xf /dev/nrmt8
+  cl&gt; rtar -xf /dev/nrmt8
   </pre></div>
   <p>
   3. Unpack the tape archive on the VMS device MSA0: in the current
   directory.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; rtar -xf msa0
+  cl&gt; rtar -xf msa0
   </pre></div>
   <p>
   When working within the CL, commands such as <i>rewind</i> may be used

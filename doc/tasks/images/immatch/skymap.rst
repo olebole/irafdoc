@@ -707,7 +707,7 @@ skymap: Compute geometric transforms using the image celestial wcs
   on the results to do the actual registration.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skymap radio xray geodb rwxformat=%12.2H rwyformat=%12.1h \<br>
+  cl&gt; skymap radio xray geodb rwxformat=%12.2H rwyformat=%12.1h \
       wxformat=%12.2H wyformat=%12.1h interactive-
   
   cl&gt; geotran radio radio.tran geodb radio
@@ -718,8 +718,8 @@ skymap: Compute geometric transforms using the image celestial wcs
   residuals.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skymap radio xray geodb rwxformat=%12.2H rwyformat=%12.1h \<br>
-      wxformat=%12.2H wyformat=%12.1h xxo=4 xyo=4 xxt=half \<br>
+  cl&gt; skymap radio xray geodb rwxformat=%12.2H rwyformat=%12.1h \
+      wxformat=%12.2H wyformat=%12.1h xxo=4 xyo=4 xxt=half \
       yxo=4 yyo=4 yxt=half
   
       ... a plot of the fit appears
@@ -741,8 +741,8 @@ skymap: Compute geometric transforms using the image celestial wcs
   3. Repeat example 1 but set the transform name specifically.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; skymap radio xray geodb trans=m82 rwxformat=%12.2H \<br>
-      rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h \<br>
+  cl&gt; skymap radio xray geodb trans=m82 rwxformat=%12.2H \
+      rwyformat=%12.1h wxformat=%12.2H wyformat=%12.1h \
       interactive-
   
   cl&gt; geotran radio radio.tran geodb m82

@@ -435,6 +435,7 @@ imcctran: Transform image header from one celestial wcs to another
   Before the transformation the image coordinate system looked like the following.
   </p>
   <div class="highlight-default-notranslate"><pre>
+  ...
   EPOCH   =                 2000
   DATE-OBS= '05/04/87'
   CRPIX1  =               257.75
@@ -445,11 +446,13 @@ imcctran: Transform image header from one celestial wcs to another
   CDELT2  =         2.1277777E-4
   CTYPE1  = 'RA---TAN'
   CTYPE2  = 'DEC--TAN'
+  ...
   </pre></div>
   <p>
   After the transformation the header looks like the following.
   </p>
   <div class="highlight-default-notranslate"><pre>
+  ...
   DATE-OBS= '05/04/87'
   CRPIX1  =               257.75
   CRPIX2  =               258.93
@@ -470,6 +473,7 @@ imcctran: Transform image header from one celestial wcs to another
   WAT0_001= 'system=image'
   WAT1_001= 'wtype=tan axtype=ra'
   WAT2_001= 'wtype=tan axtype=dec'
+  ...
   </pre></div>
   <p>
   Note the rms of the x and y fits is on the order 10.0e-10 to 10.0e-11 which
@@ -501,6 +505,7 @@ imcctran: Transform image header from one celestial wcs to another
   The transformed image header in this case looks like the following.
   </p>
   <div class="highlight-default-notranslate"><pre>
+  ...
   DATE-OBS= '05/04/87'
   CRPIX1  =               257.75
   CRPIX2  =               258.93
@@ -521,6 +526,7 @@ imcctran: Transform image header from one celestial wcs to another
   WAT0_001= 'system=image'
   WAT1_001= 'wtype=tan axtype=ra'
   WAT2_001= 'wtype=tan axtype=dec'
+  ...
   </pre></div>
   <p>
   [3].  Transform the celestial coordinate system of the input image used in
@@ -543,6 +549,7 @@ imcctran: Transform image header from one celestial wcs to another
   The transformed header looks like the following.
   </p>
   <div class="highlight-default-notranslate"><pre>
+  ...
   DATE-OBS= '05/04/87'
   CRPIX1  =               257.75
   CRPIX2  =               258.93
@@ -561,6 +568,7 @@ imcctran: Transform image header from one celestial wcs to another
   WAT0_001= 'system=image'
   WAT1_001= 'wtype=tan axtype=glon'
   WAT2_001= 'wtype=tan axtype=glat'
+  ...
   </pre></div>
   <p>
   Users should not that although imcctran can write a legal galactic coordinate

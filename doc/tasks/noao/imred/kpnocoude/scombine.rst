@@ -862,7 +862,7 @@ scombine: Combine spectra
   3.  Combine spectra by apertures using exposure time scaling and weighting.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; scombine *.ms combine.ms nout=ncombine.ms \\<br>
+  cl&gt; scombine *.ms combine.ms nout=ncombine.ms \\
   &gt;&gt;&gt; group=apertures scale=exptime weights=exptime
   </pre></div>
   </section>

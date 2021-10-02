@@ -149,19 +149,19 @@ mkpkg: Make or update an object library or package
   All filenames are IRAF virtual filenames with the following extensions.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	.a		object library
-  	.c		C source
-  	.e		executable (e.g., "x_package.e")
-  	.f		Fortran source
-  	.gc		generic C source
-  	.gx		generic SPP source
-  	.h		C or SPP header file
-  	.inc		include file
-  	.l		Lex source
-  	.o		object file
-  	.r		Ratfor source
-  	.s		assembler source
-  	.y		Yacc source
+  .a              object library
+  .c              C source
+  .e              executable (e.g., "x_package.e")
+  .f              Fortran source
+  .gc             generic C source
+  .gx             generic SPP source
+  .h              C or SPP header file
+  .inc            include file
+  .l              Lex source
+  .o              object file
+  .r              Ratfor source
+  .s              assembler source
+  .y              Yacc source
   </pre></div>
   <p>
   Since <i>mkpkg</i> is an IRAF utility it recognizes the major IRAF logical
@@ -170,17 +170,17 @@ mkpkg: Make or update an object library or package
   directory or a logical directory.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	as$		where .s files go		host$as/
-  	bin$		installed executables		iraf$bin/
-  	dev$		device tables			iraf$dev/
-  	hlib$		machdep header files		host$hlib/
-  	host$		host system interface		[MACHDEP]
-  	iraf$		the root directory of IRAF	[MACHDEP]
-  	lib$		system library			iraf$lib/
-  	math$		math sources			iraf$math/
-  	pkg$		applications packages		iraf$pkg/
-  	sys$		the VOS, system libraries	iraf$sys/
-  	tmp$		where temporary files go	[MACHDEP]
+  as$             where .s files go               host$as/
+  bin$            installed executables           iraf$bin/
+  dev$            device tables                   iraf$dev/
+  hlib$           machdep header files            host$hlib/
+  host$           host system interface           [MACHDEP]
+  iraf$           the root directory of IRAF      [MACHDEP]
+  lib$            system library                  iraf$lib/
+  math$           math sources                    iraf$math/
+  pkg$            applications packages           iraf$pkg/
+  sys$            the VOS, system libraries       iraf$sys/
+  tmp$            where temporary files go        [MACHDEP]
   </pre></div>
   <p>
   All other directories should be referenced by giving the path from either the
@@ -198,12 +198,12 @@ mkpkg: Make or update an object library or package
   name of the actual library, hence must end with the extension <span style="font-family: monospace;">".a"</span>.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	libname.a:
-  		member1		dep1 dep2 ... depN
-  		member2		dep1 dep2 ... depN
-  		  ...
-  		memberN		dep1 dep2 ... depN
-  		;
+  libname.a:
+          member1         dep1 dep2 ... depN
+          member2         dep1 dep2 ... depN
+            ...
+          memberN         dep1 dep2 ... depN
+          ;
   </pre></div>
   <p>
   Here, <span style="font-family: monospace;">"libname.a"</span> is the IRAF virtual filename of the library (regardless of
@@ -225,22 +225,22 @@ mkpkg: Make or update an object library or package
   preprocessor directives, e.g.:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	$checkout libsys.a lib$
-  	$update   libsys.a
-  	$checkin  libsys.a lib$
-  	$exit
+  $checkout libsys.a lib$
+  $update   libsys.a
+  $checkin  libsys.a lib$
+  $exit
   
-  	libsys.a:
-  		@symtab		# update libsys.a in ./symtab
-  		brktime.x	&lt;time.h&gt;
-  		environ.x	environ.com environ.h &lt;ctype.h&gt;\<br>
-  				&lt;fset.h&gt; &lt;knet.h&gt;
-  		main.x		&lt;clset.h&gt; &lt;config.h&gt; &lt;ctype.h&gt;\<br>
-  				&lt;error.h&gt; &lt;fset.h&gt; &lt;knet.h&gt;\<br>
-  				&lt;printf.h&gt; &lt;xwhen.h&gt;
-  		onentry.x	&lt;clset.h&gt; &lt;fset.h&gt; &lt;knet.h&gt;
-  		spline.x	&lt;math.h&gt; &lt;math/interp.h&gt;
-  		;
+  libsys.a:
+          @symtab         # update libsys.a in ./symtab
+          brktime.x       &lt;time.h&gt;
+          environ.x       environ.com environ.h &lt;ctype.h&gt;\
+                          &lt;fset.h&gt; &lt;knet.h&gt;
+          main.x          &lt;clset.h&gt; &lt;config.h&gt; &lt;ctype.h&gt;\
+                          &lt;error.h&gt; &lt;fset.h&gt; &lt;knet.h&gt;\
+                          &lt;printf.h&gt; &lt;xwhen.h&gt;
+          onentry.x       &lt;clset.h&gt; &lt;fset.h&gt; &lt;knet.h&gt;
+          spline.x        &lt;math.h&gt; &lt;math/interp.h&gt;
+          ;
   </pre></div>
   <p>
   Note that the checkout operation is required only in the directory from which
@@ -266,17 +266,17 @@ mkpkg: Make or update an object library or package
   to the <i>$update</i> operator.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	libpkg.a:
-  		@(i2)
-  		alpha.x
-  		beta.x
-  		zeta.f
-  		;
-  	i2:
-  		$set	XFLAGS = "-cO -i2"
-  		gamma.f
-  		delta.f
-  		;
+  libpkg.a:
+          @(i2)
+          alpha.x
+          beta.x
+          zeta.f
+          ;
+  i2:
+          $set    XFLAGS = "-cO -i2"
+          gamma.f
+          delta.f
+          ;
   </pre></div>
   <p>
   In the example above five object modules are to be updated in the library
@@ -330,8 +330,8 @@ mkpkg: Make or update an object library or package
   symbols in upper case.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	$echo $(dev)graphcap
-  	!xc $(XFLAGS) filea.x fileb.x
+  $echo $(dev)graphcap
+  !xc $(XFLAGS) filea.x fileb.x
   </pre></div>
   <p>
   Symbols are most commonly defined locally with the <b>$set</b> directive.
@@ -370,10 +370,10 @@ mkpkg: Make or update an object library or package
   stream.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	$set GFLAGS = "-k -t silrdx -p ak/"
-  	$set GEN    = "$generic $$(GFLAGS)"
+  $set GFLAGS = "-k -t silrdx -p ak/"
+  $set GEN    = "$generic $$(GFLAGS)"
   
-  	ifolder (amulr.x, amul.x) $(GEN) amul.x $endif
+  ifolder (amulr.x, amul.x) $(GEN) amul.x $endif
   </pre></div>
   <p>
   4.2 Conditional Execution
@@ -691,45 +691,45 @@ mkpkg: Make or update an object library or package
   Update the current package.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; mkpkg
+  cl&gt; mkpkg
   </pre></div>
   <p>
   Update the package library but do not relink.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; mkpkg libpkg.a
+  cl&gt; mkpkg libpkg.a
   </pre></div>
   <p>
   Make a listing of the package.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; mkpkg listing
+  cl&gt; mkpkg listing
   </pre></div>
   <p>
   Sample mkpkg-file for the above commands:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	# Make my package.
+  # Make my package.
   
-  	$call relink
-  	$exit
+  $call relink
+  $exit
   
-  	relink:
-  		$update	libpkg.a
-  		$omake	x_mypkg.x
-  		$link   x_mypkg.o -lxtools
-  		;
+  relink:
+          $update libpkg.a
+          $omake  x_mypkg.x
+          $link   x_mypkg.o -lxtools
+          ;
   
-  	libpkg.a:
-  		task1.x		pkg.h
-  		task2.x
-  		filea.x		pkg.com pkg.h &lt;fset.h&gt;
-  		fileb.x		pkg.com
-  		;
+  libpkg.a:
+          task1.x         pkg.h
+          task2.x
+          filea.x         pkg.com pkg.h &lt;fset.h&gt;
+          fileb.x         pkg.com
+          ;
   
-  	listing:
-  		!pr task1.x task2.x file[ab].x | vpr -Pvup
-  		;
+  listing:
+          !pr task1.x task2.x file[ab].x | vpr -Pvup
+          ;
   </pre></div>
   </section>
   <section id="s_see_also">

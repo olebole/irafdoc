@@ -220,7 +220,7 @@ imarith: Simple image arithmetic
   and create a short pixel datatype resultant image:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imarith image1 / image2 image3 pixtype=short  \<br>
+  cl&gt; imarith image1 / image2 image3 pixtype=short  \
   &gt;&gt;&gt; calctype=real title="Ratio of image1 and image2"
   </pre></div>
   <p>
@@ -229,7 +229,7 @@ imarith: Simple image arithmetic
   and the calculation arithmetic type:
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; imarith image1,image2,image3 / calibration \<br>
+  cl&gt; imarith image1,image2,image3 / calibration \
   &gt;&gt;&gt; image1a,image2a,image3a pixtype=1 calctype=1
   </pre></div>
   <p>

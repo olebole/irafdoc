@@ -735,7 +735,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   good seeing.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  cl&gt; mkobjects gc1 obj=gc.dat nc=400 nl=400 distance=.5 \<br>
+  cl&gt; mkobjects gc1 obj=gc.dat nc=400 nl=400 distance=.5 \
   &gt;&gt;&gt; xo=-313 yo=-313 radius=.1
   </pre></div>
   <p>
@@ -746,10 +746,10 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   origin at zero.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  ar&gt; starlist gc.dat 5000 spat=hubble lum=bands xmin=-256 xmax=256 \<br>
+  ar&gt; starlist gc.dat 5000 spat=hubble lum=bands xmin=-256 xmax=256 \
   &gt;&gt;&gt; ymin=-256 ymax=256
   ar&gt; mkobjects gc obj=gc.dat xo=257 yo=257 gain=2 rdnoise=10 poisson+
-  ar&gt; mkobjects gc1 obj=gc.dat xo=257 yo=257 gain=2 \<br>
+  ar&gt; mkobjects gc1 obj=gc.dat xo=257 yo=257 gain=2 \
   &gt;&gt;&gt; distance=.5 rdnoise=10 poisson+
   </pre></div>
   <p>
@@ -758,7 +758,7 @@ mkobjects: Make/add artificial stars and galaxies to 2D images
   </p>
   <div class="highlight-default-notranslate"><pre>
   cl&gt; imarith dev$pix - 38 pix
-  cl&gt; mkobjects pix1 obj=STDIN nc=200 nl=200 back=1000 \<br>
+  cl&gt; mkobjects pix1 obj=STDIN nc=200 nl=200 back=1000 \
   &gt;&gt;&gt; magzero=30 rd=10 poi+
   50 50 15.0 pix 40 1 0
   150 50 15.6 pix 30 .8 45

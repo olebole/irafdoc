@@ -226,14 +226,14 @@ xc: Compile and/or link a program
   VMS counterparts is:
   </p>
   <div class="highlight-default-notranslate"><pre>
-       .x -&gt; .x    SPP code
-       .r -&gt; .r    Ratfor code
-       .f -&gt; .for  Fortran code
-       .c -&gt; .c    C code
-       .s -&gt; .mar  Macro assembler code
-       .o -&gt; .obj  Object module
-       .a -&gt; .olb  Library file
-       .e -&gt; .exe  Executable Image
+  .x -&gt; .x    SPP code
+  .r -&gt; .r    Ratfor code
+  .f -&gt; .for  Fortran code
+  .c -&gt; .c    C code
+  .s -&gt; .mar  Macro assembler code
+  .o -&gt; .obj  Object module
+  .a -&gt; .olb  Library file
+  .e -&gt; .exe  Executable Image
   </pre></div>
   <p>
   XC is available both in the CL, via the foreign task interface, and as
@@ -254,32 +254,32 @@ xc: Compile and/or link a program
   <span style="font-family: monospace;">"mytask.e"</span>.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; xc mytask.x
+  cl&gt; xc mytask.x
   </pre></div>
   <p>
   2. Translate the file <span style="font-family: monospace;">"file.x"</span> into Fortran.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; xc -f file.x
+  cl&gt; xc -f file.x
   </pre></div>
   <p>
   3. Compile but do not link <span style="font-family: monospace;">"mytask.x"</span> and the support file <span style="font-family: monospace;">"util.x"</span>.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; xc -c file.x util.x
+  cl&gt; xc -c file.x util.x
   </pre></div>
   <p>
   4. Now link these for debugging.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; xc -x file.o util.o
+  cl&gt; xc -x file.o util.o
   </pre></div>
   <p>
   5. Link the same files without the VMS debug stuff, but link in the library
   -ldeboor (the DeBoor spline routines) as well.
   </p>
   <div class="highlight-default-notranslate"><pre>
-  	cl&gt; xc file.o util.o -ldeboor
+  cl&gt; xc file.o util.o -ldeboor
   </pre></div>
   <p>
   XC is often combined with <i>mkpkg</i> to automatically maintain large packages

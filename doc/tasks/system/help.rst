@@ -742,8 +742,6 @@ help: Print online documentation
   ,
   <a href="system.hdbexamine">hdbexamine</A>
   ,
-  <a href="system.mkmanpage">mkmanpage</A>
-  ,
   <a href="system.lroff">lroff</A>
   , the online task help documents.
   </p>

@@ -8,7 +8,6 @@ softools: Software tools package
    lroff
    mkapropos
    mkhelpdb
-   mkmanpage
    mkpkg
    mktags
    mkttydata

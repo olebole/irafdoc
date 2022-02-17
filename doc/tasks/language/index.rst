@@ -4,6 +4,7 @@ language: The command language itself
 .. toctree:: :maxdepth: 1
 
    intro
+   expressions
    commands
    cursors
    declarations

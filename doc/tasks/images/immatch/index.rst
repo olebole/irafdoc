@@ -21,3 +21,4 @@ immatch: Image matching and combining package
    wregister
    xregister
    xyxymatch
+   pmmatch
